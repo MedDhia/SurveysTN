@@ -11,9 +11,14 @@
           "caption": "Every inequality question asked in more than two surveys, and the years it was asked in. A run of dots in one colour is a series that can be built."
         },
         {
+          "file": "inequality-trends",
+          "title": "How it moved",
+          "caption": "The share saying equality is applied, on one common baseline, with the rest of each question's battery drawn behind it in grey."
+        },
+        {
           "file": "inequality-distributions",
           "title": "How Tunisians answered",
-          "caption": "How Tunisians answered the recurring questions, as weighted shares of substantive answers. Each panel carries its own scale, because the releases do not share one."
+          "caption": "How Tunisians answered the recurring questions, as weighted shares of substantive answers. Bars diverge from zero rather than stacking to 100%, so each pole keeps a common baseline; each panel carries its own scale, because the releases do not share one."
         },
         {
           "file": "inequality-correlations",

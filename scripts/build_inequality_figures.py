@@ -364,7 +364,7 @@ def panel_data(rows: pd.DataFrame, cluster: str, surveys: dict) -> tuple | None:
     return points, scale
 
 
-def distribution_figure(rows: pd.DataFrame, surveys: dict) -> None:
+def built_panels(rows: pd.DataFrame, surveys: dict) -> list[tuple]:
     usable = rows[rows["scale"] == "identical"]
     order = (
         usable.groupby("cluster")
@@ -372,71 +372,118 @@ def distribution_figure(rows: pd.DataFrame, surveys: dict) -> None:
         .sort_values("n", ascending=False)
         .head(12)
     )
-
     panels = []
     for cluster, meta in order.iterrows():
         built = panel_data(rows, cluster, surveys)
         if built:
             panels.append((cluster, meta["question"], *built))
+    return panels
+
+
+def panel_grid(panels: list, per_panel: float) -> tuple:
+    cols = 3
+    grid_rows = int(np.ceil(len(panels) / cols))
+    fig, axes = plt.subplots(grid_rows, cols, figsize=(15.5, per_panel * grid_rows),
+                             facecolor=SURFACE)
+    return fig, np.atleast_1d(axes).ravel()
+
+
+def titles(panels: list) -> tuple[list[str], dict[int, str]]:
+    labels, families = shorten([tidy(q) for _, q, _, _ in panels])
+    return labels, {i: f.subject for f in families for i in f.members if f.subject}
+
+
+def label_panel(ax, label: str, subject: str | None) -> None:
+    ax.set_title(clip(label, 62), fontsize=8.8, color=INK, loc="left",
+                 pad=20 if subject else 6)
+    if subject:
+        # Without this line the panel is titled "Religion", and nothing on it says
+        # what was asked about religion.
+        ax.text(0, 1.055, clip(subject, 74), transform=ax.transAxes, ha="left",
+                va="bottom", fontsize=7.6, color=INK_SOFT)
+
+
+def distribution_figure(rows: pd.DataFrame, surveys: dict) -> None:
+    """The full distribution, diverging from a zero baseline rather than stacked to 100%.
+
+    A 100%-stacked bar gives a common baseline to exactly two things: the bottom
+    segment and the total. Every middle category floats on the one below it, so
+    ``applied to some extent`` cannot be read across years — both its ends move — and
+    that comparison is the whole point of a battery asked eight times.
+
+    Splitting the scale at its midpoint and running the affirmative half up from zero
+    and the negative half down gives *each pole* a common baseline. Nothing is
+    aggregated away: all four categories are still drawn, at their real shares.
+    """
+    panels = built_panels(rows, surveys)
     if not panels:
         print("distributions: nothing with an identical scale")
         return
-
-    labels, families = shorten([tidy(q) for _, q, _, _ in panels])
-    subject_of = {i: f.subject for f in families for i in f.members if f.subject}
+    labels, subject_of = titles(panels)
     reversed_any = False
 
-    cols = 3
-    grid_rows = int(np.ceil(len(panels) / cols))
-    fig, axes = plt.subplots(grid_rows, cols, figsize=(15.5, 3.75 * grid_rows), facecolor=SURFACE)
-    axes = np.atleast_1d(axes).ravel()
-
+    fig, axes = panel_grid(panels, 3.75)
     for panel, (_, _, points, scale) in enumerate(panels):
         ax = axes[panel]
         ax.set_facecolor(SURFACE)
         codes, flipped = orient(scale)
         reversed_any |= flipped
-        colours = [
-            DIVERGING[i] if len(codes) == 4
-            else LinearSegmentedColormap.from_list("d", DIVERGING)(i / max(len(codes) - 1, 1))
-            for i in range(len(codes))
-        ]
-
+        half = len(codes) // 2
+        positive, negative = codes[:half][::-1], codes[half + len(codes) % 2:]
+        middle = codes[half] if len(codes) % 2 else None
         years = [p[0] for p in points]
-        bottom = np.zeros(len(points))
-        for i, code in enumerate(codes):
-            values = np.array([p[1][code] for p in points])
-            ax.bar(years, values, bottom=bottom, width=0.82, color=colours[i],
-                   edgecolor=SURFACE, linewidth=1.2, label=clip(scale[code], 30))
-            bottom += values
 
+        colours = {c: DIVERGING[i] if len(codes) == 4 else
+                   LinearSegmentedColormap.from_list("d", DIVERGING)(i / max(len(codes) - 1, 1))
+                   for i, c in enumerate(codes)}
+
+        # A middle category belongs to neither pole, so it straddles the baseline.
+        base_up = np.zeros(len(points))
+        base_down = np.zeros(len(points))
+        if middle is not None:
+            share = np.array([p[1][middle] for p in points]) / 2
+            ax.bar(years, share, bottom=0, width=0.82, color="#dedcd6",
+                   edgecolor=SURFACE, linewidth=1.2, label=clip(scale[middle], 30))
+            ax.bar(years, -share, bottom=0, width=0.82, color="#dedcd6",
+                   edgecolor=SURFACE, linewidth=1.2)
+            base_up, base_down = share, -share
+
+        for code in positive:
+            share = np.array([p[1][code] for p in points])
+            ax.bar(years, share, bottom=base_up, width=0.82, color=colours[code],
+                   edgecolor=SURFACE, linewidth=1.2, label=clip(scale[code], 30))
+            base_up = base_up + share
+        for code in negative:
+            share = np.array([p[1][code] for p in points])
+            ax.bar(years, -share, bottom=base_down, width=0.82, color=colours[code],
+                   edgecolor=SURFACE, linewidth=1.2, label=clip(scale[code], 30))
+            base_down = base_down - share
+
+        ax.axhline(0, color=INK_SOFT, lw=0.9, zorder=4)
         ax.set_xticks(years)
         ax.set_xticklabels(years, rotation=45, ha="right", fontsize=7.6)
-        ax.set_ylim(0, 1)
-        ax.set_yticks([0, 0.5, 1])
-        ax.set_yticklabels(["0%", "50%", "100%"], fontsize=7.6)
+        ax.set_ylim(-1, 1)
+        ax.set_yticks([-1, -0.5, 0, 0.5, 1])
+        ax.set_yticklabels(["100%", "50%", "0", "50%", "100%"], fontsize=7.6)
+        ax.grid(axis="y", color=GRID, lw=0.8, zorder=0)
         frame_style(ax)
-        subject = subject_of.get(panel)
-        ax.set_title(clip(labels[panel], 62), fontsize=8.8, color=INK, loc="left",
-                     pad=20 if subject else 6)
-        if subject:
-            # Without this line the panel is titled "Religion", and nothing on it says
-            # what was asked about religion.
-            ax.text(0, 1.055, clip(subject, 74), transform=ax.transAxes, ha="left",
-                    va="bottom", fontsize=7.6, color=INK_SOFT)
-        ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.30), ncol=2, frameon=False,
-                  fontsize=7.2, labelcolor=INK_SOFT, handlelength=1.1, handleheight=1.1,
-                  columnspacing=1.1, borderpad=0)
+        ax.spines["bottom"].set_visible(False)
+        handles, names = ax.get_legend_handles_labels()
+        seen = dict(zip(names, handles))
+        ax.legend(seen.values(), seen.keys(), loc="upper center", bbox_to_anchor=(0.5, -0.30),
+                  ncol=2, frameon=False, fontsize=7.2, labelcolor=INK_SOFT,
+                  handlelength=1.1, handleheight=1.1, columnspacing=1.1, borderpad=0)
+        label_panel(ax, labels[panel], subject_of.get(panel))
 
     for ax in axes[len(panels):]:
         ax.axis("off")
 
     lines = [
-        "Weighted shares of substantive answers; don't-know and refused are dropped rather than counted. Stacked "
-        "proportions, not densities — these are four-point ordinal items, and a smoothed curve would invent shape "
-        "between points that do not exist.",
-        "Each panel carries its own scale: the releases do not share one, and they do not all run the same way. "
-        "Bars read affirmative (dark blue) to negative (dark red) in every panel"
+        "Weighted shares of substantive answers; don't-know and refused are dropped rather than counted. "
+        "Bars diverge from zero rather than stacking to 100%, so each pole keeps a common baseline and a "
+        "middle category can be read across years instead of floating on the one below it.",
+        "Each panel carries its own scale: the releases do not share one, and they do not all run the same "
+        "way. Affirmative answers run up in blue and negative answers down in red in every panel"
         + (", which reverses the code order of the Afrobarometer items." if reversed_any else "."),
     ]
     if subject_of:
@@ -448,7 +495,79 @@ def distribution_figure(rows: pd.DataFrame, surveys: dict) -> None:
         fig.savefig(FIGURES / f"inequality-distributions.{suffix}", dpi=200, facecolor=SURFACE,
                     bbox_inches="tight")
     plt.close(fig)
-    print(f"distributions: {len(panels)} questions")
+    print(f"distributions: {len(panels)} questions, diverging")
+
+
+def trend_figure(rows: pd.DataFrame, surveys: dict) -> None:
+    """The affirmative share over time, one line per question against its siblings.
+
+    The bars answer "what did the distribution look like"; they are a poor way to
+    answer "did it move", because that means tracking a band whose ends both shift.
+    A single share on a common baseline answers it directly, and drawing the rest of
+    the battery behind each panel in grey turns "did it move" into "did it move
+    differently from its siblings", which is the question a battery is for.
+
+    The cost is stated rather than hidden: collapsing four categories into two
+    discards how strongly people answered, so this figure sits beside the
+    distributions rather than replacing them.
+    """
+    panels = built_panels(rows, surveys)
+    if not panels:
+        return
+    labels, subject_of = titles(panels)
+
+    series, groups = [], {}
+    for panel, (_, _, points, scale) in enumerate(panels):
+        codes, _ = orient(scale)
+        half = len(codes) // 2
+        affirmative = codes[:half]
+        xs = [p[0] for p in points]
+        ys = [sum(p[1][c] for c in affirmative) for p in points]
+        series.append((xs, ys))
+        groups.setdefault(tuple(scale.values()), []).append(panel)
+
+    fig, axes = panel_grid(panels, 2.95)
+    for panel, _ in enumerate(panels):
+        ax = axes[panel]
+        ax.set_facecolor(SURFACE)
+        siblings = next(g for g in groups.values() if panel in g)
+        for other in siblings:
+            if other != panel:
+                ax.plot(*series[other], color="#dcdbd6", lw=1.4, zorder=1)
+        xs, ys = series[panel]
+        ax.plot(xs, ys, color="#2a78d6", lw=2, zorder=3)
+        ax.plot(xs, ys, "o", color="#2a78d6", ms=5, mec=SURFACE, mew=1.2, zorder=4)
+        for x, y in ((xs[0], ys[0]), (xs[-1], ys[-1])):
+            ax.annotate(f"{y:.0%}", (x, y), textcoords="offset points", xytext=(0, 9),
+                        ha="center", fontsize=7.6, color=INK, fontweight="bold")
+
+        ax.set_ylim(0, 1)
+        ax.set_yticks([0, 0.25, 0.5, 0.75, 1])
+        ax.set_yticklabels(["0", "", "50%", "", "100%"], fontsize=7.6)
+        ax.set_xticks(xs)
+        ax.set_xticklabels(xs, rotation=45, ha="right", fontsize=7.6)
+        ax.grid(axis="y", color=GRID, lw=0.8, zorder=0)
+        frame_style(ax)
+        label_panel(ax, labels[panel], subject_of.get(panel))
+
+    for ax in axes[len(panels):]:
+        ax.axis("off")
+
+    lines = [
+        "The share giving either affirmative answer — weighted, don't-know and refused dropped. One common "
+        "baseline, so the movement is readable; the grey lines behind each panel are the other questions "
+        "sharing its response scale, which is what makes a panel's own line worth reading.",
+        "This collapses four categories into two and so discards how strongly people answered: read it with "
+        "the distributions, not instead of them. Each point is a separate cross-section, not a panel of the "
+        "same respondents, and the line between two points is drawn to be followed, not measured.",
+    ]
+    top = header(fig, "Whether Tunisians think equality is applied, over time", lines)
+    fig.tight_layout(rect=(0, 0, 1, top), h_pad=2.6)
+    for suffix in ("png", "svg"):
+        fig.savefig(FIGURES / f"inequality-trends.{suffix}", dpi=200, facecolor=SURFACE,
+                    bbox_inches="tight")
+    plt.close(fig)
+    print(f"trends: {len(panels)} questions in {len(groups)} scale groups")
 
 
 def correlation_figure(surveys: dict) -> None:
@@ -558,6 +677,7 @@ def main() -> None:
     rows = recurring()
     coverage_figure(rows, surveys)
     distribution_figure(rows, surveys)
+    trend_figure(rows, surveys)
     correlation_figure(surveys)
 
 

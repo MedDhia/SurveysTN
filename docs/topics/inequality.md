@@ -18,11 +18,19 @@ Every inequality question asked in more than two surveys, and the years it was a
 
 [PNG](../../main/figures/inequality-coverage.png) · [SVG](../../main/figures/inequality-coverage.svg) · rebuilt with `python3 scripts/build_inequality_figures.py`
 
+### How it moved
+
+[![How it moved](../../main/figures/inequality-trends.png)](../../main/figures/inequality-trends.png)
+
+The share saying equality is applied, on one common baseline, with the rest of each question's battery drawn behind it in grey.
+
+[PNG](../../main/figures/inequality-trends.png) · [SVG](../../main/figures/inequality-trends.svg) · rebuilt with `python3 scripts/build_inequality_figures.py`
+
 ### How Tunisians answered
 
 [![How Tunisians answered](../../main/figures/inequality-distributions.png)](../../main/figures/inequality-distributions.png)
 
-How Tunisians answered the recurring questions, as weighted shares of substantive answers. Each panel carries its own scale, because the releases do not share one.
+How Tunisians answered the recurring questions, as weighted shares of substantive answers. Bars diverge from zero rather than stacking to 100%, so each pole keeps a common baseline; each panel carries its own scale, because the releases do not share one.
 
 [PNG](../../main/figures/inequality-distributions.png) · [SVG](../../main/figures/inequality-distributions.svg) · rebuilt with `python3 scripts/build_inequality_figures.py`
 
