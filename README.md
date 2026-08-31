@@ -93,9 +93,10 @@ preference. Two surveys are missing one of them, and the folder README says why:
 for them, so a `-labels.csv` would only repeat the codes.
 
 Start with [`docs/using-the-data.md`](docs/using-the-data.md), and in particular
-the seven things worth checking before you analyse anything — among them a weight
-Wave II does not have, don't-know codes that are not declared missing and differ
-by survey, and one answer that a default CSV reader silently turns into missing.
+the eight things worth checking before you analyse anything — among them the one
+survey with no weight at all, don't-know codes that are not declared missing and
+differ by survey, and one answer that a default CSV reader silently turns into
+missing.
 
 ## When the fieldwork happened
 
@@ -198,7 +199,10 @@ opportunity. 45 recur across surveys and **not one recurs across two programmes*
 an inequality series can be built inside Arab Barometer or inside the Arab Opinion
 Index and not between them. The only two questions that name Tunisian inequality
 directly — Afrobarometer Round 6's "The income gap between the rich and the poor" and
-"Regional inequality" — are country-specific items asked once, in 2015.
+"Regional inequality" — are country-specific items asked once, in 2015. Three figures
+sit on that page: which 22 questions are asked in more than two surveys and when, how
+Tunisians answered the ten most repeated of them, and whether the items of a single
+survey move together — they mostly do not, peaking at ρ = 0.49.
 
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
@@ -288,13 +292,15 @@ python3 scripts/build_topic_index.py      # docs/topics/<topic>.csv, .md
 python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
+python3 scripts/build_inequality_figures.py     # main/figures/inequality-*.png
 python3 scripts/verify.py                 # cell-by-cell against the releases
 ```
 
 `scripts/verify.py` re-derives every subset from its release and compares it cell
 by cell, checks the stacked Wave VI file against the three rounds it came from,
-confirms every recorded checksum, and checks that every survey's questionnaire is
-present, opens as a PDF, is not shared with another survey, and records a source. `--offline` is the quicker version, checking
+confirms every recorded checksum, checks that every survey's questionnaire is
+present, opens as a PDF, is not shared with another survey, and records a source, and
+checks that every figure a topic page links to has been built. `--offline` is the quicker version, checking
 the committed files against the catalog without re-reading the releases.
 
 ## Adding a survey

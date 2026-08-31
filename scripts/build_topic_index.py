@@ -104,6 +104,35 @@ def match(topic: dict, variables: list[dict], groups: dict) -> pd.DataFrame:
     return pd.DataFrame(rows)
 
 
+def figure_block(topic: dict) -> list[str]:
+    """Figures a topic declares in ``catalog/topics.json``.
+
+    Rendered whether or not the files are on disk yet. Gating on existence would make
+    this script depend on the figure build, which already depends on the CSV this
+    script writes — so a clean rebuild would need two passes to produce one page.
+    ``verify.py`` checks that every declared figure exists instead, which turns a
+    missing file into an error rather than a section that quietly disappears.
+    """
+    declared = topic.get("figures")
+    if not declared:
+        return []
+    lines = ["## Figures", ""]
+    for figure in declared:
+        link = f"../../main/figures/{figure['file']}"
+        lines += [
+            f"### {figure['title']}",
+            "",
+            f"[![{figure['title']}]({link}.png)]({link}.png)",
+            "",
+            figure["caption"],
+            "",
+            f"[PNG]({link}.png) · [SVG]({link}.svg) · rebuilt with "
+            "`python3 scripts/build_inequality_figures.py`",
+            "",
+        ]
+    return lines
+
+
 def render(topic: dict, found: pd.DataFrame, by_key: dict, order: list[str]) -> str:
     facets = topic["facets"]
     lines = [
@@ -118,6 +147,9 @@ def render(topic: dict, found: pd.DataFrame, by_key: dict, order: list[str]) -> 
         f"**{len(found):,} variables across {found['survey'].nunique()} of the "
         f"{len(order)} surveys.**",
         "",
+    ]
+    lines += figure_block(topic)
+    lines += [
         "## By facet",
         "",
         "| Facet | Variables | Surveys | Series |",

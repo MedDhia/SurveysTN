@@ -34,17 +34,19 @@ use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 
 ## Eight things to check before you analyse
 
-**Weights.** Every survey here carries a design weight except Arab Barometer Wave
-II, and each series names it differently:
+**Weights.** Every survey here carries a design weight, fully populated, except
+**WVS Wave 6**, which carries none. Each series names it differently:
 
-| Series | Weight | Design variables alongside it |
+| Series | Weight | Stratum and PSU |
 |---|---|---|
-| Arab Barometer | `wt`, `WT` | stratum and PSU in Waves IV, V, VII, VIII; PSU only in the Wave VI rounds; none in Wave III |
-| World Values Survey | `W_WEIGHT` | — |
-| Afrobarometer | `withinwt` (Rounds 5–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | — |
-| Arab Opinion Index | `Weight` | — |
+| Arab Barometer | `wt` (Waves II–V), `WT` (Waves VI–VIII) | both in Waves IV, V and VIII; PSU only in Wave VII; neither in Waves II, III or the Wave VI rounds |
+| World Values Survey | `W_WEIGHT` in Wave 7; **Wave 6 has no weight** | neither |
+| Afrobarometer | `withinwt` (Rounds 5–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | neither |
+| Arab Opinion Index | `Weight` | neither |
 
-Unweighted estimates from a weighted survey are not nationally representative.
+Unweighted estimates from a weighted survey are not nationally representative. Only
+four surveys carry the stratum and PSU a full `svyset` wants; for the rest, weighting
+without a design specification is as far as the release lets you go.
 
 ```stata
 svyset psu [pw=wt], strata(stratum)

@@ -61,3 +61,63 @@ mistaken for a measured window.
 Both are generated from the extracts in `data/`, so they carry only what the
 releases record. Every date is derived, never asserted: `catalog/sources.json` names
 the variable each one comes from.
+
+## `inequality-coverage`, `inequality-distributions`, `inequality-correlations`
+
+`python3 scripts/build_inequality_figures.py`
+
+Three figures for the inequality questions, indexed in
+[`docs/topics/inequality.md`](../../docs/topics/inequality.md). Each answers a
+different question, and each has a limit worth stating before it is read.
+
+### `inequality-coverage.png` / `.svg`
+
+The **22 inequality questions asked in more than two surveys**, and the years each
+was asked in — drawn from the concordance, so a row is a question rather than a
+variable name. 16 surveys, 2012 to 2024.
+
+Every row is one colour. No inequality question in this archive is asked by two
+different programmes, so a run over time can be built inside Arab Barometer, or
+inside Afrobarometer, or inside the Arab Opinion Index, and never between them.
+21 of the 22 recur with an identical response scale; the one that does not is
+marked `differs` and greyed.
+
+Rows carry the clause that *differs*, not the first words of the question. Thirteen
+of them open with the same twelve words and close with the same five, so a label
+truncated at the front prints thirteen identical rows; the shared stems are named
+under the standfirst.
+
+### `inequality-distributions.png` / `.svg`
+
+How Tunisians answered ten of the most-repeated of those questions — the twelve that
+recur most, less two whose variables are empty in every survey that carries them — as
+weighted shares
+of substantive answers — each survey's own design weight, don't-know and refused
+dropped rather than counted as an answer.
+
+**Stacked proportions, not densities.** These are four-point ordinal items, and a
+smoothed density over four categories invents shape between points that do not
+exist.
+
+**Each panel carries its own scale**, because the releases do not share one and do
+not all run the same way: the Arab Opinion Index codes `applied completely` as 1,
+Afrobarometer codes `very badly` as 1. Bars are oriented so the affirmative pole is
+dark blue in every panel, which reverses the code order of the Afrobarometer items —
+read the panel's own legend, never the colour alone, when comparing across panels.
+
+### `inequality-correlations.png` / `.svg`
+
+Spearman rank correlations among the ordinal inequality items of **Arab Barometer
+Wave VIII**, the survey carrying the most of them (43 items, 14 of them ordinal and
+populated enough to correlate).
+
+**Within one survey only.** Different surveys are different respondents, so there is
+no cross-survey correlation to compute, and a matrix spanning them would be an
+artefact of the layout rather than a finding.
+
+Almost nothing moves together: the strongest pair reaches ρ = 0.49 and most cells sit
+inside ±0.1, so the scale ends at ±0.5 rather than ±1 — on the full range every cell
+washes to white. The limit is printed on the colour bar. Grey on the diagonal is a
+variable against itself; **hatched cells are pairs never put to the same respondents**
+(split-ballot items), which is not the same as a pair that was asked and came back
+uncorrelated.

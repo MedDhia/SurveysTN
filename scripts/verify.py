@@ -268,9 +268,31 @@ def check_questionnaires(catalog: dict, manifest: dict, errors: list[str]) -> No
     print(f"questionnaires: {have} of {len(catalog['surveys'])} surveys, all readable PDFs")
 
 
+def check_topic_figures(errors: list[str]) -> None:
+    """Every figure a topic page links to has to be on disk, in both formats.
+
+    The topic pages render their figure sections unconditionally, so a figure that was
+    never built would reach the reader as a broken image. This is where that is caught.
+    """
+    topics = json.loads((ROOT / "catalog" / "topics.json").read_text(encoding="utf-8"))
+    checked = 0
+    for slug, topic in topics["topics"].items():
+        for figure in topic.get("figures", []):
+            for suffix in ("png", "svg"):
+                path = ROOT / "main" / "figures" / f"{figure['file']}.{suffix}"
+                if not path.exists():
+                    errors.append(f"{slug}: declares {figure['file']}.{suffix}, which is missing")
+                elif path.stat().st_size == 0:
+                    errors.append(f"{slug}: {figure['file']}.{suffix} is empty")
+                else:
+                    checked += 1
+    print(f"topic figures: {checked} files present for every figure the topic pages link to")
+
+
 def check_offline(catalog: dict) -> list[str]:
     """Check the committed files against the catalog, without the pooled releases."""
     errors: list[str] = []
+    check_topic_figures(errors)
     for s in catalog["surveys"]:
         tag = f"{s['series']} {s['tag']}"
         folder = ROOT / s["path"]
