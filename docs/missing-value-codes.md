@@ -386,3 +386,302 @@ that list, and is not guessed here.
 | `7` | Not applicable [Respondent does not have a mobile phone number] | 1 |
 | `8` | Don’t know | 1 |
 | `9` | Refused to answer | 1 |
+
+## Arab Opinion Index 2011
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `9` | Missing | 150 |
+| `6` | Do not know | 118 |
+| `7` | Declined to answer | 118 |
+| `7` | Do not know | 23 |
+| `8` | Declined to answer | 22 |
+| `7` | Don’t know | 18 |
+| `8` | Decline to answer | 14 |
+| `9996` | Do not know | 14 |
+| `9997` | Declined to answer | 14 |
+| `9999` | Missing | 14 |
+| `0` | Not applicable (don'’ read) | 10 |
+| `99` | Missing | 10 |
+| `97` | Declined to answer | 9 |
+| `96` | Do not know | 8 |
+| `8` | Refuse to answer | 5 |
+| `97` | Decline to answer | 3 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+
+## Arab Opinion Index 2012/2013
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `7` | Declined to answer | 466 |
+| `9` | Missing | 465 |
+| `6` | Do not know | 436 |
+| `9999` | Missing | 56 |
+| `9996` | Do not know | 53 |
+| `9997` | Declined to answer | 53 |
+| `97` | Declined to answer | 6 |
+| `99` | Missing | 6 |
+| `96` | Do not know | 4 |
+| `97` | Decline to answer | 4 |
+| `9997` | Decline to answer | 4 |
+| `0` | Not applicable (service not provided) | 3 |
+| `1` | These battalions’ refusal to dissolve themselves and integrate into the army and police | 2 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `3` | Decline to answer | 1 |
+| `999` | Missing | 1 |
+| `9996` | I do not know | 1 |
+
+## Arab Opinion Index 2014
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `7` | Declined to answer | 390 |
+| `9` | Missing | 389 |
+| `6` | Do not know | 377 |
+| `97` | Declined to answer | 73 |
+| `99` | Missing | 73 |
+| `96` | Do not know | 70 |
+| `9996` | Do not know | 60 |
+| `9997` | Declined to answer | 59 |
+| `9999` | Missing | 58 |
+| `999` | Missing | 5 |
+| `97` | Decline to answer | 4 |
+| `9997` | Decline to answer | 4 |
+| `0` | Not applicable (service not provided) | 3 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `3` | Decline to answer | 1 |
+| `7` | Decline to answer | 1 |
+| `9996` | I do not know | 1 |
+
+## Arab Opinion Index 2015
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `7` | Declined to answer | 368 |
+| `9` | Missing | 368 |
+| `6` | Do not know | 352 |
+| `9999` | Missing | 38 |
+| `9996` | Do not know | 35 |
+| `9997` | Declined to answer | 35 |
+| `97` | Declined to answer | 17 |
+| `99` | Missing | 16 |
+| `96` | Do not know | 14 |
+| `97` | Decline to answer | 4 |
+| `9997` | Decline to answer | 4 |
+| `0` | Not applicable (service not provided) | 3 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `11` | I don’t know where to vote. | 1 |
+| `3` | Decline to answer | 1 |
+| `999` | Missing | 1 |
+| `9996` | Don’t know | 1 |
+
+## Arab Opinion Index 2016
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `9` | Missing | 378 |
+| `7` | Declined to answer | 377 |
+| `6` | Do not know | 349 |
+| `97` | Declined to answer | 37 |
+| `99` | Missing | 36 |
+| `9999` | Missing | 36 |
+| `9996` | Do not know | 33 |
+| `9997` | Declined to answer | 33 |
+| `96` | Do not know | 27 |
+| `98` | Don’t know | 11 |
+| `99` | Decline to answer | 11 |
+| `97` | Decline to answer | 4 |
+| `9997` | Decline to answer | 4 |
+| `0` | Not applicable (service not provided) | 3 |
+| `96` | Don’t know | 3 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `11` | I don’t know where to vote. | 1 |
+| `3` | Decline to answer | 1 |
+| `999` | Missing | 1 |
+| `9996` | Don’t know | 1 |
+
+## Arab Opinion Index 2017/2018
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `7` | Declined to answer | 284 |
+| `9` | Missing | 283 |
+| `6` | Do not know | 261 |
+| `97` | Declined to answer | 40 |
+| `9999` | Missing | 37 |
+| `99` | Missing | 33 |
+| `9996` | Do not know | 32 |
+| `9997` | Declined to answer | 32 |
+| `96` | Do not know | 19 |
+| `96` | Don’t know/Don’t watch it | 14 |
+| `6` | Don’t know/Don’t watch it | 7 |
+| `9997` | Decline to answer | 6 |
+| `97` | Decline to answer | 4 |
+| `0` | Not applicable (service not provided) | 3 |
+| `99999` | Missing | 2 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `11` | I don’t know where to vote. | 1 |
+| `3` | Decline to answer | 1 |
+| `999` | Missing | 1 |
+| `9996` | Don’t know | 1 |
+
+## Arab Opinion Index 2019/2020
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `7` | Declined to answer | 280 |
+| `9` | Missing | 280 |
+| `6` | Do not know | 262 |
+| `7` | Refused to answer | 52 |
+| `6` | Don’t know | 48 |
+| `9997` | Declined to answer | 45 |
+| `9999` | Missing | 44 |
+| `9996` | Do not know | 43 |
+| `97` | Declined to answer | 22 |
+| `99` | Missing | 21 |
+| `96` | Do not know | 20 |
+| `97` | Refused to answer | 11 |
+| `9996` | Don’t know | 10 |
+| `97` | Decline to answer | 7 |
+| `9997` | Refused to answer | 7 |
+| `6` | don’t know | 6 |
+| `7` | Decline to answer | 6 |
+| `7` | decline to answer | 6 |
+| `96` | Don’t know | 5 |
+| `98` | Refused to answer | 4 |
+| `9997` | Decline to answer | 4 |
+| `0` | Not applicable (service not provided) | 3 |
+| `4` | Don’t know / Refused to answer | 3 |
+| `9997` | Declined to Answer | 3 |
+| `4` | Don’t know /Refused to answer | 2 |
+| `996` | Don’t know | 2 |
+| `997` | Refused to answer | 2 |
+| `9996` | Don’t know/can’t define | 2 |
+| `99996` | Do not know | 2 |
+| `99997` | Decline to answer | 2 |
+| `99999` | Missing | 2 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `11` | I don’t know where to vote. | 1 |
+| `5` |  Decline to answer | 1 |
+| `7` | Refuse to answer | 1 |
+| `999` | Missing | 1 |
+
+## Arab Opinion Index 2022
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `9` | Missing | 446 |
+| `7` | Declined to answer | 234 |
+| `6` | Don’t know | 206 |
+| `7` | Decline to answer | 202 |
+| `6` | Do not know | 196 |
+| `9999` | Missing | 52 |
+| `9997` | Declined to answer | 43 |
+| `97` | Decline to answer | 39 |
+| `9996` | Do not know | 39 |
+| `9997` | Decline to answer | 35 |
+| `96` | Don’t know/Can’t distinguish | 28 |
+| `99` | Missing | 27 |
+| `97` | Declined to answer | 18 |
+| `96` | Do not know | 16 |
+| `4` | Don’t know/Decline to answer | 9 |
+| `4` | Don’t know /Decline to answer | 9 |
+| `97` | Refused to answer | 8 |
+| `96` | Don’t know | 7 |
+| `9996` | Don’t know | 5 |
+| `9996` | I don't know | 5 |
+| `9997` | refused to answer | 5 |
+| `4` | Do not know/ Declined to answer | 4 |
+| `7` | Refused to answer | 4 |
+| `98` | Refused to answer | 4 |
+| `0` | Not applicable (service not provided) | 3 |
+| `7` | Decline to answer ( | 3 |
+| `1` | The decline in the state’s formidability is a result of the failure of state agencies to provide basic services effici | 2 |
+| `10` | The decline in the state’s formidability is the result of favouritism/interference in the completion of government tra | 2 |
+| `11` | The decline in the state’s formidability is due to unequal relations with other countries | 2 |
+| `2` | The decline in the state’s formidability is because senior officials are incompetent and/or unsuitable for their posit | 2 |
+| `3` | The decline in the state’s formidability is a result of some senior officials’ fear of making decisions and taking r | 2 |
+| `4` | The decline in the state’s formidability is the result of the government's frequent decision reversals | 2 |
+| `4` | Don’t know /Refused to answer | 2 |
+| `5` | The decline in the state’s formidability is the result of citizens' lack of respect for the law | 2 |
+| `6` | The decline in the state’s formidability is due to the government's bias towards some groups at the expense of others | 2 |
+| `7` | The decline in the state’s formidability is the result of the law not being applied equally among the people | 2 |
+| `8` | The decline in the state’s formidability is due to the government's lax law enforcement | 2 |
+| `9` | The decline in the state’s formidability is the result of the lack of cooperation between state agencies (competition | 2 |
+| `99996` |  I don't know | 2 |
+| `99996` | Do not know | 2 |
+| `99997` |  refused to answer | 2 |
+| `99997` | Decline to answer | 2 |
+| `99999` | Missing | 2 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `11` | I don’t know where to vote. | 1 |
+| `4` | Do not know /Declined to answer | 1 |
+| `5` |  Decline to answer | 1 |
+| `999` | Missing | 1 |
+
+## Arab Opinion Index 2024/2025
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `6` | Do not know | 565 |
+| `9` | Missing | 383 |
+| `7` | 'Decline to answer | 337 |
+| `7` | Declined to answer | 268 |
+| `7` | Decline to answer | 144 |
+| `96` | Do not know | 144 |
+| `9996` | Do not know | 138 |
+| `9997` | Decline to answer | 119 |
+| `97` | Declined to answer | 98 |
+| `6` | Don’t know | 95 |
+| `99` | Missing | 93 |
+| `9999` | Missing | 59 |
+| `97` | Decline to answer | 56 |
+| `9997` | Declined to answer | 50 |
+| `6` | Don't know | 28 |
+| `9996` | I don't know | 15 |
+| `99997` | Decline to answer | 12 |
+| `99996` | Do not know | 11 |
+| `9997` | Refusal to answer | 10 |
+| `9997` | 'Decline to answer | 10 |
+| `7` | Decline to answer ( | 9 |
+| `9997` | refused to answer | 5 |
+| `0` | Not applicable (service not provided) | 3 |
+| `4` | Don’t know/Decline to answer | 3 |
+| `96` | I do not know | 3 |
+| `9996` | Don’t know | 3 |
+| `99999` | Missing | 3 |
+| `4` | Do not know/ Declined to answer | 2 |
+| `4` | Don’t know /Refused to answer | 2 |
+| `7` | Refused to answer | 2 |
+| `999` | Missing | 2 |
+| `9996` | Don't know/Refused to answer | 2 |
+| `9999996` | Do not know | 2 |
+| `9999997` | Declined to answer | 2 |
+| `9999999` | Missing | 2 |
+| `10` |  They do not know us | 1 |
+| `11` | I don’t know where to vote. | 1 |
+| `4` | Do not know /Declined to answer | 1 |
+| `7` | {99996, Do not know }... | 1 |
+| `7` | Do not know | 1 |
+| `8` | Decline to answer | 1 |
+| `9` |  Not applicable (returned to home/region) | 1 |
+| `9996` |  Do not know | 1 |
+| `9997` |  Declined to answer | 1 |
+| `9999` |  Missing | 1 |
+| `99997` | Declined to answer | 1 |

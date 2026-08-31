@@ -70,6 +70,89 @@ not answer options.
 | `Q1016` | q1016 I will read you some statements related to your household income. Which of these statements comes closes… |
 | `Q210` | Q210. To what extent do you think that there is corruption within the national state agencies and institutions… |
 
+## Arab Opinion Index
+
+2,813 variables across 9 surveys, 2,810 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 9 | 54 |
+| 8 | 63 |
+| 7 | 22 |
+| 6 | 24 |
+| 5 | 57 |
+| 4 | 77 |
+| 3 | 115 |
+| 2 | 373 |
+| 1 | 2,028 |
+
+3 variables carry a name in more than one survey but wording that
+does not match between them. That is the column worth checking before pooling:
+`text_varies_across_waves`, with the weakest pairwise agreement in
+`lowest_text_agreement` and the kind of text compared in `comparison_basis`.
+
+### Present in all 9 with stable wording
+
+53 variables. The safest to stack, and even here confirm the response
+scale in each survey's `codebook.csv` — the crosswalk compares question wording,
+not answer options.
+
+| Variable | Question |
+|---|---|
+| `Q1` | Q1.Country Code |
+| `Q101_1` | Q101_1.How would you evaluate The financial situation of your household |
+| `Q101_2` | Q101_2.How would you evaluate Your home country’s economic situation |
+| `Q101_3` | Q101_3.How would you evaluate The level of safety in your area of residence (neighborhood, district, village) |
+| `Q101_4` | Q101_4.How would you evaluate The level of safety in your home country |
+| `Q101_5` | Q101_5.How would you evaluate The political situation in your home country |
+| `Q103` | Q103.In your opinion, what is the most important challenge facing your home country today? |
+| `Q105` | Q105.Would you like to emigrate to another country? |
+| `Q106` | Q106.To which country would you like to emigrate? |
+| `Q1201` | Q1201.Age |
+| `Q1202` | Q1202.Gender |
+| `Q1205` | Q1205.Marital status |
+| `Q1206` | Q1206.Educational level |
+| `Q1207` | Q1207.Work and employment |
+| `Q1210` | Q1210.How much is the monthly household income in the local currency? |
+| `Q1211` | Q1211.Please indicate which of the following expressions most accurately describes your household income |
+| `Q1214` | Q1214.On average, how much are the household’s monthly outgoings in the local currency |
+| `Q201_1` | Q201_1.To what extent do you trust The Judiciary |
+| `Q201_2` | Q201_2.To what extent do you trust Public Security (the Police) |
+| `Q201_3` | Q201_3.To what extent do you trust Elected representative legislature |
+| `Q201_4` | Q201_4.To what extent do you trust The government |
+| `Q201_5` | Q201_5.To what extent do you trust Political parties |
+| `Q201_6` | Q201_6.To what extent do you trust The Army |
+| `Q201_7` | Q201_7.To what extent do you trust Intelligence Services (Secret Police/ State Security) |
+| `Q203` | Q203.With regards to the state's application of the rule of law between citizens, which of the following state… |
+| `Q204` | Q204.In your opinion, how widespread is financial and administrative corruption in your home country? |
+| `Q206_1` | Q206_1.To what extent do the policies of the government of your country reflect the views of the citizenry wit… |
+| `Q206_2` | Q206_2.To what extent do the policies of the government of your country reflect the views of the citizenry wit… |
+| `Q3` | Q3.Primary Administrative Level: (Governorate / State / Emirate) |
+| `Q302` | Q302.To what extent are you interested in the political affairs of your home country? |
+| `Q303_1` | Q303_1.Do you agree or disagree with The legislature holds the government (executive) responsible for its poli… |
+| `Q312` | Q312.Do you intend to vote in the coming parliamentary elections? |
+| `Q336` | Q336.Which news medium do you rely on the most to receive up-to-date news on general political affairs? |
+| `Q4` | Q4.Category |
+| `Q405_1` | Q405_1.Please express your level of agreement or disagreement with each of these. In a democratic system, the … |
+| `Q405_2` | Q405_2.Please express your level of agreement or disagreement with each of these. Democracies are characterize… |
+| `Q405_3` | Q405_3.Please express your level of agreement or disagreement with each of these. Democracies are not effectiv… |
+| `Q405_6` | Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own proble… |
+| `Q420_1` | Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas… |
+| `Q5` | Q5.How many members in the family? |
+| `Q601` | Q601.In general, in your dealings with others, do you prefer to deal with |
+| `Q602` | Q602.Regardless of whether or not you attend places of worship, do you consider yourself to be a |
+| `Q603` | Q603.What is the single most important characteristic which an individual must possess in order to be consider… |
+| `Q610_1` | Q610_1.I would like you to tell me the extent of your agreement/disagreement with Religious leaders/clerics sh… |
+| `Q610_7` | Q610_7.I would like you to tell me the extent of your agreement/disagreement with It would be best for my home… |
+| `Q701` | Q701.Which of the following three broad descriptions of the ties which bind the citizens of the Arab world tog… |
+| `Q704` | Q704.Which of the following statements on the Palestinian cause are you inclined towards the most? |
+| `Q710_1` | Q710_1.which country do you consider the most threatening to [the Arab world]? |
+| `Q710_2` | Q710_2.which country do you consider the most threatening to [your home country]? |
+| `Q712` | Q712.Would you agree with your home country recognizing the state of Israel? |
+| `QID` | QID.QID |
+| `VQID` | vQID.QID |
+| `WEIGHT` | Weight.Weight |
+
 ## World Values Survey
 
 724 variables across 2 surveys, 724 with question text.
@@ -140,12 +223,13 @@ matches but whose question text is the same. It exists because the World Values
 Survey renumbered between waves: Wave 6 asks `V9` what Wave 7 asks as `Q6`, and
 matching on name finds only the derived indices and the admin columns. Arab
 Barometer needs it less often, but it also renames — Wave II's Tunisia-specific
-`te105` is Wave III's `q105a`. 595 pairs in total:
+`te105` is Wave III's `q105a`. 648 pairs in total:
 
 | Series | Pairs |
 |---|---:|
 | Afrobarometer | 381 |
 | Arab Barometer | 25 |
+| Arab Opinion Index | 53 |
 | World Values Survey | 189 |
 
 **These are suggestions, not findings.** A pair is offered only when the two
@@ -180,6 +264,15 @@ releases that carry wording as labels:
 | Afrobarometer Round 8 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
 | Afrobarometer Round 9 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
 | Afrobarometer Round 10 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
+| Arab Opinion Index 2011 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Opinion Index 2012/2013 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Opinion Index 2014 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Opinion Index 2015 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Opinion Index 2016 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Opinion Index 2017/2018 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Opinion Index 2019/2020 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
+| Arab Opinion Index 2022 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Opinion Index 2024/2025 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 
 Agreement is the share of comparable variables where the parsed text and the
 release label match at a difflib ratio of 0.6 or better. It is a check on the

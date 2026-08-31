@@ -39,6 +39,17 @@
         "tunisia": "TUN"
       },
       "note": "Country files carry no country column; the country is the prefix of RESPNO."
+    },
+    "arab-opinion-index": {
+      "name": "Arab Opinion Index",
+      "prefix": "aoi",
+      "publisher": "Arab Center for Research and Policy Studies (Doha Institute)",
+      "homepage": "https://arabindex.dohainstitute.org",
+      "data_page": "https://arabindex.dohainstitute.org/EN/Pages/index.aspx",
+      "country_variable_values": {
+        "tunisia": 2
+      },
+      "note": "Rounds are named by fieldwork year. Q1 is the country code and Tunisia is 2 in every round."
     }
   },
   "waves": [
@@ -354,6 +365,216 @@
       "fieldwork_source": "derived from the DATEINTR variable in the data file",
       "questionnaire": null,
       "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English."
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2011,
+      "tag": "2011",
+      "wave_label": "2011",
+      "slug": "2011",
+      "raw_file_stem": "aoi-2011",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2011",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Reports-2011.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2011-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBook-2011-EN.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/EN/Documents/AOI-DATA-2011-SPSS-EN.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2012,
+      "tag": "2012-2013",
+      "wave_label": "2012/2013",
+      "slug": "2012-2013",
+      "raw_file_stem": "aoi-2012-2013",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2012-2013",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Reports-2012-13.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2012-2013-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBook-2012-2013-EN.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/EN/Documents/AOI-DATA-2012-2013-SPSS-EN.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2014,
+      "tag": "2014",
+      "wave_label": "2014",
+      "slug": "2014",
+      "raw_file_stem": "aoi-2014",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2014",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Reports-2014.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2014-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBook-2014-EN.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/EN/Documents/AOI-DATA-2014-SPSS-EN.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2015,
+      "tag": "2015",
+      "wave_label": "2015",
+      "slug": "2015",
+      "raw_file_stem": "aoi-2015",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2015",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Reports-2015.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2015-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBook-2015-EN.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/EN/Documents/AOI-DATA-2015-SPSS-EN.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2016,
+      "tag": "2016",
+      "wave_label": "2016",
+      "slug": "2016",
+      "raw_file_stem": "aoi-2016",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2016",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Reports-2016.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2016-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBook-2016-EN.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/EN/Documents/AOI-DATA-2016-SPSS-EN.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2017,
+      "tag": "2017-2018",
+      "wave_label": "2017/2018",
+      "slug": "2017-2018",
+      "raw_file_stem": "aoi-2017-2018",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2017-2018",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Reports-2017.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2017-2018-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBook-2017-2018-EN.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/EN/Documents/AOI-DATA-2017-2018-SPSS-EN.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2019,
+      "tag": "2019-2020",
+      "wave_label": "2019/2020",
+      "slug": "2019-2020",
+      "raw_file_stem": "aoi-2019-2020",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2019-2020",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Arab-Opinion-Index-2019-2020.aspx",
+      "questionnaire": null,
+      "notes": "The publisher's codebook link for this round returns 404; no codebook is in the archive.",
+      "download_url": "https://arabindex.dohainstitute.org/AR/Documents/AOI-DATA-2019-2020-EN-SPSS.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2022,
+      "tag": "2022",
+      "wave_label": "2022",
+      "slug": "2022",
+      "raw_file_stem": "aoi-2022",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2022",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Arab-Opinion-Index-2022.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2022-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBood-EN-2022.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/EN/Documents/AOI-2022-EN-SPSS.sav"
+    },
+    {
+      "series": "arab-opinion-index",
+      "wave": 2024,
+      "tag": "2024-2025",
+      "wave_label": "2024/2025",
+      "slug": "2024-2025",
+      "raw_file_stem": "aoi-2024-2025",
+      "source_format": "sav",
+      "country_var": "Q1",
+      "country_value": 2,
+      "fieldwork_years_series": "2024-2025",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "release_page": "https://arabindex.dohainstitute.org/EN/Pages/index-2024-2025.aspx",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2024-2025-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/AR/Documents/CodeBook-2025-en.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The release carries the question text as variable labels, so the codebook is documentation rather than a parsing input."
+      },
+      "notes": "",
+      "download_url": "https://arabindex.dohainstitute.org/AR/Documents/aoi-data-2025-en-spss.sav"
     }
   ]
 }

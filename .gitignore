@@ -1,5 +1,11 @@
 # data/raw holds the publishers' releases and is tracked: the archive carries its
 # own sources so it can be regenerated and fully verified from a clone alone.
+#
+# Two exceptions, and only because GitHub refuses a file over 100 MB. Both are
+# public downloads needing no registration, both have their URL and SHA-256 in the
+# catalog, and `python3 scripts/fetch_raw.py` retrieves and checks them.
+data/raw/aoi-2019-2020.sav
+data/raw/aoi-2024-2025.sav
 
 __pycache__/
 *.pyc

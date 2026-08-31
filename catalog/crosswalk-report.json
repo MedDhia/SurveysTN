@@ -177,12 +177,102 @@
       "agreeing": 0,
       "agreement_rate": null,
       "not_validated_reason": "no questionnaire in the archive for this survey"
+    },
+    "aoi-2011": {
+      "wave_label": "2011",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
+    "aoi-2012-2013": {
+      "wave_label": "2012/2013",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
+    "aoi-2014": {
+      "wave_label": "2014",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
+    "aoi-2015": {
+      "wave_label": "2015",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
+    "aoi-2016": {
+      "wave_label": "2016",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
+    "aoi-2017-2018": {
+      "wave_label": "2017/2018",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
+    "aoi-2019-2020": {
+      "wave_label": "2019/2020",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "no questionnaire in the archive for this survey"
+    },
+    "aoi-2022": {
+      "wave_label": "2022",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
+    "aoi-2024-2025": {
+      "wave_label": "2024/2025",
+      "series": "arab-opinion-index",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     }
   },
-  "variables": 3591,
-  "with_question_text": 3528,
+  "variables": 6404,
+  "with_question_text": 6338,
   "in_every_wave": 0,
-  "wording_drifts": 523,
-  "suggested_matches": 595,
+  "wording_drifts": 526,
+  "suggested_matches": 648,
   "suggestion_floor": 0.95
 }

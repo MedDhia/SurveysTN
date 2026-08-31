@@ -75,6 +75,14 @@ CSV spells it, since there is no numeric country code to match on. A release in
 none of these shapes needs a reader added to `read_pooled()`, not a workaround in
 the data.
 
+A series numbered by year rather than by wave sets `tag` directly — the Arab
+Opinion Index rounds are `2011` and `2012-2013`, not `w01` and `w02` — and the tag
+becomes the folder name and the crosswalk's column prefix.
+
+If a release is too large for git to hold (GitHub refuses anything over 100 MB),
+give the wave a `download_url` and add the file to `.gitignore` by name.
+`scripts/fetch_raw.py` will retrieve it and check it against the recorded SHA-256.
+
 If the release has no country column at all — Afrobarometer's country files do not —
 find something that still identifies the country and match on that rather than
 skipping the check. Afrobarometer prefixes its respondent numbers, so those surveys

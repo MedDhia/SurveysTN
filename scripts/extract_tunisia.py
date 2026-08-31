@@ -77,7 +77,12 @@ def wave_tag(spec: dict) -> str:
 
     Arab Barometer ran Wave VI as three separate rounds with their own samples and
     questionnaires, so each is carried as its own survey: w06p1, w06p2, w06p3.
+    A survey may also name its own tag, for a series numbered by year.
     """
+    # A series that names its rounds by year rather than by number sets `tag`
+    # directly: the Arab Opinion Index is "2012-2013", not "wave 2".
+    if spec.get("tag"):
+        return spec["tag"]
     tag = f"w{spec['wave']:02d}"
     if spec.get("part"):
         tag += f"p{spec['part']}"

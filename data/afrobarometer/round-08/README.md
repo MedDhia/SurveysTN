@@ -16,8 +16,8 @@
 |---|---:|---|
 | `afrobarometer-w08-tunisia-codes.csv` | 1.88 MB | `1babe80bd228a09d` |
 | `afrobarometer-w08-tunisia-labels.csv` | 6.23 MB | `856c5bd26214edca` |
-| `afrobarometer-w08-tunisia.dta` | 4.02 MB | `8ee563a604cd9824` |
-| `afrobarometer-w08-tunisia.sav` | 3.84 MB | `5ec51f11419b5f81` |
+| `afrobarometer-w08-tunisia.dta` | 4.02 MB | `3a907704894fb37d` |
+| `afrobarometer-w08-tunisia.sav` | 3.84 MB | `f52d0d49fd55ba09` |
 | `codebook.csv` | 0.10 MB | `b1d3857795b67b3b` |
 | `codebook.json` | 0.19 MB | `57264074d2d68886` |
 

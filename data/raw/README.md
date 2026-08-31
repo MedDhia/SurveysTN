@@ -23,6 +23,7 @@ kept because they are the same data in a form another tool may prefer.
 | World Values Survey Wave 6 | `WV6_Data_Tunisia_Excel_v20221117.1.xlsx` | `.csv` |
 | World Values Survey Wave 7 | `WVS_Wave_7_Tunisia_Excel_v5.0.xlsx` | — |
 | Afrobarometer Rounds 6–10 | `afrobarometer_tun_r{6,7,8,9,10}_en.sav` | — |
+| Arab Opinion Index, nine rounds | `aoi-<round>.sav` | — |
 
 Where a survey ships both, the SPSS file is the one read: it is the only format
 that carries the variable labels and the value labels together. Wave IV has no
@@ -33,11 +34,32 @@ The Afrobarometer files are renamed to a consistent scheme; every other file kee
 the name its publisher gave it. `catalog/catalog.json` records a SHA-256 for each,
 and `scripts/verify.py` checks it before re-deriving anything.
 
+## Two files are fetched, not committed
+
+GitHub refuses a file over 100 MB. The Arab Opinion Index rounds for 2019/2020 and
+2024/2025 are 132 MB and 202 MB, so they are the two exceptions to everything above
+and are listed in `.gitignore` by name. Run:
+
+```bash
+python3 scripts/fetch_raw.py
+```
+
+It downloads whatever is missing from the URL recorded in `catalog/sources.json`
+and checks it against the SHA-256 in `catalog/catalog.json`, so a truncated or
+changed file is rejected rather than quietly extracted from. The Arab Opinion Index
+publishes at a direct URL with no registration, and their server is slow and cannot
+resume, so a failed transfer starts again.
+
+The alternative was Git LFS for the whole archive, or an inconsistent rule about
+which sources the repository carries. This keeps the rule simple: everything git
+can hold is here, and what it cannot is one command away.
+
 ## Where they came from
 
 - Arab Barometer — <https://www.arabbarometer.org/surveys/>, after a short registration
 - World Values Survey — <https://www.worldvaluessurvey.org>, Tunisia country files
 - Afrobarometer — <https://www.afrobarometer.org/data/>, Tunisia country files
+- Arab Opinion Index — <https://arabindex.dohainstitute.org>, one page per round, direct download
 
 They are redistributed here in the form the publishers released them. Cite the
 programme and the round, not this repository. See `docs/provenance.md` for terms.
