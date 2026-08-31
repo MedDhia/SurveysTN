@@ -1,8 +1,5 @@
-# Pooled multi-country releases. These are large, they are redistributed by the
-# survey programmes themselves, and nothing in the repository depends on them at
-# read time -- only on regeneration. See docs/provenance.md for how to get them.
-data/raw/*
-!data/raw/README.md
+# data/raw holds the publishers' releases and is tracked: the archive carries its
+# own sources so it can be regenerated and fully verified from a clone alone.
 
 __pycache__/
 *.pyc

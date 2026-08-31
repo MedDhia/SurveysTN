@@ -7,7 +7,38 @@
       "data_page": "https://www.arabbarometer.org/surveys/",
       "country_variable_values": {
         "tunisia": 21
+      },
+      "prefix": "ab"
+    },
+    "world-values-survey": {
+      "name": "World Values Survey",
+      "prefix": "wvs",
+      "publisher": "WVS Association / JD Systems Institute",
+      "homepage": "https://www.worldvaluessurvey.org",
+      "data_page": "https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
+      "country_variable_values": {
+        "tunisia": 788
+      },
+      "sentinel_code_labels": {
+        "source": "docs/questionnaires/wvs-w07-questionnaire.pdf, page 1, 'Technical codes'",
+        "labels": {
+          "-1": "Don't know",
+          "-2": "No answer/refused",
+          "-3": "Not applicable (filter)",
+          "-5": "Missing; Not applicable for other reasons"
+        }
       }
+    },
+    "afrobarometer": {
+      "name": "Afrobarometer",
+      "prefix": "afro",
+      "publisher": "Afrobarometer",
+      "homepage": "https://www.afrobarometer.org",
+      "data_page": "https://www.afrobarometer.org/data/",
+      "country_variable_values": {
+        "tunisia": "TUN"
+      },
+      "note": "Country files carry no country column; the country is the prefix of RESPNO."
     }
   },
   "waves": [
@@ -24,7 +55,9 @@
       "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes.",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w02-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ABII_Questionnaire_English-1.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABII_Questionnaire_English-1.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -41,7 +74,9 @@
       "notes": "",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w03-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ABIII_Questionnaire_ENG.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABIII_Questionnaire_ENG.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -59,7 +94,9 @@
       "notes": "Only the label-text CSV release was available; no numeric codes or question text.",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w04-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ABIV_Questionnaire_ENG-2.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABIV_Questionnaire_ENG-2.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -75,7 +112,9 @@
       "notes": "Release v2.",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w05-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ABV_Questionnaire_ENG_v2.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABV_Questionnaire_ENG_v2.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -93,7 +132,9 @@
       "notes": "Round 1, fielded by telephone during the COVID-19 pandemic.",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w06p1-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-I-Questionnaire-2.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-I-Questionnaire-2.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -111,7 +152,9 @@
       "notes": "Round 2, a fresh sample with its own questionnaire.",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w06p2-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-II-Questionnaire-2.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-II-Questionnaire-2.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -129,7 +172,9 @@
       "notes": "Round 3, a fresh sample with its own questionnaire.",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w06p3-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-III-Questionnaire.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-III-Questionnaire.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -146,7 +191,9 @@
       "notes": "Release version 6.",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w07-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VII-Questionnaire-RELEASE-v2.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VII-Questionnaire-RELEASE-v2.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
     },
     {
@@ -163,8 +210,150 @@
       "notes": "Release v3 (archive labelled v2).",
       "questionnaire": {
         "file": "docs/questionnaires/ab-w08-questionnaire.pdf",
-        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VIII-Questionnaire-RELEASE-FIN-NOV-2024-1.pdf"
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VIII-Questionnaire-RELEASE-FIN-NOV-2024-1.pdf",
+        "language": "English",
+        "parsed_for_question_text": true
       }
+    },
+    {
+      "series": "world-values-survey",
+      "wave": 6,
+      "wave_label": "Wave 6",
+      "slug": "wave-06",
+      "raw_file_stem": "WV6_Data_Tunisia_Excel_v20221117.1",
+      "source_format": "xlsx-headers",
+      "country_var": "V2",
+      "country_value": 788,
+      "fieldwork_years_series": "2010-2014",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_month_vars": [
+        "FW_START",
+        "FW_END"
+      ],
+      "fieldwork_source": "derived from the FW_START and FW_END variables in the data file",
+      "language": "English (translated instrument; variable labels only, no value labels)",
+      "questionnaire": {
+        "file": "docs/questionnaires/wvs-w06-questionnaire.pdf",
+        "url": null,
+        "language": "Arabic (Tunisia field instrument)",
+        "parsed_for_question_text": false,
+        "note": "Arabic text does not extract as text, and the question wording is already in the release headers."
+      },
+      "notes": "Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7.",
+      "methodology_document": {
+        "file": "docs/questionnaires/wvs-w06-methodology.pdf",
+        "url": null,
+        "note": "WVS methodological questionnaire for Tunisia 2013: how the survey was run, not the instrument."
+      }
+    },
+    {
+      "series": "world-values-survey",
+      "wave": 7,
+      "wave_label": "Wave 7",
+      "slug": "wave-07",
+      "raw_file_stem": "WVS_Wave_7_Tunisia_Excel_v5.0",
+      "source_format": "xlsx-headers",
+      "country_var": "B_COUNTRY",
+      "country_value": 788,
+      "fieldwork_years_series": "2017-2022",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "J_INTDATE",
+      "fieldwork_date_format": "%Y%m%d",
+      "fieldwork_source": "derived from the J_INTDATE variable in the data file",
+      "questionnaire": {
+        "file": "docs/questionnaires/wvs-w07-questionnaire.pdf",
+        "url": null,
+        "language": "Arabic (MENA field instrument, with English technical codes)",
+        "parsed_for_question_text": false,
+        "note": "Question wording is already in the release headers; this is the fielded Arabic instrument."
+      },
+      "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release.",
+      "language": "English (translated instrument; variable labels only, no value labels)"
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 6,
+      "wave_label": "Round 6",
+      "slug": "round-06",
+      "raw_file_stem": "afrobarometer_tun_r6_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2014-2015",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 6 release, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 7,
+      "wave_label": "Round 7",
+      "slug": "round-07",
+      "raw_file_stem": "afrobarometer_tun_r7_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2016-2018",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 7 release, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 8,
+      "wave_label": "Round 8",
+      "slug": "round-08",
+      "raw_file_stem": "afrobarometer_tun_r8_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2019-2021",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 8 release of 31 March 2021, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 9,
+      "wave_label": "Round 9",
+      "slug": "round-09",
+      "raw_file_stem": "afrobarometer_tun_r9_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2021-2023",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 9 release of 1 March 2023, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 10,
+      "wave_label": "Round 10",
+      "slug": "round-10",
+      "raw_file_stem": "afrobarometer_tun_r10_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2024-2025",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English."
     }
   ]
 }

@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 """Match variables across waves, and attach the question each one asked.
 
-Arab Barometer keeps question numbering broadly stable across waves but changes
-the case of variable names between releases (``country`` in Wave II, ``COUNTRY``
-in Wave VIII), so variables are matched on the upper-cased name. A matching name
+Variables are matched on the upper-cased name, **within a series and never across
+one**. Arab Barometer keeps question numbering broadly stable across its waves but
+changes the case of variable names between releases (``country`` in Wave II,
+``COUNTRY`` in Wave VIII), so upper-casing is what lines those up. Between series a
+shared name means nothing: ``Q1`` is the governorate in Arab Barometer and
+"Important in life: Family" in the World Values Survey. A matching name
 is weak evidence on its own, though: over thirteen years the same number is
 sometimes reused for a different question. The crosswalk therefore carries the
 question text alongside each name and flags where it drifts.
@@ -32,6 +35,7 @@ from __future__ import annotations
 import difflib
 import json
 import re
+from collections import Counter
 from pathlib import Path
 
 import pandas as pd
@@ -61,6 +65,11 @@ SQUARE_BRACKETS = re.compile(r"\[[^\]]*\]")
 NAME_PREFIX = re.compile(r"^\s*[Qq]\d{1,4}[A-Za-z0-9_]*[.:]?\s*")
 
 AGREEMENT_FLOOR = 0.6  # difflib ratio above which two wordings count as the same
+# A suggested match is only worth offering when the two wordings are all but
+# identical. Below this the neighbours are different questions that happen to be
+# phrased alike -- "Political action: joining in boycotts" against "Political
+# action recently done: joining in boycotts" scores 0.84 and is not the same item.
+SUGGESTION_FLOOR = 0.95
 MINIMUM_COMPARISONS = 10  # below this an agreement rate is not worth reporting
 
 # In some questionnaires the response options extract onto the same line as the
@@ -275,46 +284,92 @@ def check_parse(wave: dict, questions: dict[str, str]) -> dict:
     }
 
 
-def main() -> None:
-    catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
-    manifest = json.loads((ROOT / "catalog" / "sources.json").read_text(encoding="utf-8"))
-    specs = {
-        (w["series"], f"w{w['wave']:02d}" + (f"p{w['part']}" if w.get("part") else "")): w
-        for w in manifest["waves"]
-    }
+def same_numbers(a: str, b: str) -> bool:
+    """Do two wordings agree on the numbers in them, once the name prefix is gone?
 
-    surveys = catalog["surveys"]
-    tags = [s["tag"] for s in surveys]
-    waves, report = {}, {}
+    A numbered series of items differs by a single character between members --
+    "Reason for Unsuccessful Call Household 5" against "... Household 2" scores
+    0.98 and is a different household. The digits are the whole of the difference,
+    so they have to match. The variable name is stripped first, or `q2061` against
+    `Q2061A` would fail on its own name.
+    """
+    return re.findall(r"\d+", normalise(a)) == re.findall(r"\d+", normalise(b))
 
-    for s in surveys:
-        spec = specs[(s["series"], s["tag"])]
-        questionnaire = spec.get("questionnaire")
-        questions = (
-            parse_questionnaire(ROOT / questionnaire["file"]) if questionnaire else {}
-        )
-        waves[s["tag"]] = load_wave(s, questions)
-        entry = {
-            "wave_label": s["wave_label"],
-            "questionnaire": questionnaire["file"] if questionnaire else None,
-        }
-        entry.update(
-            check_parse(waves[s["tag"]], questions)
-            if questions
-            else {"questions_parsed": 0, "compared": 0, "agreeing": 0, "agreement_rate": None}
-        )
-        report[s["tag"]] = entry
-        print(
-            f"{s['tag']}: parsed {entry['questions_parsed']:>3} questions | "
-            f"compared {entry['compared']:>3} against release labels | "
-            f"agreement {entry['agreement_rate'] if entry['agreement_rate'] is not None else 'n/a'}"
-        )
 
-    every_name = sorted({n for w in waves.values() for n in w["names"]})
+def suggest_by_text(series: str, tags: list[str], waves: dict) -> list[dict]:
+    """Pair up variables that no name matches but whose question text is the same.
+
+    The World Values Survey numbers its substantive items V-something in Wave 6 and
+    Q-something in Wave 7, so matching on name finds only the derived indices and
+    the admin columns. Both releases carry the question text, though, so the items
+    can be lined up by what they asked.
+
+    These are suggestions, not findings. A pair is only offered when the wordings
+    are all but identical and neither side is claimed by a competing pair; the
+    publisher's own crosswalk is the authority.
+    """
+    suggestions = []
+    for i, source in enumerate(tags):
+        for target in tags[i + 1 :]:
+            left = {
+                n: normalise(t)
+                for n, t in waves[source]["text"].items()
+                if n not in waves[target]["names"] and normalise(t)
+            }
+            right = {
+                n: normalise(t)
+                for n, t in waves[target]["text"].items()
+                if n not in waves[source]["names"] and normalise(t)
+            }
+            if not left or not right:
+                continue
+
+            pairs = []
+            for name, text in left.items():
+                best, score = None, 0.0
+                for other, other_text in right.items():
+                    ratio = difflib.SequenceMatcher(None, text, other_text).ratio()
+                    if ratio > score:
+                        best, score = other, ratio
+                if (
+                    best
+                    and score >= SUGGESTION_FLOOR
+                    and same_numbers(waves[source]["text"][name], waves[target]["text"][best])
+                ):
+                    pairs.append((name, best, score))
+
+            # A target that two sources both claim is ambiguous: Wave 6 asks both
+            # "Political action: joining in boycotts" and "Political action recently
+            # done: joining in boycotts", and only one of them is Wave 7's item.
+            claimed = Counter(target_name for _, target_name, _ in pairs)
+            for name, other, score in pairs:
+                if claimed[other] > 1:
+                    continue
+                suggestions.append(
+                    {
+                        "series": series,
+                        "from_survey": source,
+                        "from_variable": waves[source]["names"][name],
+                        "to_survey": target,
+                        "to_variable": waves[target]["names"][other],
+                        "similarity": round(score, 3),
+                        "question_text": waves[source]["text"][name],
+                    }
+                )
+    return suggestions
+
+
+def build_rows(series: str, tags: list[str], all_tags: list[str], waves: dict) -> list[dict]:
+    """Crosswalk rows for one series.
+
+    ``tags`` are that series' surveys and are the only ones matched against each
+    other; ``all_tags`` is every survey in the archive, so every row carries the
+    same columns and the table stays rectangular.
+    """
     rows = []
-    for name in every_name:
+    for name in sorted({n for t in tags for n in waves[t]["names"]}):
         present = [t for t in tags if name in waves[t]["names"]]
-        texts = {t: waves[t]["text"][t2] for t in present for t2 in [name] if t2 in waves[t]["text"]}
+        texts = {t: waves[t]["text"][name] for t in present if name in waves[t]["text"]}
         from_questionnaire = [
             t for t in present if waves[t]["source"].get(name, "").startswith("questionnaire")
         ]
@@ -334,9 +389,7 @@ def main() -> None:
             wordings, basis = [], ""
         if len(wordings) >= 2:
             worst = min(
-                agree(a, b)
-                for i, a in enumerate(wordings)
-                for b in wordings[i + 1 :]
+                agree(a, b) for i, a in enumerate(wordings) for b in wordings[i + 1 :]
             )
             varies = "yes" if worst < AGREEMENT_FLOOR else "no"
         else:
@@ -350,6 +403,7 @@ def main() -> None:
         best_text, best_source = max(candidates, key=lambda c: len(c[0]), default=("", ""))
 
         row = {
+            "series": series,
             "variable": name,
             "n_waves": len(present),
             "waves": ";".join(present),
@@ -367,13 +421,87 @@ def main() -> None:
             "lowest_text_agreement": round(worst, 3) if worst is not None else "",
             "text_from_questionnaire": ";".join(from_questionnaire),
         }
-        for t in tags:
+        for t in all_tags:
             row[f"{t}_name"] = waves[t]["names"].get(name, "")
             row[f"{t}_text"] = texts.get(t, "")
         rows.append(row)
+    return rows
 
-    df = pd.DataFrame(rows).sort_values(["n_waves", "variable"], ascending=[False, True])
+
+def main() -> None:
+    catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "catalog" / "sources.json").read_text(encoding="utf-8"))
+    specs = {
+        (w["series"], f"w{w['wave']:02d}" + (f"p{w['part']}" if w.get("part") else "")): w
+        for w in manifest["waves"]
+    }
+
+    surveys = catalog["surveys"]
+    tags = [s["key"] for s in surveys]
+    waves, report = {}, {}
+
+    for s in surveys:
+        spec = specs[(s["series"], s["tag"])]
+        questionnaire = spec.get("questionnaire")
+        # A questionnaire is only parsed when it is the English instrument. The WVS
+        # ones are the fielded Arabic, whose text does not extract; their question
+        # wording is in the release headers anyway.
+        parse_it = bool(questionnaire) and questionnaire.get("parsed_for_question_text", True)
+        questions = parse_questionnaire(ROOT / questionnaire["file"]) if parse_it else {}
+        waves[s["key"]] = load_wave(s, questions)
+        entry = {
+            "wave_label": s["wave_label"],
+            "series": s["series"],
+            "questionnaire": questionnaire["file"] if parse_it else None,
+        }
+        entry.update(
+            check_parse(waves[s["key"]], questions)
+            if questions
+            else {
+                "questions_parsed": 0,
+                "compared": 0,
+                "agreeing": 0,
+                "agreement_rate": None,
+                "not_validated_reason": (
+                    "question text comes from the release itself; no questionnaire is parsed"
+                    if questionnaire
+                    else "no questionnaire in the archive for this survey"
+                ),
+            }
+        )
+        report[s["key"]] = entry
+        print(
+            f"{s['key']}: parsed {entry['questions_parsed']:>3} questions | "
+            f"compared {entry['compared']:>3} against release labels | "
+            f"agreement {entry['agreement_rate'] if entry['agreement_rate'] is not None else 'n/a'}"
+        )
+
+    # One block of rows per series: a name shared between two series is a
+    # coincidence of numbering, not the same question.
+    by_series: dict[str, list[str]] = {}
+    for s_ in surveys:
+        by_series.setdefault(s_["series"], []).append(s_["key"])
+
+    rows, suggestions = [], []
+    for series, series_tags in by_series.items():
+        rows.extend(build_rows(series, series_tags, tags, waves))
+        if len(series_tags) > 1:
+            suggestions.extend(suggest_by_text(series, series_tags, waves))
+
+    df = pd.DataFrame(rows).sort_values(
+        ["series", "n_waves", "variable"], ascending=[True, False, True]
+    )
     df.to_csv(ROOT / "docs" / "crosswalk.csv", index=False)
+
+    suggested = pd.DataFrame(
+        suggestions,
+        columns=[
+            "series", "from_survey", "from_variable", "to_survey", "to_variable",
+            "similarity", "question_text",
+        ],
+    ).sort_values(["series", "from_survey", "from_variable"])
+    suggested.to_csv(ROOT / "docs" / "crosswalk-suggested.csv", index=False)
+    print(f"wrote docs/crosswalk-suggested.csv: {len(suggested):,} suggested matches")
 
     (ROOT / "catalog" / "crosswalk-report.json").write_text(
         json.dumps(
@@ -383,6 +511,8 @@ def main() -> None:
                 "with_question_text": int((df["question_text"] != "").sum()),
                 "in_every_wave": int((df["n_waves"] == len(tags)).sum()),
                 "wording_drifts": int((df["text_varies_across_waves"] == "yes").sum()),
+                "suggested_matches": len(suggestions),
+                "suggestion_floor": SUGGESTION_FLOOR,
             },
             indent=2,
             ensure_ascii=False,
@@ -391,62 +521,111 @@ def main() -> None:
         encoding="utf-8",
     )
 
-    (ROOT / "docs" / "crosswalk.md").write_text(render_summary(df, tags, report), encoding="utf-8")
+    series_names = {k: v["name"] for k, v in manifest["series"].items()}
+    (ROOT / "docs" / "crosswalk.md").write_text(
+        render_summary(df, tags, report, series_names, suggested), encoding="utf-8"
+    )
     print(
         f"\nwrote docs/crosswalk.csv: {len(df):,} variables, "
         f"{(df['question_text'] != '').sum():,} with question text"
     )
 
 
-def render_summary(df: pd.DataFrame, tags: list[str], report: dict) -> str:
-    counts = df["n_waves"].value_counts().sort_index(ascending=False)
-    core = df[(df["n_waves"] == len(tags)) & (df["text_varies_across_waves"] == "no")]
-
+def render_summary(
+    df: pd.DataFrame, tags: list[str], report: dict, series_names: dict, suggested: pd.DataFrame
+) -> str:
     lines = [
         "# Cross-wave crosswalk",
         "",
         "Generated by `scripts/build_crosswalk.py`. The full table is",
         "[`crosswalk.csv`](crosswalk.csv): one row per variable, the name it takes in",
-        "each wave, the question each wave asked, and whether the wording held.",
+        "each survey, the question each one asked, and whether the wording held.",
         "",
-        "## How many waves each variable spans",
-        "",
-        "| Waves | Variables |",
-        "|---:|---:|",
+        "Variables are matched **within a series, never across one**. A name shared",
+        "between two series is a coincidence of numbering: `Q1` is the governorate in",
+        "Arab Barometer and \"Important in life: Family\" in the World Values Survey.",
     ]
-    for n, c in counts.items():
-        lines.append(f"| {n} | {c:,} |")
+
+    for series, block in df.groupby("series", sort=False):
+        series_tags = [t for t in tags if t in set(sum((w.split(";") for w in block["waves"]), []))]
+        counts = block["n_waves"].value_counts().sort_index(ascending=False)
+        drifts = int((block["text_varies_across_waves"] == "yes").sum())
+        core = block[(block["n_waves"] == len(series_tags)) & (block["text_varies_across_waves"] == "no")]
+
+        lines += [
+            "",
+            f"## {series_names.get(series, series)}",
+            "",
+            f"{len(block):,} variables across {len(series_tags)} surveys, "
+            f"{int((block['question_text'] != '').sum()):,} with question text.",
+            "",
+            "| Surveys | Variables |",
+            "|---:|---:|",
+        ]
+        for n, c in counts.items():
+            lines.append(f"| {n} | {c:,} |")
+
+        if len(series_tags) < 2:
+            lines += [
+                "",
+                "Only one survey in this series so far, so there is nothing to match it",
+                "against; the rows carry its names and question text and wait for a second.",
+            ]
+            continue
+
+        lines += [
+            "",
+            f"{drifts:,} variables carry a name in more than one survey but wording that",
+            "does not match between them. That is the column worth checking before pooling:",
+            "`text_varies_across_waves`, with the weakest pairwise agreement in",
+            "`lowest_text_agreement` and the kind of text compared in `comparison_basis`.",
+            "",
+            f"### Present in all {len(series_tags)} with stable wording",
+            "",
+            f"{len(core)} variables. The safest to stack, and even here confirm the response",
+            "scale in each survey's `codebook.csv` — the crosswalk compares question wording,",
+            "not answer options.",
+            "",
+            "| Variable | Question |",
+            "|---|---|",
+        ]
+        for _, r in core.iterrows():
+            text = r["question_text"][:110] + ("…" if len(r["question_text"]) > 110 else "")
+            lines.append(f"| `{r['variable']}` | {text} |")
 
     lines += [
         "",
-        f"{(df['text_varies_across_waves'] == 'yes').sum():,} variables carry a name in more than one wave but",
-        "wording that does not match between them. That is the column worth checking",
-        "before pooling: `text_varies_across_waves`, with the weakest pairwise agreement",
-        "in `lowest_text_agreement` and the kind of text compared in `comparison_basis`.",
+        "## Suggested matches, where the numbering changed",
         "",
-        f"## Present in all {len(tags)} surveys with stable wording",
+        "[`crosswalk-suggested.csv`](crosswalk-suggested.csv) pairs variables that no name",
+        "matches but whose question text is the same. It exists because the World Values",
+        "Survey renumbered between waves: Wave 6 asks `V9` what Wave 7 asks as `Q6`, and",
+        "matching on name finds only the derived indices and the admin columns. Arab",
+        "Barometer needs it less often, but it also renames — Wave II's Tunisia-specific",
+        f"`te105` is Wave III's `q105a`. {len(suggested):,} pairs in total:",
         "",
-        f"{len(core)} variables. These are the safest to stack, and even here confirm the",
-        "response scale in each wave's `codebook.csv` — the crosswalk compares question",
-        "wording, not answer options.",
-        "",
-        "| Variable | Question |",
-        "|---|---|",
+        "| Series | Pairs |",
+        "|---|---:|",
     ]
-    for _, r in core.iterrows():
-        text = r["question_text"][:110] + ("…" if len(r["question_text"]) > 110 else "")
-        lines.append(f"| `{r['variable']}` | {text} |")
-
+    for series, block in suggested.groupby("series"):
+        lines.append(f"| {series_names.get(series, series)} | {len(block):,} |")
     lines += [
+        "",
+        "**These are suggestions, not findings.** A pair is offered only when the two",
+        f"wordings are all but identical (difflib ratio ≥ {SUGGESTION_FLOOR}) and neither side is",
+        "claimed by a competing pair, because just below that threshold the near neighbours",
+        "are different questions phrased alike: Wave 6 asks both \"Political action: joining",
+        "in boycotts\" and \"Political action recently done: joining in boycotts\", and only",
+        "one of them is Wave 7's item. Confirm against the publisher's own crosswalk before",
+        "you rely on one.",
         "",
         "## Where the question text comes from",
         "",
-        "The release's own variable labels where it has them, otherwise the wave's",
-        "questionnaire PDF parsed by question number. Wave IV has no labels at all, so",
-        "everything it contributes is parsed. The parse is validated against the waves",
-        "that do carry labels:",
+        "The release's own variable labels where it has them, otherwise the survey's",
+        "questionnaire PDF parsed by question number. The parse is validated against the",
+        "releases that carry wording as labels:",
         "",
-        "| Wave | Questions parsed | Compared with labels | Agreement |",
+        "| Survey | Questions parsed | Compared with labels | Agreement |",
         "|---|---:|---:|---|",
     ]
     for tag, r in report.items():
@@ -456,7 +635,8 @@ def render_summary(df: pd.DataFrame, tags: list[str], report: dict) -> str:
             else f"not validated — {r['not_validated_reason']}"
         )
         lines.append(
-            f"| {r['wave_label']} | {r['questions_parsed']} | {r['compared']} | {rate} |"
+            f"| {series_names.get(r['series'], r['series'])} {r['wave_label']} | "
+            f"{r['questions_parsed']} | {r['compared']} | {rate} |"
         )
     lines += [
         "",
@@ -467,13 +647,13 @@ def render_summary(df: pd.DataFrame, tags: list[str], report: dict) -> str:
         "",
         "Only labels that are the question itself count as comparable. A label that names",
         "a question without restating it cannot be compared with the wording however good",
-        "the parse is — Wave V labels the campaign-rally question",
+        "the parse is — Arab Barometer Wave V labels the campaign-rally question",
         "`ELECTORAL PARTICIPATION: VISITED RALLY DURING PARLIAMENTARY ELECTION`, which is",
         "right and shares almost no characters with it. Short labels and shouted ones are",
-        "therefore left out, and a wave with fewer than ten left is reported unvalidated",
+        "therefore left out, and a survey with fewer than ten left is reported unvalidated",
         "rather than given a rate that would measure labelling style.",
         "",
-        "Text taken from a questionnaire is marked per wave in `text_from_questionnaire`.",
+        "Text taken from a questionnaire is marked per survey in `text_from_questionnaire`.",
         "A sub-item such as `Q127_1A` inherits the wording of its parent question `Q127`",
         "where no exact number matches, so treat those as the question stem rather than",
         "the item's own wording.",

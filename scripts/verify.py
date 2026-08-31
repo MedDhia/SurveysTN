@@ -17,6 +17,7 @@ when you have a clone but not the source releases.
 from __future__ import annotations
 
 import argparse
+import datetime
 import json
 import sys
 from pathlib import Path
@@ -24,9 +25,54 @@ from pathlib import Path
 import pandas as pd
 import pyreadstat
 
-from extract_tunisia import ROOT, apply_numeric_types, is_blank, read_pooled, sha256, wave_tag
+from extract_tunisia import (
+    ROOT,
+    apply_numeric_types,
+    is_blank,
+    read_pooled,
+    sanitise_names,
+    select_country,
+    sha256,
+    wave_tag,
+)
 
 TOL = 1e-9
+# Stata stores a time of day as a float and rounds it, so an interview start time
+# can come back a microsecond off what SPSS holds. A millisecond is far finer than
+# anything these columns are used for and far coarser than the rounding.
+TIME_TOL = datetime.timedelta(milliseconds=1)
+
+
+def as_timedelta(value):
+    """A time, date or datetime as a duration, so two can be compared numerically."""
+    if isinstance(value, datetime.datetime):
+        return value - datetime.datetime(1970, 1, 1)
+    if isinstance(value, datetime.date):
+        return datetime.datetime.combine(value, datetime.time()) - datetime.datetime(1970, 1, 1)
+    if isinstance(value, datetime.time):
+        return datetime.timedelta(
+            hours=value.hour,
+            minutes=value.minute,
+            seconds=value.second,
+            microseconds=value.microsecond,
+        )
+    return None
+
+
+def same_temporal(x: pd.Series, y: pd.Series) -> bool | None:
+    """Compare two date or time columns to the millisecond. None if they are not one."""
+    left, right = x.dropna(), y.dropna()
+    if left.empty or right.empty or len(left) != len(right):
+        return None
+    # Only when both sides really are temporal. A CSV brings dates back as text,
+    # and there the plain string comparison below is exact and correct.
+    if as_timedelta(left.iloc[0]) is None or as_timedelta(right.iloc[0]) is None:
+        return None
+    for a, b in zip(left, right):
+        da, db = as_timedelta(a), as_timedelta(b)
+        if da is None or db is None or abs(da - db) > TIME_TOL:
+            return False
+    return True
 
 
 def same_frame(a: pd.DataFrame, b: pd.DataFrame, what: str, errors: list[str]) -> None:
@@ -40,6 +86,12 @@ def same_frame(a: pd.DataFrame, b: pd.DataFrame, what: str, errors: list[str]) -
         x, y = a[col], b[col]
         numeric = pd.api.types.is_numeric_dtype(x) and pd.api.types.is_numeric_dtype(y)
         if not numeric:
+            temporal = same_temporal(x, y)
+            if temporal is not None:
+                if not temporal:
+                    errors.append(f"{what}: values differ in {col}")
+                    return
+                continue
             # CSV cannot tell an empty string from a missing value, so a string
             # cell that is empty either way counts as a match. SPSS and Stata
             # preserve the distinction; CSV does not.
@@ -86,6 +138,74 @@ def check_labels_csv(
             if not any(abs(c - raw_val) <= TOL for c in back.get(seen, ())):
                 errors.append(f"{tag} -labels.csv: {var} row {i} is {seen!r}")
                 return
+
+
+def check_wave06_merge(errors: list[str]) -> None:
+    """Check the stacked Wave VI file against the three rounds it was built from.
+
+    This reads the committed files rather than re-running the merge, so it would
+    catch a merge that no longer matches its inputs as well as one that was never
+    rebuilt.
+    """
+    report_path = ROOT / "catalog" / "wave-06-merge-report.json"
+    if not report_path.exists():
+        return
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    folder = ROOT / report["path"]
+    tag = "wave-06 merge"
+
+    for name, info in report["files"].items():
+        f = folder / name
+        if not f.exists():
+            errors.append(f"{tag}: missing {name}")
+        elif sha256(f) != info["sha256"]:
+            errors.append(f"{tag}: {name} does not match the recorded SHA-256")
+
+    merged, _ = pyreadstat.read_sav(str(folder / f"{report['stem']}.sav"), user_missing=True)
+    split = set(report["split_variables"])
+
+    for n in (1, 2, 3):
+        part, _ = pyreadstat.read_sav(
+            str(ROOT / f"data/arab-barometer/wave-06-part-{n}/arab-barometer-w06p{n}-tunisia.sav"),
+            user_missing=True,
+        )
+        rows = merged[merged["PART"] == n].reset_index(drop=True)
+        if len(rows) != len(part):
+            errors.append(f"{tag}: part {n} contributes {len(rows)} rows, the round has {len(part)}")
+            continue
+        for col in part.columns:
+            target = f"{col}__P{n}" if col in split else col
+            if target not in rows.columns:
+                errors.append(f"{tag}: part {n} column {col} is missing from the merge")
+                continue
+            a, b = part[col], rows[target]
+            if col == "DATE":  # normalised to text on the way in
+                a = a.map(lambda v: "" if pd.isna(v) else str(v)[:10])
+            if pd.api.types.is_numeric_dtype(a) and pd.api.types.is_numeric_dtype(b):
+                if a.isna().to_numpy().tolist() != b.isna().to_numpy().tolist():
+                    errors.append(f"{tag}: part {n} {col} missingness changed")
+                    break
+                if not ((a.dropna().to_numpy() - b.dropna().to_numpy()).__abs__() <= TOL).all():
+                    errors.append(f"{tag}: part {n} {col} values changed")
+                    break
+            elif not a.fillna("").astype(str).str.strip().equals(
+                b.fillna("").astype(str).str.strip()
+            ):
+                errors.append(f"{tag}: part {n} {col} values changed")
+                break
+
+        # A column another round asked but this one did not must be empty here.
+        for col in rows.columns:
+            base = col.split("__P")[0]
+            if col in ("PART", "MERGE_ID") or base in part.columns or "__P" in col:
+                continue
+            if not is_blank(rows[col]).all():
+                errors.append(f"{tag}: {col} has values for part {n}, which never asked it")
+                break
+
+    if merged["MERGE_ID"].duplicated().any():
+        errors.append(f"{tag}: MERGE_ID is not unique")
+    print(f"{tag}: checked {len(merged):,} rows x {merged.shape[1]} variables against the three rounds")
 
 
 def check_offline(catalog: dict) -> list[str]:
@@ -137,9 +257,13 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
 
     pooled, _, value_labels, numeric = read_pooled(spec, raw_dir)
     country_value = spec.get("country_value", series["country_variable_values"]["tunisia"])
-    expect = pooled[pooled[spec["country_var"]] == country_value].reset_index(drop=True)
+    expect = select_country(pooled, spec, country_value).reset_index(drop=True)
     del pooled
     expect = apply_numeric_types(expect, numeric)
+    expect, renamed = sanitise_names(expect)
+    if renamed != s.get("renamed_variables", {}):
+        errors.append(f"{tag}: the recorded variable renames do not match what the release needs")
+    value_labels = {renamed.get(k, k): v for k, v in value_labels.items()}
 
     folder = ROOT / s["path"]
     for name, info in s["files"].items():
@@ -156,10 +280,13 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
     got_dta, _ = pyreadstat.read_dta(f"{stem}.dta")
     same_frame(expect, got_dta, f"{tag} .dta", errors)
 
-    if s["source_format"] == "sav":
+    if s["has_numeric_codes"]:
         got_csv = pd.read_csv(f"{stem}-codes.csv", low_memory=False)
         same_frame(expect, got_csv, f"{tag} -codes.csv", errors)
-        check_labels_csv(expect, Path(f"{stem}-labels.csv"), value_labels, tag, errors)
+        if s["has_value_labels"]:
+            check_labels_csv(expect, Path(f"{stem}-labels.csv"), value_labels, tag, errors)
+        elif Path(f"{stem}-labels.csv").exists():
+            errors.append(f"{tag}: -labels.csv exists but the release defines no value labels")
     else:
         # A label-only release has no codes, so -labels.csv is the data itself
         # and is compared directly rather than resolved back through the labels.
@@ -188,12 +315,14 @@ def main() -> int:
 
     if args.offline:
         errors = check_offline(catalog)
+        check_wave06_merge(errors)
         label = "all committed files match the catalog"
     else:
         errors = []
         for s in catalog["surveys"]:
             spec = specs[(s["series"], s["tag"])]
             check_against_release(s, spec, manifest["series"][s["series"]], errors)
+        check_wave06_merge(errors)
         label = "all extracts match their pooled releases"
 
     if errors:

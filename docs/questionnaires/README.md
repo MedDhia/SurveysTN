@@ -17,7 +17,24 @@ carries no variable labels of its own.
 | `ab-w07-questionnaire.pdf` | Wave VII | [`wave-07`](../../data/arab-barometer/wave-07) |
 | `ab-w08-questionnaire.pdf` | Wave VIII | [`wave-08`](../../data/arab-barometer/wave-08) |
 
+| `wvs-w06-questionnaire.pdf` | WVS Wave 6 | [`wave-06`](../../data/world-values-survey/wave-06) |
+| `wvs-w06-methodology.pdf` | WVS Wave 6 | methodology, not the instrument |
+| `wvs-w07-questionnaire.pdf` | WVS Wave 7 | [`wave-07`](../../data/world-values-survey/wave-07) |
+
 Every survey in the archive has its instrument here.
+
+The two WVS questionnaires are the Arabic instruments as fielded, and are **not**
+parsed for question text: the Arabic does not extract as text, and it is not needed
+— the WVS releases carry the question wording in their own column headers. The Wave
+7 one earns its place another way. Its first page lists the technical codes in
+English — `-1 Don't know`, `-2 No answer/refused`, `-3 Not applicable (filter)`,
+`-5 Missing; Not applicable for other reasons` — which is the only documentation in
+this archive of what the WVS negative codes mean, since the spreadsheet releases
+ship them bare. `catalog/sources.json` quotes them with that page as the source.
+
+`wvs-w06-methodology.pdf` is the WVS methodological questionnaire for Tunisia 2013:
+how the survey was run rather than what it asked. It is kept as documentation and
+is not parsed.
 
 The source URL for each file is recorded per wave in
 [`../../catalog/sources.json`](../../catalog/sources.json), under `questionnaire`.

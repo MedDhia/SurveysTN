@@ -1,30 +1,43 @@
-# Pooled releases (not tracked in git)
+# The releases these extracts come from
 
-`scripts/extract_tunisia.py` and `scripts/verify.py` read the pooled,
-multi-country release files from this directory. They are not committed: they run
-to roughly 300 MB, the survey programmes distribute them themselves, and the
-extracts in `data/` are what this repository is for.
+Tracked, not ignored. Every file the pipeline reads is here, so the archive can be
+regenerated and fully verified from a clone with nothing else downloaded. The
+extracts under `data/<series>/` are what you want for analysis; this directory is
+the input side, and the answer to "where exactly did that number come from".
 
-Download them from the publisher and drop them here, unzipped and under their
-original names. The expected files, with the SHA-256 that `catalog/catalog.json`
-records for each:
+Some releases are here in more than one format because the publisher ships them
+that way. The pipeline reads one per survey — the one named in
+`raw_file_stem` plus `source_format` in
+[`../../catalog/sources.json`](../../catalog/sources.json) — and the others are
+kept because they are the same data in a form another tool may prefer.
 
-| File | Source |
-|---|---|
-| `ABII_English.sav` | Arab Barometer Wave II, English release |
-| `ArabBarometer_WaveV_English_v2.sav` | Arab Barometer Wave V, English release v2 |
-| `ABIII_English.sav` | Arab Barometer Wave III, English release |
-| `ABIV_English.csv` | Arab Barometer Wave IV, English release (label-text CSV) |
-| `Arab_Barometer_Wave_6_Part_1_ENG_RELEASE.sav` | Arab Barometer Wave VI Part 1 |
-| `Arab_Barometer_Wave_6_Part_2_ENG_RELEASE.sav` | Arab Barometer Wave VI Part 2 |
-| `Arab_Barometer_Wave_6_Part_3_ENG_RELEASE.sav` | Arab Barometer Wave VI Part 3 |
-| `AB7_ENG_Release_Version6.sav` | Arab Barometer Wave VII, English release version 6 |
-| `ArabBarometer_WaveVIII_English_v3.sav` | Arab Barometer Wave VIII, English release v3 |
+| Survey | File the pipeline reads | Also here |
+|---|---|---|
+| Arab Barometer Wave II | `ABII_English.sav` | `.csv`, `.dta` |
+| Arab Barometer Wave III | `ABIII_English.sav` | `.csv`, `.dta` |
+| Arab Barometer Wave IV | `ABIV_English.csv` | — |
+| Arab Barometer Wave V | `ArabBarometer_WaveV_English_v2.sav` | `.csv`, `.dta` |
+| Arab Barometer Wave VI Parts 1–3 | `Arab_Barometer_Wave_6_Part_{1,2,3}_ENG_RELEASE.sav` | `.csv`, `.dta` |
+| Arab Barometer Wave VII | `AB7_ENG_Release_Version6.sav` | `.csv`, `.dta` |
+| Arab Barometer Wave VIII | `ArabBarometer_WaveVIII_English_v3.sav` | `.csv`, `.dta` |
+| World Values Survey Wave 6 | `WV6_Data_Tunisia_Excel_v20221117.1.xlsx` | `.csv` |
+| World Values Survey Wave 7 | `WVS_Wave_7_Tunisia_Excel_v5.0.xlsx` | — |
+| Afrobarometer Rounds 6–10 | `afrobarometer_tun_r{6,7,8,9,10}_en.sav` | — |
 
-Wave IV is read from CSV because no SPSS release was available for it. If you have
-one, add `ABIV_English.sav` here, set that wave's `source_format` to `sav` in
-`catalog/sources.json`, and re-run the scripts: the extract gains numeric codes and
-question text with no other change.
+Where a survey ships both, the SPSS file is the one read: it is the only format
+that carries the variable labels and the value labels together. Wave IV has no
+SPSS release, and the two WVS waves are read from Excel because the header row
+carries the question text the CSV drops. `docs/provenance.md` has the reasoning.
 
-Arab Barometer distributes its data from <https://www.arabbarometer.org/surveys/>
-after a short registration. See `docs/provenance.md`.
+The Afrobarometer files are renamed to a consistent scheme; every other file keeps
+the name its publisher gave it. `catalog/catalog.json` records a SHA-256 for each,
+and `scripts/verify.py` checks it before re-deriving anything.
+
+## Where they came from
+
+- Arab Barometer — <https://www.arabbarometer.org/surveys/>, after a short registration
+- World Values Survey — <https://www.worldvaluessurvey.org>, Tunisia country files
+- Afrobarometer — <https://www.afrobarometer.org/data/>, Tunisia country files
+
+They are redistributed here in the form the publishers released them. Cite the
+programme and the round, not this repository. See `docs/provenance.md` for terms.

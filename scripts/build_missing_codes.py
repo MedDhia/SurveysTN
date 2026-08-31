@@ -36,18 +36,27 @@ MARKERS = (
 
 def main() -> None:
     catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "catalog" / "sources.json").read_text(encoding="utf-8"))
     sections = []
 
     for s in catalog["surveys"]:
         codebook = json.loads(
             (ROOT / s["path"] / "codebook.json").read_text(encoding="utf-8")
         )
+        declared = manifest["series"][s["series"]].get("sentinel_code_labels") or {}
+        sentinels = declared.get("labels", {})
         counts: Counter = Counter()
         for row in codebook:
             if row["value_labels"]:
                 for code, label in json.loads(row["value_labels"]).items():
                     if any(m in str(label).lower() for m in MARKERS):
                         counts[(str(code), str(label))] += 1
+            elif row["sentinel_codes"]:
+                # A release with no value labels says nothing about what its
+                # negative codes mean, so they are counted and named as sentinels
+                # rather than given meanings this archive would be inventing.
+                for code in json.loads(row["sentinel_codes"]):
+                    counts[(str(code), sentinels.get(str(code), ""))] += 1
             elif row["observed_values"]:
                 # A label-only release has no codes; the answer text is the value,
                 # so it stands in the code column too.
@@ -65,6 +74,15 @@ def main() -> None:
                 "below rather than as codes. They are ordinary values in the data.",
                 "",
             ]
+        elif not s["has_value_labels"]:
+            lines += [
+                "The release ships codes without value labels, so these negative sentinels",
+                "carry no meaning in the data itself. The meanings below are quoted from",
+                f"{declared.get('source', 'the publisher documentation')}, which sets them",
+                "for the series; a code left blank occurs in this survey's data but is not in",
+                "that list, and is not guessed here.",
+                "",
+            ]
         lines += [
             "| Code | Label | Variables using it |",
             "|---:|---|---:|",
@@ -72,7 +90,8 @@ def main() -> None:
         for (code, label), n in sorted(
             counts.items(), key=lambda kv: (-kv[1], kv[0][0])
         ):
-            lines.append(f"| `{code}` | {label} | {n} |")
+            shown = label or "not labelled in the release"
+            lines.append(f"| `{code}` | {shown} | {n} |")
         sections.append("\n".join(lines))
 
     body = "\n\n".join(sections)

@@ -1,0 +1,398 @@
+position,variable,label,storage_type,n_valid,n_missing,n_distinct,value_labels,observed_values,sentinel_codes,min,max
+1,version,Version of Data File,str,1208,0,1,,"[""1-5-0 (2020-11-16)""]",,,
+2,doi,Digital Object Identifier,str,1208,0,1,,"[""doi.org/10.14281/18241.1""]",,,
+3,A_YEAR,Year of survey,int64,1208,0,1,,,,2019.0,2019.0
+4,B_COUNTRY,ISO 3166-1 numeric country code,int64,1208,0,1,,,,788.0,788.0
+5,B_COUNTRY_ALPHA,ISO 3166-1 alpha-3 country code,str,1208,0,1,,"[""TUN""]",,,
+6,C_COW_NUM,CoW country code numeric,int64,1208,0,1,,,,616.0,616.0
+7,C_COW_ALPHA,CoW country code alpha,str,1208,0,1,,"[""TUN""]",,,
+8,D_INTERVIEW,Interview ID,int64,1208,0,1208,,,,788070001.0,788071208.0
+9,J_INTDATE,Date of interview,int64,1208,0,25,,,,20190426.0,20190520.0
+10,FW_START,Year/month of start-fieldwork,int64,1208,0,1,,,,201904.0,201904.0
+11,FW_END,Year/month of end-fieldwork,int64,1208,0,1,,,,201905.0,201905.0
+12,K_TIME_START,Start time of the interview [HH.MM],float64,1208,0,517,,,[-5],-5.0,23.29
+13,K_TIME_END,End time of the interview [HH.MM],float64,1208,0,502,,,[-5],-5.0,23.57
+14,K_DURATION,Total length of interview [minutes],int64,1208,0,127,,,[-5],-5.0,286.0
+15,Q_MODE,Mode of data collection,int64,1208,0,1,,,,1.0,1.0
+16,N_REGION_ISO,Region ISO 3166-2,int64,1208,0,24,,,,788011.0,788083.0
+17,N_REGION_WVS,Region country specific,int64,1208,0,24,,,,788001.0,788025.0
+18,N_TOWN,Settlement name,int64,1208,0,106,,,,788000.0,788105.0
+19,G_TOWNSIZE,Settlement size_8 groups,int64,1208,0,8,,,,1.0,8.0
+20,G_TOWNSIZE2,Settlement size_5 groups,int64,1208,0,5,,,,1.0,5.0
+21,H_SETTLEMENT,Settlement type,int64,1208,0,5,,,,1.0,5.0
+22,H_URBRURAL,Urban-Rural,int64,1208,0,2,,,,1.0,2.0
+23,O1_LONGITUDE,Geographical Coordinates - Longitude,float64,1208,0,131,,,,7.89,11.22
+24,O2_LATITUDE,Geographical Coordinates - Latitude,float64,1208,0,125,,,,32.79,37.27
+25,S_INTLANGUAGE,Language in which interview was conducted,int64,1208,0,1,,,,170.0,170.0
+26,LNGE_ISO,Language in which interview was conducted  (ISO 639-1 Alpha 2 digit),str,1208,0,1,,"[""ar""]",,,
+27,E_RESPINT,Respondent interested during the interview,int64,1208,0,4,,,[-5],-5.0,3.0
+28,F_INTPRIVACY,Interview privacy,int64,1208,0,3,,,[-2],-2.0,2.0
+29,W_WEIGHT,Weight,int64,1208,0,1,,,,1.0,1.0
+30,S018,Equilibration weight-1000,float64,1208,0,1,,,,0.8278146,0.8278146
+31,PWGHT,Population size weight,float64,1208,0,1,,,,9677.15232,9677.15232
+32,Q1,Important in life: Family,int64,1208,0,4,,,,1.0,4.0
+33,Q2,Important in life: Friends,int64,1208,0,5,,,[-1],-1.0,4.0
+34,Q3,Important in life: Leisure time,int64,1208,0,5,,,[-2],-2.0,4.0
+35,Q4,Important in life: Politics,int64,1208,0,6,,,"[-5, -1]",-5.0,4.0
+36,Q5,Important in life: Work,int64,1208,0,6,,,"[-5, -1]",-5.0,4.0
+37,Q6,Important in life: Religion,int64,1208,0,5,,,[-5],-5.0,4.0
+38,Q7,Important child qualities: good manners,int64,1208,0,4,,,"[-5, -1]",-5.0,2.0
+39,Q8,Important child qualities: independence,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+40,Q9,Important child qualities: hard work,int64,1208,0,3,,,[-2],-2.0,2.0
+41,Q10,Important child qualities: feeling of responsibility,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+42,Q11,Important child qualities: imagination,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+43,Q12,Important child qualities: tolerance and respect for other people,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+44,Q13,Important child qualities: thrift saving money and things,int64,1208,0,3,,,[-2],-2.0,2.0
+45,Q14,Important child qualities: determination perseverance,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+46,Q15,Important child qualities: religious faith,int64,1208,0,3,,,[-2],-2.0,2.0
+47,Q16,Important child qualities: unselfishness,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+48,Q17,Important child qualities: obedience,int64,1208,0,3,,,[-2],-2.0,2.0
+49,Q18,Neighbors: Drug addicts,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+50,Q19,Neighbors: People of a different race,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+51,Q20,Neighbors: People who have AIDS,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+52,Q21,Neighbors: Immigrants/foreign workers,int64,1208,0,4,,,"[-5, -1]",-5.0,2.0
+53,Q22,Neighbors: Homosexuals,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+54,Q23,Neighbors: People of a different religion,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+55,Q24,Neighbors: Heavy drinkers,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+56,Q25,Neighbors: Unmarried couples living together,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+57,Q26,Neighbors: People who speak a different language,int64,1208,0,4,,,"[-2, -1]",-2.0,2.0
+58,Q27,One of main goals in life has been to make my parents proud,int64,1208,0,5,,,[-2],-2.0,4.0
+59,Q28,Pre-school child suffers with working mother,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+60,Q29,Men make better political leaders than women do,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+61,Q30,University is more important for a boy than for a girl,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+62,Q31,Men make better business executives than women do,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+63,Q32,Being a housewife just as fulfilling,int64,1208,0,5,,,[-1],-1.0,4.0
+64,Q33,Jobs scarce: Men should have more right to a job than women,int64,1208,0,5,,,,1.0,5.0
+65,Q33_3,Jobs scarce: Men should have more right to a job than women (3-point scale),int64,1208,0,3,,,,1.0,3.0
+66,Q34,Jobs scarce: Employers should give priority to (nation) people than immigrants,int64,1208,0,7,,,"[-5, -2]",-5.0,5.0
+67,Q34_3,Jobs scarce: Employers should give priority to (nation) people than immigrants (3-point scale),int64,1208,0,5,,,"[-5, -2]",-5.0,3.0
+68,Q35,Problem if women have more income than husband,int64,1208,0,6,,,[-1],-1.0,5.0
+69,Q35_3,Problem if women have more income than husband (3-point scale),int64,1208,0,4,,,[-1],-1.0,3.0
+70,Q37,Duty towards society to have children,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+71,Q38,It is children duty to take care of ill parent,int64,1208,0,6,,,[-1],-1.0,5.0
+72,Q39,People who don't work turn lazy,int64,1208,0,6,,,[-2],-2.0,5.0
+73,Q40,Work is a duty towards society,int64,1208,0,5,,,,1.0,5.0
+74,Q41,Work should  always come first even if it means less spare time,int64,1208,0,7,,,"[-5, -2]",-5.0,5.0
+75,Q42,Basic kinds of attitudes concerning society,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+76,Q43,Future changes: Less importance placed on work,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+77,Q44,Future changes: More emphasis on technology,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+78,Q45,Future changes: Greater respect for authority,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+79,Q46,Feeling of happiness,int64,1208,0,5,,,[-1],-1.0,4.0
+80,Q47,State of health (subjective),int64,1208,0,6,,,[-1],-1.0,5.0
+81,Q48,How much freedom of choice and control,int64,1208,0,10,,,,1.0,10.0
+82,Q49,Satisfaction with your life,int64,1208,0,11,,,[-1],-1.0,10.0
+83,Q50,Satisfaction with financial situation of household,int64,1208,0,12,,,"[-5, -1]",-5.0,10.0
+84,Q51,Frequency you/family (last 12 month): Gone without enough food to eat,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+85,Q52,Frequency you/family (last 12 month): Felt unsafe from crime in your own home,int64,1208,0,5,,,[-5],-5.0,4.0
+86,Q53,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,int64,1208,0,5,,,[-5],-5.0,4.0
+87,Q54,Frequency you/family (last 12 month): Gone without a cash income,int64,1208,0,5,,,[-2],-2.0,4.0
+88,Q55,"In the last 12 month, how often have you or your family: Gone without a safe shelter over your head",int64,1208,0,5,,,[-5],-5.0,4.0
+89,Q56,Standard of living comparing with your parents,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+90,Q57,Most people can be trusted,int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+91,Q58,Trust: Your family,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+92,Q59,Trust: Your neighborhood,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+93,Q60,Trust: People you know personally,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+94,Q61,Trust: People you meet for the first time,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+95,Q62,Trust: People of another religion,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+96,Q63,Trust: People of another nationality,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+97,Q64,Confidence: Churches,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+98,Q65,Confidence: Armed Forces,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+99,Q66,Confidence: The Press,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+100,Q67,Confidence: Television,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+101,Q68,Confidence: Labor Unions,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+102,Q69,Confidence: The Police,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+103,Q70,Confidence: Justice System/Courts,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+104,Q71,Confidence: The Government,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+105,Q72,Confidence: The Political Parties,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+106,Q73,Confidence: Parliament,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+107,Q74,Confidence: The Civil Services,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+108,Q75,Confidence: Universities,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+109,Q76,Confidence: Elections,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+110,Q77,Confidence: Major Companies,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+111,Q78,Confidence: Banks,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+112,Q79,Confidence: The Environmental Protection Movement,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+113,Q80,Confidence: The Women's Movement,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+114,Q81,Confidence: Charitable or humanitarian organizations,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+115,Q82,Confidence: Major regional organization (combined from country-specific),int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+116,Q82_ARABLEAGUE,Confidence: The Arab League,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+117,Q82_GULFCOOP,Confidence: Cooperation Council for the Arab states of Gulf (GCC),int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+118,Q82_ISLCOOP,Confidence: The Organization of the Islamic Cooperation,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+119,Q83,Confidence: The United Nations (UN),int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+120,Q84,Confidence: International Monetary Found (IMF),int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+121,Q85,Confidence: International Criminal Court (ICC),int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+122,Q86,Confidence: North Atlantic Treaty Organization (NATO),int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+123,Q87,Confidence: The World Bank (WB),int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+124,Q88,Confidence: The World Health Organization (WHO),int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+125,Q89,Confidence: The World Trade Organization (WTO),int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+126,Q90,International organizations: being effective vs being democratic,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+127,Q91,Countries with the permanent seats on the UN Security Council,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+128,Q92,Where are the headquarters of the International Monetary Fund (IMF) located?,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+129,Q93,Which of the following problems does the organization Amnesty International deal with?,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+130,Q94,Active/Inactive membership: church or religious org,int64,1208,0,5,,,"[-2, -1]",-2.0,2.0
+131,Q95,Active/Inactive membership: sport or recreational org,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+132,Q96,"Active/Inactive membership: art, music, educational org",int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+133,Q97,Active/Inactive membership: labor union,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+134,Q98,Active/Inactive membership: political party,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+135,Q99,Active/Inactive membership: environmental organization,int64,1208,0,5,,,"[-2, -1]",-2.0,2.0
+136,Q100,Active/Inactive membership: professional organization,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+137,Q101,Active/Inactive membership: charitable/humanitarian organization,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+138,Q102,Active/Inactive membership: consumer organization,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+139,Q103,"Active/Inactive membership: self-help group, mutual aid group",int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+140,Q104,Active/Inactive membership: women’s group,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+141,Q105,Active/Inactive membership: other organization,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+142,Q106,Incomes should be made more equal vs There should be greater incentives for individual effort,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+143,Q107,Private vs state ownership of business,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+144,Q108,Government's vs individual's responsibility,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+145,Q109,Competition good or harmful,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+146,Q110,Success: hard work vs luck,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+147,Q111,Protecting environment vs. Economic growth,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+148,Q112,Perceptions of corruption in the country,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+149,Q113,Involved in corruption: State authorities,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+150,Q114,Involved in corruption: Business executives,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+151,Q115,Involved in corruption: Local authorities,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+152,Q116,Involved in corruption: Civil service providers,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+153,Q117,Involved in corruption: Journalists and media,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+154,Q118,"Frequency ordinary people pay a bribe, give a gift or do a favor to local officials/service providers in order to get services",int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+155,Q119,"Degree of agreement: On the whole, women are less corrupt than men",int64,1208,0,8,,,"[-5, -2, -1]",-5.0,4.0
+156,Q120,Risk to be held accountable for giving or receiving a bribe,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+157,Q121,Impact of immigrants on the development of the country,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+158,Q122,Immigration in your country: Fills useful jobs in the workforce,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+159,Q123,Immigration in your country: Strengthens cultural diversity,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+160,Q124,Immigration in your country: Increases the crime rate,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+161,Q125,Immigration in your country: Gives asylum to political refugees,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+162,Q126,Immigration in your country: Increases the risks of terrorism,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+163,Q127,Immigration in your country: Helps poor people establish new lives,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+164,Q128,Immigration in your country: Increases unemployment,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+165,Q129,Immigration in your country: Leads to social conflict,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+166,Q130,Immigration policy preference,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+167,Q131,Secure in neighborhood,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+168,Q132,Frequency in your neighborhood: Robberies,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+169,Q133,Frequency in your neighborhood: Alcohol consumed in the streets,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+170,Q134,Frequency in your neighborhood: Police or military interfere with people’s private life,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+171,Q135,Frequency in your neighborhood: Racist behavior,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+172,Q136,Frequency in your neighborhood: Drug sale in streets,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+173,Q137,Frequency in your neighborhood: Street violence and fights,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+174,Q138,Frequency in your neighborhood: Sexual harassment,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+175,Q139,Things done for reasons of security: Didn’t carry much money,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+176,Q140,Things done for reasons of security: Preferred not to go out at night,int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+177,Q141,"Things done for reasons of security: Carried a knife, gun or other weapon",int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+178,Q142,Worries: Losing my job or not finding a job,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+179,Q143,Worries: Not being able to give one's children a good education,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+180,Q144,Respondent was victim of a crime during the past year,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+181,Q145,Respondent's family was victim of a crime during last year,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+182,Q146,Worries: A war involving my country,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+183,Q147,Worries: A terrorist attack,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+184,Q148,Worries: A civil war,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+185,Q149,Freedom and Equality - Which more important,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+186,Q150,Freedom and security - Which more important,int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+187,Q151,Willingness to fight for country,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+188,Q152,Aims of country: first choice,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+189,Q153,Aims of country: second choice,int64,1208,0,6,,,"[-3, -2]",-3.0,4.0
+190,Q154,Aims of respondent: first choice,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+191,Q155,Aims of respondent: second choice,int64,1208,0,6,,,"[-3, -2]",-3.0,4.0
+192,Q156,Most important: first choice,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+193,Q157,Most important: second choice,int64,1208,0,6,,,"[-3, -2]",-3.0,4.0
+194,Q158,"Science and technology are making our lives healthier, easier, and more comfortable",int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+195,Q159,"Because of science and technology, there will be more opportunities for the next generation",int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+196,Q160,We depend too much on science and not enough on faith,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+197,Q161,One of the bad effects of science is that it breaks down people’s ideas of right and wrong,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+198,Q162,It is not important for me to know about science in my daily life,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+199,Q163,"The world is better off, or worse off, because of science and technology",int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+200,Q164,Importance of God,int64,1208,0,12,,,"[-5, -2]",-5.0,10.0
+201,Q165,Believe in: God,int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+202,Q166,Believe in: life after death,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+203,Q167,Believe in: hell,int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+204,Q168,Believe in: heaven,int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+205,Q169,"Whenever science and religion conflict,  religion is always right",int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+206,Q170,The only acceptable religion  is my religion,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+207,Q171,How often do you attend religious services,int64,1208,0,10,,,"[-5, -2, -1]",-5.0,7.0
+208,Q172,How often do you pray,int64,1208,0,11,,,"[-5, -2, -1]",-5.0,8.0
+209,Q173,Religious person,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+210,Q174,Meaning of religion: To follow religious norms and ceremonies vs To do good to other people,int64,1208,0,4,,,"[-5, -1]",-5.0,2.0
+211,Q175,Meaning of religion: To make sense of life after death vs To make sense of life in this world,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+212,Q176,Degree of agreement: Nowadays one often has trouble deciding which moral rules are the right ones to follow,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+213,Q177,Justifiable: Claiming government benefits to which you are not entitled,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+214,Q178,Justifiable: Avoiding a fare on public transport,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+215,Q179,Justifiable: Stealing property,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+216,Q180,Justifiable: Cheating on taxes,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+217,Q181,Justifiable: Someone accepting a bribe in the course of their duties,int64,1208,0,12,,,"[-5, -2]",-5.0,10.0
+218,Q182,Justifiable: Homosexuality,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+219,Q183,Justifiable: Prostitution,int64,1208,0,12,,,"[-5, -2]",-5.0,10.0
+220,Q184,Justifiable: Abortion,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+221,Q185,Justifiable: Divorce,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+222,Q186,Justifiable: Sex before marriage,int64,1208,0,12,,,"[-5, -2, -1]",-5.0,10.0
+223,Q187,Justifiable: Suicide,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+224,Q188,Justifiable: Euthanasia,int64,1208,0,12,,,"[-2, -1]",-2.0,10.0
+225,Q189,Justifiable: For a man to beat his wife,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+226,Q190,Justifiable: Parents beating children,int64,1208,0,12,,,"[-5, -2]",-5.0,10.0
+227,Q191,Justifiable: Violence against other people,int64,1208,0,12,,,"[-2, -1]",-2.0,10.0
+228,Q192,"Justifiable: Terrorism as a political, ideological or religious mean",int64,1208,0,12,,,"[-5, -2, -1]",-5.0,10.0
+229,Q193,Justifiable: Having casual sex,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+230,Q194,Justifiable: Political violence,int64,1208,0,12,,,"[-2, -1]",-2.0,10.0
+231,Q195,Justifiable: Death penalty,int64,1208,0,12,,,"[-2, -1]",-2.0,10.0
+232,Q196,Government has the right: Keep people under video surveillance in public areas,int64,1208,0,6,,,"[-2, -1]",-2.0,4.0
+233,Q197,Government has the right: Monitor all e-mails and any other information exchanged on the Internet,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+234,Q198,Government has the right: Collect information about anyone living in [COUNTRY] without their knowledge,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+235,Q199,Interest in politics,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+236,Q200,How often discusses political matters with friends,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+237,Q201,Information source: Daily newspaper,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+238,Q202,Information source: TV news,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+239,Q203,Information source: Radio news,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+240,Q204,Information source: Mobile phone,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+241,Q205,Information source: Email,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+242,Q206,Information source: Internet,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+243,Q207,"Information source: Social media (Facebook, Twitter, etc.)",int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+244,Q208,Information source: Talk with friends or colleagues,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+245,Q209,Political action: Signing a petition,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+246,Q210,Political action: Joining in boycotts,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+247,Q211,Political action: Attending lawful/peaceful demonstrations,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+248,Q212,Political action: Joining unofficial strikes,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+249,Q213,Social activism: Donating to a group or campaign,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+250,Q214,Social activism: Contacting a government official,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+251,Q215,Social activism: Encouraging others to take action about political issues,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+252,Q216,Social activism: Encouraging others to vote,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+253,Q217,Political actions online: Searching information about politics and political events,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+254,Q218,Political actions online: Signing an electronic petition,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+255,Q219,Political actions online: Encouraging other people to take any form of political action,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+256,Q220,"Political actions online: Organizing political activities, events, protests",int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+257,Q221,Vote in elections: local level,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+258,Q222,Vote in elections: national level,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+259,Q223,Which party would you vote for if there were a national election tomorrow,int64,1208,0,18,,,"[-5, -3, -2, -1]",-5.0,788024.0
+260,Q223_ABREV,Party preference Abbreviation,int64,1208,0,18,,,"[-5, -3, -2, -1]",-5.0,788024.0
+261,Q223_LOCAL,Party preference Local name,int64,1208,0,18,,,"[-5, -3, -2, -1]",-5.0,788024.0
+262,Q224,How often in country's elections: Votes are counted fairly,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+263,Q225,How often in country's elections: Opposition candidates are prevented from running,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+264,Q226,How often in country's elections: TV news favors the governing party,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+265,Q227,How often in country's elections: Voters are bribed,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+266,Q228,How often in country's elections: Journalists provide fair coverage of elections,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+267,Q229,How often in country's elections: Election officials are fair,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+268,Q230,How often in country's elections: Rich people buy elections,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+269,Q231,How often in country's elections: Voters are threatened with  violence at the polls,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+270,Q232,How often in country's elections: Voters are offered a genuine choice in the elections,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+271,Q233,How often in country's elections: Women have equal opportunities to run the office,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+272,Q234,Some people think that having honest elections makes a lot of difference in their lives;  other people think that it doesn’t matter much,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+273,Q234A,How much would you say the political system in your country allows people like you to have a say in what the government does?,int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+274,Q235,Political system: Having a strong leader who does not have to bother with parliament and elections,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+275,Q236,"Political system: Having experts, not government, make decisions according to what they think is best for the country",int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+276,Q237,Political system: Having the army rule,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+277,Q238,Political system: Having a democratic political system,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+278,Q239,Political system: Having a system governed by religious law in which there are no political parties or elections,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+279,Q240,Left-right political scale,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+280,Q241,Democracy: Governments tax the rich and subsidize the poor,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+281,Q242,Democracy: Religious authorities interpret the laws,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+282,Q243,Democracy: People choose their leaders in free elections,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+283,Q244,Democracy: People receive state aid for unemployment,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+284,Q245,Democracy: The army takes over when government is incompetent,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+285,Q246,Democracy: Civil rights protect people’s liberty against oppression,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+286,Q247,Democracy: The state makes people's incomes equal,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+287,Q248,Democracy: People obey their rulers,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+288,Q249,Democracy: Women have the same rights as men,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+289,Q250,Importance of democracy,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+290,Q251,How democratically is this country being governed today,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+291,Q252,Satisfaction with the political system performance,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+292,Q253,Respect for individual human rights nowadays,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+293,Q254,National pride,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+294,Q255,"Feel close to your village, town or city",int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+295,Q256,"Feel close to your district, region",int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+296,Q257,Feel close to your country,int64,1208,0,6,,,"[-5, -2]",-5.0,4.0
+297,Q258,Feel close to your continent,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+298,Q259,Feel close to the world,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+299,Q260,Sex,int64,1208,0,3,,,[-2],-2.0,2.0
+300,Q261,Year of birth,int64,1208,0,68,,,[-2],-2.0,2001.0
+301,Q262,Age,int64,1208,0,68,,,[-2],-2.0,94.0
+302,X003R,Age recoded (6 intervals),int64,1208,0,7,,,[-2],-2.0,6.0
+303,X003R2,Age recoded (3 intervals),int64,1208,0,4,,,[-2],-2.0,3.0
+304,Q263,Respondent immigrant,int64,1208,0,3,,,[-2],-2.0,2.0
+305,Q264,Mother immigrant,int64,1208,0,3,,,[-2],-2.0,2.0
+306,Q265,Father immigrant,int64,1208,0,3,,,[-2],-2.0,2.0
+307,Q266,Country of birth: Respondent,int64,1208,0,5,,,[-5],-5.0,788.0
+308,Q267,Country of birth: Mother of the respondent,int64,1208,0,5,,,[-5],-5.0,788.0
+309,Q268,Country of birth: Father of the respondent,int64,1208,0,4,,,[-5],-5.0,788.0
+310,Q269,Respondent citizen,int64,1208,0,5,,,"[-5, -2, -1]",-5.0,2.0
+311,Q270,Number of people in household,int64,1208,0,11,,,[-2],-2.0,10.0
+312,Q271,Do you live with your parents,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+313,Q272,Language at home,int64,1208,0,5,,,"[-5, -2]",-5.0,4360.0
+314,Q273,Marital status,int64,1208,0,8,,,"[-5, -2]",-5.0,6.0
+315,Q274,How many children do you have,int64,1208,0,13,,,"[-5, -2]",-5.0,10.0
+316,Q275,Highest educational level: Respondent [ISCED 2011],int64,1208,0,11,,,"[-5, -2]",-5.0,8.0
+317,Q275A,Highest educational level: Respondent (country specific),int64,1208,0,8,,,"[-5, -2]",-5.0,788005.0
+318,Q275R,Highest educational level: Respondent (recoded into 3 groups),int64,1208,0,5,,,"[-5, -2]",-5.0,3.0
+319,Q276,Highest educational level: Respondent's Spouse [ISCED 2011],int64,1208,0,13,,,"[-5, -3, -2, -1]",-5.0,8.0
+320,Q276A,Highest educational level: Respondent's Spouse (country specific),int64,1208,0,10,,,"[-5, -3, -2, -1]",-5.0,788005.0
+321,Q276R,Highest educational level: Respondent's Spouse (recoded into 3 groups),int64,1208,0,7,,,"[-5, -3, -2, -1]",-5.0,3.0
+322,Q277,Highest educational level: Respondent's Mother [ISCED 2011],int64,1208,0,12,,,"[-5, -2, -1]",-5.0,8.0
+323,Q277A,Highest educational level: Respondent's Mother (country specific),int64,1208,0,8,,,"[-2, -1]",-2.0,788005.0
+324,Q277R,Highest educational level: Respondent's Mother (recoded into 3 groups),int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+325,Q278,Highest educational level: Respondent's Father [ISCED 2011],int64,1208,0,12,,,"[-5, -2, -1]",-5.0,8.0
+326,Q278A,Highest educational level: Respondent's Father (country specific),int64,1208,0,9,,,"[-5, -2, -1]",-5.0,788005.0
+327,Q278R,Highest educational level: Respondent's Father (recoded into 3 groups),int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+328,Q279,Employment status,int64,1208,0,11,,,"[-5, -2, -1]",-5.0,8.0
+329,Q280,Employment status - Respondent's Spouse,int64,1208,0,11,,,"[-5, -3, -2, -1]",-5.0,8.0
+330,Q281,Respondent - Occupational group,int64,1208,0,14,,,"[-5, -2, -1]",-5.0,10.0
+331,Q282,Respondent's Spouse - Occupational group,int64,1208,0,14,,,"[-5, -3, -2, -1]",-5.0,10.0
+332,Q283,Respondent's Father - Occupational group (when respondent was 14 years old),int64,1208,0,14,,,"[-5, -2, -1]",-5.0,10.0
+333,Q284,Sector of employment,int64,1208,0,7,,,"[-5, -3, -2, -1]",-5.0,3.0
+334,Q285,Are you the chief wage earner in your house,int64,1208,0,4,,,"[-5, -2]",-5.0,2.0
+335,Q286,Family savings during past year,int64,1208,0,7,,,"[-5, -2, -1]",-5.0,4.0
+336,Q287,Social class (subjective),int64,1208,0,8,,,"[-5, -2, -1]",-5.0,5.0
+337,Q288,Scale of incomes,int64,1208,0,13,,,"[-5, -2, -1]",-5.0,10.0
+338,Q288R,Income level (Recoded),int64,1208,0,6,,,"[-5, -2, -1]",-5.0,3.0
+339,Q289,Religious denominations - major groups,int64,1208,0,6,,,"[-2, -1]",-2.0,5.0
+340,Q289CS9,Religious denomination - detailed list,int64,1208,0,9,,,"[-5, -2, -1]",-5.0,100000020.0
+341,Q290,Ethnic group,int64,1208,0,6,,,"[-5, -1]",-5.0,788999.0
+342,Y001,Post-Materialist index 12-item,int64,1208,0,6,,,[-2],-2.0,4.0
+343,Y002,Post-Materialist index 4-item,int64,1208,0,4,,,[-5],-5.0,3.0
+344,Y003,Autonomy Index,int64,1208,0,6,,,"[-5, -2, -1]",-5.0,2.0
+345,SACSECVAL,SACSECVAL.- Welzel Overall Secular Values,float64,1204,4,364,,,,0.0,0.72735
+346,SACSECVALB,Overall Secular Values Short version,float64,1208,0,139,,,,0.0,0.721667
+347,RESEMAVAL,RESEMAVAL.- Welzel emancipative values,float64,1203,5,871,,,,0.0275,0.872833
+348,RESEMAVALB,Emancipative values Short version,float64,1208,0,367,,,,0.0,1.0
+349,I_AUTHORITY,AUTHORITY - Welzel defiance - 1: Inverse respect for authority,float64,1181,27,3,,,,0.0,1.0
+350,I_NATIONALISM,NATIONALISM - Welzel defiance - 2: Inverse national pride,float64,1199,9,4,,,,0.0,1.0
+351,I_DEVOUT,DEVOUT- Welzel defiance - 3: Inverse devoutness,float64,1197,11,4,,,,0.0,1.0
+352,DEFIANCE,DEFIANCE.- Welzel defiance sub-index,float64,1208,0,29,,,,0.0,0.776667
+353,I_RELIGIMP,RELIGIMP - Welzel disbelief- 1: Inverse importance of religion,float64,1206,2,4,,,,0.0,1.0
+354,I_RELIGBEL,RELIGBEL - Welzel disbelief- 2: Inverse religious person,float64,1183,25,2,,,,0.0,1.0
+355,I_RELIGPRAC,RELIGPRAC - Welzel disbelief- 3: Inverse religious practice,float64,1190,18,7,,,,0.0,1.0
+356,DISBELIEF,DISBELIEF.- Welzel disbelief sub-index,float64,1202,6,43,,,,0.0,1.0
+357,I_NORM1,NORM1 - Welzel relativism- 1: Inverse norm conform1,float64,1203,5,2,,,,0.0,1.0
+358,I_NORM2,NORM2 - Welzel relativism- 2: Inverse norm conform2,float64,1202,6,2,,,,0.0,1.0
+359,I_NORM3,NORM3 - Welzel relativism- 3: Inverse norm conform3,float64,1203,5,2,,,,0.0,1.0
+360,RELATIVISM,RELATIVISM.- Welzel relativism,float64,1203,5,6,,,,0.0,1.0
+361,I_TRUSTARMY,TRUSTARMY- Welzel skepticism- 1: Inverse trust in army,float64,1189,19,4,,,,0.0,1.0
+362,I_TRUSTPOLICE,TRUSTPOLICE- Welzel skepticism- 2: Inverse trust in police,float64,1189,19,4,,,,0.0,1.0
+363,I_TRUSTCOURTS,TRUSTCOURTS- Welzel skepticism- 3: Inverse trust in courts,float64,1168,40,4,,,,0.0,1.0
+364,SCEPTICISM,SCEPTICISM.- Welzel skepticism index,float64,1188,20,32,,,,0.0,1.0
+365,I_INDEP,INDEP- Welzel autonomy-1: Independence as kid quality,float64,1186,22,2,,,,0.0,1.0
+366,I_IMAGIN,IMAGIN- Welzel autonomy-2: Imagination as kid quality,float64,1179,29,2,,,,0.0,1.0
+367,I_NONOBED,Emancipative Values-1: Obedience not kid quality,float64,1192,16,2,,,,0.0,1.0
+368,AUTONOMY,AUTONOMY.- Wezel Autonomy sub index,float64,1193,15,12,,,,0.0,1.0
+369,I_WOMJOB,WOMJOB- Welzel equality-1: Gender equality: job,float64,1208,0,5,,,,0.0,1.0
+370,I_WOMPOL,WOMPOL- Welzel equality-2: Gender equality: politics,float64,1195,13,4,,,,0.0,1.0
+371,I_WOMEDU,WOMEDU- Welzel equality-3: Gender equality: education,float64,1200,8,4,,,,0.0,1.0
+372,EQUALITY,Emancipative Values-2: Equality sub-index,float64,1204,4,46,,,,0.0,1.0
+373,I_HOMOLIB,HOMOLIB- Welzel choice-1: Homosexuality acceptance,float64,1199,9,10,,,,0.0,1.0
+374,I_ABORTLIB,ABORTLIB- Welzel choice-2: Abortion acceptable,float64,1201,7,10,,,,0.0,1.0
+375,I_DIVORLIB,DIVORLIB- Welzel choice-3: Divorce acceptable,float64,1204,4,10,,,,0.0,1.0
+376,CHOICE,CHOICE.- Welzel choice sub-index,float64,1203,5,28,,,,0.0,1.0
+377,I_VOICE1,VOICE1- Welzel voice-1,float64,1042,166,4,,,,0.0,1.0
+378,I_VOICE2,VOICE2- Welzel voice-2,float64,1043,165,3,,,,0.0,1.0
+379,I_VOI2_00,VOI2_00- Welzel voice-3 (auxiliary),float64,959,249,11,,,,0.0,1.0
+380,VOICE,VOICE.- Welzel voice sub-index,float64,1126,82,18,,,,0.0,1.0
+381,SECVALWGT,Weight for overall secular values,float64,1208,0,5,,,,0.66,1.0
+382,WEIGHT1A,Overall Secular Values-1: Weight1a,float64,1208,0,2,,,,0.66,1.0
+383,WEIGHT1B,Emancipative Values-1: Weight1b,float64,1208,0,2,,,,0.66,1.0
+384,WEIGHT2A,Overall Secular Values-2: Weight2a,float64,1208,0,2,,,,0.66,1.0
+385,WEIGHT2B,Emancipative Values-2: Weight2b,float64,1208,0,2,,,,0.66,1.0
+386,WEIGHT3A,Overall Secular Values-3: Weight,float64,1208,0,2,,,,0.66,1.0
+387,WEIGHT3B,Emancipative Values-3: Weight3b,float64,1208,0,2,,,,0.66,1.0
+388,WEIGHT4A,Overall Secular Values-4: Weight 4a,float64,1208,0,2,,,,0.66,1.0
+389,WEIGHT4B,Emancipative Values-4: Weight 4b,float64,1208,0,2,,,,0.66,1.0
+390,RESEMAVALBWGT,Weight for Emancipative values,float64,1208,0,3,,,,0.66,1.0
+391,RESEMAVALWGT,Weight for Emancipative values,float64,1208,0,4,,,,0.745,1.0
+392,SECVALBWGT,Weight for overall secular values Short Version,float64,1208,0,3,,,,0.66,1.0
+393,Y001_1,Materialist/postmaterialist 12-item index: Component 1,int64,1208,0,3,,,[-2],-2.0,1.0
+394,Y001_2,Materialist/postmaterialist 12-item index: Component 2,int64,1208,0,3,,,[-2],-2.0,1.0
+395,Y001_3,Materialist/postmaterialist 12-item index: Component 3,int64,1208,0,3,,,[-2],-2.0,1.0
+396,Y001_4,Materialist/postmaterialist 12-item index: Component 4,int64,1208,0,3,,,[-2],-2.0,1.0
+397,Y001_5,Materialist/postmaterialist 12-item index: Component 5,int64,1208,0,3,,,[-2],-2.0,1.0

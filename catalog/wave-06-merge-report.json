@@ -1,0 +1,364 @@
+{
+  "kind": "derived",
+  "built_by": "scripts/build_wave06_merge.py",
+  "series": "arab-barometer",
+  "label": "Arab Barometer Wave VI Parts 1-3, stacked",
+  "slug": "wave-06-merged",
+  "stem": "arab-barometer-w06-tunisia-merged",
+  "path": "data/arab-barometer/wave-06-merged",
+  "country": "Tunisia",
+  "n_respondents": 3207,
+  "n_respondents_by_part": {
+    "1": 1005,
+    "2": 1002,
+    "3": 1200
+  },
+  "n_variables": 192,
+  "sources": [
+    "data/arab-barometer/wave-06-part-1",
+    "data/arab-barometer/wave-06-part-2",
+    "data/arab-barometer/wave-06-part-3"
+  ],
+  "split_variables": [
+    "Q1012A"
+  ],
+  "unresolved_code_differences": {
+    "Q1012A": [
+      {
+        "code": 7.0,
+        "labels": {
+          "2": "Sunni",
+          "3": "Shafi'i'"
+        }
+      },
+      {
+        "code": 8.0,
+        "labels": {
+          "2": "Shia",
+          "3": "Ja'fari"
+        }
+      },
+      {
+        "code": 9.0,
+        "labels": {
+          "2": "Ja’fari",
+          "3": "Malki"
+        }
+      },
+      {
+        "code": 11.0,
+        "labels": {
+          "1": "Just a Muslim",
+          "2": "Ahmadiyya",
+          "3": "Just a Muslim"
+        }
+      },
+      {
+        "code": 12.0,
+        "labels": {
+          "2": "Druze",
+          "3": "Other"
+        }
+      }
+    ]
+  },
+  "reconciled_code_differences": {
+    "Q1005": [
+      {
+        "code": 7.0,
+        "labels": {
+          "1": "Other",
+          "2": "Other",
+          "3": "Other, specify: ___________"
+        }
+      }
+    ],
+    "Q1010": [
+      {
+        "code": 1.0,
+        "labels": {
+          "1": "Single/ Bachelor",
+          "2": "Single/ Bachelor",
+          "3": "Single"
+        }
+      }
+    ],
+    "Q1011E": [
+      {
+        "code": 99.0,
+        "labels": {
+          "1": "Refused",
+          "2": "Refused",
+          "3": "Declined to answer"
+        }
+      }
+    ],
+    "Q1011F": [
+      {
+        "code": 98.0,
+        "labels": {
+          "1": "I don’t know",
+          "2": "Don't know",
+          "3": "I don’t know"
+        }
+      },
+      {
+        "code": 99.0,
+        "labels": {
+          "1": "Declined to answer",
+          "2": "Refused to answer",
+          "3": "Declined to answer"
+        }
+      }
+    ],
+    "Q1012": [
+      {
+        "code": 3.0,
+        "labels": {
+          "1": "Other",
+          "2": "Other",
+          "3": "Something else: SPECIFY_______"
+        }
+      },
+      {
+        "code": 99.0,
+        "labels": {
+          "1": "Refused",
+          "2": "Refused to answer",
+          "3": "Refused to answer"
+        }
+      }
+    ],
+    "Q10COVID19_5": [
+      {
+        "code": 97.0,
+        "labels": {
+          "1": "Not Applicable",
+          "3": "NA. Does not happen in my household or community"
+        }
+      }
+    ],
+    "Q2061A": [
+      {
+        "code": 2.0,
+        "labels": {
+          "1": "Corruption",
+          "2": "Financial and administrative corruption",
+          "3": "Financial and administrative corruption"
+        }
+      },
+      {
+        "code": 6.0,
+        "labels": {
+          "1": "Instability",
+          "2": "Internal instability and security",
+          "3": "Internal instability and security"
+        }
+      },
+      {
+        "code": 15.0,
+        "labels": {
+          "1": "COVID-19",
+          "2": "The spread of the coronavirus",
+          "3": "The spread of the coronavirus"
+        },
+        "resolved_by_review": "Part 1 'COVID-19' abbreviates 'The spread of the coronavirus'"
+      },
+      {
+        "code": 16.0,
+        "labels": {
+          "1": "Other",
+          "2": "Other",
+          "3": "Other- specify: ________"
+        }
+      }
+    ],
+    "Q2ACOVID19": [
+      {
+        "code": 1.0,
+        "labels": {
+          "1": "Family member illness or death",
+          "2": "Having a member of your family get very ill or die",
+          "3": "Having a member of your family get very ill or die"
+        },
+        "resolved_by_review": "Part 1 abbreviates 'Having a member of your family get very ill or die'"
+      },
+      {
+        "code": 3.0,
+        "labels": {
+          "1": "Negative impact on economy",
+          "2": "Negative impacts on the economy",
+          "3": "Negative impacts on the economy"
+        }
+      },
+      {
+        "code": 4.0,
+        "labels": {
+          "1": "Healthcare system can't handle",
+          "2": "Inability of the healthcare system to handle COVID-19 cases",
+          "3": "Inability of the healthcare system to handle COVID-19 cases"
+        },
+        "resolved_by_review": "Part 1 abbreviates 'Inability of the healthcare system to handle COVID-19 cases'"
+      },
+      {
+        "code": 5.0,
+        "labels": {
+          "1": "Inadequate gov.'t response",
+          "2": "The government’s response has not been adequate",
+          "3": "The government’s response has not been adequate"
+        },
+        "resolved_by_review": "Part 1 abbreviates 'The government's response has not been adequate'"
+      },
+      {
+        "code": 6.0,
+        "labels": {
+          "1": "Citizens not following recommendations",
+          "2": "Other citizens have not done a good job of following government recommendations",
+          "3": "Other citizens have not done a good job of following government recommendations"
+        }
+      },
+      {
+        "code": 7.0,
+        "labels": {
+          "1": "Other",
+          "2": "Other",
+          "3": "Other- SPECIFY"
+        }
+      }
+    ],
+    "Q2BCOVID19": [
+      {
+        "code": 1.0,
+        "labels": {
+          "1": "Threat exaggerated",
+          "2": "The health threat posed by the coronavirus is exaggerated",
+          "3": "The health threat posed by the coronavirus is exaggerated"
+        },
+        "resolved_by_review": "Part 1 abbreviates 'The health threat posed by the coronavirus is exaggerated'"
+      },
+      {
+        "code": 3.0,
+        "labels": {
+          "1": "No negative impact on economy",
+          "2": "Little to no negative impacts on the economy",
+          "3": "Little to no negative impacts on the economy"
+        }
+      },
+      {
+        "code": 4.0,
+        "labels": {
+          "1": "Healthcare system can handle",
+          "2": "The country’s healthcare infrastructure can handle coronavirus cases",
+          "3": "The country’s healthcare infrastructure can handle coronavirus cases"
+        },
+        "resolved_by_review": "Part 1 abbreviates 'The country's healthcare infrastructure can handle coronavirus cases'"
+      },
+      {
+        "code": 5.0,
+        "labels": {
+          "1": "Adequate gov.'t response",
+          "2": "The government’s response has been adequate to stop the spread of the coronavirus",
+          "3": "The government’s response has been adequate to stop the spread of the coronavirus"
+        },
+        "resolved_by_review": "Part 1 abbreviates 'The government's response has been adequate to stop the spread'"
+      },
+      {
+        "code": 6.0,
+        "labels": {
+          "1": "Citizens following recommendations",
+          "2": "Other citizens have done a good job following government recommendations",
+          "3": "Other citizens have done a good job following government recommendations"
+        }
+      },
+      {
+        "code": 7.0,
+        "labels": {
+          "1": "Other",
+          "2": "Other",
+          "3": "Other- SPECIFY"
+        }
+      }
+    ],
+    "Q534_2": [
+      {
+        "code": 97.0,
+        "labels": {
+          "1": "Respondent hung up",
+          "2": "Respondent hung up the phone"
+        }
+      }
+    ],
+    "Q5COVID19": [
+      {
+        "code": 1.0,
+        "labels": {
+          "1": "Permanent loss",
+          "3": "Permanently lose your job"
+        }
+      },
+      {
+        "code": 2.0,
+        "labels": {
+          "1": "Temporary interruption",
+          "3": "A temporary interruption in your job"
+        }
+      },
+      {
+        "code": 3.0,
+        "labels": {
+          "1": "Work from home",
+          "3": "You had to work from home but it caused no serious interruption"
+        }
+      },
+      {
+        "code": 4.0,
+        "labels": {
+          "1": "No effect",
+          "3": "Had no effect on your job status"
+        }
+      },
+      {
+        "code": 97.0,
+        "labels": {
+          "1": "Not applicable",
+          "3": "Not applicable- was not employed before the outbreak"
+        }
+      }
+    ],
+    "QLIBGOV": [
+      {
+        "code": 3.0,
+        "labels": {
+          "1": "Other",
+          "2": "Other_ SPECIFY"
+        }
+      }
+    ]
+  },
+  "files": {
+    "arab-barometer-w06-tunisia-merged-codes.csv": {
+      "bytes": 1522601,
+      "sha256": "ddfd311196f6b2d9db786497784299de74f6c6c1050d92abe216def7bc34269d"
+    },
+    "arab-barometer-w06-tunisia-merged-labels.csv": {
+      "bytes": 4593389,
+      "sha256": "829516901d5034add79d04021b7ea7d8a9c6119d90befef1f0cf961bf1f27925"
+    },
+    "arab-barometer-w06-tunisia-merged.dta": {
+      "bytes": 5036852,
+      "sha256": "8525a2293619bdaad8533286d1dd6d5fd82faf211ad091eb4d54de1e4003fdca"
+    },
+    "arab-barometer-w06-tunisia-merged.sav": {
+      "bytes": 5045419,
+      "sha256": "134f530abc9dc8c3dd1b4cf4a030f37991c6551e0e49beec697ebd09024bf86f"
+    },
+    "codebook.csv": {
+      "bytes": 63623,
+      "sha256": "fd9753d7a7d44b1d86000a4fdd477e28fd45f06c546eb3d8e43f0ac7694701e8"
+    },
+    "codebook.json": {
+      "bytes": 113484,
+      "sha256": "74e15ec502588e68a06e1a8afb07df4fda61a33620471d625b2b35d2258ebc45"
+    }
+  }
+}

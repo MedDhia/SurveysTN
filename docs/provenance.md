@@ -9,7 +9,7 @@ identifies Tunisia — plus a rewrite of the same values into four file formats.
 
 | Step | What happens |
 |---|---|
-| 1 | The publisher's pooled, multi-country release is placed in `data/raw/` (see `data/raw/README.md`). |
+| 1 | The publisher's release is placed in `data/raw/`, which is tracked, so the input is in the repository beside the output (see `data/raw/README.md`). |
 | 2 | `scripts/extract_tunisia.py` reads the SPSS (`.sav`) release, filters to the Tunisia country code, and writes `.sav`, `.dta`, `-codes.csv` and `-labels.csv` plus a codebook. |
 | 3 | The SHA-256 of the input release and of every generated file is recorded in `catalog/catalog.json`. |
 | 4 | `scripts/verify.py` re-derives the subset from the release and compares it cell by cell against what is committed. |
@@ -73,9 +73,17 @@ site has them.
 
 ## Country identification
 
-Arab Barometer numbers Tunisia **21** in the country variable in all three waves.
-The variable is spelled `country` in Waves II and V and `COUNTRY` in Wave VIII;
-`catalog/sources.json` records the spelling used for each wave.
+Each series identifies Tunisia its own way, and `catalog/sources.json` records
+which for every survey:
+
+| Series | How |
+|---|---|
+| Arab Barometer | country code **21**, in a variable spelled `country` in the early waves and `COUNTRY` from Wave VI on |
+| World Values Survey | ISO code **788**, in `B_COUNTRY` in Wave 7 and `V2` in Wave 6 |
+| Afrobarometer | no country column at all — the country files carry respondent numbers prefixed `TUN`, so the filter matches on the prefix of `RESPNO` |
+
+The filter runs even on a country file that holds nothing else, so a file is
+always checked to contain what its name claims rather than trusted.
 
 ## Known departures from the source
 
@@ -87,7 +95,10 @@ The variable is spelled `country` in Waves II and V and `COUNTRY` in Wave VIII;
 | `-codes.csv`, `-labels.csv` | CSV cannot distinguish an empty string from a missing value. One variable is affected: Wave V's `E2001B`, a string variable that is empty for every Tunisian respondent. The `.sav` and `.dta` preserve the distinction. |
 | `-codes.csv`, `-labels.csv` | An answer spelled the way CSV readers spell a missing value is read as missing by default. One is affected: Wave IV's `q1019b` answers "None" to a second-language question. Read with `keep_default_na=False`, or use the `.sav` or `.dta`. Every wave is scanned for this and hits are recorded in `catalog/catalog.json` under `csv_answers_read_as_missing`. |
 | `.sav`, `.dta` | Both formats embed a creation timestamp, so re-running the extractor produces byte-different files with identical content. The recorded SHA-256 identifies the committed file; it is not a reproducible-build guarantee. `scripts/verify.py` compares values, not bytes. |
-| all | Column order and column names are exactly those of the pooled release. |
+| `.dta` | Stata stores a time of day as a float and rounds it. Five of Afrobarometer Round 7's interview start times come back a microsecond off, and a few in Rounds 9 and 10. `scripts/verify.py` compares date and time columns to the millisecond for that reason. |
+| all | A variable name SPSS and Stata will not accept is rewritten, and the change recorded in `renamed_variables` in the catalog and in the survey's README. One exists: Afrobarometer Round 10's `LOCATION.LEVEL.1` becomes `LOCATION_LEVEL_1`. |
+| all | Value labels on a date or time column are dropped, since neither format will attach them. Three Afrobarometer rounds have one, marking a sentinel on the interview start and end times that the reader has already parsed as a time of day. |
+| all | Column order and column names are otherwise exactly those of the release. |
 
 None of these lose information that the format in question could have carried, and
 `scripts/verify.py` checks every cell of every output against the source.

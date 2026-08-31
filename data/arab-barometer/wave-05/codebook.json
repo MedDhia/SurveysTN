@@ -9,6 +9,7 @@
     "n_distinct": 2400,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 2400.0
   },
@@ -22,6 +23,7 @@
     "n_distinct": 300,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 300.0
   },
@@ -35,6 +37,7 @@
     "n_distinct": 1,
     "value_labels": "{\"1\": \"Algeria\", \"5\": \"Egypt\", \"7\": \"Iraq\", \"8\": \"Jordan\", \"9\": \"Kuwait\", \"10\": \"Lebanon\", \"11\": \"Libya\", \"13\": \"Morocco\", \"14\": \"Oman\", \"15\": \"Palestine\", \"16\": \"Qatar\", \"17\": \"Kingdom of Saudi Arabia\", \"19\": \"Sudan\", \"21\": \"Tunisia\", \"22\": \"Yemen\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 21.0,
     "max": 21.0
   },
@@ -48,6 +51,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 2.0
   },
@@ -61,6 +65,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 3.0
   },
@@ -74,6 +79,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 5.0,
     "max": 5.0
   },
@@ -87,6 +93,7 @@
     "n_distinct": 24,
     "value_labels": "{\"10002\": \"Chlef\", \"10004\": \"O.E. Bouaghi\", \"10005\": \"Batna\", \"10006\": \"Bejaia\", \"10007\": \"Biskara\", \"10009\": \"Blida\", \"10010\": \"Bouira\", \"10012\": \"Tebessa\", \"10013\": \"Tlemcen\", \"10014\": \"Tiaret\", \"10015\": \"Tiz-Ouzou\", \"10016\": \"Algiers\", \"10017\": \"Djelfa\", \"10018\": \"Jijel\", \"10019\": \"Setif\", \"10020\": \"Saïda\", \"10021\": \"Skikda\", \"10022\": \"Sidi B. Abbes\", \"10023\": \"Annaba\", \"10024\": \"Guelma\", \"10025\": \"Constantine\", \"10026\": \"Medea\", \"10027\": \"Mostaganem\", \"10028\": \"Messilia\", \"10029\": \"Mascara\", \"10031\": \"Oran\", \"10034\": \"B.B. Arreridj\", \"10035\": \"Boumderdes\", \"10036\": \"Al Traf\", \"10038\": \"Tissemsilt\", \"10040\": \"Khenchela\", \"10041\": \"Souk Ahras\", \"10042\": \"Tipaza\", \"10043\": \"Mila\", \"10046\": \"Timouchent\", \"10048\": \"Relizane\", \"50001\": \"Cairo\", \"50002\": \"Alexandria\", \"50003\": \"Port Said\", \"50004\": \"Suez\", \"50005\": \"Damietta\", \"50006\": \"Dakahlia\", \"50007\": \"Eastern\", \"50008\": \"Kaliobeya\", \"50009\": \"Matrouh\", \"50010\": \"Qena\", \"50014\": \"Fayoum\", \"50015\": \"Giza\", \"50016\": \"Red Sea\", \"50017\": \"Luxor\", \"50018\": \"Aswan\", \"50019\": \"Assiut\", \"50020\": \"Minya\", \"50021\": \"Kafr El Sheik\", \"50022\": \"Ismalilia\", \"50023\": \"The Lake\", \"50024\": \"Western\", \"50025\": \"Menoufia\", \"50026\": \"Beni Suef\", \"50027\": \"Sohag\", \"70001\": \"Baghdad\", \"70002\": \"Salahaddin\", \"70003\": \"Diyala\", \"70004\": \"Wasit\", \"70005\": \"Maysan\", \"70006\": \"Basra\", \"70007\": \"Dhi War\", \"70009\": \"Qadisiyah\", \"70010\": \"Babylon\", \"70011\": \"Karbala\", \"70012\": \"Najaf\", \"70013\": \"Anbar\", \"70014\": \"Nineveh\", \"70016\": \"Erbil\", \"70017\": \"Kirkuk\", \"70018\": \"Sulaymaniya\", \"80011\": \"Amman\", \"80012\": \"Al Balqa\", \"80013\": \"Azurqa\", \"80014\": \"Madaba\", \"80021\": \"Irbid\", \"80022\": \"Al Mafraq\", \"80023\": \"Jerash\", \"80024\": \"Ajioun\", \"80031\": \"Karak\", \"80032\": \"Tafila\", \"80033\": \"Ma'an\", \"80034\": \"Aqaba\", \"90001\": \"Al Asimah (Capital)\", \"90002\": \"Hawalli\", \"90003\": \"Ahmadi\", \"90004\": \"Jahra\", \"90005\": \"Farwaniya\", \"90006\": \"Mubarak Al-Kabeer\", \"100001\": \"Akkar\", \"100002\": \"North\", \"100003\": \"Bekaa\", \"100004\": \"Baalbek\", \"100005\": \"Beirut\", \"100006\": \"Mt Lebanon\", \"100007\": \"South\", \"100008\": \"Nabatieh\", \"110001\": \"Tripoli\", \"110002\": \"Jafara\", \"110003\": \"Al Zawia\", \"110004\": \"Nuqat Al Khams\", \"110005\": \"Al Jabal AL Gharbi\", \"110006\": \"Al Murqub\", \"110007\": \"Misrata\", \"110008\": \"Sirt\", \"110009\": \"Nalut\", \"110010\": \"Al Wahat\", \"110011\": \"Benghazi\", \"110012\": \"Almarj\", \"110013\": \"Al Jabal Al Akhdar\", \"110014\": \"Derna\", \"110015\": \"Tobruq\", \"110016\": \"Al Kufra\", \"110017\": \"Al Jufra\", \"110018\": \"Sebha\", \"110019\": \"Murzuq\", \"110020\": \"Ubari\", \"110021\": \"Ghat\", \"110022\": \"Wadi Alshati\", \"130001\": \"Tanger-Tetouan-Al Hoceima\", \"130002\": \"Oriental\", \"130003\": \"Fès-Meknès\", \"130004\": \"Rabat-Salé-Kénitra\", \"130005\": \"Béni Mellal-Khénifra\", \"130006\": \"Grand Casablanca-Settat\", \"130007\": \"Marrakech-Safi\", \"130008\": \"Drâa-Tafilalet\", \"130009\": \"Sousse-Massa\", \"130010\": \"Guelmim-Oued Noun\", \"130011\": \"Laayoune-Sakia El Hamra\", \"130012\": \"Eddakhla-Oued Eddahab\", \"150001\": \"Bethlehem\", \"150002\": \"Deir al Balah\", \"150003\": \"Gaza\", \"150004\": \"Hebron\", \"150005\": \"Jabalia\", \"150006\": \"Jerusalem\", \"150007\": \"Jenin\", \"150008\": \"Jerico\", \"150009\": \"Khan Yunis\", \"150010\": \"Nabulus\", \"150011\": \"Qalqilya\", \"150012\": \"Rafah\", \"150013\": \"Ramallah\", \"150014\": \"Salfit\", \"150015\": \"Tubas\", \"150016\": \"Tulkarem\", \"190001\": \"North\", \"190002\": \"Nile River\", \"190003\": \"Red Sea\", \"190004\": \"Gedaref\", \"190005\": \"Kassala\", \"190006\": \"Sennar\", \"190007\": \"Khartoum\", \"190008\": \"The Island\", \"190009\": \"North Kordofan\", \"190010\": \"Blue Nile\", \"190011\": \"White Nile\", \"190012\": \"South Kordofan\", \"190013\": \"West Kordofan\", \"190014\": \"East Darfur\", \"190015\": \"South Darfur\", \"190016\": \"Central Darfur\", \"190017\": \"North Darfur\", \"190018\": \"West Darfur\", \"210001\": \"Tunis\", \"210002\": \"Ariana\", \"210003\": \"Ben Arous\", \"210004\": \"Manouba\", \"210005\": \"Nabeul\", \"210006\": \"Zaghouan\", \"210007\": \"Bizerte\", \"210008\": \"Beja\", \"210009\": \"Jendouba\", \"210010\": \"Kef\", \"210011\": \"Siliana\", \"210012\": \"Sousse\", \"210013\": \"Monastir\", \"210014\": \"Mahdia\", \"210015\": \"Sfax\", \"210016\": \"Kairouan\", \"210017\": \"Kasserine\", \"210018\": \"Sidi Bouzid\", \"210019\": \"Gabes\", \"210020\": \"Medenine\", \"210021\": \"Tatouine\", \"210022\": \"Gafsa\", \"210023\": \"Tozeur\", \"210024\": \"Kebili\", \"220001\": \"Amran\", \"220002\": \"Ad Dali\", \"220003\": \"Al Bayda\", \"220004\": \"Al Hudaydah\", \"220005\": \"Al Jawf\", \"220006\": \"Al Mahwit\", \"220007\": \"Amanat Al Asimah\", \"220008\": \"Dhamar\", \"220009\": \"Hajjah\", \"220010\": \"Ibb\", \"220011\": \"Ma'rib\", \"220012\": \"Raymah\", \"220013\": \"Sa'dah\", \"220014\": \"Sana'a\", \"220015\": \"Ta'izz\", \"220016\": \"'Adan\", \"220017\": \"Abyan\", \"220018\": \"Al Mahrah\", \"220019\": \"Hadramaut\", \"220020\": \"Lahij\", \"220021\": \"Shabwah\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Doha\", \"2\": \"2. Al Rayyan\", \"3\": \"3. Al Wakra\", \"4\": \"4. Umm Slal\", \"5\": \"5. Al Daayen\", \"6\": \"6. Al Khor and Al Thakhira\", \"7\": \"7. Al Shamal\", \"8\": \"8. Al Sheehaniya\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 210001.0,
     "max": 210024.0
   },
@@ -100,6 +107,7 @@
     "n_distinct": 2,
     "value_labels": "{\"10001\": \"North West\", \"10002\": \"North Central\", \"10003\": \"North East\", \"50001\": \"North\", \"50002\": \"Central\", \"50003\": \"South\", \"70001\": \"Baghdad\", \"70002\": \"South\", \"70003\": \"West\", \"70004\": \"North\", \"80001\": \"North\", \"80002\": \"Central\", \"80003\": \"South\", \"110001\": \"East\", \"110002\": \"Central\", \"110003\": \"Tripoli\", \"110004\": \"West\", \"110005\": \"W. Mountain\", \"110006\": \"South\", \"130001\": \"North\", \"130002\": \"East\", \"130003\": \"Center\", \"130004\": \"South\", \"150001\": \"West Bank\", \"150002\": \"Gaza Strip\", \"190001\": \"North\", \"190002\": \"East\", \"190003\": \"Central\", \"190004\": \"Kordofan\", \"190005\": \"Darfur\", \"210001\": \"North\", \"210002\": \"South\", \"220001\": \"Government\", \"220002\": \"Houthi\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 210001.0,
     "max": 210002.0
   },
@@ -113,6 +121,7 @@
     "n_distinct": 2,
     "value_labels": "{\"1\": \"urban\", \"2\": \"rural\", \"3\": \"refugee camp\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 2.0
   },
@@ -126,6 +135,7 @@
     "n_distinct": 558,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.4682606299506161,
     "max": 4.266760191147852
   },
@@ -139,6 +149,7 @@
     "n_distinct": 44,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 46.0
   },
@@ -152,6 +163,7 @@
     "n_distinct": 1,
     "value_labels": "{\"1\": \"main sample\", \"2\": \"oversample: age\", \"3\": \"oversample: Christians\", \"4\": \"oversample: Jerusalem\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 1.0
   },
@@ -165,6 +177,7 @@
     "n_distinct": 1,
     "value_labels": "{\"1\": \"CAPI\", \"2\": \"PAPI\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 1.0
   },
@@ -178,6 +191,7 @@
     "n_distinct": 70,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 18.0,
     "max": 99999.0
   },
@@ -191,6 +205,7 @@
     "n_distinct": 0,
     "value_labels": "{\"99999\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -204,6 +219,7 @@
     "n_distinct": 2,
     "value_labels": "{\"1\": \"male\", \"2\": \"female\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"3\": \"3.  MALE\", \"5\": \"5.  FEMALE\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 2.0
   },
@@ -217,6 +233,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"right\", \"2\": \"between\", \"3\": \"wrong\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -230,6 +247,7 @@
     "n_distinct": 13,
     "value_labels": "{\"1\": \"economic situation\", \"2\": \"financial and administrative corruption\", \"3\": \"democracy and representation/governance\", \"6\": \"internal stability and security\", \"7\": \"foreign interference\", \"8\": \"religious extremism\", \"11\": \"fighting terrorism\", \"12\": \"public services\", \"13\": \"security\", \"14\": \"political/party issues\", \"15\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"4\": \"4. Internal stability and security\", \"5\": \"5. Foreign interference\", \"9\": \"9. Security\", \"10\": \"10. Others: ________ (specify)\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -243,6 +261,7 @@
     "n_distinct": 14,
     "value_labels": "{\"1\": \"economic situation\", \"2\": \"financial and administrative corruption\", \"3\": \"democracy and representation/governance\", \"6\": \"internal stability and security\", \"7\": \"foreign interference\", \"8\": \"religious extremism\", \"11\": \"fighting terrorism\", \"12\": \"public services\", \"13\": \"security\", \"14\": \"political/party issues\", \"15\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"4\": \"4. Internal stability and security\", \"5\": \"5. Foreign interference\", \"9\": \"9. Security\", \"10\": \"10. Others: ________ (specify)\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -256,6 +275,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -269,6 +289,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"much better\", \"2\": \"better\", \"3\": \"the same\", \"4\": \"worse\", \"5\": \"much worse\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -282,6 +303,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"much better\", \"2\": \"better\", \"3\": \"the same\", \"4\": \"worse\", \"5\": \"much worse\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -295,6 +317,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"very serious\", \"2\": \"serious\", \"3\": \"not serious\", \"4\": \"not at all serious\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -308,6 +331,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"very serious\", \"2\": \"serious\", \"3\": \"not serious\", \"4\": \"not at all serious\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -321,6 +345,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"very serious\", \"2\": \"serious\", \"3\": \"not serious\", \"4\": \"not at all serious\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -334,6 +359,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"very serious\", \"2\": \"serious\", \"3\": \"not serious\", \"4\": \"not at all serious\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -347,6 +373,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"worst place\", \"10\": \"best place\", \"97\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1.\", \"2\": \"2.\", \"3\": \"3.\", \"4\": \"4.\", \"5\": \"5.\", \"6\": \"6.\", \"7\": \"7.\", \"8\": \"8.\", \"9\": \"9.\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -360,6 +387,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"worst place\", \"10\": \"best place\", \"97\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1.\", \"2\": \"2.\", \"3\": \"3.\", \"4\": \"4.\", \"5\": \"5.\", \"6\": \"6.\", \"7\": \"7.\", \"8\": \"8.\", \"9\": \"9.\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -373,6 +401,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -386,6 +415,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"ecocnomic reasons\", \"2\": \"political reasons\", \"3\": \"religious reasons\", \"4\": \"security reasons\", \"5\": \"education opportunities\", \"6\": \"reunite with family\", \"7\": \"corruption\", \"8\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -399,6 +429,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -412,6 +443,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -425,6 +457,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -438,6 +471,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -451,6 +485,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -464,6 +499,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -477,6 +513,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -490,6 +527,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -503,6 +541,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -516,6 +555,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -529,6 +569,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -542,6 +583,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -555,6 +597,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -568,6 +611,7 @@
     "n_distinct": 1,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 0.0
   },
@@ -581,6 +625,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -594,6 +639,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -607,6 +653,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -620,6 +667,7 @@
     "n_distinct": 1,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 0.0
   },
@@ -633,6 +681,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -646,6 +695,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -659,6 +709,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -672,6 +723,7 @@
     "n_distinct": 1,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 0.0
   },
@@ -685,6 +737,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -698,6 +751,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -711,6 +765,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -724,6 +779,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -737,6 +793,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -750,6 +807,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -763,6 +821,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -776,6 +835,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -789,6 +849,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -802,6 +863,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -815,6 +877,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -828,6 +891,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -841,6 +905,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -854,6 +919,7 @@
     "n_distinct": 1,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 0.0
   },
@@ -867,6 +933,7 @@
     "n_distinct": 1,
     "value_labels": "{\"0\": \"0.  not selected\", \"1\": \"1. selected\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 0.0
   },
@@ -880,6 +947,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -893,6 +961,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"fully ensured\", \"2\": \"ensured\", \"3\": \"not ensured\", \"4\": \"not at all ensured\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -906,6 +975,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"trusted\", \"2\": \"not trusted\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -919,6 +989,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -932,6 +1003,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -945,6 +1017,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -958,6 +1031,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -971,6 +1045,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -984,6 +1059,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -997,6 +1073,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1010,6 +1087,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1023,6 +1101,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1036,6 +1115,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1049,6 +1129,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1062,6 +1143,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1075,6 +1157,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1088,6 +1171,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1101,6 +1185,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1114,6 +1199,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1127,6 +1213,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. A great deal of trust\", \"2\": \"2. Quite a lot of trust\", \"3\": \"3. Not very much trust\", \"4\": \"4. No trust at all\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1140,6 +1227,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great trust\", \"2\": \"some trust\", \"3\": \"little trust\", \"4\": \"no trust\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1153,6 +1241,7 @@
     "n_distinct": 14,
     "value_labels": "{\"0\": \"dissatisfied\", \"10\": \"satisfied\", \"96\": \"not interested\", \"97\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1.\", \"2\": \"2.\", \"3\": \"3.\", \"4\": \"4.\", \"5\": \"5.\", \"6\": \"6.\", \"7\": \"7.\", \"8\": \"8.\", \"9\": \"9.\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 99.0
   },
@@ -1166,6 +1255,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"very satisfied\", \"2\": \"satisfied\", \"3\": \"dissatisfied\", \"4\": \"very dissatisfied\", \"96\": \"not interested\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1179,6 +1269,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"very satisfied\", \"2\": \"satisfied\", \"3\": \"dissatisfied\", \"4\": \"very dissatisfied\", \"96\": \"not interested\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1192,6 +1283,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1205,6 +1297,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1218,6 +1311,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1231,6 +1325,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1244,6 +1339,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1257,6 +1353,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1270,6 +1367,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1283,6 +1381,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1296,6 +1395,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"bad\", \"4\": \"very bad\", \"97\": \"not responsible\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1309,6 +1409,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"very easy\", \"2\": \"easy\", \"3\": \"difficult\", \"4\": \"very difficult\", \"97\": \"never tried\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1322,6 +1423,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very easy\", \"2\": \"easy\", \"3\": \"difficult\", \"4\": \"very difficult\", \"97\": \"never tried\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1335,6 +1437,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"very easy\", \"2\": \"easy\", \"3\": \"difficult\", \"4\": \"very difficult\", \"97\": \"never tried\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1348,6 +1451,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very easy\", \"2\": \"easy\", \"3\": \"difficult\", \"4\": \"very difficult\", \"97\": \"never tried\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1361,6 +1465,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very easy\", \"2\": \"easy\", \"3\": \"difficult\", \"4\": \"very difficult\", \"97\": \"never tried\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1374,6 +1479,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1387,6 +1493,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1400,6 +1507,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1413,6 +1521,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large extent\", \"2\": \"medium extent\", \"3\": \"small extent\", \"4\": \"no extent\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1426,6 +1535,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large extent\", \"2\": \"medium extent\", \"3\": \"small extent\", \"4\": \"no extent\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1439,6 +1549,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"no one\", \"2\": \"a few\", \"3\": \"most\", \"4\": \"everyone\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1452,6 +1563,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"highly necessary\", \"2\": \"necessary\", \"3\": \"unnecessary\", \"4\": \"highly unnecessary\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1465,6 +1577,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"highly necessary\", \"2\": \"necessary\", \"3\": \"unnecessary\", \"4\": \"highly unnecessary\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1478,6 +1591,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"often\", \"2\": \"sometimes\", \"3\": \"never\", \"97\": \"no examples\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"96\": \"96. I HAVE NO RELEVANT EXPERIENCES [INTERVIEWER: DO NOT READ]\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1491,6 +1605,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1504,6 +1619,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1517,6 +1633,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1530,6 +1647,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1543,6 +1661,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1556,6 +1675,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1569,6 +1689,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1582,6 +1703,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1595,6 +1717,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1608,6 +1731,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1621,6 +1745,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1634,6 +1759,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"once\", \"2\": \"more than once\", \"3\": \"never\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1647,6 +1773,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"once\", \"2\": \"more than once\", \"3\": \"never\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1660,6 +1787,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"once\", \"2\": \"more than once\", \"3\": \"never\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1673,6 +1801,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"neither statement\", \"4\": \"both statements\", \"97\": \"unable to give anything\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1686,6 +1815,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"statement 3\", \"4\": \"statement 4\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1699,6 +1829,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"very interested\", \"2\": \"interested\", \"3\": \"uninterested\", \"4\": \"very uninterested\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1712,6 +1843,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1725,6 +1857,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"statement 3\", \"4\": \"statement 4\", \"5\": \"statement 5\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1738,6 +1871,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. YES\", \"2\": \"2. NO\", \"3\": \"3. I was not eligible to vote in 2015\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1751,6 +1885,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"statement 3\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1764,6 +1899,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1777,6 +1913,7 @@
     "n_distinct": 20,
     "value_labels": "{\"0\": \"no party\", \"10001\": \"National Liberation Front\", \"10002\": \"Socialist Forces Front\", \"10003\": \"Democratic National Rally\", \"10004\": \"Rally For Culture and Democracy\", \"10005\": \"Movement of Society for Peace\", \"10006\": \"Islamic Renaissance Movement (Nahda)\", \"10007\": \"Movement for National Reform  (Islah)\", \"10008\": \"Algerian National Front\", \"10009\": \"National Front of Independents for Harmony\", \"10010\": \"National Democratic Front\", \"10011\": \"Worker's Party\", \"10012\": \"Socialist Labor Party\", \"10013\": \"Algerian Renewal Party\", \"10016\": \"Age 54\", \"10017\": \"National Republican Rally\", \"10018\": \"National Republican Alliance\", \"10019\": \"Movement for Youth and Democracy\", \"10022\": \"El-Infitah\", \"10025\": \"Freedom and Justice Party\", \"10027\": \"Al-Moustakbal (Future) Front\", \"10033\": \"New Dawn Party\", \"10036\": \"Movement of Free Nationalists\", \"10037\": \"Youth Party\", \"10038\": \"Algerian National Party\", \"10041\": \"Jil Jadid\", \"10047\": \"National Fidelity Party\", \"10056\": \"Amal Algeria Group\", \"10063\": \"El Binaa (National Construction Movement)\", \"50001\": \"Al-Wasat Party\", \"50002\": \"Egyptian Revolution Party\", \"50003\": \"Socialist Popular Alliance Party\", \"50004\": \"Al-Nour Party\", \"50005\": \"Virtue Party\", \"50006\": \"Authenticity Party\", \"50007\": \"Reform and Renaissance Party\", \"50008\": \"Justice Party\", \"50009\": \"Revolution Egypt Party\", \"50010\": \"Dignity Party\", \"50011\": \"Arab Democratic Nasserist Party\", \"50012\": \"Solidarity Party\", \"50013\": \"Conservative Party\", \"50014\": \"Egyptian Social Democratic Party\", \"50015\": \"Victory Party\", \"50016\": \"Renaissance Party\", \"50017\": \"Freedom Egypt Party\", \"50018\": \"Free Egyptians Party\", \"50019\": \"New Wafd Party\", \"50021\": \"Democratic Union Party\", \"50022\": \"Egypt 2000 Party\", \"50023\": \"The Democratic Generation Party\", \"50024\": \"Free Social Constitutional Party\", \"50025\": \"El-Ghad Party\", \"50026\": \"Egypt Youth Party\", \"50027\": \"Democratic Peace Party\", \"50029\": \"Change and Development Party\", \"50031\": \"Umma Party\", \"50033\": \"Workers Democratic Party\", \"50035\": \"Egyptian Arab Socialist Party\", \"50037\": \"Freedom Party\", \"50038\": \"Building and Development Party\", \"50041\": \"Civilization Party\", \"50042\": \"Constitution Party\", \"50043\": \"Strong Egypt Party\", \"50045\": \"Sadat Democratic Party\", \"50046\": \"National Egyptian Movement Party\", \"50047\": \"New Free Constitutional Party\", \"50050\": \"Egyptian Cavaliers Party\", \"50051\": \"Masr Balady Party\", \"50052\": \"Nation's Future Party\", \"50054\": \"June 30th Party\", \"50055\": \"Egyptian Victory Party\", \"50056\": \"Homeland Defenders Party\", \"50057\": \"Republican People's Party\", \"50058\": \"Conference Party\", \"70002\": \"Victory Alliance\", \"70003\": \"State of Law Coalition\", \"70004\": \"Badr Organization\", \"70005\": \"Istiqamah\", \"70006\": \"Asa'ib Ahl al-Haq\", \"70007\": \"National Wisdom Movement\", \"70008\": \"National Reform Trend\", \"70009\": \"Iraqi National Accord\", \"70010\": \"Muttahidoon\", \"70011\": \"The Iraqi Front for National Dialogue\", \"70012\": \"Iraqi Communist Party\", \"70013\": \"Patriotic Union of Kurdistan\", \"70014\": \"Kurdistan Democratic Party\", \"70015\": \"Coalition for Democracy and Justice\", \"70016\": \"Gorran Movement\", \"70017\": \"The New Generation Movement\", \"70018\": \"Kurdistan Islamic Union\", \"70019\": \"Kurdistan Islamic Group\", \"80001\": \"Islamic Action Front Party\", \"80002\": \"Islamic Centrist Party\", \"80003\": \"Jordanian Communist Party\", \"80004\": \"Baath Socialist Party\", \"80005\": \"Jordanian People 's Democratic Party\", \"80007\": \"Nationalist Movement Party\", \"80008\": \"Al-Resalah Party\", \"80010\": \"National Current Party\", \"80012\": \"Jordan National Action Front\", \"80013\": \"Jordanian Reform Party\", \"80015\": \"Jordan National Constitutional Party\", \"80017\": \"Jordanian National Party\", \"80018\": \"Jordanian Justice and Development Party\", \"80019\": \"HASSAD\", \"80020\": \"Jordanian Justice and Reform Party\", \"80026\": \"Jordanian Musawah Party\", \"80034\": \"National Aid Party\", \"100001\": \"Syrian National Party\", \"100002\": \"Future Movement\", \"100003\": \"Hezbollah\", \"100004\": \"Lebanese Forces\", \"100005\": \"Al-Ahbash\", \"100006\": \"Free Patriotic Movement\", \"100007\": \"Lebanese Phalanges Party\", \"100008\": \"Lebanese Communist Party\", \"100009\": \"Marada Movement\", \"100010\": \"Tashnag Party\", \"100011\": \"Salafi Movement\", \"100012\": \"Al-Jama'a al-Islamiyya\", \"100013\": \"Arab Unity Party\", \"100014\": \"Progressive Socialist Party\", \"100015\": \"National Bloc Party\", \"100016\": \"Amal Movement\", \"100017\": \"Lebanese Democratic Party\", \"100018\": \"The Popular Nasserite Organization\", \"100019\": \"Arab Liberation Party\", \"100020\": \"Al Azm Movement\", \"110001\": \"Alliance of National Forces\", \"110002\": \"Justice and Building Party\", \"110003\": \"National Front Party\", \"110004\": \"Valley of Life for Democracy\", \"110005\": \"Union for the Homeland\", \"110006\": \"The National Trend Party\", \"110007\": \"Democratic Party\", \"110008\": \"The Message\", \"110009\": \"Alrakiza\", \"110010\": \"National Rally for Solidarity and Development\", \"110011\": \"Home and Development\", \"110015\": \"Block of National Parties\", \"110016\": \"National rally of the Beach\", \"110017\": \"Central Youth Stream\", \"110018\": \"Libyan List of Freedom Party\", \"110019\": \"National Blocl Party\", \"110020\": \"The Hope of Libya\", \"110021\": \"Party of Wisdom\", \"130001\": \"Party of Justice and Development\", \"130002\": \"Istiqlal Party\", \"130003\": \"National Rally of Independents\", \"130004\": \"Party of Authenticity and Modernity\", \"130005\": \"Union of Socialist Popular Forces\", \"130006\": \"Popular Movement\", \"130007\": \"Constitutional Union\", \"130008\": \"Party of Progress and Socialism\", \"130010\": \"Front of Democratic Forces\", \"130013\": \"Democratic and Social Movement\", \"130014\": \"National Ittihadi Congress\", \"130015\": \"Democratic Socialist Vanguard Party\", \"130018\": \"Democratic Socialist Party\", \"130022\": \"Party of Renaissance and Virtue\", \"130025\": \"Party of Reform and Development\", \"130028\": \"Al Ahd - The Covenant Party\", \"130029\": \"People's Party\", \"130030\": \"Unified Socialist Party\", \"130031\": \"Party of Liberty and Social Justice\", \"130032\": \"Party of the Environment and Development\", \"130037\": \"Unity and Decmocracy Party\", \"150000\": \"no party\", \"150001\": \"PPP\", \"150002\": \"PFLP\", \"150003\": \"Fateh\", \"150004\": \"Hamas\", \"150005\": \"DFLP\", \"150006\": \"Islamic Jihad\", \"150007\": \"Fida\", \"150008\": \"National Inititiative (almubadara)\", \"150009\": \"Independent Islamist\", \"150010\": \"Independent Nationalist\", \"150011\": \"Third Way/Salam Feyyad\", \"190001\": \"Socialist Democratic Unionist Party\", \"190002\": \"Liberal Party of Sudan\", \"190003\": \"National Umma Party\", \"190004\": \"Patriotic Umma Party\", \"190005\": \"Sudanese Umma Party - Collective Command\", \"190006\": \"Umma Party for Reform and Development\", \"190007\": \"Umma Patty for Reform and Renewal\", \"190008\": \"Muslim Brotherhood of Sudan\", \"190009\": \"Democratic Unionist Party\", \"190011\": \"Sudan People's Liberation Movement\", \"190012\": \"Sudanese Communist Party\", \"190013\": \"Popular Congress Party\", \"190014\": \"National Congress\", \"190015\": \"Nile Valley Unity Party\", \"190016\": \"Sudan Liberation Movement\", \"190017\": \"Beja Congress\", \"190018\": \"Justice and Equality Movement\", \"190019\": \"Eastern Front\", \"190020\": \"Movement of New Democratic Forces  - Haq\", \"190021\": \"National Independents Spontaneous Party\", \"190024\": \"Sudanese Organization for Rights and Modern Development\", \"190027\": \"Sudanese National Party\", \"190028\": \"Sudanese Ba'ath Party\", \"190029\": \"Eastern Liberation Party of Sudan\", \"190031\": \"Truth Federalist Party\", \"190032\": \"Justice Party\", \"190034\": \"Free People Party\", \"190035\": \"Tamken - Sudanese Empowerment Party\", \"190036\": \"Al-Watan Party\", \"210001\": \"Ennahda\", \"210002\": \"Nidaa Tounes\", \"210003\": \"The Democratic Current\", \"210004\": \"The Popular Front\", \"210005\": \"Afek Tunis\", \"210006\": \"Machrouu Tounes\", \"210007\": \"Free Constitutional Party\", \"210008\": \"Al-Irada\", \"210009\": \"People's Movement\", \"210011\": \"National Destourian Initiative\", \"210014\": \"Popular Republican Union\", \"210015\": \"Current of Love\", \"210016\": \"Tahrir - Liberation Party\", \"210018\": \"Republican Party\", \"210021\": \"Movement for Tunisian Future Party\", \"210023\": \"Ettakatol - FDTL\", \"220001\": \"General People's Congress\", \"220002\": \"Yemeni Rally for Reform\", \"220003\": \"Socialist\", \"220004\": \"Naciri\", \"220005\": \"Justice and Construction\", \"220006\": \"Rashad Salafi\", \"220007\": \"Resurrection\", \"220008\": \"Southern Movement\", \"220009\": \"Houthis (Ansar Allah)\", \"999997\": \"other\", \"999998\": \"don't know\", \"999999\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 999999.0
   },
@@ -1790,6 +1927,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree (S1)\", \"2\": \"agree (S1)\", \"3\": \"agree (S2)\", \"4\": \"strongly agree (S2)\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1803,6 +1941,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1816,6 +1955,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"97\": \"wrong means\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1829,6 +1969,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"statement 3\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1842,6 +1983,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"statement 3\", \"4\": \"statement 4\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1855,6 +1997,7 @@
     "n_distinct": 14,
     "value_labels": "{\"0\": \"dictatorship\", \"10\": \"democracy\", \"96\": \"no interest\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 99.0
   },
@@ -1868,6 +2011,7 @@
     "n_distinct": 14,
     "value_labels": "{\"0\": \"unsuitable\", \"10\": \"suitable\", \"96\": \"no interest\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1.\", \"2\": \"2.\", \"3\": \"3.\", \"4\": \"4.\", \"5\": \"5.\", \"6\": \"6.\", \"7\": \"7.\", \"8\": \"8.\", \"9\": \"9.\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 99.0
   },
@@ -1881,6 +2025,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"96\": \"no interest\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1894,6 +2039,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"little by little\", \"2\": \"all at once\", \"3\": \"not at all\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1907,6 +2053,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Completely justified\", \"2\": \"2. Somewhat justified\", \"3\": \"3. Not very justified\", \"4\": \"4. Not justifiable at all\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1920,6 +2067,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1933,6 +2081,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1946,6 +2095,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1959,6 +2109,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1972,6 +2123,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"0 hrs\", \"2\": \"2 hrs\", \"3\": \"5 hrs\", \"4\": \"10 hrs\", \"5\": \"10 hrs+\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1985,6 +2137,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"0 hrs\", \"2\": \"2 hrs\", \"3\": \"5 hrs\", \"4\": \"10 hrs\", \"5\": \"10 hrs+\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1998,6 +2151,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"0 hrs\", \"2\": \"2 hrs\", \"3\": \"5 hrs\", \"4\": \"10 hrs\", \"5\": \"10 hrs+\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -2011,6 +2165,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"throughout day\", \"2\": \"once daily\", \"3\": \"a few days a week\", \"4\": \"weekly\", \"5\": \"less than weekly\", \"6\": \"never\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -2024,6 +2179,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"0 hrs\", \"2\": \"2 hrs\", \"3\": \"5 hrs\", \"4\": \"10 hrs\", \"5\": \"10 hrs+\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"97\": \"97. I DON’T USE SOCIAL MEDIA [INTERVIEWER: DO NOT READ]\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -2037,6 +2193,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2050,6 +2207,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2063,6 +2221,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2076,6 +2235,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2089,6 +2249,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2102,6 +2263,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2115,6 +2277,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2128,6 +2291,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2141,6 +2305,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2154,6 +2319,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2167,6 +2333,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"face-to-face\", \"2\": \"telephone\", \"3\": \"newspapers\", \"4\": \"radio\", \"5\": \"television\", \"6\": \"social media\", \"7\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2180,6 +2347,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great extent\", \"2\": \"medium extent\", \"3\": \"limited extent\", \"4\": \"not at all\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2193,6 +2361,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great extent\", \"2\": \"medium extent\", \"3\": \"limited extent\", \"4\": \"not at all\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2206,6 +2375,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great extent\", \"2\": \"medium extent\", \"3\": \"limited extent\", \"4\": \"not at all\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2219,6 +2389,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2232,6 +2403,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2245,6 +2417,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very positive\", \"2\": \"positive\", \"3\": \"negative\", \"4\": \"very negative\", \"97\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2258,6 +2431,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"very important\", \"2\": \"important\", \"3\": \"unimportant\", \"4\": \"very unimportant\", \"96\": \"no serious answer\", \"97\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2271,6 +2445,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very important\", \"2\": \"important\", \"3\": \"unimportant\", \"4\": \"very unimportant\", \"96\": \"no serious answer\", \"97\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -2284,6 +2459,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2297,6 +2473,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"never\", \"2\": \"sometimes\", \"3\": \"often\", \"4\": \"most of the time\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2310,6 +2487,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"never\", \"2\": \"sometimes\", \"3\": \"often\", \"4\": \"most of the time\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2323,6 +2501,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"never\", \"2\": \"rarely\", \"3\": \"sometimes\", \"4\": \"often\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -2336,6 +2515,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"never\", \"2\": \"rarely\", \"3\": \"sometimes\", \"4\": \"often\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2349,6 +2529,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -2362,6 +2543,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -2375,6 +2557,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"male\", \"2\": \"female\", \"3\": \"both\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 3.0
   },
@@ -2388,6 +2571,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2401,6 +2585,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2414,6 +2599,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2427,6 +2613,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2440,6 +2627,7 @@
     "n_distinct": 1,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 0.0
   },
@@ -2453,6 +2641,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2466,6 +2655,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2479,6 +2669,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -2492,6 +2683,7 @@
     "n_distinct": 1,
     "value_labels": "{\"0\": \"not mentioned\", \"1\": \"mentioned\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 0.0
   },
@@ -2505,6 +2697,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 98.0
   },
@@ -2518,6 +2711,7 @@
     "n_distinct": 8,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 99.0
   },
@@ -2531,6 +2725,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2544,6 +2739,7 @@
     "n_distinct": 8,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 99.0
   },
@@ -2557,6 +2753,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"Muslim\", \"2\": \"Christian\", \"3\": \"Jewish\", \"4\": \"Atheist\", \"5\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2570,6 +2767,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"Maronite\", \"2\": \"Orthodox\", \"3\": \"Catholic\", \"4\": \"Armenian\", \"5\": \"Sunni\", \"6\": \"Shia\", \"7\": \"Hanbali\", \"8\": \"Shafi’i\", \"9\": \"Ja’fari\", \"10\": \"Druze\", \"11\": \"Ahmadiyya\", \"12\": \"Mozabite\", \"13\": \"Just a Muslim\", \"14\": \"Alawi\", \"15\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 5.0,
     "max": 99.0
   },
@@ -2583,6 +2781,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"religious\", \"2\": \"somewhat religious\", \"3\": \"not religious\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2596,6 +2795,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"never\", \"2\": \"once a month\", \"3\": \"once a week\", \"4\": \"several times a week\", \"5\": \"once a day\", \"6\": \"five times a day\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2609,6 +2809,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"always\", \"2\": \"most of the time\", \"3\": \"sometimes\", \"4\": \"rarely\", \"5\": \"never\", \"96\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2622,6 +2823,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"always\", \"2\": \"most of the time\", \"3\": \"sometimes\", \"4\": \"rarely\", \"5\": \"never\", \"96\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2635,6 +2837,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"always\", \"2\": \"most of the time\", \"3\": \"sometimes\", \"4\": \"rarely\", \"5\": \"never\", \"96\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2648,6 +2851,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"always\", \"2\": \"most of the time\", \"3\": \"sometimes\", \"4\": \"rarely\", \"5\": \"never\", \"96\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2661,6 +2865,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"always\", \"2\": \"most of the time\", \"3\": \"sometimes\", \"4\": \"rarely\", \"5\": \"never\", \"96\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2674,6 +2879,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"always\", \"2\": \"most of the time\", \"3\": \"sometimes\", \"4\": \"rarely\", \"5\": \"never\", \"96\": \"not applicable\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2687,6 +2893,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2700,6 +2907,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2713,6 +2921,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2726,6 +2935,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2739,6 +2949,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2752,6 +2963,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2765,6 +2977,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2778,6 +2991,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2791,6 +3005,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. I strongly agree\", \"2\": \"2. I agree\", \"3\": \"3. I disagree\", \"4\": \"4. I strongly disagree\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2804,6 +3019,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"strongly dislike\", \"2\": \"dislike\", \"3\": \"neither nor\", \"4\": \"like\", \"5\": \"strongly like\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2817,6 +3033,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"strongly dislike\", \"2\": \"dislike\", \"3\": \"neither nor\", \"4\": \"like\", \"5\": \"strongly like\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2830,6 +3047,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"strongly dislike\", \"2\": \"dislike\", \"3\": \"neither nor\", \"4\": \"like\", \"5\": \"strongly like\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2843,6 +3061,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"strongly dislike\", \"2\": \"dislike\", \"3\": \"neither nor\", \"4\": \"like\", \"5\": \"strongly like\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2856,6 +3075,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly dislike\", \"2\": \"dislike\", \"3\": \"neither nor\", \"4\": \"like\", \"5\": \"strongly like\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2869,6 +3089,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large degree\", \"2\": \"moderate degree\", \"3\": \"small degree\", \"4\": \"no degree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2882,6 +3103,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large degree\", \"2\": \"moderate degree\", \"3\": \"small degree\", \"4\": \"no degree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2895,6 +3117,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large degree\", \"2\": \"moderate degree\", \"3\": \"small degree\", \"4\": \"no degree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2908,6 +3131,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large degree\", \"2\": \"moderate degree\", \"3\": \"small degree\", \"4\": \"no degree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2921,6 +3145,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Constitute an obstacle to a large degree\", \"2\": \"2. Constitute an obstacle to a moderate degree\", \"3\": \"3. Constitute an obstacle to a small degree\", \"4\": \"4. Constitute no obstacle at all\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2934,6 +3159,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Constitute an obstacle to a large degree\", \"2\": \"2. Constitute an obstacle to a moderate degree\", \"3\": \"3. Constitute an obstacle to a small degree\", \"4\": \"4. Constitute no obstacle at all\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2947,6 +3173,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Constitute an obstacle to a large degree\", \"2\": \"2. Constitute an obstacle to a moderate degree\", \"3\": \"3. Constitute an obstacle to a small degree\", \"4\": \"4. Constitute no obstacle at all\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2960,6 +3187,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Constitute an obstacle to a large degree\", \"2\": \"2. Constitute an obstacle to a moderate degree\", \"3\": \"3. Constitute an obstacle to a small degree\", \"4\": \"4. Constitute no obstacle at all\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2973,6 +3201,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2986,6 +3215,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -2999,6 +3229,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3012,6 +3243,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3025,6 +3257,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3038,6 +3271,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3051,6 +3285,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3064,6 +3299,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3077,6 +3313,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"statement 3\", \"4\": \"statement 4\", \"5\": \"statement 5\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3090,6 +3327,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3103,6 +3341,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3116,6 +3355,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3129,6 +3369,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3142,6 +3383,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"3\": \"statement 3\", \"4\": \"statement 4\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3155,6 +3397,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3168,6 +3411,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3181,6 +3425,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3194,6 +3439,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3207,6 +3453,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3220,6 +3467,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3233,6 +3481,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3246,6 +3495,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"become stronger\", \"2\": \"remain the same\", \"3\": \"become weaker\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3259,6 +3509,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"increase\", \"2\": \" decrease\", \"3\": \"remain the same\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3272,6 +3523,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"increase\", \"2\": \" decrease\", \"3\": \"remain the same\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3285,6 +3537,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"increase\", \"2\": \" decrease\", \"3\": \"remain the same\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3298,6 +3551,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"increase\", \"2\": \" decrease\", \"3\": \"remain the same\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3311,6 +3565,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"increase\", \"2\": \" decrease\", \"3\": \"remain the same\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3324,6 +3579,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"increase\", \"2\": \" decrease\", \"3\": \"remain the same\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3337,6 +3593,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large extent\", \"2\": \"medium extent\", \"3\": \"small extent\", \"4\": \"no extent\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3350,6 +3607,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large extent\", \"2\": \"medium extent\", \"3\": \"small extent\", \"4\": \"no extent\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3363,6 +3621,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"large extent\", \"2\": \"medium extent\", \"3\": \"small extent\", \"4\": \"no extent\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3376,6 +3635,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3389,6 +3649,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3402,6 +3663,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3415,6 +3677,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3428,6 +3691,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3441,6 +3705,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"economic development\", \"2\": \"internal stability\", \"3\": \"Empowering CSOs\", \"4\": \"improving citizens' lives\", \"5\": \"gaining influence\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3454,6 +3719,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"open up\", \"2\": \"the same\", \"3\": \"limit\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3467,6 +3733,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"internal factors\", \"2\": \"external factors\", \"3\": \"both\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3480,6 +3747,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3493,6 +3761,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"statement 1\", \"2\": \"statement 2\", \"97\": \"neither\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3506,6 +3775,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3519,6 +3789,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3532,6 +3803,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3545,6 +3817,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3558,6 +3831,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3571,6 +3845,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3584,6 +3859,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3597,6 +3873,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3610,6 +3887,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3623,6 +3901,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"neither nor\", \"4\": \"bad\", \"5\": \"very bad\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3636,6 +3915,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"neither nor\", \"4\": \"bad\", \"5\": \"very bad\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3649,6 +3929,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"very good\", \"2\": \"good\", \"3\": \"neither nor\", \"4\": \"bad\", \"5\": \"very bad\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3662,6 +3943,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Very good\", \"2\": \"2. Good\", \"3\": \"3. NEITHER GOOD NOR BAD [INTERVIEWER: DO NOT READ]\", \"4\": \"4. Bad\", \"5\": \"5. Very bad\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3675,6 +3957,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"strongly agree\", \"2\": \"agree\", \"3\": \"disagree\", \"4\": \"strongly disagree\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3688,6 +3971,7 @@
     "n_distinct": 16,
     "value_labels": "{\"1\": \"No country\", \"2\": \"US\", \"3\": \"UK\", \"4\": \"Israel\", \"5\": \"Iran\", \"6\": \"Turkey\", \"7\": \"EU\", \"8\": \"Saudi Arabia\", \"9\": \"UAE\", \"10\": \"Syria\", \"11\": \"Russia\", \"12\": \"Libya\", \"13\": \"Yemen\", \"14\": \"Qatar\", \"15\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3701,6 +3985,7 @@
     "n_distinct": 16,
     "value_labels": "{\"1\": \"No country\", \"2\": \"US\", \"3\": \"UK\", \"4\": \"Israel\", \"5\": \"Iran\", \"6\": \"Turkey\", \"7\": \"EU\", \"8\": \"Saudi Arabia\", \"9\": \"UAE\", \"10\": \"Syria\", \"11\": \"Russia\", \"12\": \"Libya\", \"13\": \"Yemen\", \"14\": \"Qatar\", \"15\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3714,6 +3999,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"great extent\", \"2\": \"medium extent\", \"3\": \"small extent\", \"4\": \"not extent\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3727,6 +4013,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"political divide\", \"2\": \"religious divide\", \"3\": \"both\", \"4\": \"neither\", \"97\": \"no tensions\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3740,6 +4027,7 @@
     "n_distinct": 0,
     "value_labels": "{\"20\": \"20+\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3753,6 +4041,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"no education\", \"2\": \"elementary education\", \"3\": \"basic education\", \"4\": \"secondary education\", \"5\": \"tertiary education\", \"6\": \"Bachelor\", \"7\": \"Masters+\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3766,6 +4055,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"Jordanian\", \"2\": \"Palestinian\", \"3\": \"other\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3779,6 +4069,7 @@
     "n_distinct": 27,
     "value_labels": "{\"10002\": \"Chlef\", \"10003\": \"Laghouat\", \"10004\": \"O.E. Bouaghi\", \"10005\": \"Batna\", \"10006\": \"Bejaia\", \"10007\": \"Biskara\", \"10009\": \"Blida\", \"10010\": \"Bouira\", \"10011\": \"Tamanrasset\", \"10012\": \"Tebessa\", \"10013\": \"Tlemcen\", \"10014\": \"Tiaret\", \"10015\": \"Tiz-Ouzou\", \"10016\": \"Algiers\", \"10017\": \"Djelfa\", \"10018\": \"Jijel\", \"10019\": \"Setif\", \"10020\": \"Saida\", \"10021\": \"Skikda\", \"10022\": \"Sidi B. Abbes\", \"10023\": \"Annaba\", \"10024\": \"Guelma\", \"10025\": \"Constantine\", \"10026\": \"Medea\", \"10027\": \"Mostaganem\", \"10028\": \"Messilia\", \"10029\": \"Mascara\", \"10030\": \"Ouargla\", \"10031\": \"Oran\", \"10034\": \"B.B. Arreridj\", \"10035\": \"Boumderdes\", \"10036\": \"Al Traf\", \"10038\": \"Tissemsilt\", \"10040\": \"Khenchela\", \"10041\": \"Souk Ahras\", \"10042\": \"Tipaza\", \"10043\": \"Mila\", \"10044\": \"Ain al-Dafla\", \"10046\": \"Timouchent\", \"10047\": \"Ghardaia\", \"10048\": \"Relizane\", \"50001\": \"Cairo\", \"50002\": \"Alexandria\", \"50003\": \"Port Said\", \"50004\": \"Suez\", \"50005\": \"Damietta\", \"50006\": \"Dakahlia\", \"50007\": \"Eastern\", \"50008\": \"Kaliobeya\", \"50009\": \"Matrouh\", \"50010\": \"Qena\", \"50011\": \"North Sinai\", \"50013\": \"The New Valley\", \"50014\": \"Fayoum\", \"50015\": \"Giza\", \"50016\": \"Red Sea\", \"50017\": \"Luxor\", \"50018\": \"Aswan\", \"50019\": \"Assiut\", \"50020\": \"Minya\", \"50021\": \"Kafr El Sheik\", \"50022\": \"Ismalilia\", \"50023\": \"The Lake\", \"50024\": \"Western\", \"50025\": \"Menoufia\", \"50026\": \"Beni Suef\", \"50027\": \"Sohag\", \"70001\": \"Baghdad\", \"70002\": \"Salahaddin\", \"70003\": \"Diyala\", \"70004\": \"Wassit\", \"70005\": \"Missan\", \"70006\": \"Basra\", \"70007\": \"Thi Har\", \"70009\": \"Diwaniya\", \"70010\": \"Babylon\", \"70011\": \"Kerbala\", \"70012\": \"Najaf\", \"70013\": \"Anbar\", \"70014\": \"Ninewa\", \"70016\": \"Erbil\", \"70017\": \"Kirkuk\", \"70018\": \"Sulaymaniya\", \"80001\": \"Irbid\", \"80002\": \"Al Balqa\", \"80003\": \"Zarqa\", \"80004\": \"Tafila\", \"80005\": \"Amman\", \"80006\": \"Aqaba\", \"80007\": \"Karak\", \"80008\": \"Al Mafraq\", \"80009\": \"Jerash\", \"80010\": \"Aijoun\", \"80011\": \"Madaba\", \"80012\": \"Ma'an\", \"90001\": \"Al Asimah (Capital)\", \"90002\": \"Hawalli\", \"90003\": \"Ahmadi\", \"90004\": \"Jahra\", \"90005\": \"Farwaniya\", \"90006\": \"Mubarak Al-Kabeer\", \"100001\": \"Akkar\", \"100002\": \"North\", \"100003\": \"Bekaa\", \"100004\": \"Baalbek\", \"100005\": \"Beirut\", \"100006\": \"Mt Lebanon\", \"100007\": \"South\", \"100008\": \"El Nabatieh\", \"110001\": \"Tripoli\", \"110002\": \"Jafara\", \"110003\": \"Al Zawia\", \"110004\": \"Nuqat Al Khams\", \"110005\": \"Al Jabal AL Gharbi\", \"110006\": \"Al Murqub\", \"110007\": \"Misrata\", \"110008\": \"Sirt\", \"110009\": \"Nalut\", \"110010\": \"Al Wahat\", \"110011\": \"Benghazi\", \"110012\": \"Almarj\", \"110013\": \"Al Jabal Al Akhdar\", \"110014\": \"Derna\", \"110015\": \"Tobruq\", \"110016\": \"Al Kufra\", \"110017\": \"Al Jufra\", \"110018\": \"Sebha\", \"110019\": \"Murzuq\", \"110020\": \"Ubari\", \"110021\": \"Ghat\", \"110022\": \"Wadi Alshati\", \"130001\": \"Tanger-Tetouan-Al Hoceima\", \"130002\": \"Oriental\", \"130003\": \"Fès-Meknès\", \"130004\": \"Rabat-Salé-Kénitra\", \"130005\": \"Béni Mellal-Khénifra\", \"130006\": \"Grand Casablanca-Settat\", \"130007\": \"Marrakech-Safi\", \"130008\": \"Drâa-Tafilalet\", \"130009\": \"Sousse-Massa\", \"130010\": \"Guelmim-Oued Noun\", \"130011\": \"Laayoune-Sakia El Hamra\", \"130012\": \"Eddakhla-Oued Eddahab\", \"150001\": \"Bethlehem\", \"150002\": \"Deir al Balah\", \"150003\": \"Gaza\", \"150004\": \"Hebron\", \"150005\": \"Jabalia\", \"150006\": \"Jerusalem\", \"150007\": \"Jenin\", \"150008\": \"Jerico\", \"150009\": \"Khan Yunis\", \"150010\": \"Nabulus\", \"150011\": \"Qalqilya\", \"150012\": \"Rafah\", \"150013\": \"Ramallah\", \"150014\": \"Salfit\", \"150015\": \"Tubas\", \"150016\": \"Tulkarem\", \"190001\": \"North\", \"190002\": \"Nile River\", \"190003\": \"Red Sea\", \"190004\": \"Gedaref\", \"190005\": \"Kassala\", \"190006\": \"Sennar\", \"190007\": \"Khartoum\", \"190008\": \"The Island\", \"190009\": \"North Kordofan\", \"190010\": \"Blue Nile\", \"190011\": \"White Nile\", \"190012\": \"South Kordofan\", \"190013\": \"West Kordofan\", \"190014\": \"East Darfur\", \"190015\": \"South Darfur\", \"190016\": \"Central Darfur\", \"190017\": \"North Darfur\", \"190018\": \"West Darfur\", \"210001\": \"Tunis\", \"210002\": \"Ariana\", \"210003\": \"Ben Arous\", \"210004\": \"Manouba\", \"210005\": \"Nabeul\", \"210006\": \"Zaghouan\", \"210007\": \"Bizerte\", \"210008\": \"Beja\", \"210009\": \"Jendouba\", \"210010\": \"Kef\", \"210011\": \"Siliana\", \"210012\": \"Sousse\", \"210013\": \"Monastir\", \"210014\": \"Mahdia\", \"210015\": \"Sfax\", \"210016\": \"Kairouan\", \"210017\": \"Kasserine\", \"210018\": \"Sidi Bouzid\", \"210019\": \"Gabes\", \"210020\": \"Medenine\", \"210021\": \"Tatouine\", \"210022\": \"Gafsa\", \"210023\": \"Tozeur\", \"210024\": \"Kebili\", \"220001\": \"Amran\", \"220002\": \"Ad Dali\", \"220003\": \"Al Bayda\", \"220004\": \"Al Hudaydah\", \"220005\": \"Al Jawf\", \"220006\": \"Al Mahwit\", \"220007\": \"Amanat Al Asimah\", \"220008\": \"Dhamar\", \"220009\": \"Hajjah\", \"220010\": \"Ibb\", \"220011\": \"Ma'rib\", \"220012\": \"Raymah\", \"220013\": \"Sa'dah\", \"220014\": \"Sana'a\", \"220015\": \"Ta'izz\", \"220016\": \"'Adan\", \"220017\": \"Abyan\", \"220018\": \"Al Mahrah\", \"220019\": \"Hadramaut\", \"220020\": \"Soqotra\", \"220021\": \"Lahij\", \"220022\": \"Shabwah\", \"999997\": \"other\", \"999998\": \"don't know\", \"999999\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 210001.0,
     "max": 999999.0
   },
@@ -3792,6 +4083,7 @@
     "n_distinct": 86,
     "value_labels": "{\"998\": \"don't know\", \"999\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 999.0
   },
@@ -3805,6 +4097,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"rich\", \"2\": \"poor\", \"3\": \"both\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3818,6 +4111,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"move\", \"2\": \"stay\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3831,6 +4125,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"employed\", \"2\": \"self-employed\", \"3\": \"retired\", \"4\": \"housewife\", \"5\": \"student\", \"6\": \"unemployed\", \"7\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3844,6 +4139,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"full-time\", \"2\": \"part-time\", \"98\": \"dk\", \"99\": \"ref\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -3857,6 +4153,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"public\", \"2\": \"private\", \"3\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -3870,6 +4167,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. …government sector\", \"2\": \"2. …semi-government sector\", \"3\": \"3. …private sector\", \"4\": \"4. …other, specify:\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3883,6 +4181,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"executive\", \"2\": \"manager\", \"3\": \"professional\", \"4\": \"skilled worker\", \"5\": \"clerical\", \"6\": \"manual labor\", \"7\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3896,6 +4195,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"executive\", \"2\": \"professsional\", \"3\": \"technician\", \"4\": \"clerk\", \"5\": \"service/sales worker\", \"6\": \"craft/trade worker\", \"7\": \"plant operator/assembler\", \"8\": \"businessman/entrepreneur\", \"9\": \"member of armed forces/police\", \"10\": \"agricultural worker\", \"11\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3909,6 +4209,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"oil/gas\", \"2\": \"Construction/utilities\", \"3\": \"wholesale/retail trade\", \"4\": \"manufacturing\", \"5\": \"education\", \"6\": \"health care/social work\", \"7\": \"IT/communications\", \"8\": \"transportation/storage\", \"9\": \"finance/insurance/real estate\", \"10\": \"government/public administration/defense\", \"11\": \"professional/scientific/technical activities\", \"12\": \"tourism/arts/entertainment/recreation\", \"13\": \"other\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3922,6 +4223,7 @@
     "n_distinct": 2,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 2.0
   },
@@ -3935,6 +4237,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"temporary\", \"2\": \"permanent\", \"3\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -3948,6 +4251,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -3961,6 +4265,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -3974,6 +4279,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"temporary\", \"2\": \"permanent\", \"3\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -3987,6 +4293,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"single\", \"2\": \"living with partner\", \"3\": \"engaged\", \"4\": \"married\", \"5\": \"divorced\", \"6\": \"separated\", \"7\": \"widowed\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 7.0
   },
@@ -4000,6 +4307,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"3\": \"Niqab\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -4013,6 +4321,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"yes\", \"2\": \"no\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -4026,6 +4335,7 @@
     "n_distinct": 9,
     "value_labels": "{\"8\": \"8 or more\", \"999\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 8.0
   },
@@ -4039,6 +4349,7 @@
     "n_distinct": 4,
     "value_labels": "{\"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 3.0
   },
@@ -4052,6 +4363,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"hearing\", \"2\": \"visual\", \"3\": \"ambulatory\", \"4\": \"cognitive\", \"5\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 5.0
   },
@@ -4065,6 +4377,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"hearing\", \"2\": \"visual\", \"3\": \"ambulatory\", \"4\": \"cognitive\", \"5\": \"other\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 2.0,
     "max": 4.0
   },
@@ -4078,6 +4391,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"easily\", \"2\": \"with some difficulty\", \"3\": \"need medical aid\", \"4\": \"need assistance\", \"5\": \"need assistance by medical staff\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -4091,6 +4405,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"easily\", \"2\": \"with some difficulty\", \"3\": \"need medical aid\", \"4\": \"need assistance\", \"5\": \"need assistance by medical staff\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 5.0
   },
@@ -4104,6 +4419,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"easily\", \"2\": \"with some difficulty\", \"3\": \"need medical aid\", \"4\": \"need assistance\", \"5\": \"need assistance by medical staff\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -4117,6 +4433,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"easily\", \"2\": \"with some difficulty\", \"3\": \"need medical aid\", \"4\": \"need assistance\", \"5\": \"need assistance by medical staff\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 5.0
   },
@@ -4130,6 +4447,7 @@
     "n_distinct": 10,
     "value_labels": "{\"1\": \"1\", \"2\": \"2\", \"3\": \"3\", \"4\": \"4\", \"5\": \"5\", \"6\": \"6\", \"7\": \"7\", \"8\": \"8\", \"9\": \"9+\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 9.0
   },
@@ -4143,6 +4461,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4156,6 +4475,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below 451.000\", \"2\": \"451.000 - 750.000\", \"3\": \"751.000 - 1.000.000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4169,6 +4489,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below 1.501.000\", \"2\": \"1.501.000 - 2.000.000\", \"3\": \"2.001.000 - 2.500.000\", \"4\": \"2.501.000 - 3.000.000\", \"5\": \"3.001.000 - 4.000.000\", \"6\": \"above 4.001.000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4182,6 +4503,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4195,6 +4517,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"<100\", \"2\": \"101-200\", \"3\": \"201-300\", \"4\": \"301-350\", \"5\": \"351-400\", \"6\": \"401-449\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4208,6 +4531,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"450-500\", \"2\": \"551-650\", \"3\": \"651-750\", \"4\": \"751-850\", \"5\": \"851-999\", \"6\": \">1000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4221,6 +4545,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4234,6 +4559,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below 600\", \"2\": \"601-1000\", \"3\": \"1001-1400\", \"4\": \"1401-1800\", \"5\": \"1801-2200\", \"6\": \"2201-2699\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4247,6 +4573,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"2700-3100\", \"2\": \"3101-3500\", \"3\": \"3501-3900\", \"4\": \"3901-4300\", \"5\": \"4301-4700\", \"6\": \"above 4700\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4260,6 +4587,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4273,6 +4601,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below 500\", \"2\": \"500-1000\", \"3\": \"1001-1500\", \"4\": \"1501-2000\", \"5\": \"2001-2500\", \"6\": \"2501-2999\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4286,6 +4615,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"3000-3500\", \"2\": \"3501-4000\", \"3\": \"4001-5000\", \"4\": \"5001-7000\", \"5\": \"7001-10000\", \"6\": \">10000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4299,6 +4629,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -4312,6 +4643,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"<100\", \"2\": \"100-200\", \"3\": \"201-300\", \"4\": \"301-350\", \"5\": \"351-400\", \"6\": \"401-449\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -4325,6 +4657,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"450-500\", \"2\": \"551-650\", \"3\": \"651-750\", \"4\": \"751-850\", \"5\": \"851-999\", \"6\": \">1000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -4338,6 +4671,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4351,6 +4685,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"<500\", \"2\": \"500-1000\", \"3\": \"1001-1500\", \"4\": \"1501-2000\", \"5\": \"2001-2500\", \"6\": \"2501-2999\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4364,6 +4699,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"3000-3500\", \"2\": \"3501-4000\", \"3\": \"4001-5000\", \"4\": \"5001-7000\", \"5\": \"7001-10000\", \"6\": \">10000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4377,6 +4713,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4390,6 +4727,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below 400\", \"2\": \"401-800\", \"3\": \"801-1200\", \"4\": \"1201-1600\", \"5\": \"1601-2000\", \"6\": \"2001-2499\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4403,6 +4741,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"2500-2900\", \"2\": \"2901-3200\", \"3\": \"3201-3600\", \"4\": \"3601-4000\", \"5\": \"4001-4999\", \"6\": \">5000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4416,6 +4755,7 @@
     "n_distinct": 0,
     "value_labels": "{\"999998\": \"don't know\", \"999999\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4429,6 +4769,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"Below median\", \"2\": \"Above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4442,6 +4783,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4455,6 +4797,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"<100.000\", \"2\": \"<200.000\", \"3\": \"<300.000\", \"4\": \"<400.000\", \"5\": \"<500.000\", \"6\": \"<600.000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4468,6 +4811,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"<700.000\", \"2\": \"<800.000\", \"3\": \"<1.000.000\", \"4\": \"<1.200.000\", \"5\": \"<1.500.000\", \"6\": \">1.500.000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4481,6 +4825,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4494,6 +4839,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"<100\", \"2\": \"100-200\", \"3\": \"201-300\", \"4\": \"301-350\", \"5\": \"351-400\", \"6\": \"401-449\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4507,6 +4853,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"450-500\", \"2\": \"551-650\", \"3\": \"651-750\", \"4\": \"751-850\", \"5\": \"851-999\", \"6\": \">1000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4520,6 +4867,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4533,6 +4881,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"<100\", \"2\": \"100-200\", \"3\": \"201-300\", \"4\": \"301-350\", \"5\": \"351-400\", \"6\": \"401-449\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4546,6 +4895,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"450-500\", \"2\": \"551-650\", \"3\": \"651-750\", \"4\": \"751-850\", \"5\": \"851-999\", \"6\": \">1000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4559,6 +4909,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"below median\", \"2\": \"above median\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4572,6 +4923,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"<500\", \"2\": \"500-1000\", \"3\": \"1001-1500\", \"4\": \"1501-2000\", \"5\": \"2001-2500\", \"6\": \"2501-2999\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4585,6 +4937,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"3000-3500\", \"2\": \"3501-4000\", \"3\": \"4001-5000\", \"4\": \"5001-7000\", \"5\": \"7001-10000\", \"6\": \">10000\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4598,6 +4951,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Less than 40,000 QAR\", \"2\": \"2. 40,000 QAR or more\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4611,6 +4965,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Less than 10,000 QAR\", \"2\": \"2. 10,000 to less than 20,000 QAR\", \"3\": \"3. 20,000 to less than 30,000 QAR\", \"4\": \"4. 30,000 to less than 40,000QAR\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4624,6 +4979,7 @@
     "n_distinct": 0,
     "value_labels": "{\"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\", \"1\": \"1. Less than 40,000 QAR\", \"2\": \"2. 40,000 to less than 50,000 QAR\", \"3\": \"3. 50,000 to less than 60,000 QAR\", \"4\": \"4. 60,000 to less than 70,000 QAR\", \"5\": \"5. 70,000 to less than 80,000 QAR\", \"6\": \"6. 80,000 QAR or more\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -4637,6 +4993,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"able to save\", \"2\": \"covers costs\", \"3\": \"doesn't cover cost\", \"4\": \"significant difficulties\", \"98\": \"don't know\", \"99\": \"refused\", \"-9\": \"-9. Refusal\", \"-8\": \"-8. Don't Know\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -4650,6 +5007,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"monthly\", \"2\": \"a few times a year\", \"3\": \"once a year\", \"4\": \"none\", \"98\": \"don't know\", \"99\": \"refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -4663,6 +5021,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   }

@@ -46,26 +46,43 @@ Add it to the `series` object first, including the value its country variable
 takes for Tunisia:
 
 ```json
-"world-values-survey": {
-  "name": "World Values Survey",
-  "publisher": "WVS Association",
-  "homepage": "https://www.worldvaluessurvey.org",
-  "data_page": "https://www.worldvaluessurvey.org/WVSDocumentationWVL.jsp",
-  "country_variable_values": {"tunisia": 788}
+"afrobarometer": {
+  "name": "Afrobarometer",
+  "prefix": "afro",
+  "publisher": "Afrobarometer",
+  "homepage": "https://www.afrobarometer.org",
+  "data_page": "https://www.afrobarometer.org/data/",
+  "country_variable_values": {"tunisia": 30}
 }
 ```
 
-`scripts/extract_tunisia.py` reads two kinds of release, set per wave as
-`source_format`: `sav` for an SPSS release with variable and value labels attached,
-which is the common case and the better one, and `csv-labels` for a CSV of label
-text with no codes and no question text. A `csv-labels` wave also needs
-`country_value` set to the country's name as the CSV spells it, since there is no
-numeric country code to match on. A series that ships neither needs a reader added
-to `read_pooled()`, not a workaround in the data.
+`prefix` is the short tag the crosswalk uses to name that series' columns, and it
+must be unique: variables are matched within a series and never across one, since
+`Q1` is the governorate in Arab Barometer and "Important in life: Family" in the
+World Values Survey.
 
-Prefer the SPSS release wherever the publisher offers one. A `csv-labels` wave is
-a fallback: it loses the numeric codes and the question text, and both show up as
-gaps in the codebook.
+`scripts/extract_tunisia.py` reads three kinds of release, set per survey as
+`source_format`:
+
+| `source_format` | Release | What it costs |
+|---|---|---|
+| `sav` | SPSS, with variable and value labels | nothing; prefer it wherever the publisher offers one |
+| `csv-labels` | CSV of label text | no numeric codes, no question text |
+| `xlsx-headers` | Excel with `NAME: question text` headers | no value labels |
+
+A `csv-labels` survey also needs `country_value` set to the country's name as the
+CSV spells it, since there is no numeric country code to match on. A release in
+none of these shapes needs a reader added to `read_pooled()`, not a workaround in
+the data.
+
+If the release has no country column at all — Afrobarometer's country files do not —
+find something that still identifies the country and match on that rather than
+skipping the check. Afrobarometer prefixes its respondent numbers, so those surveys
+set `"country_var": "RESPNO"`, `"country_value": "TUN"` and
+`"country_match": "startswith"`.
+
+A country file rather than a pooled release is fine: give it its country variable
+and value anyway, so the filter checks that the file holds what it claims to.
 
 ## Ground rules
 
