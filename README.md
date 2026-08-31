@@ -177,6 +177,13 @@ Seventeen is small, and it is the honest number for lexical matching. Two questi
 that ask the same thing in different words are not found, so the concordance is a
 floor on what is comparable, not a ceiling.
 
+The scales are compared too, and that is where it gets bleak: **not one of the
+seventeen has an identical response scale.** Every question two programmes both ask,
+they ask with different answer options — Afrobarometer scores internet use from
+never to every day, the Arab Opinion Index from daily to "I do not use the internet"
+— or with options the release does not label at all. A cross-programme series has to
+be built by recoding, question by question, with the codebooks open.
+
 ### Where the question text comes from
 
 The release's own variable labels where it has them, and otherwise the survey's

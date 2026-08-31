@@ -27,7 +27,14 @@ Both tiers are lexical. Two questions that ask the same thing in different words
 would you describe the present economic condition of this country?" -- will not be
 found here, and their absence is not evidence that the archive lacks them.
 
-Writes ``docs/question-concordance.csv`` and ``docs/question-concordance.md``.
+A shared question is still not a shared measurement, so each group's response scales
+are compared too: whether the members offer the same answer options, whether the
+options are the same but the codes differ, and in particular whether a scale runs the
+other way round in one survey than in another, which is the way a pooled estimate
+silently inverts.
+
+Writes ``docs/question-concordance.csv``, ``docs/question-concordance-groups.csv``
+and ``docs/question-concordance.md``.
 """
 
 from __future__ import annotations
@@ -92,6 +99,85 @@ def numbers(text: str) -> list[str]:
     return re.findall(r"\d+", normalise(text))
 
 
+# Codes for a non-answer are relabelled freely between surveys and are inventoried
+# in docs/missing-value-codes.md already, so they are left out of a scale comparison.
+NON_SUBSTANTIVE = re.compile(
+    r"don.?t know|do not know|refus|declin|not applicable|^na$|no answer|missing|"
+    r"unspecific|no serious answer|does not happen|decline to answer|respondent refused",
+    re.I,
+)
+
+
+def substantive_scale(raw: str) -> dict[int, str] | None:
+    """A variable's answer options, as code -> plain label, non-answers removed."""
+    if not raw:
+        return None
+    try:
+        labels = json.loads(raw)
+    except (TypeError, ValueError):
+        return None
+    out = {}
+    for code, label in labels.items():
+        text = str(label)
+        if NON_SUBSTANTIVE.search(text):
+            continue
+        plain = re.sub(r"^\s*-?\d+\s*[.)]\s*", "", text)
+        plain = re.sub(r"[^a-z0-9 ]+", " ", plain.lower())
+        plain = re.sub(r"\s+", " ", plain).strip()
+        if plain:
+            try:
+                out[int(float(code))] = plain
+            except (TypeError, ValueError):
+                out[code] = plain
+    return out or None
+
+
+def compare_scales(
+    scales: list[dict[int, str] | None], unlabelled: list[int | None] | None = None
+) -> tuple[str, str]:
+    """Classify a group's response scales, and say what to do about it.
+
+    ``unlabelled`` is, per member, how many values it takes in the data that carry no
+    label at all. Where a release labels only some points of its scale -- the Arab
+    Opinion Index labels the two ends of a ten-point scale and nothing between -- the
+    labels alone would make a long scale look like a two-option one.
+    """
+    if unlabelled and all(s is not None for s in scales):
+        partly = [(len(s), u) for s, u in zip(scales, unlabelled) if s and u and u > 0]
+        if partly:
+            return "partly-labelled", (
+                f"at least one survey leaves {max(u for _, u in partly)} of its values "
+                f"unlabelled ({min(n for n, _ in partly)} options carry a label) — read "
+                "the codebook before treating these as the same measurement"
+            )
+
+    if any(s is None for s in scales):
+        known = [s for s in scales if s is not None]
+        if not known:
+            return "unknown", "no member records value labels"
+        return "unknown", "at least one member's release records no value labels"
+
+    if all(s == scales[0] for s in scales[1:]):
+        return "identical", f"{len(scales[0])} options, same codes throughout"
+
+    option_sets = [frozenset(s.values()) for s in scales]
+    if all(o == option_sets[0] for o in option_sets[1:]):
+        # Same answers, different numbers against them. The dangerous case is a
+        # scale that runs the other way, since recoding it wrongly flips the sign.
+        orders = [[s[c] for c in sorted(s)] for s in scales]
+        if any(o == list(reversed(orders[0])) for o in orders[1:]):
+            return "reversed", (
+                f"{len(option_sets[0])} options, but at least one survey codes them "
+                "in the opposite order — recode before pooling or the estimate inverts"
+            )
+        return "recodable", f"{len(option_sets[0])} options, codes differ between surveys"
+
+    sizes = sorted({len(s) for s in scales})
+    if len(sizes) > 1:
+        return "differs", f"different numbers of options ({', '.join(map(str, sizes))})"
+    return "differs", f"{sizes[0]} options each, but they are not the same options"
+
+
 class Union:
     """Union-find, to grow pairs into groups."""
 
@@ -109,6 +195,28 @@ class Union:
         ra, rb = self.find(a), self.find(b)
         if ra != rb:
             self.parent[rb] = ra
+
+
+def load_value_labels() -> tuple[dict[str, dict[str, str]], dict[str, dict[str, int]]]:
+    """Every survey's value labels and distinct-value counts, by survey key."""
+    catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
+    labels, distinct = {}, {}
+    for survey in catalog["surveys"]:
+        codebook = json.loads(
+            (ROOT / survey["path"] / "codebook.json").read_text(encoding="utf-8")
+        )
+        labels[survey["key"]] = {r["variable"].upper(): r["value_labels"] for r in codebook}
+        # How many values the variable takes that no label covers. A release that
+        # labels only the ends of its scale leaves the middle here.
+        counts = {}
+        for r in codebook:
+            try:
+                coded = len(json.loads(r["value_labels"])) if r["value_labels"] else 0
+            except (TypeError, ValueError):
+                coded = 0
+            counts[r["variable"].upper()] = max(0, int(r["n_distinct"]) - coded) if coded else 0
+        distinct[survey["key"]] = counts
+    return labels, distinct
 
 
 def load_items() -> list[dict]:
@@ -213,6 +321,7 @@ def link(items: list[dict]) -> tuple[Union, dict[tuple[int, int], float]]:
 
 def main() -> None:
     items = load_items()
+    value_labels, distinct_counts = load_value_labels()
     union, strength = link(items)
 
     clusters: dict[int, list[int]] = collections.defaultdict(list)
@@ -241,6 +350,18 @@ def main() -> None:
 
         canonical = max((items[i]["question_text"] for i in members), key=len)
         cluster_id = f"Q{n:04d}"
+
+        scales = [
+            substantive_scale(
+                value_labels.get(items[i]["survey"], {}).get(items[i]["variable"].upper(), "")
+            )
+            for i in members
+        ]
+        unlabelled = [
+            distinct_counts.get(items[i]["survey"], {}).get(items[i]["variable"].upper())
+            for i in members
+        ]
+        scale, scale_note = compare_scales(scales, unlabelled)
         summaries.append(
             {
                 "cluster": cluster_id,
@@ -250,14 +371,20 @@ def main() -> None:
                 "series": ";".join(sorted(series)),
                 "surveys": ";".join(sorted(surveys)),
                 "weakest_overlap": round(weakest, 3),
+                "scale": scale,
+                "scale_note": scale_note,
                 "question_text": canonical,
             }
         )
-        for i in sorted(members, key=lambda i: (items[i]["series"], items[i]["survey"])):
+        for i, member_scale in sorted(
+            zip(members, scales), key=lambda p: (items[p[0]]["series"], items[p[0]]["survey"])
+        ):
             records.append(
                 {
                     "cluster": cluster_id,
                     "tier": tier,
+                    "scale": scale,
+                    "n_options": len(member_scale) if member_scale else "",
                     "n_surveys": len(surveys),
                     "n_series": len(series),
                     "series": items[i]["series"],
@@ -279,6 +406,10 @@ def main() -> None:
     print(f"   identical wording: {(summary['tier'] == 'identical').sum():,}")
     print(f"   near wording:      {(summary['tier'] == 'near').sum():,}")
     print(f"   spanning 2+ series: {len(cross):,}")
+    print()
+    print("response scales across each group:")
+    for kind, count in summary["scale"].value_counts().items():
+        print(f"   {kind:<10} {count:,}")
     print(f"wrote docs/question-concordance.csv ({len(members):,} rows) and .md")
 
 
@@ -308,15 +439,52 @@ def render(summary: pd.DataFrame) -> str:
         "",
         "## Across series",
         "",
-        "| Question | Series | Surveys |",
-        "|---|---|---:|",
+        "| Question | Series | Surveys | Response scale |",
+        "|---|---|---:|---|",
     ]
     for _, r in cross.iterrows():
-        text = r["question_text"][:96] + ("…" if len(r["question_text"]) > 96 else "")
+        text = r["question_text"][:84] + ("…" if len(r["question_text"]) > 84 else "")
         badges = ", ".join(sorted(SHORT.get(s, s) for s in r["series"].split(";")))
-        lines.append(f"| {text} | {badges} | {r['n_surveys']} |")
+        lines.append(f"| {text} | {badges} | {r['n_surveys']} | {r['scale']} |")
 
+    counts = summary["scale"].value_counts()
     lines += [
+        "",
+        "## Do the answer options match?",
+        "",
+        "A shared question is not a shared measurement, so each group's response scales are",
+        "compared as well — with the non-answer codes left out, since those vary freely and",
+        "are inventoried in [`missing-value-codes.md`](missing-value-codes.md) already.",
+        "",
+        "| Verdict | Groups | Means |",
+        "|---|---:|---|",
+        f"| `identical` | {counts.get('identical', 0):,} | same options, same codes; poolable as they stand |",
+        f"| `recodable` | {counts.get('recodable', 0):,} | same options, different codes; align the codes first |",
+        f"| `reversed` | {counts.get('reversed', 0):,} | same options, but at least one survey codes them in the opposite order |",
+        f"| `differs` | {counts.get('differs', 0):,} | not the same options; not one variable however alike the wording |",
+        f"| `partly-labelled` | {counts.get('partly-labelled', 0):,} | a survey leaves some of its values unlabelled, so the labels understate the scale |",
+        f"| `unknown` | {counts.get('unknown', 0):,} | a member's release ships no value labels, so there is nothing to compare |",
+        "",
+        f"**Not one of the {len(cross)} cross-series groups scores `identical`.** Every "
+        "question two",
+        "programmes both ask, they ask with different answer options or with options this",
+        "archive cannot see. The overlap that survives a wording comparison does not",
+        "survive a scale comparison, and a cross-programme series here has to be built by",
+        "recoding, question by question, with the codebooks open. That is the finding, and",
+        "it is worth more than the seventeen matches on their own.",
+        "",
+        "`partly-labelled` is the quiet one. The Arab Opinion Index labels the two ends of",
+        "a ten-point scale and nothing between, so labels alone would report a two-option",
+        "question — and would have called it recodable against a genuine two-option",
+        "question elsewhere, which is what the first version of this did. Where a variable",
+        "takes values no label covers, the group says so instead.",
+        "",
+        "`recodable` and `reversed` are both empty here, and that is a result rather than a",
+        "gap: no group in this archive shares its options while disagreeing only about the",
+        "codes. The two verdicts stay in the vocabulary because a later survey may need",
+        "them — `reversed` in particular is the one that does not fail loudly, since the",
+        "wording matches, the options match, and pooling without recoding simply inverts",
+        "the estimate.",
         "",
         "## What this does not find",
         "",

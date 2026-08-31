@@ -16,25 +16,60 @@ cross-programme comparison possible at all.
 
 ## Across series
 
-| Question | Series | Surveys |
-|---|---|---:|
-| q1010. Marital Status | AB, AOI, WVS | 14 |
-| Q1005. Employment status | AB, Afro, WVS | 10 |
-| Date of Interview | AB, Afro, WVS | 9 |
-| Q340.How often do you use the internet? | AOI, Afro | 13 |
-| Q1210.How much is the monthly household income in the local currency? | AB, AOI | 11 |
-| q10191 What is your first language? | AB, AOI | 9 |
-| q10192 What is your second language? | AB, AOI | 9 |
-| Q1012. What is your religion? | AB, AOI | 8 |
-| Q37g. Trust police | AB, Afro | 6 |
-| Q37l. Trust religious leaders | AB, Afro | 6 |
-| Q86c. Neighbours: homosexuals | Afro, WVS | 5 |
-| Q86d. Neighbours: immigrants and foreign workers | Afro, WVS | 5 |
-| Q83. Most people can be trusted | Afro, WVS | 4 |
-| eg311 Suppose that presidential elections were to be held tomorrow and that you have decided to … | AB, AOI | 4 |
-| Q43c.arb. Democratic systems are not effective at maintaining order and stability | AB, Afro | 3 |
-| Q59k. Trust government | AB, Afro | 2 |
-| MODE OF DATA COLLECTION | AB, WVS | 2 |
+| Question | Series | Surveys | Response scale |
+|---|---|---:|---|
+| q1010. Marital Status | AB, AOI, WVS | 14 | unknown |
+| Q1005. Employment status | AB, Afro, WVS | 10 | unknown |
+| Date of Interview | AB, Afro, WVS | 9 | unknown |
+| Q340.How often do you use the internet? | AOI, Afro | 13 | differs |
+| Q1210.How much is the monthly household income in the local currency? | AB, AOI | 11 | unknown |
+| q10191 What is your first language? | AB, AOI | 9 | differs |
+| q10192 What is your second language? | AB, AOI | 9 | differs |
+| Q1012. What is your religion? | AB, AOI | 8 | differs |
+| Q37g. Trust police | AB, Afro | 6 | differs |
+| Q37l. Trust religious leaders | AB, Afro | 6 | differs |
+| Q86c. Neighbours: homosexuals | Afro, WVS | 5 | unknown |
+| Q86d. Neighbours: immigrants and foreign workers | Afro, WVS | 5 | unknown |
+| Q83. Most people can be trusted | Afro, WVS | 4 | unknown |
+| eg311 Suppose that presidential elections were to be held tomorrow and that you have… | AB, AOI | 4 | differs |
+| Q43c.arb. Democratic systems are not effective at maintaining order and stability | AB, Afro | 3 | differs |
+| Q59k. Trust government | AB, Afro | 2 | differs |
+| MODE OF DATA COLLECTION | AB, WVS | 2 | unknown |
+
+## Do the answer options match?
+
+A shared question is not a shared measurement, so each group's response scales are
+compared as well — with the non-answer codes left out, since those vary freely and
+are inventoried in [`missing-value-codes.md`](missing-value-codes.md) already.
+
+| Verdict | Groups | Means |
+|---|---:|---|
+| `identical` | 772 | same options, same codes; poolable as they stand |
+| `recodable` | 0 | same options, different codes; align the codes first |
+| `reversed` | 0 | same options, but at least one survey codes them in the opposite order |
+| `differs` | 374 | not the same options; not one variable however alike the wording |
+| `partly-labelled` | 43 | a survey leaves some of its values unlabelled, so the labels understate the scale |
+| `unknown` | 279 | a member's release ships no value labels, so there is nothing to compare |
+
+**Not one of the 17 cross-series groups scores `identical`.** Every question two
+programmes both ask, they ask with different answer options or with options this
+archive cannot see. The overlap that survives a wording comparison does not
+survive a scale comparison, and a cross-programme series here has to be built by
+recoding, question by question, with the codebooks open. That is the finding, and
+it is worth more than the seventeen matches on their own.
+
+`partly-labelled` is the quiet one. The Arab Opinion Index labels the two ends of
+a ten-point scale and nothing between, so labels alone would report a two-option
+question — and would have called it recodable against a genuine two-option
+question elsewhere, which is what the first version of this did. Where a variable
+takes values no label covers, the group says so instead.
+
+`recodable` and `reversed` are both empty here, and that is a result rather than a
+gap: no group in this archive shares its options while disagreeing only about the
+codes. The two verdicts stay in the vocabulary because a later survey may need
+them — `reversed` in particular is the one that does not fail loudly, since the
+wording matches, the options match, and pooling without recoding simply inverts
+the estimate.
 
 ## What this does not find
 
