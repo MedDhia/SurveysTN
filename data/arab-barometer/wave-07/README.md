@@ -1,0 +1,36 @@
+# Arab Barometer Wave VII — Tunisia
+
+| | |
+|---|---|
+| Respondents | 2,400 |
+| Variables | 453 (373 with at least one non-missing answer in Tunisia) |
+| Fieldwork (Tunisia) | 2021-10-01 to 2021-11-20 |
+| Language | English (translated instrument and labels) |
+| Pooled release | 26,154 respondents across 12 countries |
+| Source file | `AB7_ENG_Release_Version6.sav` |
+| Publisher | Arab Barometer (Princeton University / University of Michigan) |
+
+## Files
+
+| File | Size | SHA-256 (first 16) |
+|---|---:|---|
+| `arab-barometer-w07-tunisia-codes.csv` | 2.78 MB | `ef7fbaf899f1e75a` |
+| `arab-barometer-w07-tunisia-labels.csv` | 7.95 MB | `176c436c2ad0f31c` |
+| `arab-barometer-w07-tunisia.dta` | 8.72 MB | `5616063b7f9573fd` |
+| `arab-barometer-w07-tunisia.sav` | 8.47 MB | `e8380cb8cff2af2e` |
+| `codebook.csv` | 0.14 MB | `2a54c53646f665c6` |
+| `codebook.json` | 0.23 MB | `7fa50da7c0855e4c` |
+
+The pooled release carries items asked in only some countries, so 80 of the 453 variables are
+entirely missing in the Tunisia sub-sample. They are kept so that column positions
+line up with the pooled release; `codebook.csv` reports `n_valid` for each.
+
+`-codes.csv` holds the numeric codes as stored in the release; `-labels.csv`
+substitutes the value label wherever the release defines one. The `.sav` carries
+full variable and value labels; the `.dta` is identical except that variable
+labels longer than 80 characters are truncated, which Stata's format requires.
+Consult `codebook.csv` for the untruncated labels.
+
+Regenerate with `python3 scripts/extract_tunisia.py`.
+
+Note: Release version 6.

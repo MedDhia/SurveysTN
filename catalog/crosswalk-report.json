@@ -1,0 +1,107 @@
+{
+  "waves": {
+    "w02": {
+      "wave_label": "Wave II",
+      "questionnaire": "docs/questionnaires/ab-w02-questionnaire.pdf",
+      "variables_with_labels": 468,
+      "labels_that_are_wording": 424,
+      "questions_parsed": 152,
+      "compared": 77,
+      "agreeing": 73,
+      "agreement_rate": 0.948,
+      "not_validated_reason": null
+    },
+    "w03": {
+      "wave_label": "Wave III",
+      "questionnaire": "docs/questionnaires/ab-w03-questionnaire.pdf",
+      "variables_with_labels": 296,
+      "labels_that_are_wording": 254,
+      "questions_parsed": 109,
+      "compared": 57,
+      "agreeing": 53,
+      "agreement_rate": 0.93,
+      "not_validated_reason": null
+    },
+    "w04": {
+      "wave_label": "Wave IV",
+      "questionnaire": "docs/questionnaires/ab-w04-questionnaire.pdf",
+      "variables_with_labels": 0,
+      "labels_that_are_wording": 0,
+      "questions_parsed": 179,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "release carries no variable labels"
+    },
+    "w05": {
+      "wave_label": "Wave V",
+      "questionnaire": "docs/questionnaires/ab-w05-questionnaire.pdf",
+      "variables_with_labels": 346,
+      "labels_that_are_wording": 8,
+      "questions_parsed": 139,
+      "compared": 2,
+      "agreeing": 2,
+      "agreement_rate": null,
+      "not_validated_reason": "release labels are topic tags, not question wording"
+    },
+    "w06p1": {
+      "wave_label": "Wave VI Part 1",
+      "questionnaire": "docs/questionnaires/ab-w06p1-questionnaire.pdf",
+      "variables_with_labels": 90,
+      "labels_that_are_wording": 57,
+      "questions_parsed": 57,
+      "compared": 33,
+      "agreeing": 28,
+      "agreement_rate": 0.848,
+      "not_validated_reason": null
+    },
+    "w06p2": {
+      "wave_label": "Wave VI Part 2",
+      "questionnaire": "docs/questionnaires/ab-w06p2-questionnaire.pdf",
+      "variables_with_labels": 82,
+      "labels_that_are_wording": 38,
+      "questions_parsed": 48,
+      "compared": 25,
+      "agreeing": 24,
+      "agreement_rate": 0.96,
+      "not_validated_reason": null
+    },
+    "w06p3": {
+      "wave_label": "Wave VI Part 3",
+      "questionnaire": "docs/questionnaires/ab-w06p3-questionnaire.pdf",
+      "variables_with_labels": 105,
+      "labels_that_are_wording": 67,
+      "questions_parsed": 61,
+      "compared": 34,
+      "agreeing": 31,
+      "agreement_rate": 0.912,
+      "not_validated_reason": null
+    },
+    "w07": {
+      "wave_label": "Wave VII",
+      "questionnaire": "docs/questionnaires/ab-w07-questionnaire.pdf",
+      "variables_with_labels": 435,
+      "labels_that_are_wording": 246,
+      "questions_parsed": 211,
+      "compared": 129,
+      "agreeing": 118,
+      "agreement_rate": 0.915,
+      "not_validated_reason": null
+    },
+    "w08": {
+      "wave_label": "Wave VIII",
+      "questionnaire": "docs/questionnaires/ab-w08-questionnaire.pdf",
+      "variables_with_labels": 513,
+      "labels_that_are_wording": 218,
+      "questions_parsed": 251,
+      "compared": 115,
+      "agreeing": 112,
+      "agreement_rate": 0.974,
+      "not_validated_reason": null
+    }
+  },
+  "variables": 1966,
+  "with_question_text": 1903,
+  "in_every_wave": 13,
+  "wording_drifts": 97
+}
