@@ -43,8 +43,10 @@ Usage:  python3 scripts/extract_tunisia.py [--raw data/raw] [--out data]
 from __future__ import annotations
 
 import argparse
+import datetime
 import hashlib
 import json
+import re
 from datetime import date
 from pathlib import Path
 
@@ -53,6 +55,9 @@ import pyreadstat
 
 ROOT = Path(__file__).resolve().parent.parent
 STATA_LABEL_MAX = 80  # Stata's hard limit on a variable label
+# SPSS and Stata both want a name that starts with a letter and carries only
+# letters, digits and underscores. Afrobarometer Round 10 ships LOCATION.LEVEL.1.
+VALID_NAME = re.compile(r"[A-Za-z][A-Za-z0-9_]{0,31}")
 MAX_OBSERVED_VALUES = 50  # beyond this a codebook listing stops being useful
 
 # Strings that pandas.read_csv treats as missing by default, and that several
@@ -104,6 +109,61 @@ def clean_value_labels(labels: dict) -> dict:
 def writes_codes(fmt: str) -> bool:
     """Does the release store answers as numeric codes rather than as label text?"""
     return fmt in ("sav", "xlsx-headers")
+
+
+def sanitise_names(df: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, str]]:
+    """Rename any column SPSS and Stata would reject, and say what was renamed."""
+    renamed, taken = {}, {c.upper() for c in df.columns}
+    for col in df.columns:
+        if VALID_NAME.fullmatch(col):
+            continue
+        clean = re.sub(r"[^A-Za-z0-9_]", "_", col).lstrip("_")[:32] or "V"
+        if not clean[0].isalpha():
+            clean = f"V_{clean}"[:32]
+        stem, n = clean, 1
+        while clean.upper() in taken:
+            n += 1
+            clean = f"{stem[:30]}_{n}"
+        taken.add(clean.upper())
+        renamed[col] = clean
+    return (df.rename(columns=renamed) if renamed else df), renamed
+
+
+def select_country(df: pd.DataFrame, spec: dict, country_value) -> pd.DataFrame:
+    """Keep the rows for Tunisia.
+
+    Most releases carry a country code to match on. Afrobarometer ships country
+    files with no country column at all, but its respondent numbers are prefixed
+    with the country -- TUN0001 -- so the prefix serves, and the filter still
+    checks that the file holds what it claims rather than trusting the filename.
+    """
+    column = df[spec["country_var"]]
+    if spec.get("country_match") == "startswith":
+        return df[column.astype(str).str.startswith(str(country_value))]
+    return df[column == country_value]
+
+
+def drop_temporal_value_labels(
+    df: pd.DataFrame, value_labels: dict
+) -> tuple[dict, list[str]]:
+    """Remove value labels attached to a date or time column.
+
+    Neither SPSS nor Stata will take them -- the label's key is a number and the
+    column is a time -- and they carry nothing: Afrobarometer uses them only to
+    mark -3600 as "Missing" on the interview start and end times, and the reader
+    has already turned that into a time of day.
+    """
+    dropped = []
+    for name in list(value_labels):
+        if name not in df.columns:
+            continue
+        present = df[name].dropna()
+        if len(present) and isinstance(
+            present.iloc[0], (datetime.date, datetime.time, datetime.datetime)
+        ):
+            del value_labels[name]
+            dropped.append(name)
+    return value_labels, dropped
 
 
 def is_blank(s: pd.Series) -> pd.Series:
@@ -282,13 +342,22 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
     n_pooled = len(pooled)
     n_countries = int(pooled[country_var].nunique())
 
-    df = pooled[pooled[country_var] == country_value].reset_index(drop=True)
+    df = select_country(pooled, spec, country_value).reset_index(drop=True)
     del pooled
     if df.empty:
         raise SystemExit(
             f"no rows with {country_var} == {country_value!r} in {spec['raw_file_stem']}"
         )
     df = apply_numeric_types(df, numeric)
+    df, renamed = sanitise_names(df)
+    for before, after in renamed.items():
+        var_labels[after] = var_labels.pop(before, "")
+        if before in value_labels:
+            value_labels[after] = value_labels.pop(before)
+        print(f"[{spec['slug']}] renamed {before} -> {after} (not a valid SPSS/Stata name)")
+    value_labels, temporal_labels_dropped = drop_temporal_value_labels(df, value_labels)
+    for name in temporal_labels_dropped:
+        print(f"[{spec['slug']}] dropped value labels on {name}: it is a date or time column")
     print(f"[{spec['slug']}] Tunisia: {len(df):,} of {n_pooled:,} rows, {df.shape[1]} variables")
 
     dest = out_dir / spec["series"] / spec["slug"]
@@ -361,6 +430,9 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "slug": spec["slug"],
         "country": "Tunisia",
         "country_value": country_value,
+        "country_match": spec.get("country_match", "equals"),
+        "renamed_variables": renamed,
+        "value_labels_dropped_on_temporal_columns": temporal_labels_dropped,
         "n_respondents": int(len(df)),
         "n_variables": int(df.shape[1]),
         "n_variables_with_data": n_with_data,
@@ -518,6 +590,29 @@ def render_wave_readme(e: dict, series: dict) -> str:
         ]
 
     lines += ["", "Regenerate with `python3 scripts/extract_tunisia.py`."]
+    if e["value_labels_dropped_on_temporal_columns"]:
+        listed = ", ".join(f"`{v}`" for v in e["value_labels_dropped_on_temporal_columns"])
+        lines += [
+            "",
+            f"Value labels on {listed} are not carried over. They are date or time columns,",
+            "which neither SPSS nor Stata will attach value labels to, and the labels only",
+            "marked a sentinel the reader has already parsed as a time of day.",
+        ]
+
+    if e["renamed_variables"]:
+        lines += [
+            "",
+            "## Renamed variables",
+            "",
+            "The release uses names SPSS and Stata will not accept, so they are rewritten",
+            "here. Nothing else about them changes.",
+            "",
+            "| In the release | Here |",
+            "|---|---|",
+        ]
+        for before, after in e["renamed_variables"].items():
+            lines.append(f"| `{before}` | `{after}` |")
+
     if e["notes"]:
         lines += ["", f"Note: {e['notes']}"]
     return "\n".join(lines) + "\n"

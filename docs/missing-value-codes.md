@@ -211,3 +211,178 @@ that list, and is not guessed here.
 | `-5` | Missing; Not applicable for other reasons | 254 |
 | `-1` | Don't know | 247 |
 | `-3` | Not applicable (filter) | 12 |
+
+## Afrobarometer Round 6
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-1` | Missing | 300 |
+| `98` | Refused | 231 |
+| `9` | Don’t know | 178 |
+| `9` | Don't know / Haven't heard enough | 25 |
+| `9` | Don't know/ Have not heard enough | 21 |
+| `9999` | Don’t know | 10 |
+| `1` | Refused to be interviewed | 7 |
+| `9997` | Not Applicable | 7 |
+| `9998` | Refused | 7 |
+| `9998` | Refused to answer | 6 |
+| `7` | Not Applicable | 5 |
+| `9` | Don’t Know | 5 |
+| `7` | Not applicable | 4 |
+| `9` | Don’t know/Haven't heard enough | 4 |
+| `9` | Don't know / Can't remember | 3 |
+| `99` | Don’t know | 3 |
+| `9999` | Do not know / Did not understand the question | 3 |
+| `10` | They don't know how to take a case to court | 2 |
+| `98` | Refused to answer | 2 |
+| `1` | Refuse to pay bribes | 1 |
+| `2` | People Don't know where to report it | 1 |
+| `3` | People Don't know how to report it | 1 |
+| `8` | Refused to answer | 1 |
+| `9` | Don't Know / Can't remember | 1 |
+| `9` | Don’t know/ Haven't heard enough | 1 |
+| `9` | They don't know their legal rights and remedies | 1 |
+| `998` | Refused | 1 |
+| `999` | Don’t know | 1 |
+| `9997` | Refused to answer | 1 |
+| `9997` | Not applicable | 1 |
+| `9998` |      Refused | 1 |
+| `9999` |  Don't know | 1 |
+| `9999` |      Don't know | 1 |
+
+## Afrobarometer Round 7
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-1` | Missing | 276 |
+| `8` | Refused | 228 |
+| `9` | Don't know | 89 |
+| `9` | Don’t know | 86 |
+| `9` | Don't know / Haven’t heard enough | 22 |
+| `9` | Don’t know/Haven’t heard | 13 |
+| `7` | Not applicable | 11 |
+| `9` | Don’t know/Haven’t heard enough | 11 |
+| `9` | Don't know/ Haven’t heard | 10 |
+| `998` | Refused | 10 |
+| `98` | Refused | 9 |
+| `1` | Refused to be interviewed | 8 |
+| `9998` | Refused | 7 |
+| `99` | Don’t know | 5 |
+| `9999` | Don't know | 5 |
+| `9` | Don’t know / haven't heard enough | 4 |
+| `9997` | Not applicable | 2 |
+| `9999` | Don’t know | 2 |
+| `7` | Not applicable (no disability) | 1 |
+| `7` | Not applicable, no earnings | 1 |
+| `9` | Don’t know / Can’t remember | 1 |
+| `9` | Do not know | 1 |
+| `9` | Don’t know/ haven't heard enough | 1 |
+| `9` | Don’t know/Haven’t heard enough to say | 1 |
+| `9` | Don’t know/Haven't heard enough | 1 |
+| `9` | Don’t know/ Haven’t heard enough | 1 |
+| `9` | Don’t know / Haven’t heard enough | 1 |
+| `9` | Don’t know / Haven’t heard enough to say | 1 |
+| `97` | Not applicable | 1 |
+| `97` | Not applicable (respondent is head of household) | 1 |
+| `99` | Don't know | 1 |
+| `999` | Don't know | 1 |
+| `9998` | Refused to Answer | 1 |
+| `9998` | Refused to answer | 1 |
+| `9999` | Don't Know | 1 |
+
+## Afrobarometer Round 8
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-1` | Missing | 317 |
+| `8` | Refused | 244 |
+| `9` | Don't know | 143 |
+| `9` | Don’t know | 104 |
+| `7` | Not applicable | 30 |
+| `1` | Refused to be interviewed | 20 |
+| `9998` | Refused | 9 |
+| `98` | Refused | 8 |
+| `99` | Don’t know | 7 |
+| `9997` | Not applicable | 6 |
+| `9999` | Don't know | 6 |
+| `8` | Refused to answer | 4 |
+| `7` | Not Applicable | 3 |
+| `8` | Refused to Answer | 3 |
+| `9` | Don't Know | 3 |
+| `999` | Don't know | 3 |
+| `9999` | Don’t know | 3 |
+| `97` | Not Applicable | 2 |
+| `997` | Not applicable | 2 |
+| `28` | Agnostic (Do not know if there is a God) | 1 |
+| `7` | Not applicable, no earnings | 1 |
+| `9` | Don’t know/Haven’t heard enough to say | 1 |
+| `9` | Don't know/ Haven’t heard | 1 |
+| `9` | Don’t know or haven't heard enough to say | 1 |
+| `98` | Refused to answer | 1 |
+| `9998` | Refused to answer | 1 |
+
+## Afrobarometer Round 9
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-1` | Missing | 324 |
+| `8` | A refusé | 123 |
+| `8` | Refuse | 89 |
+| `8` | A refusé de répondre | 25 |
+| `1` | A refusé de se soumettre à l'entretien | 21 |
+| `8` | Refusé | 14 |
+| `9` | Refus | 5 |
+| `98` | A refusé | 4 |
+| `9998` | Refus | 3 |
+| `8` | Refuse de répondre | 2 |
+| `98` | Refuse de répondre | 2 |
+| `9998` | A refusé | 2 |
+| `6` | Refuse | 1 |
+| `8` | Refus | 1 |
+| `98` | Refuse | 1 |
+| `98` | A refusé de répondre | 1 |
+| `998` | A refusé | 1 |
+| `9998` | Refuse de repondre | 1 |
+
+## Afrobarometer Round 10
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-1` | Missing | 314 |
+| `9` | Don’t know | 133 |
+| `8` | Refused | 132 |
+| `8` | Refused to answer | 99 |
+| `9` | Don't know | 60 |
+| `7` | Not applicable | 30 |
+| `1` | Refused to be interviewed | 20 |
+| `8` | Refused to Answer | 14 |
+| `9` | Don’t know/Haven’t heard enough to say | 14 |
+| `9` | Don't know / Haven’t heard enough to say | 13 |
+| `9` | Don't know/ Haven’t heard | 11 |
+| `99` | Don’t know | 7 |
+| `9` | Don't know/Haven't heard enough to say | 6 |
+| `98` | Refused to answer | 6 |
+| `8` | Refuse to answer | 5 |
+| `97` | Not applicable | 5 |
+| `9999` | Don’t know | 5 |
+| `7` | Not Applicable | 4 |
+| `9` | Don’t know / Haven’t heard enough | 4 |
+| `9998` | Refused to answer | 4 |
+| `9998` | Refused | 4 |
+| `9999` | Don't know | 4 |
+| `9` | Don’t know or haven't heard enough to say | 3 |
+| `9` | Don’t know / Haven’t heard enough to say | 3 |
+| `9` | Don’t Know | 3 |
+| `7` | Not Applicable/Not reachable by road | 2 |
+| `9` | Don’t know/cannot remember | 2 |
+| `98` | Refused to Answer | 2 |
+| `98` | Refused | 2 |
+| `9997` | Not applicable | 2 |
+| `28` | Agnostic (Do not know if there is a God) | 1 |
+| `3` | Do not know how to enroll/too complicated | 1 |
+| `4` | Support one / don’t know which side | 1 |
+| `7` | Not applicable (does not personally have mobile phone) | 1 |
+| `7` | Not applicable / No earnings | 1 |
+| `7` | Not applicable [Respondent does not have a mobile phone number] | 1 |
+| `8` | Don’t know | 1 |
+| `9` | Refused to answer | 1 |

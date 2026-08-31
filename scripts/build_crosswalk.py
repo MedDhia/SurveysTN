@@ -284,6 +284,18 @@ def check_parse(wave: dict, questions: dict[str, str]) -> dict:
     }
 
 
+def same_numbers(a: str, b: str) -> bool:
+    """Do two wordings agree on the numbers in them, once the name prefix is gone?
+
+    A numbered series of items differs by a single character between members --
+    "Reason for Unsuccessful Call Household 5" against "... Household 2" scores
+    0.98 and is a different household. The digits are the whole of the difference,
+    so they have to match. The variable name is stripped first, or `q2061` against
+    `Q2061A` would fail on its own name.
+    """
+    return re.findall(r"\d+", normalise(a)) == re.findall(r"\d+", normalise(b))
+
+
 def suggest_by_text(series: str, tags: list[str], waves: dict) -> list[dict]:
     """Pair up variables that no name matches but whose question text is the same.
 
@@ -319,7 +331,11 @@ def suggest_by_text(series: str, tags: list[str], waves: dict) -> list[dict]:
                     ratio = difflib.SequenceMatcher(None, text, other_text).ratio()
                     if ratio > score:
                         best, score = other, ratio
-                if best and score >= SUGGESTION_FLOOR:
+                if (
+                    best
+                    and score >= SUGGESTION_FLOOR
+                    and same_numbers(waves[source]["text"][name], waves[target]["text"][best])
+                ):
                     pairs.append((name, best, score))
 
             # A target that two sources both claim is ambiguous: Wave 6 asks both

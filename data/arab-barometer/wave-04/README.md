@@ -15,8 +15,8 @@
 | File | Size | SHA-256 (first 16) |
 |---|---:|---|
 | `arab-barometer-w04-tunisia-labels.csv` | 4.62 MB | `0fe815de59659e0f` |
-| `arab-barometer-w04-tunisia.dta` | 9.00 MB | `20f795e7ac267066` |
-| `arab-barometer-w04-tunisia.sav` | 9.85 MB | `2899ed7d3fd1ca98` |
+| `arab-barometer-w04-tunisia.dta` | 9.00 MB | `9e1ce685bc8f94a4` |
+| `arab-barometer-w04-tunisia.sav` | 9.85 MB | `ca01bdf2e8f95b2f` |
 | `codebook.csv` | 0.05 MB | `b23707bc410c1894` |
 | `codebook.json` | 0.11 MB | `2f61899b851d633e` |
 

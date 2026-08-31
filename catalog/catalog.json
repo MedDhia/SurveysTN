@@ -14,6 +14,9 @@
       "slug": "wave-02",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1196,
       "n_variables": 468,
       "n_variables_with_data": 303,
@@ -43,11 +46,11 @@
         },
         "arab-barometer-w02-tunisia.dta": {
           "bytes": 4986072,
-          "sha256": "3b230b1f741f106fe5ed7837441e24d834ec3fa3737805248d40c9755a5d98f3"
+          "sha256": "7518ec1808f74f1727317e05a0c375b005f36b446faa74a2b46645b73b9dd8fb"
         },
         "arab-barometer-w02-tunisia.sav": {
           "bytes": 4732179,
-          "sha256": "8ee8eaef636915d153640b186ae3b0e4c42884f3f9c750667f325dfffe21ed29"
+          "sha256": "6612bf2cdc83c63dcadf04f7999043d20d8967c3517bf42bf3b49737629700bd"
         },
         "codebook.csv": {
           "bytes": 242743,
@@ -72,6 +75,9 @@
       "slug": "wave-03",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1199,
       "n_variables": 296,
       "n_variables_with_data": 247,
@@ -101,11 +107,11 @@
         },
         "arab-barometer-w03-tunisia.dta": {
           "bytes": 3134417,
-          "sha256": "6772c2f0ec67189f25d410229577913ff5e4f237aec4dcb6e58cb7287d8a4bc2"
+          "sha256": "5bd33827f2e2893213252fd697bce95230ebaa97fd32cf35ef787e8725d2a474"
         },
         "arab-barometer-w03-tunisia.sav": {
           "bytes": 2966293,
-          "sha256": "81452a2e435f4aa7d0e0ec8a705422e8c9f42aa051485016e2d43684c6b63734"
+          "sha256": "745dd0d454e4fbd6e6f5b78257681563f65cbda29a22859dc51b5e02e24ab2ad"
         },
         "codebook.csv": {
           "bytes": 118976,
@@ -130,6 +136,9 @@
       "slug": "wave-04",
       "country": "Tunisia",
       "country_value": "Tunisia",
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1200,
       "n_variables": 290,
       "n_variables_with_data": 248,
@@ -159,11 +168,11 @@
         },
         "arab-barometer-w04-tunisia.dta": {
           "bytes": 9438155,
-          "sha256": "20f795e7ac2670660c8d4bc96733ed99b17497822f19bc7dba54de8bba11523b"
+          "sha256": "9e1ce685bc8f94a4b4f3adea000cd589c452272c06b311ca63782f335cc0353c"
         },
         "arab-barometer-w04-tunisia.sav": {
           "bytes": 10323620,
-          "sha256": "2899ed7d3fd1ca98733e6c0e2624a861d052d931867aef30e44698187497215d"
+          "sha256": "ca01bdf2e8f95b2f13a6c8adc0920dacd8ecb251f204f766d9386c24fe2727b6"
         },
         "codebook.csv": {
           "bytes": 47317,
@@ -188,6 +197,9 @@
       "slug": "wave-05",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2400,
       "n_variables": 359,
       "n_variables_with_data": 281,
@@ -217,11 +229,11 @@
         },
         "arab-barometer-w05-tunisia.dta": {
           "bytes": 7218008,
-          "sha256": "af44921e68d50eee2f0229462fced7054ffde3d8402518ecef8966a0c567e5a0"
+          "sha256": "4272b5cf044c0589f80efd851a75e365f8a6e54a4bf660e87a20b6a597dbf259"
         },
         "arab-barometer-w05-tunisia.sav": {
           "bytes": 7004891,
-          "sha256": "41050d3de85dcaad73be9019610fb8e04eb960fd670a130947d4e250e4757bdb"
+          "sha256": "31e4a06eb47733e448d5218beee5dbb9ec9956131a62c015a2958e2251ceba67"
         },
         "codebook.csv": {
           "bytes": 103852,
@@ -246,6 +258,9 @@
       "slug": "wave-06-part-1",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1005,
       "n_variables": 98,
       "n_variables_with_data": 75,
@@ -275,11 +290,11 @@
         },
         "arab-barometer-w06p1-tunisia.dta": {
           "bytes": 852365,
-          "sha256": "daee94e1965d5a90be20bb24c628f7ff2b0b69b036b1365f53be5ed92e2af573"
+          "sha256": "7ea8bf031b250ac4800f0c960cf6151536a73cbe04f8a37bb7fbbaa353532a4a"
         },
         "arab-barometer-w06p1-tunisia.sav": {
           "bytes": 819264,
-          "sha256": "306abfcd8dd16dd463c3e501f629e0339e0945fed6baf94a4a189df95dff2b38"
+          "sha256": "441c9e843d8b5746cbd1e3cbbe89e86b39a9cd04953260038779cbbd075b16cc"
         },
         "codebook.csv": {
           "bytes": 28283,
@@ -304,6 +319,9 @@
       "slug": "wave-06-part-2",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1002,
       "n_variables": 82,
       "n_variables_with_data": 78,
@@ -333,11 +351,11 @@
         },
         "arab-barometer-w06p2-tunisia.dta": {
           "bytes": 739920,
-          "sha256": "1625e670206c31732af40e6885a2ab80cb1e1cb124464f671db4ecfd7843b54b"
+          "sha256": "34dfe03fba4ae2dde6ae2f2cdef52ca957bb1ef0f3d716b9222415ad9a8de8a2"
         },
         "arab-barometer-w06p2-tunisia.sav": {
           "bytes": 688268,
-          "sha256": "a23a213b48abe49233228fcbb17cbc797abc6b2779a50d66f07ad3cdb376b9a5"
+          "sha256": "274177afa9c905a1bcfc9f1bd969808cda7d8d1ad0c37dfea4f47b9e5a59a01f"
         },
         "codebook.csv": {
           "bytes": 28643,
@@ -362,6 +380,9 @@
       "slug": "wave-06-part-3",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1200,
       "n_variables": 105,
       "n_variables_with_data": 98,
@@ -391,11 +412,11 @@
         },
         "arab-barometer-w06p3-tunisia.dta": {
           "bytes": 1115483,
-          "sha256": "a07fb6d94fcb0c31dc24a728dc2f9c899dce236cf73ddd10f1b3967d9236c2aa"
+          "sha256": "86fa59708773abd293d4133e9452f90e77edefe70748d4dd6796e40bd8313f2c"
         },
         "arab-barometer-w06p3-tunisia.sav": {
           "bytes": 1056916,
-          "sha256": "9c3f760d1a380b2b31c659c02bb9918602d431e026ea89df857c04f23cbf2a67"
+          "sha256": "680e25231af6984ee6a64b45cb0695f8c223730925b77848ccad4be0ee7a07b0"
         },
         "codebook.csv": {
           "bytes": 36266,
@@ -420,6 +441,9 @@
       "slug": "wave-07",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2400,
       "n_variables": 453,
       "n_variables_with_data": 373,
@@ -449,11 +473,11 @@
         },
         "arab-barometer-w07-tunisia.dta": {
           "bytes": 9143792,
-          "sha256": "9560b5ded1687926f3e1957e308fb58951b1191c7127bd9bea2a32608c0a5386"
+          "sha256": "8eeb67b8aee7bb24978bd71ba57f5fb25e5aead4f4ea0312677c4f3e542e13d0"
         },
         "arab-barometer-w07-tunisia.sav": {
           "bytes": 8880088,
-          "sha256": "59c0d4bd8d22ed7c81c6fcccb451ccb735cb932f29aa3d70dcd9f1079c125b4a"
+          "sha256": "ea7af1613110aac73a46cd2ffb9f568d459a46897e70e04a10936c45f3310331"
         },
         "codebook.csv": {
           "bytes": 151161,
@@ -478,6 +502,9 @@
       "slug": "wave-08",
       "country": "Tunisia",
       "country_value": 21,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2406,
       "n_variables": 690,
       "n_variables_with_data": 466,
@@ -507,11 +534,11 @@
         },
         "arab-barometer-w08-tunisia.dta": {
           "bytes": 13898528,
-          "sha256": "a9fcfdbf07dae6df4ac64e30a1ebb429f890d8e1e9cd11a95db02fc6c172971d"
+          "sha256": "26ff6273649ef3dbd3e32373d84467000979909a019ef3cad274504a8f4c378f"
         },
         "arab-barometer-w08-tunisia.sav": {
           "bytes": 13477184,
-          "sha256": "eb9f242356030a3f0998df4609b346bc69768aafd56878a5f8d3382f7ed6683e"
+          "sha256": "22e4495377971c43ec3cf96a9c1ac50e57a707552c69929ebc174d0a9eb3bc48"
         },
         "codebook.csv": {
           "bytes": 152158,
@@ -536,6 +563,9 @@
       "slug": "wave-06",
       "country": "Tunisia",
       "country_value": 788,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1205,
       "n_variables": 370,
       "n_variables_with_data": 370,
@@ -569,11 +599,11 @@
         },
         "world-values-survey-w06-tunisia.dta": {
           "bytes": 3804155,
-          "sha256": "8fe7fd738d213a3663aa51c3b88777460c7f85056c7459de03d112bb806712bc"
+          "sha256": "78d6085a2a1be4f32b8f5e81041dff97633bf039bd891b457dea209950cc83c8"
         },
         "world-values-survey-w06-tunisia.sav": {
           "bytes": 3606836,
-          "sha256": "9c8a53bf5ddd40244d525c7b116722a219af6247969ccbdbb4e170b20a968b70"
+          "sha256": "e831ecfe6adc20b414a22ee88b5209de43af6edaa9f9507affb364d29f4f70e3"
         }
       },
       "notes": "Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7."
@@ -590,6 +620,9 @@
       "slug": "wave-07",
       "country": "Tunisia",
       "country_value": 788,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1208,
       "n_variables": 397,
       "n_variables_with_data": 397,
@@ -623,14 +656,468 @@
         },
         "world-values-survey-w07-tunisia.dta": {
           "bytes": 4103323,
-          "sha256": "ad1ade6e0b15087f137a98beb21e584b6617169400f1b5bada1816e044f694d4"
+          "sha256": "0f6c4c7ef61cbf3139b76217be237ec4644da13d0dc3b0fb65c5ecafd53dec73"
         },
         "world-values-survey-w07-tunisia.sav": {
           "bytes": 3917478,
-          "sha256": "4152cfed0fa944eaefeff82e45ad85b9c4b0bc0594b88c0cc059fc9099e00bf7"
+          "sha256": "d4c6114383da299215470376ce3e7ee32414b846d87549dec69637964c1d9a7a"
         }
       },
       "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release."
+    },
+    {
+      "series": "afrobarometer",
+      "series_name": "Afrobarometer",
+      "series_prefix": "afro",
+      "key": "afro-w06",
+      "wave": 6,
+      "part": null,
+      "wave_label": "Round 6",
+      "tag": "w06",
+      "slug": "round-06",
+      "country": "Tunisia",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [
+        "STRTIME",
+        "ENDTIME"
+      ],
+      "n_respondents": 1200,
+      "n_variables": 334,
+      "n_variables_with_data": 334,
+      "n_respondents_pooled_release": 1200,
+      "n_countries_pooled_release": 1200,
+      "is_country_file": false,
+      "fieldwork_years_series": "2014-2015",
+      "fieldwork_tunisia": "2015-04-14 to 2015-05-09",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "afrobarometer_tun_r6_en.sav",
+      "source_sha256": "afeca359e61f72d1120561b91c16efa195def906a8eff7e82e2f1ab92bf9be3f",
+      "csv_answers_read_as_missing": {
+        "Q53A": [
+          "None"
+        ],
+        "Q53B": [
+          "None"
+        ],
+        "Q53C": [
+          "None"
+        ],
+        "Q53D": [
+          "None"
+        ],
+        "Q53E": [
+          "None"
+        ],
+        "Q53F": [
+          "None"
+        ],
+        "Q53G": [
+          "None"
+        ],
+        "Q53H": [
+          "None"
+        ],
+        "Q53I": [
+          "None"
+        ],
+        "Q53J": [
+          "None"
+        ],
+        "Q81A": [
+          "None"
+        ],
+        "Q98A": [
+          "     None"
+        ],
+        "Q108": [
+          "None"
+        ]
+      },
+      "path": "data/afrobarometer/round-06",
+      "files": {
+        "afrobarometer-w06-tunisia-codes.csv": {
+          "bytes": 1676898,
+          "sha256": "2becdebc1a99e182df463bc1d59f1ed71f932f8934190c5ec75e8711d9db57a3"
+        },
+        "afrobarometer-w06-tunisia-labels.csv": {
+          "bytes": 5605083,
+          "sha256": "50021569c3230aff1c0dee94a334b471b5d68ac13b9785e74aa9dbaea5ee81d7"
+        },
+        "afrobarometer-w06-tunisia.dta": {
+          "bytes": 4390952,
+          "sha256": "aa09d60dfe6b53f4f48c7af928ff76b809e99e1e85172c8f4e8a4014e4b674a5"
+        },
+        "afrobarometer-w06-tunisia.sav": {
+          "bytes": 4285065,
+          "sha256": "ae7013b0a02587131033a915680b6f77c134780bccdbea5caef38cd71fa55bec"
+        },
+        "codebook.csv": {
+          "bytes": 102354,
+          "sha256": "e9ea501de9140f8cc4ecd1d70aa988e5420f39033113a3ed6fb3b566c4ff12b3"
+        },
+        "codebook.json": {
+          "bytes": 179825,
+          "sha256": "6845f773d4832dd604086f61113960dcca1d71f018ab452f623b6268b67f7700"
+        }
+      },
+      "notes": "Round 6 release, English."
+    },
+    {
+      "series": "afrobarometer",
+      "series_name": "Afrobarometer",
+      "series_prefix": "afro",
+      "key": "afro-w07",
+      "wave": 7,
+      "part": null,
+      "wave_label": "Round 7",
+      "tag": "w07",
+      "slug": "round-07",
+      "country": "Tunisia",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [
+        "STRTIME",
+        "ENDTIME"
+      ],
+      "n_respondents": 1199,
+      "n_variables": 339,
+      "n_variables_with_data": 339,
+      "n_respondents_pooled_release": 1199,
+      "n_countries_pooled_release": 1199,
+      "is_country_file": false,
+      "fieldwork_years_series": "2016-2018",
+      "fieldwork_tunisia": "2018-03-31 to 2018-05-07",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "afrobarometer_tun_r7_en.sav",
+      "source_sha256": "2633bdc01c31e17e05318c12aa1624b0516a4b959df0d299415a9d4394603130",
+      "csv_answers_read_as_missing": {
+        "Q44A": [
+          "None"
+        ],
+        "Q44B": [
+          "None"
+        ],
+        "Q44C": [
+          "None"
+        ],
+        "Q44D": [
+          "None"
+        ],
+        "Q44E": [
+          "None"
+        ],
+        "Q44F": [
+          "None"
+        ],
+        "Q44G": [
+          "None"
+        ],
+        "Q44H": [
+          "None"
+        ],
+        "Q44I": [
+          "None"
+        ],
+        "Q44J": [
+          "None"
+        ],
+        "Q108": [
+          "None"
+        ]
+      },
+      "path": "data/afrobarometer/round-07",
+      "files": {
+        "afrobarometer-w07-tunisia-codes.csv": {
+          "bytes": 1755173,
+          "sha256": "d70d6517b4c4a8dbcb6aeff824318e262a18aac5e85f461b95e172a8f923b28e"
+        },
+        "afrobarometer-w07-tunisia-labels.csv": {
+          "bytes": 5440712,
+          "sha256": "f898305c24d34ad94f39d6405203df96386990b98bcc915dae4e3f6146214c87"
+        },
+        "afrobarometer-w07-tunisia.dta": {
+          "bytes": 4002133,
+          "sha256": "04f7e86c9ea7f4ad38ae27a079e3276c45f687d4db9d84d6b2449fd95e7568cb"
+        },
+        "afrobarometer-w07-tunisia.sav": {
+          "bytes": 3842095,
+          "sha256": "7a8a433c812774a7f5c3d726a90e7ecbfe2400666a24f52d9555d1be5a157f46"
+        },
+        "codebook.csv": {
+          "bytes": 91990,
+          "sha256": "e0a148cdeb755cb38b705dea1a4b82cee02a72dc8d26c6f10dcebed9ec6069bd"
+        },
+        "codebook.json": {
+          "bytes": 170609,
+          "sha256": "d432041c499fc1b49c4d091c650c062b08dc70be9f503c9d30ff9c9005e9841b"
+        }
+      },
+      "notes": "Round 7 release, English."
+    },
+    {
+      "series": "afrobarometer",
+      "series_name": "Afrobarometer",
+      "series_prefix": "afro",
+      "key": "afro-w08",
+      "wave": 8,
+      "part": null,
+      "wave_label": "Round 8",
+      "tag": "w08",
+      "slug": "round-08",
+      "country": "Tunisia",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1200,
+      "n_variables": 377,
+      "n_variables_with_data": 377,
+      "n_respondents_pooled_release": 1200,
+      "n_countries_pooled_release": 1200,
+      "is_country_file": false,
+      "fieldwork_years_series": "2019-2021",
+      "fieldwork_tunisia": "2020-02-24 to 2020-03-18",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "afrobarometer_tun_r8_en.sav",
+      "source_sha256": "7b6fdc7c77d46276f258b5d182bf0338bc29421ecda336e0e5a6acd813bd87ce",
+      "csv_answers_read_as_missing": {
+        "Q42A": [
+          "None"
+        ],
+        "Q42B": [
+          "None"
+        ],
+        "Q42C": [
+          "None"
+        ],
+        "Q42D": [
+          "None"
+        ],
+        "Q42E": [
+          "None"
+        ],
+        "Q42F": [
+          "None"
+        ],
+        "Q42G": [
+          "None"
+        ],
+        "Q42I": [
+          "None"
+        ],
+        "Q69B": [
+          "None"
+        ],
+        "Q98A": [
+          "None"
+        ],
+        "Q108": [
+          "None"
+        ]
+      },
+      "path": "data/afrobarometer/round-08",
+      "files": {
+        "afrobarometer-w08-tunisia-codes.csv": {
+          "bytes": 1975962,
+          "sha256": "1babe80bd228a09dcea8b1d3affbe7f15c4776f72e08a710c21beb43e338097c"
+        },
+        "afrobarometer-w08-tunisia-labels.csv": {
+          "bytes": 6536584,
+          "sha256": "856c5bd26214edca78ede5e15baff04404108ce7edf03263616e6fa993ae0993"
+        },
+        "afrobarometer-w08-tunisia.dta": {
+          "bytes": 4213695,
+          "sha256": "8ee563a604cd98248768dd81ea0da49c0885f8271fe5f2fcb80664c083c8b32d"
+        },
+        "afrobarometer-w08-tunisia.sav": {
+          "bytes": 4025427,
+          "sha256": "5ec51f11419b5f81cccef4883d4b32cdaa4afea8bea1b4601045063188a6eddc"
+        },
+        "codebook.csv": {
+          "bytes": 109954,
+          "sha256": "b1d3857795b67b3b70007ca54bc86d7733474744418b09fdae1d53a98ed2780b"
+        },
+        "codebook.json": {
+          "bytes": 197381,
+          "sha256": "57264074d2d68886adcf7e1e68981455525e4f9567e34f74cf9a88dd6a77919d"
+        }
+      },
+      "notes": "Round 8 release of 31 March 2021, English."
+    },
+    {
+      "series": "afrobarometer",
+      "series_name": "Afrobarometer",
+      "series_prefix": "afro",
+      "key": "afro-w09",
+      "wave": 9,
+      "part": null,
+      "wave_label": "Round 9",
+      "tag": "w09",
+      "slug": "round-09",
+      "country": "Tunisia",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [
+        "STRTIME"
+      ],
+      "n_respondents": 1200,
+      "n_variables": 388,
+      "n_variables_with_data": 380,
+      "n_respondents_pooled_release": 1200,
+      "n_countries_pooled_release": 1200,
+      "is_country_file": false,
+      "fieldwork_years_series": "2021-2023",
+      "fieldwork_tunisia": "2022-02-21 to 2022-03-17",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "afrobarometer_tun_r9_en.sav",
+      "source_sha256": "f5227f033ebfb0bdeab9a4467a5b216bade7b48efcf09d8bc33674554f9e4b4d",
+      "csv_answers_read_as_missing": {},
+      "path": "data/afrobarometer/round-09",
+      "files": {
+        "afrobarometer-w09-tunisia-codes.csv": {
+          "bytes": 2001553,
+          "sha256": "f5686df1d7e519d70a78cc299f06d176a2ac1a44b17d7e346c6afc608cd882d7"
+        },
+        "afrobarometer-w09-tunisia-labels.csv": {
+          "bytes": 8179499,
+          "sha256": "8dc9f63cc8643f04f36264b130e2e317671ca0d273877ad7eb11f2e4ed9193e7"
+        },
+        "afrobarometer-w09-tunisia.dta": {
+          "bytes": 4354464,
+          "sha256": "2683cf59b43f846ae27e56cc06cbc1ce0abbacbc395918531495076c2b2bd69a"
+        },
+        "afrobarometer-w09-tunisia.sav": {
+          "bytes": 4234646,
+          "sha256": "1e628e547c4b4bc3a6269bf491831e756d096b69308b4147b812aaaebd53efa5"
+        },
+        "codebook.csv": {
+          "bytes": 125100,
+          "sha256": "9b54e3378a34f047828199426fa6438c34a08e69edd3f2c05f3aa60f36456bd1"
+        },
+        "codebook.json": {
+          "bytes": 215146,
+          "sha256": "2b8ec7e8c722982f9d56e63a1f493ddc986fd934656dfd0483c5ec5e5280c63a"
+        }
+      },
+      "notes": "Round 9 release of 1 March 2023, English."
+    },
+    {
+      "series": "afrobarometer",
+      "series_name": "Afrobarometer",
+      "series_prefix": "afro",
+      "key": "afro-w10",
+      "wave": 10,
+      "part": null,
+      "wave_label": "Round 10",
+      "tag": "w10",
+      "slug": "round-10",
+      "country": "Tunisia",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "renamed_variables": {
+        "LOCATION.LEVEL.1": "LOCATION_LEVEL_1"
+      },
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1200,
+      "n_variables": 372,
+      "n_variables_with_data": 363,
+      "n_respondents_pooled_release": 1200,
+      "n_countries_pooled_release": 1200,
+      "is_country_file": false,
+      "fieldwork_years_series": "2024-2025",
+      "fieldwork_tunisia": "2024-02-25 to 2024-03-11",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "afrobarometer_tun_r10_en.sav",
+      "source_sha256": "2eb61c1335c25d9f513ee5c807029f7cde097455df181b2ad8a26911d2af3d71",
+      "csv_answers_read_as_missing": {
+        "Q38A": [
+          "None"
+        ],
+        "Q38B": [
+          "None"
+        ],
+        "Q38C": [
+          "None"
+        ],
+        "Q38E": [
+          "None"
+        ],
+        "Q38F": [
+          "None"
+        ],
+        "Q38G": [
+          "None"
+        ],
+        "Q38I": [
+          "None"
+        ],
+        "Q38J": [
+          "None"
+        ],
+        "Q38K": [
+          "None"
+        ],
+        "Q66": [
+          "None"
+        ]
+      },
+      "path": "data/afrobarometer/round-10",
+      "files": {
+        "afrobarometer-w10-tunisia-codes.csv": {
+          "bytes": 1997022,
+          "sha256": "de1521ef9cfcd32ccad7514f7fda5c476cf9653eaf6b7e6a83b34a25f5220aac"
+        },
+        "afrobarometer-w10-tunisia-labels.csv": {
+          "bytes": 6500786,
+          "sha256": "3656dcf11dad83d87bf61b6e408020a5e11342fd85654a6144a249c9ce3665a7"
+        },
+        "afrobarometer-w10-tunisia.dta": {
+          "bytes": 4183902,
+          "sha256": "a953a9170729236b48c7e67bacc41094d255b4fcf25ee8d511d848198679a583"
+        },
+        "afrobarometer-w10-tunisia.sav": {
+          "bytes": 4086484,
+          "sha256": "f88b03d2f14475c5c893b1d8e50a3fa11469fc006e1d70ad19c87d90ef2929f5"
+        },
+        "codebook.csv": {
+          "bytes": 111624,
+          "sha256": "314957c0c7d2d09f1819cc3adaf8c63626e399a0a59b7db00f743074f77f6fbe"
+        },
+        "codebook.json": {
+          "bytes": 197940,
+          "sha256": "a3fbc8c1a00bb117934c951eeb1c4ff97e6ea84f2aff1b7fc67e0956900e174c"
+        }
+      },
+      "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English."
     }
   ]
 }

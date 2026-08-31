@@ -1,7 +1,7 @@
 # SurveysTN
 
-Public-opinion survey data covering Tunisia — Arab Barometer and the World Values
-Survey so far — reorganised so that each survey is one self-describing folder: the
+Public-opinion survey data covering Tunisia — Arab Barometer, the World Values
+Survey and Afrobarometer so far — reorganised so that each survey is one self-describing folder: the
 respondents, in every common format, with a codebook and a provenance record. Most
 are extracted from the pooled multi-country releases the programmes publish; where
 a programme ships a Tunisia country file, that is used as it stands.
@@ -27,8 +27,13 @@ consistent, with nothing recoded.
 | Arab Barometer Wave VIII | 2,406 | 690 (466 with data) | Sep–Nov 2023 | [`data/arab-barometer/wave-08`](data/arab-barometer/wave-08) |
 | World Values Survey Wave 6 | 1,205 | 370 | Nov–Dec 2013 | [`data/world-values-survey/wave-06`](data/world-values-survey/wave-06) |
 | World Values Survey Wave 7 | 1,208 | 397 | Apr–May 2019 | [`data/world-values-survey/wave-07`](data/world-values-survey/wave-07) |
+| Afrobarometer Round 6 | 1,200 | 334 | Apr–May 2015 | [`data/afrobarometer/round-06`](data/afrobarometer/round-06) |
+| Afrobarometer Round 7 | 1,199 | 339 | Mar–May 2018 | [`data/afrobarometer/round-07`](data/afrobarometer/round-07) |
+| Afrobarometer Round 8 | 1,200 | 377 | Feb–Mar 2020 | [`data/afrobarometer/round-08`](data/afrobarometer/round-08) |
+| Afrobarometer Round 9 | 1,200 | 388 (380 with data) | Feb–Mar 2022 | [`data/afrobarometer/round-09`](data/afrobarometer/round-09) |
+| Afrobarometer Round 10 | 1,200 | 372 (363 with data) | Feb–Mar 2024 | [`data/afrobarometer/round-10`](data/afrobarometer/round-10) |
 
-16,421 Tunisian respondents across eleven surveys in two series, plus one derived file:
+22,420 Tunisian respondents across sixteen surveys in three series, plus one derived file:
 [`wave-06-merged`](data/arab-barometer/wave-06-merged) stacks the three Wave VI
 rounds into 3,207 rows with a `PART` column. `catalog/catalog.csv` and
 `catalog/catalog.json` carry the same table in machine-readable form, with
@@ -74,7 +79,7 @@ Wave II does not have and don't-know codes that are not declared missing.
 |---|---|
 | `data/<series>/<wave>/` | one folder per survey — the extracts |
 | `data/<series>/wave-06-merged/` | derived: the three Wave VI rounds stacked |
-| `data/raw/` | pooled multi-country releases, not tracked in git |
+| `data/raw/` | the publishers' releases, tracked, so the archive can be rebuilt from a clone |
 | `catalog/` | `catalog.json` / `catalog.csv`, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the cross-wave crosswalk, missing-value codes |
 | `docs/questionnaires/` | the published questionnaire for every wave, as PDF |
@@ -82,9 +87,10 @@ Wave II does not have and don't-know codes that are not declared missing.
 
 ## Regenerating
 
-Everything outside `catalog/sources.json` and the top-level docs is generated.
-Put the pooled releases in `data/raw/` (see [`data/raw/README.md`](data/raw/README.md)),
-then:
+Everything outside `catalog/sources.json` and the top-level docs is generated, and
+the releases it is generated from are in `data/raw/` (see
+[`data/raw/README.md`](data/raw/README.md)), so a clone can rebuild the whole
+archive and check it:
 
 ```bash
 pip install -r scripts/requirements.txt
@@ -95,22 +101,24 @@ python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/verify.py                 # cell-by-cell check against the releases
 ```
 
-Without the releases, `python3 scripts/verify.py --offline` checks the committed
-files against the checksums and counts in `catalog/catalog.json`.
+`python3 scripts/verify.py --offline` is the quicker check, comparing the committed
+files against the checksums and counts in `catalog/catalog.json` without re-reading
+the releases.
 
 ## Matching the waves to each other
 
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the waves up: one row per variable,
 the name it takes in each wave, the question each wave asked, and whether the
-wording held. 2,690 variables, 2,627 of them with question text; within Arab Barometer, 13 are
-present in all nine of its surveys.
+wording held. 3,591 variables, 3,528 of them with question text; within Arab Barometer, 13 are
+present in all nine of its surveys, and within Afrobarometer 61 in all five.
 
 Where a programme renumbers its variables, matching on name finds nothing —
 the World Values Survey asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
 [`docs/crosswalk-suggested.csv`](docs/crosswalk-suggested.csv) pairs those up by
-question text instead: 218 pairs, offered only where the wordings are all but
-identical and unambiguous. They are suggestions to confirm, not findings.
+question text instead: 595 pairs, offered only where the wordings are all but
+identical, unambiguous, and agreed on any numbers they contain. They are
+suggestions to confirm, not findings.
 
 Variables are matched **within a series and never across one** — `Q1` is the
 governorate in Arab Barometer and "Important in life: Family" in the World Values

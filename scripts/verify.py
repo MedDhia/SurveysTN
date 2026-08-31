@@ -17,6 +17,7 @@ when you have a clone but not the source releases.
 from __future__ import annotations
 
 import argparse
+import datetime
 import json
 import sys
 from pathlib import Path
@@ -24,9 +25,54 @@ from pathlib import Path
 import pandas as pd
 import pyreadstat
 
-from extract_tunisia import ROOT, apply_numeric_types, is_blank, read_pooled, sha256, wave_tag
+from extract_tunisia import (
+    ROOT,
+    apply_numeric_types,
+    is_blank,
+    read_pooled,
+    sanitise_names,
+    select_country,
+    sha256,
+    wave_tag,
+)
 
 TOL = 1e-9
+# Stata stores a time of day as a float and rounds it, so an interview start time
+# can come back a microsecond off what SPSS holds. A millisecond is far finer than
+# anything these columns are used for and far coarser than the rounding.
+TIME_TOL = datetime.timedelta(milliseconds=1)
+
+
+def as_timedelta(value):
+    """A time, date or datetime as a duration, so two can be compared numerically."""
+    if isinstance(value, datetime.datetime):
+        return value - datetime.datetime(1970, 1, 1)
+    if isinstance(value, datetime.date):
+        return datetime.datetime.combine(value, datetime.time()) - datetime.datetime(1970, 1, 1)
+    if isinstance(value, datetime.time):
+        return datetime.timedelta(
+            hours=value.hour,
+            minutes=value.minute,
+            seconds=value.second,
+            microseconds=value.microsecond,
+        )
+    return None
+
+
+def same_temporal(x: pd.Series, y: pd.Series) -> bool | None:
+    """Compare two date or time columns to the millisecond. None if they are not one."""
+    left, right = x.dropna(), y.dropna()
+    if left.empty or right.empty or len(left) != len(right):
+        return None
+    # Only when both sides really are temporal. A CSV brings dates back as text,
+    # and there the plain string comparison below is exact and correct.
+    if as_timedelta(left.iloc[0]) is None or as_timedelta(right.iloc[0]) is None:
+        return None
+    for a, b in zip(left, right):
+        da, db = as_timedelta(a), as_timedelta(b)
+        if da is None or db is None or abs(da - db) > TIME_TOL:
+            return False
+    return True
 
 
 def same_frame(a: pd.DataFrame, b: pd.DataFrame, what: str, errors: list[str]) -> None:
@@ -40,6 +86,12 @@ def same_frame(a: pd.DataFrame, b: pd.DataFrame, what: str, errors: list[str]) -
         x, y = a[col], b[col]
         numeric = pd.api.types.is_numeric_dtype(x) and pd.api.types.is_numeric_dtype(y)
         if not numeric:
+            temporal = same_temporal(x, y)
+            if temporal is not None:
+                if not temporal:
+                    errors.append(f"{what}: values differ in {col}")
+                    return
+                continue
             # CSV cannot tell an empty string from a missing value, so a string
             # cell that is empty either way counts as a match. SPSS and Stata
             # preserve the distinction; CSV does not.
@@ -205,9 +257,13 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
 
     pooled, _, value_labels, numeric = read_pooled(spec, raw_dir)
     country_value = spec.get("country_value", series["country_variable_values"]["tunisia"])
-    expect = pooled[pooled[spec["country_var"]] == country_value].reset_index(drop=True)
+    expect = select_country(pooled, spec, country_value).reset_index(drop=True)
     del pooled
     expect = apply_numeric_types(expect, numeric)
+    expect, renamed = sanitise_names(expect)
+    if renamed != s.get("renamed_variables", {}):
+        errors.append(f"{tag}: the recorded variable renames do not match what the release needs")
+    value_labels = {renamed.get(k, k): v for k, v in value_labels.items()}
 
     folder = ROOT / s["path"]
     for name, info in s["files"].items():

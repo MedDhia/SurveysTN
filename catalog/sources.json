@@ -28,6 +28,17 @@
           "-5": "Missing; Not applicable for other reasons"
         }
       }
+    },
+    "afrobarometer": {
+      "name": "Afrobarometer",
+      "prefix": "afro",
+      "publisher": "Afrobarometer",
+      "homepage": "https://www.afrobarometer.org",
+      "data_page": "https://www.afrobarometer.org/data/",
+      "country_variable_values": {
+        "tunisia": "TUN"
+      },
+      "note": "Country files carry no country column; the country is the prefix of RESPNO."
     }
   },
   "waves": [
@@ -258,6 +269,91 @@
       },
       "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release.",
       "language": "English (translated instrument; variable labels only, no value labels)"
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 6,
+      "wave_label": "Round 6",
+      "slug": "round-06",
+      "raw_file_stem": "afrobarometer_tun_r6_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2014-2015",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 6 release, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 7,
+      "wave_label": "Round 7",
+      "slug": "round-07",
+      "raw_file_stem": "afrobarometer_tun_r7_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2016-2018",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 7 release, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 8,
+      "wave_label": "Round 8",
+      "slug": "round-08",
+      "raw_file_stem": "afrobarometer_tun_r8_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2019-2021",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 8 release of 31 March 2021, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 9,
+      "wave_label": "Round 9",
+      "slug": "round-09",
+      "raw_file_stem": "afrobarometer_tun_r9_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2021-2023",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 9 release of 1 March 2023, English."
+    },
+    {
+      "series": "afrobarometer",
+      "wave": 10,
+      "wave_label": "Round 10",
+      "slug": "round-10",
+      "raw_file_stem": "afrobarometer_tun_r10_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2024-2025",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "questionnaire": null,
+      "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English."
     }
   ]
 }

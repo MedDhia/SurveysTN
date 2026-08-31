@@ -34,7 +34,8 @@ use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 ## Seven things to check before you analyse
 
 **Weights.** Every Arab Barometer wave except Wave II carries a design weight
-(`wt`, `WT`), and WVS Wave 7 carries `W_WEIGHT`;
+(`wt`, `WT`), WVS Wave 7 carries `W_WEIGHT`, and Afrobarometer carries `withinwt`
+in Rounds 6 and 7 and `withinwt_ea` with `withinwt_hh` from Round 8 on;
 Wave III has one but no stratum or PSU;
 Waves IV, V, VII and VIII carry a stratum and PSU alongside it, and the three
 Wave VI rounds a PSU only. Unweighted estimates from the weighted waves are not
@@ -44,12 +45,14 @@ nationally representative.
 svyset psu [pw=wt], strata(stratum)
 ```
 
-**The two series do not share a question numbering, and neither does WVS with
-itself.** `Q1` is the governorate in Arab Barometer and "Important in life: Family"
+**The series do not share a question numbering, and two of them do not keep their
+own.** `Q1` is the governorate in Arab Barometer and "Important in life: Family"
 in the World Values Survey, so the crosswalk matches within a series only and so
-should you. Within WVS, Wave 6 numbers its items `V`-something and Wave 7
-`Q`-something — `V9` and `Q6` are the same question — so name matching finds only
-the derived indices. Use
+should you. Within WVS, Wave 6 numbers its items `V`-something and Wave 7 `Q`-something —
+`V9` and `Q6` are the same question — so name matching finds only the derived
+indices. Afrobarometer renumbers between rounds while keeping the `Q` prefix, which
+is worse: a shared name there is often a different question, and 423 of its 901
+variables are flagged for wording that does not match. Use
 [`crosswalk-suggested.csv`](crosswalk-suggested.csv), which pairs them by question
 text, and confirm against the WVS crosswalk before relying on a pair.
 
@@ -63,7 +66,8 @@ don't-know as `1`. Wave IV has no codes at all — the answer reads "Don't know 
 not read)" as text. WVS Wave 7 uses negative codes — −1, −2, −3, −5 — and ships no
 value labels saying which is which. Their meanings are in the Wave 7 questionnaire
 and are quoted in `docs/missing-value-codes.md`; Wave 6 also uses a `-4` that the
-questionnaire does not list. Read
+questionnaire does not list. Afrobarometer labels its own, mostly 8, 9, 98 and 99.
+Read
 `docs/missing-value-codes.md` for the full per-survey inventory, check the variable
 in `codebook.csv`, and recode before analysing — there is no single rule that
 covers a whole file.

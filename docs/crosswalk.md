@@ -8,6 +8,34 @@ Variables are matched **within a series, never across one**. A name shared
 between two series is a coincidence of numbering: `Q1` is the governorate in
 Arab Barometer and "Important in life: Family" in the World Values Survey.
 
+## Afrobarometer
+
+901 variables across 5 surveys, 901 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 5 | 61 |
+| 4 | 86 |
+| 3 | 109 |
+| 2 | 189 |
+| 1 | 456 |
+
+423 variables carry a name in more than one survey but wording that
+does not match between them. That is the column worth checking before pooling:
+`text_varies_across_waves`, with the weakest pairwise agreement in
+`lowest_text_agreement` and the kind of text compared in `comparison_basis`.
+
+### Present in all 5 with stable wording
+
+2 variables. The safest to stack, and even here confirm the response
+scale in each survey's `codebook.csv` — the crosswalk compares question wording,
+not answer options.
+
+| Variable | Question |
+|---|---|
+| `DATEINTR` | Date de l'entretien |
+| `Q1` | Q1. Age |
+
 ## Arab Barometer
 
 1,966 variables across 9 surveys, 1,903 with question text.
@@ -112,11 +140,12 @@ matches but whose question text is the same. It exists because the World Values
 Survey renumbered between waves: Wave 6 asks `V9` what Wave 7 asks as `Q6`, and
 matching on name finds only the derived indices and the admin columns. Arab
 Barometer needs it less often, but it also renames — Wave II's Tunisia-specific
-`te105` is Wave III's `q105a`. 218 pairs in total:
+`te105` is Wave III's `q105a`. 595 pairs in total:
 
 | Series | Pairs |
 |---|---:|
-| Arab Barometer | 29 |
+| Afrobarometer | 381 |
+| Arab Barometer | 25 |
 | World Values Survey | 189 |
 
 **These are suggestions, not findings.** A pair is offered only when the two
@@ -146,6 +175,11 @@ releases that carry wording as labels:
 | Arab Barometer Wave VIII | 251 | 115 | 97% |
 | World Values Survey Wave 6 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | World Values Survey Wave 7 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Afrobarometer Round 6 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
+| Afrobarometer Round 7 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
+| Afrobarometer Round 8 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
+| Afrobarometer Round 9 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
+| Afrobarometer Round 10 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
 
 Agreement is the share of comparable variables where the parsed text and the
 release label match at a difflib ratio of 0.6 or better. It is a check on the

@@ -75,6 +75,12 @@ CSV spells it, since there is no numeric country code to match on. A release in
 none of these shapes needs a reader added to `read_pooled()`, not a workaround in
 the data.
 
+If the release has no country column at all — Afrobarometer's country files do not —
+find something that still identifies the country and match on that rather than
+skipping the check. Afrobarometer prefixes its respondent numbers, so those surveys
+set `"country_var": "RESPNO"`, `"country_value": "TUN"` and
+`"country_match": "startswith"`.
+
 A country file rather than a pooled release is fine: give it its country variable
 and value anyway, so the filter checks that the file holds what it claims to.
 
