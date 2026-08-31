@@ -25,11 +25,16 @@ consistent, with nothing recoded.
 | Arab Barometer Wave VII | 2,400 | 453 (373 with data) | Oct–Nov 2021 | [`data/arab-barometer/wave-07`](data/arab-barometer/wave-07) |
 | Arab Barometer Wave VIII | 2,406 | 690 (466 with data) | Sep–Nov 2023 | [`data/arab-barometer/wave-08`](data/arab-barometer/wave-08) |
 
-14,008 Tunisian respondents across nine surveys. `catalog/catalog.csv` and
+14,008 Tunisian respondents across nine surveys, plus one derived file:
+[`wave-06-merged`](data/arab-barometer/wave-06-merged) stacks the three Wave VI
+rounds into 3,207 rows with a `PART` column. `catalog/catalog.csv` and
 `catalog/catalog.json` carry the same table in machine-readable form, with
 per-file checksums.
 
-Wave VI is carried as three surveys rather than one. Arab Barometer fielded it as
+[`wave-06-merged`](data/arab-barometer/wave-06-merged) is the one derived file in
+the archive — the three Wave VI rounds stacked, for when you want them pooled. It
+is built and checked by script, and its README says what stacking cost. Wave VI is
+otherwise carried as three surveys rather than one. Arab Barometer fielded it as
 three telephone rounds during the pandemic, months apart, each with its own sample
 and its own questionnaire. They are not a panel: the ID numbers overlap between
 rounds, but on the overlapping IDs sex agrees at chance and age almost never, so
@@ -65,6 +70,7 @@ Wave II does not have and don't-know codes that are not declared missing.
 | Path | |
 |---|---|
 | `data/<series>/<wave>/` | one folder per survey — the extracts |
+| `data/<series>/wave-06-merged/` | derived: the three Wave VI rounds stacked |
 | `data/raw/` | pooled multi-country releases, not tracked in git |
 | `catalog/` | `catalog.json` / `catalog.csv`, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the cross-wave crosswalk, missing-value codes |
@@ -81,6 +87,7 @@ then:
 pip install -r scripts/requirements.txt
 python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
 python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, docs/crosswalk.md
+python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/verify.py                 # cell-by-cell check against the releases
 ```

@@ -88,6 +88,74 @@ def check_labels_csv(
                 return
 
 
+def check_wave06_merge(errors: list[str]) -> None:
+    """Check the stacked Wave VI file against the three rounds it was built from.
+
+    This reads the committed files rather than re-running the merge, so it would
+    catch a merge that no longer matches its inputs as well as one that was never
+    rebuilt.
+    """
+    report_path = ROOT / "catalog" / "wave-06-merge-report.json"
+    if not report_path.exists():
+        return
+    report = json.loads(report_path.read_text(encoding="utf-8"))
+    folder = ROOT / report["path"]
+    tag = "wave-06 merge"
+
+    for name, info in report["files"].items():
+        f = folder / name
+        if not f.exists():
+            errors.append(f"{tag}: missing {name}")
+        elif sha256(f) != info["sha256"]:
+            errors.append(f"{tag}: {name} does not match the recorded SHA-256")
+
+    merged, _ = pyreadstat.read_sav(str(folder / f"{report['stem']}.sav"), user_missing=True)
+    split = set(report["split_variables"])
+
+    for n in (1, 2, 3):
+        part, _ = pyreadstat.read_sav(
+            str(ROOT / f"data/arab-barometer/wave-06-part-{n}/arab-barometer-w06p{n}-tunisia.sav"),
+            user_missing=True,
+        )
+        rows = merged[merged["PART"] == n].reset_index(drop=True)
+        if len(rows) != len(part):
+            errors.append(f"{tag}: part {n} contributes {len(rows)} rows, the round has {len(part)}")
+            continue
+        for col in part.columns:
+            target = f"{col}__P{n}" if col in split else col
+            if target not in rows.columns:
+                errors.append(f"{tag}: part {n} column {col} is missing from the merge")
+                continue
+            a, b = part[col], rows[target]
+            if col == "DATE":  # normalised to text on the way in
+                a = a.map(lambda v: "" if pd.isna(v) else str(v)[:10])
+            if pd.api.types.is_numeric_dtype(a) and pd.api.types.is_numeric_dtype(b):
+                if a.isna().to_numpy().tolist() != b.isna().to_numpy().tolist():
+                    errors.append(f"{tag}: part {n} {col} missingness changed")
+                    break
+                if not ((a.dropna().to_numpy() - b.dropna().to_numpy()).__abs__() <= TOL).all():
+                    errors.append(f"{tag}: part {n} {col} values changed")
+                    break
+            elif not a.fillna("").astype(str).str.strip().equals(
+                b.fillna("").astype(str).str.strip()
+            ):
+                errors.append(f"{tag}: part {n} {col} values changed")
+                break
+
+        # A column another round asked but this one did not must be empty here.
+        for col in rows.columns:
+            base = col.split("__P")[0]
+            if col in ("PART", "MERGE_ID") or base in part.columns or "__P" in col:
+                continue
+            if not is_blank(rows[col]).all():
+                errors.append(f"{tag}: {col} has values for part {n}, which never asked it")
+                break
+
+    if merged["MERGE_ID"].duplicated().any():
+        errors.append(f"{tag}: MERGE_ID is not unique")
+    print(f"{tag}: checked {len(merged):,} rows x {merged.shape[1]} variables against the three rounds")
+
+
 def check_offline(catalog: dict) -> list[str]:
     """Check the committed files against the catalog, without the pooled releases."""
     errors: list[str] = []
@@ -188,12 +256,14 @@ def main() -> int:
 
     if args.offline:
         errors = check_offline(catalog)
+        check_wave06_merge(errors)
         label = "all committed files match the catalog"
     else:
         errors = []
         for s in catalog["surveys"]:
             spec = specs[(s["series"], s["tag"])]
             check_against_release(s, spec, manifest["series"][s["series"]], errors)
+        check_wave06_merge(errors)
         label = "all extracts match their pooled releases"
 
     if errors:
