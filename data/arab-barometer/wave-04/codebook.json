@@ -9,6 +9,7 @@
     "n_distinct": 1200,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 210001.0,
     "max": 211200.0
   },
@@ -22,6 +23,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Tunisia\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -35,6 +37,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -48,6 +51,7 @@
     "n_distinct": 46,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 21001.0,
     "max": 21046.0
   },
@@ -61,6 +65,7 @@
     "n_distinct": 150,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 21001.0,
     "max": 21150.0
   },
@@ -74,6 +79,7 @@
     "n_distinct": 20,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.764038964239971,
     "max": 1.394396358407306
   },
@@ -87,6 +93,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -100,6 +107,7 @@
     "n_distinct": 24,
     "value_labels": "",
     "observed_values": "[\"Ariana\", \"Beja\", \"Ben Arous\", \"Bizerte\", \"Gabes\", \"Gafsa\", \"Jendouba\", \"Kairouan\", \"Kasserine\", \"Kebili\", \"Kef\", \"Mahdia\", \"Manouba\", \"Mednine\", \"Monastir\", \"Nabeul\", \"Seliana\", \"Sfax\", \"Sidi Bouzid\", \"Sousse\", \"Tatouine\", \"Tozeur\", \"Tunis\", \"Zaghouan\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -113,6 +121,7 @@
     "n_distinct": 136,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -126,6 +135,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Rural\", \"Urban\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -139,6 +149,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Don't know (Do not read)\", \"Good\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -152,6 +163,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Almost the same as the current situation\", \"Don't know (Do not read)\", \"Much better\", \"Much worse\", \"Somewhat better\", \"Somewhat worse\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -165,6 +177,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Almost the same as the current situation\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Much better\", \"Much worse\", \"Somewhat better\", \"Somewhat worse\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -178,6 +191,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Good\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -191,6 +205,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Most people are not trustworthy\", \"Most people are trustworthy\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -204,6 +219,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Neither agree nor disagree\", \"Somewhat agree\", \"Somewhat disagree\", \"Strongly agree\", \"Strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -217,6 +233,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Neither agree nor disagree\", \"Somewhat agree\", \"Somewhat disagree\", \"Strongly agree\", \"Strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -230,6 +247,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Neither agree nor disagree\", \"Somewhat agree\", \"Somewhat disagree\", \"Strongly agree\", \"Strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -243,6 +261,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Neither agree nor disagree\", \"Somewhat agree\", \"Somewhat disagree\", \"Strongly agree\", \"Strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -256,6 +275,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Neither agree nor disagree\", \"Somewhat agree\", \"Somewhat disagree\", \"Strongly agree\", \"Strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -269,6 +289,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Neither agree nor disagree\", \"Somewhat agree\", \"Somewhat disagree\", \"Strongly agree\", \"Strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -282,6 +303,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -295,6 +317,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"For economic and political reasons\", \"For economic reasons\", \"For other reasons\", \"For political reasons\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -308,6 +331,7 @@
     "n_distinct": 11,
     "value_labels": "",
     "observed_values": "[\"Education\", \"I just want to leave\", \"I want to visit other countries\", \"Peace of mind\", \"Religious considerations\", \"Security\", \"Social reasons\", \"The situation in Tunisia is very bad\", \"To be with family\", \"To discover other cultures\", \"To marry a foreign spouse\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -321,6 +345,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Mentioned\", \"Not mentioned\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -334,6 +359,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Mentioned\", \"Not mentioned\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -347,6 +373,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Mentioned\", \"Not mentioned\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -360,6 +387,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Mentioned\", \"Not mentioned\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -373,6 +401,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Mentioned\", \"Not mentioned\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -386,6 +415,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"All the world\", \"Angola\", \"Argentina\", \"Australia\", \"East Asia (Singapore, Malaysia, Korea)\", \"India\", \"Japan\", \"Malaysia\", \"Not mentioned\", \"Turkey\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -399,6 +429,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Absolutely not ensured\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Ensured\", \"Fully ensured\", \"Not ensured\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -412,6 +443,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not treated equally at all\", \"To a great extent\", \"To a limited extent\", \"To a medium extent\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -425,6 +457,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Much\", \"Not applicable\", \"Not at all\", \"Not much\", \"Very much\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -438,6 +471,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Much\", \"Not applicable\", \"Not at all\", \"Not much\", \"Very much\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -451,6 +485,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Much\", \"Not applicable\", \"Not at all\", \"Not much\", \"Very much\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -464,6 +499,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -477,6 +513,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -490,6 +527,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -503,6 +541,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -516,6 +555,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -529,6 +569,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -542,6 +583,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -555,6 +597,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -568,6 +611,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A great deal of trust\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No trust at all\", \"Not very much trust\", \"Quite a lot of trust\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -581,6 +625,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -594,6 +639,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -607,6 +653,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -620,6 +667,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -633,6 +681,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"No\", \"No, definitely not\", \"Yes\", \"Yes, definitely\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -646,6 +695,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Definitely dissatisfied\", \"Definitely satisfied\", \"Dissatisfied\", \"Don't know (Do not read)\", \"Satisfied\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -659,6 +709,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Definitely dissatisfied\", \"Definitely satisfied\", \"Dissatisfied\", \"Don't know (Do not read)\", \"Satisfied\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -672,6 +723,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Don't know (Do not read)\", \"Good\", \"This is not the government’s responsibility (Do not read)\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -685,6 +737,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Don't know (Do not read)\", \"Good\", \"This is not the government’s responsibility (Do not read)\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -698,6 +751,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Good\", \"This is not the government’s responsibility (Do not read)\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -711,6 +765,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Good\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -724,6 +779,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Don't know (Do not read)\", \"Good\", \"This is not the government’s responsibility (Do not read)\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -737,6 +793,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Don't know (Do not read)\", \"Good\", \"This is not the government’s responsibility (Do not read)\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -750,6 +807,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Bad\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Good\", \"This is not the government’s responsibility (Do not read)\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -763,6 +821,7 @@
     "n_distinct": 9,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Democracy\", \"Don't know (Do not read)\", \"Economic situation (poverty; unemployment, inflation)\", \"Financial and administrative corruption\", \"Foreign interference\", \"Internal stability and security\", \"Other\", \"Religious extremism\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -776,6 +835,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Building greater confidence between the citizen and the government\", \"Education\", \"ISIS\", \"Pollution\", \"Reforming society\", \"Taking Control of our natural resources\", \"Terrorism\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -789,6 +849,7 @@
     "n_distinct": 8,
     "value_labels": "",
     "observed_values": "[\"Democracy\", \"Don't know (Do not read)\", \"Economic situation (poverty; unemployment, inflation)\", \"Financial and administrative corruption\", \"Foreign interference\", \"Internal stability and security\", \"Other\", \"Religious extremism\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -802,6 +863,7 @@
     "n_distinct": 9,
     "value_labels": "",
     "observed_values": "[\"Building greater confidence between the citizen and the government\", \"Civil war in Tunisia\", \"Education\", \"Health care\", \"Lack of religious principles\", \"Libya\", \"Nothing else\", \"Terrorism\", \"The political conflict in Tunisia\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -815,6 +877,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Not at all\", \"To a large extent\", \"To a medium extent\", \"To a small extent\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -828,6 +891,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not at all\", \"To a large extent\", \"To a medium extent\", \"To a small extent\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -841,6 +905,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Employment is mostly obtained without connections\", \"Employment is sometimes obtained through connections\", \"I do not know of any relevant experiences\", \"Obtaining employment through connections is extremely widespread\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -854,6 +919,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -867,6 +933,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -880,6 +947,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -893,6 +961,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -906,6 +975,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -919,6 +989,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -932,6 +1003,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"2\", \"3\", \"4\", \"5\", \"6\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Intelligent\", \"Not concerned/not interested\", \"Unintelligent\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -945,6 +1017,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"2\", \"3\", \"4\", \"5\", \"6\", \"Decline to answer (Do not read)\", \"Dishonest\", \"Don't know (Do not read)\", \"Honest\", \"Not concerned/not interested\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -958,6 +1031,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"2\", \"3\", \"4\", \"5\", \"6\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Intelligent\", \"Not concerned/not interested\", \"Unintelligent\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -971,6 +1045,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"2\", \"3\", \"4\", \"5\", \"6\", \"Decline to answer (Do not read)\", \"Dishonest\", \"Don't know (Do not read)\", \"Honest\", \"Not concerned/not interested\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -984,6 +1059,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I prefer helping the poor, but if this costs nothing to me\", \"I prefer helping the poor, even at a large personal cost\", \"I prefer helping the poor, even at a small personal cost\", \"I prefer not helping the poor\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -997,6 +1073,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I want to help the poor because I enjoy making those more unfortunate happy\", \"I want to help the poor because I know God will reward me for it in the hereafter\", \"I want to help the poor because I want to make my country and my community better\", \"I want to help the poor because it makes me sad to see people suffer\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1010,6 +1087,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Agree with Statement 1\", \"Agree with both Statements (Do not read)\", \"Agree with neither statement (Do not read)\", \"Agree with statement 2\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1023,6 +1101,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1036,6 +1115,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1049,6 +1129,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Completely free and fair\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Free and fair, but with minor problems\", \"Free and fair, with major problems\", \"Not free or fair\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1062,6 +1143,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Have not tried (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1075,6 +1157,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Interested\", \"Not interested at all\", \"Somewhat interested\", \"Very interested\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1088,6 +1171,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A number of times a month\", \"A number of times a week\", \"Daily\", \"Don't know (Do not read)\", \"I don’t follow it ever\", \"Rarely\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1101,6 +1185,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"A number of times a month\", \"A number of times a week\", \"Daily\", \"Don't know (Do not read)\", \"I don’t follow it ever\", \"Rarely\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1114,6 +1199,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Daily\", \"Don't know (Do not read)\", \"I am online almost all day\", \"I do not use the internet \", \"Less than once a week\", \"Once a week\", \"Several times a week\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1127,6 +1213,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1140,6 +1227,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1153,6 +1241,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1166,6 +1255,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1179,6 +1269,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1192,6 +1283,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1205,6 +1297,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1218,6 +1311,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Ennahdha\", \"Haraket Chaab\", \"Haraket El Tounsi\", \"Jabha\", \"Moubedra\", \"Nidaa Tounes\", \"Takatol\", \"Tayar Mahaba\", \"UPL\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1231,6 +1325,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I have never participated\", \"More than once\", \"Once\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1244,6 +1339,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I have never participated\", \"More than once\", \"Once\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1257,6 +1353,7 @@
     "n_distinct": 26,
     "value_labels": "",
     "observed_values": "[\"Afek Tounes\", \"CPR\", \"Courant Démocratique\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Harak Chaab Mowatinin\", \"Haraket Chaab\", \"Haraket El Tounsi\", \"Haraket Wafa\", \"Jabha\", \"Jomhouri\", \"Massar\", \"Moubedra\", \"Nahdha\", \"Nidaa Tounes\", \"No party\", \"Party Dostouri Horr\", \"Party Mohsen Marzouk\", \"RCD\", \"Rahma\", \"Sawt Falahin\", \"Tahrir\", \"Takatol\", \"Tayar Chaabi\", \"Tayar Mahaba\", \"UPL\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1270,6 +1367,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1283,6 +1381,7 @@
     "n_distinct": 14,
     "value_labels": "",
     "observed_values": "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"Complete democracy\", \"Complete dictatorship\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not concerned/not interested\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1296,6 +1395,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1309,6 +1409,7 @@
     "n_distinct": 14,
     "value_labels": "",
     "observed_values": "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"Completely appropriate\", \"Completely inappropriate\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not concerned/not interested\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1322,6 +1423,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1335,6 +1437,7 @@
     "n_distinct": 14,
     "value_labels": "",
     "observed_values": "[\"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\", \"8\", \"9\", \"Completely satisfied\", \"Completely unsatisfied\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not concerned/not interested\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1348,6 +1451,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1361,6 +1465,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1374,6 +1479,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Government does not waste any public money\", \"Government narrows the gap between the rich and the poor\", \"People are free to express their political views openly\", \"People choose the government leaders in free and fair elections\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1387,6 +1493,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Government ensures job opportunities for all\", \"Government ensures law and order\", \"Media is free to criticize the things government does\", \"Multiple parties compete fairly in the election\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1400,6 +1507,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Basic necessities, like food, clothes and shelter, are provided for all\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Government provides people with quality public services\", \"People are free to organize political groups\", \"The legislature has oversight over the government\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1413,6 +1521,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1426,6 +1535,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1439,6 +1549,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1452,6 +1563,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1465,6 +1577,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1478,6 +1591,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Democracy is always preferable to any other kind of government\", \"Don't know (Do not read)\", \"For people like me, it does not matter what kind of government we have\", \"Under some circumstances, a non-democratic government can be preferable\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1491,6 +1605,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not suitable at all\", \"Somewhat suitable\", \"Suitable\", \"Very suitable\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1504,6 +1619,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not suitable at all\", \"Somewhat suitable\", \"Suitable\", \"Very suitable\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1517,6 +1633,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not suitable at all\", \"Somewhat suitable\", \"Suitable\", \"Very suitable\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1530,6 +1647,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not suitable at all\", \"Somewhat suitable\", \"Suitable\", \"Very suitable\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1543,6 +1661,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not suitable at all\", \"Somewhat suitable\", \"Suitable\", \"Very suitable\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1556,6 +1675,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not suitable at all\", \"Somewhat suitable\", \"Suitable\", \"Very suitable\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1569,6 +1689,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Guaranteed to a great extent\", \"Guaranteed to a limited extent\", \"Guaranteed to a medium extent\", \"Not guaranteed\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1582,6 +1703,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Guaranteed to a great extent\", \"Guaranteed to a limited extent\", \"Guaranteed to a medium extent\", \"Not guaranteed\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1595,6 +1717,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Guaranteed to a great extent\", \"Guaranteed to a limited extent\", \"Guaranteed to a medium extent\", \"Not guaranteed\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1608,6 +1731,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Guaranteed to a great extent\", \"Guaranteed to a limited extent\", \"Guaranteed to a medium extent\", \"Not guaranteed\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1621,6 +1745,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Guaranteed to a great extent\", \"Guaranteed to a limited extent\", \"Guaranteed to a medium extent\", \"Not guaranteed\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1634,6 +1759,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1647,6 +1773,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Completely justified\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not justifiable at all\", \"Not very justified\", \"Somewhat justified\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1660,6 +1787,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1673,6 +1801,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1686,6 +1815,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1699,6 +1829,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1712,6 +1843,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1725,6 +1857,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1738,6 +1871,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Somewhat dislike\", \"Somewhat like\", \"Strongly dislike\", \"Strongly like\", \"Would not care\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1751,6 +1885,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Somewhat dislike\", \"Somewhat like\", \"Strongly dislike\", \"Strongly like\", \"Would not care\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1764,6 +1899,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Somewhat dislike\", \"Somewhat like\", \"Strongly dislike\", \"Strongly like\", \"Would not care\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1777,6 +1913,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Somewhat dislike\", \"Somewhat like\", \"Strongly dislike\", \"Strongly like\", \"Would not care\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1790,6 +1927,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Constitute an obstacle to a large degree\", \"Constitute an obstacle to a moderate degree\", \"Constitute an obstacle to a small degree\", \"Decline to answer (Do not read)\", \"Does not constitute an obstacle at all\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1803,6 +1941,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Constitute an obstacle to a large degree\", \"Constitute an obstacle to a moderate degree\", \"Constitute an obstacle to a small degree\", \"Decline to answer (Do not read)\", \"Does not constitute an obstacle at all\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1816,6 +1955,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Laws of our country should be based entirely on the sharia\", \"Laws of our country should be based entirely on the will of the people\", \"Laws of our country should be based equally on sharia and the will of the people\", \"Laws of our country should be based mostly on the sharia\", \"Laws of our country should be based mostly on the will of the people\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1829,6 +1969,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree with the 1st sentence\", \"I agree with the 2nd sentence\", \"I strongly agree with the 1st sentence\", \"I strongly agree with the 2nd sentence\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1842,6 +1983,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1855,6 +1997,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1868,6 +2011,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1881,6 +2025,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1894,6 +2039,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1907,6 +2053,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1920,6 +2067,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1933,6 +2081,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1946,6 +2095,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree\", \"I disagree\", \"I strongly agree\", \"I strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1959,6 +2109,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1972,6 +2123,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1985,6 +2137,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1998,6 +2151,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Did not participate\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2011,6 +2165,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Did not participate\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2024,6 +2179,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2037,6 +2193,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2050,6 +2207,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2063,6 +2221,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2076,6 +2235,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Did not participate\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2089,6 +2249,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Aluminum products\", \"Did not participate\", \"Hair cutting\", \"Mechanics\", \"Mechanics and electrical\", \"Plumbing\", \"Welding\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2102,6 +2263,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Did not participate\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2115,6 +2277,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2128,6 +2291,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2141,6 +2305,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2154,6 +2319,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2167,6 +2333,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2180,6 +2347,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2193,6 +2361,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2206,6 +2375,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"0\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2219,6 +2389,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Did not participate\", \"Participated\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2232,6 +2403,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"A private institution\", \"Don't know (Do not read)\", \"Organizations or agencies (NGOs, etc.)\", \"Other\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2245,6 +2417,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Teacher\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2258,6 +2431,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"Not satisfied\", \"Not satisfied at all\", \"Satisfied\", \"Very satisfied\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2271,6 +2445,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Other\", \"To acquire a new skill for a job\", \"To acquire a new skill for a personal interest\", \"To further an interest\", \"To make a better person\", \"To meet people\", \"Working for a degree / a certificate\", \"Working for other qualification\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2284,6 +2459,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Did not succeed in the official program\", \"Religious reasons (to study Islam)\", \"The level of the student was very weak\", \"The official program is not good\", \"To emigrate\", \"To join a program for handicapped people\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2297,6 +2473,7 @@
     "n_distinct": 10,
     "value_labels": "",
     "observed_values": "[\"Don't know (Do not read)\", \"No further reply (Do not read)\", \"Other\", \"To acquire a new skill for a job\", \"To acquire a new skill for a personal interest\", \"To further an interest\", \"To make a better person\", \"To meet people\", \"Working for a degree / a certificate\", \"Working for other qualification\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2310,6 +2487,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"The official program is not good\", \"To emigrate\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2323,6 +2501,7 @@
     "n_distinct": 17,
     "value_labels": "",
     "observed_values": "[\"Access (admission, qualification, regulation, etc.)\", \"Content\", \"Cost\", \"Cultural barriers\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Environment\", \"Family disapproval\", \"Governance/ organization\", \"Information\", \"Other\", \"Physical access \", \"Previous negative experience\", \"Resources\", \"Safety\", \"Time\", \"Transportation\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2336,6 +2515,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Does not want to study\", \"Education does not provide a bright future\", \"Education doesn't lead to a job\", \"Lack of awareness\", \"Nothing\", \"Social factors\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2349,6 +2529,7 @@
     "n_distinct": 17,
     "value_labels": "",
     "observed_values": "[\"Access (admission, qualification, regulation, etc.)\", \"Content\", \"Cost\", \"Cultural barriers\", \"Don't know (Do not read)\", \"Environment\", \"Family disapproval\", \"Governance/ organization\", \"Information\", \"No further reply\", \"Other\", \"Physical access \", \"Previous negative experience\", \"Resources\", \"Safety\", \"Time\", \"Transportation\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2362,6 +2543,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Did not succeed in the official program\", \"Does not have connections (Wasta)\", \"No programs in many areas / regions\", \"The official program is not good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2375,6 +2557,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Agree very strongly with statement 1\", \"Agree very strongly with statement 2\", \"Agree with neither (Do not read)\", \"Agree with statement 1\", \"Agree with statement 2\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2388,6 +2571,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Agree very strongly with statement 1\", \"Agree very strongly with statement 2\", \"Agree with neither (Do not read)\", \"Agree with statement 1\", \"Agree with statement 2\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2401,6 +2585,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Agree very strongly with statement 1\", \"Agree very strongly with statement 2\", \"Agree with neither (Do not read)\", \"Agree with statement 1\", \"Agree with statement 2\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2414,6 +2599,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Agree very strongly with statement 1\", \"Agree very strongly with statement 2\", \"Agree with neither (Do not read)\", \"Agree with statement 1\", \"Agree with statement 2\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2427,6 +2613,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Agree very strongly with statement 1\", \"Agree very strongly with statement 2\", \"Agree with neither (Do not read)\", \"Agree with statement 1\", \"Agree with statement 2\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2440,6 +2627,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Become stronger than they were in previous years\", \"Become weaker than they were in previous years\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Remain the same as they were in previous years\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2453,6 +2641,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Become stronger than they were in previous years\", \"Become weaker than they were in previous years\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Remain the same as they were in previous years\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2466,6 +2655,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Become stronger than they were in previous years\", \"Become weaker than they were in previous years\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Remain the same as they were in previous years\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2479,6 +2669,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Become stronger than they were in previous years\", \"Become weaker than they were in previous years\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Remain the same as they were in previous years\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2492,6 +2683,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Become stronger than they were in previous years\", \"Become weaker than they were in previous years\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Remain the same as they were in previous years\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2505,6 +2697,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Become stronger than they were in previous years\", \"Become weaker than they were in previous years\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Remain the same as they were in previous years\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2518,6 +2711,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Neither positive nor negative\", \"Somewhat negative\", \"Somewhat positive\", \"Very negative\", \"Very positive\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2531,6 +2725,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Neither positive nor negative\", \"Somewhat negative\", \"Somewhat positive\", \"Very negative\", \"Very positive\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2544,6 +2739,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Neither positive nor negative\", \"Somewhat negative\", \"Somewhat positive\", \"Very negative\", \"Very positive\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2557,6 +2753,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Neither positive nor negative\", \"Somewhat negative\", \"Somewhat positive\", \"Very negative\", \"Very positive\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2570,6 +2767,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2583,6 +2781,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2596,6 +2795,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2609,6 +2809,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2622,6 +2823,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Promoting democracy\", \"Promoting economic development\", \"Promoting women’s rights\", \"Resolving the Arab-Israeli conflict\", \"The US should not get involved\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2635,6 +2837,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Neither good nor bad\", \"Somewhat bad\", \"Somewhat good\", \"Very bad\", \"Very good\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2648,6 +2851,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Acceptable\", \"Acceptable with conditions\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Unacceptable because they are harmful to national interests\", \"Unacceptable on principle\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2661,6 +2865,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Both are equally important (Do not read)\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"External factors\", \"Internal factors\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2674,6 +2879,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Agree\", \"Decline to answer (Do not read)\", \"Disagree\", \"Don't know (Do not read)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2687,6 +2893,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Agree\", \"Decline to answer (Do not read)\", \"Disagree\", \"Don't know (Do not read)\", \"Strongly agree\", \"Strongly disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2700,6 +2907,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Oppose\", \"Support\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2713,6 +2921,7 @@
     "n_distinct": 48,
     "value_labels": "",
     "observed_values": "[\"Colonialization\", \"Don't know (Do not read)\", \"I do not like Israel\", \"Islam does not allow\", \"Israel and Palestine cannot agree\", \"Israel cannot be trusted\", \"Israel does not have the right\", \"Israel does not have the right to have the land\", \"Israel doesn't exist\", \"Israel has hurt the Palestinians\", \"Israel is a Jewish country\", \"Israel is abusing Palestine\", \"Israel is bad\", \"Israel is not a Muslim country\", \"Israel is threatening Palestine\", \"Israel oppresses the Palestinians\", \"Israel should not have a country\", \"Israel will abuse them\", \"Israel will not accept the agreement\", \"Israel will threaten Palestine\", \"Israelis are Zionists\", \"It is not fair\", \"Jerusalem is for Muslims\", \"Jerusalem is for the Arabs\", \"Jerusalem should be Palestinian\", \"My principles\", \"Nothing will change\", \"Palestine is an Arab country\", \"Palestine is an Islamic country\", \"Palestine is for all of us\", \"Palestine is for the Palestinians\", \"Palestine should be free\", \"Palestine should be independent\", \"Palestine should have her right\", \"Palestinians would refuse\", \"Religious reasons\", \"The land is Palestinian\", \"The problem is very complicated\", \"There is only Palestine\", \"They cannot live in peace\", \"They do not have the same religion\", \"They should be united in one country\", \"They should have separation between them\", \"They should stop the embargo on Palestine\", \"They will go to war\", \"They will have many problems\", \"This solution could not be applied\", \"This solution is not good for Palestine\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2726,6 +2935,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Agree to a large extent\", \"Agree to some extent\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Don’t agree\", \"Don’t agree at all\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2739,6 +2949,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Agree to a large extent\", \"Agree to some extent\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Don’t agree\", \"Don’t agree at all\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2752,6 +2963,7 @@
     "n_distinct": 12,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Iran\", \"Israel\", \"Libya\", \"Other\", \"Russia\", \"Saudi Arabia\", \"Syria\", \"The European Union\", \"The United States\", \"Turkey\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2765,6 +2977,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Algeria\", \"Iraq\", \"Islamic State\", \"None specified\", \"Qatar\", \"Tunisia\", \"UAE\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2778,6 +2991,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2791,6 +3005,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No threat at all\", \"Somewhat of a threat\", \"Very grave threat\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2804,6 +3019,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No threat at all\", \"Somewhat of a threat\", \"Very grave threat\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2817,6 +3033,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Certainly does not represent true Islam\", \"Certainly represents true Islam\", \"Decline to answer (Do not read)\", \"Does not represent true Islam\", \"Don't know (Do not read)\", \"Represents true Islam\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2830,6 +3047,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree to a large extent\", \"I disagree to a large extent\", \"I somewhat agree\", \"I somewhat disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2843,6 +3061,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"I agree to a large extent\", \"I disagree to a large extent\", \"I somewhat agree\", \"I somewhat disagree\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2856,6 +3075,7 @@
     "n_distinct": 13,
     "value_labels": "",
     "observed_values": "[\"Al-Qaeda\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"GCC country (other than Saudi Arabia)\", \"Iran\", \"Israel\", \"Other\", \"Political exclusion\", \"Russia\", \"Saudi Arabia\", \"Sectarian differences\", \"Social injustice\", \"The United States\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2869,6 +3089,7 @@
     "n_distinct": 32,
     "value_labels": "",
     "observed_values": "[\"Abu Ayyad al-Tunisi\", \"Abu Bakr Baghdadi (ISIS leader)\", \"Abu Yahya al-Libi\", \"Afghanistan\", \"All the governments in the world\", \"Arab Revolutions\", \"Arab Socialist Ba'ath Party in Iraq\", \"Arab countries\", \"Arab politicians\", \"Aymen Zawahiri (Al Qaeda Leader)\", \"Bashar Assad (Syrian President)\", \"Contraband groups\", \"Ennahda\", \"Iraq\", \"Islamic countries\", \"Lebanon\", \"Libya\", \"Moncef Marzouki\", \"Multiple countries\", \"No single cause\", \"Osama bin Laden\", \"Rached Ghannouchi\", \"Regional instability\", \"Religious culture\", \"Religious extremism\", \"Salafis\", \"Syria\", \"Tunisian parties\", \"Turkey\", \"Western countries\", \"Zine El Abidine Ben Ali\", \"Zionists\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2882,6 +3103,7 @@
     "n_distinct": 8,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Holding free and fair elections under international supervision\", \"Military intervention by an Arab coalition\", \"Military intervention by an international coalition including Arab and Western countries\", \"None of the above\", \"Other\", \"Reforms led by the current government\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2895,6 +3117,7 @@
     "n_distinct": 15,
     "value_labels": "",
     "observed_values": "[\"All the religious sects should have an agreement\", \"Armed intervention from an African and Asian coalition\", \"Dialogue\", \"Dialogue with a worldwide coalition\", \"ISIS should be eliminated\", \"Peaceful solution from a global coalition\", \"Peaceful solution from an Arab coalition\", \"Stopping the foreign intervention in Syria\", \"Syrian President Bashar al-Assad should be eliminated\", \"The Syrian people have the right to decide their own destiny\", \"The Syrian president should leave\", \"The Syrian president should stay\", \"The Syrians should make peace\", \"The Syrians should manage their own crisis\", \"There is no solution\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2908,6 +3131,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"A political solution through consultations with neighbouring and other countries is the most effective way to resolve the crisis in Libya\", \"Agree with neither statement (Do not read)\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Military operations are the most effective way to resolve the crisis in Libya\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2921,6 +3145,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Concerned to a great extent\", \"Concerned to a medium extent\", \"Concerned to a small extent\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not concerned at all\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2934,6 +3159,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not angry at all\", \"Not very angry\", \"Somewhat angry\", \"Very angry\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2947,6 +3173,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not angry at all\", \"Not very angry\", \"Somewhat angry\", \"Very angry\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2960,6 +3187,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not angry at all\", \"Not very angry\", \"Somewhat angry\", \"Very angry\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2973,6 +3201,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not angry at all\", \"Not very angry\", \"Somewhat angry\", \"Very angry\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2986,6 +3215,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not angry at all\", \"Not very angry\", \"Somewhat angry\", \"Very angry\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -2999,6 +3229,7 @@
     "n_distinct": 8,
     "value_labels": "",
     "observed_values": "[\"Arab (Ethnicity)\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Local community, city where I live\", \"Muslim/Christian (Religion)\", \"Region (GCC, Maghreb, etc.)\", \"Your country of birth\", \"Your tribe or extended family\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3012,6 +3243,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3025,6 +3257,7 @@
     "n_distinct": 71,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3038,6 +3271,7 @@
     "n_distinct": 26,
     "value_labels": "",
     "observed_values": "[\"Ariana\", \"Beja\", \"Ben Arous\", \"Bizerte\", \"Gabes\", \"Gafsa\", \"Jendouba\", \"Kairouan\", \"Kasserine\", \"Kebili\", \"Kef\", \"Mahdia\", \"Manouba\", \"Mednine\", \"Monastir\", \"Nabeul\", \"Not from Tunisia\", \"Refused to answer (do not read)\", \"Seliana\", \"Sfax\", \"Sidi Bouzid\", \"Sousse\", \"Tatouine\", \"Tozeur\", \"Tunis\", \"Zaghouan\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3051,6 +3285,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Algeria\", \"France\", \"Morocco\", \"UAE\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3064,6 +3299,7 @@
     "n_distinct": 82,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3077,6 +3313,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Female\", \"Male\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3090,6 +3327,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3103,6 +3341,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Above BA\", \"BA\", \"Decline to answer (Do not read)\", \"Elementary\", \"Illiterate/No formal education\", \"Preparatory/Basic\", \"Secondary\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3116,6 +3355,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3129,6 +3369,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Housewife\", \"Other\", \"Retired\", \"Student\", \"Unemployed\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3142,6 +3383,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3155,6 +3397,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Full time (30 hours or more a week)\", \"Part time (Less than 30 hours a week)\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3168,6 +3411,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "[\"Other\", \"Private\", \"Public\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3181,6 +3425,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "[\"A governmental employee\", \"Employer/director of an institution with 10 employees or more\", \"Working at the armed forces or the police\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3194,6 +3439,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3207,6 +3453,7 @@
     "n_distinct": 9,
     "value_labels": "",
     "observed_values": "[\"Agricultural worker/Owner of a farm\", \"Craftsperson\", \"Employer/director of an institution with 10 employees or more\", \"Employer/director of an institution with less than 10 employees\", \"Manual laborer\", \"Other\", \"Owner of a shop/grocery store\", \"Private sector employee\", \"Professional such as a lawyer, accountant, teacher, doctor, etc.\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3220,6 +3467,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Fisherman\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3233,6 +3481,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Divorced or separated\", \"Engaged\", \"Married\", \"Unmarried or Bachelor\", \"Widowed\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3246,6 +3495,7 @@
     "n_distinct": 8,
     "value_labels": "",
     "observed_values": "[\"0\", \"1\", \"2\", \"3\", \"4\", \"5\", \"6\", \"7\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3259,6 +3509,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3272,6 +3523,7 @@
     "n_distinct": 16,
     "value_labels": "",
     "observed_values": "[\"Agricultural worker/Owner of a farm\", \"Craftsperson\", \"Decline to answer (Do not read)\", \"Does not work\", \"Don't know (Do not read)\", \"Employer/director of an institution with 10 employees or more\", \"Employer/director of an institution with less than 10 employees\", \"Government employee\", \"Housewife\", \"Manual laborer\", \"Member of the armed forces / Public security\", \"Owner of a shop/grocery store\", \"Private sector employee\", \"Professional such as a lawyer, accountant, teacher, doctor, etc.\", \"Retired\", \"Student\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3285,6 +3537,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3298,6 +3551,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3311,6 +3565,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"No\", \"Yes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3324,6 +3579,7 @@
     "n_distinct": 3,
     "value_labels": "",
     "observed_values": "[\"Mobile\", \"No\", \"Smartphone\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3337,6 +3593,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Not religious\", \"Religious\", \"Somewhat religious\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3350,6 +3607,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Always\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Most of the time\", \"Never\", \"Rarely\", \"Sometimes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3363,6 +3621,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"Always\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Most of the time\", \"Never\", \"Rarely\", \"Sometimes\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3376,6 +3635,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Muslim\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3389,6 +3649,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3402,6 +3663,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Just a Muslim\", \"Shia\", \"Sunni\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3415,6 +3677,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3428,6 +3691,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3441,6 +3705,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3454,6 +3719,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3467,6 +3733,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3480,6 +3747,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3493,6 +3761,7 @@
     "n_distinct": 4,
     "value_labels": "",
     "observed_values": "[\"DT 500 or more\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Less than DT 500\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3506,6 +3775,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3519,6 +3789,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3532,6 +3803,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3545,6 +3817,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3558,6 +3831,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3571,6 +3845,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3584,6 +3859,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"DT 100-200\", \"DT 200-300\", \"DT 300-400\", \"DT 400-500\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Less than DT 100\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3597,6 +3873,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3610,6 +3887,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3623,6 +3901,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3636,6 +3915,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3649,6 +3929,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3662,6 +3943,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3675,6 +3957,7 @@
     "n_distinct": 8,
     "value_labels": "",
     "observed_values": "[\"DT 1000-1500\", \"DT 1500-2000\", \"DT 2000 or more\", \"DT 600-800\", \"DT 800-1000\", \"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Less than DT 600\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3688,6 +3971,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"Don't know (Do not read)\", \"Our household income covers our expenses well and we are able to save.\", \"Our household income covers our expenses without notable difficulties.\", \"Our household income does not cover our expenses and we face significant difficulties in meeting our needs.\", \"Our household income does not cover our expenses and we face some difficulties in meeting our needs.\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3701,6 +3985,7 @@
     "n_distinct": 5,
     "value_labels": "",
     "observed_values": "[\"Decline to answer (Do not read)\", \"We do not receive anything\", \"Yes, a few times a year\", \"Yes, monthly\", \"Yes, once a year\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3714,6 +3999,7 @@
     "n_distinct": 1,
     "value_labels": "",
     "observed_values": "[\"Arabic\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3727,6 +4013,7 @@
     "n_distinct": 6,
     "value_labels": "",
     "observed_values": "[\"English\", \"French\", \"German\", \"Italian\", \"None\", \"Spanish\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3740,6 +4027,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3753,6 +4041,7 @@
     "n_distinct": 2,
     "value_labels": "",
     "observed_values": "[\"Female\", \"Male\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -3766,6 +4055,7 @@
     "n_distinct": 0,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   }

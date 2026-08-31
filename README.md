@@ -1,9 +1,10 @@
 # SurveysTN
 
-Public-opinion survey data covering Tunisia, extracted from the pooled
-multi-country releases the survey programmes publish, and reorganised so that each
-survey is one self-describing folder: the respondents, in every common format, with a
-codebook and a provenance record.
+Public-opinion survey data covering Tunisia — Arab Barometer and the World Values
+Survey so far — reorganised so that each survey is one self-describing folder: the
+respondents, in every common format, with a codebook and a provenance record. Most
+are extracted from the pooled multi-country releases the programmes publish; where
+a programme ships a Tunisia country file, that is used as it stands.
 
 The point is that the pooled releases are awkward to work with if Tunisia is your
 case. They are large, they mix twelve or more countries, they carry hundreds of
@@ -24,8 +25,9 @@ consistent, with nothing recoded.
 | Arab Barometer Wave VI Part 3 | 1,200 | 105 (98 with data) | Mar 2021 | [`data/arab-barometer/wave-06-part-3`](data/arab-barometer/wave-06-part-3) |
 | Arab Barometer Wave VII | 2,400 | 453 (373 with data) | Oct–Nov 2021 | [`data/arab-barometer/wave-07`](data/arab-barometer/wave-07) |
 | Arab Barometer Wave VIII | 2,406 | 690 (466 with data) | Sep–Nov 2023 | [`data/arab-barometer/wave-08`](data/arab-barometer/wave-08) |
+| World Values Survey Wave 7 | 1,208 | 397 (397 with data) | Apr–May 2019 | [`data/world-values-survey/wave-07`](data/world-values-survey/wave-07) |
 
-14,008 Tunisian respondents across nine surveys, plus one derived file:
+15,216 Tunisian respondents across ten surveys in two series, plus one derived file:
 [`wave-06-merged`](data/arab-barometer/wave-06-merged) stacks the three Wave VI
 rounds into 3,207 rows with a `PART` column. `catalog/catalog.csv` and
 `catalog/catalog.json` carry the same table in machine-readable form, with
@@ -100,11 +102,15 @@ files against the checksums and counts in `catalog/catalog.json`.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the waves up: one row per variable,
 the name it takes in each wave, the question each wave asked, and whether the
-wording held. 1,966 variables, 1,903 of them with question text, 13 present in
-all nine surveys.
+wording held. 2,363 variables, 2,300 of them with question text; within Arab Barometer, 13 are
+present in all nine of its surveys.
+
+Variables are matched **within a series and never across one** — `Q1` is the
+governorate in Arab Barometer and "Important in life: Family" in the World Values
+Survey, and a shared name between series means nothing.
 
 The question text comes from the release's own variable labels where it has them,
-and otherwise from the wave's questionnaire in
+and otherwise from the survey's questionnaire in
 [`docs/questionnaires/`](docs/questionnaires), parsed by question number. That is
 the only source for Wave IV, and it also repairs labels that are truncated in the
 release — Arab Barometer's own Wave VIII label for `Q101` ends "the current

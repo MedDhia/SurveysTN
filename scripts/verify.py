@@ -224,10 +224,13 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
     got_dta, _ = pyreadstat.read_dta(f"{stem}.dta")
     same_frame(expect, got_dta, f"{tag} .dta", errors)
 
-    if s["source_format"] == "sav":
+    if s["has_numeric_codes"]:
         got_csv = pd.read_csv(f"{stem}-codes.csv", low_memory=False)
         same_frame(expect, got_csv, f"{tag} -codes.csv", errors)
-        check_labels_csv(expect, Path(f"{stem}-labels.csv"), value_labels, tag, errors)
+        if s["has_value_labels"]:
+            check_labels_csv(expect, Path(f"{stem}-labels.csv"), value_labels, tag, errors)
+        elif Path(f"{stem}-labels.csv").exists():
+            errors.append(f"{tag}: -labels.csv exists but the release defines no value labels")
     else:
         # A label-only release has no codes, so -labels.csv is the data itself
         # and is compared directly rather than resolved back through the labels.

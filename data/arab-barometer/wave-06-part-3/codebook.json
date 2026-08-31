@@ -9,6 +9,7 @@
     "n_distinct": 1,
     "value_labels": "{\"1\": \"Algeria\", \"7\": \"Iraq\", \"8\": \"Jordan\", \"10\": \"Lebanon\", \"11\": \"Libya\", \"13\": \"Morocco\", \"21\": \"Tunisia\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 21.0,
     "max": 21.0
   },
@@ -22,6 +23,7 @@
     "n_distinct": 1200,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1040.0,
     "max": 5211.0
   },
@@ -35,6 +37,7 @@
     "n_distinct": 7,
     "value_labels": "",
     "observed_values": "[\"2021-03-06\", \"2021-03-07\", \"2021-03-09\", \"2021-03-10\", \"2021-03-13\", \"2021-03-14\", \"2021-03-16\"]",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -48,6 +51,7 @@
     "n_distinct": 24,
     "value_labels": "{\"1001\": \"Adrar\", \"1002\": \"Chlef\", \"1003\": \"Laghouat\", \"1004\": \"Oum el Bouaghi\", \"1005\": \"Batna\", \"1006\": \"Bejaia\", \"1007\": \"Biskra\", \"1008\": \"Bechar\", \"1009\": \"Blida\", \"1010\": \"Bouira\", \"1011\": \"Tamenrasset\", \"1012\": \"Tebessa\", \"1013\": \"Tlemcen\", \"1014\": \"Tiaret\", \"1015\": \"Tizi Ouzou\", \"1016\": \"Algiers\", \"1017\": \"Djelfa\", \"1018\": \"Jijel\", \"1019\": \"Setif\", \"1020\": \"Saida\", \"1021\": \"Skikda\", \"1022\": \"Sidi Bel Abbes\", \"1023\": \"Annaba\", \"1024\": \"Guelma\", \"1025\": \"Constantine\", \"1026\": \"Medea\", \"1027\": \"Mostaganem\", \"1028\": \"M'Sila\", \"1029\": \"Mascara\", \"1030\": \"Ouargla\", \"1031\": \"Oran\", \"1032\": \"El Bayadh\", \"1033\": \"Illizi\", \"1034\": \"Bordj Bou Arreridj\", \"1035\": \"Boumerdes\", \"1036\": \"El Taref\", \"1037\": \"Tindouf\", \"1038\": \"Tissemsilt\", \"1039\": \"El Oued\", \"1040\": \"Khenchela\", \"1041\": \"Souk Ahras\", \"1042\": \"Tipaza\", \"1043\": \"Mila\", \"1044\": \"Ain Defla\", \"1045\": \"Naama\", \"1046\": \"Ain Temouchent\", \"1047\": \"Ghardaia\", \"1048\": \"Relizane\", \"7001\": \"Baghdad\", \"7002\": \"Salahaddin\", \"7003\": \"Diyala\", \"7004\": \"Wasit\", \"7005\": \"Missan\", \"7006\": \"Basra\", \"7007\": \"Thi-Qar\", \"7008\": \"Muthanna\", \"7009\": \"Diwaniyah\", \"7010\": \"Babel\", \"7011\": \"Karbala\", \"7012\": \"Najaf\", \"7013\": \"Anbar\", \"7014\": \"Ninewa\", \"7015\": \"Dohuk\", \"7016\": \"Erbil\", \"7017\": \"Kirkuk\", \"7018\": \"Sulaymaniyah\", \"8001\": \"Amman\", \"8002\": \"Balqa\", \"8003\": \"Zarqa\", \"8004\": \"Madaba\", \"8005\": \"Irbid\", \"8006\": \"Mafraq\", \"8007\": \"Jerash\", \"8008\": \"Ajloun\", \"8009\": \"Karak\", \"8010\": \"Tafilah\", \"8011\": \"Ma'an\", \"8012\": \"Aqaba\", \"10001\": \"Akkar\", \"10002\": \"Baalbek El-Hermel\", \"10003\": \"Beirut\", \"10004\": \"Bekaa\", \"10005\": \"El Nabatieh\", \"10006\": \"Kesrwan-Jbeil\", \"10007\": \"Mt. Lebanon\", \"10008\": \"North\", \"10009\": \"South\", \"11001\": \"Tobruk\", \"11002\": \"Derna\", \"11003\": \"Al-Gabal al-Akhdar\", \"11004\": \"Al-Marj\", \"11005\": \"Benghazi\", \"11006\": \"Al-Wahat\", \"11007\": \"Al-Kufra\", \"11008\": \"Sirt\", \"11009\": \"Al-Jofra\", \"11010\": \"Misrata\", \"11011\": \"Al-Mergheb\", \"11012\": \"Tripoli\", \"11013\": \"Jafara\", \"11014\": \"Zawia\", \"11015\": \"Zwara\", \"11016\": \"Al-Gabal al-Gharbi\", \"11017\": \"Nalut\", \"11018\": \"Sabha\", \"11019\": \"Wadi Shati\", \"11020\": \"Murzuk\", \"11021\": \"Wadi al-Haya\", \"11022\": \"Ghat\", \"11023\": \"Ejdabia\", \"13001\": \"Tanger-Tetouan-Al Hoceima\", \"13002\": \"Oriental\", \"13003\": \"Fes-Meknes\", \"13004\": \"Rabat-Sale-Kenitra\", \"13005\": \"Beni Mellal-Khenifra\", \"13006\": \"Grand Casablanca-Settat\", \"13007\": \"Marrakech-Safi\", \"13008\": \"Draa-Tafilalet\", \"13009\": \"Souss-Massa\", \"13010\": \"Guelmim-Oued Noun\", \"13011\": \"Laayoune-Sakia El Hamra\", \"13012\": \"Eddakhla-Oued Eddahab\", \"21001\": \"Tunis\", \"21002\": \"Ariana\", \"21003\": \"Ben Arous\", \"21004\": \"Manouba\", \"21005\": \"Bizerte\", \"21006\": \"Nabeul\", \"21007\": \"Beja\", \"21008\": \"Zaghouan\", \"21009\": \"Jendouba\", \"21010\": \"Jendouba\", \"21011\": \"Siliana\", \"21012\": \"Sousse\", \"21013\": \"Monastir\", \"21014\": \"Mahdia\", \"21015\": \"Kairouan\", \"21016\": \"Sfax\", \"21017\": \"Sidi Bouzid\", \"21018\": \"Kasserine\", \"21019\": \"Gafsa\", \"21020\": \"Tozeur\", \"21021\": \"Tataouine\", \"21022\": \"Medenine\", \"21023\": \"Gabes\", \"21024\": \"Kebili\", \"99998\": \"Don't know\", \"99999\": \"Refused\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 21001.0,
     "max": 21024.0
   },
@@ -61,6 +65,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"Big city\", \"2\": \"Village or town\", \"3\": \"Rural area\", \"4\": \"Refugee camp\", \"5\": \"IDP camp\", \"97\": \"Difficult to say\", \"98\": \"Don't know'\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -74,6 +79,7 @@
     "n_distinct": 492,
     "value_labels": "",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.24001264394332308,
     "max": 2.4229054640510777
   },
@@ -87,6 +93,7 @@
     "n_distinct": 65,
     "value_labels": "{\"100\": \"Respondent refused to continue\", \"99999\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 18.0,
     "max": 99999.0
   },
@@ -100,6 +107,7 @@
     "n_distinct": 2,
     "value_labels": "{\"1\": \"Male\", \"2\": \"Female\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 2.0
   },
@@ -113,6 +121,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"Economic situation [INTERVIEWER: IF ASKED, POVERTY, UNEMPLOYMENT, INFLATION]\", \"2\": \"Financial and administrative corruption\", \"6\": \"Internal instability and security\", \"7\": \"Foreign interference\", \"12\": \"Public services [INTERVIEWER: IF ASKED, HEALTH, EDUCATION, ETC.]\", \"15\": \"The spread of the coronavirus\", \"16\": \"Other- specify: ________\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -126,6 +135,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Very concerned\", \"2\": \"Somewhat concerned\", \"3\": \"Somewhat not concerned\", \"4\": \"Not at all concerned\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -139,6 +149,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"Having a member of your family get very ill or die\", \"2\": \"Loss of household income\", \"3\": \"Negative impacts on the economy\", \"4\": \"Inability of the healthcare system to handle COVID-19 cases\", \"5\": \"The government’s response has not been adequate\", \"6\": \"Other citizens have not done a good job of following government recommendations\", \"7\": \"Other- SPECIFY\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -152,6 +163,7 @@
     "n_distinct": 9,
     "value_labels": "{\"1\": \"The health threat posed by the coronavirus is exaggerated\", \"2\": \"No loss of household income\", \"3\": \"Little to no negative impacts on the economy\", \"4\": \"The country’s healthcare infrastructure can handle coronavirus cases\", \"5\": \"The government’s response has been adequate to stop the spread of the coronavirus\", \"6\": \"Other citizens have done a good job following government recommendations\", \"7\": \"Other- SPECIFY\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -165,6 +177,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Less harmful impact\", \"2\": \"About the same impact\", \"3\": \"More harmful impact\", \"97\": \"I am a member of this group\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -178,6 +191,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Less harmful impact\", \"2\": \"About the same impact\", \"3\": \"More harmful impact\", \"97\": \"I am a member of this group\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -191,6 +205,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"Less harmful impact\", \"2\": \"About the same impact\", \"3\": \"More harmful impact\", \"97\": \"I am a member of this group\", \"98\": \"DK\", \"99\": \"RA\", \"100\": \"Refuse to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -204,6 +219,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"Less harmful impact\", \"2\": \"About the same impact\", \"3\": \"More harmful impact\", \"97\": \"I am a member of this group\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -217,6 +233,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Permanently lose your job\", \"2\": \"A temporary interruption in your job\", \"3\": \"You had to work from home but it caused no serious interruption\", \"4\": \"Had no effect on your job status\", \"97\": \"Not applicable- was not employed before the outbreak\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -230,6 +247,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"Increased\", \"2\": \"Stayed the same\", \"3\": \"Decreased\", \"97\": \"NA. Does not happen in my household or community\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -243,6 +261,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Very likely\", \"2\": \"Somewhat likely\", \"3\": \"Somewhat unlikely\", \"4\": \"Very unlikely\", \"97\": \"I already got the vaccine\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -256,6 +275,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Vaccine developed in the US\", \"2\": \"Vaccine developed in Russia\", \"3\": \"Vaccine developed in China\", \"4\": \"Vaccine developed in the UK\", \"97\": \"I would not get any of these\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -269,6 +289,7 @@
     "n_distinct": 10,
     "value_labels": "{\"1\": \"Having contracted or coping with long-term side effects of COVID-19\", \"2\": \"Adverse effects on psycho-emotional state (nafsiyeh)\", \"3\": \"Disruption of my kids’ education\", \"4\": \"Constraints on political activity\", \"5\": \"Increased cost of living (inflation)\", \"6\": \"Decreased availability of basic goods (scarcity)\", \"7\": \"Loss of income\", \"8\": \"Other_____ Specify\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -282,6 +303,7 @@
     "n_distinct": 10,
     "value_labels": "{\"1\": \"Having contracted or coping with long-term side effects of COVID-19\", \"2\": \"Adverse effects on psycho-emotional state (nafsiyeh)\", \"3\": \"Disruption of my kids’ education\", \"4\": \"Constraints on political activity\", \"5\": \"Increased cost of living (inflation)\", \"6\": \"Decreased availability of basic goods (scarcity)\", \"7\": \"Loss of income\", \"8\": \"Other_____ Specify\", \"97\": \"There is no second answer\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -295,6 +317,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"No\", \"2\": \"Yes- money\", \"3\": \"Yes- food\", \"4\": \"Yes- energy subsidies\", \"5\": \"Yes- other NFI\", \"6\": \"Yes- grace period for bills\", \"7\": \"Yes- other\", \"23\": \"Yes-Money AND food (respondent selected both)\", \"26\": \"Yes-Food AND grace period (responded selected both)\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -308,6 +331,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Bad\", \"4\": \"Very bad\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -321,6 +345,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Much better\", \"2\": \"Somewhat better\", \"3\": \"Almost the same\", \"4\": \"Somewhat worse\", \"5\": \"Much worse\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -334,6 +359,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"Often true\", \"2\": \"Sometimes true\", \"3\": \"Never true\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -347,6 +373,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"Often true\", \"2\": \"Sometimes true\", \"3\": \"Never true\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -360,6 +387,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"Create more job opportunities\", \"2\": \"Raise wages for existing jobs\", \"3\": \"Lower the cost of living (limiting inflation)\", \"4\": \"Reform the education system\", \"5\": \"Encouraging foreign investment\", \"6\": \"Other\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -373,6 +401,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Strongly agree\", \"2\": \"Agree\", \"3\": \"Disagree\", \"4\": \"Strongly disagree\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -386,6 +415,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Strongly agree\", \"2\": \"Agree\", \"3\": \"Disagree\", \"4\": \"Strongly disagree\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -399,6 +429,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Strongly agree\", \"2\": \"Agree\", \"3\": \"Disagree\", \"4\": \"Strongly disagree\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -412,6 +443,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Strongly agree\", \"2\": \"Agree\", \"3\": \"Disagree\", \"4\": \"Strongly disagree\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -425,6 +457,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Strongly agree\", \"2\": \"Agree\", \"3\": \"Disagree\", \"4\": \"Strongly disagree\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -438,6 +471,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Completely agree\", \"2\": \"Somewhat agree\", \"3\": \"Disagree\", \"4\": \"Completely disagree\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -451,6 +485,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a great extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -464,6 +499,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a great extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -477,6 +513,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a great extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -490,6 +527,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a great extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -503,6 +541,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a great extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -516,6 +555,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"Strongly agree\", \"2\": \"Agree\", \"3\": \"Disagree\", \"4\": \"Strongly disagree\", \"97\": \"A female quota is the wrong tool to achieve (political) representation\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -529,6 +569,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"A great deal of trust\", \"2\": \"Quite a lot of trust\", \"3\": \"Not a lot of trust\", \"4\": \"No trust at all\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -542,6 +583,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"A great deal of trust\", \"2\": \"Quite a lot of trust\", \"3\": \"Not a lot of trust\", \"4\": \"No trust at all\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -555,6 +597,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"A great deal of trust\", \"2\": \"Quite a lot of trust\", \"3\": \"Not a lot of trust\", \"4\": \"No trust at all\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -568,6 +611,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"A great deal of trust\", \"2\": \"Quite a lot of trust\", \"3\": \"Not a lot of trust\", \"4\": \"No trust at all\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -581,6 +625,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"To a great extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -594,6 +639,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Completely satisfied\", \"2\": \"Satisfied\", \"3\": \"Dissatisfied\", \"4\": \"Completely dissatisfied\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -607,6 +653,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"Completely satisfied\", \"2\": \"Satisfied\", \"3\": \"Dissatisfied\", \"4\": \"Completely dissatisfied\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -620,6 +667,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Completely satisfied\", \"2\": \"Satisfied\", \"3\": \"Dissatisfied\", \"4\": \"Completely dissatisfied\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -633,6 +681,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Guaranteed to a great extent\", \"2\": \"Guaranteed to a medium extent\", \"3\": \"Guaranteed to a limited extent\", \"4\": \"Not guaranteed at all\", \"98\": \"Don’t know\", \"99\": \"Decline to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -646,6 +695,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Guaranteed to a great extent\", \"2\": \"Guaranteed to a medium extent\", \"3\": \"Guaranteed to a limited extent\", \"4\": \"Not guaranteed at all\", \"98\": \"Don’t know\", \"99\": \"Decline to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -659,6 +709,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Guaranteed to a great extent\", \"2\": \"Guaranteed to a medium extent\", \"3\": \"Guaranteed to a limited extent\", \"4\": \"Not guaranteed at all\", \"98\": \"Don’t know\", \"99\": \"Decline to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -672,6 +723,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Bad\", \"4\": \"Very bad\", \"97\": \"This is not the government’s responsibility\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -685,6 +737,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Bad\", \"4\": \"Very bad\", \"97\": \"This is not the government’s responsibility\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -698,6 +751,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Bad\", \"4\": \"Very bad\", \"97\": \"This is not the government’s responsibility\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -711,6 +765,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a large extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -724,6 +779,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a large extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -737,6 +793,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Very favorable\", \"2\": \"Somewhat favorable\", \"3\": \"Somewhat unfavorable\", \"4\": \"Very unfavorable\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -750,6 +807,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Very favorable\", \"2\": \"Somewhat favorable\", \"3\": \"Somewhat unfavorable\", \"4\": \"Very unfavorable\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -763,6 +821,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Very favorable\", \"2\": \"Somewhat favorable\", \"3\": \"Somewhat unfavorable\", \"4\": \"Very unfavorable\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -776,6 +835,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Very favorable\", \"2\": \"Somewhat favorable\", \"3\": \"Somewhat unfavorable\", \"4\": \"Very unfavorable\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -789,6 +849,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Neither good nor bad\", \"4\": \"Bad\", \"5\": \"Very bad\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -802,6 +863,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Neither good nor bad\", \"4\": \"Bad\", \"5\": \"Very bad\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -815,6 +877,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Neither good nor bad\", \"4\": \"Bad\", \"5\": \"Very bad\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -828,6 +891,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Very good\", \"2\": \"Good\", \"3\": \"Neither good nor bad\", \"4\": \"Bad\", \"5\": \"Very bad\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -841,6 +905,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"To a great extent\", \"2\": \"To a medium extent\", \"3\": \"To a small extent\", \"4\": \"Not at all\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -854,6 +919,7 @@
     "n_distinct": 10,
     "value_labels": "{\"1\": \"Women’s rights\", \"2\": \"Environmental protection and combatting climate change\", \"3\": \"Civil society development\", \"4\": \"Building infrastructure\", \"5\": \"Improving education and vocational training\", \"6\": \"Promoting civil liberties/ freedoms\", \"7\": \"Other\", \"97\": \"I do not want foreign\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -867,6 +933,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"Strongly favor\", \"2\": \"Favor\", \"3\": \"Oppose\", \"4\": \"Strongly oppose\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -880,6 +947,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Strongly favor\", \"2\": \"Favor\", \"3\": \"Oppose\", \"4\": \"Strongly oppose\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -893,6 +961,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"United States\", \"2\": \"Germany\", \"3\": \"China\", \"4\": \"Turkey\", \"5\": \"France\", \"6\": \"Italy\", \"7\": \"United Kingdom\", \"97\": \"None of these countries\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -906,6 +975,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"United States\", \"2\": \"Germany\", \"3\": \"China\", \"4\": \"Turkey\", \"5\": \"France\", \"6\": \"Italy\", \"7\": \"United Kingdom\", \"97\": \"None of these countries\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -919,6 +989,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"United States\", \"2\": \"Germany\", \"3\": \"China\", \"4\": \"Turkey\", \"5\": \"France\", \"6\": \"Italy\", \"7\": \"United Kingdom\", \"97\": \"None of these countries\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -932,6 +1003,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"Yes\", \"2\": \"No\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -945,6 +1017,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -958,6 +1031,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -971,6 +1045,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -984,6 +1059,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -997,6 +1073,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -1010,6 +1087,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -1023,6 +1101,7 @@
     "n_distinct": 2,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 1.0
   },
@@ -1036,6 +1115,7 @@
     "n_distinct": 0,
     "value_labels": "{\"0\": \"No\", \"1\": \"Yes\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1049,6 +1129,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"No formal education\", \"2\": \"Elementary\", \"3\": \"Preparatory/Basic\", \"4\": \"Secondary\", \"5\": \"Mid-level diploma/professional or technical\", \"6\": \"BA\", \"7\": \"MA and above\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1062,6 +1143,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Single\", \"2\": \"Living with a partner\", \"3\": \"Engaged\", \"4\": \"Married\", \"5\": \"Divorced\", \"6\": \"Separated\", \"7\": \"Widowed\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1075,6 +1157,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"Yes\", \"2\": \"No\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1088,6 +1171,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"Yes\", \"2\": \"No\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1101,6 +1185,7 @@
     "n_distinct": 18,
     "value_labels": "{\"999\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99999.0
   },
@@ -1114,6 +1199,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"Employed\", \"2\": \"Self-Employed\", \"3\": \"Retired\", \"4\": \"A housewife\", \"5\": \"A student\", \"6\": \"Unemployed or looking for work\", \"7\": \"Other, specify: ___________\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1127,6 +1213,7 @@
     "n_distinct": 2,
     "value_labels": "{\"1\": \"Yes\", \"2\": \"No\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 2.0
   },
@@ -1140,6 +1227,7 @@
     "n_distinct": 3,
     "value_labels": "{\"1\": \"Yes\", \"2\": \"No\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1153,6 +1241,7 @@
     "n_distinct": 8,
     "value_labels": "{\"1\": \"No jobs available\", \"2\": \"Salaries are too low\", \"3\": \"No jobs for my specialization\", \"4\": \"Family obligations prevent me\", \"5\": \"I am not allowed\", \"6\": \"Other______ SPECIFY\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1166,6 +1255,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Increased a lot\", \"2\": \"Increased a little\", \"3\": \"Stayed the same\", \"4\": \"Decreased a little\", \"5\": \"Decreased a lot\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1179,6 +1269,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"public sector\", \"2\": \"private sector\", \"3\": \"OTHER\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 98.0
   },
@@ -1192,6 +1283,7 @@
     "n_distinct": 21,
     "value_labels": "{\"1\": \"Agriculture, livestock rearing, fishing\", \"2\": \"Arts and entertainment\", \"3\": \"Beauty and salon services\", \"4\": \"Exploration and drilling\", \"5\": \"Industry\", \"6\": \"Electricity, gas and water\", \"7\": \"Construction work\", \"8\": \"Wholesale and retail sale, auto repair\", \"9\": \"Hotels, restaurants, tourism\", \"10\": \"Transportation and warehousing\", \"11\": \"Financial intermediation, brokerage\", \"12\": \"Real estate, leasing and business\", \"13\": \"Government, public administration, and defense\", \"14\": \"International organizations and agencies\", \"15\": \"Local nongovernmental or nonprofit work\", \"16\": \"Education and research\", \"17\": \"Health and social work\", \"18\": \"Information technology and communication\", \"19\": \"Media and journalism\", \"20\": \"Other\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1205,6 +1297,7 @@
     "n_distinct": 6,
     "value_labels": "{\"1\": \"Our net household income covers our expenses and we are able to save.\", \"2\": \"Our net household income covers our expenses without notable difficulties.\", \"3\": \"Our net household income does not cover our expenses; we face some difficulties.\", \"4\": \"Our net household income does not cover our expenses; we face significant difficulties.\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1218,6 +1311,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"Muslim\", \"2\": \"Christian\", \"3\": \"Something else: SPECIFY_______\", \"4\": \"No religion\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1231,6 +1325,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"Maronite\", \"2\": \"Orthodox\", \"3\": \"Catholic\", \"4\": \"Armenian\", \"5\": \"Sunni\", \"6\": \"Shia\", \"7\": \"Shafi'i'\", \"8\": \"Ja'fari\", \"9\": \"Malki\", \"10\": \"Druze\", \"11\": \"Just a Muslim\", \"12\": \"Other\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1244,6 +1339,7 @@
     "n_distinct": 0,
     "value_labels": "{\"1\": \"Arab\", \"2\": \"Kurd\", \"3\": \"Amazigh\", \"4\": \"Turkmen\", \"5\": \"Tourag\", \"7\": \"Alkraghl\", \"8\": \"Yazidi\", \"9\": \"Assyrian\", \"12\": \"Other\", \"98\": \"Don't know\", \"99\": \"Refused to answer\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": "",
     "max": ""
   },
@@ -1257,6 +1353,7 @@
     "n_distinct": 5,
     "value_labels": "{\"1\": \"Religious\", \"2\": \"Somewhat religious\", \"3\": \"Not religious\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1270,6 +1367,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Strongly dislike\", \"2\": \"Somewhat dislike\", \"3\": \"Would not care\", \"4\": \"Somewhat like\", \"5\": \"Strongly like\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1283,6 +1381,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Strongly dislike\", \"2\": \"Somewhat dislike\", \"3\": \"Would not care\", \"4\": \"Somewhat like\", \"5\": \"Strongly like\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1296,6 +1395,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Strongly dislike\", \"2\": \"Somewhat dislike\", \"3\": \"Would not care\", \"4\": \"Somewhat like\", \"5\": \"Strongly like\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1309,6 +1409,7 @@
     "n_distinct": 7,
     "value_labels": "{\"1\": \"Strongly dislike\", \"2\": \"Somewhat dislike\", \"3\": \"Would not care\", \"4\": \"Somewhat like\", \"5\": \"Strongly like\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1322,6 +1423,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"Strongly dislike\", \"2\": \"Somewhat dislike\", \"3\": \"Would not care\", \"4\": \"Somewhat like\", \"5\": \"Strongly like\", \"98\": \"Don’t know\", \"99\": \"Refused to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 5.0
   },
@@ -1335,6 +1437,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"Shared with another person\", \"2\": \"Personal phone number\", \"98\": \"I don’t know\", \"99\": \"Declined to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   },
@@ -1348,6 +1451,7 @@
     "n_distinct": 11,
     "value_labels": "{\"99\": \"Declined to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 0.0,
     "max": 99.0
   },
@@ -1361,6 +1465,7 @@
     "n_distinct": 4,
     "value_labels": "{\"1\": \"Yes\", \"2\": \"No\", \"98\": \"I don’t know\", \"99\": \"Declined to answer\", \"100\": \"Respondent refused to continue\"}",
     "observed_values": "",
+    "sentinel_codes": "",
     "min": 1.0,
     "max": 99.0
   }

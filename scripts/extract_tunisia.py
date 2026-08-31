@@ -30,6 +30,13 @@ as ``source_format``:
     stay strings. Supplying the SPSS release for such a wave and re-running
     upgrades it to a full ``sav`` extract with no other change.
 
+``xlsx-headers``
+    An Excel release whose header row carries ``NAME: question text`` in one cell,
+    which is how the World Values Survey ships its spreadsheet edition. The header
+    is split into the variable name and its label. The data is numeric codes, but
+    the spreadsheet carries no value labels for them, so no ``-labels.csv`` is
+    produced; read the response options from the publisher's codebook.
+
 Usage:  python3 scripts/extract_tunisia.py [--raw data/raw] [--out data]
 """
 
@@ -94,6 +101,11 @@ def clean_value_labels(labels: dict) -> dict:
     return out
 
 
+def writes_codes(fmt: str) -> bool:
+    """Does the release store answers as numeric codes rather than as label text?"""
+    return fmt in ("sav", "xlsx-headers")
+
+
 def is_blank(s: pd.Series) -> pd.Series:
     """Missing, for either kind of release: NaN, or an empty string."""
     if pd.api.types.is_numeric_dtype(s):
@@ -141,6 +153,22 @@ def read_pooled(spec: dict, raw_dir: Path) -> tuple[pd.DataFrame, dict, dict, li
             numeric.append(col)
         return df, {c: "" for c in df.columns}, {}, numeric
 
+    if fmt == "xlsx-headers":
+        src = raw_dir / f"{stem}.xlsx"
+        require(src)
+        frame = pd.read_excel(src, sheet_name=spec.get("sheet", 0))
+        names, labels = [], {}
+        for header in frame.columns:
+            name, _, label = str(header).partition(":")
+            name = name.strip()
+            labels[name] = label.strip()
+            names.append(name)
+        if len(set(names)) != len(names):
+            raise SystemExit(f"{src.name}: duplicate variable names after splitting headers")
+        frame.columns = names
+        # The spreadsheet edition ships codes without the value labels for them.
+        return frame, labels, {}, []
+
     raise SystemExit(f"unknown source_format {fmt!r} for wave {spec['slug']}")
 
 
@@ -186,9 +214,19 @@ def build_codebook(df: pd.DataFrame, var_labels: dict, value_labels: dict) -> li
             distinct = sorted(present.astype(str).unique())
             if 0 < len(distinct) <= MAX_OBSERVED_VALUES:
                 row["observed_values"] = json.dumps(distinct, ensure_ascii=False)
+        # Negative values in a coded variable are sentinels, not measurements --
+        # WVS uses -1 to -5 for the kinds of non-answer, Arab Barometer Wave V uses
+        # -8 and -9 -- and a release that ships no value labels gives no other clue
+        # that they are there.
+        row["sentinel_codes"] = ""
         if pd.api.types.is_numeric_dtype(s) and row["n_valid"]:
             row["min"] = float(present.min())
             row["max"] = float(present.max())
+            negatives = sorted({float(v) for v in present.unique() if v < 0})
+            if negatives:
+                row["sentinel_codes"] = json.dumps(
+                    [int(v) if float(v).is_integer() else v for v in negatives]
+                )
         else:
             row["min"] = ""
             row["max"] = ""
@@ -213,7 +251,11 @@ def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
     var = spec.get("fieldwork_date_var")
     if spec.get("fieldwork_tunisia") != "derive" or not var or var not in df.columns:
         return None
-    dates = pd.to_datetime(df[var], errors="coerce").dropna()
+    # WVS stores the interview date as the integer 20190515, which only reads as a
+    # date if the format is given.
+    fmt = spec.get("fieldwork_date_format")
+    values = df[var].astype("Int64").astype(str) if fmt else df[var]
+    dates = pd.to_datetime(values, format=fmt, errors="coerce").dropna()
     if dates.empty:
         return None
     return f"{dates.min():%Y-%m-%d} to {dates.max():%Y-%m-%d}"
@@ -264,20 +306,24 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         version=14,
     )
 
-    if fmt == "sav":
-        # CSV, numeric codes.
+    if writes_codes(fmt):
         df.to_csv(dest / f"{stem}-codes.csv", index=False)
-        # CSV, value labels applied wherever the release defines them.
+    else:
+        # The release is label text already; there are no codes to write.
+        (dest / f"{stem}-codes.csv").unlink(missing_ok=True)
+
+    if value_labels or not writes_codes(fmt):
         labelled = df.copy()
         for var, labels in value_labels.items():
             labelled[var] = labelled[var].map(
                 lambda v: labels.get(int(v) if isinstance(v, float) and v.is_integer() else v, v)
             )
+        labelled.to_csv(dest / f"{stem}-labels.csv", index=False)
     else:
-        # The release is label text already; there are no codes to write.
-        (dest / f"{stem}-codes.csv").unlink(missing_ok=True)
+        # Codes with no value labels to substitute: a labelled CSV would just be a
+        # second copy of the codes.
+        (dest / f"{stem}-labels.csv").unlink(missing_ok=True)
         labelled = df
-    labelled.to_csv(dest / f"{stem}-labels.csv", index=False)
 
     na_collisions = scan_csv_na_collisions(labelled)
     for var, values in na_collisions.items():
@@ -290,10 +336,13 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         json.dumps(codebook, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
-    src = raw_dir / f"{spec['raw_file_stem']}.{'sav' if fmt == 'sav' else 'csv'}"
+    suffix = {"sav": "sav", "csv-labels": "csv", "xlsx-headers": "xlsx"}[fmt]
+    src = raw_dir / f"{spec['raw_file_stem']}.{suffix}"
     entry = {
         "series": spec["series"],
         "series_name": series["name"],
+        "series_prefix": series["prefix"],
+        "key": f"{series['prefix']}-{wave_tag(spec)}",
         "wave": spec["wave"],
         "part": spec.get("part"),
         "wave_label": spec["wave_label"],
@@ -306,13 +355,15 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "n_variables_with_data": n_with_data,
         "n_respondents_pooled_release": n_pooled,
         "n_countries_pooled_release": n_countries,
+        "is_country_file": n_countries == 1 and n_pooled == len(df),
         "fieldwork_years_series": spec["fieldwork_years_series"],
         "fieldwork_tunisia": fieldwork_window(df, spec),
         "fieldwork_source": spec["fieldwork_source"],
-        "language": "English (translated instrument and labels)",
+        "language": spec.get("language", "English (translated instrument and labels)"),
         "source_format": fmt,
-        "has_numeric_codes": fmt == "sav",
-        "has_question_text": fmt == "sav",
+        "has_numeric_codes": writes_codes(fmt),
+        "has_value_labels": bool(value_labels),
+        "has_question_text": bool([v for v in var_labels.values() if v.strip()]),
         "source_file": src.name,
         "source_sha256": sha256(src),
         "csv_answers_read_as_missing": na_collisions,
@@ -339,10 +390,20 @@ def render_wave_readme(e: dict, series: dict) -> str:
         "| | |",
         "|---|---|",
         f"| Respondents | {e['n_respondents']:,} |",
-        f"| Variables | {e['n_variables']:,} ({e['n_variables_with_data']:,} with at least one non-missing answer in Tunisia) |",
+        (
+            f"| Variables | {e['n_variables']:,} |"
+            if e["n_variables"] == e["n_variables_with_data"]
+            else f"| Variables | {e['n_variables']:,} "
+            f"({e['n_variables_with_data']:,} with at least one non-missing answer in Tunisia) |"
+        ),
         f"| Fieldwork (Tunisia) | {fw} |",
         f"| Language | {e['language']} |",
-        f"| Pooled release | {e['n_respondents_pooled_release']:,} respondents across {e['n_countries_pooled_release']} countries |",
+        (
+            f"| Source release | Tunisia country file, {e['n_respondents_pooled_release']:,} respondents |"
+            if e["is_country_file"]
+            else f"| Pooled release | {e['n_respondents_pooled_release']:,} respondents "
+            f"across {e['n_countries_pooled_release']} countries |"
+        ),
         f"| Source file | `{e['source_file']}` |",
         f"| Publisher | {series['publisher']} |",
         "",
@@ -354,14 +415,22 @@ def render_wave_readme(e: dict, series: dict) -> str:
     for name, info in e["files"].items():
         lines.append(f"| `{name}` | {info['bytes'] / 1_048_576:.2f} MB | `{info['sha256'][:16]}` |")
 
-    lines += [
-        "",
-        f"The pooled release carries items asked in only some countries, so "
-        f"{e['n_variables'] - e['n_variables_with_data']:,} of the {e['n_variables']:,} variables are",
-        "entirely missing in the Tunisia sub-sample. They are kept so that column positions",
-        "line up with the pooled release; `codebook.csv` reports `n_valid` for each.",
-        "",
-    ]
+    empty = e["n_variables"] - e["n_variables_with_data"]
+    if empty:
+        lines += [
+            "",
+            "The pooled release carries items asked in only some countries, so "
+            f"{empty:,} of the {e['n_variables']:,} variables are entirely missing in the",
+            "Tunisia sub-sample. They are kept so that column positions line up with the",
+            "pooled release; `codebook.csv` reports `n_valid` for each.",
+            "",
+        ]
+    else:
+        lines += [
+            "",
+            "Every variable carries data for at least one respondent.",
+            "",
+        ]
 
     if e["source_format"] == "sav":
         lines += [
@@ -370,6 +439,27 @@ def render_wave_readme(e: dict, series: dict) -> str:
             "full variable and value labels; the `.dta` is identical except that variable",
             "labels longer than 80 characters are truncated, which Stata's format requires.",
             "Consult `codebook.csv` for the untruncated labels.",
+        ]
+    elif e["source_format"] == "xlsx-headers":
+        lines += [
+            "## Derived from the spreadsheet edition",
+            "",
+            "The publisher ships this as an Excel file whose header row carries",
+            "`NAME: question text` in a single cell. The header is split into the variable",
+            "name and its label, so the question text survives into every format here.",
+            "",
+            "What does not survive is the response options: the spreadsheet carries the",
+            "numeric codes and no value labels for them. There is therefore no",
+            "`-labels.csv` — it would be a second copy of `-codes.csv` — and the `.sav` and",
+            "`.dta` hold bare codes. Read the response options from the publisher's codebook.",
+            "",
+            "Negative codes are non-response sentinels rather than measurements.",
+            "`codebook.csv` lists the ones each variable actually uses in `sentinel_codes`,",
+            "and `docs/missing-value-codes.md` collects them per survey. What each one means",
+            "is in the publisher's codebook; this archive does not guess.",
+            "",
+            "Supplying the SPSS release for this survey and switching `source_format` to",
+            "`sav` would add the value labels with no other change.",
         ]
     else:
         lines += [

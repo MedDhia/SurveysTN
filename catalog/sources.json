@@ -7,6 +7,17 @@
       "data_page": "https://www.arabbarometer.org/surveys/",
       "country_variable_values": {
         "tunisia": 21
+      },
+      "prefix": "ab"
+    },
+    "world-values-survey": {
+      "name": "World Values Survey",
+      "prefix": "wvs",
+      "publisher": "WVS Association / JD Systems Institute",
+      "homepage": "https://www.worldvaluessurvey.org",
+      "data_page": "https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
+      "country_variable_values": {
+        "tunisia": 788
       }
     }
   },
@@ -165,6 +176,24 @@
         "file": "docs/questionnaires/ab-w08-questionnaire.pdf",
         "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VIII-Questionnaire-RELEASE-FIN-NOV-2024-1.pdf"
       }
+    },
+    {
+      "series": "world-values-survey",
+      "wave": 7,
+      "wave_label": "Wave 7",
+      "slug": "wave-07",
+      "raw_file_stem": "WVS_Wave_7_Tunisia_Excel_v5.0",
+      "source_format": "xlsx-headers",
+      "country_var": "B_COUNTRY",
+      "country_value": 788,
+      "fieldwork_years_series": "2017-2022",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "J_INTDATE",
+      "fieldwork_date_format": "%Y%m%d",
+      "fieldwork_source": "derived from the J_INTDATE variable in the data file",
+      "questionnaire": null,
+      "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release.",
+      "language": "English (translated instrument; variable labels only, no value labels)"
     }
   ]
 }

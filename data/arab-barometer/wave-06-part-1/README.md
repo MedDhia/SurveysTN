@@ -16,14 +16,14 @@
 |---|---:|---|
 | `arab-barometer-w06p1-tunisia-codes.csv` | 0.34 MB | `625834318466d2ed` |
 | `arab-barometer-w06p1-tunisia-labels.csv` | 1.05 MB | `a77dd963464d9289` |
-| `arab-barometer-w06p1-tunisia.dta` | 0.81 MB | `c54ead4e6eeda9e6` |
-| `arab-barometer-w06p1-tunisia.sav` | 0.78 MB | `1678650cb06b1bb3` |
-| `codebook.csv` | 0.03 MB | `fb01ba2143c2e692` |
-| `codebook.json` | 0.05 MB | `5206a66207761bb7` |
+| `arab-barometer-w06p1-tunisia.dta` | 0.81 MB | `9c9a43e0a4cba56b` |
+| `arab-barometer-w06p1-tunisia.sav` | 0.78 MB | `0a497d95dbb3700e` |
+| `codebook.csv` | 0.03 MB | `dfe9c05a542d1145` |
+| `codebook.json` | 0.05 MB | `be65ef2fdcc3cc20` |
 
-The pooled release carries items asked in only some countries, so 23 of the 98 variables are
-entirely missing in the Tunisia sub-sample. They are kept so that column positions
-line up with the pooled release; `codebook.csv` reports `n_valid` for each.
+The pooled release carries items asked in only some countries, so 23 of the 98 variables are entirely missing in the
+Tunisia sub-sample. They are kept so that column positions line up with the
+pooled release; `codebook.csv` reports `n_valid` for each.
 
 `-codes.csv` holds the numeric codes as stored in the release; `-labels.csv`
 substitutes the value label wherever the release defines one. The `.sav` carries

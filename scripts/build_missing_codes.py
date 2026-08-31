@@ -48,6 +48,12 @@ def main() -> None:
                 for code, label in json.loads(row["value_labels"]).items():
                     if any(m in str(label).lower() for m in MARKERS):
                         counts[(str(code), str(label))] += 1
+            elif row["sentinel_codes"]:
+                # A release with no value labels says nothing about what its
+                # negative codes mean, so they are counted and named as sentinels
+                # rather than given meanings this archive would be inventing.
+                for code in json.loads(row["sentinel_codes"]):
+                    counts[(str(code), "")] += 1
             elif row["observed_values"]:
                 # A label-only release has no codes; the answer text is the value,
                 # so it stands in the code column too.
@@ -65,6 +71,14 @@ def main() -> None:
                 "below rather than as codes. They are ordinary values in the data.",
                 "",
             ]
+        elif not s["has_value_labels"]:
+            lines += [
+                "The release ships codes without value labels, so what each of these means",
+                "is not in the data and is not guessed here. These are the negative codes",
+                "that actually occur, which in this series mark the kinds of non-answer;",
+                "read the meanings off the publisher's codebook before recoding.",
+                "",
+            ]
         lines += [
             "| Code | Label | Variables using it |",
             "|---:|---|---:|",
@@ -72,7 +86,8 @@ def main() -> None:
         for (code, label), n in sorted(
             counts.items(), key=lambda kv: (-kv[1], kv[0][0])
         ):
-            lines.append(f"| `{code}` | {label} | {n} |")
+            shown = label or "not labelled in the release"
+            lines.append(f"| `{code}` | {shown} | {n} |")
         sections.append("\n".join(lines))
 
     body = "\n\n".join(sections)

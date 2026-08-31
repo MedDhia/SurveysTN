@@ -180,3 +180,17 @@ below rather than as codes. They are ordinary values in the data.
 | `97` | Not applicable - nothing is effective | 4 |
 | `99999` | Refused to answer | 3 |
 | `1` | Decline to answer | 1 |
+
+## World Values Survey Wave 7
+
+The release ships codes without value labels, so what each of these means
+is not in the data and is not guessed here. These are the negative codes
+that actually occur, which in this series mark the kinds of non-answer;
+read the meanings off the publisher's codebook before recoding.
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-2` | not labelled in the release | 291 |
+| `-5` | not labelled in the release | 254 |
+| `-1` | not labelled in the release | 247 |
+| `-3` | not labelled in the release | 12 |

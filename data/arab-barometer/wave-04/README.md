@@ -15,14 +15,14 @@
 | File | Size | SHA-256 (first 16) |
 |---|---:|---|
 | `arab-barometer-w04-tunisia-labels.csv` | 4.62 MB | `0fe815de59659e0f` |
-| `arab-barometer-w04-tunisia.dta` | 9.00 MB | `c493c7dd8fa2d77c` |
-| `arab-barometer-w04-tunisia.sav` | 9.85 MB | `2c6f5e1aada59b07` |
-| `codebook.csv` | 0.04 MB | `abc0da63d48fdf08` |
-| `codebook.json` | 0.10 MB | `c108150adda13624` |
+| `arab-barometer-w04-tunisia.dta` | 9.00 MB | `ca9bd99c0338ed1b` |
+| `arab-barometer-w04-tunisia.sav` | 9.85 MB | `e50c8f3b738fc27f` |
+| `codebook.csv` | 0.05 MB | `b23707bc410c1894` |
+| `codebook.json` | 0.11 MB | `2f61899b851d633e` |
 
-The pooled release carries items asked in only some countries, so 42 of the 290 variables are
-entirely missing in the Tunisia sub-sample. They are kept so that column positions
-line up with the pooled release; `codebook.csv` reports `n_valid` for each.
+The pooled release carries items asked in only some countries, so 42 of the 290 variables are entirely missing in the
+Tunisia sub-sample. They are kept so that column positions line up with the
+pooled release; `codebook.csv` reports `n_valid` for each.
 
 ## Derived from a label-only CSV release
 
