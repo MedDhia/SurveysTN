@@ -1,0 +1,150 @@
+{
+  "generated": "2026-08-31",
+  "country": "Tunisia",
+  "surveys": [
+    {
+      "series": "arab-barometer",
+      "series_name": "Arab Barometer",
+      "wave": 2,
+      "wave_label": "Wave II",
+      "slug": "wave-02",
+      "country": "Tunisia",
+      "country_code": 21,
+      "n_respondents": 1196,
+      "n_variables": 468,
+      "n_variables_with_data": 303,
+      "n_respondents_pooled_release": 12782,
+      "n_countries_pooled_release": 10,
+      "fieldwork_years_series": "2010-2011",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_file": "ABII_English.sav",
+      "source_sha256": "6529841b97bd56463490d810ad24ceaa4866066d12e4651a7081682d413606a1",
+      "path": "data/arab-barometer/wave-02",
+      "files": {
+        "arab-barometer-w02-tunisia-codes.csv": {
+          "bytes": 1647040,
+          "sha256": "f554c46c3d83c4ccf2f877400df1c15cb0c08ce8a512276108c53b0d5bf85a50"
+        },
+        "arab-barometer-w02-tunisia-labels.csv": {
+          "bytes": 7354969,
+          "sha256": "a34c145ff076b2ed1abb0979565a825997261273acfdeecd4a0aaafb2e58b19e"
+        },
+        "arab-barometer-w02-tunisia.dta": {
+          "bytes": 4986072,
+          "sha256": "7039278db91950dd49401bf7409b9a66c90f1d890296a72550b3901d50b63d24"
+        },
+        "arab-barometer-w02-tunisia.sav": {
+          "bytes": 4732179,
+          "sha256": "fc886c9dfb13ae65e86e68ead1e514841eefb0a7cf674c6101b04e18bf5bc994"
+        },
+        "codebook.csv": {
+          "bytes": 241776,
+          "sha256": "205dfd561c7623f7e6c7e2e1c9b192d4ee6c924ac9a444027603178bc54b0743"
+        },
+        "codebook.json": {
+          "bytes": 326696,
+          "sha256": "01e8706924a2addc5c6c88f06396a7eda94f77e21de81fdbb721fa8ebf4df546"
+        }
+      },
+      "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes."
+    },
+    {
+      "series": "arab-barometer",
+      "series_name": "Arab Barometer",
+      "wave": 5,
+      "wave_label": "Wave V",
+      "slug": "wave-05",
+      "country": "Tunisia",
+      "country_code": 21,
+      "n_respondents": 2400,
+      "n_variables": 359,
+      "n_variables_with_data": 282,
+      "n_respondents_pooled_release": 27850,
+      "n_countries_pooled_release": 13,
+      "fieldwork_years_series": "2018-2019",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_file": "ArabBarometer_WaveV_English_v2.sav",
+      "source_sha256": "6a5cbad637ce1546833a1d4812ba6d1e8d75f85b5b199b0cf3ec5cf456068dbc",
+      "path": "data/arab-barometer/wave-05",
+      "files": {
+        "arab-barometer-w05-tunisia-codes.csv": {
+          "bytes": 2457466,
+          "sha256": "3fa5981a055e2fedd94e9fd3582369e0d5cd16d5daeba71ba549a22b79856582"
+        },
+        "arab-barometer-w05-tunisia-labels.csv": {
+          "bytes": 5133664,
+          "sha256": "46d1c6c631be141896fd42c99bd97cbcd254d53b4ffe0dab6b5f13ed7d65bdda"
+        },
+        "arab-barometer-w05-tunisia.dta": {
+          "bytes": 7218008,
+          "sha256": "d783a12f3a7651f4771b5753ccc8bf59ee61c20d80123162c439a153b8d60dcd"
+        },
+        "arab-barometer-w05-tunisia.sav": {
+          "bytes": 7004891,
+          "sha256": "1411909a833303431e4624876066a2c4828d24d72499d9e02b7b1397bb30db8c"
+        },
+        "codebook.csv": {
+          "bytes": 103103,
+          "sha256": "2892f56fb2fb061c78b24c21011b3dcb75eab22b24c06f079b4a5abd9cf58cb7"
+        },
+        "codebook.json": {
+          "bytes": 168288,
+          "sha256": "710a4bcde4e5635af808fdfb7076d76ef3f28e320eb59833b6cc92f2f8db1dbb"
+        }
+      },
+      "notes": "Release v2."
+    },
+    {
+      "series": "arab-barometer",
+      "series_name": "Arab Barometer",
+      "wave": 8,
+      "wave_label": "Wave VIII",
+      "slug": "wave-08",
+      "country": "Tunisia",
+      "country_code": 21,
+      "n_respondents": 2406,
+      "n_variables": 690,
+      "n_variables_with_data": 466,
+      "n_respondents_pooled_release": 15627,
+      "n_countries_pooled_release": 8,
+      "fieldwork_years_series": "2023-2024",
+      "fieldwork_tunisia": "2023-09-13 to 2023-11-04",
+      "fieldwork_source": "derived from the DATE variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_file": "ArabBarometer_WaveVIII_English_v3.sav",
+      "source_sha256": "a5e83a953f03dd890e076a51da473051f1cfd1ca2e8ab93c2172eeb2517af998",
+      "path": "data/arab-barometer/wave-08",
+      "files": {
+        "arab-barometer-w08-tunisia-codes.csv": {
+          "bytes": 4255451,
+          "sha256": "a0babe76b695be8d3546e3274df2341ae068e1d098361b0f062eaadf023697ed"
+        },
+        "arab-barometer-w08-tunisia-labels.csv": {
+          "bytes": 10738169,
+          "sha256": "548f6a13972019eec0fb460821cbc684fd6d109c31d045deeae1ca80a85fb8c6"
+        },
+        "arab-barometer-w08-tunisia.dta": {
+          "bytes": 13898528,
+          "sha256": "83e43ad15ff4b52a1edbe8dd394a0cf0586d22907107e5e77eaec10c366fec7b"
+        },
+        "arab-barometer-w08-tunisia.sav": {
+          "bytes": 13477184,
+          "sha256": "340b67e5e1258e35a633f54bd2adc6c50e7f7e08b64bf1bd6a53a96155723bd1"
+        },
+        "codebook.csv": {
+          "bytes": 150747,
+          "sha256": "3cae317515895e38abf6af89405fe9edc8a0b3af4ec39ad7b9801e69d5dbc296"
+        },
+        "codebook.json": {
+          "bytes": 276383,
+          "sha256": "af20beb0cc1c18fb7ecf0d487032cd28d1542e5af53831cd50b86c1b5e48fd47"
+        }
+      },
+      "notes": "Release v3 (archive labelled v2)."
+    }
+  ]
+}

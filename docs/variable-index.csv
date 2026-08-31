@@ -1,0 +1,1392 @@
+variable,w02_name,w02_label,w05_name,w05_label,w08_name,w08_label,n_waves
+COUNTRY,country,country Country of study,country,COUNTRY ID,COUNTRY,Country:,3
+Q1,q1,q1 Province/Governorate/State,q1,GOVERNORATE,Q1,Q1.,3
+Q1001,q1001,q1001 Age,Q1001,,Q1001,Q1001. How old are you?,3
+Q1002,q1002,q1002 Gender,Q1002,DEMOGRAPHICS: GENDER,Q1002,Q1002. Gender,3
+Q1003,q1003,q1003 Level of education,Q1003,DEMOGRAPHICS: HIHGEST LEVEL OF EDUCATION,Q1003,Q1003 What is your highest level of education?,3
+Q1005,q1005,q1005 Are you?,Q1005,DEMOGRAPHICS: EMPLOYMENT STATUS,Q1005,Q1005 Are you…,3
+Q1006,q1006,q1006 Do you work full time or part time?,Q1006,DEMOGRAPHICS: EMPLOYMENT STATUS: FULLTIME VS PARTTIME,Q1006,Q1006 Do you work full time or part time?,3
+Q101,q101,q101 How would you evaluate the current economic situation in your country?,Q101,EVALUATION: CURRENT ECONOMIC SITUATION,Q101,Q101. How would you evaluate the current economic situation in?,3
+Q1010,q1010,q1010 Marital status,Q1010,DEMOGRAPHICS: SOCIAL STATUS,Q1010,Q1010 What is your current social status,3
+Q1012,q1012,q1012 Religion,Q1012,RELIGION,Q1012,Q1012. What is your religion?,3
+Q1016,q1016,q1016 I will read you some statements related to your household income. Which of these statements comes closest to describing your household income?,Q1016,DEMOGRAPHICS: INCOME SITUATION,Q1016,Q1016 Which of these statements comes closest to describing your net household income?,3
+Q1017,q1017,q1017 Does your family receive remittances from someone living abroad?,Q1017,DEMOGRAPHICS: REMITTANCE,Q1017,Q1017. Does your family receive remittances from any immediate or extended family member living abroad?,3
+Q102,q102,q102 What do you think will be the economic situation in your country during the next few years (3-5 years) compared to the current situation?,Q102,EVALUATION: FUTURE ECONMIC SITUATION,Q102,"Q102. In your opinion, what will be the economic situation in  during the next few years (2-3 years) compared to the current situation?",3
+Q103,q103,"q103 Generally speaking, do you think most people are trustworthy or not?",Q103,TRUST: INTERPERSONAL,Q103,"Q103 Generally speaking, would you say that “Most people can be trusted” or “that you must be very careful in dealing with people”?",3
+Q104,q104,q104 Do you think about emigrating from your country?,Q104,MIGRATION: CONSIDERATION EMIGRATION,Q104,Q104. Some people decide to leave their countries to live somewhere else. Have you ever thought about emigrating from?,3
+Q13,q13,q13 Urban/Rural,q13,SETTLEMENT,Q13,Q13 Urban/Rural,3
+Q210,q210,q210 Do you think that there is corruption within the state’s institutions and agencies?,Q210,CORRUPTION: EXTENT NATIONAL LEVEL,Q210,Q210 To what extent do you think that there is corruption within the national state agencies and institutions in your country?,3
+Q404,q404,"q404 In general, to what extent are you interested in politics?",Q404,POLITICAL INTEREST,Q404,"Q404 In general, to what extent are you interested in politics?",3
+Q409,q409,q409 Do you use the internet...,Q409,MEDIA USAGE: INTERNET,Q409,"Q409. On average, how often do you use the Internet?",3
+Q511,q511,"q511 In your opinion, to what extent is your country democratic?",Q511,DEMOCRACY: EXTENT,Q511,"Q511 In your opinion, to what extent is  a democratic country?",3
+Q512,q512,"q512 Suppose there was a scale from 1-10 measuring the extent to which democracy is suitable for your country, with 1 meaning that democracy is absolutely inappropriate for your country and 10 meaning that democracy is completely appropriate for your count",Q512,DEMOCRACY: SUITABILITY,Q512,Q512 What is an appropriate level of democracy for your country?,3
+Q609,q609,"q609 Generally speaking, would you describe yourself as...?",Q609,LEVEL OF RELIGIOSITY,Q609,"Q609. In general, would you describe yourself as religious, somewhat religious, or not religious?",3
+WT,wt,wt Weight,wt,,WT,,3
+A1,a1,a1 Region,a1,REGION,,,2
+ID,,,id,,ID,_id,2
+PSU,,,psu,,PSU,PSU. Enter PSU,2
+Q1001A,,,Q1001A,DEMOGRAPHICS: GOVERNORATE OF ORIGIN,Q1001A,Q1001A Which ${Q1001A_text} are you from?,2
+Q1006A,,,Q1006A,DEMOGRAPHICS: EMPLOYMENT SECTOR,Q1006A,Q1006A And what sector do you work in? Do you work in the…,2
+Q1010B1,,,Q1010B1,DEMOGRAPHICS: CHILDREN,Q1010B1,Q1010B1 Do you have children?,2
+Q1010C,,,Q1010C,DEMOGRAPHICS: SOCIAL STATUS: WIFE WEARS HIJAB,Q1010C,Q1010C Does your spouse wear the hijab?,2
+Q1014A,,,Q1014A,DEMOGRAPHICS: NUMBER OF PEOPLE LIVING AT HH IN EMPLOYMENT,Q1014A,Q1014A How many adults aged 18 years and over living in your household work?,2
+Q1015,q1015,q1015 Monthly household income.,,,Q1015,Q1015 Monthly household income in local currency,2
+Q104B_TUN,,,Q104B_TUN,MIGRATION: DESTINATION COUNTRY: TUNISIA,Q104B_TUN,Q104B_TUN. And are you preparing to emigrate?,2
+Q104C,,,Q104C,MIGRATION: LEAVE WITHOUT PAPERS,Q104C,Q104C. Would you consider leaving  even if you didn’t have the required papers?,2
+Q105,q105,q105 Do you currently feel that your own personal as well as your family’s safety and security are ensured or not?,Q105,EVALUATION: PERSONAL SAFETY/SECURITY,,,2
+Q201A_1,,,Q201A_1,TRUST: GOVERNMENT,Q201A_1,Q201A_1 Government (Council of Ministers),2
+Q201A_2,,,Q201A_2,TRUST: COURTS/LEGAL SYSTEM,Q201A_2,Q201A_2 Courts and legal system,2
+Q201A_3,,,Q201A_3,TRUST: PARLIAMENT,Q201A_3,Q201A_3 The elected council of representatives (the parliament).,2
+Q201A_41,,,Q201A_41,TRUST: REGIONAL GOVERNMENT,Q201A_41,Regional Government,2
+Q201A_5,,,Q201A_5,TRUST: LOCAL GOVERNMENT (MUNICIPAL GOVERNMENT IN LEBANON),Q201A_5,Q201A_5 ${Q201A_5_text},2
+Q201A_7,,,Q201A_7,TRUST: CIVIL SOCIETY ORGANISATIONS,Q201A_7,Q201A_7 Civil society organizations,2
+Q201B_12,,,Q201B_12,TRUST: ISLAMIST MOVEMENT (VARIES BY COUNTRY),Q201B_12,Q201B_12 The main Sunni party,2
+Q201B_13,,,Q201B_13,TRUST: RELIGIOUS LEADERS,Q201B_13,Q201B_13 Religious leaders,2
+Q201B_6,,,Q201B_6,TRUST: THE ARMY,Q201B_6,Q201B_6 The army,2
+Q204A_1,,,Q204A_1,EVALUATION: EDUCATIONAL SYSTEM,Q204A_1,Q204A_1 The educational system in our country,2
+Q204A_2,,,Q204A_2,EVALUATION: HEALTHCARE SYSTEM,Q204A_2,Q204A_2 The healthcare system in our country,2
+Q204_11,,,Q204_11,EVALUATION: GOVERNMENT PERFORMANCE: PROVIDING SECURITY AND ORDER,Q204_11,Q204_11 Providing security and order,2
+Q204_2,,,Q204_2,EVALUATION: GOVERNMENT PERFORMANCE: CREATING JOB OPPORTUNITIES,Q204_2,Q204_2 Creating employment opportunities,2
+Q204_20,,,Q204_20,EVALUATION: GOVERNMENT PERFORMANCE: KEEPING PRICED DOWN,Q204_20,Q204_20 Keeping prices down,2
+Q204_3,,,Q204_3,EVALUATION: GOVERNMENT PERFORMANCE: NARROWING GAP BETWEEN RICH AND POOR,Q204_3,Q204_3 Narrowing the gap between rich and poor,2
+Q2061A,,,Q2061A,MOST IMPORTANT CHALLENGE,Q2061A,Q2061A. What is the most important challenge facing  today?,2
+Q209,q209,q209 To what extent do you agree with this statement: The government does all it can to provide its citizens with all services.,Q209,DIS/AGREEMENT: GOVERNMENT DOES ALL TO PROVIDE NECESSARY SERVICES,,,2
+Q211,q211,"q211 In your opinion, to what extent is the government working to eliminate corruption in your country?",Q211,CORRUPTION: EXTENT TACKLED BY GOVERNMENT,,,2
+Q211B,,,Q211B,CORRUPTION: RASHWA: EDUCATION SERVICES,Q211B,Q211B How widespread do you think corruption is in local government/your municipality/your local council?,2
+Q211C,,,Q211C,CORRUPTION: RASHWA: HEALTHCARE SERVICES,Q211C,Q211C To what extent do you think that there is corruption within the local/municipal agencies and institutions in your country?,2
+Q214,q214,"q214 Have you, or any of your relatives or anyone you know been asked for an approval or a certificate of good conduct from security agencies as a condition to obtain a passport, identity card or any document or permit from state institutions in the area y",Q214,SERVICES: CERTIFICATE OF GOOD BEHAVIOR,,,2
+Q216,q216,q216 To what extent do you agree or disagree with the following statement: Citizens must support the government’s decisions even if they disagree with them?,Q216,DIS/AGREEMENT: CITIZEN MUST SUPPORT GOVERNMENT,,,2
+Q266,,,Q266,CHARITY: MONTHY DONATIONS,Q266,"Q266 In a typical month, do you donate money to a charity or those in need?",2
+Q301A,,,Q301A,ELECTORAL PARTICIPATION: TURNOUT PARLIAMENTARY ELECTIONS,Q301A,Q301A Do you vote in the last parliamentary elections?,2
+Q301B,,,Q301B,ELECTORAL PARTICIPATION: BELLI TURNOUT PARLIAMENTARY ELECTIONS,Q301B,Q301B Will you vote in the next parliamentary election?,2
+Q301C,,,Q301C,ELECTORAL PARTICIPATION: TURNOUT LOCAL ELECTION,Q301C,Did you vote in the last local elections?,2
+Q302,q302,"q302 During the last parliamentary elections held on (date of the last elections in each country), did you attend any meetings or activities related to any electoral campaign?",Q302,ELECTORAL PARTICIPATION: VISITED RALLY DURING PARLIAMENTARY ELECTION,,,2
+Q303A,,,Q303A,EVALUATION: ELECTIONS FREE AND FAIR,Q303A,"Q303A In general, how would you evaluate the last parliamentary elections?",2
+Q421,,,Q421,MEDIA USAGE: BREAKING NEWS: MAIN SOURCE OF INFORMATION,Q421,Q421. What is your primary source of information to follow the breaking news as events unfold?,2
+Q424,,,Q424,MEDIA USAGE: SOCIAL MEDIA,Q424,Q424. How many hours on a typical day do you spend on social media platforms?,2
+Q508,q508,"q508 In your opinion, to what extent is the United States of America a democratic country?",,,Q508,"Q508 In your opinion, to what extent is the United States of America a democratic country?",2
+Q509,q509,"q509 In your opinion, to what extent is China a democratic country?",,,Q509,"Q509 In your opinion, to what extent is China a democratic country?",2
+Q513,q513,"q513 Suppose that there was a scale from 1-10 to measure the extent of your satisfaction with the government, in which 1 means that you were absolutely unsatisfied with its performance and 10 means that you were very satisfied, to what extent are you satis",Q513,EVALUATION: GOVERNMENT PERFORMANCE,,,2
+Q514,q514,q514 To what extent do you agree or disagree with the following statement: “Political reform must be implemented in stages gradually (step by step) rather than immediately?,Q514,DIS/AGREEMENT: POLITICAL REFORM SHOULD OCCUR LITTLE BY LITTLE,,,2
+Q514A,,,Q514A,PREFERNCE: POLITICAL REFORM,Q514A,"Q514A There is talk about political reform in our country. Do you think we should introduce reforms little by little, all at once, or should there be no reforms at all?",2
+Q516A,,,Q516A,PREFERENCE: GOVERMENT,Q516A,Q516A Which of these three statements is closest to your own opinion:,2
+Q516_1,,,Q516_1,DIS/AGREEMENT: DEMOCRACY: ECONOMIC PERFORMANCE WEAK,Q516_1,"Q516_1 Under a democratic system, the country’s economic performance is weak.",2
+Q516_2,,,Q516_2,DIS/AGREEMENT: DEMOCRACY: INDECISIVE AND FULL OF PROBLEMS,Q516_2,Q516_2 Democratic regimes are indecisive and full of problems.,2
+Q516_3,,,Q516_3,DIS/AGREEMENT: DEMOCRACY: INEFFECTIVE IN MAINTING SECURITY/ORDER,Q516_3,Q516_3 Democratic systems are not effective at maintaining order and stability.,2
+Q516_4,,,Q516_4,DIS/AGREEMENT: DEMOCRACY: BETTER THAN OTHER SYSTEMS,Q516_4,"Q516_4 Democratic systems may have problems, yet they are better than other systems.",2
+Q521_1,,,Q521_1,GUARANTEED FREEDOMS: OPINION EXPRESSION,Q521_1,Q521_1 Freedom to express opinions.,2
+Q521_4,,,Q521_4,GUARANTEED FREEDOMS: PROTEST/DEMONSTRATE,Q521_4,Q521_4 Freedom to participate in peaceful protests and demonstrations.,2
+Q601_18,,,Q601_18,WOMEN'S RIGHTS: HUSBANDS SHOULD HAVE FINAL SAY IN FAMILY DECISIONS,Q601_18,Q601_18. A man should have final say in all decisions concerning the family.,2
+Q601_3,,,Q601_3,WOMEN'S RIGHTS: MEN BETTER AT POLITICAL LEADERSHIP,Q601_3,"Q601_3. In general, men are better at political leadership than women.",2
+Q601_4,,,Q601_4,WOMEN'S RIGHTS: UNIVERSITY EDUCATION MORE IMPORTANT FOR MALES,Q601_4,Q601_4. University education for males is more important than university education for females.,2
+Q605,,,Q605,PREFERENCE: SHARIA VS WILL OF PEOPLE,Q605,"Q605 From your point of view, should the laws of our country…",2
+Q606_2,,,Q606_2,POLITICAL ISLAM: DIS/AGREEMENT: COUNTRY BETTER OFF WITH RELIGIOUS LEADERS IN OFF,Q606_2,Q606_2.  is better off if religious people hold public positions in the state.,2
+Q606_3,,,Q606_3,POLITICAL ISLAM: DIS/AGREEMENT: RELGIOUS LEADERS SHOULD INFLUENCE GOVERNMENT DEC,Q606_3,Q606_3. Religious clerics have influence over the decisions of government.,2
+Q606_4,,,Q606_4,POLITICAL ISLAM: DIS/AGREEMENT: RELIGIOUS PRACTICE IS PRIVATE MATTER,Q606_4,Q606_4. Religious practice is a private matter and should be separated from socio-economic life.,2
+Q606_8,,,Q606_8,POLITICAL ISLAM: DIS/AGREEMENT: RELIGIOUS LEADERS AS CORRUPT AS NONRELIGIOUS LEA,Q606_8,"Q606_8. Today, religious leaders are as likely to be corrupt as non-religious leaders.",2
+Q610_6A,,,Q610_6A,RELIGION: FREQUENCY: READING QURAN,Q610_6A,Q610_6A. Listen to or read the Quran daily?,2
+Q610_6B,,,Q610_6B,RELIGION: FREQUENCY: READING BIBLE,Q610_6B,Q610_6B. Listen to or read the Bible daily?,2
+Q610_8,,,Q610_8,RELIGION: FREQUENCY: PRAY FAJR ON TIME,Q610_8,Q610_8. Pray fajr on time.,2
+Q700A_1,,,Q700A_1,ECONOMIC RELATIONS: PREFERENCE: USA,Q700A_1,Q700A_1 The United States,2
+Q700A_12,,,Q700A_12,ECONOMIC RELATIONS: PREFERENCE: UK,Q700A_12,Q700A_12 United Kingdom,2
+Q700A_13,,,Q700A_13,ECONOMIC RELATIONS: PREFERENCE: CHINA,Q700A_13,Q700A_13 China,2
+Q700A_2,,,Q700A_2,ECONOMIC RELATIONS: PREFERENCE: SAUDI,Q700A_2,Q700A_2 Saudi Arabia,2
+Q700A_3,,,Q700A_3,ECONOMIC RELATIONS: PREFERENCE: IRAN,Q700A_3,Q700A_3 Iran,2
+Q700A_4,,,Q700A_4,ECONOMIC RELATIONS: PREFERENCE: TURKEY,Q700A_4,Q700A_4 Turkey,2
+Q700A_8,,,Q700A_8,ECONOMIC RELATIONS: PREFERENCE: RUSSIA,Q700A_8,Q700A_8 Russia,2
+Q703,q703,q703 Is it better for your country...?,Q703,PREFERENCE: GLOBALIZATION,,,2
+Q705,q705,"q705 Some people attribute the lack of development in the Arab world compared to other parts of the world to external factors, while others blame internal factors. In your opinion, which is more important in causing the lack of development in the Arab worl",Q705,EVALUATION: LACK OF DEVELOPMENT ARAB WORLD,,,2
+Q707,q707,"q707 Do you agree or disagree with the following statement: Despite negative U.S. foreign policy, Americans are good people.",Q707,DIS/AGREEMENT: AMERICANS GOOD PEOPLE,,,2
+Q725_1,,,Q725_1,EVALUATION: PRESIDENT TRUMP,Q725_1,Q725_1 United States President Joseph Biden,2
+Q725_2,,,Q725_2,EVALUATION: PRESIDENT PUTIN,Q725_2,Q725_2 Russian President Vladimir Putin,2
+Q725_3,,,Q725_3,EVALUATION: PRESIDENT ERDOGAN,Q725_3,Q725_3 Turkish President Recep Tayyip Erdoğan,2
+Q725_4,,,Q725_4,French President Emmanuel Macron,Q725_4,Q725_4 Chinese President Xi Jinping,2
+STRATUM,,,stratum,,STRATUM,,2
+BLOCK_ID,,,,,BLOCK_ID,BLOCK_ID. Enter block ID,1
+DATE,,,,,DATE,RECORD TODAY’S DATE,1
+E2001B,,,E2001B,,,,1
+EG2036,eg2036,"eg2036 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 6. The Supreme Council of the Armed Forces.",,,,,1
+EG2041,eg2041,eg2041 To what extent do you think the Supreme Council of the Armed Forces will work to 1. Provide the necessary conditions to transform Egypt into a democratic state.,,,,,1
+EG2042,eg2042,eg2042 To what extent do you think the Supreme Council of the Armed Forces will work to 2. Transfer authority to an elected civil government.,,,,,1
+EG2043,eg2043,eg2043 To what extent do you think the Supreme Council of the Armed Forces will work to 3. Conduct free and fair elections.,,,,,1
+EG2044,eg2044,eg2044 To what extent do you think the Supreme Council of the Armed Forces will work to 4. Try figures of the former regime.,,,,,1
+EG301,eg301,eg301 Do you think Egypt is ready to conduct free and fair parliamentary elections...?,,,,,1
+EG302,eg302,eg302 Will you vote in the next parliamentary elections?,,,,,1
+EG3041,eg3041,"eg3041 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 1. That the candidate is from your family/tribe (relatives).",,,,,1
+EG30411,eg30411,"eg30411 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 11. That the candidate supported and joined the events of the Egyptian re",,,,,1
+EG3042,eg3042,"eg3042 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 2. The candidate’s political party or affiliation.",,,,,1
+EG3043,eg3043,"eg3043 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 3. The candidate’s level of education.",,,,,1
+EG3044,eg3044,"eg3044 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 4. The candidate’s piety.",,,,,1
+EG3045,eg3045,"eg3045 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 5. The extent that you agree with the candidate about issues that are impo",,,,,1
+EG3046,eg3046,"eg3046 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 6. The candidate’s social status.",,,,,1
+EG3047,eg3047,"eg3047 Suppose that the parliamentary elections were to be conducted tomorrow and that you have decided to vote, how important would it be that [Insert] in deciding who to vote for? 7. The candidate’s wealth.",,,,,1
+EG305,eg305,eg305 Which of the factors mentioned in the previous question is the most important?,,,,,1
+EG306,eg306,eg306 Do you think that the coming parliamentary elections will be ...,,,,,1
+EG307,eg307,"eg307 Suppose that the parliamentary elections were to be held tomorrow and that you have decided to participate, would you vote for...?",,,,,1
+EG308,eg308,eg308 Which political party or movement do you plan on voting for?,,,,,1
+EG309,eg309,eg309 Do you think that any of the political parties or movements in Egypt will win a majority of seats in the People’s Assembly in the upcoming elections?,,,,,1
+EG309N,eg309n,eg309n Name of the party or movement.,,,,,1
+EG310,eg310,eg310 Do you think Egypt is ready to conduct free and fair presidential elections...?,,,,,1
+EG311,eg311,"eg311 Suppose that presidential elections were to be held tomorrow and that you have decided to participate, who would you vote for?",,,,,1
+EG501C,eg501c,eg501c When did you become a member of this political party?,,,,,1
+EG513,eg513,"eg513 Suppose that there was a scale from 1-10 to measure the extent of your satisfaction with the Mubarak regime, in which 1 means that you were absolutely unsatisfied with the regime and 10 means that you were very satisfied, to what extent were you sati",,,,,1
+EG708A,eg708a,eg708a Do you...?,,,,,1
+EG801,eg801,"eg801 During the protests in Egypt between January 25 and February 11, was your position closer to...?",,,,,1
+EG802,eg802,"eg802 Did you participate in the protests against former president Hosni Mubarak between January 25 and February 11, 2011?",,,,,1
+EG8031,eg8031,eg8031 Did you participate in any of the following protests? 1. January 25 (the beginning of the protests).,,,,,1
+EG8032,eg8032,eg8032 Did you participate in any of the following protests? 2. January 28 (Friday of Anger).,,,,,1
+EG8033,eg8033,eg8033 Did you participate in any of the following protests? 3. February 2 (The Battle of the Camel).,,,,,1
+EG8034,eg8034,eg8034 Did you participate in any of the following protests? 4. February 4 (Friday of Departure).,,,,,1
+EG8035,eg8035,eg8035 Did you participate in any of the following protests? 5. February 6 (Sunday of Martyrs).,,,,,1
+EG8036,eg8036,"eg8036 Did you participate in any of the following protests? 6. February 11 (Friday of Marching, Friday of Challenge or Friday of Victory).",,,,,1
+EG804,eg804,"eg804 Did you offer assistance (such as food, money, transportation, etc.) to those who participated in the protests against former president Mubarak?",,,,,1
+EG805,eg805,"eg805 Did you support the protests against Mubarak through the internet, such as Facebook, Twitter or YouTube?",,,,,1
+EG806,eg806,eg806 Did any of your friends or acquaintances participate in the protests against former president Mubarak between January 25 and February 11?,,,,,1
+EG807,eg807,"eg807 During the period of protests between January 25 and February 11, what source did you depend on the most to follow the events of the revolution?",,,,,1
+EG808,eg808,"eg808 Identify the source (name of TV or radio station, newspaper or website)",,,,,1
+EG8091,eg8091,"eg8091 A number of citizens participated in the protests between January 25 and February 11, 2011 for various reasons. In your opinion, what was the most important reason for the protests?",,,,,1
+EG8092,eg8092,"eg8092 A number of citizens participated in the protests between January 25 and February 11, 2011 for various reasons. In your opinion, what was the second most important reason for the protests?",,,,,1
+EG810,eg810,eg810 Do you have feelings of personal victory or loss with regard to the Egyptian revolution?,,,,,1
+EG8111,eg8111,"eg8111 In your opinion, will the revolution succeed in achieving (Insert)? 1. A democratic political system in Egypt guaranteeing political and civil freedoms and the accountability of all authorities.",,,,,1
+EG8113,eg8113,"eg8113 In your opinion, will the revolution succeed in achieving (Insert)? 3. Better economic opportunities.",,,,,1
+EG8114,eg8114,"eg8114 In your opinion, will the revolution succeed in achieving (Insert)? 4. Respect for human rights.",,,,,1
+EG8115,eg8115,"eg8115 In your opinion, will the revolution succeed in achieving (Insert)? 5. The rule of law.",,,,,1
+EG8116,eg8116,"eg8116 In your opinion, will the revolution succeed in achieving (Insert)? 6. Greater social justice.",,,,,1
+EG8117,eg8117,"eg8117 In your opinion, will the revolution succeed in achieving (Insert)? 7. An important role for Egypt in foreign relations.",,,,,1
+EG812,eg812,eg812 Did you participate in the protests after Mubarak ceded power?,,,,,1
+EG8131,eg8131,eg8131 Why did you participate in the protests after Mubarak ceded power? 1. Labor protests/strikes.,,,,,1
+EG8132,eg8132,eg8132 Why did you participate in the protests after Mubarak ceded power? 2. Protests to demand that the former regime be brought to trial.,,,,,1
+EG8133,eg8133,eg8133 Why did you participate in the protests after Mubarak ceded power? 3. Protests to demand changing the government or certain ministers.,,,,,1
+EG8134,eg8134,eg8134 Why did you participate in the protests after Mubarak ceded power? 4. Protests to combat corruption.,,,,,1
+EG814,eg814,"eg814 In the coming time period, do you prefer the political system in Egypt to be?",,,,,1
+EG815,eg815,eg815 Do you prefer that the state be...?,,,,,1
+EG816,eg816,eg816 Which of the following statements is closest to your opinion regarding a civil state?,,,,,1
+EG817,eg817,eg817 How do you view the relationship between Copts and Muslims in reality?,,,,,1
+EG818,eg818,eg818 Which of the following statements is closest to your opinion regarding the controversy over the constitution?,,,,,1
+EG819,eg819,"eg819 In your opinion, what is the best minimum age for candidacy to the People’s Council?",,,,,1
+IR2001,ir2001,ir2001 Ethnicity.,,,,,1
+IR2003,ir2003,"ir2003 If I asked about your religion, would you prefer the answer be?",,,,,1
+IR2004,ir2004,"ir2004 Please pay attention to the respondent’s clothing, house, and general environment in order to identify their sect or denomination.",,,,,1
+IR2035,ir2035,"ir2035 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 5. The local government.",,,,,1
+IR2123,ir2123,"ir2123 In your opinion, how important are each of the following factors in comparison with a person’s qualifications and experience in obtaining governmental employment? 3. National/ethnic affiliation.",,,,,1
+IR2124,ir2124,"ir2124 In your opinion, how important are each of the following factors in comparison with a person’s qualifications and experience in obtaining governmental employment? 4.Religious/Sectarian/ Denominational affiliation.",,,,,1
+IR3048,ir3048,"ir3048 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 8. That the candidate belongs to your sect.",,,,,1
+IR3049,ir3049,"ir3049 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 9. That the candidate belongs to your ethnicity.",,,,,1
+IR4021,ir4021,ir4021 Do you think that the government in Iraq blocks media coverage of the activities and positions of the opposition in [Insert]? 1. Daily Press.,,,,,1
+IR4022,ir4022,ir4022 Do you think that the government in Iraq blocks media coverage of the activities and positions of the opposition in [Insert]? 2. Satellite Channels,,,,,1
+IR50110,ir50110,ir50110 Are you a member of [Insert] 10. A civil society organization that was not mentioned above.,,,,,1
+IR52010,ir52010,ir52010 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 10. Sectarian affiliation.,,,,,1
+IR52011,ir52011,ir52011 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 11. National/ethnic affiliation.,,,,,1
+IR5225,ir5225,can you tell me the name of 5.the governor,,,,,1
+IR6025,ir6025,ir6025 Members of which of the following groups would you not like to have as neighbors? 5. Immigrants.,,,,,1
+IR6026,ir6026,ir6026 Members of which of the following groups would you not like to have as neighbors? 6. Those who belong to religious sects other than yours.,,,,,1
+JO1020,jo1020,jo1020 Country of origin.,,,,,1
+L2053,l2053,"l2053 I will ask some questions about your ability to obtain certain services. Based on your actual experience, how difficult or easy is it to obtain 3. Appropriate medical treatment in a nearby clinic or public (government) hospital?",,,,,1
+L2054,l2054,"l2054 I will ask some questions about your ability to obtain certain services. Based on your actual experience, how difficult or easy is it to obtain 4. Assistance from public security (the police) when needed?",,,,,1
+L2055,l2055,"l2055 I will ask some questions about your ability to obtain certain services. Based on your actual experience, how difficult or easy is it to obtain 5. Access to the concerned official to file a complaint when you feel that your rights have been violated?",,,,,1
+LP2031,lp2031,"lp2031 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 1. The government.",,,,,1
+LP2032,lp2032,"lp2032 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 2. Parliament.",,,,,1
+LP2033,lp2033,"lp2033 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 3. The judiciary.",,,,,1
+LP2034,lp2034,"lp2034 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 4. The police (Public security).",,,,,1
+MODE,,,mode,MODE OF DATA COLLECTION,,,1
+P712,p712,"p712 What election list did you vote in the legislative elections that took place on January 25th, 2006?",,,,,1
+P713,p713,"p713 If new elections took place today with the endorsement of all political actors, and the same lists that ran in the legislative elections of January 25th, 2006 ran today as well, which list would you vote for?",,,,,1
+Q100,,,Q100,EVALUATION: DIRECTION OF COUNTRY,,,1
+Q1001APPROX,,,,,Q1001APPROX,Q1001APPROX. Could you please tell me your approximate age?,1
+Q1001B,,,Q1001B,DEMOGRAPHICS: YEARS LIVED IN NEIGHBORHOOD,,,1
+Q1001C,,,Q1001C,DEMOGRAPHICS: SOCIAL STRUCTURE NEIGHBORHOOD,,,1
+Q1001D,,,Q1001D,DEMOGRAPHICS: PREFERENCE: NEIGHBORHOOD,,,1
+Q1001E_1,,,,,Q1001E_1,Q1001E_1 Parents,1
+Q1001E_2,,,,,Q1001E_2,Q1001E_2 In-laws,1
+Q1001E_3,,,,,Q1001E_3,Q1001E_3 Your children,1
+Q1001F,,,,,Q1001F,Q1001F Are you the head of the household in your current place of residence?,1
+Q1001G,,,,,Q1001G,Q1001G Do you currently rent or own your place your current place of residence?,1
+Q1001GCC,,,Q1001GCC,DEMOGRAPHICS: APPROXIMATE AGE,,,1
+Q1001H,,,,,Q1001H,Q1001H Do you currently have a mortgage or bank loan that you are paying off on your home?,1
+Q1001YEAR,,,,,Q1001YEAR,Q1001YEAR. What year were you born?,1
+Q1003GCCA,,,Q1003GCCA,DEMOGRAPHICS: YEARS OF SCHOOLING (KUWAIT),,,1
+Q1004,q1004,q1004 Do you work?,,,,,1
+Q1005B,,,,,Q1005B,Q1005B You said you were retired. Do you receive a pension?,1
+Q1005C,,,,,Q1005C,Q1005C Are you looking for a job?,1
+Q1005D,,,,,Q1005D,Q1005D Why are you not looking for a job?,1
+Q1006A_GCC,,,Q1006A_GCC,And what sector do you work in? Do you work in the…,,,1
+Q1006B_2,,,,,Q1006B_2,"Q1006B_2 In a few words, can you tell me what industry you work in? You can say things like construction, education, agriculture, restaurant/food services.",1
+Q1006C,,,Q1006C,DEMOGRAPHICS: EMPLOYMENT: POSITION AT WORK,,,1
+Q1006C_GCC,,,Q1006C_GCC,DEMOGRAPHICS: EMPLOYMENT: POSITION AT WORK (KUWAIT),,,1
+Q1006C_GCC1,,,Q1006C_GCC1,DEMOGRAPHICS: EMPLOYMENT SECTOR (KUWAIT),,,1
+Q1006D,,,Q1006D,DEMOGRAPHICS: EMPLOYMENT: WORK CONTRACT,,,1
+Q1006E,,,Q1006E,DEMOGRAPHICS: EMPLOYMENT: WORK CONTRACT: PERMANENT/TEMPORARY,,,1
+Q1006F,,,Q1006F,DEMOGRAPHICS: EMPLOYMENT: PREVIOUS WORK CONTRACT,,,1
+Q1006F_1,,,Q1006F_1,DEMOGRAPHICS: PREVIOUS EMPLOYMENT STATUS,,,1
+Q1006G,,,Q1006G,DEMOGRAPHICS: EMPLOYMENT: PREVIOUS WORK CONTRACT: PERMANENT/TEMPORARY,,,1
+Q1007,q1007,"q1007 What is your position at work (if you have more than one job, answer with regard to your main job)",,,,,1
+Q1008,q1008,q1008 Employment sector,,,,,1
+Q1009,q1009,"q1009 If you are currently working or have worked in the past, which of the following does your current work provide or your former work if you are retired or unemployed?",,,,,1
+Q1010B2,,,Q1010B2,DEMOGRAPHICS: NUMBER OF CHILDREN,,,1
+Q1010D_1,,,,,Q1010D_1,Q1010D_1 Do you always wear the hijab when you are out in public?,1
+Q1010D_2,,,,,Q1010D_2,Q1010D_2 Have you ever worn the hijab?,1
+Q1011,q1011,q1011 What is your spouse’s profession?,,,,,1
+Q1012A,,,Q1012A,RELIGIOUS SECT,,,1
+Q1012A_CHRISTIAN,,,,,Q1012A_CHRISTIAN,Q1012A_CHRISTIAN. What is your religious denomination?,1
+Q1012A_MUSLIM,,,,,Q1012A_MUSLIM,Q1012A_MUSLIM. What is your religious denomination?,1
+Q1012B2,,,,,Q1012B2,Q1012B2. Do you consider yourself…?,1
+Q1012C_MOR_1,,,,,Q1012C_MOR_1,,1
+Q1012C_MOR_2,,,,,Q1012C_MOR_2,,1
+Q1012C_MOR_3,,,,,Q1012C_MOR_3,,1
+Q1012C_MOR_4,,,,,Q1012C_MOR_4,,1
+Q1012C_MOR_90,,,,,Q1012C_MOR_90,,1
+Q1012C_MOR_98,,,,,Q1012C_MOR_98,,1
+Q1012C_MOR_99,,,,,Q1012C_MOR_99,,1
+Q1013,q1013,q1013 Is the house you live in...?,,,,,1
+Q1014,q1014,"q1014 Income including all wages, salaries and rent allowances.",,,,,1
+Q1014B,,,,,Q1014B,Q104B How many youth under the age of 18 living in your household work?,1
+Q1014C,,,,,Q1014C,"Q1014C. Including yourself, what is the total number of family members who live in this household on a permanent basis?",1
+Q1014D,,,,,Q1014D,"Q1014D. Of the total number of people who live in this household, how many are age 18 and over?",1
+Q1014E,,,,,Q1014E,"Q1014E. Of the total number of people who live in this household, how many are under the age of 18?",1
+Q1015A,,,,,Q1015A,Q1015A Is your net monthly household income less than or greater than ${Q1015A_text},1
+Q1015A_AL,,,Q1015A_AL,DEMOGRAPHICS: ALGERIA: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_EG,,,Q1015A_EG,DEMOGRAPHICS: EGYPT: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_IR,,,Q1015A_IR,DEMOGRAPHICS: IRAQ: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_JO,,,Q1015A_JO,DEMOGRAPHICS: JORDAN: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_KU,,,Q1015A_KU,DEMOGRAPHICS: KUWAIT: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_LEB,,,Q1015A_LEB,DEMOGRAPHICS: LEBANON: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_LI,,,Q1015A_LI,DEMOGRAPHICS: LIBYA: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_MO,,,Q1015A_MO,DEMOGRAPHICS: MOROCCO: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_PAL,,,Q1015A_PAL,DEMOGRAPHICS: PALESTINE: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_QA,,,Q1015A_QA,Is your net household income less than or greater than 40000 QAR?,,,1
+Q1015A_SUD,,,Q1015A_SUD,DEMOGRAPHICS: SUDAN: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_TUN,,,Q1015A_TUN,DEMOGRAPHICS: TUNISIA: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015A_YEM,,,Q1015A_YEM,DEMOGRAPHICS: YEMEN: INCOME HIGHER/LOWER THAN MEDIAN,,,1
+Q1015B_AL,,,Q1015B_AL,"DEMOGRAPHICS: ALGERIA: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_EG,,,Q1015B_EG,"DEMOGRAPHICS: EGYPT: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_IR,,,Q1015B_IR,"DEMOGRAPHICS: IRAQ: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_JO,,,Q1015B_JO,"DEMOGRAPHICS: JORDAN: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_KU,,,Q1015B_KU,"DEMOGRAPHICS: KUWAIT: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_LEB,,,Q1015B_LEB,"DEMOGRAPHICS: LEBANON: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_LI,,,Q1015B_LI,"DEMOGRAPHICS: LIBYA: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_MO,,,Q1015B_MO,"DEMOGRAPHICS: MOROCCO: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_PAL,,,Q1015B_PAL,"DEMOGRAPHICS: PALESTINE: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_QA,,,Q1015B_QA,"You said your total household monthly income is less than 45000 QAR, is it…",,,1
+Q1015B_SUD,,,Q1015B_SUD,"DEMOGRAPHICS: SUDAN: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015B_TUN,,,Q1015B_TUN,"DEMOGRAPHICS: TUNISIA: INCOME, IF LOWER THAN MEDIAN",,,1
+Q1015C_AL,,,Q1015C_AL,"DEMOGRAPHICS: ALGERIA: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_EG,,,Q1015C_EG,"DEMOGRAPHICS: EGYPT: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_IR,,,Q1015C_IR,"DEMOGRAPHICS: IRAQ: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_JO,,,Q1015C_JO,"DEMOGRAPHICS: JORDAN: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_KU,,,Q1015C_KU,"DEMOGRAPHICS: KUWAIT: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_LEB,,,Q1015C_LEB,"DEMOGRAPHICS: LEBANON: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_LI,,,Q1015C_LI,"DEMOGRAPHICS: LIBYA: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_MO,,,Q1015C_MO,"DEMOGRAPHICS: MOROCCO: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_PAL,,,Q1015C_PAL,"DEMOGRAPHICS: PALESTINE: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_QA,,,Q1015C_QA,"You said your total household monthly income is 40,000 QAR or more, is it…",,,1
+Q1015C_SUD,,,Q1015C_SUD,"DEMOGRAPHICS: SUDAN: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015C_TUN,,,Q1015C_TUN,"DEMOGRAPHICS: TUNISIA: INCOME, IF HIGHER THAN MEDIAN",,,1
+Q1015_YEM,,,Q1015_YEM,DEMOGRAPHICS: YEMEN: INCOME (CONTINUOUS),,,1
+Q1018,,,Q1018,DEMOGRAPHICS: NUMBER OF PEOPLE WITH DISABILITY LIVING AT HH,,,1
+Q1018A,,,Q1018A,DEMOGRAPHICS: TYPE OF DISABILITY: PERSON 1,,,1
+Q1018B,,,Q1018B,DEMOGRAPHICS: TYPE OF DISABILITY: PERSON WITH MOST SEVERE DISABILITY,,,1
+Q1018C,,,Q1018C,DEMOGRAPHICS: EVERYDAY TASK INSIDE HOUSE: PERSON 1,,,1
+Q1018D,,,Q1018D,DEMOGRAPHICS: EVERYDAY TASK INSIDE HOUSE: PERSON WITH MOST SEVERE DISABILITY,,,1
+Q1018E,,,Q1018E,DEMOGRAPHICS: EVERYDAY TASK OUTSIDE HOUSE: PERSON 1,,,1
+Q1018F,,,Q1018F,DEMOGRAPHICS: EVERYDAY TASK OUTSIDE HOUSE: PERSON WITH MOST SEVERE DISABILITY,,,1
+Q10191,q10191,q10191 What is your first language?,,,,,1
+Q10192,q10192,q10192 What is your second language?,,,,,1
+Q101A,,,Q101A,EVALUATION: PAST ECONOMIC SITUATION,,,1
+Q1020JO,,,Q1020JO,DEMOGRAPHICS: COUNTRY OF ORIGIN (JORDAN),,,1
+Q1020JO2,,,,,Q1020JO2,,1
+Q1021,,,,,Q1021,Q1021 Which of the following best describes your main source of monthly income?,1
+Q1025,,,,,Q1025,Q1025 Do you have a bank account?,1
+Q1030,,,,,Q1030,Q1030 Have you ever had a job in the past?,1
+Q1034_1,,,,,Q1034_1,None worked,1
+Q1034_2,,,,,Q1034_2,Mother,1
+Q1034_3,,,,,Q1034_3,Grandmother,1
+Q1034_4,,,,,Q1034_4,Daughter,1
+Q1034_5,,,,,Q1034_5,Sister,1
+Q1034_6,,,,,Q1034_6,Aunt,1
+Q1034_7,,,,,Q1034_7,Cousin,1
+Q1034_8,,,,,Q1034_8,Mother-in-Law,1
+Q1034_9,,,,,Q1034_9,Wife,1
+Q1034_98,,,,,Q1034_98,Don’t know,1
+Q1034_99,,,,,Q1034_99,Refused to answer,1
+Q1035,,,,,Q1035,Q1035 Do you ever intend to go back to work in the future?,1
+Q104A,,,Q104A,MIGRATION: REASON FOR EMIGRATION,,,1
+Q104A_1,,,Q104A_1,MIGRATION: REASON: ECONOMY,,,1
+Q104A_2,,,Q104A_2,MIGRATION: REASON: POLITICS,,,1
+Q104A_2_1,,,,,Q104A_2_1,For economic reasons,1
+Q104A_2_2,,,,,Q104A_2_2,For political reasons,1
+Q104A_2_3,,,,,Q104A_2_3,Religious reasons,1
+Q104A_2_4,,,,,Q104A_2_4,Security reasons,1
+Q104A_2_5,,,,,Q104A_2_5,Education opportunities (for self or family members),1
+Q104A_2_6,,,,,Q104A_2_6,Reunite with family,1
+Q104A_2_7,,,,,Q104A_2_7,Corruption,1
+Q104A_2_90,,,,,Q104A_2_90,Other- specify:,1
+Q104A_2_98,,,,,Q104A_2_98,Don’t know,1
+Q104A_2_99,,,,,Q104A_2_99,Refused to answer,1
+Q104A_3,,,Q104A_3,MIGRATION: REASON: RELIGION,,,1
+Q104A_4,,,Q104A_4,MIGRATION: REASON: SECURITY,,,1
+Q104A_5,,,Q104A_5,MIGRATION: REASON: EDUCATION,,,1
+Q104A_6,,,Q104A_6,MIGRATION: REASON: FAMILY REUNION,,,1
+Q104A_7,,,Q104A_7,MIGRATION: REASON: CORRUPTION,,,1
+Q104A_8,,,Q104A_8,MIGRATION: REASON: OTHER,,,1
+Q104A_98,,,Q104A_98,MIGRATION: REASON: DON'T KNOW,,,1
+Q104A_99,,,Q104A_99,MIGRATION: REASON: REFUSED,,,1
+Q104B_1,,,,,Q104B_1,Saudi Arabia,1
+Q104B_10,,,,,Q104B_10,Morocco,1
+Q104B_11,,,,,Q104B_11,Algeria,1
+Q104B_12,,,,,Q104B_12,Tunisia,1
+Q104B_13,,,,,Q104B_13,Turkey,1
+Q104B_14,,,,,Q104B_14,The United States,1
+Q104B_15,,,,,Q104B_15,Canada,1
+Q104B_16,,,,,Q104B_16,The United Kingdom,1
+Q104B_17,,,,,Q104B_17,Eastern Europe,1
+Q104B_18,,,,,Q104B_18,France,1
+Q104B_19,,,,,Q104B_19,Germany,1
+Q104B_2,,,,,Q104B_2,The United Arab Emirates,1
+Q104B_20,,,,,Q104B_20,Spain,1
+Q104B_21,,,,,Q104B_21,Italy,1
+Q104B_22,,,,,Q104B_22,Other Western European countries,1
+Q104B_23,,,,,Q104B_23,Sub-Saharan Africa,1
+Q104B_24,,,,,Q104B_24,China,1
+Q104B_25,,,,,Q104B_25,Australia,1
+Q104B_3,,,,,Q104B_3,Qatar,1
+Q104B_4,,,,,Q104B_4,Bahrain,1
+Q104B_5,,,,,Q104B_5,Kuwait,1
+Q104B_6,,,,,Q104B_6,Oman,1
+Q104B_7,,,,,Q104B_7,Egypt,1
+Q104B_8,,,,,Q104B_8,Jordan,1
+Q104B_9,,,,,Q104B_9,Lebanon,1
+Q104B_90,,,,,Q104B_90,Other- specify:,1
+Q104B_98,,,,,Q104B_98,Don’t know,1
+Q104B_99,,,,,Q104B_99,Refused to answer,1
+Q104B_AL,,,Q104B_AL,MIGRATION: DESTINATION COUNTRY: ALGERIA,,,1
+Q104B_BA,,,Q104B_BA,MIGRATION: DESTINATION COUNTRY: BAHRAIN,,,1
+Q104B_CAN,,,Q104B_CAN,MIGRATION: DESTINATION COUNTRY: CANADA,,,1
+Q104B_DK,,,Q104B_DK,MIGRATION: DESTINATION COUNTRY: DON'T KNOW,,,1
+Q104B_EEU,,,Q104B_EEU,MIGRATION: DESTINATION COUNTRY: EASTERN EUROPE,,,1
+Q104B_EG,,,Q104B_EG,MIGRATION: DESTINATION COUNTRY: EGYPT,,,1
+Q104B_ESP,,,Q104B_ESP,MIGRATION: DESTINATION COUNTRY: SPAIN,,,1
+Q104B_FR,,,Q104B_FR,MIGRATION: DESTINATION COUNTRY: FRANCE,,,1
+Q104B_GER,,,Q104B_GER,MIGRATION: DESTINATION COUNTRY: GERMANY,,,1
+Q104B_IT,,,Q104B_IT,MIGRATION: DESTINATION COUNTRY: ITALY,,,1
+Q104B_JO,,,Q104B_JO,MIGRATION: DESTINATION COUNTRY: JORDAN,,,1
+Q104B_KSA,,,Q104B_KSA,MIGRATION: DESTINATION COUNTRY: SAUDI ARABIA,,,1
+Q104B_KU,,,Q104B_KU,MIGRATION: DESTINATION COUNTRY: KUWAIT,,,1
+Q104B_LEB,,,Q104B_LEB,MIGRATION: DESTINATION COUNTRY: LEBANON,,,1
+Q104B_MO,,,Q104B_MO,MIGRATION: DESTINATION COUNTRY: MOROCCO,,,1
+Q104B_OM,,,Q104B_OM,MIGRATION: DESTINATION COUNTRY: OMAN,,,1
+Q104B_OTHER,,,Q104B_OTHER,MIGRATION: DESTINATION COUNTRY: OTHER,,,1
+Q104B_QA,,,Q104B_QA,MIGRATION: DESTINATION COUNTRY: QATAR,,,1
+Q104B_REF,,,Q104B_REF,MIGRATION: DESTINATION COUNTRY: REFUSED,,,1
+Q104B_SSA,,,Q104B_SSA,MIGRATION: DESTINATION COUNTRY: SUB SAHARAN AFRICA,,,1
+Q104B_TUR,,,Q104B_TUR,MIGRATION: DESTINATION COUNTRY: TURKEY,,,1
+Q104B_UAE,,,Q104B_UAE,MIGRATION: DESTINATION COUNTRY: UNITED ARABIC EMIRATES,,,1
+Q104B_UK,,,Q104B_UK,MIGRATION: DESTINATION COUNTRY: UNITED KINGDOM,,,1
+Q104B_US,,,Q104B_US,MIGRATION: DESTINATION COUNTRY: UNITED STATES,,,1
+Q104B_WEU,,,Q104B_WEU,WESTERN EUROPE,,,1
+Q104B_WEUOTHER,,,Q104B_WEUOTHER,MIGRATION: DESTINATION COUNTRY: WESTERN EUROPE (OTHER),,,1
+Q105A,,,,,Q105A,Q105A How would you rate the safety in your neighborhood?,1
+Q106,q106,q106 To what extent do you feel that you are being treated equally to other citizens in your country?,,,,,1
+Q108_1,,,Q108_1,EVALUATION: ENVIRONMENT: CLIMATE CHANGE,,,1
+Q108_2,,,Q108_2,EVALUATION: ENVIRONMENT: AIR QUALITY,,,1
+Q108_3,,,Q108_3,EVALUATION: ENVIRONMENT: WATER POLLUTION,,,1
+Q108_4,,,Q108_4,EVALUATION: ENVIRONMENT: TRASH,,,1
+Q109AGCC_1,,,Q109AGCC_1,KUWAIT BEST/WORST PLACE TO LIVE: CURRENTLY,,,1
+Q109AGCC_2,,,Q109AGCC_2,KUWAIT BEST/WORST PLACE TO LIVE: PREVIOUS YEAR,,,1
+Q112B,,,,,Q112B,Q112B. Which of the following do you think is the biggest cause of food-related problems in?,1
+Q112_2,,,,,Q112_2,Q112_2. “The food that we bought did not last and we did not have money to get more”,1
+Q114,,,,,Q114,"Q114. Do you think the gap between the rich and the poor a year ago was wider, the same, or narrower than it is now?",1
+Q116,,,,,Q116,Q116 Do you have any savings?,1
+Q118_1,,,,,Q118_1,Q118_1 FIRST MOST IMPORTANT ISSUE,1
+Q118_2,,,,,Q118_2,Q118_2 SECOND MOST IMPORTANT ISSUE,1
+Q123,,,,,Q123,"Q123. Among the following, which should be the top priority for government spending in the coming year?",1
+Q123B,,,,,Q123B,"Q123B. Among the following, which should be the top priority for government spending in the coming year?",1
+Q123_KUW,,,,,Q123_KUW,,1
+Q127_1A,,,,,Q127_1A,Q127_1A Availability of food,1
+Q127_1B,,,,,Q127_1B,Q127_1B Affordability of food,1
+Q127_2A,,,,,Q127_2A,Q127_2A Availability of housing,1
+Q127_2B,,,,,Q127_2B,Q127_2B Affordability of housing,1
+Q129A_1,,,,,Q129A_1,Q129A_1. Rely on less preferred and less expensive foods,1
+Q129A_2,,,,,Q129A_2,Q129A_2. Limit portion size at mealtimes because of lack of money or availability of food,1
+Q130_1,,,,,Q130_1,My household does not take any of these actions,1
+Q130_2,,,,,Q130_2,Borrow money from family or friends to purchase food,1
+Q130_3,,,,,Q130_3,Buy food on credit,1
+Q130_4,,,,,Q130_4,Receive food donations or rely on support programs from the government,1
+Q130_5,,,,,Q130_5,Receive food donations or rely on support programs from religious institutions or charitable organizations,1
+Q130_98,,,,,Q130_98,Don’t know,1
+Q130_99,,,,,Q130_99,Refused to answer,1
+Q1A_PAL,,,,,Q1A_PAL,,1
+Q2011,q2011,"q2011 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 1. The government (the cabinet).",,,,,1
+Q20110,q20110,"q20110 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 10. Trade Unions and Professional Unions.",,,,,1
+Q20112,q20112,"q20112 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 12. The Muslim Brotherhood.",,,,,1
+Q20113,q20113,"q20113 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 13. Tunisian General Union for Labor.",,,,,1
+Q20114,q20114,"q20114 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 14. Al-Nahda Movement/Party.",,,,,1
+Q20115,q20115,"q20115 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 15. The Higher Commission for Fulfilling the Revolution’s Goals, Political Reform, and Democratic Transition (A’yyad Bin A’shour).",,,,,1
+Q20116,q20116,"q20116 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 16. Higher Commission for Elections (ISIE) (Kamal Al-Jandoubi).",,,,,1
+Q2012,q2012,"q2012 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 2. The judiciary (the courts).",,,,,1
+Q2013,q2013,"q2013 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 3. The elected council of representatives (the parliament).",,,,,1
+Q2014,q2014,"q2014 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 4. Public Security (the police).",,,,,1
+Q2015,q2015,"q2015 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 5. Political parties.",,,,,1
+Q2016,q2016,"q2016 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 6. The armed forces (the army).",,,,,1
+Q2017,q2017,"q2017 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 7. Civil society institutions (associations, clubs, volunteer youth groups, etc.).",,,,,1
+Q2018,q2018,"q2018 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 8. The Supreme Council of the Armed Forces.",,,,,1
+Q2019,q2019,"q2019 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 9. Religious leaders.",,,,,1
+Q201A_31B,,,,,Q201A_31B,Q201A_31B President/Head of State,1
+Q201A_31C,,,,,Q201A_31C,Q201A_31C Prime Minister/Head of Government,1
+Q201A_41_GAZA,,,,,Q201A_41_GAZA,,1
+Q201A_41_WB,,,,,Q201A_41_WB,,1
+Q201A_42,,,Q201A_42,TRUST: POLICE,,,1
+Q201B_14,,,,,Q201B_14,Q201B_14 The main Shia party,1
+Q201B_15,,,,,Q201B_15,Q201B_15 Tribal leaders,1
+Q201B_20,,,Q201B_20,TRUST: POLITICAL PARTIES,,,1
+Q201B_31,,,Q201B_31,TRUST: PRESIDENT/PRIME MINISTER,,,1
+Q201B_4,,,,,Q201B_4,Q201B_4 Police,1
+Q201C_32,,,Q201C_32,TRUST: CIVIL SERVICE/PUBLIC ADMINISTRATION,,,1
+Q201C_32GCC,,,Q201C_32GCC,Workers in the Ministries,,,1
+Q201C_37,,,Q201C_37,TRUST: PRIVATE HOSPITALS,,,1
+Q201C_38,,,Q201C_38,TRUST: PRIVATE BANKS,,,1
+Q201C_39,,,Q201C_39,TRUST: PRIVATE UNIVERSITIES,,,1
+Q201C_40,,,Q201C_40,TRUST: DOMESTIC BUSINESS PEOPLE,,,1
+Q202,q202,"q202 In your opinion, is the state currently undertaking far reaching and Fundamental reforms and changes in its institutions and agencies?",,,,,1
+Q2031,q2031,"q2031 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 1. The government.",,,,,1
+Q2032,q2032,"q2032 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 2. Parliament.",,,,,1
+Q2033,q2033,"q2033 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 3. The judiciary.",,,,,1
+Q2034,q2034,"q2034 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 4. The police (Public security).",,,,,1
+Q2041,q2041,q2041 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 1. Managing the economy?,,,,,1
+Q20411,q20411,q20411 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 11. Providing security and order?,,,,,1
+Q20412,q20412,q20412 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 12. Managing the process of democratic transition process?,,,,,1
+Q20413,q20413,q20413 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 13. Establishing an appropriate environment for domestic and foreign investment?,,,,,1
+Q20414,q20414,q20414 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 14. Handling instances of sectarian strife?,,,,,1
+Q20415,q20415,q20415 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 15. Limit the economic and political disparity divergence between the regions?,,,,,1
+Q2042,q2042,q2042 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 2. Creating employment opportunities?,,,,,1
+Q2043,q2043,q2043 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 3. Narrowing the gap between rich and poor?,,,,,1
+Q2044,q2044,q2044 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 4. Improving basic health services?,,,,,1
+Q204A_10,,,,,Q204A_10,,1
+Q204A_3,,,,,Q204A_3,Q204A_3 The government’s performance overall in our country,1
+Q204A_4,,,,,Q204A_4,Q204A_4 The quality of the streets in our country,1
+Q204A_5,,,,,Q204A_5,Q204A_5 Trash collection in our country,1
+Q204A_6,,,,,Q204A_6,Q204A_6 Provision of electricity in our country,1
+Q204A_7,,,,,Q204A_7,Q204A_7 Water supply in our country,1
+Q204A_8,,,,,Q204A_8,Q204A_8 Access to internet services in our country,1
+Q204A_9,,,,,Q204A_9,Q204A_9 Civil defense in our country,1
+Q204B_13,,,Q204B_13,EVALUATION: GOVERNMENT PERFORMANCE: ENVIORNMENT FOR DOMESTIC/FOREIGN INVESTMENT,,,1
+Q204B_15,,,Q204B_15,EVALUATION: GOVERNMENT PERFORMANCE: LIMIT ECONOMIC/POLITICAL DISPARITY OF REGION,,,1
+Q204C_13,,,Q204C_13,EVALUATION: GOVERNMENT PERFORMANCE: ENVIORNMENT FOR INVESTMENT,,,1
+Q204C_15,,,Q204C_15,EVALUATION: GOVERNMENT PERFORMANCE: LIMIT ECONOMIC DISPARITY OF REGIONS,,,1
+Q204_22,,,Q204_22,EVALUATION: GOVERNMENT PERFORMANCE: EDUCATIONAL NEEDS,,,1
+Q2053,q2053,"q2053 I will ask some questions about your ability to obtain certain services. Based on your actual experience, how difficult or easy is it to obtain 3. Appropriate medical treatment in a nearby clinic or public (government) hospital?",,,,,1
+Q2054,q2054,"q2054 I will ask some questions about your ability to obtain certain services. Based on your actual experience, how difficult or easy is it to obtain 4. Assistance from public security (the police) when needed?",,,,,1
+Q2055,q2055,"q2055 I will ask some questions about your ability to obtain certain services. Based on your actual experience, how difficult or easy is it to obtain 5. Access to the concerned official to file a complaint when you feel that your rights have been violated?",,,,,1
+Q205_1,,,Q205_1,EVALUATION: SERVICES: RECEIVING ID CARD,,,1
+Q205_4,,,Q205_4,EVALUATION: SERVICES: HELP FROM THE POLICE (PUBLIC SECURITY IN LEBANON),,,1
+Q205_4LEB,,,Q205_4LEB,EVALUATION: SERVICES: INTERNAL SECURITY FORCES,,,1
+Q205_6,,,Q205_6,EVALUATION: SERVICES: REGISTERING A BUSINESS,,,1
+Q205_7,,,Q205_7,EVALUATION: SERVICES: GETTING A BUILDING PERMIT,,,1
+Q2061,q2061,q2061 What is the most important challenge facing your country today?,,,,,1
+Q2061A_KUW,,,,,Q2061A_KUW,,1
+Q2061B,,,Q2061B,SECOND MOST IMPORTANT CHALLENGE,,,1
+Q2062,q2062,q2062 What is the second most important challenge facing your country today?,,,,,1
+Q207,q207,q207 To what extent do you think the government will be able to address these two challenges within the next five years?,,,,,1
+Q208,q208,"q208 In your opinion, what is the most important challenge the Arab world currently faces?",,,,,1
+Q209B,,,Q209B,AGREEMENT: CHARITABLE/SOCIAL ORGANIZATIONS DO EVERYTHING TO PROVIDE NECESSARY SE,,,1
+Q211A,,,Q211A,CORRUPTION: EXTENT LOCAL LEVEL,,,1
+Q211D,,,Q211D,SERVICES: ONLINE FEES,,,1
+Q211_2,,,,,Q211_2,"Q211_2 In your opinion, to what extent is the national government working to crackdown on corruption in your country",1
+Q2121,q2121,"q2121 In your opinion, how important are each of the following factors in comparison with a person’s qualifications and experience in obtaining governmental employment? 1. The applicant’s political orientation.",,,,,1
+Q2122,q2122,"q2122 In your opinion, how important are each of the following factors in comparison with a person’s qualifications and experience in obtaining governmental employment? 2. The status of the applicant’s tribe or family in the country.",,,,,1
+Q213,q213,"q213 Some people say that nowadays it is impossible to obtain a job without connections, while others say that jobs are only available to qualified candidates. Based on a recent experience (or experiences) you are personally aware of, do you think that...",,,,,1
+Q213A_1,,,Q213A_1,CORRUPTION: DEFINITION: BUYING STH THAT WAS STOLEN,,,1
+Q213A_2,,,Q213A_2,CORRUPTION: DEFINITION: OFFICIAL PROVDING WASTA FOR RELATIVES,,,1
+Q213A_3,,,Q213A_3,CORRUPTION: DEFINITION: SIDE PAYMENT TO SPEED UP SERVICE,,,1
+Q213B,,,Q213B,CORRUPTION: WASTA: JOBS,,,1
+Q215,q215,"q215 If you had a claim against someone and you were not able to rectify the situation through available personal and social means, would you resort to the judiciary to restore your rights?",,,,,1
+Q217,q217,"q217 In your opinion, are people nowadays able to criticize the government without fear?",,,,,1
+Q2181,q2181,q2181 Do you agree or disagree with the following statements? 1. Government employees are aware of citizens’ needs.,,,,,1
+Q2182,q2182,q2182 Do you agree or disagree with the following statements? 2. Political leaders are concerned with the needs of ordinary citizens.,,,,,1
+Q2183,q2183,q2183 Do you agree or disagree with the following statements? 3. The government takes the opinions of citizens seriously.,,,,,1
+Q2185,q2185,"q2185 Do you agree or disagree with the following statements? 5. Sometimes, politics are so complicated that I cannot understand what is happening.",,,,,1
+Q218_2,,,Q218_2,DIS/AGREEMENT: POLITICAL LEADERS ARE CONCERNED WITH CITIZENS' NEEDS,,,1
+Q218_5,,,Q218_5,DIS/AGREEMENT: POLITICS TOO COMPLICATED,,,1
+Q218_6,,,Q218_6,DIS/AGREEMENT: STATE HAS RIGHT TO DEMAND TAXES,,,1
+Q220LEB,,,,,Q220LEB,,1
+Q262,,,,,Q262,Q262. Which of the following economic issues do you think is the most serious one facing?,1
+Q263,,,Q263,CHARITY: HELPING THE POOR,,,1
+Q265,,,Q265,PREFERENCE: TAXES VS. SADAQA,,,1
+Q270_1,,,,,Q270_1,Q270_1 Get a job,1
+Q270_2,,,,,Q270_2,Q270_2 Get legal documents from public institutions,1
+Q271_1,,,,,Q271_1,Q271_1 Get a job,1
+Q271_2,,,,,Q271_2,Q271_2 Get legal documents from public institutions,1
+Q273C,,,,,Q273C,Q273C Which of the following actions would you think is most effective to influence a national government decision?,1
+Q273C_KUW,,,,,Q273C_KUW,,1
+Q273D,,,,,Q273D,Q273D Which of the following actions would you think is least effective to influence a national government decision?,1
+Q273D_KUW,,,,,Q273D_KUW,,1
+Q274A,,,,,Q274A,"Q274A In the past 12 months, have you experienced any electricity outages:",1
+Q274B,,,,,Q274B,"Q274B In the past 12 months, have you experienced water outages:",1
+Q276,,,,,Q276,Q276 How well do you think the government responds to what people want?,1
+Q277_1,,,,,Q277_1,Q277_1 Robberies,1
+Q277_2,,,,,Q277_2,Q277_2 Street violence and fights,1
+Q301,q301,q301 Did you vote in the last parliamentary elections that were held on (date of the last elections),,,,,1
+Q301BGCC,,,Q301BGCC,Did you vote in the last municipal council elections [OMAN: SHURA COUNCIL ELECTI,,,1
+Q303,q303,"q303 In general, how would you evaluate the last parliamentary elections that were held on (date of the last elections in each country)?",,,,,1
+Q303B_1,,,,,Q303B_1,Q303B_1 Votes are counted fairly,1
+Q303B_2,,,,,Q303B_2,Q303B_2 Voters are bribed,1
+Q303B_3,,,,,Q303B_3,Q303B_3Voters are offered a genuine choice in elections,1
+Q3041,q3041,"q3041 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 1. That the candidate is from your family/tribe (relatives).",,,,,1
+Q3042,q3042,"q3042 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 2. The candidate’s political party or affiliation.",,,,,1
+Q3043,q3043,"q3043 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 3. The candidate’s level of education.",,,,,1
+Q3044,q3044,"q3044 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 4. The candidate’s religiosity.",,,,,1
+Q3045,q3045,"q3045 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 5. The extent to which you agree with the candidate about issues that are important to",,,,,1
+Q3046,q3046,"q3046 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 6. The candidate’s social status.",,,,,1
+Q3047,q3047,"q3047 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the parliamentary, municipal or local elections? 7. The candidate’s wealth.",,,,,1
+Q305,q305,q305 Which of the factors mentioned in the previous question is the most important?,,,,,1
+Q3061,q3061,q3061 I want to ask about your opinion regarding the role of parliament in forming certain public policies. To what extent do you that think parliament (the elected council of representatives) has a role in the formation of [Insert] policies? 1. Economic.,,,,,1
+Q3062,q3062,q3062 I want to ask about your opinion regarding the role of parliament in forming certain public policies. To what extent do you that think parliament (the elected council of representatives) has a role in the formation of [Insert] policies? 2. Social.,,,,,1
+Q3063,q3063,q3063 I want to ask about your opinion regarding the role of parliament in forming certain public policies. To what extent do you that think parliament (the elected council of representatives) has a role in the formation of [Insert] policies? 3. Foreign.,,,,,1
+Q4011,q4011,q4011 To what extent do you think that the local media is [Insert] currently? 1. Fair and honest in presenting the news.,,,,,1
+Q4012,q4012,q4012 To what extent do you think that the local media is [Insert] currently? 2. Presents different opinions.,,,,,1
+Q4013,q4013,q4013 To what extent do you think that the local media is [Insert] currently? 3. Conveys citizens’ problems to officials.,,,,,1
+Q402,q402,q402 Do you think that the government in your country blocks media coverage of the activities and positions of the opposition in the daily press?,,,,,1
+Q403,q403,"q403 When you wish to read foreign newspapers, magazines, books, or to view websites on the internet, do you sometimes find that they are blocked by the government and/or its agencies?",,,,,1
+Q405,q405,q405 To what extent do you follow political news in your country?,,,,,1
+Q4061,q4061,"q4061 In general, do you follow political news through [Insert]? 1. The television.",,,,,1
+Q4062,q4062,"q4062 In general, do you follow political news through [Insert]? 2. The daily press.",,,,,1
+Q4063,q4063,"q4063 In general, do you follow political news through [Insert]? 3. The weekly press.",,,,,1
+Q4064,q4064,"q4064 In general, do you follow political news through [Insert]? 4. The radio.",,,,,1
+Q4065,q4065,"q4065 In general, do you follow political news through [Insert]? 5. The internet.",,,,,1
+Q407,q407,q407 Which of the following sources is most trustworthy with regard to local political news?,,,,,1
+Q408,q408,q408 Identify the source.,,,,,1
+Q4101,q4101,q4101 Do you use the internet in order to [Insert]? 1. Find out about political activities taking place in your country.,,,,,1
+Q4102,q4102,q4102 Do you use the internet in order to [Insert]? 2. Express your opinion about political issues.,,,,,1
+Q4103,q4103,q4103 Do you use the internet in order to [Insert]? 3. Find out about opposing political opinions in your country.,,,,,1
+Q412A10,,,Q412A10,MEDIA USAGE: SOCIAL MEDIA: SNAPCHAT,,,1
+Q412A14,,,Q412A14,MEDIA USAGE: SOCIAL MEDIA: OTHER,,,1
+Q412A3,,,Q412A3,MEDIA USAGE: SOCIAL MEDIA: FACEBOOK,,,1
+Q412A4,,,Q412A4,MEDIA USAGE: SOCIAL MEDIA: TWITTER,,,1
+Q412A6,,,Q412A6,MEDIA USAGE: SOCIAL MEDIA: INSTAGRAM,,,1
+Q412A7,,,Q412A7,MEDIA USAGE: SOCIAL MEDIA: YOUTUBE,,,1
+Q412A8,,,Q412A8,MEDIA USAGE: SOCIAL MEDIA: WHATSAPP,,,1
+Q412A9,,,Q412A9,MEDIA USAGE: SOCIAL MEDIA: TELEGRAM,,,1
+Q412A98,,,Q412A98,MEDIA USAGE: SOCIAL MEDIA: DON'T KNOW,,,1
+Q412A99,,,Q412A99,MEDIA USAGE: SOCIAL MEDIA: REFUSED,,,1
+Q412A_1,,,,,Q412A_1,Facebook,1
+Q412A_10,,,,,Q412A_10,Signal,1
+Q412A_11,,,,,Q412A_11,TikTok,1
+Q412A_12,,,,,Q412A_12,Reddit,1
+Q412A_13,,,,,Q412A_13,Mastodon,1
+Q412A_14,,,,,Q412A_14,BeReal,1
+Q412A_2,,,,,Q412A_2,Twitter,1
+Q412A_3,,,,,Q412A_3,Instagram,1
+Q412A_4,,,,,Q412A_4,YouTube,1
+Q412A_5,,,,,Q412A_5,WhatsApp,1
+Q412A_6,,,,,Q412A_6,Telegram,1
+Q412A_7,,,,,Q412A_7,Snapchat,1
+Q412A_8,,,,,Q412A_8,Viber,1
+Q412A_9,,,,,Q412A_9,Clubhouse,1
+Q412A_90,,,,,Q412A_90,Other,1
+Q412A_98,,,,,Q412A_98,Don’t know,1
+Q412A_99,,,,,Q412A_99,Refused to answer,1
+Q423_1,,,Q423_1,MEDIA USAGE: WATCHING TV,,,1
+Q423_2,,,Q423_2,MEDIA USAGE: LISTINGING TO RADIO,,,1
+Q423_3,,,Q423_3,MEDIA USAGE: READING PRINT EDITION OF NEWSPAPER,,,1
+Q431_1A,,,,,Q431_1A,Q431_1A. Your government monitoring your online activity,1
+Q431_1B,,,,,Q431_1B,Q431_1B. A foreign government monitoring your online activity,1
+Q431_2,,,,,Q431_2,Q431_2. Social media platforms themselves censoring your online activity,1
+Q432B,,,,,Q432B,Q432B. What is the main topic that social media influencers you follow talk about most of the time?,1
+Q432_1,,,,,Q432_1,Clicking like on or sharing their updates,1
+Q432_2,,,,,Q432_2,Subscribe to their accounts/channels,1
+Q432_3,,,,,Q432_3,Comment or ask questions about their posts,1
+Q432_4,,,,,Q432_4,Try products/services they recommend,1
+Q432_5,,,,,Q432_5,"Adopt their political, religious, or cultural views",1
+Q432_97,,,,,Q432_97,I do not interact with social media influencers,1
+Q432_98,,,,,Q432_98,Don’t know,1
+Q432_99,,,,,Q432_99,Refused to answer,1
+Q501,,,Q501,MEMBERSHIP: ORGANIZATION,,,1
+Q5011,q5011,q5011 Are you a member of [Insert] 1. A political party.,,,,,1
+Q5012,q5012,q5012 Are you a member of [Insert] 2. A charitable society.,,,,,1
+Q5013,q5013,q5013 Are you a member of [Insert] 3. A professional association/trade union.,,,,,1
+Q5014,q5014,q5014 Are you a member of [Insert] 4. A youth / cultural / sports organization.,,,,,1
+Q5015,q5015,q5015 Are you a member of [Insert] 5. A family/tribal association.,,,,,1
+Q5016,q5016,q5016 Are you a member of [Insert] 6. A local development association.,,,,,1
+Q5017,q5017,q5017 Are you a member of [Insert] 7. A cooperative association.,,,,,1
+Q501A,,,Q501A,VOLUNTEERING: ORGANIZATION,,,1
+Q501D,,,,,Q501D,"Q501D In a typical month, do you volunteer your time to do unpaid work for or support a cause that you care about?",1
+Q501E_2,,,,,Q501E_2,Q501E_2 Open Ansewr,1
+Q5021,q5021,"q5021 Here is a set of activities that citizens usually take part in. During the past three years, did you participate in [Insert]? 1. Attending a meeting to learn about a subject or sign a petition.",,,,,1
+Q5022,q5022,"q5022 Here is a set of activities that citizens usually take part in. During the past three years, did you participate in [Insert]? 2. Participating in a protest, march or sit-in.",,,,,1
+Q502_1,,,Q502_1,NONELECTORAL PARTICIPATION: MEETING/PETITION,,,1
+Q502_2,,,Q502_2,NONELECTORAL PARTICIPATION: PROTEST,,,1
+Q502_4,,,Q502_4,NONELECTORAL PARTICIPATION: USE FORCE FOR POLITICAL CAUSE,,,1
+Q503,q503,"q503 Which of the existing parties is closest to representing your political, social and economic aspirations?",,,,,1
+Q503A,,,Q503A,CLOSENESS: PARTY,,,1
+Q503A_2,,,,,Q503A_2,"Q503A_2 Which party, if any, do you feel closest to?",1
+Q504,q504,"q504 If you were to evaluate the state of democracy and human rights in your country today, would you say that they are...?",,,,,1
+Q505,q505,"q505 Supposing there was a scale measuring the level of democracy between 0 and 10, in which 0 indicates no democracy whatsoever and 10 means that the state is democratic to the greatest extent possible. In your opinion, to what extent is Iran a democratic",,,,,1
+Q505A,,,Q505A,PREFERENCE: RELIGIOUS VS NON-RELIGIOUS PARTY,,,1
+Q506,q506,"q506 In your opinion, to what extent is Turkey a democratic country?",,,,,1
+Q507,q507,"q507 In your opinion, to what extent is Saudi Arabia a democratic country?",,,,,1
+Q508B,,,,,Q508B,"Q508B In your opinion, to what extent is Germany a democratic country?",1
+Q510,q510,"q510 In your opinion, to what extent is Israel a democratic country?",,,,,1
+Q5151,q5151,"q5151 There is a difference in opinion among people regarding the most important features of democracy. If you had to choose one, which of the following features would you say is the most important?",,,,,1
+Q5152,q5152,q5152 There is a difference in opinion among people regarding the most important features of democracy.  Which of the following features would you say is the second most important?,,,,,1
+Q515A2,,,Q515A2,DEMOCRACY: MAIN CHARACTERISTIC,,,1
+Q5161,q5161,"q5161 To what extent do you agree or disagree with the following statements? 1. Under a democratic system, the country’s economic performance is weak.",,,,,1
+Q5162,q5162,q5162 To what extent do you agree or disagree with the following statements? 2. Democratic regimes are indecisive and full of problems.,,,,,1
+Q5163,q5163,q5163 To what extent do you agree or disagree with the following statements? 3. Democratic systems are not effective at maintaining order and stability.,,,,,1
+Q5164,q5164,"q5164 To what extent do you agree or disagree with the following statements? 4. A democratic system may have problems, yet it is better than other systems.",,,,,1
+Q5165,q5165,q5165 To what extent do you agree or disagree with the following statements? 5. The citizens in your country are not prepared for a democratic system.,,,,,1
+Q5167,q5167,q5167 To what extent do you agree or disagree with the following statements? 7. Democracy negatively affects social and ethical values in your country.,,,,,1
+Q516B_1,,,,,Q516B_1,"Q516B_1 Under a non-democratic system, the country’s economic performance is weak.",1
+Q516B_2,,,,,Q516B_2,Q516B_2 Non-democratic regimes are indecisive and full of problems.,1
+Q516B_3,,,,,Q516B_3,Q516B_3 Non-democratic systems are not effective at maintaining order and stability.,1
+Q516B_4,,,,,Q516B_4,"Q516B_4 Non-democratic systems may have problems, yet they are better than other systems.",1
+Q5171,q5171,"q5171 I will describe different political systems to you – for each one would you say it is very good, good, bad, or very bad? 1. A democratic political system (public freedoms, guarantees equality in political and civil rights, alternation of power, and",,,,,1
+Q5172,q5172,"q5172 I will describe different political systems to you– for each one would you say it is very good, good, bad, or very bad? 2. A political system with an authoritarian president (non-democratic) who is indifferent to parliament and elections.",,,,,1
+Q5173,q5173,"q5173 I will describe different political systems to you– for each one would you say it is very good, good, bad, or very bad? 3. A political system controlled by experts who make decisions that they think are most appropriate for the country.",,,,,1
+Q5181,q5181,"q5181 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 1. A parliamentary system in which nationalist, left wing, right wing, and Islamist parties compete in",,,,,1
+Q5182,q5182,q5182 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 2. A parliamentary system in which only Islamist parties compete in parliamentary elections.,,,,,1
+Q5183,q5183,q5183 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 3. A political system governed by a strong authority which makes decisions without considering elector,,,,,1
+Q5184,q5184,q5184 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 4. A system governed by Islamic law without elections or political parties.,,,,,1
+Q5185,q5185,q5185 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 5. A parliamentary system in which only non-religious parties compete in parliamentary elections.,,,,,1
+Q518_1,,,,,Q518_1,"Q518_1 A parliamentary system in which nationalist, left wing, right wing, and Islamist parties compete in parliamentary elections.",1
+Q518_3,,,,,Q518_3,Q518_3 A political system governed by a strong authority which makes decisions without considering electoral results or the opinions of the opposition.,1
+Q518_4,,,,,Q518_4,Q518A_4 A system governed by Islamic law in which there are no political parties or elections.,1
+Q518_6,,,,,Q518_6,Q518_6 A government that provides for the needs of its citizens without giving them the right to participate in the political process,1
+Q5191,q5191,q5191 Please identify the extent of your agreement or disagreement with each of these statements. 1. Citizens have the ability to influence government policies.,,,,,1
+Q5192,q5192,q5192 Please identify the extent of your agreement or disagreement with each of these statements. 2. The judiciary penalizes guilty persons even if they are senior officials in the government.,,,,,1
+Q5194,q5194,q5194 Please identify the extent of your agreement or disagreement with each of these statements. 4. Citizens can join non- governmental organizations without fear.,,,,,1
+Q5201,q5201,q5201 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 1. Previous political experience.,,,,,1
+Q5202,q5202,q5202 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 2. Openness to political ideas.,,,,,1
+Q5203,q5203,q5203 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 3. Hard work and extensive effort.,,,,,1
+Q5204,q5204,q5204 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 4. The ability to speak publicly and communicate with people.,,,,,1
+Q5206,q5206,q5206 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 6. Integrity.,,,,,1
+Q5207,q5207,q5207 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 7. Piety.,,,,,1
+Q5208,q5208,q5208 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 8. Supported and joined the events of the Egyptian revolution between January 25 and February 11.,,,,,1
+Q5211,q5211,q5211 To what extent do you think that [Insert] is guaranteed in your country? 1. Freedom to express opinions.,,,,,1
+Q5212,q5212,q5212 To what extent do you think that [Insert] is guaranteed in your country? 2. Freedom of the press.,,,,,1
+Q5213,q5213,q5213 To what extent do you think that [Insert] is guaranteed in your country? 3. Freedom to join political parties.,,,,,1
+Q5214,q5214,q5214 To what extent do you think that [Insert] is guaranteed in your country? 4. Freedom to participate in peaceful protests and demonstrations.,,,,,1
+Q5215,q5215,q5215 To what extent do you think that [Insert] is guaranteed in your country? 5. Freedom to join NGOs and civil society organizations.,,,,,1
+Q5216,q5216,q5216 To what extent do you think that [Insert] is guaranteed in your country? 6. Freedom to sue the government and its agencies.,,,,,1
+Q5217,q5217,"q5217 To what extent do you think that [Insert] is guaranteed in your country? 7. Freedom to vote (parliamentary, municipal and provincial elections).",,,,,1
+Q521A_3,,,Q521A_3,DIS/AGREEMENT: MORE TRUST INFORMATION ON SOCIAL MEDIA THAN TRADITIONAL MEDIA,,,1
+Q521A_4,,,Q521A_4,DIS/AGREEMENT: WELL INFORMED ABOUT POLITICS,,,1
+Q521_2A,,,,,Q521_2A,Q521_2A Freedom of the media to criticize the things government does.,1
+Q521_2B,,,,,Q521_2B,Q521_2B Freedom of the press,1
+Q521_5,,,Q521_5,GUARANTEED FREEDOMS: CIVIL ASSOCIATIONS,,,1
+Q521_6,,,,,Q521_6,Q521_6 Freedom of religion,1
+Q5221,q5221,q5221 Can you tell me the name of [Insert]? 1. The foreign minister.,,,,,1
+Q5222,q5222,q5222 Can you tell me the name of [Insert]? 2. The speaker of the house.,,,,,1
+Q5223,q5223,q5223 Can you tell me the name of [Insert]? 3. The minister of the interior.,,,,,1
+Q5224,q5224,q5224 Can you tell me the name of [Insert]? 4. Mayor/governor.,,,,,1
+Q523,q523,q523 To what extent do you think the lack of respect for human rights for security purposes in your country is justified?,,,,,1
+Q523GCC,,,Q523GCC,To what degree would you agree that a country is justified in violating human ri,,,1
+Q5241,q5241,"q5241 An anti-terrorism law was issued in some Arab countries, and I would like to know your opinion of this law. To what extent do you think that enforcing this law contributes to (Insert) 1. Combating terrorism.",,,,,1
+Q5242,q5242,"q5242 An anti-terrorism law was issued in some Arab countries, and I would like to know your opinion of this law. To what extent do you think that enforcing this law contributes to (Insert) 2. Violating the public freedoms of citizens.",,,,,1
+Q5243,q5243,"q5243 An anti-terrorism law was issued in some Arab countries, and I would like to know your opinion of this law. To what extent do you think that enforcing this law contributes to (Insert) 3. Limiting the peaceful activities of the opposition.",,,,,1
+Q533_4,,,,,Q533_4,Q533_4 Would you disapprove or approve of the following alternatives?,1
+Q534_1,,,,,Q534_1,Q534_1. Using a landline telephone,1
+Q534_2,,,,,Q534_2,Q534_2. Using a mobile phone (to talk),1
+Q534_3,,,,,Q534_3,Q534_3. Sending text messages on a mobile phone,1
+Q534_4,,,,,Q534_4,Q534_4. Using an online chatting or messenger service (like WhatsApp or Facebook Messenger),1
+Q534_5,,,,,Q534_5,Q534_5. Sending an email,1
+Q537A,,,,,Q537A,Q537 How would you rate the state of democracy in  now compared with before the Arab Spring protests of 2010-2011?,1
+Q540B_1,,,,,Q540B_1,Q540B_1 Extreme weather temperatures,1
+Q540B_2,,,,,Q540B_2,Q540B_2 Air pollution,1
+Q540B_3,,,,,Q540B_3,Q540B_3 Water scarcity,1
+Q540_1,,,,,Q540_1,Q540_1. Which of the following are the first and second biggest environmental challenges facing?,1
+Q540_2,,,,,Q540_2,Q540_2. Which of the following are the first and second biggest environmental challenges facing?,1
+Q546,,,,,Q546,"Q546. Do you think our national government should do more, less, or about the same amount as it is doing right now to deal with climate change?",1
+Q547_1,,,,,Q547_1,"Q547_1. Have our government prioritize alternative energy development, like solar or wind power in",1
+Q547_2,,,,,Q547_2,"Q547_2. Phase out use of fossil fuels, like gas and oil in",1
+Q547_3,,,,,Q547_3,"Q547_3. Phase out production fossil fuels, like gas and oil in",1
+Q547_4,,,,,Q547_4,Q547_4. Set a common target date to phase out polluting cars and vehicles in,1
+Q547_TUN2,,,,,Q547_TUN2,Q547_TUN2. For the government to mandate a financial punishment for those who litter in public spaces,1
+Q547_TUN3,,,,,Q547_TUN3,"Q547_TUN3. To specify a larger portion of the budget to address pollution and manage trash, even if it means imposing more laws on citizens",1
+Q547_TUN4,,,,,Q547_TUN4,Q547_TUN4. For the government to raise the cost of water significantly for each family that consumes more than the regular necessities for household consumption of water,1
+Q548_2,,,,,Q548_2,Q548_2,1
+Q549_1A,,,,,Q549_1A,Q549_1A. Your physical health,1
+Q549_1B,,,,,Q549_1B,Q549_1B Your mental health,1
+Q549_2,,,,,Q549_2,Q549_2. Your personal safety,1
+Q549_3,,,,,Q549_3,Q549_3. Your job or your household’s livelihood,1
+Q550A_1,,,,,Q550A_1,Q550A_1 Equality under the law,1
+Q550A_2,,,,,Q550A_2,Q550A_2 There is no corruption,1
+Q550A_3,,,,,Q550A_3,"Q550A_3 Basic necessities, like clean food and water, clothes, and shelter, are available for all.",1
+Q550A_4,,,,,Q550A_4,Q550A_4 Ability to freely choose political leaders in elections,1
+Q550A_5,,,,,Q550A_5,Q550A_5 Feeling safe from physical danger,1
+Q550A_6,,,,,Q550A_6,Q550A_6 Basic civil rights are guaranteed,1
+Q550B_1,,,,,Q550B_1,Q550B_1 Equality under the law,1
+Q550B_2,,,,,Q550B_2,Q550B_2 There is no corruption,1
+Q550B_3,,,,,Q550B_3,"Q550B_3 Basic necessities, like clean food and water, clothes, and shelter, are available for all.",1
+Q550B_4,,,,,Q550B_4,Q550B_4 Ability to freely choose political leaders in elections,1
+Q550B_5,,,,,Q550B_5,Q550B_5 Feeling safe from physical danger,1
+Q550B_6,,,,,Q550B_6,Q550B_6 Basic civil rights are guaranteed,1
+Q551A,,,,,Q551A,"Q551A Among the following, which is the main pillar of human dignity?",1
+Q551B,,,,,Q551B,"Q551B Among the following, which is the main pillar of democracy?",1
+Q552_1A,,,,,Q552_1A,"Q552_1A Made a political statement through art, writing, or music",1
+Q552_1B,,,,,Q552_1B,"Q552_1B Participated in an in-person protest, demonstration, strike, or boycott",1
+Q552_2A,,,,,Q552_2A,Q552_2A Contacted government officials or institutions via social media,1
+Q552_2B,,,,,Q552_2B,Q552_2B Contacted government officials or institutions using wasta,1
+Q552_3A,,,,,Q552_3A,Q552_3A Boycotted a brand,1
+Q552_3B,,,,,Q552_3B,Q552_3B Signed a petition asking for action from the government,1
+Q553A_1,,,,,Q553A_1,Q553A_1 Citizens in,1
+Q553A_2,,,,,Q553A_2,Q553A_2 Citizens in Western countries,1
+Q553A_3,,,,,Q553A_3,Q553A_3 The government of,1
+Q553A_4,,,,,Q553A_4,Q553A_4 The governments of Western countries,1
+Q553A_5,,,,,Q553A_5,Q553A_5 Private businesses or corporations in,1
+Q553A_6,,,,,Q553A_6,Q553A_6 Private businesses or corporations in Western countries,1
+Q553B_1,,,,,Q553B_1,Q553B_1 Citizens in,1
+Q553B_2,,,,,Q553B_2,Q553B_2 Citizens in Western countries,1
+Q553B_3,,,,,Q553B_3,Q553B_3 The government of,1
+Q553B_4,,,,,Q553B_4,Q553B_4 The governments of Western countries,1
+Q553B_5,,,,,Q553B_5,Q553B_5 Private businesses or corporations in,1
+Q553B_6,,,,,Q553B_6,Q553B_6 Private businesses or corporations in Western countries,1
+Q554,,,,,Q554,Q554 How concerned or unconcerned are you about natural disasters in?,1
+Q60101,q60101,q60101 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 1. A woman can become the prime minister or president of a Muslim state.,,,,,1
+Q60102,q60102,q60102 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 2. A married woman can work outside the home.,,,,,1
+Q60103,q60103,"q60103 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 3. In general, men are better at political leadership than women.",,,,,1
+Q60104,q60104,q60104 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 4. University education for males is more important than university education f,,,,,1
+Q60105,q60105,q60105 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 5. Men and women should have equal work opportunities.,,,,,1
+Q60107,q60107,q60107 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 7. It is permissible for a woman to travel abroad by herself.,,,,,1
+Q60108,q60108,q60108 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 8. A woman should obtain her inheritance (she should not be denied her inherita,,,,,1
+Q60109,q60109,q60109 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 9. Women’s share of inheritance should be equal to that of men.,,,,,1
+Q60110,q60110,q60110 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 10. Women can assume judicial positions.,,,,,1
+Q60111,q60111,q60111 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 11. Women can become ministers.,,,,,1
+Q60112,q60112,q60112 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 12. The first wife’s consent is a prerequisite for permitting a man to marry,,,,,1
+Q60113,q60113,q60113 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 13. A woman can reject a marriage that her family chose for her without her con,,,,,1
+Q60114,q60114,q60114 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 14. Women and men should have equal rights in making the decision to divorce.,,,,,1
+Q60115,q60115,q60115 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 15. The law should not allow a man to marry more than one woman.,,,,,1
+Q60116,q60116,q60116 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 16. The right to divorce should be granted to men only.,,,,,1
+Q60117,q60117,q60117 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 17. The law should permit the man to marry more than one wife.,,,,,1
+Q601A,,,Q601A,DIS/AGREEMENT: WOMEN'S QUOTA,,,1
+Q601_1,,,Q601_1,WOMEN'S RIGHTS: WOMAN CAN BE PRIME MINISTER/PRESIDENT,,,1
+Q601_13,,,,,Q601_13,Q601_13. A woman can reject a marriage that her family chose for her without her consent,1
+Q601_13B,,,,,Q601_13B,Q601_13B. Men and women should both have equal say in deciding who they marry,1
+Q601_14,,,Q601_14,WOMEN'S RIGHTS: EQUAL RIGHTS TO MAKE THE DECISION TO DIVORCE,,,1
+Q601_18B,,,,,Q601_18B,Q601_18B . A man and a woman should have equal say in decisions concerning the family.,1
+Q601_20,,,Q601_20,Women should have the right to pass on citizenship to their children,,,1
+Q601_21A,,,,,Q601_21A,Q601_21A. There should be a minimum number of seats in parliament reserved for women,1
+Q601_21B,,,,,Q601_21B,Q601_21B.There should be a minimum number of cabinet positions reserved for women,1
+Q601_5,,,,,Q601_5,Q601_5. Men and women should have equal work opportunities.,1
+Q601_7,,,Q601_7,WOMEN'S RIGHTS: PERMISSIBLE FOR A WOMAN TO TRAVEL ALONE,,,1
+Q601_9,,,Q601_9,WOMEN'S RIGHTS: EQUAL SHARE OF INHERITANCE,,,1
+Q601_9A,,,Q601_9A,WOMEN'S RIGHTS: EQUAL INHERITANCE,,,1
+Q601_KUW1,,,,,Q601_KUW1,,1
+Q6021,q6021,q6021 Members of which of the following groups would you not like to have as neighbors? 1. Followers of other religions.,,,,,1
+Q6022,q6022,q6022 Members of which of the following groups would you not like to have as neighbors? 2. People of a different race and color.,,,,,1
+Q6023,q6023,q6023 Members of which of the following groups would you not like to have as neighbors? 3. Expatriate workers and immigrants.,,,,,1
+Q6024,q6024,q6024 Members of which of the following groups would you not like to have as neighbors? 4. Displaced peoples and refugees.,,,,,1
+Q602_1,,,Q602_1,PREFERENCE: NEIGHBORS: DIFFERENT RELIGION,,,1
+Q602_2,,,Q602_2,PREFERENCE: NEIGHBORS: DIFFERENT RACE/COLOR,,,1
+Q602_3,,,Q602_3,PREFERENCE: NEIGHBORS: IMMIGRANTS,,,1
+Q602_4A,,,Q602_4A,PREFERENCE: NEIGHBORS: DIFFERENT SECT OF ISLAM,,,1
+Q602_4B,,,Q602_4B,PREFERENCE: NEIGHBORS: DIFFERENT CHRISTIAN DENOMINATION,,,1
+Q603,q603,"q603 Had there been a lottery and you had the chance to participate, would you buy a ticket?",,,,,1
+Q6041,q6041,q6041 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 1. Not praying.,,,,,1
+Q60410,q60410,q60410 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 10. Different nationality.,,,,,1
+Q60411,q60411,q60411 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 11. Different race.,,,,,1
+Q60412,q60412,q60412 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 12. Considerable age differences (Vol.).,,,,,1
+Q60413,q60413,q60413 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 13. Health Condition (Vol.).,,,,,1
+Q60414,q60414,q60414 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 14. Ethics and Religion (Vol.).,,,,,1
+Q60415,q60415,q60415 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 15. Family background (Vol.).,,,,,1
+Q60416,q60416,q60416 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 16. Not observing religious teachings (Vol.).,,,,,1
+Q60417,q60417,q60417 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 17. The economic situation (Vol.).,,,,,1
+Q60418,q60418,q60418 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 18. Sterile (Vol.).,,,,,1
+Q60419,q60419,q60419 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 19. Appearance (Vol.).,,,,,1
+Q60420,q60420,q60420 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 20. Political Affiliation (Vol.).,,,,,1
+Q60421,q60421,q60421 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 21. Religious extremism (Vol.).,,,,,1
+Q60422,q60422,q60422 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 22. Disapproval of the concerned (Vol.).,,,,,1
+Q6043,q6043,q6043 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 3. The family’s social status.,,,,,1
+Q6044,q6044,q6044 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 4. Poverty.,,,,,1
+Q6045,q6045,q6045 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 5. Lack of education.,,,,,1
+Q6048,q6048,q6048 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 8. Economic or social incompatibility (class difference).,,,,,1
+Q6049,q6049,q6049 To what extent do you consider the following factors obstacles to accepting your son/daughter/sister/brother’s marriage? 9. From a different religion or domination.,,,,,1
+Q604A_1,,,Q604A_1,MARRIAGE FEMALE RELATIVE: ONE WHO DOES NOT PRAY,,,1
+Q604A_3,,,Q604A_3,MARRIAGE FEMALE RELATIVE: ONE OF A LOWER SOCIAL STATUS,,,1
+Q604A_NT_1,,,,,Q604A_NT_1,Q604A_NT_1. One who does not pray,1
+Q604A_NT_3,,,,,Q604A_NT_3,Q604A_NT_3. One who comes from a family with a lower social status,1
+Q604B_1,,,Q604B_1,MARRIAGE MALE RELATIVE: ONE WHO DOES NOT PRAY,,,1
+Q604B_3,,,Q604B_3,MARRIAGE MALE RELATIVE: ONE OF A LOWER SOCIAL STATUS,,,1
+Q604B_NT_1,,,,,Q604B_NT_1,Q604B_NT_1. One who does not pray,1
+Q604B_NT_3,,,,,Q604B_NT_3,,1
+Q604_1,,,Q604_1,One who does not pray,,,1
+Q604_3,,,Q604_3,One who comes from a family with a lower social status,,,1
+Q604_6,,,Q604_6,Big age difference,,,1
+Q604_7,,,Q604_7,He is poor,,,1
+Q6051,q6051,q6051 To what extent do you agree or disagree with each of the following principles in the formulation of your country’s laws and regulations?  1. The government and parliament should enact laws in accordance with the people’s wishes.,,,,,1
+Q6052,q6052,q6052 To what extent do you agree or disagree with each of the following principles in the formulation of your country’s laws and regulations?  2. The government and parliament should enact laws in accordance with Islamic law.,,,,,1
+Q6053,q6053,q6053 To what extent do you agree or disagree with each of the following principles in the formulation of your country’s laws and regulations?  3. The government and parliament should enact laws in accordance with citizens’ wishes with regard to certai,,,,,1
+Q6054,q6054,q6054 To what extent do you agree or disagree with each of the following principles in the formulation of your country’s laws and regulations?  4. The government and parliament should enact penal laws in accordance with Islamic law.,,,,,1
+Q6055,q6055,"q6055 To what extent do you agree or disagree with each of the following principles in the formulation of your country’s laws and regulations?  5. The government and parliament should enact personal status laws (marriage, divorce) in accordance with Isla",,,,,1
+Q6056,q6056,q6056 To what extent do you agree or disagree with each of the following principles in the formulation of your country’s laws and regulations?  6. The government and parliament should enact inheritance laws in accordance with Islamic law.,,,,,1
+Q605A_1,,,Q605A_1,SHARIA: GOVERNMENT PROVIDING BASIC SERVICES,,,1
+Q605A_2,,,Q605A_2,SHARIA: GOVERNMENT WITHOUT CORRUPTION,,,1
+Q605A_3,,,Q605A_3,SHARIA: GOVERNMENT USING PHYSICAL PUNISHMENT,,,1
+Q605A_4,,,Q605A_4,SHARIA: GOVERNMENT RESTRICTING WOMEN'S ROLE,,,1
+Q605B,,,Q605B,SHARIA: ESSENTIAL CHARACTERISTIC,,,1
+Q6061,q6061,"q6061 To what extent do you agree or disagree with the following statements? 1. Religious leaders (imams, preachers, priests) should not interfere in voters’ decisions in elections.",,,,,1
+Q6062,q6062,q6062 To what extent do you agree or disagree with the following statements? 2. Your country is better off if religious people hold public positions in the state.,,,,,1
+Q6063,q6063,"q6063 To what extent do you agree or disagree with the following statements? 3. Religious leaders (imams, preachers, priests) should have influence over government decisions.",,,,,1
+Q6064,q6064,q6064 To what extent do you agree or disagree with the following statements? 4. Religious practices are private and should be separated from social and political life.,,,,,1
+Q6065,q6065,q6065 To what extent do you agree or disagree with the following statements? 5. Religious associations and institutions (excluding political parties) should not influence voters’ decisions in elections.,,,,,1
+Q6066,q6066,q6066 To what extent do you agree or disagree with the following statements? 6. Mosques and churches should not be used for election campaigning.,,,,,1
+Q606_1,,,Q606_1,POLITICAL ISLAM: DIS/AGREEMENT: RELIGIOUS LEADERS SHOULD NOT INTERFERE IN ELECTO,,,1
+Q606_3B,,,,,Q606_3B,Q606_3B. Religious clerics should have influence over the decisions of government.,1
+Q606_NT_3,,,,,Q606_NT_3,Q606_NT_3. The religious uluma should have influence over the decisions of government.,1
+Q606_NT_3B,,,,,Q606_NT_3B,Q606_NT_3B. The religious uluma have influence over the decisions of government.,1
+Q6071,q6071,q6071 The opinions of Islamic jurists and religious scholars differ with regard to their interpretations of certain issues in Islam. I want to ask to what extent you agree or disagree with some of these issues? 1. Democracy is a system that incompatible wi,,,,,1
+Q6072,q6072,"q6072 The opinions of Islamic jurists and religious scholars differ with regard to their interpretations of certain issues in Islam. I want to ask to what extent you agree or disagree with some of these issues? 2. In a Muslim country, non-Muslims should en",,,,,1
+Q6073,q6073,q6073 The opinions of Islamic jurists and religious scholars differ with regard to their interpretations of certain issues in Islam. I want to ask to what extent you agree or disagree with some of these issues? 3. Banks interest fees contradict the teachin,,,,,1
+Q6074,q6074,q6074 The opinions of Islamic jurists and religious scholars differ with regard to their interpretations of certain issues in Islam. I want to ask to what extent you agree or disagree with some of these issues? 4. Gender-mixed education should be allowed i,,,,,1
+Q6075,q6075,q6075 The opinions of Islamic jurists and religious scholars differ with regard to their interpretations of certain issues in Islam. I want to ask to what extent you agree or disagree with some of these issues? 5. When a person changes his/her religion he/,,,,,1
+Q6076,q6076,q6076 The opinions of Islamic jurists and religious scholars differ with regard to their interpretations of certain issues in Islam. I want to ask to what extent you agree or disagree with some of these issues? 6. Women should wear modest clothes without n,,,,,1
+Q6077,q6077,q6077 The opinions of Islamic jurists and religious scholars differ with regard to their interpretations of certain issues in Islam. I want to ask to what extent you agree or disagree with some of these issues? 7. In order to meet the demands of the modern,,,,,1
+Q607_2,,,Q607_2,INTERPRETATION ISLAM: DIS/AGREEMENT: NONMUSLIMS' RIGHTS SHOULD BE INFERIOR,,,1
+Q607_6,,,Q607_6,INTERPRETATION ISLAM: DIS/AGREEMENT: ISLAM DOES NOT REQUIRE HIJAB,,,1
+Q607_7,,,Q607_7,INTERPRETATION ISLAM: DIS/AGREEMENT: BANKS SHOULD BE ALLOWED TO CHARGE INTEREST,,,1
+Q6081,q6081,q6081 To what extent do you agree with each of these statements? 1. Religious or denominational difference should not be a reason for doubting the patriotism of any individual.,,,,,1
+Q6082,q6082,q6082 To what extent do you agree with each of these statements? 2. Difference and variation between Islamic scholars with regard to their interpretation of religious matters is a good thing.,,,,,1
+Q6083,q6083,"q6083 To what extent do you agree with each of these statements? 3. In a Muslim society, a number of interpretations should be available to citizens so that they may choose that which is most appropriate to them.",,,,,1
+Q6084,q6084,q6084 To what extent do you agree with each of these statements? 4. There should be one interpretation of Islam and numerous interpretations should not be allowed.,,,,,1
+Q6085,q6085,q6085 To what extent do you agree with each of these statements? 5. Disagreement with some scholars in religious interpretation should not be used to label them as non- believers.,,,,,1
+Q6086,q6086,q6086 To what extent do you agree with each of these statements? 6. Religious scholars should accept social and political opinions different from their own.,,,,,1
+Q6087,q6087,q6087 To what extent do you agree with each of these statements? 7. Religious minorities have the right to practice their religious ceremonies.,,,,,1
+Q609A,,,Q609A,RELIGION: FREQUENCY: PRAY,,,1
+Q6101,q6101,q6101 Do you (Insert)? 1. Pray daily.,,,,,1
+Q6102,q6102,q6102 Do you (Insert)? 2. Fast during Ramadan/Fast the 40 days of Lent (for Christians).,,,,,1
+Q6103,q6103,q6103 Do you (Insert)? 3. Watch or listen to religious programs on the radio or television.,,,,,1
+Q6104,q6104,q6104 Do you (Insert)? 4. Attend religious lessons in mosques or churches.,,,,,1
+Q6105,q6105,q6105 Do you (Insert)? 5. Attend Friday prayer/Sunday services.,,,,,1
+Q6106,q6106,q6106 Do you (Insert)? 6. Listen to or read the Quran/the Bible.,,,,,1
+Q6107,q6107,q6107 Do you (Insert)? 7. Read religious books.,,,,,1
+Q610_1,,,,,Q610_1,Q610_1. Pray daily,1
+Q610_5A,,,Q610_5A,RELIGION: FREQUENCY: ATTEND FRIDAY PRAYER,,,1
+Q610_5B,,,Q610_5B,RELIGION: FREQUENCY: ATTEND SUNDAY SERVICE,,,1
+Q610_9,,,Q610_9,RELIGION: FREQUENCY: PRAY ISTIKHARA,,,1
+Q6111,q6111,q6111 To what extent do you think the (Insert) is a criterion for an individual’s piety? 1. Attending Friday prayer/Sunday service.,,,,,1
+Q6112,q6112,q6112 To what extent do you think the (Insert) is a criterion for an individual’s piety? 2. Praying in a mosque/church.,,,,,1
+Q6113,q6113,q6113 To what extent do you think the (Insert) is a criterion for an individual’s piety? 3. Fasting during Ramadan.,,,,,1
+Q6114,q6114,q6114 To what extent do you think the (Insert) is a criterion for an individual’s piety? 4. Helping the poor.,,,,,1
+Q6115,q6115,q6115 To what extent do you think the (Insert) is a criterion for an individual’s piety? 5. Not listening to music.,,,,,1
+Q6116,q6116,q6116 To what extent do you think the (Insert) is a criterion for an individual’s piety? 6. Attending religious lessons.,,,,,1
+Q6117,q6117,q6117 To what extent do you think the (Insert) is a criterion for an individual’s piety? 7. Not lying.,,,,,1
+Q6118,q6118,q6118 To what extent do you think the (Insert) is a criterion for an individual’s piety? 8. Wearing a beard.,,,,,1
+Q6119,q6119,q6119 To what extent do you think the (Insert) is a criterion for an individual’s piety? 9. Wearing a hijab.,,,,,1
+Q622C,,,,,Q622C,"Q622C. In your opinion, which of the following poses the most challenging barrier to entry into the workplace for women?",1
+Q622C_IRQ_1,,,,,Q622C_IRQ_1,Lack of available jobs,1
+Q622C_IRQ_2,,,,,Q622C_IRQ_2,Low wages,1
+Q622C_IRQ_3,,,,,Q622C_IRQ_3,Lack of legal right/protection,1
+Q622C_IRQ_4,,,,,Q622C_IRQ_4,Lack of flexibility in working hours,1
+Q622C_IRQ_5,,,,,Q622C_IRQ_5,Lack of childcare options,1
+Q622C_IRQ_6,,,,,Q622C_IRQ_6,Lack of means of transportation,1
+Q622C_IRQ_7,,,,,Q622C_IRQ_7,Lack of skills or relevant education,1
+Q622C_IRQ_8,,,,,Q622C_IRQ_8,Bias against women in hiring,1
+Q622C_IRQ_9,,,,,Q622C_IRQ_9,It is considered socially unacceptable,1
+Q622C_IRQ_97,,,,,Q622C_IRQ_97,None of these are challenges,1
+Q622C_IRQ_98,,,,,Q622C_IRQ_98,Don’t know,1
+Q622C_IRQ_99,,,,,Q622C_IRQ_99,Refused to answer,1
+Q622E,,,,,Q622E,"Q622E. In your opinion, which of the following poses the most challenging barrier to entry into the workplace for men?",1
+Q622E_IRQ_1,,,,,Q622E_IRQ_1,Lack of available jobs,1
+Q622E_IRQ_2,,,,,Q622E_IRQ_2,Low wages,1
+Q622E_IRQ_3,,,,,Q622E_IRQ_3,Lack of legal right/protection,1
+Q622E_IRQ_4,,,,,Q622E_IRQ_4,Lack of flexibility in working hours,1
+Q622E_IRQ_5,,,,,Q622E_IRQ_5,Lack of childcare options,1
+Q622E_IRQ_6,,,,,Q622E_IRQ_6,Lack of means of transportation,1
+Q622E_IRQ_7,,,,,Q622E_IRQ_7,Lack of skills or relevant education,1
+Q622E_IRQ_8,,,,,Q622E_IRQ_8,Bias against women in hiring,1
+Q622E_IRQ_9,,,,,Q622E_IRQ_9,It is considered socially unacceptable,1
+Q622E_IRQ_97,,,,,Q622E_IRQ_97,None of these are challenges,1
+Q622E_IRQ_98,,,,,Q622E_IRQ_98,Don’t know,1
+Q622E_IRQ_99,,,,,Q622E_IRQ_99,Refused to answer,1
+Q624_5A,,,,,Q624_5A,Q624_5A. Who should be primarily responsible for deciding how much to spend on food,1
+Q624_5B,,,,,Q624_5B,Q624_5B. Who should be primarily responsible for deciding what types of food to buy,1
+Q625,,,,,Q625,"Q625. In the past 12 months, has abuse of or violence against women in the community increased, stayed the same, decreased, or was it never a problem?",1
+Q626,,,,,Q626,"Q626. Thinking of childcare options in , which of the following is the biggest problem?",1
+Q627_1,,,,,Q627_1,Q627_1. In the workplace,1
+Q627_2,,,,,Q627_2,Q627_2. On the street by strangers,1
+Q627_3,,,,,Q627_3,Q627_3 In the home by family members,1
+Q628_2A,,,,,Q628_2A,Q628_2A. To pursue higher education,1
+Q628_2B,,,,,Q628_2B,Q628_2B. To choose what to study in higher education,1
+Q628_3A,,,,,Q628_3A,Q628_3A. To get a job,1
+Q628_3B,,,,,Q628_3B,Q628_3B. To choose what type of job they want,1
+Q628_4A,,,,,Q628_4A,Q628_4A. To choose to get married,1
+Q628_4B,,,,,Q628_4B,Q628_4B. To choose who to marry,1
+Q629_1,,,,,Q629_1,She will not be able to receive assistance,1
+Q629_2,,,,,Q629_2,A female member of the family,1
+Q629_3,,,,,Q629_3,A male member of the family,1
+Q629_4,,,,,Q629_4,The local police,1
+Q629_5,,,,,Q629_5,A clinic or hospital,1
+Q629_6,,,,,Q629_6,A local organization,1
+Q629_98,,,,,Q629_98,Don’t know,1
+Q629_99,,,,,Q629_99,Refused to answer,1
+Q630,,,,,Q630,"Q630. Regardless of your personal opinion, what percent of other citizens in  do you think agrees that, “In general, men are better at political leadership than women”?",1
+Q631,,,,,Q631,Q631. To what extent do you believe that having women in political leadership roles advances the women’s rights agenda in?,1
+Q7001,q7001,q7001 Do you prefer that future relations between Egypt and (Insert)...? 1. The United States.,,,,,1
+Q7002,q7002,q7002 Do you prefer that future relations between Egypt and (Insert)...? 2. Saudi Arabia.,,,,,1
+Q7003,q7003,q7003 Do you prefer that future relations between Egypt and (Insert)...? 3. Iran.,,,,,1
+Q7004,q7004,q7004 Do you prefer that future relations between Egypt and (Insert)...? 4. Turkey.,,,,,1
+Q7005,q7005,q7005 Do you prefer that future relations between Egypt and (Insert)...? 5. France.,,,,,1
+Q7006,q7006,q7006 Do you prefer that future relations between Egypt and (Insert)...? 6. Israel.,,,,,1
+Q700A_5,,,,,Q700A_5,Q700A_5 France,1
+Q700A_7,,,,,Q700A_7,Q700A_7 Qatar,1
+Q700A_9,,,Q700A_9,ECONOMIC RELATIONS: PREFERENCE: QATAR,,,1
+Q700B_1,,,,,Q700B_1,Q700B_1 The United States,1
+Q700B_12,,,,,Q700B_12,Q700B_12 United Kingdom,1
+Q700B_13,,,,,Q700B_13,Q700B_13 China,1
+Q700B_2,,,,,Q700B_2,Q700B_2 Saudi Arabia,1
+Q700B_3,,,,,Q700B_3,Q700B_3 Iran,1
+Q700B_4,,,,,Q700B_4,Q700B_4 Turkey,1
+Q700B_5,,,,,Q700B_5,Q700B_5 France,1
+Q700B_6,,,,,Q700B_6,Q700B_6 Israel,1
+Q700B_7,,,,,Q700B_7,Q700B_7 Qatar,1
+Q700B_8,,,,,Q700B_8,Q700B_8 Russia,1
+Q7011,q7011,q7011 Do you think the influence of (Insert) on the development of democracy in your country has been...? 1. The United States.,,,,,1
+Q7012,q7012,q7012 Do you think the influence of (Insert) on the development of democracy in your country has been...? 2. The European Union.,,,,,1
+Q7013,q7013,q7013 Do you think the influence of (Insert) on the development of democracy in your country has been...? 3. Neighboring countries.,,,,,1
+Q701C_1,,,Q701C_1,FOREIGN AID: PREFERENCE: USA,,,1
+Q701C_2,,,Q701C_2,FOREIGN AID: PREFERENCE: EU,,,1
+Q701C_3,,,Q701C_3,FOREIGN AID: PREFERENCE: RUSSIA,,,1
+Q701C_4,,,Q701C_4,FOREIGN AID: PREFERENCE: SAUDI,,,1
+Q701C_5,,,Q701C_5,FOREIGN AID: PREFERENCE: CHINA,,,1
+Q701C_6,,,Q701C_6,FOREIGN AID: PREFERENCE: UK,,,1
+Q701F_1,,,Q701F_1,FOREIGN AID: BENEFICIARIES: CHARITIES/CIVIL SOCIETY ORGANIZATIONS,,,1
+Q701F_2,,,Q701F_2,FOREIGN AID: BENEFICIARIES: ORDINARY CITIZENS,,,1
+Q701F_3,,,Q701F_3,FOREIGN AID: BENEFICIARIES: GOVERNMENT,,,1
+Q701G_1,,,Q701G_1,FOREIGN AID: MOTIVATION: ECONOMIC DEVELOPMENT,,,1
+Q701G_2,,,Q701G_2,FOREIGN AID: MOTIVATION: INTERNAL STABILITY,,,1
+Q701G_3,,,Q701G_3,FOREIGN AID: MOTIVATION: EMPOWER CIVIL SOCIETY ORGANIZATIONS,,,1
+Q701G_4,,,Q701G_4,FOREIGN AID: MOTIVATION: IMPROVEMENT OF LIFE OF ORDINARY CITIZENS,,,1
+Q701G_5,,,Q701G_5,FOREIGN AID: MOTIVATION: GAINING INFLUENCE OVER COUNTRY,,,1
+Q701H,,,Q701H,FOREIGN AID: MAIN MOTIVATION,,,1
+Q701H_1,,,,,Q701H_1,Q701H_1 Which of these do you think is the main motivation of the United States for giving foreign aid to?,1
+Q701H_2,,,,,Q701H_2,Q701H_2 Which of these do you think is the main motivation of China for giving foreign aid to?,1
+Q702,q702,"q702 During the past five years, did you spend time in a Western country (European country, Canada, the United States)?",,,,,1
+Q704,q704,q704 Are the external demands for reform...,,,,,1
+Q706,q706,q706 Do you agree or disagree with the following statement: The United States’ interference in the region justifies armed operations against the United States everywhere.,,,,,1
+Q706A,,,Q706A,DIS/AGREEMENT: VIOLENCE AGAINST US LOGICAL CONSEQUENCE OF INTERFERENCE IN REGION,,,1
+Q706B,,,Q706B,EVALUATION: VIOLENCE JUSTIFIED VS VIOLENCE NEVER JUSTIFIED,,,1
+Q707_1,,,Q707_1,DIS/AGREEMENT: AMERICANS GOOD PEOPLE,,,1
+Q707_2,,,Q707_2,DIS/AGREEMENT: SAUDIS GOOD PEOPLE,,,1
+Q707_3,,,Q707_3,DIS/AGREEMENT: RUSSIANS GOOD PEOPLE,,,1
+Q707_4,,,Q707_4,DIS/AGREEMENT: QATARI GOOD PEOPLE,,,1
+Q707_5,,,Q707_5,DIS/AGREEMENT: TURKISH GOOD PEOPLE,,,1
+Q707_6,,,Q707_6,DIS/AGREEMENT: IRANIANS GOOD PEOPLE,,,1
+Q707_7,,,Q707_7,DIS/AGREEMENT: CHINESE GOOD PEOPLE,,,1
+Q707_8,,,Q707_8,DIS/AGREEMENT: BRITISH GOOD PEOPLE,,,1
+Q708,q708,q708 Do you agree or disagree with the following statement: American and Western culture have positive aspects.,,,,,1
+Q709,q709,q709 Which of the following statements is closest to your opinion with regard to the Palestinian question?,,,,,1
+Q709B,,,Q709B,DIS/AGREEMENT: GOOD FOR REGION TO COORDINATE FOREIGN POLICY WITH ISRAEL'S,,,1
+Q710,q710,"q710 There is a proposal that after the establishment of an independent Palestinian state and a permanent solution to all of the problems in the conflict with Israel, including Jerusalem and the refugees, that there should be mutual recognition of Israel a",,,,,1
+Q7111,q7111,q7111 To what extent do you agree or disagree with the following statements: 1. The Arab-Israeli conflict is an obstacle to political reform in your country.,,,,,1
+Q7112,q7112,"q7112 To what extent do you agree or disagree with the following statements: 2. In order to eliminate global terrorism, the Palestine issue must be solved.",,,,,1
+Q7113,q7113,q7113 To what extent do you agree or disagree with the following statements: 3. Foreign interference is an obstacle to reform in your country.,,,,,1
+Q7141A,,,Q7141A,GREATEST THREAT: STABILITY,,,1
+Q7141B,,,Q7141B,GREATEST THREAT: WELLBEING,,,1
+Q725_5,,,,,Q725_5,Q725_5 Iranian Supreme Leader Ali Khamenei,1
+Q725_6,,,,,Q725_6,Q725_6 Saudi Crown Prince Mohammed bin Salman,1
+Q725_7,,,,,Q725_7,Q725_7 Syrian President Bashar al Assad,1
+Q725_8,,,,,Q725_8,Q725_8 Emirati President Mohammed bin Zayed,1
+Q727_1A,,,,,Q727_1A,Q727_1A Which country would build the highest quality?,1
+Q727_2A,,,,,Q727_2A,Q727_2A Which country would build it for the least amount of money?,1
+Q727_4B,,,,,Q727_4B,Q727_4B Which country would treat the local workforce the best?,1
+Q727_5C,,,,,Q727_5C,Q727_5C Which country would you prefer to get the contract?,1
+Q728_1B,,,,,Q728_1B,Q728_1B The development of China’s economic power,1
+Q728_2B,,,,,Q728_2B,Q728_2B The development of American economic power,1
+Q728_4A,,,,,Q728_4A,Q728_4A Iran’s political influence in the region,1
+Q728_4B,,,,,Q728_4B,Q728_4B Saudi Arabia’s political influence in the region,1
+Q728_5A,,,,,Q728_5A,Q728_5A Israeli occupation of the Palestinian territories,1
+Q728_5B,,,,,Q728_5B,Q728_5B Iran’s nuclear program,1
+Q728_7,,,,,Q728_7,Q728_7 Climate change,1
+Q729B_3,,,,,Q729B_3,Q729B_3 Strengthens education initiatives,1
+Q729B_5,,,,,Q729B_5,Q729B_5 Advances women’s rights,1
+Q729B_6,,,,,Q729B_6,Q729B_6 Strengthens civil society,1
+Q729_3,,,,,Q729_3,Q729_3 Strengthens education initiatives,1
+Q729_5,,,,,Q729_5,Q729_5 Advances women’s rights,1
+Q729_6,,,,,Q729_6,Q729_6 Strengthens civil society,1
+Q730B,,,,,Q730B,Q730B To which of the following areas would you most prefer foreign aid to  be dedicated?,1
+Q731_1,,,,,Q731_1,Q731_1 Protecting freedoms and rights,1
+Q731_2,,,,,Q731_2,Q731_2 Promoting economic development,1
+Q731_3,,,,,Q731_3,Q731_3 Tackling climate change,1
+Q731_4,,,,,Q731_4,Q731_4 Maintaining regional security,1
+Q731_5,,,,,Q731_5,Q731_5 Addressing the Israeli-Palestinian conflict,1
+Q733,,,,,Q733,Q733 To what extent do you approve or disapprove of Russia’s invasion of Ukraine?,1
+Q734C,,,,,Q734C,Q734C To what extent do you favor or oppose the normalization of relations between Arab states and Israel?,1
+Q736B,,,,,Q736B,Q736B What do you think should be the Biden administration’s number one priority in the Middle East and North Africa?,1
+Q738,,,,,Q738,Q738 Which solution from among the following you prefer to put an end to the Palestinian-Israeli conflict?,1
+Q833,,,Q833,EVALUATION: GROWTH OF SECTARIAN DIVISION,,,1
+Q833B,,,,,Q833B,Concern about growth of sectarian division,1
+Q841,,,Q841,EVALUATION: ARAB REGION TENSIONS: RELIGIOUS DIVIDE VS SECTARIAN DIVIDE,,,1
+Q851A,,,Q851A,DOMESTIC VIOLENCE: PREVALENCE,,,1
+Q851B,,,Q851B,DOMESTIC VIOLENCE: PREVALENCE PAST 12 MONTHS,,,1
+Q851C,,,Q851C,DOMESTIC VIOLENCE: GENDER VICTIM,,,1
+Q851D_1,,,Q851D_1,DOMESTIC VIOLENCE: SUPPORT: ACTORS: FEMALE RELATIVE,,,1
+Q851D_2,,,Q851D_2,DOMESTIC VIOLENCE: SUPPORT: ACTORS: MALE RELATIVE,,,1
+Q851D_3,,,Q851D_3,DOMESTIC VIOLENCE: SUPPORT: ACTORS: LOCAL POLICE,,,1
+Q851D_4,,,Q851D_4,DOMESTIC VIOLENCE: SUPPORT: ACTORS: HOSPITAL,,,1
+Q851D_5,,,Q851D_5,DOMESTIC VIOLENCE: SUPPORT: ACTORS: LOCAL ORGANIZATION,,,1
+Q851D_6,,,Q851D_6,DOMESTIC VIOLENCE: SUPPORT: ACTORS: NONE OF THESE,,,1
+Q851D_7,,,Q851D_7,DOMESTIC VIOLENCE: SUPPORT: ACTORS: OTHER,,,1
+Q851D_98,,,Q851D_98,DOMESTIC VIOLENCE: SUPPORT: ACTORS: DON'T KNOW,,,1
+Q851D_99,,,Q851D_99,DOMESTIC VIOLENCE: SUPPORT: ACTORS: REFUSED,,,1
+Q851_E1,,,Q851_E1,VERBAL SEXUAL HARASSMENT: FREQUENCY,,,1
+Q851_E2,,,Q851_E2,PHYSICAL SEXUAL HARASSMENT: FREQUENCY,,,1
+Q852,,,Q852,WELLBEING: BODY IMAGE,,,1
+Q853A,,,Q853A,WELLBEING: BODY IMAGE:IMPORTANCE LIVING UP TO BODY IMAGE (MALES),,,1
+Q853B,,,Q853B,WELLBEING: BODY IMAGE:IMPORTANCE LIVING UP TO BODY IMAGE (FEMALES),,,1
+Q854,,,Q854,WELLBEING: DIS/AGREEMENT: FREE TO MAKE DECISION FOR MYSELF,,,1
+Q855A,,,Q855A,WELLBEING: STRESS,,,1
+Q855B,,,Q855B,WELLBEING: DEPRESSSION,,,1
+Q860A,,,Q860A,,,,1
+Q860B,,,Q860B,,,,1
+Q860C,,,Q860C,,,,1
+Q860D,,,Q860D,,,,1
+Q867A,,,,,Q867A,"Q867A. Do you believe that the quality of your life is better, the same as, or worse than the quality of your parents’ lives?",1
+Q867B,,,,,Q867B,"Q867B. Do you believe that the quality of your children’s lives will be better, the same as, or worse than the quality of your life?",1
+Q869D,,,,,Q869D,Q869D What do you think the chances are these days that you or anyone in your family will not get a job while an equally or less qualified male employee receives one instead? Is this:,1
+Q869E,,,,,Q869E,Q869E What do you think the chances are these days that you or anyone in your family will not get a job while an equally or less qualified female employee receives one instead? Is this:,1
+Q869F,,,,,Q869F,Q869F What do you think the chances that you or anyone in your family will not get a job while an equally or less qualified migrant receives one instead?,1
+Q869G,,,,,Q869G,Q869G What do you think the chances that you or anyone in your family will not get a job while an equally or less qualified refugee receives one instead?,1
+Q872A,,,,,Q872A,Q872A To what extent do you believe racial discrimination is a serious problem in?,1
+Q872B,,,,,Q872B,Q872B Do you believe discrimination on the basis of race or ethnicity is a serious problem in?,1
+Q872C,,,,,Q872C,Q872C INTERVIEWER THIS QUESTION IS FOR YOU: Did the respondent ask you to explain what “race” was in Q872B?,1
+Q872C_PAL,,,,,Q872C_PAL,,1
+Q873_1,,,,,Q873_1,Socioeconomic class,1
+Q873_10,,,,,Q873_10,Sexual orientation,1
+Q873_11,,,,,Q873_11,Disability status,1
+Q873_12,,,,,Q873_12,Migration status,1
+Q873_13,,,,,Q873_13,None of these,1
+Q873_2,,,,,Q873_2,"The region they are from [INTERVIEWER: If asked, say, “where people are from in the country”]",1
+Q873_3,,,,,Q873_3,Skin color,1
+Q873_4,,,,,Q873_4,Race or ethnicity,1
+Q873_5,,,,,Q873_5,Nationality,1
+Q873_6,,,,,Q873_6,Religion,1
+Q873_7,,,,,Q873_7,Gender,1
+Q873_8,,,,,Q873_8,Tribe,1
+Q873_9,,,,,Q873_9,Age,1
+Q873_98,,,,,Q873_98,Don’t know,1
+Q873_99,,,,,Q873_99,Refused to answer,1
+Q879,,,,,Q879,Q879 You said people in  face discrimination because of ${Q879_text}. Which of these poses the biggest problem in? Is it discrimination based on…,1
+Q881A_1,,,,,Q881A_1,Finding employment,1
+Q881A_2,,,,,Q881A_2,Finding housing,1
+Q881A_3,,,,,Q881A_3,Accessing public education,1
+Q881A_4,,,,,Q881A_4,Accessing healthcare,1
+Q881A_5,,,,,Q881A_5,Using public transportation,1
+Q881A_6,,,,,Q881A_6,Dining in a restaurant,1
+Q881A_7,,,,,Q881A_7,Using banks or financial services,1
+Q881A_8,,,,,Q881A_8,None of these [INTERVIEWER: DO NOT READ. Select only if respondent says no to all other options],1
+Q881A_90,,,,,Q881A_90,Other- specify:,1
+Q881A_98,,,,,Q881A_98,Don’t know,1
+Q881A_99,,,,,Q881A_99,Refused to answer,1
+Q881B_1,,,,,Q881B_1,Are subjected to verbal insults or hate speech,1
+Q881B_2,,,,,Q881B_2,Are subjected to offensive jokes,1
+Q881B_3,,,,,Q881B_3,Are assumed to be untrustworthy or dishonest,1
+Q881B_4,,,,,Q881B_4,Are assumed to be less smart,1
+Q881B_5,,,,,Q881B_5,Have others dismiss or devalue their contributions,1
+Q881B_6,,,,,Q881B_6,Have others deny that they face more hardships,1
+Q881B_7,,,,,Q881B_7,Are treated as if they are inferior,1
+Q881B_8,,,,,Q881B_8,None of these [INTERVIEWER: DO NOT READ. Select only if respondent says no to all other options],1
+Q881B_90,,,,,Q881B_90,Other- specify:,1
+Q881B_98,,,,,Q881B_98,Don’t know,1
+Q881B_99,,,,,Q881B_99,Refused to answer,1
+Q882,,,,,Q882,,1
+Q883,,,,,Q883,,1
+Q884A_1,,,,,Q884A_1,Q884A In which of the following circumstances have you faced discrimination because of ${Q884_1_text}? Please tell me all that apply from the following list.,1
+Q884A_2,,,,,Q884A_2,,1
+Q884A_3,,,,,Q884A_3,,1
+Q884A_4,,,,,Q884A_4,,1
+Q884A_5,,,,,Q884A_5,,1
+Q884A_6,,,,,Q884A_6,,1
+Q884A_7,,,,,Q884A_7,,1
+Q884A_8,,,,,Q884A_8,,1
+Q884A_90,,,,,Q884A_90,,1
+Q884A_98,,,,,Q884A_98,,1
+Q884A_99,,,,,Q884A_99,,1
+Q884B_1,,,,,Q884B_1,"Q884B And thinking about discrimination you faced because of ${Q884_1_text}, have you…?",1
+Q884B_2,,,,,Q884B_2,,1
+Q884B_3,,,,,Q884B_3,,1
+Q884B_4,,,,,Q884B_4,,1
+Q884B_5,,,,,Q884B_5,,1
+Q884B_6,,,,,Q884B_6,,1
+Q884B_7,,,,,Q884B_7,,1
+Q884B_8,,,,,Q884B_8,,1
+Q884B_90,,,,,Q884B_90,,1
+Q884B_98,,,,,Q884B_98,,1
+Q884B_99,,,,,Q884B_99,,1
+Q885,,,,,Q885,"Q885 Do you think our national government should do more, less, or about the same amount as it is doing right now to deal with discrimination in?",1
+Q886,,,,,Q886,"Q886 When citizens from [your country] travel outside the Middle East and North Africa, on what basis, if any, do you think they are likely to face discrimination?",1
+Q905,,,,,Q905,Q905. To what extent do you think migrants from Sub Saharan Africa are discriminated against in?,1
+Q906,,,,,Q906,Q906. To what extent do you think migrants from South Asia and Southeast Asia are discriminated against in your country?,1
+Q907,,,,,Q907,Q907. To what extent do you think migrants from other Arab countries are discriminated against in?,1
+Q916_1,,,,,Q916_1,Q916_1. To always have possession of their passports?,1
+Q916_2,,,,,Q916_2,Q916_2. To have one day off per week guaranteed?,1
+Q916_3,,,,,Q916_3,Q916_3. To have a bank account where they can receive their salaries?,1
+QGAZA1_1,,,,,QGAZA1_1,,1
+QGAZA1_10,,,,,QGAZA1_10,,1
+QGAZA1_11,,,,,QGAZA1_11,,1
+QGAZA1_2,,,,,QGAZA1_2,,1
+QGAZA1_3,,,,,QGAZA1_3,,1
+QGAZA1_4,,,,,QGAZA1_4,,1
+QGAZA1_5,,,,,QGAZA1_5,,1
+QGAZA1_6,,,,,QGAZA1_6,,1
+QGAZA1_7,,,,,QGAZA1_7,,1
+QGAZA1_8,,,,,QGAZA1_8,,1
+QGAZA1_9,,,,,QGAZA1_9,,1
+QGAZA1_98,,,,,QGAZA1_98,,1
+QGAZA1_99,,,,,QGAZA1_99,,1
+QGAZA2,,,,,QGAZA2,"QGAZA2 In your opinion, which of the following terms do you think best describes the latest events in Gaza?",1
+QGAZA3A,,,,,QGAZA3A,"QGAZA3A In your opinion, to what extent do you believe that the Israeli government is committed to a two-state solution that equally preserves the rights and security of both Israelis and Palestinians?",1
+QGAZA3B,,,,,QGAZA3B,"QGAZA3B In your opinion, to what extent do you believe that the Israeli public is committed to a two-state solution that equally preserves the rights and security of both Israelis and Palestinians?",1
+QGAZA4A,,,,,QGAZA4A,"QGAZA4A In your opinion, to what extent do you believe that Palestinian leadership is committed to a two-state solution that equally preserves the rights and security of both Israelis and Palestinians?",1
+QGAZA4B,,,,,QGAZA4B,"QGAZA4B In your opinion, to what extent do you believe that Palestinian public is committed to a two-state solution that equally preserves the rights and security of both Israelis and Palestinians?",1
+QGAZA5A2_1,,,,,QGAZA5A2_1,,1
+QGAZA5A2_2,,,,,QGAZA5A2_2,,1
+QGAZA5A2_3,,,,,QGAZA5A2_3,,1
+QGAZA5A2_4,,,,,QGAZA5A2_4,,1
+QGAZA5A2_5,,,,,QGAZA5A2_5,,1
+QGAZA5A2_98,,,,,QGAZA5A2_98,,1
+QGAZA5A2_99,,,,,QGAZA5A2_99,,1
+QGAZA5A_1,,,,,QGAZA5A_1,,1
+QGAZA5A_10,,,,,QGAZA5A_10,,1
+QGAZA5A_11,,,,,QGAZA5A_11,,1
+QGAZA5A_12,,,,,QGAZA5A_12,,1
+QGAZA5A_2,,,,,QGAZA5A_2,,1
+QGAZA5A_3,,,,,QGAZA5A_3,,1
+QGAZA5A_4,,,,,QGAZA5A_4,,1
+QGAZA5A_5,,,,,QGAZA5A_5,,1
+QGAZA5A_6,,,,,QGAZA5A_6,,1
+QGAZA5A_7,,,,,QGAZA5A_7,,1
+QGAZA5A_8,,,,,QGAZA5A_8,,1
+QGAZA5A_9,,,,,QGAZA5A_9,,1
+QGAZA5A_91,,,,,QGAZA5A_91,,1
+QGAZA5A_98,,,,,QGAZA5A_98,,1
+QGAZA5A_99,,,,,QGAZA5A_99,,1
+QGAZA5B_1,,,,,QGAZA5B_1,,1
+QGAZA5B_10,,,,,QGAZA5B_10,,1
+QGAZA5B_11,,,,,QGAZA5B_11,,1
+QGAZA5B_12,,,,,QGAZA5B_12,,1
+QGAZA5B_2,,,,,QGAZA5B_2,,1
+QGAZA5B_3,,,,,QGAZA5B_3,,1
+QGAZA5B_4,,,,,QGAZA5B_4,,1
+QGAZA5B_5,,,,,QGAZA5B_5,,1
+QGAZA5B_6,,,,,QGAZA5B_6,,1
+QGAZA5B_7,,,,,QGAZA5B_7,,1
+QGAZA5B_8,,,,,QGAZA5B_8,,1
+QGAZA5B_9,,,,,QGAZA5B_9,,1
+QGAZA5B_91,,,,,QGAZA5B_91,,1
+QGAZA5B_98,,,,,QGAZA5B_98,,1
+QGAZA5B_99,,,,,QGAZA5B_99,,1
+QGAZA5C_1,,,,,QGAZA5C_1,,1
+QGAZA5C_10,,,,,QGAZA5C_10,,1
+QGAZA5C_11,,,,,QGAZA5C_11,,1
+QGAZA5C_12,,,,,QGAZA5C_12,,1
+QGAZA5C_13,,,,,QGAZA5C_13,,1
+QGAZA5C_2,,,,,QGAZA5C_2,,1
+QGAZA5C_3,,,,,QGAZA5C_3,,1
+QGAZA5C_4,,,,,QGAZA5C_4,,1
+QGAZA5C_5,,,,,QGAZA5C_5,,1
+QGAZA5C_6,,,,,QGAZA5C_6,,1
+QGAZA5C_7,,,,,QGAZA5C_7,,1
+QGAZA5C_8,,,,,QGAZA5C_8,,1
+QGAZA5C_9,,,,,QGAZA5C_9,,1
+QGAZA5C_91,,,,,QGAZA5C_91,,1
+QGAZA5C_98,,,,,QGAZA5C_98,,1
+QGAZA5C_99,,,,,QGAZA5C_99,,1
+QGAZA6,,,,,QGAZA6,"QGAZA6 In your opinion, to what extent do you believe the government of [YOUR COUNTRY] uses the Palestinian-Israeli conflict as a justification for the lack of reform?",1
+QID,qid,qid Questionnaire ID number,,,,,1
+QIRQ1,,,,,QIRQ1,QIRQ1 To what extent do you support repealing laws allowing rapist to marry their victims?,1
+QIRQ2A,,,,,QIRQ2A,QIRQ2A Who should decide whether IDPs who are not living in camps return to their governorates of origin?,1
+QIRQ2B,,,,,QIRQ2B,,1
+QIRQ3_1,,,,,QIRQ3_1,QIRQ3_1 Should children of ISIS members with an Iraqi partent be given rights to: Education,1
+QIRQ3_2,,,,,QIRQ3_2,,1
+QIRQ4A,,,,,QIRQ4A,Which country has the most positive impact on Iraqi domestic policies?,1
+QIRQ4B,,,,,QIRQ4B,Which country has the most negative impact on Iraqi domestic policies?,1
+QJOR5,,,,,QJOR5,QJOR5 Have you heard about the cybercrime law approved by the House of Representatives?,1
+QJOR6,,,,,QJOR6,QJOR6 What will the main effect of the cybercrime law? Do you believe it will…,1
+QKUW26,,,,,QKUW26,,1
+QKUW27,,,,,QKUW27,,1
+QKUW28_1,,,,,QKUW28_1,,1
+QKUW28_2,,,,,QKUW28_2,,1
+QKUW28_3,,,,,QKUW28_3,,1
+QKUW28_4,,,,,QKUW28_4,,1
+QKUW28_5,,,,,QKUW28_5,,1
+QKUW28_6,,,,,QKUW28_6,,1
+QKUW28_7,,,,,QKUW28_7,,1
+QKUW29_1,,,,,QKUW29_1,,1
+QKUW29_2,,,,,QKUW29_2,,1
+QKUW30,,,,,QKUW30,,1
+QKUW31_1,,,,,QKUW31_1,,1
+QKUW31_2,,,,,QKUW31_2,,1
+QKUW31_3,,,,,QKUW31_3,,1
+QKUW31_4,,,,,QKUW31_4,,1
+QKUW32,,,,,QKUW32,,1
+QKUW33_1,,,,,QKUW33_1,,1
+QKUW33_2,,,,,QKUW33_2,,1
+QKUW33_3,,,,,QKUW33_3,,1
+QKUW34_1,,,,,QKUW34_1,,1
+QKUW34_10,,,,,QKUW34_10,,1
+QKUW34_11,,,,,QKUW34_11,,1
+QKUW34_2,,,,,QKUW34_2,,1
+QKUW34_3,,,,,QKUW34_3,,1
+QKUW34_4,,,,,QKUW34_4,,1
+QKUW34_5,,,,,QKUW34_5,,1
+QKUW34_6,,,,,QKUW34_6,,1
+QKUW34_7,,,,,QKUW34_7,,1
+QKUW34_8,,,,,QKUW34_8,,1
+QKUW34_9,,,,,QKUW34_9,,1
+QKUW34_90,,,,,QKUW34_90,,1
+QKUW34_98,,,,,QKUW34_98,,1
+QKUW34_99,,,,,QKUW34_99,,1
+QKUW35,,,,,QKUW35,,1
+QKUW36,,,,,QKUW36,,1
+QKUW37,,,,,QKUW37,,1
+QKUW38,,,,,QKUW38,,1
+QKUW39,,,,,QKUW39,,1
+QKUW40_1,,,,,QKUW40_1,,1
+QKUW40_2,,,,,QKUW40_2,,1
+QKUW40_3,,,,,QKUW40_3,,1
+QKUW40_4,,,,,QKUW40_4,,1
+QKUW40_5,,,,,QKUW40_5,,1
+QKUW40_90,,,,,QKUW40_90,,1
+QKUW40_97,,,,,QKUW40_97,,1
+QKUW40_98,,,,,QKUW40_98,,1
+QKUW40_99,,,,,QKUW40_99,,1
+QKUW41,,,,,QKUW41,,1
+QKUW42,,,,,QKUW42,,1
+QLEB10,,,,,QLEB10,,1
+QLEB11,,,,,QLEB11,,1
+QLEB12,,,,,QLEB12,,1
+QLEB13,,,,,QLEB13,,1
+QLEB6,,,,,QLEB6,,1
+QLEB7,,,,,QLEB7,,1
+QLEB9,,,,,QLEB9,,1
+QMOR4_1,,,,,QMOR4_1,QMOR4_1 The government,1
+QMOR4_2,,,,,QMOR4_2,QMOR4_2 Individual citizens,1
+QMOR4_3,,,,,QMOR4_3,QMOR4_3 International humanitarian organizations,1
+QMOR4_4,,,,,QMOR4_4,QMOR4_4 Moroccan civil society organizations,1
+QMOR5,,,,,QMOR5,"QMOR5 Overall, did the government’s management of the earthquake crisis exceed, meet, or fail to meet  your prior expectations?",1
+QMOR6,,,,,QMOR6,"QMOR6 Do you think government services and infrastructure will improve, stay the same, or worsen in areas affected by the earthquake?",1
+QMOR7_1,,,,,QMOR7_1,,1
+QMOR7_2,,,,,QMOR7_2,,1
+QMOR7_3,,,,,QMOR7_3,,1
+QMOR7_4,,,,,QMOR7_4,,1
+QMOR7_98,,,,,QMOR7_98,,1
+QMOR7_99,,,,,QMOR7_99,,1
+QMOR8_1,,,,,QMOR8_1,QMOR8_1 Allocating part of the national budget to providing earthquake victims with compensation for damaged property,1
+QMOR8_2,,,,,QMOR8_2,"QMOR8_2 Passing a new law requiring earthquake-resistant building standards, even if it increased building time and costs",1
+QMOR8_3A,,,,,QMOR8_3A,QMOR8_3A The government’s requesting foreign aid to address the effects of the earthquake,1
+QMOR8_3B,,,,,QMOR8_3B,QMOR8_3B The government’s refusing foreign aid to address the effects of the earthquake,1
+QPAL10,,,,,QPAL10,,1
+QPAL11_1,,,,,QPAL11_1,QPAL11_1 First goal,1
+QPAL11_2,,,,,QPAL11_2,QPAL11_2 Second goal,1
+QPAL18,,,,,QPAL18,QPAL18 Can West Bank and Gaza Strip Palestinians today elect their own leadership in parliamentary and presidential election?,1
+QPAL19,,,,,QPAL19,"QPAL19 If the answer is no, from among the following possible reasons, which in your view is the most likely to actually cause this?",1
+QPAL20,,,,,QPAL20,QPAL20 Some people say that the Palestinian Authority has become a burden on the Palestinian people while others say that it is an accomplishment for the Palestinian people. What do you think?,1
+QPAL21,,,,,QPAL21,"QPAL21 If it were up to you, would you want to have Abbas resign or not resign?",1
+QPAL6,,,,,QPAL6,"QPAL6 If new presidential elections were to take place  today, and the competition was between Marwan Barghouti, Ismail Haniyeh, and Mahmoud Abbas, for whom would you vote?",1
+QPAL9,,,,,QPAL9,,1
+SA1012,sa1012,sa1012 Denomination,,,,,1
+SA2013,sa2013,"sa2013 I will name a number of institutions, and I would like you to tell me to what extent you trust each of them: 3. The Shura Council.",,,,,1
+SA2032,sa2032,"sa2032 Generally speaking, how would you evaluate the performance of [Insert] in carrying out its tasks and duties? 2.The Shura Council",,,,,1
+SA301,sa301,"sa301 Did you vote in the last municipal elections that were held on 1st of Moharam, 1426 (February 10th, 2005)?",,,,,1
+SA302,sa302,"sa302 During the last municipal elections held on 1st of Moharam, 1426 (February 10th, 2005) did you attend any meetings or activities related to any electoral campaign?",,,,,1
+SA303,sa303,"sa303 In general, how would you Evaluate the freedom and fairness last municipal elections that were held on 1st of Moharam, 1426 (February 10th, 2005)?",,,,,1
+SA3041,sa3041,"sa3041 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the municipal elections? 1. That the candidate is from your family/tribe (relatives).",,,,,1
+SA3043,sa3043,"sa3043 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the municipal elections? 3. The candidate’s level of education.",,,,,1
+SA3044,sa3044,"sa3044 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the municipal elections? 4. The candidate’s piety.",,,,,1
+SA3045,sa3045,"sa3045 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the municipal elections? 5. The extent to which you agree with the candidate about issues that are important to you.",,,,,1
+SA3046,sa3046,"sa3046 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the municipal elections? 6. The candidate’s social status.",,,,,1
+SA3047,sa3047,"sa3047 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the municipal elections? 7. The candidate’s wealth.",,,,,1
+SA3048,sa3048,"sa3048 In general, to what extent is it important to you that [Insert] in deciding who to vote for in elections, whether the municipal elections? 8. The overall program of the candidate.",,,,,1
+SA305,sa305,sa305 Which of the factors mentioned in the previous question is the most important?,,,,,1
+SA3061,sa3061,sa3061 I want to ask about your opinion regarding the role of the Shura Council in forming certain public policies. To what extent do you think that the Shura Council has a role in the formation of [Insert] policies? 1. Economic.,,,,,1
+SA3062,sa3062,sa3062 I want to ask about your opinion regarding the role of the Shura Council in forming certain public policies. To what extent do you think that the Shura Council has a role in the formation of [Insert] policies? 2. Social.,,,,,1
+SA3063,sa3063,sa3063 I want to ask about your opinion regarding the role of the Shura Council in forming certain public policies. To what extent do you think that the Shura Council has a role in the formation of [Insert] policies? 2. Foreign.,,,,,1
+SA503,sa503,"sa503 Which of the existing intellectual movements is closest to representing your political, social and economic aspirations?",,,,,1
+SA5222,sa5222,sa5222 Can you tell me the name of [Insert]? 2. The speaker of the shura.,,,,,1
+SA523,sa523,sa523 To what extent do you think the lack of respect for human rights is justified in order to maintain security in Arab countries?,,,,,1
+SA6051,sa6051,sa6051 To what extent do you agree or disagree with each of the following principles in the enactment of laws and regulations in Saudi Arabia? 1. The government and the Shura Council should enact laws in accordance with the people’s wishes.,,,,,1
+SA6052,sa6052,sa6052 To what extent do you agree or disagree with each of the following principles in the enactment of laws and regulations in Saudi Arabia? 2. The government and the Shura Council should enact laws in accordance with Islamic law.,,,,,1
+SA6053,sa6053,sa6053 To what extent do you agree or disagree with each of the following principles in the enactment of laws and regulations in Saudi Arabia? 3. The government and Shura Council should enact laws in accordance with citizens’ wishes with regard to certai,,,,,1
+SA6054,sa6054,sa6054 To what extent do you agree or disagree with each of the following principles in the enactment of laws and regulations in Saudi Arabia? 4. The government and Shura Council should enact penal laws in accordance with Islamic law.,,,,,1
+SA6055,sa6055,"sa6055 To what extent do you agree or disagree with each of the following principles in the enactment of laws and regulations in Saudi Arabia? 5. The government and Shura Council should enact personal status laws (marriage, divorce) in accordance with Isla",,,,,1
+SA6056,sa6056,sa6056 To what extent do you agree or disagree with each of the following principles in the enactment of laws and regulations in Saudi Arabia? 6. The government and Shura Council should enact inheritance laws in accordance with Islamic law.,,,,,1
+SAMP,samp,samp Sample,,,,,1
+SAMPLE,,,sample,SAMPLE,,,1
+SPLITA,,,splita,,,,1
+SPLITB,,,splitb,,,,1
+T1003,t1003,t1003 Level of education (Tunisia Only),,,,,1
+T302,t302,"t302 Will you participate in the upcoming elections of the Constituent Assembly (October 23rd, 2011)?",,,,,1
+T3041,t3041,"t3041 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 1. That the candidate is from your family/tribe (relatives).",,,,,1
+T30412,t30412,"t30412 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 12. That the candidate supported and participated in the events of",,,,,1
+T30413,t30413,"t30413 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 13. That the candidate is from your area?",,,,,1
+T3042,t3042,"t3042 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 2. The candidate’s political party or affiliation.",,,,,1
+T3043,t3043,"t3043 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 3. The candidate’s level of education.",,,,,1
+T3044,t3044,"t3044 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 4. The candidate’s piety.",,,,,1
+T3045,t3045,"t3045 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 5. The extent to which you agree with the candidate about issues th",,,,,1
+T3046,t3046,"t3046 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 6. The candidate’s social status.",,,,,1
+T3047,t3047,"t3047 Suppose that the elections of the Constituent Assembly are taking place tomorrow and that you have decided to vote, how important is it [Insert] in your decision to vote for him/her? 7. The candidate’s wealth.",,,,,1
+T305,t305,t305 Which of the factors mentioned in the previous question is the most important?,,,,,1
+T306,t306,t306 Do you think that the upcoming elections of the Constituent Assembly would be...?,,,,,1
+T307,t307,"t307 Suppose that the elections of the Constituent Assembly will take place tomorrow and that you have decided to participate, will you vote for...?",,,,,1
+T307N1,t307n1,t307n1 Name of the political party,,,,,1
+T307N2,t307n2,t307n2 Name of the candidate,,,,,1
+T309,t309,"t309 Apart from your political orientation, do you think any of the political parties would win a majority in the upcoming elections of the Constituent Assembly?",,,,,1
+T309N,t309n,t309n Name of the political party,,,,,1
+T50111,t50111,t50111 Are you a member of [Insert] 11. Revolution’s Protection Committees.,,,,,1
+T501C,t501c,t501c When did you become a member of this political party?,,,,,1
+T513,t513,"t513 Suppose that there was a scale from 1-10 to measure the extent of your satisfaction with the Ben Ali regime, in which 1 means that you were absolutely unsatisfied with the regime and 10 means that you were very satisfied, to what extent were you satis",,,,,1
+T52012,t52012,"t52012 Arrange the following characteristics in order of their importance for a person to be qualified for political leadership in the country. 12. Supported and joined the events of the Tunisian revolution between December 17, 2010 and Hanuary 14, 2011.",,,,,1
+T6101,t6101,t6101 Do you (Insert)? 1. Pray daily.,,,,,1
+T6102,t6102,t6102 Do you (Insert)? 2. Fast during Ramadan/Fast the 40 days of Lent (for Christians).,,,,,1
+T6103,t6103,t6103 Do you (Insert)? 3. Watch or listen to religious programs on the radio or television.,,,,,1
+T6104,t6104,t6104 Do you (Insert)? 4. Attend religious lessons in mosques or churches.,,,,,1
+T6105,t6105,t6105 Do you (Insert)? 5. Attend Friday prayer/Sunday services.,,,,,1
+T6106,t6106,t6106 Do you (Insert)? 6. Listen to or read the Quran/the Bible.,,,,,1
+T6107,t6107,t6107 Do you (Insert)? 7. Read religious books.,,,,,1
+T901,t901,"t901 During the protests in Tunisia between December 17th, 2010 and January 14th, 2011, was your position closer to...?",,,,,1
+T902,t902,"t902 Did you participate in the protests against former president Zain Al- Abdeen Ben Ali between December 17th, 2010 and January 14th, 2011?",,,,,1
+T9031,t9031,"t9031 Did you participate in any of the following protests? 1. December17, 2010 to January 1, 2011.",,,,,1
+T9032,t9032,"t9032 Did you participate in any of the following protests? 2. January 2 –January 9, 2011.",,,,,1
+T9033,t9033,"t9033 Did you participate in any of the following protests? 3. January 10 –January 14, 2011.",,,,,1
+T904,t904,"t904 Did you support the protests against Ben Ali through the internet, such as Facebook, Twitter or YouTube?",,,,,1
+T905,t905,"t905 Did any of your friends or acquaintances participate in the protests against former president Ben Ali between December 17th, 2010 and January 14th, 2011?",,,,,1
+T906,t906,t906 Did you join any the revolution protection committees or popular committees after January 14th?,,,,,1
+T907,t907,"t907 During the period of protests between December 17th, 2010 and January 14th, 2011, what source did you depend on the most to follow the events of the revolution?",,,,,1
+T908,t908,"t908 Identify the source (name of TV or radio station, newspaper or website)",,,,,1
+T9091,t9091,"t9091 A number of citizens participated in the protests between December 17th, 2010 and January 14th, 2011 for various reasons. In your opinion, what was the most important reason for the protests?",,,,,1
+T9092,t9092,"t9092 A number of citizens participated in the protests between December 17th, 2010 and January 14th, 2011 for various reasons. In your opinion, what was the second most important reason for the protests?",,,,,1
+T910,t910,t910 Do you have feelings of victory or personal loss with regard to the Tunisian revolution?,,,,,1
+T9111,t9111,"t9111 In your opinion, will the revolution succeed in achieving (Insert)? 1. A democratic political system in Tunisia guaranteeing political and civil freedoms and the accountability of all authorities.",,,,,1
+T9113,t9113,"t9113 In your opinion, will the revolution succeed in achieving (Insert)? 3. Better economic opportunities.",,,,,1
+T9114,t9114,"t9114 In your opinion, will the revolution succeed in achieving (Insert)? 4. Respect for human rights.",,,,,1
+T9115,t9115,"t9115 In your opinion, will the revolution succeed in achieving (Insert)? 5. The rule of law.",,,,,1
+T9116,t9116,"t9116 In your opinion, will the revolution succeed in achieving (Insert)? 6. Increased social justice.",,,,,1
+T9117,t9117,"t9117 In your opinion, will the revolution succeed in achieving (Insert)? 7. An important role for Tunisia in foreign relations.",,,,,1
+T912,t912,t912 Did you participate in the protests after Ben Ali ceded power?,,,,,1
+T9131,t9131,t9131 Did you participate in (Insert)? 1. Qasba 1 Sit-in.,,,,,1
+T9132,t9132,t9132 Did you participate in (Insert)? 2. Qasba 2 Sit-in.,,,,,1
+T9133,t9133,t9133 Did you participate in (Insert)? 3. Quba Sit-in.,,,,,1
+T9134,t9134,t9134 Did you participate in (Insert)? 4. Other.,,,,,1
+T913OT,t913ot,t913ot Name of other protest.,,,,,1
+T914,t914,"t914 Did you offer assistance (such as food, money, transportation, etc.) to those who participated in the Qasaba I protest and Qasaba II protest?",,,,,1
+T9151,t9151,"t9151 A number of citizens participated in the protests after Ben Ali ceded power. In your opinion, what was the most important reason for the protests?",,,,,1
+T9152,t9152,"t9152 A number of citizens participated in the protests after Ben Ali ceded power. In your opinion, what was the second most important reason for the protests?",,,,,1
+T916,t916,"t916 In the coming time period, do you prefer the political system in Tunisia to be...?",,,,,1
+T917,t917,t917 Do you prefer that the state be...?,,,,,1
+T918,t918,t918 Which of the following statements is closest to your opinion regarding a civil state?,,,,,1
+T919,t919,t919 Which of the following statements is closest to your opinion regarding a religious state?,,,,,1
+TE105,te105,"te105 Compared to this time last year, do you feel that your own personal and your family’s safety and security are now ...",,,,,1
+TE210,te210,te210 Do you think that the corruption in the state’s institutions and agencies is now...,,,,,1
+TE402A,te402a,te402a Do you trust the local media now...,,,,,1
+TE4111,te4111,te4111 Are you a member of or participant in [Insert]? 1. Interactive or dialogue-based groups or pages on social networking websites.,,,,,1
+TE4112,te4112,te4112 Are you a member of or participant in [Insert]? 2. Dialogue boards on the internet.,,,,,1
+TE4113,te4113,te4113 Are you a member of or participant in [Insert]? 3. A Facebook page.,,,,,1
+TE4114,te4114,te4114 Are you a member of or participant in [Insert]? 4. A Twitter account.,,,,,1
+TE4115,te4115,te4115 Are you a member of or participant in [Insert]? 5. A private blog.,,,,,1
+TE501A,te501a,te501a Are you a member of a political party?,,,,,1
+TE501B,te501b,te501b What is the name of the political party you belong to?,,,,,1
+TE501D,te501d,te501dn Do you plan on joining a political party?,,,,,1
+TE501DN,te501dn,te501dn What is the name of the political party you plan on joining?,,,,,1
+V1,v1,v1 Region 2,,,,,1
+V1014,v1014,"v1014 Income including all wages, salaries and rent allowances in US Dollars.",,,,,1
+V1015,v1015,v1015 Monthly household income in US Dollars.,,,,,1
+V13,v13,v13 Name of place,,,,,1
+WAVE,,,wave,,,,1

@@ -1,0 +1,13 @@
+# Pooled multi-country releases. These are large, they are redistributed by the
+# survey programmes themselves, and nothing in the repository depends on them at
+# read time -- only on regeneration. See docs/provenance.md for how to get them.
+data/raw/*
+!data/raw/README.md
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+.DS_Store
+.Rhistory
+.Rproj.user/

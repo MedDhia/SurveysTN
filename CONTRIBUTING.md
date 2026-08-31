@@ -1,0 +1,63 @@
+# Adding a survey
+
+The repository is a thin pipeline over publisher releases, so adding a survey
+means describing it rather than committing files by hand.
+
+## If the survey is another wave of a series already here
+
+1. Put the pooled release in `data/raw/`.
+2. Append an entry to the `waves` array in `catalog/sources.json`:
+
+   ```json
+   {
+     "series": "arab-barometer",
+     "wave": 7,
+     "wave_label": "Wave VII",
+     "slug": "wave-07",
+     "raw_file_stem": "ArabBarometer_WaveVII_English_v3",
+     "country_var": "COUNTRY",
+     "fieldwork_years_series": "2021-2022",
+     "fieldwork_tunisia": null,
+     "fieldwork_source": "not recorded in the data file",
+     "notes": ""
+   }
+   ```
+
+   `raw_file_stem` is the filename in `data/raw/` without its extension;
+   `country_var` is spelled as the release spells it. If the release records an
+   interview date per respondent, set `"fieldwork_tunisia": "derive"` and
+   `"fieldwork_date_var"` to the date variable, and the extractor will read the
+   window out of the data instead of taking it on trust.
+
+3. Run the four scripts in the order given in the README, and commit what changes.
+
+## If it is a new series
+
+Add it to the `series` object first, including the value its country variable
+takes for Tunisia:
+
+```json
+"world-values-survey": {
+  "name": "World Values Survey",
+  "publisher": "WVS Association",
+  "homepage": "https://www.worldvaluessurvey.org",
+  "data_page": "https://www.worldvaluessurvey.org/WVSDocumentationWVL.jsp",
+  "country_variable_values": {"tunisia": 788}
+}
+```
+
+`scripts/extract_tunisia.py` assumes the release is SPSS `.sav` with variable and
+value labels attached, which is the common case. A series that ships something
+else needs a reader added to the script, not a workaround in the data.
+
+## Ground rules
+
+- **Nothing hand-edited.** If a file under `data/` cannot be reproduced by running
+  the scripts, it does not belong in the repository.
+- **No recoding.** Don't-know codes, weights and scale directions are left exactly
+  as the publisher wrote them. Harmonisation is the analyst's job and belongs in
+  analysis code, not in the archive.
+- **`scripts/verify.py` must pass** before you commit an extract.
+- **Check the licence.** Not every survey programme permits redistribution of its
+  microdata. Confirm the terms before adding a series, and record them in
+  `docs/provenance.md`.
