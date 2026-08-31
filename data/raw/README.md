@@ -13,6 +13,7 @@ records for each:
 |---|---|
 | `ABII_English.sav` | Arab Barometer Wave II, English release |
 | `ArabBarometer_WaveV_English_v2.sav` | Arab Barometer Wave V, English release v2 |
+| `ABIII_English.sav` | Arab Barometer Wave III, English release |
 | `ABIV_English.csv` | Arab Barometer Wave IV, English release (label-text CSV) |
 | `Arab_Barometer_Wave_6_Part_1_ENG_RELEASE.sav` | Arab Barometer Wave VI Part 1 |
 | `Arab_Barometer_Wave_6_Part_2_ENG_RELEASE.sav` | Arab Barometer Wave VI Part 2 |

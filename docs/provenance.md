@@ -38,11 +38,17 @@ own documents, downloaded from arabbarometer.org.
 
 They are documentation, but they are also an input: `scripts/build_crosswalk.py`
 parses them for question text where a release carries no variable labels, which is
-the whole of Wave IV. Anything the crosswalk sourced that way is marked in its
-`text_from_questionnaire` column, and a sub-item that inherited its parent
-question's wording is marked `questionnaire (stem …)`. The parse is validated
-against the releases that do carry labels — 88–96% agreement per wave, recorded in
-`catalog/crosswalk-report.json` — rather than taken on trust.
+the whole of Wave IV, and for the wording behind a label that only names its topic,
+which is the whole of Wave V. Anything the crosswalk sourced that way is marked in
+its `text_from_questionnaire` column, and a sub-item that inherited its parent
+question's wording is marked `questionnaire (stem …)`.
+
+The parse is validated against the releases that do carry wording as labels —
+85–97% agreement per wave, recorded in `catalog/crosswalk-report.json` — rather
+than taken on trust. Waves IV and V are reported unvalidated with a reason instead
+of a rate: Wave IV has no labels, and Wave V's are a controlled vocabulary in
+capitals that names each question without restating it, so comparing them with the
+wording would score the labelling style rather than the parse.
 
 ## Wave VI is three surveys
 
@@ -56,20 +62,20 @@ any two rounds — but on those shared IDs sex agrees 51–57% of the time and a
 which is what coincidence looks like rather than a link. The IDs are per-release
 sequence numbers. Do not join the rounds on them.
 
+## Fieldwork dates
+
+Waves III, VI and VII record an interview date per respondent, as does Wave VIII,
+so the Tunisia fieldwork window for those is read out of the data. Waves II, IV and
+V carry no date variable; for those the catalog leaves `fieldwork_tunisia` empty
+and reports only the fieldwork years the publisher gives for the wave as a whole. Rather than assert a window from memory, no
+Tunisia-specific dates are given for them; the country report on the Arab Barometer
+site has them.
+
 ## Country identification
 
 Arab Barometer numbers Tunisia **21** in the country variable in all three waves.
 The variable is spelled `country` in Waves II and V and `COUNTRY` in Wave VIII;
 `catalog/sources.json` records the spelling used for each wave.
-
-## Fieldwork dates
-
-Wave VIII records an interview date per respondent, so the Tunisia fieldwork
-window in the catalog is derived from the data itself. Waves II and V carry no
-date variable. Rather than assert a window from memory, the catalog leaves
-`fieldwork_tunisia` empty for those two waves and reports only the fieldwork years
-the publisher gives for the wave as a whole. For the Tunisia-specific dates,
-consult the country report on the Arab Barometer site.
 
 ## Known departures from the source
 

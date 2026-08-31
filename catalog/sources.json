@@ -29,6 +29,23 @@
     },
     {
       "series": "arab-barometer",
+      "wave": 3,
+      "wave_label": "Wave III",
+      "slug": "wave-03",
+      "raw_file_stem": "ABIII_English",
+      "country_var": "country",
+      "fieldwork_years_series": "2012-2014",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "date",
+      "fieldwork_source": "derived from the date variable in the data file",
+      "notes": "",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w03-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABIII_Questionnaire_ENG.pdf"
+      }
+    },
+    {
+      "series": "arab-barometer",
       "wave": 4,
       "wave_label": "Wave IV",
       "slug": "wave-04",
@@ -56,7 +73,10 @@
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
       "notes": "Release v2.",
-      "questionnaire": null
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w05-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABV_Questionnaire_ENG_v2.pdf"
+      }
     },
     {
       "series": "arab-barometer",
@@ -145,16 +165,6 @@
         "file": "docs/questionnaires/ab-w08-questionnaire.pdf",
         "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VIII-Questionnaire-RELEASE-FIN-NOV-2024-1.pdf"
       }
-    }
-  ],
-  "unmatched_questionnaires": [
-    {
-      "series": "arab-barometer",
-      "wave": 3,
-      "wave_label": "Wave III",
-      "file": "docs/questionnaires/ab-w03-questionnaire.pdf",
-      "url": "https://www.arabbarometer.org/wp-content/uploads/ABIII_Questionnaire_ENG.pdf",
-      "note": "Questionnaire only; no Wave III data release has been added to the archive."
     }
   ]
 }

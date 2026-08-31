@@ -52,6 +52,26 @@ an answer, not a non-response. Check the variable before recoding.
 | `99998` | 99998. declined to answer | 1 |
 | `99999` | 99999. i don't know | 1 |
 
+## Arab Barometer Wave III
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `0` | Missing | 269 |
+| `8` | Don't know | 235 |
+| `9` | Refuse | 235 |
+| `99` | Refuse | 19 |
+| `98` | Don't know | 16 |
+| `99999` | Refuse | 16 |
+| `99998` | Don't know | 15 |
+| `94` | Missing | 3 |
+| `999` | Refuse | 2 |
+| `9999998` | Don't know | 2 |
+| `9999999` | Refuse | 2 |
+| `4` | I do not know of any relevant experiences | 1 |
+| `5` | Not applicable | 1 |
+| `9999` | Refuse | 1 |
+| `99994` | Missing | 1 |
+
 ## Arab Barometer Wave IV
 
 Distributed as label text only, so these answers appear as the strings

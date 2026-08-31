@@ -16,6 +16,7 @@ consistent, with nothing recoded.
 | Survey | Respondents | Variables | Fieldwork | Folder |
 |---|---:|---:|---|---|
 | Arab Barometer Wave II | 1,196 | 468 (303 with data) | 2010–2011 | [`data/arab-barometer/wave-02`](data/arab-barometer/wave-02) |
+| Arab Barometer Wave III | 1,199 | 296 (247 with data) | Feb–Mar 2013 | [`data/arab-barometer/wave-03`](data/arab-barometer/wave-03) |
 | Arab Barometer Wave IV | 1,200 | 290 (248 with data) | 2016–2017 | [`data/arab-barometer/wave-04`](data/arab-barometer/wave-04) |
 | Arab Barometer Wave V | 2,400 | 359 (281 with data) | 2018–2019 | [`data/arab-barometer/wave-05`](data/arab-barometer/wave-05) |
 | Arab Barometer Wave VI Part 1 | 1,005 | 98 (75 with data) | Jul 2020 | [`data/arab-barometer/wave-06-part-1`](data/arab-barometer/wave-06-part-1) |
@@ -24,7 +25,7 @@ consistent, with nothing recoded.
 | Arab Barometer Wave VII | 2,400 | 453 (373 with data) | Oct–Nov 2021 | [`data/arab-barometer/wave-07`](data/arab-barometer/wave-07) |
 | Arab Barometer Wave VIII | 2,406 | 690 (466 with data) | Sep–Nov 2023 | [`data/arab-barometer/wave-08`](data/arab-barometer/wave-08) |
 
-12,809 Tunisian respondents across eight surveys. `catalog/catalog.csv` and
+14,008 Tunisian respondents across nine surveys. `catalog/catalog.csv` and
 `catalog/catalog.json` carry the same table in machine-readable form, with
 per-file checksums.
 
@@ -67,7 +68,7 @@ Wave II does not have and don't-know codes that are not declared missing.
 | `data/raw/` | pooled multi-country releases, not tracked in git |
 | `catalog/` | `catalog.json` / `catalog.csv`, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the cross-wave crosswalk, missing-value codes |
-| `docs/questionnaires/` | the published questionnaire for each wave, as PDF |
+| `docs/questionnaires/` | the published questionnaire for every wave, as PDF |
 | `scripts/` | extraction, verification, doc generation |
 
 ## Regenerating
@@ -92,18 +93,24 @@ files against the checksums and counts in `catalog/catalog.json`.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the waves up: one row per variable,
 the name it takes in each wave, the question each wave asked, and whether the
-wording held. 1,856 variables, 1,761 of them with question text, 13 present in
-all eight surveys.
+wording held. 1,966 variables, 1,903 of them with question text, 13 present in
+all nine surveys.
 
 The question text comes from the release's own variable labels where it has them,
 and otherwise from the wave's questionnaire in
 [`docs/questionnaires/`](docs/questionnaires), parsed by question number. That is
 the only source for Wave IV, and it also repairs labels that are truncated in the
 release — Arab Barometer's own Wave VIII label for `Q101` ends "the current
-economic situation in?". The parse is checked against the waves that do carry
-labels and agrees on 88–96% of them, per wave.
+economic situation in?". The parse is checked against release labels rather than trusted, and agrees on
+85–97% of comparable variables in the seven waves where the check is meaningful.
+It is not meaningful everywhere: Wave IV carries no labels at all, and Wave V
+labels every variable from a controlled vocabulary in capitals —
+`ELECTORAL PARTICIPATION: VISITED RALLY DURING PARLIAMENTARY ELECTION` for a
+question reading "did you attend a campaign meeting or rally?". Those two say the
+same thing and share almost no characters, so both waves are reported unvalidated
+with the reason, rather than given a number that would measure labelling style.
 
-Matching on name alone would mislead: 86 variables share a name across waves but
+Matching on name alone would mislead: 97 variables share a name across waves but
 not a wording. Check `text_varies_across_waves` before pooling anything.
 
 ## Adding a survey

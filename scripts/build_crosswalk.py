@@ -46,6 +46,9 @@ ROOT = Path(__file__).resolve().parent.parent
 # matched too and put back the right way round.
 QUESTION_START = re.compile(r"^\s*([A-Za-z]{1,5}\d{1,4}[A-Za-z0-9_]*)[.:]?\s+(\S.*)$")
 QUESTION_START_REVERSED = re.compile(r"^\s*(\d{1,4}[A-Za-z0-9_]*)([Qq])[.:]?\s+(\S.*)$")
+# The Wave V questionnaire puts the number on a line of its own and the question
+# on the lines below it, often behind a routing directive.
+QUESTION_START_ALONE = re.compile(r"^\s*([A-Za-z]{1,5}\d{1,4}[A-Za-z0-9_]*)[.:]?\s*$")
 RESPONSE_OPTION = re.compile(r"^\s*-?\d{1,3}[.)]\s")
 PAGE_NOISE = re.compile(r"^\s*(www\.arabbarometer\.org|\d+|Page \d+.*)\s*$")
 # Only fieldwork directives are dropped. A bracket carrying part of the question
@@ -58,10 +61,15 @@ SQUARE_BRACKETS = re.compile(r"\[[^\]]*\]")
 NAME_PREFIX = re.compile(r"^\s*[Qq]\d{1,4}[A-Za-z0-9_]*[.:]?\s*")
 
 AGREEMENT_FLOOR = 0.6  # difflib ratio above which two wordings count as the same
+MINIMUM_COMPARISONS = 10  # below this an agreement rate is not worth reporting
 
 # In some questionnaires the response options extract onto the same line as the
 # question ("Gender 1. Male2. Female"), so a parsed stem is cut at the first one.
-GLUED_OPTIONS = re.compile(r"(\s+-?\d{1,3}[.)]\s*[A-Z_]|_{3,})")
+# Codes run to five digits in the party and candidate lists, so allow for that.
+GLUED_OPTIONS = re.compile(r"(\s+-?\d{1,6}[.)]\s*[A-Z_]|_{3,})")
+# Answer boxes and rules extract as runs of these, and a capture that is mostly
+# form furniture or untranslated Arabic is not a question.
+FORM_FURNITURE = re.compile(r"[|_\u0600-\u06FF\u2010-\u2015]")
 
 
 def tidy(text: str) -> str:
@@ -74,6 +82,28 @@ def trim_options(text: str) -> str:
     """Drop response options that extracted onto the question's own line."""
     cut = GLUED_OPTIONS.search(text)
     return (text[: cut.start()] if cut else text).strip(" :.,\t")
+
+
+def is_question(text: str) -> bool:
+    """Reject a capture that is an answer box or a rule rather than wording."""
+    letters = sum(c.isascii() and c.isalpha() for c in text)
+    return len(text) >= 12 and letters >= 0.5 * len(text)
+
+
+def looks_like_wording(label: str) -> bool:
+    """Is a release label the question itself, or just a topic tag?
+
+    Wave V labels every variable from a controlled vocabulary in capitals --
+    "ELECTORAL PARTICIPATION: VISITED RALLY DURING PARLIAMENTARY ELECTION" for a
+    question that reads "did you attend a campaign meeting or rally?". The two say
+    the same thing and share almost no characters, so comparing them measures
+    labelling style rather than the parse. Tags are left out of the validation:
+    they are too short, or they are shouted.
+    """
+    if len(normalise(label)) < 40:
+        return False
+    cased = [c for c in label if c.isalpha()]
+    return bool(cased) and sum(c.isupper() for c in cased) / len(cased) < 0.6
 
 
 def informative(label: str) -> bool:
@@ -119,8 +149,9 @@ def parse_questionnaire(pdf: Path) -> dict[str, str]:
         # routing instruction or a grid header referring back to it.
         if current and current not in questions:
             body = tidy(" ".join(buffer))
-            body = trim_options(body)
-            if len(body) > 8:
+            body = FORM_FURNITURE.sub(" ", body)
+            body = trim_options(re.sub(r"\s+", " ", body).strip())
+            if is_question(body):
                 questions[current] = body
         current, buffer = None, []
 
@@ -136,10 +167,21 @@ def parse_questionnaire(pdf: Path) -> dict[str, str]:
             flush()
             current, buffer = match.group(1).upper(), [match.group(2)]
             continue
+        alone = QUESTION_START_ALONE.match(line)
+        if alone:
+            flush()
+            current, buffer = alone.group(1).upper(), []
+            continue
         if current is None:
             continue
-        if RESPONSE_OPTION.match(line) or PAGE_NOISE.match(line) or not line.strip():
+        if RESPONSE_OPTION.match(line) or PAGE_NOISE.match(line):
             flush()
+            continue
+        if not line.strip():
+            # A blank line ends a question that has already started, but not one
+            # whose number stood alone and whose text is still to come.
+            if buffer:
+                flush()
             continue
         buffer.append(line.strip())
     flush()
@@ -210,15 +252,26 @@ def check_parse(wave: dict, questions: dict[str, str]) -> dict:
         for c in meta.column_names
     }
     labels = {k: v for k, v in labels.items() if v}
-    shared = [k for k in labels if k in questions]
-    ratios = [agree(labels[k], questions[k]) for k in shared]
+    wording = {k: v for k, v in labels.items() if looks_like_wording(v)}
+    shared = [k for k in wording if k in questions]
+    ratios = [agree(wording[k], questions[k]) for k in shared]
     agreeing = sum(1 for r in ratios if r >= AGREEMENT_FLOOR)
     return {
         "variables_with_labels": len(labels),
+        "labels_that_are_wording": len(wording),
         "questions_parsed": len(questions),
         "compared": len(shared),
         "agreeing": agreeing,
-        "agreement_rate": round(agreeing / len(shared), 3) if shared else None,
+        "agreement_rate": (
+            round(agreeing / len(shared), 3) if len(shared) >= MINIMUM_COMPARISONS else None
+        ),
+        "not_validated_reason": (
+            None
+            if len(shared) >= MINIMUM_COMPARISONS
+            else "release labels are topic tags, not question wording"
+            if len(labels) >= MINIMUM_COMPARISONS
+            else "release carries no variable labels"
+        ),
     }
 
 
@@ -366,10 +419,10 @@ def render_summary(df: pd.DataFrame, tags: list[str], report: dict) -> str:
 
     lines += [
         "",
-        f"{(df['text_varies_across_waves'] == 'yes').sum():,} variables carry a name in more",
-        "than one wave but wording that does not match between them. That is the column",
-        "worth checking before pooling: `text_varies_across_waves`, with the weakest",
-        "pairwise agreement in `lowest_text_agreement`.",
+        f"{(df['text_varies_across_waves'] == 'yes').sum():,} variables carry a name in more than one wave but",
+        "wording that does not match between them. That is the column worth checking",
+        "before pooling: `text_varies_across_waves`, with the weakest pairwise agreement",
+        "in `lowest_text_agreement` and the kind of text compared in `comparison_basis`.",
         "",
         f"## Present in all {len(tags)} surveys with stable wording",
         "",
@@ -394,10 +447,14 @@ def render_summary(df: pd.DataFrame, tags: list[str], report: dict) -> str:
         "that do carry labels:",
         "",
         "| Wave | Questions parsed | Compared with labels | Agreement |",
-        "|---|---:|---:|---:|",
+        "|---|---:|---:|---|",
     ]
     for tag, r in report.items():
-        rate = "—" if r["agreement_rate"] is None else f"{r['agreement_rate']:.0%}"
+        rate = (
+            f"{r['agreement_rate']:.0%}"
+            if r["agreement_rate"] is not None
+            else f"not validated — {r['not_validated_reason']}"
+        )
         lines.append(
             f"| {r['wave_label']} | {r['questions_parsed']} | {r['compared']} | {rate} |"
         )
@@ -407,6 +464,14 @@ def render_summary(df: pd.DataFrame, tags: list[str], report: dict) -> str:
         "release label match at a difflib ratio of 0.6 or better. It is a check on the",
         "parser, not on the data: the two should say the same thing, and where they",
         "disagree the release label is the one that is used.",
+        "",
+        "Only labels that are the question itself count as comparable. A label that names",
+        "a question without restating it cannot be compared with the wording however good",
+        "the parse is — Wave V labels the campaign-rally question",
+        "`ELECTORAL PARTICIPATION: VISITED RALLY DURING PARLIAMENTARY ELECTION`, which is",
+        "right and shares almost no characters with it. Short labels and shouted ones are",
+        "therefore left out, and a wave with fewer than ten left is reported unvalidated",
+        "rather than given a rate that would measure labelling style.",
         "",
         "Text taken from a questionnaire is marked per wave in `text_from_questionnaire`.",
         "A sub-item such as `Q127_1A` inherits the wording of its parent question `Q127`",

@@ -8,21 +8,22 @@ each wave, the question each wave asked, and whether the wording held.
 
 | Waves | Variables |
 |---:|---:|
-| 8 | 13 |
+| 9 | 13 |
+| 8 | 2 |
 | 7 | 2 |
-| 6 | 14 |
-| 5 | 18 |
-| 4 | 18 |
-| 3 | 66 |
-| 2 | 258 |
-| 1 | 1,467 |
+| 6 | 20 |
+| 5 | 14 |
+| 4 | 23 |
+| 3 | 123 |
+| 2 | 274 |
+| 1 | 1,495 |
 
-86 variables carry a name in more
-than one wave but wording that does not match between them. That is the column
-worth checking before pooling: `text_varies_across_waves`, with the weakest
-pairwise agreement in `lowest_text_agreement`.
+97 variables carry a name in more than one wave but
+wording that does not match between them. That is the column worth checking
+before pooling: `text_varies_across_waves`, with the weakest pairwise agreement
+in `lowest_text_agreement` and the kind of text compared in `comparison_basis`.
 
-## Present in all 8 surveys with stable wording
+## Present in all 9 surveys with stable wording
 
 4 variables. These are the safest to stack, and even here confirm the
 response scale in each wave's `codebook.csv` — the crosswalk compares question
@@ -43,20 +44,29 @@ everything it contributes is parsed. The parse is validated against the waves
 that do carry labels:
 
 | Wave | Questions parsed | Compared with labels | Agreement |
-|---|---:|---:|---:|
-| Wave II | 136 | 86 | 92% |
-| Wave IV | 154 | 0 | — |
-| Wave V | 0 | 0 | — |
-| Wave VI Part 1 | 57 | 40 | 88% |
-| Wave VI Part 2 | 49 | 34 | 94% |
-| Wave VI Part 3 | 62 | 46 | 91% |
-| Wave VII | 208 | 153 | 89% |
-| Wave VIII | 242 | 134 | 96% |
+|---|---:|---:|---|
+| Wave II | 152 | 77 | 95% |
+| Wave III | 109 | 57 | 93% |
+| Wave IV | 179 | 0 | not validated — release carries no variable labels |
+| Wave V | 139 | 2 | not validated — release labels are topic tags, not question wording |
+| Wave VI Part 1 | 57 | 33 | 85% |
+| Wave VI Part 2 | 48 | 25 | 96% |
+| Wave VI Part 3 | 61 | 34 | 91% |
+| Wave VII | 211 | 129 | 92% |
+| Wave VIII | 251 | 115 | 97% |
 
 Agreement is the share of comparable variables where the parsed text and the
 release label match at a difflib ratio of 0.6 or better. It is a check on the
 parser, not on the data: the two should say the same thing, and where they
 disagree the release label is the one that is used.
+
+Only labels that are the question itself count as comparable. A label that names
+a question without restating it cannot be compared with the wording however good
+the parse is — Wave V labels the campaign-rally question
+`ELECTORAL PARTICIPATION: VISITED RALLY DURING PARLIAMENTARY ELECTION`, which is
+right and shares almost no characters with it. Short labels and shouted ones are
+therefore left out, and a wave with fewer than ten left is reported unvalidated
+rather than given a rate that would measure labelling style.
 
 Text taken from a questionnaire is marked per wave in `text_from_questionnaire`.
 A sub-item such as `Q127_1A` inherits the wording of its parent question `Q127`

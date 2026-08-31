@@ -34,6 +34,7 @@ use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 ## Six things to check before you analyse
 
 **Weights.** Every wave except Wave II carries a design weight (`wt`, `WT`);
+Wave III has one but no stratum or PSU;
 Waves IV, V, VII and VIII carry a stratum and PSU alongside it, and the three
 Wave VI rounds a PSU only. Unweighted estimates from the weighted waves are not
 nationally representative.
@@ -54,9 +55,10 @@ in `codebook.csv`, and recode before analysing — there is no single rule that
 covers a whole file.
 
 **Many columns are empty here.** The pooled releases carry items asked in only
-some countries. In the Tunisia sub-sample 165 of Wave II's 468 variables, 42 of
-Wave IV's 290, 78 of Wave V's 359, 80 of Wave VII's 453 and 224 of Wave VIII's 690
-have no data at all; the three Wave VI rounds are tighter, at 23, 4 and 7. They are
+some countries. In the Tunisia sub-sample 165 of Wave II's 468 variables, 49 of
+Wave III's 296, 42 of Wave IV's 290, 78 of Wave V's 359, 80 of Wave VII's 453 and
+224 of Wave VIII's 690 have no data at all; the three Wave VI rounds are tighter,
+at 23, 4 and 7. They are
 kept so column positions match the pooled release. `codebook.csv` gives `n_valid`
 per variable; filter on it.
 
@@ -80,12 +82,12 @@ spelling used in each wave, the question each wave asked, and `n_waves`.
 
 ## Pooling waves
 
-Read [`crosswalk.md`](crosswalk.md) first. 13 variables appear in all eight surveys
+Read [`crosswalk.md`](crosswalk.md) first. 13 variables appear in all nine surveys
 under a shared name; most appear in only one. Thirteen years of questionnaire
 revision, three short pandemic rounds with cut-down instruments, and a Wave II that
 predates much of the current numbering.
 
-A shared name is not evidence of a shared question: 86 variables carry a name in
+A shared name is not evidence of a shared question: 97 variables carry a name in
 more than one wave and a wording that does not match between them. The crosswalk
 gives you `text_varies_across_waves` and `lowest_text_agreement` to check that, and
 the per-wave question text to read for yourself. It compares wording only — confirm
@@ -93,4 +95,5 @@ the response scale in each wave's `codebook.csv` before you stack anything, sinc
 question that survived unchanged can still have been rescaled.
 
 Wave IV has no question text of its own; what the crosswalk shows for it is parsed
-from its questionnaire PDF.
+from its questionnaire PDF. Wave V has labels, but they are topic tags rather than
+wording, so read its questionnaire column when you need the question as asked.
