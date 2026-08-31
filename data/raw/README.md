@@ -20,6 +20,8 @@ records for each:
 | `Arab_Barometer_Wave_6_Part_3_ENG_RELEASE.sav` | Arab Barometer Wave VI Part 3 |
 | `AB7_ENG_Release_Version6.sav` | Arab Barometer Wave VII, English release version 6 |
 | `ArabBarometer_WaveVIII_English_v3.sav` | Arab Barometer Wave VIII, English release v3 |
+| `WV6_Data_Tunisia_Excel_v20221117.1.xlsx` | World Values Survey Wave 6, Tunisia country file |
+| `WVS_Wave_7_Tunisia_Excel_v5.0.xlsx` | World Values Survey Wave 7, Tunisia country file |
 
 Wave IV is read from CSV because no SPSS release was available for it. If you have
 one, add `ABIV_English.sav` here, set that wave's `source_format` to `sav` in
@@ -27,4 +29,10 @@ one, add `ABIV_English.sav` here, set that wave's `source_format` to `sav` in
 question text with no other change.
 
 Arab Barometer distributes its data from <https://www.arabbarometer.org/surveys/>
-after a short registration. See `docs/provenance.md`.
+after a short registration, and the World Values Survey from
+<https://www.worldvaluessurvey.org>. The WVS files here are Tunisia country files
+rather than pooled releases, and are small enough to download directly. See
+`docs/provenance.md`.
+
+The WVS Wave 6 CSV edition is not used: it is the same data as the Excel one but
+ships bare column names, where the Excel header carries the question text.

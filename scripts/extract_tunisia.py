@@ -248,6 +248,17 @@ def scan_csv_na_collisions(df: pd.DataFrame) -> dict[str, list[str]]:
 
 
 def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
+    # Some releases record no interview date but do carry the month fieldwork
+    # started and ended, as YYYYMM constants.
+    pair = spec.get("fieldwork_month_vars")
+    if spec.get("fieldwork_tunisia") == "derive" and pair:
+        start, end = (df[v].dropna().astype("Int64").astype(str) for v in pair)
+        if start.empty or end.empty:
+            return None
+        first = pd.to_datetime(start.min(), format="%Y%m")
+        last = pd.to_datetime(end.max(), format="%Y%m")
+        return f"{first:%B %Y} to {last:%B %Y}"
+
     var = spec.get("fieldwork_date_var")
     if spec.get("fieldwork_tunisia") != "derive" or not var or var not in df.columns:
         return None

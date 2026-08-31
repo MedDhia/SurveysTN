@@ -181,16 +181,33 @@ below rather than as codes. They are ordinary values in the data.
 | `99999` | Refused to answer | 3 |
 | `1` | Decline to answer | 1 |
 
-## World Values Survey Wave 7
+## World Values Survey Wave 6
 
-The release ships codes without value labels, so what each of these means
-is not in the data and is not guessed here. These are the negative codes
-that actually occur, which in this series mark the kinds of non-answer;
-read the meanings off the publisher's codebook before recoding.
+The release ships codes without value labels, so these negative sentinels
+carry no meaning in the data itself. The meanings below are quoted from
+docs/questionnaires/wvs-w07-questionnaire.pdf, page 1, 'Technical codes', which sets them
+for the series; a code left blank occurs in this survey's data but is not in
+that list, and is not guessed here.
 
 | Code | Label | Variables using it |
 |---:|---|---:|
-| `-2` | not labelled in the release | 291 |
-| `-5` | not labelled in the release | 254 |
-| `-1` | not labelled in the release | 247 |
-| `-3` | not labelled in the release | 12 |
+| `-1` | Don't know | 222 |
+| `-2` | No answer/refused | 55 |
+| `-3` | Not applicable (filter) | 34 |
+| `-4` | not labelled in the release | 2 |
+| `-5` | Missing; Not applicable for other reasons | 1 |
+
+## World Values Survey Wave 7
+
+The release ships codes without value labels, so these negative sentinels
+carry no meaning in the data itself. The meanings below are quoted from
+docs/questionnaires/wvs-w07-questionnaire.pdf, page 1, 'Technical codes', which sets them
+for the series; a code left blank occurs in this survey's data but is not in
+that list, and is not guessed here.
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-2` | No answer/refused | 291 |
+| `-5` | Missing; Not applicable for other reasons | 254 |
+| `-1` | Don't know | 247 |
+| `-3` | Not applicable (filter) | 12 |

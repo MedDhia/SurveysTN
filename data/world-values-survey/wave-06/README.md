@@ -1,24 +1,24 @@
-# World Values Survey Wave 7 — Tunisia
+# World Values Survey Wave 6 — Tunisia
 
 | | |
 |---|---|
-| Respondents | 1,208 |
-| Variables | 397 |
-| Fieldwork (Tunisia) | 2019-04-26 to 2019-05-20 |
+| Respondents | 1,205 |
+| Variables | 370 |
+| Fieldwork (Tunisia) | November 2013 to December 2013 |
 | Language | English (translated instrument; variable labels only, no value labels) |
-| Source release | Tunisia country file, 1,208 respondents |
-| Source file | `WVS_Wave_7_Tunisia_Excel_v5.0.xlsx` |
+| Source release | Tunisia country file, 1,205 respondents |
+| Source file | `WV6_Data_Tunisia_Excel_v20221117.1.xlsx` |
 | Publisher | WVS Association / JD Systems Institute |
 
 ## Files
 
 | File | Size | SHA-256 (first 16) |
 |---|---:|---|
-| `codebook.csv` | 0.04 MB | `9b4ec8af30d0e945` |
-| `codebook.json` | 0.12 MB | `e0903a9dff2af23c` |
-| `world-values-survey-w07-tunisia-codes.csv` | 1.31 MB | `7c24e67b4bb43d3e` |
-| `world-values-survey-w07-tunisia.dta` | 3.91 MB | `ad1ade6e0b15087f` |
-| `world-values-survey-w07-tunisia.sav` | 3.74 MB | `4152cfed0fa944ea` |
+| `codebook.csv` | 0.03 MB | `7d0f0c8b7b1878a7` |
+| `codebook.json` | 0.11 MB | `4e5c23cf24c00144` |
+| `world-values-survey-w06-tunisia-codes.csv` | 1.09 MB | `d9bf7fd3a9a481ad` |
+| `world-values-survey-w06-tunisia.dta` | 3.63 MB | `8fe7fd738d213a36` |
+| `world-values-survey-w06-tunisia.sav` | 3.44 MB | `9c8a53bf5ddd4024` |
 
 Every variable carries data for at least one respondent.
 
@@ -43,4 +43,4 @@ Supplying the SPSS release for this survey and switching `source_format` to
 
 Regenerate with `python3 scripts/extract_tunisia.py`.
 
-Note: Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release.
+Note: Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7.

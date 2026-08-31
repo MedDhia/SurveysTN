@@ -1,0 +1,219 @@
+series,from_survey,from_variable,to_survey,to_variable,similarity,question_text
+arab-barometer,ab-w02,ir50110,ab-w03,q50110,0.952,ir50110 Are you a member of [Insert] 10. A civil society organization that was not mentioned above
+arab-barometer,ab-w02,q2061,ab-w07,Q2061A,1.0,q2061 What is the most important challenge facing your country today?
+arab-barometer,ab-w02,q5011,ab-w03,q501b,0.974,q5011 Are you a member of [Insert] 1. A political party
+arab-barometer,ab-w02,q60102,ab-w03,q6012,0.984,q60102 I will read a set of statements that relate to the status of women in our society to you in order to gauge the extent of your agreement/disagreement with each statement. 2. A married woman can work outside the home
+arab-barometer,ab-w02,te105,ab-w03,q105a,0.974,"te105 Compared to this time last year, do you feel that your own personal and your family’s safety and security are now"
+arab-barometer,ab-w02,te4111,ab-w03,q4111,0.97,te4111 Are you a member of or participant in [Insert]? 1. Interactive or dialogue-based groups or pages on social networking websites
+arab-barometer,ab-w03,samp,ab-w05,sample,1.0,Sample
+arab-barometer,ab-w04,q1010b,ab-w07,Q1010B2,0.987,How many children live atthis household?
+arab-barometer,ab-w05,Q604_1,ab-w08,Q604A_NT_1,1.0,One who does not pray
+arab-barometer,ab-w05,Q604_3,ab-w08,Q604A_NT_3,1.0,One who comes from a family with a lower social status
+arab-barometer,ab-w05,a1,ab-w07,Q1A_LIB,1.0,REGION
+arab-barometer,ab-w06p1,Q1012A,ab-w07,Q1012A_MUSLIM,1.0,What is your religious denomination?
+arab-barometer,ab-w06p1,Q1012A,ab-w08,Q1012A_MUSLIM,1.0,What is your religious denomination?
+arab-barometer,ab-w06p1,Q521_2,ab-w07,Q521_2A,1.0,Q521_2.Freedom of the media to criticize the things government does
+arab-barometer,ab-w06p1,Q521_2,ab-w08,Q521_2A,1.0,Q521_2.Freedom of the media to criticize the things government does
+arab-barometer,ab-w06p2,Q1012A,ab-w07,Q1012A_MUSLIM,1.0,Q1012a. What is your religious denomination?
+arab-barometer,ab-w06p2,Q1012A,ab-w08,Q1012A_MUSLIM,1.0,Q1012a. What is your religious denomination?
+arab-barometer,ab-w06p2,Q521_2,ab-w07,Q521_2A,1.0,Q521_2.Freedom of the media to criticize the things government does
+arab-barometer,ab-w06p2,Q521_2,ab-w08,Q521_2A,1.0,Q521_2.Freedom of the media to criticize the things government does
+arab-barometer,ab-w06p2,Q729_3A,ab-w08,Q729_5,1.0,Q729_3A Advances women’s rights
+arab-barometer,ab-w06p2,Q729_3B,ab-w08,Q729_6,1.0,Q729_3B Strengthens civil society
+arab-barometer,ab-w06p2,Q734,ab-w06p3,Q734A,0.968,Q734 To what extent do you favor or oppose the normalization of relations betwee
+arab-barometer,ab-w06p3,Q1012A,ab-w07,Q1012A_MUSLIM,1.0,What is your religious denomination?
+arab-barometer,ab-w06p3,Q1012A,ab-w08,Q1012A_MUSLIM,1.0,What is your religious denomination?
+arab-barometer,ab-w06p3,Q521_2,ab-w07,Q521_2A,1.0,Freedom of the media to criticize the things government does
+arab-barometer,ab-w06p3,Q521_2,ab-w08,Q521_2A,1.0,Freedom of the media to criticize the things government does
+arab-barometer,ab-w07,Q201A_42A_MOR,ab-w08,Q201B_4,1.0,Q201A_42A_MOR. Police
+arab-barometer,ab-w07,Q503A_1,ab-w08,Q503A_2,1.0,Q503A_1. Which party if any do you feel closest to?
+arab-barometer,ab-w07,Q621_1,ab-w08,Q622C_IRQ_6,1.0,Q621_1. Lack of means of transportation
+world-values-survey,wvs-w06,V10,wvs-w07,Q46,1.0,Feeling of happiness
+world-values-survey,wvs-w06,V103,wvs-w07,Q59,0.958,Trust: Your neighborhood (B)
+world-values-survey,wvs-w06,V104,wvs-w07,Q60,0.97,Trust: People you know personally (B)
+world-values-survey,wvs-w06,V105,wvs-w07,Q61,0.976,Trust: People you meet for the first time (B)
+world-values-survey,wvs-w06,V106,wvs-w07,Q62,0.97,Trust: People of another religion (B)
+world-values-survey,wvs-w06,V107,wvs-w07,Q63,0.972,Trust: People of another nationality (B)
+world-values-survey,wvs-w06,V108,wvs-w07,Q64,1.0,Confidence: Churches
+world-values-survey,wvs-w06,V109,wvs-w07,Q65,1.0,Confidence: Armed Forces
+world-values-survey,wvs-w06,V11,wvs-w07,Q47,1.0,State of health (subjective)
+world-values-survey,wvs-w06,V110,wvs-w07,Q66,1.0,Confidence: The Press
+world-values-survey,wvs-w06,V111,wvs-w07,Q67,1.0,Confidence: Television
+world-values-survey,wvs-w06,V112,wvs-w07,Q68,0.979,Confidence: Labour Unions
+world-values-survey,wvs-w06,V113,wvs-w07,Q69,1.0,Confidence: The Police
+world-values-survey,wvs-w06,V114,wvs-w07,Q70,1.0,Confidence: Justice System/Courts
+world-values-survey,wvs-w06,V115,wvs-w07,Q71,1.0,Confidence: The Government
+world-values-survey,wvs-w06,V116,wvs-w07,Q72,1.0,Confidence: The Political Parties
+world-values-survey,wvs-w06,V117,wvs-w07,Q73,1.0,Confidence: Parliament
+world-values-survey,wvs-w06,V118,wvs-w07,Q74,1.0,Confidence: The Civil Services
+world-values-survey,wvs-w06,V119,wvs-w07,Q75,1.0,Confidence: Universities
+world-values-survey,wvs-w06,V12,wvs-w07,Q8,1.0,Important child qualities: independence
+world-values-survey,wvs-w06,V120,wvs-w07,Q77,1.0,Confidence: Major Companies
+world-values-survey,wvs-w06,V121,wvs-w07,Q78,1.0,Confidence: Banks
+world-values-survey,wvs-w06,V122,wvs-w07,Q79,1.0,Confidence: The Environmental Protection Movement
+world-values-survey,wvs-w06,V123,wvs-w07,Q80,1.0,Confidence: The Women´s Movement
+world-values-survey,wvs-w06,V124,wvs-w07,Q81,1.0,Confidence: Charitable or humanitarian organizations
+world-values-survey,wvs-w06,V125_15,wvs-w07,Q82_ARABLEAGUE,1.0,Confidence: The Arab League
+world-values-survey,wvs-w06,V126,wvs-w07,Q83,0.951,Confidence: The United Nations
+world-values-survey,wvs-w06,V129,wvs-w07,Q237,1.0,Political system: Having the army rule
+world-values-survey,wvs-w06,V13,wvs-w07,Q9,1.0,Important child qualities: Hard work
+world-values-survey,wvs-w06,V130,wvs-w07,Q238,1.0,Political system: Having a democratic political system
+world-values-survey,wvs-w06,V131,wvs-w07,Q241,1.0,Democracy: Governments tax the rich and subsidize the poor
+world-values-survey,wvs-w06,V132,wvs-w07,Q242,1.0,Democracy: Religious authorities interpret the laws
+world-values-survey,wvs-w06,V133,wvs-w07,Q243,1.0,Democracy: People choose their leaders in free elections
+world-values-survey,wvs-w06,V134,wvs-w07,Q244,1.0,Democracy: People receive state aid for unemployment
+world-values-survey,wvs-w06,V135,wvs-w07,Q245,1.0,Democracy: The army takes over when government is incompetent
+world-values-survey,wvs-w06,V136,wvs-w07,Q246,1.0,Democracy: Civil rights protect people’s liberty against oppression
+world-values-survey,wvs-w06,V137,wvs-w07,Q247,1.0,Democracy: The state makes people's incomes equal
+world-values-survey,wvs-w06,V138,wvs-w07,Q248,1.0,Democracy: People obey their rulers
+world-values-survey,wvs-w06,V139,wvs-w07,Q249,1.0,Democracy: Women have the same rights as men
+world-values-survey,wvs-w06,V14,wvs-w07,Q10,1.0,Important child qualities: feeling of responsibility
+world-values-survey,wvs-w06,V140,wvs-w07,Q250,1.0,Importance of democracy
+world-values-survey,wvs-w06,V141,wvs-w07,Q251,1.0,How democratically is this country being governed today
+world-values-survey,wvs-w06,V142,wvs-w07,Q253,1.0,Respect for individual human rights nowadays
+world-values-survey,wvs-w06,V144,wvs-w07,Q289CS9,1.0,Religious denomination - detailed list
+world-values-survey,wvs-w06,V144G,wvs-w07,Q289,1.0,Religious denominations - major groups
+world-values-survey,wvs-w06,V145,wvs-w07,Q171,1.0,How often do you attend religious services
+world-values-survey,wvs-w06,V146,wvs-w07,Q172,0.952,How often to you pray
+world-values-survey,wvs-w06,V147,wvs-w07,Q173,1.0,Religious person
+world-values-survey,wvs-w06,V15,wvs-w07,Q11,1.0,Important child qualities: imagination
+world-values-survey,wvs-w06,V150,wvs-w07,Q174,1.0,Meaning of religion: To follow religious norms and ceremonies vs To do good to other people
+world-values-survey,wvs-w06,V151,wvs-w07,Q175,1.0,Meaning of religion: To make sense of life after death vs To make sense of life in this world
+world-values-survey,wvs-w06,V153,wvs-w07,Q169,1.0,"Whenever science and religion conflict, religion is always right"
+world-values-survey,wvs-w06,V154,wvs-w07,Q170,1.0,The only acceptable religion is my religion
+world-values-survey,wvs-w06,V16,wvs-w07,Q12,1.0,Important child qualities: tolerance and respect for other people
+world-values-survey,wvs-w06,V17,wvs-w07,Q13,1.0,Important child qualities: thrift saving money and things
+world-values-survey,wvs-w06,V170,wvs-w07,Q131,1.0,Secure in neighborhood
+world-values-survey,wvs-w06,V171,wvs-w07,Q132,1.0,Frequency in your neighborhood: Robberies
+world-values-survey,wvs-w06,V172,wvs-w07,Q133,1.0,Frequency in your neighborhood: Alcohol consumed in the streets
+world-values-survey,wvs-w06,V173,wvs-w07,Q134,1.0,Frequency in your neighborhood: Police or military interfere with people’s private life
+world-values-survey,wvs-w06,V174,wvs-w07,Q135,1.0,Frequency in your neighborhood: Racist behavior
+world-values-survey,wvs-w06,V175,wvs-w07,Q136,1.0,Frequency in your neighborhood: Drug sale in streets
+world-values-survey,wvs-w06,V176,wvs-w07,Q139,1.0,Things done for reasons of security: Didn’t carry much money
+world-values-survey,wvs-w06,V177,wvs-w07,Q140,1.0,Things done for reasons of security: Preferred not to go out at night
+world-values-survey,wvs-w06,V178,wvs-w07,Q141,1.0,"Things done for reasons of security: Carried a knife, gun or other weapon"
+world-values-survey,wvs-w06,V179,wvs-w07,Q144,1.0,Respondent was victim of a crime during the past year
+world-values-survey,wvs-w06,V18,wvs-w07,Q14,1.0,Important child qualities: determination perseverance
+world-values-survey,wvs-w06,V180,wvs-w07,Q145,1.0,Respondent's family was victim of a crime during last year
+world-values-survey,wvs-w06,V181,wvs-w07,Q142,1.0,Worries: Losing my job or not finding a job
+world-values-survey,wvs-w06,V182,wvs-w07,Q143,1.0,Worries: Not being able to give one's children a good education
+world-values-survey,wvs-w06,V183,wvs-w07,Q146,1.0,Worries: A war involving my country
+world-values-survey,wvs-w06,V184,wvs-w07,Q147,1.0,Worries: A terrorist attack
+world-values-survey,wvs-w06,V185,wvs-w07,Q148,1.0,Worries: A civil war
+world-values-survey,wvs-w06,V188,wvs-w07,Q51,1.0,Frequency you/family (last 12 month): Gone without enough food to eat
+world-values-survey,wvs-w06,V189,wvs-w07,Q52,1.0,Frequency you/family (last 12 month): Felt unsafe from crime in your own home
+world-values-survey,wvs-w06,V19,wvs-w07,Q15,1.0,Important child qualities: religious faith
+world-values-survey,wvs-w06,V190,wvs-w07,Q53,1.0,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed
+world-values-survey,wvs-w06,V191,wvs-w07,Q54,1.0,Frequency you/family (last 12 month): Gone without a cash income
+world-values-survey,wvs-w06,V192,wvs-w07,Q158,1.0,"Science and technology are making our lives healthier, easier, and more comfortable"
+world-values-survey,wvs-w06,V193,wvs-w07,Q159,1.0,"Because of science and technology, there will be more opportunities for the next generation"
+world-values-survey,wvs-w06,V194,wvs-w07,Q160,1.0,We depend too much on science and not enough on faith
+world-values-survey,wvs-w06,V195,wvs-w07,Q161,1.0,One of the bad effects of science is that it breaks down people’s ideas of right and wrong
+world-values-survey,wvs-w06,V196,wvs-w07,Q162,1.0,It is not important for me to know about science in my daily life
+world-values-survey,wvs-w06,V197,wvs-w07,Q163,1.0,"The world is better off, or worse off, because of science and technology"
+world-values-survey,wvs-w06,V198,wvs-w07,Q177,1.0,Justifiable: Claiming government benefits to which you are not entitled
+world-values-survey,wvs-w06,V199,wvs-w07,Q178,1.0,Justifiable: Avoiding a fare on public transport
+world-values-survey,wvs-w06,V20,wvs-w07,Q16,1.0,Important child qualities: unselfishness
+world-values-survey,wvs-w06,V200,wvs-w07,Q179,1.0,Justifiable: Stealing property
+world-values-survey,wvs-w06,V201,wvs-w07,Q180,1.0,Justifiable: Cheating on taxes
+world-values-survey,wvs-w06,V203,wvs-w07,Q182,1.0,Justifiable: Homosexuality
+world-values-survey,wvs-w06,V204,wvs-w07,Q184,1.0,Justifiable: Abortion
+world-values-survey,wvs-w06,V205,wvs-w07,Q185,1.0,Justifiable: Divorce
+world-values-survey,wvs-w06,V207,wvs-w07,Q187,1.0,Justifiable: Suicide
+world-values-survey,wvs-w06,V207A,wvs-w07,Q188,1.0,Justifiable: Euthanasia
+world-values-survey,wvs-w06,V208,wvs-w07,Q189,1.0,Justifiable: For a man to beat his wife
+world-values-survey,wvs-w06,V209,wvs-w07,Q190,1.0,Justifiable: Parents beating children
+world-values-survey,wvs-w06,V21,wvs-w07,Q17,1.0,Important child qualities: obedience
+world-values-survey,wvs-w06,V210,wvs-w07,Q191,1.0,Justifiable: Violence against other people
+world-values-survey,wvs-w06,V217,wvs-w07,Q201,0.971,Information source: Daily newspaper (B)
+world-values-survey,wvs-w06,V219,wvs-w07,Q202,0.963,Information source: TV news (B)
+world-values-survey,wvs-w06,V220,wvs-w07,Q203,0.967,Information source: Radio news (B)
+world-values-survey,wvs-w06,V221,wvs-w07,Q204,0.969,Information source: Mobile phone (B)
+world-values-survey,wvs-w06,V222,wvs-w07,Q205,0.96,Information source: Email (B)
+world-values-survey,wvs-w06,V223,wvs-w07,Q206,0.964,Information source: Internet (B)
+world-values-survey,wvs-w06,V224,wvs-w07,Q208,0.98,Information source: Talk with friends or colleagues (B)
+world-values-survey,wvs-w06,V226,wvs-w07,Q221,1.0,Vote in elections: local level
+world-values-survey,wvs-w06,V227,wvs-w07,Q222,1.0,Vote in elections: National level
+world-values-survey,wvs-w06,V228A,wvs-w07,Q224,1.0,How often in country's elections: Votes are counted fairly
+world-values-survey,wvs-w06,V228B,wvs-w07,Q225,1.0,How often in country's elections: Opposition candidates are prevented from running
+world-values-survey,wvs-w06,V228C,wvs-w07,Q226,1.0,How often in country's elections: TV news favors the governing party
+world-values-survey,wvs-w06,V228D,wvs-w07,Q227,1.0,How often in country's elections: Voters are bribed
+world-values-survey,wvs-w06,V228E,wvs-w07,Q228,1.0,How often in country's elections: Journalists provide fair coverage of elections
+world-values-survey,wvs-w06,V228F,wvs-w07,Q229,1.0,How often in country's elections: Election officials are fair
+world-values-survey,wvs-w06,V228G,wvs-w07,Q230,1.0,How often in country's elections: Rich people buy elections
+world-values-survey,wvs-w06,V228H,wvs-w07,Q231,1.0,How often in country's elections: Voters are threatened with violence at the polls
+world-values-survey,wvs-w06,V228I,wvs-w07,Q232,1.0,How often in country's elections: Voters are offered a genuine choice in the elections
+world-values-survey,wvs-w06,V228J,wvs-w07,Q234,1.0,Some people think that having honest elections makes a lot of difference in their lives; other people think that it doesn’t matter much
+world-values-survey,wvs-w06,V229,wvs-w07,Q279,1.0,Employment status
+world-values-survey,wvs-w06,V23,wvs-w07,Q49,1.0,Satisfaction with your life
+world-values-survey,wvs-w06,V230,wvs-w07,Q284,1.0,Sector of employment
+world-values-survey,wvs-w06,V235,wvs-w07,Q285,1.0,Are you the chief wage earner in your house
+world-values-survey,wvs-w06,V237,wvs-w07,Q286,1.0,Family savings during past year
+world-values-survey,wvs-w06,V238,wvs-w07,Q287,1.0,Social class (subjective)
+world-values-survey,wvs-w06,V239,wvs-w07,Q288,1.0,Scale of incomes
+world-values-survey,wvs-w06,V239R,wvs-w07,Q288R,1.0,Income level (Recoded)
+world-values-survey,wvs-w06,V24,wvs-w07,Q57,1.0,Most people can be trusted
+world-values-survey,wvs-w06,V240,wvs-w07,Q260,1.0,Sex
+world-values-survey,wvs-w06,V241,wvs-w07,Q261,1.0,Year of birth
+world-values-survey,wvs-w06,V242,wvs-w07,Q262,1.0,Age
+world-values-survey,wvs-w06,V243,wvs-w07,Q264,1.0,Mother immigrant
+world-values-survey,wvs-w06,V244,wvs-w07,Q265,1.0,Father immigrant
+world-values-survey,wvs-w06,V245,wvs-w07,Q263,1.0,Respondent immigrant
+world-values-survey,wvs-w06,V246,wvs-w07,Q269,1.0,Respondent citizen
+world-values-survey,wvs-w06,V247,wvs-w07,Q272,1.0,Language at home
+world-values-survey,wvs-w06,V248R,wvs-w07,Q275R,1.0,Highest educational level: Respondent (recoded into 3 groups)
+world-values-survey,wvs-w06,V250,wvs-w07,Q271,1.0,Do you live with your parents
+world-values-survey,wvs-w06,V251,wvs-w07,E_RESPINT,1.0,Respondent interested during the interview
+world-values-survey,wvs-w06,V252,wvs-w07,F_INTPRIVACY,1.0,Interview privacy
+world-values-survey,wvs-w06,V254,wvs-w07,Q290,1.0,Ethnic group
+world-values-survey,wvs-w06,V29,wvs-w07,Q98,0.966,Active/Inactive membership of political party
+world-values-survey,wvs-w06,V30,wvs-w07,Q99,0.972,Active/Inactive membership of environmental organization
+world-values-survey,wvs-w06,V31,wvs-w07,Q100,0.972,Active/Inactive membership of professional organization
+world-values-survey,wvs-w06,V32,wvs-w07,Q101,0.977,Active/Inactive membership of charitable/humanitarian organization
+world-values-survey,wvs-w06,V33,wvs-w07,Q102,1.0,Active/Inactive membership: Consumer organization
+world-values-survey,wvs-w06,V34,wvs-w07,Q103,1.0,"Active/Inactive membership: Self-help group, mutual aid group"
+world-values-survey,wvs-w06,V36,wvs-w07,Q18,0.978,Neighbours: Drug addicts
+world-values-survey,wvs-w06,V37,wvs-w07,Q19,0.986,Neighbours: People of a different race
+world-values-survey,wvs-w06,V38,wvs-w07,Q20,0.984,Neighbours: People who have AIDS
+world-values-survey,wvs-w06,V39,wvs-w07,Q21,0.986,Neighbours: Immigrants/foreign workers
+world-values-survey,wvs-w06,V4,wvs-w07,Q1,1.0,Important in life: Family
+world-values-survey,wvs-w06,V40,wvs-w07,Q22,0.977,Neighbours: Homosexuals
+world-values-survey,wvs-w06,V41,wvs-w07,Q23,0.988,Neighbours: People of a different religion
+world-values-survey,wvs-w06,V42,wvs-w07,Q24,0.98,Neighbours: Heavy drinkers
+world-values-survey,wvs-w06,V43,wvs-w07,Q25,0.989,Neighbours: Unmarried couples living together
+world-values-survey,wvs-w06,V44,wvs-w07,Q26,0.989,Neighbours: People who speak a different language
+world-values-survey,wvs-w06,V45,wvs-w07,Q33,1.0,Jobs scarce: Men should have more right to a job than women
+world-values-survey,wvs-w06,V47,wvs-w07,Q35,0.979,Problem if women have more income than husband (B)
+world-values-survey,wvs-w06,V49,wvs-w07,Q27,1.0,One of main goals in life has been to make my parents proud
+world-values-survey,wvs-w06,V5,wvs-w07,Q2,1.0,Important in life: Friends
+world-values-survey,wvs-w06,V50,wvs-w07,Q28,1.0,Pre-school child suffers with working mother
+world-values-survey,wvs-w06,V51,wvs-w07,Q29,1.0,Men make better political leaders than women do
+world-values-survey,wvs-w06,V52,wvs-w07,Q30,1.0,University is more important for a boy than for a girl
+world-values-survey,wvs-w06,V53,wvs-w07,Q31,1.0,Men make better business executives than women do
+world-values-survey,wvs-w06,V54,wvs-w07,Q32,1.0,Being a housewife just as fulfilling
+world-values-survey,wvs-w06,V55,wvs-w07,Q48,1.0,How much freedom of choice and control
+world-values-survey,wvs-w06,V57,wvs-w07,Q273,1.0,Marital status
+world-values-survey,wvs-w06,V58,wvs-w07,Q274,1.0,How many children do you have
+world-values-survey,wvs-w06,V59,wvs-w07,Q50,1.0,Satisfaction with financial situation of household
+world-values-survey,wvs-w06,V6,wvs-w07,Q3,1.0,Important in life: Leisure time
+world-values-survey,wvs-w06,V60,wvs-w07,Q152,1.0,Aims of country: first choice
+world-values-survey,wvs-w06,V61,wvs-w07,Q153,1.0,Aims of country: second choice
+world-values-survey,wvs-w06,V62,wvs-w07,Q154,1.0,Aims of respondent: first choice
+world-values-survey,wvs-w06,V63,wvs-w07,Q155,1.0,Aims of respondent: second choice
+world-values-survey,wvs-w06,V64,wvs-w07,Q156,1.0,Most important: first choice
+world-values-survey,wvs-w06,V65,wvs-w07,Q157,1.0,Most important: second choice
+world-values-survey,wvs-w06,V66,wvs-w07,Q151,1.0,Willingness to fight for country
+world-values-survey,wvs-w06,V67,wvs-w07,Q43,1.0,Future changes: Less importance placed on work
+world-values-survey,wvs-w06,V68,wvs-w07,Q44,1.0,Future changes: More emphasis on technology
+world-values-survey,wvs-w06,V69,wvs-w07,Q45,1.0,Future changes: Greater respect for authority
+world-values-survey,wvs-w06,V7,wvs-w07,Q4,1.0,Important in life: Politics
+world-values-survey,wvs-w06,V8,wvs-w07,Q5,1.0,Important in life: Work
+world-values-survey,wvs-w06,V81,wvs-w07,Q111,1.0,Protecting environment vs. Economic growth
+world-values-survey,wvs-w06,V84,wvs-w07,Q199,1.0,Interest in politics
+world-values-survey,wvs-w06,V85,wvs-w07,Q209,1.0,Political action: Signing a petition
+world-values-survey,wvs-w06,V86,wvs-w07,Q210,1.0,Political action: joining in boycotts
+world-values-survey,wvs-w06,V87,wvs-w07,Q211,1.0,Political action: attending lawful/peaceful demonstrations
+world-values-survey,wvs-w06,V88,wvs-w07,Q212,1.0,Political action: joining unofficial strikes
+world-values-survey,wvs-w06,V9,wvs-w07,Q6,1.0,Important in life: Religion
+world-values-survey,wvs-w06,V97,wvs-w07,Q107,1.0,Private vs state ownership of business
+world-values-survey,wvs-w06,V99,wvs-w07,Q109,1.0,Competition good or harmful

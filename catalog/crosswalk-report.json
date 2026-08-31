@@ -108,6 +108,16 @@
       "agreement_rate": 0.974,
       "not_validated_reason": null
     },
+    "wvs-w06": {
+      "wave_label": "Wave 6",
+      "series": "world-values-survey",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
     "wvs-w07": {
       "wave_label": "Wave 7",
       "series": "world-values-survey",
@@ -116,11 +126,13 @@
       "compared": 0,
       "agreeing": 0,
       "agreement_rate": null,
-      "not_validated_reason": "no questionnaire in the archive for this survey"
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     }
   },
-  "variables": 2363,
-  "with_question_text": 2300,
+  "variables": 2690,
+  "with_question_text": 2627,
   "in_every_wave": 0,
-  "wording_drifts": 97
+  "wording_drifts": 100,
+  "suggested_matches": 218,
+  "suggestion_floor": 0.95
 }

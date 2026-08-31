@@ -25,9 +25,10 @@ consistent, with nothing recoded.
 | Arab Barometer Wave VI Part 3 | 1,200 | 105 (98 with data) | Mar 2021 | [`data/arab-barometer/wave-06-part-3`](data/arab-barometer/wave-06-part-3) |
 | Arab Barometer Wave VII | 2,400 | 453 (373 with data) | Oct–Nov 2021 | [`data/arab-barometer/wave-07`](data/arab-barometer/wave-07) |
 | Arab Barometer Wave VIII | 2,406 | 690 (466 with data) | Sep–Nov 2023 | [`data/arab-barometer/wave-08`](data/arab-barometer/wave-08) |
-| World Values Survey Wave 7 | 1,208 | 397 (397 with data) | Apr–May 2019 | [`data/world-values-survey/wave-07`](data/world-values-survey/wave-07) |
+| World Values Survey Wave 6 | 1,205 | 370 | Nov–Dec 2013 | [`data/world-values-survey/wave-06`](data/world-values-survey/wave-06) |
+| World Values Survey Wave 7 | 1,208 | 397 | Apr–May 2019 | [`data/world-values-survey/wave-07`](data/world-values-survey/wave-07) |
 
-15,216 Tunisian respondents across ten surveys in two series, plus one derived file:
+16,421 Tunisian respondents across eleven surveys in two series, plus one derived file:
 [`wave-06-merged`](data/arab-barometer/wave-06-merged) stacks the three Wave VI
 rounds into 3,207 rows with a `PART` column. `catalog/catalog.csv` and
 `catalog/catalog.json` carry the same table in machine-readable form, with
@@ -102,8 +103,14 @@ files against the checksums and counts in `catalog/catalog.json`.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the waves up: one row per variable,
 the name it takes in each wave, the question each wave asked, and whether the
-wording held. 2,363 variables, 2,300 of them with question text; within Arab Barometer, 13 are
+wording held. 2,690 variables, 2,627 of them with question text; within Arab Barometer, 13 are
 present in all nine of its surveys.
+
+Where a programme renumbers its variables, matching on name finds nothing —
+the World Values Survey asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
+[`docs/crosswalk-suggested.csv`](docs/crosswalk-suggested.csv) pairs those up by
+question text instead: 218 pairs, offered only where the wordings are all but
+identical and unambiguous. They are suggestions to confirm, not findings.
 
 Variables are matched **within a series and never across one** — `Q1` is the
 governorate in Arab Barometer and "Important in life: Family" in the World Values

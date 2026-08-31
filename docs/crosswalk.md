@@ -44,14 +44,88 @@ not answer options.
 
 ## World Values Survey
 
-397 variables across 1 surveys, 397 with question text.
+724 variables across 2 surveys, 724 with question text.
 
 | Surveys | Variables |
 |---:|---:|
-| 1 | 397 |
+| 2 | 43 |
+| 1 | 681 |
 
-Only one survey in this series so far, so there is nothing to match it
-against; the rows carry its names and question text and wait for a second.
+3 variables carry a name in more than one survey but wording that
+does not match between them. That is the column worth checking before pooling:
+`text_varies_across_waves`, with the weakest pairwise agreement in
+`lowest_text_agreement` and the kind of text compared in `comparison_basis`.
+
+### Present in all 2 with stable wording
+
+40 variables. The safest to stack, and even here confirm the response
+scale in each survey's `codebook.csv` — the crosswalk compares question wording,
+not answer options.
+
+| Variable | Question |
+|---|---|
+| `AUTONOMY` | AUTONOMY.- Wezel Autonomy sub index |
+| `CHOICE` | CHOICE.- Welzel choice sub-index |
+| `C_COW_ALPHA` | Country code CoW alpha |
+| `DEFIANCE` | DEFIANCE.- Welzel defiance sub-index |
+| `DISBELIEF` | DISBELIEF.- Welzel disbelief sub-index |
+| `EQUALITY` | Emancipative Values-2: Equality sub-index |
+| `G_TOWNSIZE2` | Settlement size_5 groups |
+| `I_ABORTLIB` | ABORTLIB- Welzel choice-2: Abortion acceptable |
+| `I_AUTHORITY` | AUTHORITY - Welzel defiance - 1: Inverse respect for authority |
+| `I_DEVOUT` | DEVOUT- Welzel defiance - 3: Inverse devoutness |
+| `I_DIVORLIB` | DIVORLIB- Welzel choice-3: Divorce acceptable |
+| `I_HOMOLIB` | HOMOLIB- Welzel choice-1: Homosexuality acceptance |
+| `I_IMAGIN` | IMAGIN- Welzel autonomy-2: Imagination as kid quality |
+| `I_INDEP` | INDEP- Welzel autonomy-1: Independence as kid quality |
+| `I_NATIONALISM` | NATIONALISM - Welzel defiance - 2: Inverse national pride |
+| `I_NONOBED` | Emancipative Values-1: Obedience not kid quality |
+| `I_NORM1` | NORM1 - Welzel relativism- 1: Inverse norm conform1 |
+| `I_NORM2` | NORM2 - Welzel relativism- 2: Inverse norm conform2 |
+| `I_NORM3` | NORM3 - Welzel relativism- 3: Inverse norm conform3 |
+| `I_RELIGBEL` | RELIGBEL - Welzel disbelief- 2: Inverse religious person |
+| `I_RELIGIMP` | RELIGIMP - Welzel disbelief- 1: Inverse importance of religion |
+| `I_RELIGPRAC` | RELIGPRAC - Welzel disbelief- 3: Inverse religious practice |
+| `I_TRUSTARMY` | TRUSTARMY- Welzel scepticism- 1: Inverse trust in army |
+| `I_TRUSTCOURTS` | TRUSTCOURTS- Welzel scepticism- 3: Inverse trust in courts |
+| `I_TRUSTPOLICE` | TRUSTPOLICE- Welzel scepticism- 2: Inverse trust in police |
+| `I_VOI2_00` | VOI2_00- Welzel voice-3 (auxiliary) |
+| `I_VOICE1` | VOICE1- Welzel voice-1 |
+| `I_VOICE2` | VOICE2- Welzel voice-2 |
+| `I_WOMEDU` | WOMEDU- Welzel equality-3: Gender equality: education |
+| `I_WOMJOB` | WOMJOB- Welzel equality-1: Gender equality: job |
+| `I_WOMPOL` | WOMPOL- Welzel equality-2: Gender equality: politics |
+| `N_REGION_ISO` | Region ISO 3166-2 |
+| `RELATIVISM` | RELATIVISM.- Welzel relativism |
+| `RESEMAVAL` | RESEMAVAL.- Welzel emancipative values |
+| `SACSECVAL` | SACSECVAL.- Welzel Overall Secular Values |
+| `SCEPTICISM` | SCEPTICISM.- Welzel scepticism index |
+| `VOICE` | VOICE.- Welzel voice sub-index |
+| `Y001` | Post-Materialist index 12-item |
+| `Y002` | Post-Materialist index 4-item |
+| `Y003` | Autonomy Index |
+
+## Suggested matches, where the numbering changed
+
+[`crosswalk-suggested.csv`](crosswalk-suggested.csv) pairs variables that no name
+matches but whose question text is the same. It exists because the World Values
+Survey renumbered between waves: Wave 6 asks `V9` what Wave 7 asks as `Q6`, and
+matching on name finds only the derived indices and the admin columns. Arab
+Barometer needs it less often, but it also renames — Wave II's Tunisia-specific
+`te105` is Wave III's `q105a`. 218 pairs in total:
+
+| Series | Pairs |
+|---|---:|
+| Arab Barometer | 29 |
+| World Values Survey | 189 |
+
+**These are suggestions, not findings.** A pair is offered only when the two
+wordings are all but identical (difflib ratio ≥ 0.95) and neither side is
+claimed by a competing pair, because just below that threshold the near neighbours
+are different questions phrased alike: Wave 6 asks both "Political action: joining
+in boycotts" and "Political action recently done: joining in boycotts", and only
+one of them is Wave 7's item. Confirm against the publisher's own crosswalk before
+you rely on one.
 
 ## Where the question text comes from
 
@@ -70,7 +144,8 @@ releases that carry wording as labels:
 | Arab Barometer Wave VI Part 3 | 61 | 34 | 91% |
 | Arab Barometer Wave VII | 211 | 129 | 92% |
 | Arab Barometer Wave VIII | 251 | 115 | 97% |
-| World Values Survey Wave 7 | 0 | 0 | not validated — no questionnaire in the archive for this survey |
+| World Values Survey Wave 6 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| World Values Survey Wave 7 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 
 Agreement is the share of comparable variables where the parsed text and the
 release label match at a difflib ratio of 0.6 or better. It is a check on the

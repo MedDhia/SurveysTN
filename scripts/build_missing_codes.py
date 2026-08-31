@@ -36,12 +36,15 @@ MARKERS = (
 
 def main() -> None:
     catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
+    manifest = json.loads((ROOT / "catalog" / "sources.json").read_text(encoding="utf-8"))
     sections = []
 
     for s in catalog["surveys"]:
         codebook = json.loads(
             (ROOT / s["path"] / "codebook.json").read_text(encoding="utf-8")
         )
+        declared = manifest["series"][s["series"]].get("sentinel_code_labels") or {}
+        sentinels = declared.get("labels", {})
         counts: Counter = Counter()
         for row in codebook:
             if row["value_labels"]:
@@ -53,7 +56,7 @@ def main() -> None:
                 # negative codes mean, so they are counted and named as sentinels
                 # rather than given meanings this archive would be inventing.
                 for code in json.loads(row["sentinel_codes"]):
-                    counts[(str(code), "")] += 1
+                    counts[(str(code), sentinels.get(str(code), ""))] += 1
             elif row["observed_values"]:
                 # A label-only release has no codes; the answer text is the value,
                 # so it stands in the code column too.
@@ -73,10 +76,11 @@ def main() -> None:
             ]
         elif not s["has_value_labels"]:
             lines += [
-                "The release ships codes without value labels, so what each of these means",
-                "is not in the data and is not guessed here. These are the negative codes",
-                "that actually occur, which in this series mark the kinds of non-answer;",
-                "read the meanings off the publisher's codebook before recoding.",
+                "The release ships codes without value labels, so these negative sentinels",
+                "carry no meaning in the data itself. The meanings below are quoted from",
+                f"{declared.get('source', 'the publisher documentation')}, which sets them",
+                "for the series; a code left blank occurs in this survey's data but is not in",
+                "that list, and is not guessed here.",
                 "",
             ]
         lines += [

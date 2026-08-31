@@ -44,9 +44,14 @@ nationally representative.
 svyset psu [pw=wt], strata(stratum)
 ```
 
-**The two series do not share a question numbering.** `Q1` is the governorate in
-Arab Barometer and "Important in life: Family" in the World Values Survey. The
-crosswalk matches within a series only, and so should you.
+**The two series do not share a question numbering, and neither does WVS with
+itself.** `Q1` is the governorate in Arab Barometer and "Important in life: Family"
+in the World Values Survey, so the crosswalk matches within a series only and so
+should you. Within WVS, Wave 6 numbers its items `V`-something and Wave 7
+`Q`-something — `V9` and `Q6` are the same question — so name matching finds only
+the derived indices. Use
+[`crosswalk-suggested.csv`](crosswalk-suggested.csv), which pairs them by question
+text, and confirm against the WVS crosswalk before relying on a pair.
 
 **Don't-know and refused are codes, not blanks.** Arab Barometer stores them as
 sentinel values and does not declare them missing, so an unguarded `mean()` will
@@ -56,7 +61,9 @@ coded -8 and -9, and Waves VII and VIII use 98 and 99; wider scales use 998/999,
 99998/99999 and longer, and a handful of Wave VIII indicator variables code
 don't-know as `1`. Wave IV has no codes at all — the answer reads "Don't know (Do
 not read)" as text. WVS Wave 7 uses negative codes — −1, −2, −3, −5 — and ships no
-value labels saying which is which, so read them off the WVS codebook. Read
+value labels saying which is which. Their meanings are in the Wave 7 questionnaire
+and are quoted in `docs/missing-value-codes.md`; Wave 6 also uses a `-4` that the
+questionnaire does not list. Read
 `docs/missing-value-codes.md` for the full per-survey inventory, check the variable
 in `codebook.csv`, and recode before analysing — there is no single rule that
 covers a whole file.

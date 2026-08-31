@@ -1,0 +1,371 @@
+position,variable,label,storage_type,n_valid,n_missing,n_distinct,value_labels,observed_values,sentinel_codes,min,max
+1,V2,Country/region,int64,1205,0,1,,,,788.0,788.0
+2,C_COW_ALPHA,Country code CoW alpha,int64,1205,0,1,,,[-4],-4.0,-4.0
+3,B_COUNTRY_ALPHA,Country code ISO 3166 alpha,int64,1205,0,1,,,[-4],-4.0,-4.0
+4,V3,Original respondent number,int64,1205,0,1205,,,,1.0,1210.0
+5,V4,Important in life: Family,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+6,V5,Important in life: Friends,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+7,V6,Important in life: Leisure time,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+8,V7,Important in life: Politics,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+9,V8,Important in life: Work,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+10,V9,Important in life: Religion,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+11,V10,Feeling of happiness,int64,1205,0,5,,,[-1],-1.0,4.0
+12,V11,State of health (subjective),int64,1205,0,5,,,[-1],-1.0,4.0
+13,V12,Important child qualities: independence,int64,1205,0,2,,,,1.0,2.0
+14,V13,Important child qualities: Hard work,int64,1205,0,2,,,,1.0,2.0
+15,V14,Important child qualities: feeling of responsibility,int64,1205,0,2,,,,1.0,2.0
+16,V15,Important child qualities: imagination,int64,1205,0,2,,,,1.0,2.0
+17,V16,Important child qualities: tolerance and respect for other people,int64,1205,0,2,,,,1.0,2.0
+18,V17,Important child qualities: thrift saving money and things,int64,1205,0,2,,,,1.0,2.0
+19,V18,Important child qualities: determination perseverance,int64,1205,0,2,,,,1.0,2.0
+20,V19,Important child qualities: religious faith,int64,1205,0,2,,,,1.0,2.0
+21,V20,Important child qualities: unselfishness,int64,1205,0,2,,,,1.0,2.0
+22,V21,Important child qualities: obedience,int64,1205,0,2,,,,1.0,2.0
+23,V22,Important child qualities: Self-expression,int64,1205,0,2,,,,1.0,2.0
+24,V23,Satisfaction with your life,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+25,V24,Most people can be trusted,int64,1205,0,3,,,[-1],-1.0,2.0
+26,V25,Active/Inactive membership of church or religious organization,int64,1205,0,3,,,,0.0,2.0
+27,V26,Active/Inactive membership of sport or recreation,int64,1205,0,3,,,,0.0,2.0
+28,V27,"Active/Inactive membership of art, music, educational",int64,1205,0,3,,,,0.0,2.0
+29,V28,Active/Inactive membership of labour unions,int64,1205,0,3,,,,0.0,2.0
+30,V29,Active/Inactive membership of political party,int64,1205,0,3,,,,0.0,2.0
+31,V30,Active/Inactive membership of environmental organization,int64,1205,0,3,,,,0.0,2.0
+32,V31,Active/Inactive membership of professional organization,int64,1205,0,3,,,,0.0,2.0
+33,V32,Active/Inactive membership of charitable/humanitarian organization,int64,1205,0,3,,,,0.0,2.0
+34,V33,Active/Inactive membership: Consumer organization,int64,1205,0,3,,,,0.0,2.0
+35,V34,"Active/Inactive membership: Self-help group, mutual aid group",int64,1205,0,3,,,,0.0,2.0
+36,V35,Active/Inactive membership of any other organization,int64,1205,0,2,,,,0.0,2.0
+37,V36,Neighbours: Drug addicts,int64,1205,0,2,,,,1.0,2.0
+38,V37,Neighbours: People of a different race,int64,1205,0,2,,,,1.0,2.0
+39,V38,Neighbours: People who have AIDS,int64,1205,0,2,,,,1.0,2.0
+40,V39,Neighbours: Immigrants/foreign workers,int64,1205,0,2,,,,1.0,2.0
+41,V40,Neighbours: Homosexuals,int64,1205,0,2,,,,1.0,2.0
+42,V41,Neighbours: People of a different religion,int64,1205,0,2,,,,1.0,2.0
+43,V42,Neighbours: Heavy drinkers,int64,1205,0,2,,,,1.0,2.0
+44,V43,Neighbours: Unmarried couples living together,int64,1205,0,2,,,,1.0,2.0
+45,V44,Neighbours: People who speak a different language,int64,1205,0,2,,,,1.0,2.0
+46,V45,Jobs scarce: Men should have more right to a job than women,int64,1205,0,4,,,[-1],-1.0,3.0
+47,V47,Problem if women have more income than husband (B),int64,1205,0,4,,,[-1],-1.0,3.0
+48,V48,Job best way for women to be independent (b),int64,1205,0,4,,,[-1],-1.0,3.0
+49,V49,One of main goals in life has been to make my parents proud,int64,1205,0,5,,,[-1],-1.0,4.0
+50,V50,Pre-school child suffers with working mother,int64,1205,0,5,,,[-1],-1.0,4.0
+51,V51,Men make better political leaders than women do,int64,1205,0,5,,,[-1],-1.0,4.0
+52,V52,University is more important for a boy than for a girl,int64,1205,0,5,,,[-1],-1.0,4.0
+53,V53,Men make better business executives than women do,int64,1205,0,5,,,[-1],-1.0,4.0
+54,V54,Being a housewife just as fulfilling,int64,1205,0,5,,,[-1],-1.0,4.0
+55,V55,How much freedom of choice and control,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+56,V56,Do you think most people try to take advantage of you (10 point scale),int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+57,V57,Marital status,int64,1205,0,6,,,,1.0,6.0
+58,V58,How many children do you have,int64,1205,0,9,,,,0.0,8.0
+59,V59,Satisfaction with financial situation of household,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+60,V60,Aims of country: first choice,int64,1205,0,5,,,[-1],-1.0,4.0
+61,V61,Aims of country: second choice,int64,1205,0,7,,,"[-3, -2, -1]",-3.0,4.0
+62,V62,Aims of respondent: first choice,int64,1205,0,5,,,[-1],-1.0,4.0
+63,V63,Aims of respondent: second choice,int64,1205,0,7,,,"[-3, -2, -1]",-3.0,4.0
+64,V64,Most important: first choice,int64,1205,0,5,,,[-1],-1.0,4.0
+65,V65,Most important: second choice,int64,1205,0,7,,,"[-3, -2, -1]",-3.0,4.0
+66,V66,Willingness to fight for country,int64,1205,0,3,,,[-2],-2.0,2.0
+67,V67,Future changes: Less importance placed on work,int64,1205,0,4,,,[-1],-1.0,3.0
+68,V68,Future changes: More emphasis on technology,int64,1205,0,4,,,[-1],-1.0,3.0
+69,V69,Future changes: Greater respect for authority,int64,1205,0,4,,,[-1],-1.0,3.0
+70,V70,Schwartz: It is important to this person to think up new ideas and be creative,int64,1205,0,7,,,[-1],-1.0,6.0
+71,V71,Schwartz: It is important to this person to be rich,int64,1205,0,7,,,[-1],-1.0,6.0
+72,V72,Schwartz: It is important to this person living in secure surroundings,int64,1205,0,7,,,[-1],-1.0,6.0
+73,V73,Schwartz: It is important to this person to have a good time,int64,1205,0,7,,,[-1],-1.0,6.0
+74,V74,Schwartz: It is important to this person to do something for the good of society,int64,1205,0,7,,,[-1],-1.0,6.0
+75,V74B,Schwartz: It is important to this person to help the people nearby,int64,1205,0,7,,,[-1],-1.0,6.0
+76,V75,Schwartz: It is important to this person being very successful,int64,1205,0,7,,,[-1],-1.0,6.0
+77,V76,Schwartz: It is important to this person adventure and taking risks,int64,1205,0,7,,,[-1],-1.0,6.0
+78,V77,Schwartz: It is important to this person to always behave properly,int64,1205,0,7,,,[-1],-1.0,6.0
+79,V78,Schwartz: It is important to this person looking after the environment,int64,1205,0,7,,,[-1],-1.0,6.0
+80,V79,Schwartz: It is important to this person tradition,int64,1205,0,7,,,[-1],-1.0,6.0
+81,V80,Most serious problem of the world,int64,1205,0,6,,,[-1],-1.0,5.0
+82,V81,Protecting environment vs. Economic growth,int64,1205,0,3,,,[-1],-1.0,2.0
+83,V82,Past two years: given money to ecological organization,int64,1205,0,3,,,[-1],-1.0,2.0
+84,V83,Past two years: participated in demonstration for environment,int64,1205,0,3,,,[-1],-1.0,2.0
+85,V84,Interest in politics,int64,1205,0,5,,,[-1],-1.0,4.0
+86,V85,Political action: Signing a petition,int64,1205,0,4,,,[-1],-1.0,3.0
+87,V86,Political action: joining in boycotts,int64,1205,0,4,,,[-1],-1.0,3.0
+88,V87,Political action: attending lawful/peaceful demonstrations,int64,1205,0,4,,,[-1],-1.0,3.0
+89,V88,Political action: joining unofficial strikes,int64,1205,0,4,,,[-1],-1.0,3.0
+90,V89,Political action: Other,int64,1205,0,4,,,[-1],-1.0,3.0
+91,V90,Political action recently done: signing a petition,int64,1205,0,5,,,[-3],-3.0,5.0
+92,V91,Political action recently done: joining in boycotts,int64,1205,0,5,,,[-3],-3.0,5.0
+93,V92,Political action recently done: Attending peaceful demonstrations,int64,1205,0,5,,,[-3],-3.0,5.0
+94,V93,Political acition recently done: Joining strikes,int64,1205,0,5,,,[-3],-3.0,5.0
+95,V94,Political action recently done: Other,int64,1205,0,5,,,[-3],-3.0,5.0
+96,V95,Self positioning in political scale,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+97,V96,Income equality,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+98,V97,Private vs state ownership of business,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+99,V98,Government responsibility,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+100,V99,Competition good or harmful,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+101,V100,Hard work brings success,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+102,V101,Wealth accumulation,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+103,V102,How much you trust: Your family (B),int64,1205,0,5,,,[-1],-1.0,4.0
+104,V103,Trust: Your neighborhood (B),int64,1205,0,5,,,[-1],-1.0,4.0
+105,V104,Trust: People you know personally (B),int64,1205,0,5,,,[-1],-1.0,4.0
+106,V105,Trust: People you meet for the first time (B),int64,1205,0,5,,,[-1],-1.0,4.0
+107,V106,Trust: People of another religion (B),int64,1205,0,5,,,[-1],-1.0,4.0
+108,V107,Trust: People of another nationality (B),int64,1205,0,5,,,[-1],-1.0,4.0
+109,V108,Confidence: Churches,int64,1205,0,5,,,[-1],-1.0,4.0
+110,V109,Confidence: Armed Forces,int64,1205,0,5,,,[-1],-1.0,4.0
+111,V110,Confidence: The Press,int64,1205,0,5,,,[-1],-1.0,4.0
+112,V111,Confidence: Television,int64,1205,0,5,,,[-1],-1.0,4.0
+113,V112,Confidence: Labour Unions,int64,1205,0,5,,,[-1],-1.0,4.0
+114,V113,Confidence: The Police,int64,1205,0,5,,,[-1],-1.0,4.0
+115,V114,Confidence: Justice System/Courts,int64,1205,0,5,,,[-1],-1.0,4.0
+116,V115,Confidence: The Government,int64,1205,0,5,,,[-1],-1.0,4.0
+117,V116,Confidence: The Political Parties,int64,1205,0,5,,,[-1],-1.0,4.0
+118,V117,Confidence: Parliament,int64,1205,0,5,,,[-1],-1.0,4.0
+119,V118,Confidence: The Civil Services,int64,1205,0,5,,,[-1],-1.0,4.0
+120,V119,Confidence: Universities,int64,1205,0,5,,,[-1],-1.0,4.0
+121,V120,Confidence: Major Companies,int64,1205,0,5,,,[-1],-1.0,4.0
+122,V121,Confidence: Banks,int64,1205,0,5,,,[-1],-1.0,4.0
+123,V122,Confidence: The Environmental Protection Movement,int64,1205,0,5,,,[-1],-1.0,4.0
+124,V123,Confidence: The Women´s Movement,int64,1205,0,5,,,[-1],-1.0,4.0
+125,V124,Confidence: Charitable or humanitarian organizations,int64,1205,0,5,,,[-1],-1.0,4.0
+126,V125REG,Confidence: Major regional organization,int64,1205,0,5,,,[-1],-1.0,4.0
+127,V125_15,Confidence: The Arab League,int64,1205,0,5,,,[-1],-1.0,4.0
+128,V126,Confidence: The United Nations,int64,1205,0,5,,,[-1],-1.0,4.0
+129,V127,Political system: Having a strong leader,int64,1205,0,5,,,[-1],-1.0,4.0
+130,V128,Political system: Having experts make decisions,int64,1205,0,5,,,[-1],-1.0,4.0
+131,V129,Political system: Having the army rule,int64,1205,0,5,,,[-1],-1.0,4.0
+132,V130,Political system: Having a democratic political system,int64,1205,0,5,,,[-1],-1.0,4.0
+133,V131,Democracy: Governments tax the rich and subsidize the poor.,int64,1205,0,11,,,[-1],-1.0,10.0
+134,V132,Democracy: Religious authorities interpret the laws.,int64,1205,0,11,,,[-1],-1.0,10.0
+135,V133,Democracy: People choose their leaders in free elections.,int64,1205,0,11,,,[-1],-1.0,10.0
+136,V134,Democracy: People receive state aid for unemployment.,int64,1205,0,11,,,[-1],-1.0,10.0
+137,V135,Democracy: The army takes over when government is incompetent.,int64,1205,0,11,,,[-1],-1.0,10.0
+138,V136,Democracy: Civil rights protect people’s liberty against oppression.,int64,1205,0,11,,,[-1],-1.0,10.0
+139,V137,Democracy: The state makes people's incomes equal,int64,1205,0,11,,,[-1],-1.0,10.0
+140,V138,Democracy: People obey their rulers,int64,1205,0,11,,,[-1],-1.0,10.0
+141,V139,Democracy: Women have the same rights as men.,int64,1205,0,11,,,[-1],-1.0,10.0
+142,V140,Importance of democracy,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+143,V141,How democratically is this country being governed today,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+144,V142,Respect for individual human rights nowadays,int64,1205,0,5,,,[-1],-1.0,4.0
+145,V143,Thinking about meaning and purpose of life,int64,1205,0,5,,,[-1],-1.0,4.0
+146,V144,Religious denomination - detailed list,int64,1205,0,1,,,,50000000.0,50000000.0
+147,V144G,Religious denominations - major groups,int64,1205,0,1,,,,5.0,5.0
+148,V145,How often do you attend religious services,int64,1205,0,7,,,,1.0,7.0
+149,V146,How often to you pray,int64,1205,0,8,,,,1.0,8.0
+150,V147,Religious person,int64,1205,0,4,,,[-1],-1.0,3.0
+151,V150,Meaning of religion: To follow religious norms and ceremonies vs To do good to other people,int64,1205,0,3,,,[-2],-2.0,2.0
+152,V151,Meaning of religion: To make sense of life after death vs To make sense of life in this world,int64,1205,0,3,,,[-2],-2.0,2.0
+153,V152,How important is God in your life,int64,1205,0,12,,,"[-2, -1]",-2.0,10.0
+154,V153,"Whenever science and religion conflict,  religion is always right",int64,1205,0,5,,,[-1],-1.0,4.0
+155,V154,The only acceptable religion  is my religion,int64,1205,0,5,,,[-1],-1.0,4.0
+156,V155,All religions should be taught in public schools,int64,1205,0,5,,,[-1],-1.0,4.0
+157,V156,People who belong to different religions are probably just as moral as those who belong to mine,int64,1205,0,5,,,[-1],-1.0,4.0
+158,V157,Social position: People in their 20s,int64,1205,0,11,,,[-1],-1.0,10.0
+159,V158,Social position: People in their 40s,int64,1205,0,11,,,[-1],-1.0,10.0
+160,V159,Social position: People in their 70s,int64,1205,0,11,,,[-1],-1.0,10.0
+161,V160,Is a 30-year old boss acceptable,int64,1205,0,11,,,[-1],-1.0,10.0
+162,V161,People over 70: are seen as friendly,int64,1205,0,6,,,[-1],-1.0,4.0
+163,V162,People over 70: are seen as competent,int64,1205,0,6,,,[-1],-1.0,4.0
+164,V163,People over 70: viewed with respect,int64,1205,0,6,,,[-1],-1.0,4.0
+165,V164,Is a 70-year old boss acceptable,int64,1205,0,11,,,[-1],-1.0,10.0
+166,V165,Older people are not respected much these days,int64,1205,0,5,,,[-1],-1.0,4.0
+167,V166,Older people get more than their fair share from the government,int64,1205,0,5,,,[-1],-1.0,4.0
+168,V167,Older people are a burden on society,int64,1205,0,5,,,[-1],-1.0,4.0
+169,V168,Companies that employ young people perform better than those that employ people of different ages,int64,1205,0,5,,,[-1],-1.0,4.0
+170,V169,Old people have too much political influence,int64,1205,0,5,,,[-1],-1.0,4.0
+171,V160A,I see myself as someone who: is reserved,int64,1205,0,6,,,[-1],-1.0,5.0
+172,V160B,I see myself as someone who: is generally trusting,int64,1205,0,6,,,[-1],-1.0,5.0
+173,V160C,I see myself as someone who: tends to be lazy,int64,1205,0,6,,,[-1],-1.0,5.0
+174,V160D,"I see myself as someone who: is relaxed, handles stress well",int64,1205,0,6,,,[-1],-1.0,5.0
+175,V160E,I see myself as someone who: has few artistic interests,int64,1205,0,6,,,[-1],-1.0,5.0
+176,V160F,"I see myself as someone who: is outgoing, sociable",int64,1205,0,6,,,[-1],-1.0,5.0
+177,V160G,I see myself as someone who: tends to find fault with others,int64,1205,0,6,,,[-1],-1.0,5.0
+178,V160H,I see myself as someone who: does a thorough job,int64,1205,0,6,,,[-1],-1.0,5.0
+179,V160I,I see myself as someone who: gets nervous easily,int64,1205,0,6,,,[-1],-1.0,5.0
+180,V160J,I see myself as someone who: has an active imagination,int64,1205,0,6,,,[-1],-1.0,5.0
+181,V170,Secure in neighborhood,int64,1205,0,5,,,[-1],-1.0,4.0
+182,V171,Frequency in your neighborhood: Robberies,int64,1205,0,5,,,[-1],-1.0,4.0
+183,V172,Frequency in your neighborhood: Alcohol consumed in the streets,int64,1205,0,5,,,[-1],-1.0,4.0
+184,V173,Frequency in your neighborhood: Police or military interfere with people’s private life,int64,1205,0,5,,,[-1],-1.0,4.0
+185,V174,Frequency in your neighborhood: Racist behavior,int64,1205,0,5,,,[-1],-1.0,4.0
+186,V175,Frequency in your neighborhood: Drug sale in streets,int64,1205,0,5,,,[-1],-1.0,4.0
+187,V176,Things done for reasons of security: Didn’t carry much money,int64,1205,0,3,,,[-2],-2.0,5.0
+188,V177,Things done for reasons of security: Preferred not to go out at night,int64,1205,0,3,,,[-2],-2.0,5.0
+189,V178,"Things done for reasons of security: Carried a knife, gun or other weapon",int64,1205,0,3,,,[-2],-2.0,5.0
+190,V179,Respondent was victim of a crime during the past year,int64,1205,0,3,,,[-2],-2.0,5.0
+191,V180,Respondent's family was victim of a crime during last year,int64,1205,0,3,,,[-2],-2.0,5.0
+192,V181,Worries: Losing my job or not finding a job,int64,1205,0,5,,,[-1],-1.0,4.0
+193,V182,Worries: Not being able to give one's children a good education,int64,1205,0,5,,,[-1],-1.0,4.0
+194,V183,Worries: A war involving my country,int64,1205,0,5,,,[-1],-1.0,4.0
+195,V184,Worries: A terrorist attack,int64,1205,0,5,,,[-1],-1.0,4.0
+196,V185,Worries: A civil war,int64,1205,0,5,,,[-1],-1.0,4.0
+197,V186,Worries: Government wire-tapping or reading my mail or email,int64,1205,0,5,,,[-1],-1.0,4.0
+198,V187,"Under some conditions, war is necessary to obtain justice",int64,1205,0,3,,,[-1],-1.0,2.0
+199,V188,Frequency you/family (last 12 month): Gone without enough food to eat,int64,1205,0,5,,,[-1],-1.0,4.0
+200,V189,Frequency you/family (last 12 month): Felt unsafe from crime in your own home,int64,1205,0,5,,,[-1],-1.0,4.0
+201,V190,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,int64,1205,0,5,,,[-1],-1.0,4.0
+202,V191,Frequency you/family (last 12 month): Gone without a cash income,int64,1205,0,5,,,[-1],-1.0,4.0
+203,V192,"Science and technology are making our lives healthier, easier, and more comfortable",int64,1205,0,11,,,[-1],-1.0,10.0
+204,V193,"Because of science and technology, there will be more opportunities for the next generation",int64,1205,0,11,,,[-1],-1.0,10.0
+205,V194,We depend too much on science and not enough on faith,int64,1205,0,11,,,[-1],-1.0,10.0
+206,V195,One of the bad effects of science is that it breaks down people’s ideas of right and wrong,int64,1205,0,11,,,[-1],-1.0,10.0
+207,V196,It is not important for me to know about science in my daily life,int64,1205,0,11,,,[-1],-1.0,10.0
+208,V197,"The world is better off, or worse off, because of science and technology",int64,1205,0,11,,,[-1],-1.0,10.0
+209,V198,Justifiable: Claiming government benefits to which you are not entitled,int64,1205,0,11,,,[-1],-1.0,10.0
+210,V199,Justifiable: Avoiding a fare on public transport,int64,1205,0,11,,,[-1],-1.0,10.0
+211,V200,Justifiable: Stealing property,int64,1205,0,11,,,[-1],-1.0,10.0
+212,V201,Justifiable: Cheating on taxes,int64,1205,0,11,,,[-1],-1.0,10.0
+213,V202,Justifiable: Someone accepting a bribe,int64,1205,0,11,,,[-1],-1.0,10.0
+214,V203,Justifiable: Homosexuality,int64,1205,0,11,,,[-1],-1.0,10.0
+215,V204,Justifiable: Abortion,int64,1205,0,11,,,[-1],-1.0,10.0
+216,V205,Justifiable: Divorce,int64,1205,0,11,,,[-1],-1.0,10.0
+217,V207,Justifiable: Suicide,int64,1205,0,10,,,[-1],-1.0,10.0
+218,V207A,Justifiable: Euthanasia,int64,1205,0,11,,,[-1],-1.0,10.0
+219,V208,Justifiable: For a man to beat his wife,int64,1205,0,11,,,[-1],-1.0,10.0
+220,V209,Justifiable: Parents beating children,int64,1205,0,11,,,[-1],-1.0,10.0
+221,V210,Justifiable: Violence against other people,int64,1205,0,11,,,[-1],-1.0,10.0
+222,V211,How proud of nationality,int64,1205,0,6,,,[-1],-1.0,5.0
+223,V212,I see myself as a world citizen,int64,1205,0,5,,,[-1],-1.0,4.0
+224,V213,I see myself as member of my local community,int64,1205,0,5,,,[-1],-1.0,4.0
+225,V214,I see myself as citizen of the [country] nation,int64,1205,0,5,,,[-1],-1.0,4.0
+226,V215_06,I see myself as citizen of [Arab Union],int64,1205,0,5,,,[-1],-1.0,4.0
+227,V216,I see myself as an autonomous individual,int64,1205,0,5,,,[-1],-1.0,4.0
+228,V217,Information source: Daily newspaper (B),int64,1205,0,6,,,[-1],-1.0,5.0
+229,V218,Information source: Printed magazines (B),int64,1205,0,6,,,[-1],-1.0,5.0
+230,V219,Information source: TV news (B),int64,1205,0,6,,,[-1],-1.0,5.0
+231,V220,Information source: Radio news (B),int64,1205,0,6,,,[-1],-1.0,5.0
+232,V221,Information source: Mobile phone (B),int64,1205,0,6,,,[-1],-1.0,5.0
+233,V222,Information source: Email (B),int64,1205,0,6,,,[-1],-1.0,5.0
+234,V223,Information source: Internet (B),int64,1205,0,6,,,[-1],-1.0,5.0
+235,V224,Information source: Talk with friends or colleagues (B),int64,1205,0,6,,,[-1],-1.0,5.0
+236,V225,How often use of PC,int64,1205,0,5,,,[-1],-1.0,4.0
+237,V226,Vote in elections: local level,int64,1205,0,4,,,[-1],-1.0,3.0
+238,V227,Vote in elections: National level,int64,1205,0,4,,,[-1],-1.0,3.0
+239,V228,Which party would you vote for if there were a national election tomorrow,int64,1205,0,10,,,[-2],-2.0,788023.0
+240,V228_LOCAL,Which party would you vote for if there were a national election tomorrow,int64,1205,0,10,,,[-2],-2.0,788023.0
+241,V228A,How often in country's elections: Votes are counted fairly,int64,1205,0,5,,,[-1],-1.0,4.0
+242,V228B,How often in country's elections: Opposition candidates are prevented from running,int64,1205,0,5,,,[-1],-1.0,4.0
+243,V228C,How often in country's elections: TV news favors the governing party,int64,1205,0,5,,,[-1],-1.0,4.0
+244,V228D,How often in country's elections: Voters are bribed,int64,1205,0,5,,,[-1],-1.0,4.0
+245,V228E,How often in country's elections: Journalists provide fair coverage of elections,int64,1205,0,5,,,[-1],-1.0,4.0
+246,V228F,How often in country's elections: Election officials are fair,int64,1205,0,5,,,[-1],-1.0,4.0
+247,V228G,How often in country's elections: Rich people buy elections,int64,1205,0,5,,,[-1],-1.0,4.0
+248,V228H,How often in country's elections: Voters are threatened with  violence at the polls,int64,1205,0,5,,,[-1],-1.0,4.0
+249,V228I,How often in country's elections: Voters are offered a genuine choice in the elections,int64,1205,0,5,,,[-1],-1.0,4.0
+250,V228J,Some people think that having honest elections makes a lot of difference in their lives;  other people think that it doesn’t matter much,int64,1205,0,4,,,,1.0,4.0
+251,V228K,Importance of having honest elections in whether or not this country develops economically,int64,1205,0,4,,,,1.0,4.0
+252,V229,Employment status,int64,1205,0,8,,,,1.0,8.0
+253,V230,Sector of employment,int64,1205,0,5,,,"[-3, -1]",-3.0,3.0
+254,V231,Nature of tasks: manual vs. Cognitive,int64,1205,0,12,,,"[-3, -1]",-3.0,10.0
+255,V232,Nature of tasks: routine vs. Creative,int64,1205,0,12,,,"[-3, -1]",-3.0,10.0
+256,V233,Nature of tasks: independence,int64,1205,0,12,,,"[-3, -1]",-3.0,10.0
+257,V234,Are you supervising someone,int64,1205,0,4,,,"[-3, -2]",-3.0,2.0
+258,V235,Are you the chief wage earner in your house,int64,1205,0,3,,,[-2],-2.0,2.0
+259,V236,Is the chief wage earner employed now,int64,1205,0,4,,,"[-3, -2]",-3.0,2.0
+260,V237,Family savings during past year,int64,1205,0,5,,,[-1],-1.0,4.0
+261,V238,Social class (subjective),int64,1205,0,6,,,[-1],-1.0,5.0
+262,V239,Scale of incomes,int64,1205,0,11,,,[-1],-1.0,10.0
+263,V239R,Income level (Recoded),int64,1205,0,4,,,[-1],-1.0,3.0
+264,V240,Sex,int64,1205,0,2,,,,1.0,2.0
+265,V241,Year of birth,int64,1205,0,64,,,,1926.0,1995.0
+266,V242,Age,int64,1205,0,64,,,,18.0,87.0
+267,V243,Mother immigrant,int64,1205,0,2,,,,1.0,2.0
+268,V244,Father immigrant,int64,1205,0,2,,,,1.0,2.0
+269,V245,Respondent immigrant,int64,1205,0,2,,,,1.0,2.0
+270,V246,Respondent citizen,int64,1205,0,2,,,,1.0,2.0
+271,V247,Language at home,int64,1205,0,1,,,,170.0,170.0
+272,V248,Highest educational level attained,int64,1205,0,10,,,[-1],-1.0,9.0
+273,V248R,Highest educational level: Respondent (recoded into 3 groups),int64,1205,0,4,,,[-1],-1.0,3.0
+274,V249,What age did you complete your education,int64,1205,0,27,,,[-3],-3.0,36.0
+275,V250,Do you live with your parents,int64,1205,0,3,,,[-2],-2.0,2.0
+276,V251,Respondent interested during the interview,int64,1205,0,3,,,,1.0,3.0
+277,V252,Interview privacy,int64,1205,0,2,,,,1.0,2.0
+278,V253,Size of town,int64,1205,0,5,,,,1.0,5.0
+279,V254,Ethnic group,int64,1205,0,1,,,,788005.0,788005.0
+280,V255,Was the respondent literate,int64,1205,0,2,,,,1.0,2.0
+281,N_REGION_ISO,Region (ISO),int64,1205,0,15,,,,788011.0,788082.0
+282,V256,Region where the interview was conducted,int64,1205,0,15,,,,788001.0,788015.0
+283,V256B,Region (2) where the interview was conducted,int64,1205,0,34,,,,788001.0,788034.0
+284,V257,Language in which interview was conducted,int64,1205,0,1,,,,170.0,170.0
+285,V261,Date interview,int64,1205,0,11,,,,20131125.0,20131207.0
+286,V262,Year survey,int64,1205,0,1,,,,2013.0,2013.0
+287,Y001,Post-Materialist index 12-item,int64,1205,0,6,,,[-2],-2.0,4.0
+288,Y002,Post-Materialist index 4-item,int64,1205,0,4,,,[-5],-5.0,3.0
+289,Y003,Autonomy Index,int64,1205,0,5,,,"[-2, -1]",-2.0,2.0
+290,MN_35A,Approximately how many total hours a month were you active in voluntary organizations,int64,1205,0,5,,,,0.0,4.0
+291,MN_163A,How likely it is that most people view those between the ages of 18 to 29 as friendly,int64,1205,0,6,,,[-1],-1.0,5.0
+292,MN_163B,How likely it is that most people view those between the ages of 18 to 29 as competent,int64,1205,0,6,,,[-1],-1.0,5.0
+293,MN_163C,How likely it is that most people view those between the ages of 18 to 29 with respect,int64,1205,0,6,,,[-1],-1.0,5.0
+294,MN_228L,"If you had your preference, in which of the following would you prefer to work",int64,1205,0,3,,,,1.0,3.0
+295,MN_228M,How widespread: Corruption is within businesses in your country,int64,1205,0,11,,,[-1],-1.0,10.0
+296,MN_228N,How widespread: Corruption is within the government in your country,int64,1205,0,11,,,[-1],-1.0,10.0
+297,MN_228O,Level of corruption in this country than it was five years ago,int64,1205,0,11,,,[-1],-1.0,10.0
+298,MN_228P,Government of your country is doing enough to fight corruption,int64,1205,0,3,,,,1.0,3.0
+299,MN_228Q,Faced with (last year): People give a bribe/present to solve their problems which are supposed to be for free,int64,1205,0,4,,,,1.0,4.0
+300,MN_228R,Opinion of those who start and run their own businesses,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+301,MN_228S1,Degree of satisfaction (city/area where you live): The public transportation systems,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+302,MN_228S2,Degree of satisfaction (city/area where you live): The roads and highways,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+303,MN_228S3,Degree of satisfaction (city/area where you live): The schools,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+304,MN_228S4,Degree of satisfaction (city/area where you live): The quality of air,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+305,MN_228S5,Degree of satisfaction (city/area where you live): The quality of water,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+306,MN_228S6,Degree of satisfaction (city/area where you live): The quality of health care,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+307,MN_228S7,Degree of satisfaction (city/area where you live): The quality of housing,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+308,MN_228S8,Degree of satisfaction (city/area where you live): The beauty or physical setting,int64,1205,0,6,,,"[-2, -1]",-2.0,4.0
+309,MN_229A,Have you actively looked for work in the past four weeks,int64,1205,0,3,,,[-2],-2.0,2.0
+310,MN_229B,"Employment opportunity, would you be interested and able to start working",int64,1205,0,2,,,,1.0,2.0
+311,MN_230A,Are you registered through your employer with the Social Security in [country],int64,1205,0,4,,,"[-3, -2]",-3.0,2.0
+312,MN_233A,Degree of satisfaction: Salary and benefits of your current primary job,int64,1205,0,6,,,"[-3, -2]",-3.0,4.0
+313,MN_233B,Degree of satisfaction: Opportunities for professional development/promotion in your current primary job,int64,1205,0,6,,,"[-3, -2]",-3.0,4.0
+314,MN_234A,Have a business/have taken steps to start a business (by yourself/with others) during last year,int64,1205,0,3,,,,1.0,3.0
+315,MN_237A,You/member of your family living with you (over last year) - borrow money,int64,1205,0,2,,,,1.0,2.0
+316,MN_237B1,"If 'borrow money', from any of the following places: Microfinance Institution",int64,1205,0,3,,,[-3],-3.0,1.0
+317,MN_237B2,"If 'borrow money', from any of the following places: Commercial Bank",int64,1205,0,3,,,[-3],-3.0,1.0
+318,MN_237B3,"If 'borrow money', from any of the following places: Public Bank",int64,1205,0,3,,,[-3],-3.0,1.0
+319,MN_237B4,"If 'borrow money', from any of the following places: Friends or Family",int64,1205,0,3,,,[-3],-3.0,1.0
+320,MN_237B5,"If 'borrow money', from any of the following places: Informal Savings and Lending Association (e.g. Jamiyat)",int64,1205,0,3,,,[-3],-3.0,1.0
+321,MN_237B6,"If 'borrow money', from any of the following places: Credit Supplier",int64,1205,0,3,,,[-3],-3.0,1.0
+322,MN_237B7,"If 'borrow money', from any of the following places: Other",int64,1205,0,3,,,[-3],-3.0,1.0
+323,MN_237C1,"If 'borrow money', the loan was used for: Starting or Growing a Business",int64,1205,0,3,,,[-3],-3.0,1.0
+324,MN_237C2,"If 'borrow money', the loan was used for: Buying or Improving a Home",int64,1205,0,3,,,[-3],-3.0,1.0
+325,MN_237C3,"If 'borrow money', the loan was used for: Getting Married",int64,1205,0,3,,,[-3],-3.0,1.0
+326,MN_237C4,"If 'borrow money', the loan was used for:  Household Purchases",int64,1205,0,3,,,[-3],-3.0,1.0
+327,MN_237C5,"If 'borrow money', the loan was used for:  Emergencies",int64,1205,0,3,,,[-3],-3.0,1.0
+328,MN_237C6,"If 'borrow money', the loan was used for: Others",int64,1205,0,3,,,[-3],-3.0,1.0
+329,MN_249A1,Formal education system [country] provides people with skills/ training: To find employment,int64,1205,0,5,,,"[-3, -2, -1]",-3.0,2.0
+330,MN_249A2,Formal education system [country] provides people with skills/ training: To perform their jobs well,int64,1205,0,5,,,"[-3, -2, -1]",-3.0,2.0
+331,MN_249A3,Formal education system [country] provides people with skills/ training: To start a business,int64,1205,0,5,,,"[-3, -2, -1]",-3.0,2.0
+332,SACSECVAL,SACSECVAL.- Welzel Overall Secular Values,float64,1181,24,384,,,,0.0,0.9335
+333,RESEMAVAL,RESEMAVAL.- Welzel emancipative values,float64,1188,17,626,,,,0.0,0.688982
+334,I_AUTHORITY,AUTHORITY - Welzel defiance - 1: Inverse respect for authority,float64,1148,57,3,,,,0.0,1.0
+335,I_NATIONALISM,NATIONALISM - Welzel defiance - 2: Inverse national pride,float64,1198,7,4,,,,0.0,1.0
+336,I_DEVOUT,DEVOUT- Welzel defiance - 3: Inverse devoutness,float64,1172,33,4,,,,0.0,1.0
+337,DEFIANCE,DEFIANCE.- Welzel defiance sub-index,float64,1195,10,31,,,,0.0,0.924
+338,I_RELIGIMP,RELIGIMP - Welzel disbelief- 1: Inverse importance of religion,float64,1202,3,4,,,,0.0,1.0
+339,I_RELIGBEL,RELIGBEL - Welzel disbelief- 2: Inverse religious person,float64,1113,92,2,,,,0.0,1.0
+340,I_RELIGPRAC,RELIGPRAC - Welzel disbelief- 3: Inverse religious practice,float64,1205,0,7,,,,0.0,1.0
+341,DISBELIEF,DISBELIEF.- Welzel disbelief sub-index,float64,1204,1,34,,,,0.0,1.014
+342,I_NORM1,NORM1 - Welzel relativism- 1: Inverse norm conform1,float64,1146,59,2,,,,0.0,1.0
+343,I_NORM2,NORM2 - Welzel relativism- 2: Inverse norm conform2,float64,1116,89,2,,,,0.0,1.0
+344,I_NORM3,NORM3 - Welzel relativism- 3: Inverse norm conform3,float64,1183,22,2,,,,0.0,1.0
+345,RELATIVISM,RELATIVISM.- Welzel relativism,float64,1156,49,10,,,,0.0,1.0
+346,I_TRUSTARMY,TRUSTARMY- Welzel scepticism- 1: Inverse trust in army,float64,1142,63,4,,,,0.0,1.0
+347,I_TRUSTPOLICE,TRUSTPOLICE- Welzel scepticism- 2: Inverse trust in police,float64,1148,57,4,,,,0.0,1.0
+348,I_TRUSTCOURTS,TRUSTCOURTS- Welzel scepticism- 3: Inverse trust in courts,float64,1123,82,4,,,,0.0,1.0
+349,SCEPTICISM,SCEPTICISM.- Welzel scepticism index,float64,1144,61,27,,,,0.0,1.0
+350,I_INDEP,INDEP- Welzel autonomy-1: Independence as kid quality,int64,1205,0,2,,,,0.0,1.0
+351,I_IMAGIN,IMAGIN- Welzel autonomy-2: Imagination as kid quality,int64,1205,0,2,,,,0.0,1.0
+352,I_NONOBED,Emancipative Values-1: Obedience not kid quality,int64,1205,0,2,,,,0.0,1.0
+353,AUTONOMY,AUTONOMY.- Wezel Autonomy subindex,float64,1205,0,4,,,,0.0,1.0
+354,I_WOMJOB,WOMJOB- Welzel equality-1: Gender equality: job,float64,1173,32,3,,,,0.0,1.0
+355,I_WOMPOL,WOMPOL- Welzel equality-2: Gender equality: politics,float64,1151,54,4,,,,0.0,1.0
+356,I_WOMEDU,WOMEDU- Welzel equality-3: Gender equality: education,float64,1175,30,4,,,,0.0,1.0
+357,EQUALITY,Emancipative Values-2: Equality sub-index,float64,1180,25,40,,,,0.0,1.0
+358,I_HOMOLIB,HOMOLIB- Welzel choice-1: Homosexuality acceptance,float64,1087,118,10,,,,0.0,1.0
+359,I_ABORTLIB,ABORTLIB- Welzel choice-2: Abortion acceptable,float64,1145,60,10,,,,0.0,1.0
+360,I_DIVORLIB,DIVORLIB- Welzel choice-3: Divorce acceptable,float64,1188,17,10,,,,0.0,1.0
+361,CHOICE,CHOICE.- Welzel choice sub-index,float64,1148,57,48,,,,0.0,1.0
+362,I_VOICE1,VOICE1- Welzel voice-1,float64,1180,25,4,,,,0.0,1.0
+363,I_VOICE2,VOICE2- Welzel voice-2,float64,1150,55,3,,,,0.0,1.0
+364,I_VOI2_00,VOI2_00- Welzel voice-3 (auxiliary),float64,1144,61,11,,,,0.0,1.0
+365,VOICE,VOICE.- Welzel voice sub-index,float64,1186,19,16,,,,0.0,1.0
+366,G_TOWNSIZE2,Settlement size_5 groups,int64,1205,0,3,,,,1.0,3.0
+367,LNG_NUM,Language in which interview was conducted,int64,1205,0,1,,,,19.0,19.0
+368,FW_START,Fieldwork month/year Start,int64,1205,0,1,,,,201311.0,201311.0
+369,FW_END,Fieldwork month/year End,int64,1205,0,1,,,,201312.0,201312.0
+370,Qmode,Interview mode,int64,1205,0,1,,,,6.0,6.0

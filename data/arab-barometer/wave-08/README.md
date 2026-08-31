@@ -16,8 +16,8 @@
 |---|---:|---|
 | `arab-barometer-w08-tunisia-codes.csv` | 4.06 MB | `a0babe76b695be8d` |
 | `arab-barometer-w08-tunisia-labels.csv` | 10.24 MB | `548f6a13972019ee` |
-| `arab-barometer-w08-tunisia.dta` | 13.25 MB | `608e09331593aa7f` |
-| `arab-barometer-w08-tunisia.sav` | 12.85 MB | `69b109c4218ca803` |
+| `arab-barometer-w08-tunisia.dta` | 13.25 MB | `a9fcfdbf07dae6df` |
+| `arab-barometer-w08-tunisia.sav` | 12.85 MB | `eb9f242356030a3f` |
 | `codebook.csv` | 0.15 MB | `06dfba09fcc99e1b` |
 | `codebook.json` | 0.30 MB | `4a7131451b93ebd3` |
 
