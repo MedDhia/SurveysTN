@@ -32,19 +32,21 @@ meta.variable_value_labels["Q101"]    # the response options
 use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 ```
 
-## Seven things to check before you analyse
+## Eight things to check before you analyse
 
-**Weights.** Every survey here carries a design weight except Arab Barometer Wave
-II, and each series names it differently:
+**Weights.** Every survey here carries a design weight, fully populated, except
+**WVS Wave 6**, which carries none. Each series names it differently:
 
-| Series | Weight | Design variables alongside it |
+| Series | Weight | Stratum and PSU |
 |---|---|---|
-| Arab Barometer | `wt`, `WT` | stratum and PSU in Waves IV, V, VII, VIII; PSU only in the Wave VI rounds; none in Wave III |
-| World Values Survey | `W_WEIGHT` | — |
-| Afrobarometer | `withinwt` (Rounds 6–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | — |
-| Arab Opinion Index | `Weight` | — |
+| Arab Barometer | `wt` (Waves II–V), `WT` (Waves VI–VIII) | both in Waves IV, V and VIII; PSU only in Wave VII; neither in Waves II, III or the Wave VI rounds |
+| World Values Survey | `W_WEIGHT` in Wave 7; **Wave 6 has no weight** | neither |
+| Afrobarometer | `withinwt` (Rounds 5–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | neither |
+| Arab Opinion Index | `Weight` | neither |
 
-Unweighted estimates from a weighted survey are not nationally representative.
+Unweighted estimates from a weighted survey are not nationally representative. Only
+four surveys carry the stratum and PSU a full `svyset` wants; for the rest, weighting
+without a design specification is as far as the release lets you go.
 
 ```stata
 svyset psu [pw=wt], strata(stratum)
@@ -57,7 +59,7 @@ matches within a series only, and so should you. Within WVS, Wave 6 numbers its 
 `V9` and `Q6` are the same question — so name matching finds only the derived
 indices. Afrobarometer renumbers between rounds while keeping the `Q` prefix, which is
 worse: a shared name there is often a different question, and 423 of its 901
-variables are flagged for wording that does not match. The Arab Opinion Index names
+variables are flagged for wording that does not match — 311 of 987. The Arab Opinion Index names
 many variables for the year they were asked in — `Q2020_71_1`, `q2025_43_1` — so its
 rounds overlap little by construction: 54 of 2,813 variables appear in all nine. Use
 [`crosswalk-suggested.csv`](crosswalk-suggested.csv), which pairs them by question
@@ -88,6 +90,12 @@ almost nothing empty. Columns are kept so positions match the release;
 `codebook.csv` gives `n_valid` per variable, and filtering on it is usually the
 first thing to do.
 
+**Afrobarometer Round 9's variable labels are in French.** The release is the
+English one, but 277 of its 386 labels read `Raison d'un entretien infructueux
+Ménage1` rather than `Reason for Unsuccessful Call Household 1`. The crosswalk marks
+them `release label (French)`; the English wording for that round is in
+`docs/questionnaires/afro-w09-questionnaire.pdf`.
+
 **Wave VI is three surveys, not one.** Three telephone rounds, months apart, with
 separate samples and separate questionnaires. Their ID numbers overlap but do not
 link: on the overlapping IDs sex agrees at chance and age almost never. Treat them
@@ -108,14 +116,19 @@ spelling used in each wave, the question each wave asked, and `n_waves`.
 
 ## Pooling surveys
 
-Read [`crosswalk.md`](crosswalk.md) first. Across every series, most variables
+For comparing **across programmes**, read
+[`question-concordance.md`](question-concordance.md) instead: it groups variables by
+the question they carry rather than by name, and its 17 cross-series groups are what
+the archive actually supports comparing between programmes.
+
+For pooling **within** a programme, read [`crosswalk.md`](crosswalk.md) first. Across every series, most variables
 appear in exactly one survey, and how much genuinely carries over differs sharply:
 
 | Series | Present in all its surveys | Named alike but worded differently |
 |---|---:|---:|
 | Arab Barometer | 13 of 1,966 | 97 |
 | World Values Survey | 43 of 724 | 3 |
-| Afrobarometer | 61 of 901 | 423 |
+| Afrobarometer | 43 of 987 | 311 |
 | Arab Opinion Index | 54 of 2,813 | 3 |
 
 A shared name is not evidence of a shared question — Afrobarometer is the warning,

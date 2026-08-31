@@ -24,6 +24,7 @@ from pathlib import Path
 
 import pandas as pd
 import pyreadstat
+import pypdf
 
 from extract_tunisia import (
     ROOT,
@@ -208,9 +209,90 @@ def check_wave06_merge(errors: list[str]) -> None:
     print(f"{tag}: checked {len(merged):,} rows x {merged.shape[1]} variables against the three rounds")
 
 
+def check_questionnaires(catalog: dict, manifest: dict, errors: list[str]) -> None:
+    """Check that every survey has its published instrument, and that it is real.
+
+    Answers "do we have the questionnaire for each?" from the files rather than
+    from the catalog's word. A missing one is an error; so is an entry pointing at
+    a file that is absent, empty, not a PDF, or shared with another survey, since
+    each of those is a way of appearing to have an instrument without having one.
+    """
+    specs = {(w["series"], wave_tag(w)): w for w in manifest["waves"]}
+    seen: dict[str, str] = {}
+    have = 0
+
+    for survey in catalog["surveys"]:
+        who = f"{survey['series']} {survey['tag']}"
+        spec = specs[(survey["series"], survey["tag"])]
+
+        for kind in ("questionnaire", "codebook", "methodology_document"):
+            entry = spec.get(kind)
+            if entry is None:
+                if kind == "questionnaire":
+                    errors.append(f"{who}: no questionnaire recorded")
+                continue
+
+            path = ROOT / entry["file"]
+            if not path.exists():
+                errors.append(f"{who}: {kind} {entry['file']} is not in the repository")
+                continue
+
+            raw = path.read_bytes()
+            if not raw.startswith(b"%PDF-"):
+                errors.append(f"{who}: {kind} {path.name} is not a PDF")
+                continue
+            try:
+                pages = len(pypdf.PdfReader(str(path)).pages)
+            except Exception as exc:  # noqa: BLE001 - any failure means it is unusable
+                errors.append(f"{who}: {kind} {path.name} will not open ({type(exc).__name__})")
+                continue
+            if pages == 0:
+                errors.append(f"{who}: {kind} {path.name} has no pages")
+                continue
+
+            digest = sha256(path)
+            if digest in seen and seen[digest] != f"{who} {kind}":
+                errors.append(
+                    f"{who}: {kind} {path.name} is the same file as {seen[digest]}"
+                )
+            seen[digest] = f"{who} {kind}"
+
+            # Somewhere to get it from: a direct URL, or the page and document id
+            # where the publisher serves it through a form.
+            if not entry.get("url") and not (entry.get("source_page") and entry.get("document_id")):
+                errors.append(f"{who}: {kind} {path.name} records no source")
+
+            if kind == "questionnaire":
+                have += 1
+
+    print(f"questionnaires: {have} of {len(catalog['surveys'])} surveys, all readable PDFs")
+
+
+def check_topic_figures(errors: list[str]) -> None:
+    """Every figure a topic page links to has to be on disk, in both formats.
+
+    The topic pages render their figure sections unconditionally, so a figure that was
+    never built would reach the reader as a broken image. This is where that is caught.
+    """
+    topics = json.loads((ROOT / "catalog" / "topics.json").read_text(encoding="utf-8"))
+    checked = 0
+    for slug, topic in topics["topics"].items():
+        for figure in topic.get("figures", []):
+            for suffix in ("png", "svg"):
+                path = ROOT / "main" / "figures" / f"{figure['file']}.{suffix}"
+                if not path.exists():
+                    errors.append(f"{slug}: declares {figure['file']}.{suffix}, which is missing")
+                elif path.stat().st_size == 0:
+                    errors.append(f"{slug}: {figure['file']}.{suffix} is empty")
+                else:
+                    checked += 1
+    print(f"topic figures: {checked} files present for every figure the topic pages link to")
+
+
 def check_offline(catalog: dict) -> list[str]:
     """Check the committed files against the catalog, without the pooled releases."""
     errors: list[str] = []
+    check_topic_figures(errors)
     for s in catalog["surveys"]:
         tag = f"{s['series']} {s['tag']}"
         folder = ROOT / s["path"]
@@ -315,6 +397,7 @@ def main() -> int:
 
     if args.offline:
         errors = check_offline(catalog)
+        check_questionnaires(catalog, manifest, errors)
         check_wave06_merge(errors)
         label = "all committed files match the catalog"
     else:
@@ -322,6 +405,7 @@ def main() -> int:
         for s in catalog["surveys"]:
             spec = specs[(s["series"], s["tag"])]
             check_against_release(s, spec, manifest["series"][s["series"]], errors)
+        check_questionnaires(catalog, manifest, errors)
         check_wave06_merge(errors)
         label = "all extracts match their pooled releases"
 

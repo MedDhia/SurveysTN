@@ -5,7 +5,7 @@ Survey, Afrobarometer and the Arab Opinion Index so far — reorganised so that 
 survey is one self-describing folder: the respondents, in every common format, with a codebook
 and a provenance record.
 
-**39,188 Tunisian respondents across twenty-five surveys and four series, 2010 to
+**40,388 Tunisian respondents across twenty-six surveys and four series, 2010 to
 2025.** The releases they come from are in the repository too, so a clone can
 rebuild the whole archive and check every cell of it against the publishers' own
 files.
@@ -40,10 +40,11 @@ recoded.
 | [Wave 6](data/world-values-survey/wave-06) | 1,205 | 370 | Nov–Dec 2013 |
 | [Wave 7](data/world-values-survey/wave-07) | 1,208 | 397 | Apr–May 2019 |
 
-### Afrobarometer — 5 surveys, 5,999 respondents
+### Afrobarometer — 6 surveys, 7,199 respondents
 
 | Survey | Respondents | Variables | Fieldwork |
 |---|---:|---:|---|
+| [Round 5](data/afrobarometer/round-05) | 1,200 | 300 | Jan–Feb 2013 |
 | [Round 6](data/afrobarometer/round-06) | 1,200 | 334 | Apr–May 2015 |
 | [Round 7](data/afrobarometer/round-07) | 1,199 | 339 | Mar–May 2018 |
 | [Round 8](data/afrobarometer/round-08) | 1,200 | 377 | Feb–Mar 2020 |
@@ -92,18 +93,21 @@ preference. Two surveys are missing one of them, and the folder README says why:
 for them, so a `-labels.csv` would only repeat the codes.
 
 Start with [`docs/using-the-data.md`](docs/using-the-data.md), and in particular
-the seven things worth checking before you analyse anything — among them a weight
-Wave II does not have, don't-know codes that are not declared missing and differ
-by survey, and one answer that a default CSV reader silently turns into missing.
+the eight things worth checking before you analyse anything — among them the one
+survey with no weight at all, don't-know codes that are not declared missing and
+differ by survey, and one answer that a default CSV reader silently turns into
+missing.
 
 ## When the fieldwork happened
 
 ![Fieldwork coverage](main/figures/fieldwork-coverage.png)
 
-The archive spans sixteen years and does not cover them. Twelve of the twenty-five
-surveys record an interview date per respondent; between them those cover **292
-distinct days**, and no two surveys were ever in the field on the same day. The
-longest gap between two covered days is 1,057 days. The other thirteen releases
+The archive spans sixteen years and does not cover them. Thirteen of the twenty-six
+surveys record an interview date per respondent; between them those cover **314
+distinct days**, and no two surveys were ever in the field on the same day — though
+Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
+in early 2013, which is as close to a contemporaneous cross-programme reading as the
+archive gets. The longest gap between two covered days is 1,057 days. The other thirteen releases
 carry only a month or a year, and the figure draws them at that resolution rather
 than implying more. [`main/figures/README.md`](main/figures/README.md) reads it in
 full, and the day-level data sits beside it as CSV.
@@ -129,7 +133,7 @@ depends on the estimand.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the surveys up: one row per
 variable, the name it takes in each survey, the question each one asked, and
-whether the wording held. **6,404 variables, 6,338 of them with question text.**
+whether the wording held. **6,490 variables, 6,424 of them with question text.**
 
 Variables are matched **within a series and never across one**. `Q1` is the
 governorate in Arab Barometer and "Important in life: Family" in the World Values
@@ -142,7 +146,7 @@ one varies by series:
 |---|---:|---:|
 | Arab Barometer | 13 of 1,966 | 97 |
 | World Values Survey | 43 of 724 | 3 |
-| Afrobarometer | 61 of 901 | 423 |
+| Afrobarometer | 43 of 987 | 311 |
 | Arab Opinion Index | 54 of 2,813 | 3 |
 
 Afrobarometer is the cautionary one: it renumbers between rounds while keeping the
@@ -152,9 +156,64 @@ Afrobarometer is the cautionary one: it renumbers between rounds while keeping t
 Where a programme renumbers outright, name matching finds nothing at all — WVS
 asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
 [`docs/crosswalk-suggested.csv`](docs/crosswalk-suggested.csv) pairs those up by
-question text instead: **648 pairs**, offered only where the wordings are all but
+question text instead: **859 pairs**, offered only where the wordings are all but
 identical, unambiguous, and agreed on any numbers they contain. They are
 suggestions to confirm against the publisher's own crosswalk, not findings.
+
+### The same question in more than one survey
+
+The crosswalk answers what one programme asked across its own waves. It cannot
+answer what two programmes both asked, because it matches on names and a name means
+nothing between series. [`docs/question-concordance.md`](docs/question-concordance.md)
+does that instead: it ignores names and groups variables by the question itself,
+anywhere in the archive.
+
+**1,468 question groups span two or more surveys** — 1,393 word-for-word identical,
+75 near-identical. **17 span more than one series**, and those are the ones that make
+a cross-programme comparison possible at all: employment status, marital status,
+trust in the police and in religious leaders, internet use, interpersonal trust,
+household income, whether you would accept neighbours of various kinds.
+
+Seventeen is small, and it is the honest number for lexical matching. Two questions
+that ask the same thing in different words are not found, so the concordance is a
+floor on what is comparable, not a ceiling.
+
+The scales are compared too, and that is where it gets bleak: **not one of the
+seventeen has an identical response scale.** Every question two programmes both ask,
+they ask with different answer options — Afrobarometer scores internet use from
+never to every day, the Arab Opinion Index from daily to "I do not use the internet"
+— or with options the release does not label at all. A cross-programme series has to
+be built by recoding, question by question, with the codebooks open.
+
+### Finding questions on a subject
+
+[`docs/topics/`](docs/topics) indexes the archive by subject rather than by variable:
+which of the 26 surveys carry anything on it, in which years, and which items recur
+often enough to build a series from. The lexicon is
+[`catalog/topics.json`](catalog/topics.json) — a file to read and argue with, not a
+judgement buried in code.
+
+**[Inequality](docs/topics/inequality.md)** — 300 variables in 22 of the 26 surveys,
+across economic gaps, gender, discrimination, wasta, equality as a principle, and
+opportunity. 45 recur across surveys and **not one recurs across two programmes**, so
+an inequality series can be built inside Arab Barometer or inside the Arab Opinion
+Index and not between them. The only two questions that name Tunisian inequality
+directly — Afrobarometer Round 6's "The income gap between the rich and the poor" and
+"Regional inequality" — are country-specific items asked once, in 2015. Three figures
+sit on that page: which 22 questions are asked in more than two surveys and when, how
+Tunisians answered the ten most repeated of them, and whether the items of a single
+survey move together — they mostly do not, peaking at ρ = 0.49.
+
+**[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
+surveys: which system is preferred, support for the non-democratic alternatives
+(strong leader, army rule, unelected experts, rule by religious law), support for
+democracy against its stated drawbacks, whether democracy suits the country, and
+religion as a basis of rule. Preference is kept apart from two things it is
+routinely confused with, each in its own facet: how democratic people judge their
+own country to be, and how democratic they rate other countries. Exactly **one item
+crosses programmes** — "Democratic systems are not effective at maintaining order and
+stability", in Arab Barometer Waves VII and VIII and Afrobarometer Round 5 — and even
+that one does not share a response scale.
 
 ### Where the question text comes from
 
@@ -173,16 +232,22 @@ PARLIAMENTARY ELECTION` for a question reading "did you attend a campaign meetin
 or rally?" — which is correct and shares almost no characters with the wording, so
 comparing them would measure labelling style.
 
-Nine Arab Barometer questionnaires are parsed. Nothing else needs to be: the WVS
-and Arab Opinion Index releases carry their question wording themselves, in column
-headers and variable labels respectively, so their instruments are kept as
-documentation rather than as parsing inputs. The two WVS instruments could not be
-parsed anyway — they are the Arabic as fielded, and the Arabic does not extract as
-text. Afrobarometer has no questionnaire in the archive yet.
+**Every survey has its published instrument** in
+[`docs/questionnaires/`](docs/questionnaires) — 33 documents, questionnaires and
+codebooks, each with its source URL in the catalog.
 
-The documentation still earns its keep. The WVS Wave 7 instrument's first page is
-where the negative sentinel codes those releases ship bare are defined; eight Arab
-Opinion Index codebooks give the response options behind its labels.
+Nine of them, the Arab Barometer set, are parsed for question text. The rest are
+documentation, for two different reasons. The WVS and Arab Opinion Index releases
+carry their wording themselves, in column headers and variable labels, so a PDF
+would be a second and less reliable source for something the data already states.
+Afrobarometer's are deliberately not parsed: it numbers variables differently from
+its questionnaire in places — Round 10 labels the variable `Q6` as question `Q5b`,
+and 19 more diverge the same way — so mapping question numbers onto variables would
+attach the wrong wording.
+
+The documentation still earns its keep. The WVS Wave 7 instrument's first page
+defines the negative sentinel codes those releases ship bare, and is what
+`docs/missing-value-codes.md` quotes.
 
 ## Repository layout
 
@@ -191,9 +256,10 @@ Opinion Index codebooks give the response options behind its labels.
 | `data/<series>/<survey>/` | one folder per survey — the extracts |
 | `data/arab-barometer/wave-06-merged/` | derived: the three Wave VI rounds stacked |
 | `data/raw/` | the publishers' releases, tracked, so the archive rebuilds from a clone |
-| `docs/questionnaires/` | published instruments and codebooks, where a programme has one here |
+| `docs/questionnaires/` | the published instrument for every survey — 33 documents |
 | `catalog/` | `catalog.json` / `catalog.csv` and the reports, generated; `sources.json`, hand-maintained |
-| `docs/` | how to use the data, provenance, the crosswalk, missing-value codes |
+| `docs/` | how to use the data, provenance, the crosswalk, the concordance, missing-value codes |
+| `docs/topics/` | the archive indexed by subject, from the lexicon in `catalog/topics.json` |
 | `main/figures/` | generated figures and the data behind them |
 | `scripts/` | extraction, verification, figures, doc generation |
 
@@ -221,15 +287,20 @@ pip install -r scripts/requirements.txt
 python3 scripts/fetch_raw.py              # the two releases too large to commit
 python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
 python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, -suggested.csv, crosswalk.md
+python3 scripts/build_question_concordance.py   # docs/question-concordance.csv, .md
+python3 scripts/build_topic_index.py      # docs/topics/<topic>.csv, .md
 python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
+python3 scripts/build_inequality_figures.py     # main/figures/inequality-*.png
 python3 scripts/verify.py                 # cell-by-cell against the releases
 ```
 
 `scripts/verify.py` re-derives every subset from its release and compares it cell
 by cell, checks the stacked Wave VI file against the three rounds it came from,
-and confirms every recorded checksum. `--offline` is the quicker version, checking
+confirms every recorded checksum, checks that every survey's questionnaire is
+present, opens as a PDF, is not shared with another survey, and records a source, and
+checks that every figure a topic page links to has been built. `--offline` is the quicker version, checking
 the committed files against the catalog without re-reading the releases.
 
 ## Adding a survey

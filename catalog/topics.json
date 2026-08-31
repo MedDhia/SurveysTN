@@ -1,0 +1,223 @@
+{
+  "_comment": "Topic lexicons for scripts/build_topic_index.py. Patterns are case-insensitive regular expressions matched against a variable's question text. They are phrase-led on purpose: a bare word list picks up 'free and fair elections' for fairness, 'overcrowded classrooms' for class and 'poor teaching' for poverty. Every pattern here was written after reading what it matches. Edit and re-run to change what the index counts.",
+  "topics": {
+    "inequality": {
+      "title": "Inequality",
+      "description": "Questions about unequal outcomes, unequal treatment and unequal access, across every survey in the archive.",
+      "figures": [
+        {
+          "file": "inequality-coverage",
+          "title": "What can be followed over time",
+          "caption": "Every inequality question asked in more than two surveys, and the years it was asked in. A run of dots in one colour is a series that can be built."
+        },
+        {
+          "file": "inequality-distributions",
+          "title": "How Tunisians answered",
+          "caption": "How Tunisians answered the recurring questions, as weighted shares of substantive answers. Each panel carries its own scale, because the releases do not share one."
+        },
+        {
+          "file": "inequality-correlations",
+          "title": "Whether the items move together",
+          "caption": "Spearman rank correlations among the inequality items of the survey that carries the most of them. Within one survey only — other surveys are other people."
+        }
+      ],
+      "facets": {
+        "economic-gap": {
+          "title": "Economic gap and redistribution",
+          "patterns": [
+            "income gap",
+            "narrowing income",
+            "gap between the rich and the poor",
+            "\\brich and poor\\b",
+            "\\binequalit",
+            "regional inequalit",
+            "living standards of the poor",
+            "improving the standard of living",
+            "standard of living comparing",
+            "living conditions vs",
+            "living conditions .{0,15}compared (to|with) other",
+            "social class",
+            "socioeconomic class",
+            "lowest social class",
+            "fair(ly)? distribut",
+            "distribution .{0,40}(equitable|fair)",
+            "rich to pay higher taxes",
+            "healthcare for all even if"
+          ]
+        },
+        "gender": {
+          "title": "Gender inequality",
+          "patterns": [
+            "women .{0,30}equal",
+            "equal .{0,30}(right|opportunit|treatment) .{0,20}(for |of )?women",
+            "women and men .{0,30}equal",
+            "women.{0,25}same rights",
+            "same rights as men",
+            "women.{0,30}inherit",
+            "women.{0,20}(own|inherit) land",
+            "share of inheritance",
+            "women treated unequally",
+            "girl students",
+            "women.{0,30}(harass|violence)",
+            "discrimination based on gender",
+            "women have equal",
+            "promoting equal rights",
+            "women.{0,30}(run the office|political leader|leadership)"
+          ]
+        },
+        "discrimination": {
+          "title": "Discrimination and unfair treatment",
+          "patterns": [
+            "discriminat",
+            "treated unfairly",
+            "unfair treatment",
+            "treated unequally",
+            "people treated unequally",
+            "\\bunfairly\\b"
+          ]
+        },
+        "connections": {
+          "title": "Wasta and access through connections",
+          "patterns": [
+            "\\bwasta\\b",
+            "without connections",
+            "job without connections",
+            "connections .{0,20}(to get|for) a job"
+          ]
+        },
+        "equality-principle": {
+          "title": "Equality as a principle",
+          "patterns": [
+            "equality of all citizens",
+            "equality for all citizens",
+            "equality under the law",
+            "same rights regardless",
+            "equal.{0,25}regardless of",
+            "all people have the same rights",
+            "characteristics of democracy: equality"
+          ]
+        },
+        "opportunity": {
+          "title": "Opportunity and mobility",
+          "patterns": [
+            "equal opportunit",
+            "working their way out of",
+            "difficulty accessing",
+            "education opportunities",
+            "opportunities for disabled",
+            "rights, promoting opportunities"
+          ]
+        }
+      },
+      "excluded_because_they_are_false_friends": {
+        "fair": "free and fair elections, fair count of votes, fair coverage, fair punishment — electoral and judicial fairness, not distributive",
+        "class": "overcrowded classrooms, religious classes",
+        "poor": "poor teaching, poor services, poor condition of facilities — quality, not poverty",
+        "region": "province or region sampling variables, and regional organisations such as the Arab Maghreb Union",
+        "tax": "tax compliance and tax authority questions, which are about the state's reach rather than redistribution",
+        "living conditions compared": "'your living conditions compared to 12 months ago' is a change over time, not a gap between people; only the relational form is matched"
+      }
+    },
+    "regime-preference": {
+      "title": "Regime preference",
+      "description": "What kind of political system people say they want, and what they say about the alternatives. Preference is kept apart from two things it is easily confused with: how democratic people judge their own country to be, and how democratic they rate other countries. Both are assessments, both have their own facet, and neither is a preference.",
+      "facets": {
+        "preferred-system": {
+          "title": "Which system is preferred",
+          "patterns": [
+            "prefer the political system",
+            "preferable for (the system of governance|[a-z]+ to have)",
+            "which of the following political systems",
+            "most suitable to be the system of government",
+            "how appropriate each of these would be for your country",
+            "describe different political systems",
+            "mention some of the political systems",
+            "system of government (should|would)"
+          ]
+        },
+        "non-democratic-alternatives": {
+          "title": "Support for non-democratic alternatives",
+          "patterns": [
+            "strong leader",
+            "strong authority",
+            "without considering elect",
+            "does not have to bother with parliament",
+            "(army|military|armed forces) (rule|should rule|govern)",
+            "military rule",
+            "\\bone party\\b",
+            "single party rule",
+            "(unelected )?experts .{0,40}(take|make) .{0,20}decisions",
+            "no need for experts",
+            "governed by (islamic|religious) law",
+            "(islamic|religious) law .{0,40}(no|without) (political parties|elections)",
+            "reject islamic law system"
+          ]
+        },
+        "democracy-support": {
+          "title": "Support for democracy against its drawbacks",
+          "patterns": [
+            "democratic systems? (may have problems|are not effective|is not effective)",
+            "non-democratic systems? (may have problems|are not effective)",
+            "democratic regimes? are indecisive",
+            "non-democratic regimes? are indecisive",
+            "under a (non-)?democratic system",
+            "better than other systems",
+            "better than any other",
+            "support for democracy",
+            "democracy is (always )?preferable"
+          ]
+        },
+        "suitability-readiness": {
+          "title": "Whether democracy suits the country",
+          "patterns": [
+            "democracy is suitable for",
+            "extent to which democracy is suitable",
+            "not prepared for a democratic system",
+            "ready for democracy",
+            "citizens are not prepared",
+            "appropriate level of democracy"
+          ]
+        },
+        "religion-and-rule": {
+          "title": "Religion and the basis of rule",
+          "patterns": [
+            "sharia vs",
+            "sharia .{0,20}will of (the )?people",
+            "laws of your country match the sharia",
+            "match the sharia",
+            "governed by religious law vs secular",
+            "religious law vs secular",
+            "democratic system contradicts islamic",
+            "government (should )?(implement|apply) .{0,20}(sharia|islamic law)",
+            "religious leaders should"
+          ]
+        },
+        "regime-assessment": {
+          "title": "How democratic the country is judged to be (assessment, not preference)",
+          "patterns": [
+            "how democratically is this country",
+            "extent .{0,30}(country|this country) .{0,15}(is )?democratic",
+            "level of democracy:? (today|ten years ago|in the future|under previous)",
+            "level of democracy between",
+            "measuring the extent to which your country is democratic",
+            "under previous non-democratic regime"
+          ]
+        },
+        "external-models": {
+          "title": "How democratic other countries are rated (a model, not this country)",
+          "patterns": [
+            "level of democracy\\s*(in|:)\\s*(the )?(usa|united states|france|turkey|israel|iran|china|south africa|saudi arabia|germany|britain|egypt)",
+            "rate the level of democracy in"
+          ]
+        }
+      },
+      "excluded_because_they_are_false_friends": {
+        "army": "trust in the army, armed forces as an institution, and soldiers or roadblocks recorded in the sampling unit — only army rule is a regime preference",
+        "regime": "'the fall of the Asad regime', satisfaction with the Mubarak regime — a named government, not a preference over regime types",
+        "rule of law": "the state's application of the rule of law between citizens, which is governance quality",
+        "political system (trust)": "trust in political institutions, which is support for incumbents rather than for a system",
+        "level of democracy (elsewhere)": "Afrobarometer Round 5 and the Arab Opinion Index 2011 rate how democratic China, the USA, France, Iran, Turkey, Israel and Saudi Arabia are; those are ratings of other countries and sit in their own facet rather than in this country's assessment"
+      }
+    }
+  }
+}

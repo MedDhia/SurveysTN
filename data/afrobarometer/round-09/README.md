@@ -16,8 +16,8 @@
 |---|---:|---|
 | `afrobarometer-w09-tunisia-codes.csv` | 1.91 MB | `f5686df1d7e519d7` |
 | `afrobarometer-w09-tunisia-labels.csv` | 7.80 MB | `8dc9f63cc8643f04` |
-| `afrobarometer-w09-tunisia.dta` | 4.15 MB | `ac90efe24b624096` |
-| `afrobarometer-w09-tunisia.sav` | 4.04 MB | `4d9f84326b47aefb` |
+| `afrobarometer-w09-tunisia.dta` | 4.15 MB | `b0952dd677b97f8c` |
+| `afrobarometer-w09-tunisia.sav` | 4.04 MB | `41fe913a4a04d457` |
 | `codebook.csv` | 0.12 MB | `9b54e3378a34f047` |
 | `codebook.json` | 0.21 MB | `2b8ec7e8c722982f` |
 
@@ -37,4 +37,4 @@ Value labels on `STRTIME` are not carried over. They are date or time columns,
 which neither SPSS nor Stata will attach value labels to, and the labels only
 marked a sentinel the reader has already parsed as a time of day.
 
-Note: Round 9 release of 1 March 2023, English.
+Note: Round 9 release of 1 March 2023, English. Its variable labels are in French despite the English release; question text comes from the questionnaire.

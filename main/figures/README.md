@@ -8,9 +8,9 @@ Generated. Rebuild with the script named under each figure; do not edit the outp
 
 When Tunisian survey fieldwork actually happened, one row per survey, 2010 to 2025.
 
-The archive spans sixteen years. It does not cover them. Twelve of the twenty-five
+The archive spans sixteen years. It does not cover them. Thirteen of the twenty-six
 surveys record an interview date per respondent, and between them those account for
-**292 distinct days** — from 16,419 of the archive's 39,188 interviews. The rest is
+**314 distinct days** — from 17,619 of the archive's 40,388 interviews. The rest is
 inference from what the publisher printed on the release.
 
 The figure keeps three levels of knowledge apart, because drawing them alike would
@@ -18,23 +18,27 @@ claim a precision the archive does not have:
 
 | Drawn as | Means | Surveys |
 |---|---|---:|
-| solid bar | an interview date per respondent; the days are exact | 12 |
+| solid bar | an interview date per respondent; the days are exact | 13 |
 | hatched bar | only the month fieldwork opened and closed | 1 |
 | outlined bar | only the year the publisher gives for the wave | 12 |
 
 ### What it shows
 
-- **No two surveys were ever in the field on the same day.** Not once in 292 days.
-  Nothing here supports a same-day comparison. The closest two windows come within
-  70 days of each other, and they are two rounds of the same wave — Arab Barometer
-  Wave VI Parts 1 and 2. Across programmes the nearest approach is 93 days, between
-  Arab Barometer Wave VII and Afrobarometer Round 9.
+- **No two surveys were ever in the field on the same day.** Not once in 314 days.
+  But two came within **two days** of each other, and they are from different
+  programmes: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer
+  Wave III opened on 3 February. That pair is as close to a contemporaneous
+  cross-programme reading of Tunisia as this archive gets. The next nearest are 70
+  days apart (two rounds of Arab Barometer Wave VI) and 93 days (Arab Barometer Wave
+  VII and Afrobarometer Round 9).
 - **The longest gap between two covered days is 1,057 days**, ending 31 March 2018 —
   most of 2015, all of 2016 and 2017 have no dated interview in the archive at all.
   The Arab Opinion Index ran in every one of those years, but its releases carry no
   dates, so the gap is a gap in what is *known*, not necessarily in what was asked.
 - **Fieldwork is short.** Windows run from 5 days (Arab Barometer Wave VI Part 1) to
   53 (Wave VIII). A survey year is a fortnight of interviewing, not a year of it.
+- **Early 2013 is the densest stretch in the archive.** Afrobarometer Round 5, Arab
+  Barometer Wave III and — at month resolution — WVS Wave 6 all fall in that year.
 
 ### Reading it honestly
 
@@ -57,3 +61,70 @@ mistaken for a measured window.
 Both are generated from the extracts in `data/`, so they carry only what the
 releases record. Every date is derived, never asserted: `catalog/sources.json` names
 the variable each one comes from.
+
+## `inequality-coverage`, `inequality-distributions`, `inequality-correlations`
+
+`python3 scripts/build_inequality_figures.py`
+
+Three figures for the inequality questions, indexed in
+[`docs/topics/inequality.md`](../../docs/topics/inequality.md). Each answers a
+different question, and each has a limit worth stating before it is read.
+
+### `inequality-coverage.png` / `.svg`
+
+The **22 inequality questions asked in more than two surveys**, and the years each
+was asked in — drawn from the concordance, so a row is a question rather than a
+variable name. 16 surveys, 2012 to 2024.
+
+Every row is one colour. No inequality question in this archive is asked by two
+different programmes, so a run over time can be built inside Arab Barometer, or
+inside Afrobarometer, or inside the Arab Opinion Index, and never between them.
+21 of the 22 recur with an identical response scale; the one that does not is
+marked `differs` and greyed.
+
+Thirteen of the 22 are one Arab Opinion Index battery, opening with the same words
+and closing with the same words. Truncating those labels at the front prints thirteen
+identical rows; deleting the shared part instead leaves rows reading "religion",
+"wealth", "gender/sex" — categories, with nothing left saying what was asked about
+them. So the battery is drawn as a shaded block under a heading carrying the wording
+its items share, *Equality … is applied in your country?*, and each row beneath it
+carries only the clause that varies.
+
+### `inequality-distributions.png` / `.svg`
+
+How Tunisians answered ten of the most-repeated of those questions — the twelve that
+recur most, less two whose variables are empty in every survey that carries them — as
+weighted shares
+of substantive answers — each survey's own design weight, don't-know and refused
+dropped rather than counted as an answer.
+
+**Stacked proportions, not densities.** These are four-point ordinal items, and a
+smoothed density over four categories invents shape between points that do not
+exist.
+
+**Every panel says what it measures.** Seven of the ten belong to the same battery,
+and a panel titled only "Religion" has lost the question — so each of those carries
+the wording it shares with the rest of the battery on a line under its title.
+
+**Each panel carries its own scale**, because the releases do not share one and do
+not all run the same way: the Arab Opinion Index codes `applied completely` as 1,
+Afrobarometer codes `very badly` as 1. Bars are oriented so the affirmative pole is
+dark blue in every panel, which reverses the code order of the Afrobarometer items —
+read the panel's own legend, never the colour alone, when comparing across panels.
+
+### `inequality-correlations.png` / `.svg`
+
+Spearman rank correlations among the ordinal inequality items of **Arab Barometer
+Wave VIII**, the survey carrying the most of them (43 items, 14 of them ordinal and
+populated enough to correlate).
+
+**Within one survey only.** Different surveys are different respondents, so there is
+no cross-survey correlation to compute, and a matrix spanning them would be an
+artefact of the layout rather than a finding.
+
+Almost nothing moves together: the strongest pair reaches ρ = 0.49 and most cells sit
+inside ±0.1, so the scale ends at ±0.5 rather than ±1 — on the full range every cell
+washes to white. The limit is printed on the colour bar. Grey on the diagonal is a
+variable against itself; **hatched cells are pairs never put to the same respondents**
+(split-ballot items), which is not the same as a pair that was asked and came back
+uncorrelated.

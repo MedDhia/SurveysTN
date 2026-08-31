@@ -16,8 +16,8 @@
 |---|---:|---|
 | `arab-opinion-index-2014-tunisia-codes.csv` | 2.56 MB | `5ac3a27c0280b246` |
 | `arab-opinion-index-2014-tunisia-labels.csv` | 10.50 MB | `ef897751e4d61276` |
-| `arab-opinion-index-2014-tunisia.dta` | 6.88 MB | `670ffa31c978925b` |
-| `arab-opinion-index-2014-tunisia.sav` | 6.58 MB | `c76de2f2e307fe84` |
+| `arab-opinion-index-2014-tunisia.dta` | 6.88 MB | `b22ac65ad57faf6a` |
+| `arab-opinion-index-2014-tunisia.sav` | 6.58 MB | `86a8cbd687b6a9e8` |
 | `codebook.csv` | 0.22 MB | `ceb1596e4c820fa3` |
 | `codebook.json` | 0.34 MB | `8fbbb1bfdb897f18` |
 

@@ -1,0 +1,168 @@
+series,survey,variable,question_text,facets,concordance_group
+afrobarometer,afro-w05,Q32,Q32. Support for democracy,democracy-support,Q0215
+afrobarometer,afro-w05,Q43A_ARB,"Q43a. arb. Under a democratic system, the country’s economic performance is weak",democracy-support,
+afrobarometer,afro-w05,Q43B_ARB,Q43b. arb. Democratic regimes are indecisive,democracy-support,
+afrobarometer,afro-w05,Q43C_ARB,Q43c.arb. Democratic systems are not effective at maintaining order and stability,democracy-support,Q0526
+afrobarometer,afro-w06,Q30,Q30. Support for democracy,democracy-support,Q0215
+afrobarometer,afro-w07,Q28,Q28. Support for democracy,democracy-support,Q0215
+afrobarometer,afro-w08,Q21,Q21. Support for democracy,democracy-support,Q0215
+afrobarometer,afro-w10,Q22,Q22. Support for democracy,democracy-support,Q0215
+arab-barometer,ab-w02,q5161,"q5161 To what extent do you agree or disagree with the following statements? 1. Under a democratic system, the country’s economic performance is weak",democracy-support,
+arab-barometer,ab-w02,q5162,q5162 To what extent do you agree or disagree with the following statements? 2. Democratic regimes are indecisive and full of problems,democracy-support,
+arab-barometer,ab-w02,q5163,q5163 To what extent do you agree or disagree with the following statements? 3. Democratic systems are not effective at maintaining order and stability,democracy-support,
+arab-barometer,ab-w02,q5164,"q5164 To what extent do you agree or disagree with the following statements? 4. A democratic system may have problems, yet it is better than other systems",democracy-support,
+arab-barometer,ab-w03,q5161,"q516.1 To what extent do you agree or disagree with the following statement? Under a democratic system, the country’s economic performance is weak",democracy-support,
+arab-barometer,ab-w03,q5162,q516.2 To what extent do you agree or disagree with the following statement? Democratic regimes are indecisive and full of problems,democracy-support,
+arab-barometer,ab-w03,q5163,q516.3 To what extent do you agree or disagree with the following statement? Democratic systems are not effective at maintaining order and stability,democracy-support,
+arab-barometer,ab-w03,q5164,"q516.4 To what extent do you agree or disagree with the following statement? A democratic system may have problems, yet it is better than other systems",democracy-support,
+arab-barometer,ab-w05,Q516_4,DIS/AGREEMENT: DEMOCRACY: BETTER THAN OTHER SYSTEMS,democracy-support,
+arab-barometer,ab-w07,Q516_1,"Q516_1. Under a democratic system, the country’s economic performance is weak",democracy-support,Q0821
+arab-barometer,ab-w07,Q516_2,Q516_2. Democratic regimes are indecisive and full of problems,democracy-support,Q0822
+arab-barometer,ab-w07,Q516_3,Q516_3. Democratic systems are not effective at maintaining order and stability,democracy-support,Q0526
+arab-barometer,ab-w07,Q516_4,"Q516_4. Democratic systems may have problems, yet they are better than other systems",democracy-support,Q0823
+arab-barometer,ab-w08,Q516B_1,"Q516B_1 Under a non-democratic system, the country’s economic performance is weak",democracy-support,
+arab-barometer,ab-w08,Q516B_2,Q516B_2 Non-democratic regimes are indecisive and full of problems,democracy-support,
+arab-barometer,ab-w08,Q516B_3,Q516B_3 Non-democratic systems are not effective at maintaining order and stability,democracy-support,
+arab-barometer,ab-w08,Q516B_4,"Q516B_4 Non-democratic systems may have problems, yet they are better than other systems",democracy-support,
+arab-barometer,ab-w08,Q516_1,"Q516_1 Under a democratic system, the country’s economic performance is weak",democracy-support,Q0821
+arab-barometer,ab-w08,Q516_2,Q516_2 Democratic regimes are indecisive and full of problems,democracy-support,Q0822
+arab-barometer,ab-w08,Q516_3,Q516_3 Democratic systems are not effective at maintaining order and stability,democracy-support,Q0526
+arab-barometer,ab-w08,Q516_4,"Q516_4 Democratic systems may have problems, yet they are better than other systems",democracy-support,Q0823
+arab-opinion-index,aoi-2011,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2012-2013,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2014,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2015,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2016,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2017-2018,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2019-2020,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2022,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+arab-opinion-index,aoi-2024-2025,Q405_6,Q405_6.Please express your level of agreement or disagreement with each of these. Democracy has its own problems but remains better than other systems,democracy-support,Q0040
+afrobarometer,afro-w05,Q47A,Q47a. Level of democracy: China,external-models,
+afrobarometer,afro-w05,Q47B,Q47b. Level of democracy: USA,external-models,
+afrobarometer,afro-w05,Q47C,Q47c. Level of democracy: South Africa,external-models,
+afrobarometer,afro-w05,Q47E,Q47e. Level of democracy: France,external-models,
+afrobarometer,afro-w05,Q47F_ARB,Q47f.arb. Level of democracy: Iran,external-models,
+afrobarometer,afro-w05,Q47G_ARB,Q47g.arb. Level of democracy: Turkey,external-models,
+afrobarometer,afro-w05,Q47H_ARB,Q47h.arb. Level of democracy: Saudi Arabia,external-models,
+afrobarometer,afro-w05,Q47I_ARB,Q47i.arb. Level of democracy: Israel,external-models,
+arab-opinion-index,aoi-2011,Q403_1,"Q403_1.From 0-10, how would you rate the level of democracy in USA",external-models,
+arab-opinion-index,aoi-2011,Q403_2,"Q403_2.From 0-10, how would you rate the level of democracy in France",external-models,
+arab-opinion-index,aoi-2011,Q403_3,"Q403_3.From 0-10, how would you rate the level of democracy in Turkey",external-models,
+arab-opinion-index,aoi-2011,Q403_4,"Q403_4.From 0-10, how would you rate the level of democracy in Israel",external-models,
+arab-opinion-index,aoi-2011,Q403_5,"Q403_5.From 0-10, how would you rate the level of democracy in Iran",external-models,
+afrobarometer,afro-w05,Q31B,Q31b. Reject military rule,non-democratic-alternatives,Q0245
+afrobarometer,afro-w05,Q31D_ARB,Q31d.arb. Reject Islamic law system without elections or political parties,non-democratic-alternatives,
+afrobarometer,afro-w06,Q28B,Q28b. Reject military rule,non-democratic-alternatives,Q0245
+afrobarometer,afro-w06,Q28D_NAF,Q28d_NAF. A system governed by Islamic law without elections or political parties,non-democratic-alternatives,
+afrobarometer,afro-w07,Q27B,Q27b. Reject military rule,non-democratic-alternatives,Q0245
+afrobarometer,afro-w08,Q20B,Q20b. Reject military rule,non-democratic-alternatives,Q0245
+afrobarometer,afro-w08,Q28,Q28. Experts make most important decisions vs no need for experts,non-democratic-alternatives,
+afrobarometer,afro-w10,Q21B,Q21b. Reject military rule,non-democratic-alternatives,Q0245
+afrobarometer,afro-w10,Q25,Q25. Democracy needs political party turnover vs ok if one party always wins,non-democratic-alternatives,
+arab-barometer,ab-w08,Q518_3,Q518_3 A political system governed by a strong authority which makes decisions without considering electoral results or the opinions of the opposition,non-democratic-alternatives,
+arab-barometer,ab-w08,Q518_4,Q518A_4 A system governed by Islamic law in which there are no political parties or elections,non-democratic-alternatives,
+arab-opinion-index,aoi-2019-2020,q2020_18_3,A system in which unelected experts take decisions based on what they believe to be the interests of the state (technocracy),non-democratic-alternatives,
+world-values-survey,wvs-w06,V127,Political system: Having a strong leader,non-democratic-alternatives,
+world-values-survey,wvs-w06,V128,Political system: Having experts make decisions,non-democratic-alternatives,
+world-values-survey,wvs-w06,V129,Political system: Having the army rule,non-democratic-alternatives,Q1391
+world-values-survey,wvs-w07,Q235,Political system: Having a strong leader who does not have to bother with parliament and elections,non-democratic-alternatives,
+world-values-survey,wvs-w07,Q237,Political system: Having the army rule,non-democratic-alternatives,Q1391
+world-values-survey,wvs-w07,Q239,Political system: Having a system governed by religious law in which there are no political parties or elections,non-democratic-alternatives,
+arab-barometer,ab-w02,q5173,"q5173 I will describe different political systems to you– for each one would you say it is very good, good, bad, or very bad? 3. A political system controlled by experts who make decisions that they think are most appropriate for the country",non-democratic-alternatives;preferred-system,
+arab-barometer,ab-w02,q5183,q5183 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 3. A political system governed by a strong authority which makes decisions without considering elector,non-democratic-alternatives;preferred-system,
+arab-barometer,ab-w02,q5184,q5184 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 4. A system governed by Islamic law without elections or political parties,non-democratic-alternatives;preferred-system,
+arab-barometer,ab-w03,q5183,q518.3 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A system with a strong authority making decisions without considering electoral results or the opposition,non-democratic-alternatives;preferred-system,
+arab-barometer,ab-w03,q5184,q518.4 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A system governed by Islamic law without elections or political parties,non-democratic-alternatives;preferred-system,
+afrobarometer,afro-w07,Q65,Q65. Country governed by religious law vs secular law,non-democratic-alternatives;religion-and-rule,
+arab-barometer,ab-w02,eg814,"eg814 In the coming time period, do you prefer the political system in Egypt to be?",preferred-system,
+arab-barometer,ab-w02,q5171,"q5171 I will describe different political systems to you – for each one would you say it is very good, good, bad, or very bad? 1. A democratic political system (public freedoms, guarantees equality in political and civil rights, alternation of power, and",preferred-system,
+arab-barometer,ab-w02,q5172,"q5172 I will describe different political systems to you– for each one would you say it is very good, good, bad, or very bad? 2. A political system with an authoritarian president (non-democratic) who is indifferent to parliament and elections",preferred-system,
+arab-barometer,ab-w02,q5181,"q5181 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 1. A parliamentary system in which nationalist, left wing, right wing, and Islamist parties compete in",preferred-system,
+arab-barometer,ab-w02,q5182,q5182 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 2. A parliamentary system in which only Islamist parties compete in parliamentary elections,preferred-system,
+arab-barometer,ab-w02,q5185,q5185 I will mention some of the political systems and I would like to know to what extent you think these systems would be appropriate for your country. 5. A parliamentary system in which only non-religious parties compete in parliamentary elections,preferred-system,
+arab-barometer,ab-w02,t916,"t916 In the coming time period, do you prefer the political system in Tunisia to be...?",preferred-system,
+arab-barometer,ab-w03,q5171,q517.1 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A democratic political system,preferred-system,
+arab-barometer,ab-w03,q5172,q517.2 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A political system with an authoritarian president who is indifferent to parliament and elections,preferred-system,
+arab-barometer,ab-w03,q5181,"q518.1 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A parliamentary system where nationalist, left wing, right wing and Islamist parties compete in elections",preferred-system,
+arab-barometer,ab-w03,q5185,q518.5 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A parliamentary system in which only non-religious parties compete in parliamentary elections,preferred-system,
+arab-barometer,ab-w03,q518a2,q518a.2 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A parliamentary system in which only Islamist parties compete in parliamentary elections,preferred-system,
+arab-barometer,ab-w03,q518b2,q518b.2 I will describe different political systems and ask you about each one of them with regard to the country’s governance. A parliamentary system based on Islamic law in which only Islamist parties compete in elections,preferred-system,
+arab-barometer,ab-w06p1,QLEB6,"QLEB6. In your opinion, is it preferable for the system of governance in Lebanon",preferred-system,
+arab-barometer,ab-w07,QLIB9,"QLIB9. In your opinion, is it preferable for Libya to have a",preferred-system,
+arab-barometer,ab-w08,QLEB6,"In your opinion, is it preferable for the system of governance in Lebanon to be",preferred-system,
+arab-opinion-index,aoi-2011,Q407_1,Q407_1.An ideal system of government would ensure/safeguard as its highest priority,preferred-system,Q0120
+arab-opinion-index,aoi-2012-2013,Q407_1,Q407_1.An ideal system of government would ensure/safeguard as its highest priority,preferred-system,Q0120
+arab-opinion-index,aoi-2012-2013,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2012-2013,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2012-2013,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2012-2013,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2012-2013,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2014,Q407_1,Q407_1.An ideal system of government would ensure/safeguard as its highest priority,preferred-system,Q0120
+arab-opinion-index,aoi-2014,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2014,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2014,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2014,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2014,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2015,Q407_1,Q407_1.An ideal system of government would ensure/safeguard as its highest priority,preferred-system,Q0120
+arab-opinion-index,aoi-2015,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2015,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2015,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2015,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2015,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2016,Q407_1,Q407_1.An ideal system of government would ensure/safeguard as its highest priority,preferred-system,Q0120
+arab-opinion-index,aoi-2016,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2016,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2016,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2016,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2016,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2017-2018,Q407_1,Q407_1.An ideal system of government would ensure/safeguard as its highest priority,preferred-system,Q0120
+arab-opinion-index,aoi-2017-2018,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2017-2018,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2017-2018,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2017-2018,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2017-2018,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2019-2020,Q407_1,Q407_1.An ideal system of government would ensure/safeguard as its highest priority,preferred-system,Q0120
+arab-opinion-index,aoi-2019-2020,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2019-2020,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2019-2020,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2019-2020,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2019-2020,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2019-2020,Q408_6,"Q408_6.I would like to know how appropriate each of these would be for your country, in your opinion: a political system governed by the military or the Army Command",preferred-system,Q0583
+arab-opinion-index,aoi-2022,Q2022_56,Please choose which of the following political systems is the most suitable to be the system of government in your country?,preferred-system,
+arab-opinion-index,aoi-2022,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2022,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2022,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2022,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2022,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2022,Q408_6,"Q408_6.I would like to know how appropriate each of these would be for your country, in your opinion: a political system governed by the military or the Army Command",preferred-system,Q0583
+arab-opinion-index,aoi-2022,v2022_56,Please choose which of the following political systems is the most suitable to be the system of government in your country?,preferred-system,
+arab-opinion-index,aoi-2024-2025,Q408_1,"Q408_1.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which governments are formed based on the outcomes of elections in which all political parties are free to join",preferred-system,Q0084
+arab-opinion-index,aoi-2024-2025,Q408_2,"Q408_2.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to Islamist political parties",preferred-system,Q0085
+arab-opinion-index,aoi-2024-2025,Q408_3,Q408_3.I would like to know how appropriate each of these would be for your country A political system in which the state authority makes the decisions without taking into account the results of the elections or the opinions of the opposition,preferred-system,Q0086
+arab-opinion-index,aoi-2024-2025,Q408_4,"Q408_4.I would like to know how appropriate each of these would be for your country, in your opinion: A political system governed by Islamic Sharia, and in which there are neither elections nor political parties",preferred-system,Q0087
+arab-opinion-index,aoi-2024-2025,Q408_5,"Q408_5.I would like to know how appropriate each of these would be for your country, in your opinion: A political system in which electoral competition is restricted to non-religious parties",preferred-system,Q0088
+arab-opinion-index,aoi-2024-2025,Q408_6,"Q408_6.I would like to know how appropriate each of these would be for your country, in your opinion: a political system governed by the military or the Army Command",preferred-system,Q0583
+afrobarometer,afro-w05,Q46A,Q46a. Level of democracy: today,regime-assessment,
+afrobarometer,afro-w05,Q46B,Q46b. Level of democracy: ten years ago,regime-assessment,
+afrobarometer,afro-w05,Q46C,Q46c. Level of democracy: under previous non-democratic regime,regime-assessment,
+afrobarometer,afro-w05,Q46D,Q46d. Level of democracy: in the future,regime-assessment,
+arab-barometer,ab-w02,q505,"q505 Supposing there was a scale measuring the level of democracy between 0 and 10, in which 0 indicates no democracy whatsoever and 10 means that the state is democratic to the greatest extent possible. In your opinion, to what extent is Iran a democratic",regime-assessment,
+arab-barometer,ab-w02,q511,"q511 In your opinion, to what extent is your country democratic?",regime-assessment,Q0780
+arab-barometer,ab-w03,q511,"q511 In your opinion, to what extent is your country democratic?",regime-assessment,Q0780
+arab-barometer,ab-w04,q511,"In your opinion, to what extent is your country democratic? (Not asked in Lebanon or Qatar) 0 1 2 3 4 5 6 7 8 9 10Democratic to No democracy whatsoeverthe greatest extentpossible",regime-assessment,
+arab-barometer,ab-w04,q511leb,"In your opinion, to what extent is your country democratic? (Lebanon only) 1 2 3 4 5 6 7 8 9 10Democratic to No democracy whatsoeverthe greatest extentpossible",regime-assessment,
+world-values-survey,wvs-w06,V141,How democratically is this country being governed today,regime-assessment,Q1403
+world-values-survey,wvs-w07,Q251,How democratically is this country being governed today,regime-assessment,Q1403
+afrobarometer,afro-w05,Q41C_ARB,Q41c.arb. Religious leaders should not interfere in voters’ decisions in elections,religion-and-rule,Q0739
+afrobarometer,afro-w07,Q82A_TUN,Q82a_tun. Democratic system contradicts Islamic teaching,religion-and-rule,
+afrobarometer,afro-w07,Q82C_TUN,Q82c_tun. Religious leaders should not interfere in voters’ decisions in elections,religion-and-rule,Q0739
+arab-barometer,ab-w03,q615,q615 To what extent do the laws of your country match the Sharia – if it matches at all?,religion-and-rule,
+arab-barometer,ab-w05,Q605,PREFERENCE: SHARIA VS WILL OF PEOPLE,religion-and-rule,
+arab-barometer,ab-w05,Q606_1,POLITICAL ISLAM: DIS/AGREEMENT: RELIGIOUS LEADERS SHOULD NOT INTERFERE IN ELECTO,religion-and-rule,
+afrobarometer,afro-w05,Q43D_ARB,Q43d. arb. The country's citizens are not prepared for a democratic system,suitability-readiness,
+arab-barometer,ab-w02,q512,"q512 Suppose there was a scale from 1-10 measuring the extent to which democracy is suitable for your country, with 1 meaning that democracy is absolutely inappropriate for your country and 10 meaning that democracy is completely appropriate for your count",suitability-readiness,
+arab-barometer,ab-w02,q5165,q5165 To what extent do you agree or disagree with the following statements? 5. The citizens in your country are not prepared for a democratic system,suitability-readiness,
+arab-barometer,ab-w03,q512,"q512 Suppose there was a scale from 0-10 measuring the extent to which democracy is suitable for your country, to what extent do you think democracy is appropriate for your country?",suitability-readiness,
+arab-barometer,ab-w03,q5165,q516.5 To what extent do you agree or disagree with the following statement? The citizens in your country are not prepared for a democratic system,suitability-readiness,
+arab-barometer,ab-w04,q512leb,"Suppose there was a scale from 0-10 measuring the extent to which democracy is suitable for yourcountry, with 0 meaning that democracy is absolutely inappropriate for your country and 10meaning that democracy is completely appropriate for your country. To what extent do you think democracy is appropriate for your country? (Lebanon only) 1 2 3 4 5 6 7 8 9 10Completely Absolutelyappropriate inappropriate",suitability-readiness,
+arab-barometer,ab-w08,Q512,Q512 What is an appropriate level of democracy for your country?,suitability-readiness,

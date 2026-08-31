@@ -212,6 +212,34 @@ that list, and is not guessed here.
 | `-1` | Don't know | 247 |
 | `-3` | Not applicable (filter) | 12 |
 
+## Afrobarometer Round 5
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `-1` | Missing | 266 |
+| `998` | Refused | 211 |
+| `9` | Don't know | 126 |
+| `9` | Don't Know | 39 |
+| `9` | Don't know/Haven't heard enough | 37 |
+| `9999` | Don't know | 9 |
+| `8` | Refused | 8 |
+| `9` | Don't Know/Haven't heard enough | 8 |
+| `1` | Refused to be interviewed | 7 |
+| `997` | Not Applicable | 7 |
+| `-1` | MIssing | 6 |
+| `9998` | Refused to answer | 5 |
+| `7` | Not applicable | 4 |
+| `8` | Refused to answer | 4 |
+| `9998` | Refused | 4 |
+| `99` | Don't know | 2 |
+| `999` | Don't know | 2 |
+| `-1` | not labelled in the release | 1 |
+| `28` | Agnostic(Do not know if there is a God) | 1 |
+| `9` | Don't know/Don't understand | 1 |
+| `9` | Don't know / Can't remember | 1 |
+| `999` | Don’t know | 1 |
+| `9997` | Not applicable | 1 |
+
 ## Afrobarometer Round 6
 
 | Code | Label | Variables using it |

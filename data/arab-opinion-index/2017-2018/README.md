@@ -16,8 +16,8 @@
 |---|---:|---|
 | `arab-opinion-index-2017-2018-tunisia-codes.csv` | 1.76 MB | `f902fb516c1abf82` |
 | `arab-opinion-index-2017-2018-tunisia-labels.csv` | 7.61 MB | `6488732382d69aa1` |
-| `arab-opinion-index-2017-2018-tunisia.dta` | 4.62 MB | `5cc9a1a0ff40a560` |
-| `arab-opinion-index-2017-2018-tunisia.sav` | 4.41 MB | `01227ce6b369eeae` |
+| `arab-opinion-index-2017-2018-tunisia.dta` | 4.62 MB | `650948b44790a011` |
+| `arab-opinion-index-2017-2018-tunisia.sav` | 4.41 MB | `ce1aa4e44a130cce` |
 | `codebook.csv` | 0.14 MB | `6fda3e8592a83a3c` |
 | `codebook.json` | 0.22 MB | `70d9fc550708b5d0` |
 

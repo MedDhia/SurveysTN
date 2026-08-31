@@ -16,8 +16,8 @@
 |---|---:|---|
 | `arab-opinion-index-2022-tunisia-codes.csv` | 3.22 MB | `9dad143a481ec6fa` |
 | `arab-opinion-index-2022-tunisia-labels.csv` | 13.58 MB | `dac411f5327313fc` |
-| `arab-opinion-index-2022-tunisia.dta` | 14.65 MB | `b41421c76585620e` |
-| `arab-opinion-index-2022-tunisia.sav` | 14.42 MB | `60b94355607f7643` |
+| `arab-opinion-index-2022-tunisia.dta` | 14.65 MB | `1db472374e736422` |
+| `arab-opinion-index-2022-tunisia.sav` | 14.42 MB | `06f43707ed6b79b8` |
 | `codebook.csv` | 1.99 MB | `bcc42fdaed286e3c` |
 | `codebook.json` | 2.13 MB | `591fd0198d4dada5` |
 
