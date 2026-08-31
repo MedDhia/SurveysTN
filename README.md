@@ -192,14 +192,24 @@ often enough to build a series from. The lexicon is
 [`catalog/topics.json`](catalog/topics.json) — a file to read and argue with, not a
 judgement buried in code.
 
-**[Inequality](docs/topics/inequality.md)** is the first: 300 variables in 22 of the
-26 surveys, across economic gaps, gender, discrimination, wasta, equality as a
-principle, and opportunity. Two findings worth having before designing anything:
-45 of those questions recur across surveys, but **not one recurs across two
-programmes** — an inequality series can be built inside Arab Barometer or inside the
-Arab Opinion Index and not between them. And the only two questions that name
-Tunisian inequality directly, Afrobarometer Round 6's "The income gap between the
-rich and the poor" and "Regional inequality", are country-specific items asked once.
+**[Inequality](docs/topics/inequality.md)** — 300 variables in 22 of the 26 surveys,
+across economic gaps, gender, discrimination, wasta, equality as a principle, and
+opportunity. 45 recur across surveys and **not one recurs across two programmes**, so
+an inequality series can be built inside Arab Barometer or inside the Arab Opinion
+Index and not between them. The only two questions that name Tunisian inequality
+directly — Afrobarometer Round 6's "The income gap between the rich and the poor" and
+"Regional inequality" — are country-specific items asked once, in 2015.
+
+**[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
+surveys: which system is preferred, support for the non-democratic alternatives
+(strong leader, army rule, unelected experts, rule by religious law), support for
+democracy against its stated drawbacks, whether democracy suits the country, and
+religion as a basis of rule. Preference is kept apart from two things it is
+routinely confused with, each in its own facet: how democratic people judge their
+own country to be, and how democratic they rate other countries. Exactly **one item
+crosses programmes** — "Democratic systems are not effective at maintaining order and
+stability", in Arab Barometer Waves VII and VIII and Afrobarometer Round 5 — and even
+that one does not share a response scale.
 
 ### Where the question text comes from
 

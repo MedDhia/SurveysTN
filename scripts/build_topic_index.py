@@ -172,17 +172,35 @@ def render(topic: dict, found: pd.DataFrame, by_key: dict, order: list[str]) -> 
         "check its `scale` column before pooling, because a repeated question is not",
         "automatically a repeated measurement.",
         "",
-        (
-            f"**None of them recurs across two programmes.**"
-            if across.empty
-            else f"**{len(across):,} recur across more than one programme.**"
-        ),
-        "Every one of these questions belongs to a single series, so a run over time can be",
-        "built inside Arab Barometer, or inside the Arab Opinion Index, and not between",
-        "them. There is no identical inequality item to triangulate on — which is the",
-        "sharper version of the concordance's finding that no cross-series question shares",
-        "a response scale.",
-        "",
+    ]
+    if across.empty:
+        lines += [
+            "**None of them recurs across two programmes.** Every one belongs to a single",
+            "series, so a run over time can be built inside Arab Barometer, or inside the Arab",
+            "Opinion Index, and not between them. There is no identical item here to",
+            "triangulate on, which is the sharp version of the concordance's finding that no",
+            "cross-series question shares a response scale.",
+            "",
+        ]
+    else:
+        lines += [
+            f"**{len(across):,} of them recurs across more than one programme**, out of",
+            f"{len(repeated):,} that recur at all — so nearly every series here has to be built",
+            "inside one programme. The exceptions are worth knowing by name:",
+            "",
+            "| Question | Surveys | Series |",
+            "|---|---:|---:|",
+        ]
+        for _, r in across.iterrows():
+            text = r["question"][:88] + ("…" if len(r["question"]) > 88 else "")
+            lines.append(f"| {text} | {r['surveys']} | {r['series']} |")
+        lines += [
+            "",
+            "Check each against `scale` in the concordance before pooling: a question two",
+            "programmes both ask is still not a measurement they both take the same way.",
+            "",
+        ]
+    lines += [
         "| Question | Surveys | Series |",
         "|---|---:|---:|",
     ]

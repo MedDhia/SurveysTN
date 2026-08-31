@@ -60,12 +60,11 @@ could start. Groups come from [`../question-concordance.md`](../question-concord
 check its `scale` column before pooling, because a repeated question is not
 automatically a repeated measurement.
 
-**None of them recurs across two programmes.**
-Every one of these questions belongs to a single series, so a run over time can be
-built inside Arab Barometer, or inside the Arab Opinion Index, and not between
-them. There is no identical inequality item to triangulate on — which is the
-sharper version of the concordance's finding that no cross-series question shares
-a response scale.
+**None of them recurs across two programmes.** Every one belongs to a single
+series, so a run over time can be built inside Arab Barometer, or inside the Arab
+Opinion Index, and not between them. There is no identical item here to
+triangulate on, which is the sharp version of the concordance's finding that no
+cross-series question shares a response scale.
 
 | Question | Surveys | Series |
 |---|---:|---:|
