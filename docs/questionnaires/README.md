@@ -20,11 +20,33 @@ carries no variable labels of its own.
 | `wvs-w06-questionnaire.pdf` | WVS Wave 6 | [`wave-06`](../../data/world-values-survey/wave-06) |
 | `wvs-w06-methodology.pdf` | WVS Wave 6 | methodology, not the instrument |
 | `wvs-w07-questionnaire.pdf` | WVS Wave 7 | [`wave-07`](../../data/world-values-survey/wave-07) |
+| `aoi-2011-codebook.pdf` | Arab Opinion Index 2011 | [`2011`](../../data/arab-opinion-index/2011) |
+| `aoi-2012-2013-codebook.pdf` | Arab Opinion Index 2012/2013 | [`2012-2013`](../../data/arab-opinion-index/2012-2013) |
+| `aoi-2014-codebook.pdf` | Arab Opinion Index 2014 | [`2014`](../../data/arab-opinion-index/2014) |
+| `aoi-2015-codebook.pdf` | Arab Opinion Index 2015 | [`2015`](../../data/arab-opinion-index/2015) |
+| `aoi-2016-codebook.pdf` | Arab Opinion Index 2016 | [`2016`](../../data/arab-opinion-index/2016) |
+| `aoi-2017-2018-codebook.pdf` | Arab Opinion Index 2017/2018 | [`2017-2018`](../../data/arab-opinion-index/2017-2018) |
+| `aoi-2022-codebook.pdf` | Arab Opinion Index 2022 | [`2022`](../../data/arab-opinion-index/2022) |
+| `aoi-2024-2025-codebook.pdf` | Arab Opinion Index 2024/2025 | [`2024-2025`](../../data/arab-opinion-index/2024-2025) |
 
-Every survey in the archive has its instrument here.
+Not every survey has one. Afrobarometer's five rounds have none here, and the Arab
+Opinion Index 2019/2020 round has none because the publisher's own link for it
+returns 404. Neither is a loss for the crosswalk: both series carry their question
+wording in the release itself.
 
-The two WVS questionnaires are the Arabic instruments as fielded, and are **not**
-parsed for question text: the Arabic does not extract as text, and it is not needed
+The Arab Opinion Index calls its instrument a **codebook**, and it is the document
+that gives the response options behind the variable labels. It is not the same
+thing as the `codebook.csv` this archive generates in each survey folder, which is
+a per-variable summary of the data as extracted.
+
+Only the nine Arab Barometer questionnaires are parsed for question text. The other
+instruments are documentation: the WVS and Arab Opinion Index releases already carry
+their question wording, in column headers and variable labels respectively, so
+parsing a PDF for it would add a second and less reliable source for something the
+data states directly.
+
+The two WVS questionnaires could not be parsed in any case. They are the Arabic
+instruments as fielded, and are **not** parsed for question text: the Arabic does not extract as text, and it is not needed
 — the WVS releases carry the question wording in their own column headers. The Wave
 7 one earns its place another way. Its first page lists the technical codes in
 English — `-1 Don't know`, `-2 No answer/refused`, `-3 Not applicable (filter)`,

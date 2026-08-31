@@ -405,6 +405,59 @@ arab-barometer,ab-w06p3,Q521_2,ab-w08,Q521_2A,1.0,Freedom of the media to critic
 arab-barometer,ab-w07,Q201A_42A_MOR,ab-w08,Q201B_4,1.0,Q201A_42A_MOR. Police
 arab-barometer,ab-w07,Q503A_1,ab-w08,Q503A_2,1.0,Q503A_1. Which party if any do you feel closest to?
 arab-barometer,ab-w07,Q621_1,ab-w08,Q622C_IRQ_6,1.0,Q621_1. Lack of means of transportation
+arab-opinion-index,aoi-2012-2013,Q424_1,aoi-2014,Q424_2,1.0,"Q424_1.To what extent do you support for/opposition To promote their political opinions/views freely and without restrictions, regardless of your agreement with those opinions/ views"
+arab-opinion-index,aoi-2012-2013,Q427_18,aoi-2017-2018,Q427_16,0.96,"Q427_18.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by Sahrawi"
+arab-opinion-index,aoi-2012-2013,Q427_18,aoi-2019-2020,Q427_16,0.96,"Q427_18.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by Sahrawi"
+arab-opinion-index,aoi-2012-2013,Q427_18,aoi-2022,Q427_16,0.96,"Q427_18.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by Sahrawi"
+arab-opinion-index,aoi-2012-2013,Q822_1,aoi-2014,Q822_14,1.0,"Q822_1. In general, do you believe that the Arab revolutions have succeeded in achieving: Respect for citizens' rights and dignity"
+arab-opinion-index,aoi-2012-2013,Q925,aoi-2015,Q326,1.0,Q925.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2012-2013,Q925,aoi-2016,Q326,1.0,Q925.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2012-2013,Q925,aoi-2017-2018,Q326,1.0,Q925.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2012-2013,Q925,aoi-2019-2020,Q326,1.0,Q925.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2012-2013,Q925,aoi-2022,Q2022_4,1.0,Q925.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2012-2013,Q925,aoi-2024-2025,Q2022_4,1.0,Q925.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2012-2013,QLi3,aoi-2015,QPal3,0.976,QLi3.Which of the following statements do you agree with more?
+arab-opinion-index,aoi-2012-2013,QLi3,aoi-2016,QPal3,0.976,QLi3.Which of the following statements do you agree with more?
+arab-opinion-index,aoi-2012-2013,QLi3,aoi-2017-2018,QPal3,0.976,QLi3.Which of the following statements do you agree with more?
+arab-opinion-index,aoi-2014,Q424_8,aoi-2015,Q424_6,1.0,Q424_8.To what extent do you support for/opposition To express the beliefs of their religion or sect “mathhab” freely and without restrictions
+arab-opinion-index,aoi-2014,Q427_5,aoi-2017-2018,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2014,Q427_5,aoi-2019-2020,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2014,Q427_5,aoi-2022,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2014,Q427_5,aoi-2024-2025,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2014,Q822_14,aoi-2022,Q822_1,1.0,"Q822_14. In general, do you believe that the Arab revolutions have succeeded in achieving: Respect for citizens’ rights and dignity"
+arab-opinion-index,aoi-2014,Q907_1_10,aoi-2024-2025,q907_5_10,0.953,Q907_1_10.to what extent do you think that the (Russian) society/ people Values individual efforts
+arab-opinion-index,aoi-2014,Q907_1_2,aoi-2024-2025,q907_5_2,0.953,Q907_1_2.to what extent do you think that the (Russian) society/ people Has a fair judicial system
+arab-opinion-index,aoi-2014,Q907_1_3,aoi-2024-2025,q907_5_3,0.959,Q907_1_3.to what extent do you think that the (Russian) society/ people Media organizations enjoy credibility
+arab-opinion-index,aoi-2014,Q907_1_4,aoi-2024-2025,q907_5_4,0.952,Q907_1_4.to what extent do you think that the (Russian) society/ people Ensures gender equality
+arab-opinion-index,aoi-2014,Q907_1_5,aoi-2024-2025,q907_5_5,0.952,Q907_1_5.to what extent do you think that the (Russian) society/ people Respects minority rights
+arab-opinion-index,aoi-2014,Q907_1_6,aoi-2024-2025,q907_5_6,0.952,Q907_1_6.to what extent do you think that the (Russian) society/ people Is religiously observant
+arab-opinion-index,aoi-2014,Q907_1_8,aoi-2024-2025,q907_5_8,0.954,Q907_1_8.to what extent do you think that the (Russian) society/ people Is technologically advanced
+arab-opinion-index,aoi-2014,Q907_1_9,aoi-2024-2025,q907_5_9,0.955,Q907_1_9.to what extent do you think that the (Russian) society/ people Respects individual liberties
+arab-opinion-index,aoi-2014,Q908_1_3,aoi-2024-2025,q908_5_3,0.956,Q908_1_3.to what extent do you think that Administrative and financial corruption is prevalent/spread in (Russia)?
+arab-opinion-index,aoi-2014,Q908_1_5,aoi-2024-2025,q908_5_5,0.953,Q908_1_5.to what extent do you think that Materialism (opportunistic society) is prevalent/spread in (Russia)?
+arab-opinion-index,aoi-2015,Q315,aoi-2022,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2015,Q315,aoi-2024-2025,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2015,Q326,aoi-2024-2025,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2015,Q427_5,aoi-2017-2018,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2015,Q427_5,aoi-2019-2020,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2015,Q427_5,aoi-2022,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2015,Q427_5,aoi-2024-2025,Q427_17,0.964,"Q427_5.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by A Salafi"
+arab-opinion-index,aoi-2016,Q315,aoi-2022,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2016,Q315,aoi-2024-2025,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2016,Q326,aoi-2024-2025,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2016,Q922_9,aoi-2024-2025,q922_15,0.958,Q922_9.Do you believe the current policies of Egypt threaten the security and stability of the region?
+arab-opinion-index,aoi-2017-2018,Q201_38,aoi-2022,QIR2020_1_1,0.965,Q201_38.To what extent do you trust Popular Mobilization Forces
+arab-opinion-index,aoi-2017-2018,Q315,aoi-2022,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2017-2018,Q315,aoi-2024-2025,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2017-2018,Q326,aoi-2022,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2017-2018,Q326,aoi-2024-2025,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2017-2018,Q427_20,aoi-2024-2025,Q427_27,0.96,"Q427_20.In principle, would you support/oppose the position of the President/Prime Minister in your home country being held by Turkmen"
+arab-opinion-index,aoi-2017-2018,Q922_9,aoi-2024-2025,q922_15,0.958,Q922_9.Do you believe the current policies of Egypt threaten the security and stability of the region?
+arab-opinion-index,aoi-2019-2020,Q315,aoi-2022,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2019-2020,Q315,aoi-2024-2025,Q315_1,1.0,Q315.which would be the most important factor that you would take into consideration when choosing a candidate/electoral list to vote for?
+arab-opinion-index,aoi-2019-2020,Q326,aoi-2022,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2019-2020,Q326,aoi-2024-2025,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
+arab-opinion-index,aoi-2022,Q321,aoi-2024-2025,Q216,0.967,Q321.Which of these statements is closest to your point of view?
 world-values-survey,wvs-w06,V10,wvs-w07,Q46,1.0,Feeling of happiness
 world-values-survey,wvs-w06,V103,wvs-w07,Q59,0.958,Trust: Your neighborhood (B)
 world-values-survey,wvs-w06,V104,wvs-w07,Q60,0.97,Trust: People you know personally (B)

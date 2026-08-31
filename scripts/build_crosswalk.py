@@ -42,7 +42,7 @@ import pandas as pd
 import pyreadstat
 import pypdf
 
-ROOT = Path(__file__).resolve().parent.parent
+from extract_tunisia import ROOT, wave_tag
 
 # An identifier is a short alphabetic prefix followed by a number: q101, Q127,
 # aid1a, t302, eg3041. Extraction of the Wave IV PDF reverses some of them --
@@ -325,10 +325,23 @@ def suggest_by_text(series: str, tags: list[str], waves: dict) -> list[dict]:
                 continue
 
             pairs = []
+            matcher = difflib.SequenceMatcher(autojunk=False)
             for name, text in left.items():
+                matcher.set_seq2(text)
                 best, score = None, 0.0
                 for other, other_text in right.items():
-                    ratio = difflib.SequenceMatcher(None, text, other_text).ratio()
+                    # ratio() is expensive and the threshold is high, so skip a
+                    # candidate whose cheap upper bounds already rule it out. Both
+                    # bounds are at least the true ratio, so nothing above the floor
+                    # is lost. Without this the Arab Opinion Index alone would need
+                    # tens of millions of full comparisons.
+                    matcher.set_seq1(other_text)
+                    if (
+                        matcher.real_quick_ratio() < SUGGESTION_FLOOR
+                        or matcher.quick_ratio() < SUGGESTION_FLOOR
+                    ):
+                        continue
+                    ratio = matcher.ratio()
                     if ratio > score:
                         best, score = other, ratio
                 if (
@@ -431,10 +444,7 @@ def build_rows(series: str, tags: list[str], all_tags: list[str], waves: dict) -
 def main() -> None:
     catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
     manifest = json.loads((ROOT / "catalog" / "sources.json").read_text(encoding="utf-8"))
-    specs = {
-        (w["series"], f"w{w['wave']:02d}" + (f"p{w['part']}" if w.get("part") else "")): w
-        for w in manifest["waves"]
-    }
+    specs = {(w["series"], wave_tag(w)): w for w in manifest["waves"]}
 
     surveys = catalog["surveys"]
     tags = [s["key"] for s in surveys]

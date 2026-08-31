@@ -1,20 +1,21 @@
 # SurveysTN
 
 Public-opinion survey data covering Tunisia — Arab Barometer, the World Values
-Survey and Afrobarometer so far — reorganised so that each survey is one
-self-describing folder: the respondents, in every common format, with a codebook
+Survey, Afrobarometer and the Arab Opinion Index so far — reorganised so that each
+survey is one self-describing folder: the respondents, in every common format, with a codebook
 and a provenance record.
 
-**22,420 Tunisian respondents across sixteen surveys and three series, 2010 to
-2024.** The releases they come from are in the repository too, so a clone can
+**39,188 Tunisian respondents across twenty-five surveys and four series, 2010 to
+2025.** The releases they come from are in the repository too, so a clone can
 rebuild the whole archive and check every cell of it against the publishers' own
 files.
 
-The programmes do not make this easy. Arab Barometer publishes pooled files mixing
-a dozen countries and hundreds of columns never asked in Tunisia; the other two
-publish country files, in a different format again. Between them the sixteen
-surveys arrive in three file formats, two of which lose something. What is here is
-the same data, filtered to Tunisia and made consistent, with nothing recoded.
+The programmes do not make this easy. Arab Barometer and the Arab Opinion Index
+publish pooled files mixing a dozen or more countries and hundreds of columns never
+asked in Tunisia; the other two publish country files, in a different format again.
+Between them the surveys arrive in three file formats, two of which lose something.
+What is here is the same data, filtered to Tunisia and made consistent, with nothing
+recoded.
 
 ## What's in it
 
@@ -48,6 +49,20 @@ the same data, filtered to Tunisia and made consistent, with nothing recoded.
 | [Round 8](data/afrobarometer/round-08) | 1,200 | 377 | Feb–Mar 2020 |
 | [Round 9](data/afrobarometer/round-09) | 1,200 | 388 (380 with data) | Feb–Mar 2022 |
 | [Round 10](data/afrobarometer/round-10) | 1,200 | 372 (363 with data) | Feb–Mar 2024 |
+
+### Arab Opinion Index — 9 surveys, 16,768 respondents
+
+| Survey | Respondents | Variables | Fieldwork |
+|---|---:|---:|---|
+| [2011](data/arab-opinion-index/2011) | 1,229 | 196 (148 with data) | 2011 |
+| [2012/2013](data/arab-opinion-index/2012-2013) | 1,500 | 546 (329 with data) | 2012–2013 |
+| [2014](data/arab-opinion-index/2014) | 1,498 | 555 (424 with data) | 2014 |
+| [2015](data/arab-opinion-index/2015) | 1,497 | 441 (358 with data) | 2015 |
+| [2016](data/arab-opinion-index/2016) | 1,499 | 479 (412 with data) | 2016 |
+| [2017/2018](data/arab-opinion-index/2017-2018) | 1,500 | 372 (306 with data) | 2017–2018 |
+| [2019/2020](data/arab-opinion-index/2019-2020) | 2,400 | 509 (335 with data) | 2019–2020 |
+| [2022](data/arab-opinion-index/2022) | 2,400 | 651 (546 with data) | 2022 |
+| [2024/2025](data/arab-opinion-index/2024-2025) | 3,245 | 1,251 (616 with data) | 2024–2025 |
 
 `catalog/catalog.csv` and `catalog/catalog.json` carry the same table in
 machine-readable form, with a checksum for every file.
@@ -102,7 +117,7 @@ depends on the estimand.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the surveys up: one row per
 variable, the name it takes in each survey, the question each one asked, and
-whether the wording held. **3,591 variables, 3,528 of them with question text.**
+whether the wording held. **6,404 variables, 6,338 of them with question text.**
 
 Variables are matched **within a series and never across one**. `Q1` is the
 governorate in Arab Barometer and "Important in life: Family" in the World Values
@@ -116,6 +131,7 @@ one varies by series:
 | Arab Barometer | 13 of 1,966 | 97 |
 | World Values Survey | 43 of 724 | 3 |
 | Afrobarometer | 61 of 901 | 423 |
+| Arab Opinion Index | 54 of 2,813 | 3 |
 
 Afrobarometer is the cautionary one: it renumbers between rounds while keeping the
 `Q` prefix, so a name that persists is often a different question. Check
@@ -124,7 +140,7 @@ Afrobarometer is the cautionary one: it renumbers between rounds while keeping t
 Where a programme renumbers outright, name matching finds nothing at all — WVS
 asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
 [`docs/crosswalk-suggested.csv`](docs/crosswalk-suggested.csv) pairs those up by
-question text instead: **595 pairs**, offered only where the wordings are all but
+question text instead: **648 pairs**, offered only where the wordings are all but
 identical, unambiguous, and agreed on any numbers they contain. They are
 suggestions to confirm against the publisher's own crosswalk, not findings.
 
@@ -145,12 +161,16 @@ PARLIAMENTARY ELECTION` for a question reading "did you attend a campaign meetin
 or rally?" — which is correct and shares almost no characters with the wording, so
 comparing them would measure labelling style.
 
-Nine Arab Barometer questionnaires are parsed. The two WVS instruments are the
-Arabic as fielded and are not: the Arabic does not extract as text, and the
-question wording is already in those releases' column headers. Afrobarometer has
-no questionnaire in the archive yet. The WVS Wave 7 instrument earns its place
-anyway — its first page documents the negative sentinel codes those releases ship
-bare.
+Nine Arab Barometer questionnaires are parsed. Nothing else needs to be: the WVS
+and Arab Opinion Index releases carry their question wording themselves, in column
+headers and variable labels respectively, so their instruments are kept as
+documentation rather than as parsing inputs. The two WVS instruments could not be
+parsed anyway — they are the Arabic as fielded, and the Arabic does not extract as
+text. Afrobarometer has no questionnaire in the archive yet.
+
+The documentation still earns its keep. The WVS Wave 7 instrument's first page is
+where the negative sentinel codes those releases ship bare are defined; eight Arab
+Opinion Index codebooks give the response options behind its labels.
 
 ## Repository layout
 
@@ -159,13 +179,24 @@ bare.
 | `data/<series>/<survey>/` | one folder per survey — the extracts |
 | `data/arab-barometer/wave-06-merged/` | derived: the three Wave VI rounds stacked |
 | `data/raw/` | the publishers' releases, tracked, so the archive rebuilds from a clone |
+| `docs/questionnaires/` | published instruments and codebooks, where a programme has one here |
 | `catalog/` | `catalog.json` / `catalog.csv` and the reports, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the crosswalk, missing-value codes |
-| `docs/questionnaires/` | published questionnaires, where the programme has one here |
 | `scripts/` | extraction, verification, doc generation |
 
-The clone is about 90 MB. Most of that is `data/raw/`, which is kept so the
-archive carries its own sources; nothing you need for analysis depends on it.
+The clone carries its own sources, which is most of its size; nothing you need for
+analysis depends on `data/raw/`.
+
+Two releases are the exception. GitHub refuses a file over 100 MB, and the Arab
+Opinion Index rounds for 2019/2020 and 2024/2025 are 132 MB and 202 MB, so those
+two are fetched rather than committed:
+
+```bash
+python3 scripts/fetch_raw.py     # downloads what is missing, checks the SHA-256
+```
+
+They are public downloads needing no registration, and their URLs and checksums
+are in the catalog. Everything else is already in the clone.
 
 ## Regenerating and verifying
 
@@ -174,6 +205,7 @@ docs is generated, from the releases in `data/raw/`:
 
 ```bash
 pip install -r scripts/requirements.txt
+python3 scripts/fetch_raw.py              # the two releases too large to commit
 python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
 python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, -suggested.csv, crosswalk.md
 python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
@@ -199,8 +231,9 @@ and the ground rules.
 Only a row filter is applied — keep the Tunisian respondents — plus a rewrite into
 the formats above. Nothing is recoded, rescaled or imputed, and nothing is renamed
 except where a format forbids the publisher's own name: Afrobarometer Round 10's
-`LOCATION.LEVEL.1` becomes `LOCATION_LEVEL_1`, recorded in the catalog and in that
-round's README. Every generated file's SHA-256 is in `catalog/catalog.json`.
+`LOCATION.LEVEL.1` becomes `LOCATION_LEVEL_1`, and 196 variables in the Arab
+Opinion Index 2019/2020 round lose a dot from their names the same way. Every such
+change is recorded in the catalog and in the survey's own README. Every generated file's SHA-256 is in `catalog/catalog.json`.
 [`docs/provenance.md`](docs/provenance.md) lists every departure from the source,
 including the handful a file format forced.
 
@@ -212,3 +245,4 @@ round, not this repository, as the source of the data.**
 - Arab Barometer — <https://www.arabbarometer.org>
 - World Values Survey — <https://www.worldvaluessurvey.org>
 - Afrobarometer — <https://www.afrobarometer.org>
+- Arab Opinion Index — <https://arabindex.dohainstitute.org>

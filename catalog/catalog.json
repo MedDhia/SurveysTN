@@ -46,11 +46,11 @@
         },
         "arab-barometer-w02-tunisia.dta": {
           "bytes": 4986072,
-          "sha256": "7518ec1808f74f1727317e05a0c375b005f36b446faa74a2b46645b73b9dd8fb"
+          "sha256": "8cf93998be1bbe2fe145ccd603d5608dc2b39c08bfa771d9c1b660e5e7e516c9"
         },
         "arab-barometer-w02-tunisia.sav": {
           "bytes": 4732179,
-          "sha256": "6612bf2cdc83c63dcadf04f7999043d20d8967c3517bf42bf3b49737629700bd"
+          "sha256": "4ef44784e073774197f5d2609da28cdfffa481050b69f714facc9bb7e1fdd602"
         },
         "codebook.csv": {
           "bytes": 242743,
@@ -107,11 +107,11 @@
         },
         "arab-barometer-w03-tunisia.dta": {
           "bytes": 3134417,
-          "sha256": "5bd33827f2e2893213252fd697bce95230ebaa97fd32cf35ef787e8725d2a474"
+          "sha256": "069452a3e3e1dfef5049198c303b881da3a297f3ca087475ecd74cc139f792fe"
         },
         "arab-barometer-w03-tunisia.sav": {
           "bytes": 2966293,
-          "sha256": "745dd0d454e4fbd6e6f5b78257681563f65cbda29a22859dc51b5e02e24ab2ad"
+          "sha256": "f0d40d5a5de37d8bf5440a6f60cea3fe808937445c7e5c386394afd270f1405a"
         },
         "codebook.csv": {
           "bytes": 118976,
@@ -168,11 +168,11 @@
         },
         "arab-barometer-w04-tunisia.dta": {
           "bytes": 9438155,
-          "sha256": "9e1ce685bc8f94a4b4f3adea000cd589c452272c06b311ca63782f335cc0353c"
+          "sha256": "273553d0f5d5fb00723c0ef058117ee8b1a7c258d9e05edc697dcc110255f141"
         },
         "arab-barometer-w04-tunisia.sav": {
           "bytes": 10323620,
-          "sha256": "ca01bdf2e8f95b2f13a6c8adc0920dacd8ecb251f204f766d9386c24fe2727b6"
+          "sha256": "37fb8a4bac068da12a31723f534a0ca58a3b054349a9f702a013937c5e0f8135"
         },
         "codebook.csv": {
           "bytes": 47317,
@@ -229,11 +229,11 @@
         },
         "arab-barometer-w05-tunisia.dta": {
           "bytes": 7218008,
-          "sha256": "4272b5cf044c0589f80efd851a75e365f8a6e54a4bf660e87a20b6a597dbf259"
+          "sha256": "6842073da20105aa36364f60ed59480d6a6badc35f817c6e3a94d3cd93b88b85"
         },
         "arab-barometer-w05-tunisia.sav": {
           "bytes": 7004891,
-          "sha256": "31e4a06eb47733e448d5218beee5dbb9ec9956131a62c015a2958e2251ceba67"
+          "sha256": "6c8bff7dd914770cb1a410fe8ec9d3498f32b02d29f04f808e004297e1d92ea8"
         },
         "codebook.csv": {
           "bytes": 103852,
@@ -290,11 +290,11 @@
         },
         "arab-barometer-w06p1-tunisia.dta": {
           "bytes": 852365,
-          "sha256": "7ea8bf031b250ac4800f0c960cf6151536a73cbe04f8a37bb7fbbaa353532a4a"
+          "sha256": "dd46442b17c1edd614b1ac6034c699166d33e3d9d3321d0553a477e2ac8db8b9"
         },
         "arab-barometer-w06p1-tunisia.sav": {
           "bytes": 819264,
-          "sha256": "441c9e843d8b5746cbd1e3cbbe89e86b39a9cd04953260038779cbbd075b16cc"
+          "sha256": "d28749a6d7300487848b6c990726cac88415c430db91cdcf3be3134bb4ac60a4"
         },
         "codebook.csv": {
           "bytes": 28283,
@@ -351,11 +351,11 @@
         },
         "arab-barometer-w06p2-tunisia.dta": {
           "bytes": 739920,
-          "sha256": "34dfe03fba4ae2dde6ae2f2cdef52ca957bb1ef0f3d716b9222415ad9a8de8a2"
+          "sha256": "5aa668e8b61a5327d51612b2ec68e58ef4043000245b451b0d4258a6b59b827e"
         },
         "arab-barometer-w06p2-tunisia.sav": {
           "bytes": 688268,
-          "sha256": "274177afa9c905a1bcfc9f1bd969808cda7d8d1ad0c37dfea4f47b9e5a59a01f"
+          "sha256": "e73724921fe4bcd5b3a91fb4fa4bd86b16716cbae36baaa4fbae07002f3265fb"
         },
         "codebook.csv": {
           "bytes": 28643,
@@ -412,11 +412,11 @@
         },
         "arab-barometer-w06p3-tunisia.dta": {
           "bytes": 1115483,
-          "sha256": "86fa59708773abd293d4133e9452f90e77edefe70748d4dd6796e40bd8313f2c"
+          "sha256": "98ba5f7eae1b139b8ea1d58d4e54ea5b1d4c61eecfa1f3d3fd1f2d3d8e7f0283"
         },
         "arab-barometer-w06p3-tunisia.sav": {
           "bytes": 1056916,
-          "sha256": "680e25231af6984ee6a64b45cb0695f8c223730925b77848ccad4be0ee7a07b0"
+          "sha256": "cefd66190f01147761d40d95bbede30985a4e56286475cfd721c785c2c11cfda"
         },
         "codebook.csv": {
           "bytes": 36266,
@@ -473,11 +473,11 @@
         },
         "arab-barometer-w07-tunisia.dta": {
           "bytes": 9143792,
-          "sha256": "8eeb67b8aee7bb24978bd71ba57f5fb25e5aead4f4ea0312677c4f3e542e13d0"
+          "sha256": "f07a126638f8b53081f10a6a84bcaf2fae4ef423290d15c7a61d36a975015b30"
         },
         "arab-barometer-w07-tunisia.sav": {
           "bytes": 8880088,
-          "sha256": "ea7af1613110aac73a46cd2ffb9f568d459a46897e70e04a10936c45f3310331"
+          "sha256": "e290268aaed20a2847fbae21cd661a84c7ceb8903f964b1feea13101470a7120"
         },
         "codebook.csv": {
           "bytes": 151161,
@@ -534,11 +534,11 @@
         },
         "arab-barometer-w08-tunisia.dta": {
           "bytes": 13898528,
-          "sha256": "26ff6273649ef3dbd3e32373d84467000979909a019ef3cad274504a8f4c378f"
+          "sha256": "32fc6f0093e2a726a666bedddf644845e056118c67405ec9ff9b421f3ca52512"
         },
         "arab-barometer-w08-tunisia.sav": {
           "bytes": 13477184,
-          "sha256": "22e4495377971c43ec3cf96a9c1ac50e57a707552c69929ebc174d0a9eb3bc48"
+          "sha256": "0d8aea3a2669cf14da3d4d87b8788c014b43ff3b8be8ebad45b415bc2aa4c18c"
         },
         "codebook.csv": {
           "bytes": 152158,
@@ -599,11 +599,11 @@
         },
         "world-values-survey-w06-tunisia.dta": {
           "bytes": 3804155,
-          "sha256": "78d6085a2a1be4f32b8f5e81041dff97633bf039bd891b457dea209950cc83c8"
+          "sha256": "38c309d787369e0da8c52c939282954a477049e0f273da2aa1ad78f5cbfba72a"
         },
         "world-values-survey-w06-tunisia.sav": {
           "bytes": 3606836,
-          "sha256": "e831ecfe6adc20b414a22ee88b5209de43af6edaa9f9507affb364d29f4f70e3"
+          "sha256": "515007824c46a0f7345431400e71060a7afc57969d1ef15522de31f40cb07a99"
         }
       },
       "notes": "Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7."
@@ -656,11 +656,11 @@
         },
         "world-values-survey-w07-tunisia.dta": {
           "bytes": 4103323,
-          "sha256": "0f6c4c7ef61cbf3139b76217be237ec4644da13d0dc3b0fb65c5ecafd53dec73"
+          "sha256": "29ce956d69bf7e3b739be78c3f2b317500ac002a1ddf84a55313d342362acee7"
         },
         "world-values-survey-w07-tunisia.sav": {
           "bytes": 3917478,
-          "sha256": "d4c6114383da299215470376ce3e7ee32414b846d87549dec69637964c1d9a7a"
+          "sha256": "b795ecc530e1da7cff23c484dcb954b11c35d59d3af5cc3e2441eaf42912670a"
         }
       },
       "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release."
@@ -752,11 +752,11 @@
         },
         "afrobarometer-w06-tunisia.dta": {
           "bytes": 4390952,
-          "sha256": "aa09d60dfe6b53f4f48c7af928ff76b809e99e1e85172c8f4e8a4014e4b674a5"
+          "sha256": "8cdcb4daf304482638ab41e1410da2d4cbec22e8fba65f7840033bb5c715b1b6"
         },
         "afrobarometer-w06-tunisia.sav": {
           "bytes": 4285065,
-          "sha256": "ae7013b0a02587131033a915680b6f77c134780bccdbea5caef38cd71fa55bec"
+          "sha256": "33eabe1cb1773e149c31c762700bdfd6ca7b5a8b1162da97fd9bee6305b8ed19"
         },
         "codebook.csv": {
           "bytes": 102354,
@@ -850,11 +850,11 @@
         },
         "afrobarometer-w07-tunisia.dta": {
           "bytes": 4002133,
-          "sha256": "04f7e86c9ea7f4ad38ae27a079e3276c45f687d4db9d84d6b2449fd95e7568cb"
+          "sha256": "8574dfb84f879c318b0f7714788b2c16eb96e501cf5004634e19e342778c0f2d"
         },
         "afrobarometer-w07-tunisia.sav": {
           "bytes": 3842095,
-          "sha256": "7a8a433c812774a7f5c3d726a90e7ecbfe2400666a24f52d9555d1be5a157f46"
+          "sha256": "4fb44fb7184495efcc08552755820187160785f8c7e9e31f977d1455a9f9d4d8"
         },
         "codebook.csv": {
           "bytes": 91990,
@@ -945,11 +945,11 @@
         },
         "afrobarometer-w08-tunisia.dta": {
           "bytes": 4213695,
-          "sha256": "8ee563a604cd98248768dd81ea0da49c0885f8271fe5f2fcb80664c083c8b32d"
+          "sha256": "3a907704894fb37d6ce710cffd6332852d08fd5b99640d0e64ea9ac30ab2ef66"
         },
         "afrobarometer-w08-tunisia.sav": {
           "bytes": 4025427,
-          "sha256": "5ec51f11419b5f81cccef4883d4b32cdaa4afea8bea1b4601045063188a6eddc"
+          "sha256": "f52d0d49fd55ba095541cf44ad3ad087d5e596b0ba3dbb844f847da5cf5bc75b"
         },
         "codebook.csv": {
           "bytes": 109954,
@@ -1008,11 +1008,11 @@
         },
         "afrobarometer-w09-tunisia.dta": {
           "bytes": 4354464,
-          "sha256": "2683cf59b43f846ae27e56cc06cbc1ce0abbacbc395918531495076c2b2bd69a"
+          "sha256": "ac90efe24b6240960d5c11af5be6a6674de5a9596bf1a407cb0e0bad04252045"
         },
         "afrobarometer-w09-tunisia.sav": {
           "bytes": 4234646,
-          "sha256": "1e628e547c4b4bc3a6269bf491831e756d096b69308b4147b812aaaebd53efa5"
+          "sha256": "4d9f84326b47aefb68af0a9445f64d86ba4d6c80bbb29db3c7d473ad6c387b3d"
         },
         "codebook.csv": {
           "bytes": 125100,
@@ -1102,11 +1102,11 @@
         },
         "afrobarometer-w10-tunisia.dta": {
           "bytes": 4183902,
-          "sha256": "a953a9170729236b48c7e67bacc41094d255b4fcf25ee8d511d848198679a583"
+          "sha256": "aa370cf40a7dda0f2dd28cbf6dd3509e360fc46ad45cd759ac744a7bd7b5e10b"
         },
         "afrobarometer-w10-tunisia.sav": {
           "bytes": 4086484,
-          "sha256": "f88b03d2f14475c5c893b1d8e50a3fa11469fc006e1d70ad19c87d90ef2929f5"
+          "sha256": "ebf1ba7c89c72dc8d6aaf8de6121a6df99fa2f03e97ea7cc1a36d9eced16eab3"
         },
         "codebook.csv": {
           "bytes": 111624,
@@ -1118,6 +1118,763 @@
         }
       },
       "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English."
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2011",
+      "wave": 2011,
+      "part": null,
+      "wave_label": "2011",
+      "tag": "2011",
+      "slug": "2011",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1229,
+      "n_variables": 196,
+      "n_variables_with_data": 148,
+      "n_respondents_pooled_release": 14605,
+      "n_countries_pooled_release": 11,
+      "is_country_file": false,
+      "fieldwork_years_series": "2011",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2011.sav",
+      "source_sha256": "de2327d378deab51980df14fe53a6608c44c25caed3c3219bec5cc0dcf0a300d",
+      "csv_answers_read_as_missing": {
+        "Q101_8": [
+          "N/A"
+        ]
+      },
+      "path": "data/arab-opinion-index/2011",
+      "files": {
+        "arab-opinion-index-2011-tunisia-codes.csv": {
+          "bytes": 800910,
+          "sha256": "af0be985ff37434f3ef6ceff6b6fa2f392d11e03a4ef50a31251addefc81c116"
+        },
+        "arab-opinion-index-2011-tunisia-labels.csv": {
+          "bytes": 3505945,
+          "sha256": "e4ca349bba4f95051b2f89fbe170563afa843dad177553e2917b6f95598b9bc7"
+        },
+        "arab-opinion-index-2011-tunisia.dta": {
+          "bytes": 2121533,
+          "sha256": "1ecefc040843219bae11effa908bce08c436c16369f4f213ff0257f122292586"
+        },
+        "arab-opinion-index-2011-tunisia.sav": {
+          "bytes": 2006509,
+          "sha256": "7ce7ba1f96f64b5a16cc94ce5ce05ecbf4c8a4f4ebcab50a388f5ae2c51a11ad"
+        },
+        "codebook.csv": {
+          "bytes": 73127,
+          "sha256": "f52f80ce17b85ec96299b2694eb258d4b0c13931c1926836d5dfe41e0b8d5bbb"
+        },
+        "codebook.json": {
+          "bytes": 118580,
+          "sha256": "057966bf6d7a65b1f0528aaae372f64c6e19125eb093f07cb87046681b5caf5a"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2012-2013",
+      "wave": 2012,
+      "part": null,
+      "wave_label": "2012/2013",
+      "tag": "2012-2013",
+      "slug": "2012-2013",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1500,
+      "n_variables": 546,
+      "n_variables_with_data": 329,
+      "n_respondents_pooled_release": 19421,
+      "n_countries_pooled_release": 14,
+      "is_country_file": false,
+      "fieldwork_years_series": "2012-2013",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2012-2013.sav",
+      "source_sha256": "7e3d3656bf05a80c4ee0ab5676176ba8cc10c6551aedd07e899c9a288e638473",
+      "csv_answers_read_as_missing": {},
+      "path": "data/arab-opinion-index/2012-2013",
+      "files": {
+        "arab-opinion-index-2012-2013-tunisia-codes.csv": {
+          "bytes": 2224458,
+          "sha256": "56e0f9c7690a48bb278833e7f629e1d9dca911628499528552e23a0e0ec240b3"
+        },
+        "arab-opinion-index-2012-2013-tunisia-labels.csv": {
+          "bytes": 9225004,
+          "sha256": "fb3a78d39dd2c2340658d0856e83af0d4b08f5633687d86b676e4225ac42000a"
+        },
+        "arab-opinion-index-2012-2013-tunisia.dta": {
+          "bytes": 7092805,
+          "sha256": "bf4f0e17f522a778c8007264da013abb8c62b93cf3e1bb81139c39d35e1ebcbf"
+        },
+        "arab-opinion-index-2012-2013-tunisia.sav": {
+          "bytes": 6780509,
+          "sha256": "d8866abef3f91bf10eab683828af499e36a762dc1194d669bbd8728ab40805d5"
+        },
+        "codebook.csv": {
+          "bytes": 209582,
+          "sha256": "d758957590313ccc798799ad9758978cfc05ba2c5636b041a00176512c94b5dd"
+        },
+        "codebook.json": {
+          "bytes": 336715,
+          "sha256": "1eff1dd42b98bdbf73a32b63c4997c18165e493a2ca442fbf5cf2541aad93613"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2014",
+      "wave": 2014,
+      "part": null,
+      "wave_label": "2014",
+      "tag": "2014",
+      "slug": "2014",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1498,
+      "n_variables": 555,
+      "n_variables_with_data": 424,
+      "n_respondents_pooled_release": 26466,
+      "n_countries_pooled_release": 15,
+      "is_country_file": false,
+      "fieldwork_years_series": "2014",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2014.sav",
+      "source_sha256": "f1ef0b1f18ea7eeb99fe990a6d8cd082bf55e46e628b3f23456c838d0dfedc8b",
+      "csv_answers_read_as_missing": {},
+      "path": "data/arab-opinion-index/2014",
+      "files": {
+        "arab-opinion-index-2014-tunisia-codes.csv": {
+          "bytes": 2688224,
+          "sha256": "5ac3a27c0280b2466aa6c713f8e5854ebe33c83890db1b92bd3cfcfb84d16968"
+        },
+        "arab-opinion-index-2014-tunisia-labels.csv": {
+          "bytes": 11013933,
+          "sha256": "ef897751e4d61276368f7d7f335c4e890e8f8ec6fed846dc3bb8f87e5abba9b3"
+        },
+        "arab-opinion-index-2014-tunisia.dta": {
+          "bytes": 7218170,
+          "sha256": "670ffa31c978925b436c6f758cf02d84d1b758d8be5edf8d8a8ec6c223c3ebe3"
+        },
+        "arab-opinion-index-2014-tunisia.sav": {
+          "bytes": 6900336,
+          "sha256": "c76de2f2e307fe84fb1848fd5732fc9fdabaa9f9ed15738da83e1c5f4dfb68d9"
+        },
+        "codebook.csv": {
+          "bytes": 230976,
+          "sha256": "ceb1596e4c820fa3a4d379e8b6cb96512d15568d0918a8a0246bfec2db51b831"
+        },
+        "codebook.json": {
+          "bytes": 359869,
+          "sha256": "8fbbb1bfdb897f18ab757058499bdcf46eb92ea61aa98574bcd936395c1b45a0"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2015",
+      "wave": 2015,
+      "part": null,
+      "wave_label": "2015",
+      "tag": "2015",
+      "slug": "2015",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1497,
+      "n_variables": 441,
+      "n_variables_with_data": 358,
+      "n_respondents_pooled_release": 18311,
+      "n_countries_pooled_release": 12,
+      "is_country_file": false,
+      "fieldwork_years_series": "2015",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2015.sav",
+      "source_sha256": "7847d562655cf7b4dff8f7a7c3fbac69a517b5e643810596ae1357152a71dedb",
+      "csv_answers_read_as_missing": {},
+      "path": "data/arab-opinion-index/2015",
+      "files": {
+        "arab-opinion-index-2015-tunisia-codes.csv": {
+          "bytes": 2196362,
+          "sha256": "aa706b0a3f481087bef04e660e948e09a3b75fd12f51470554d1aa0a29924803"
+        },
+        "arab-opinion-index-2015-tunisia-labels.csv": {
+          "bytes": 9494149,
+          "sha256": "877f46b24dfe4af2f70195579f3e6117fab631bd1f8785314b4a750acbd81840"
+        },
+        "arab-opinion-index-2015-tunisia.dta": {
+          "bytes": 5730283,
+          "sha256": "defdd0807d60a0b82874598a49c1270a4b1e41a67f6df1c7cafd3b390044603d"
+        },
+        "arab-opinion-index-2015-tunisia.sav": {
+          "bytes": 5474139,
+          "sha256": "9fd86bc664b98aeaa40aa372d0789123c2bf5e76036609dee66bb8496999d178"
+        },
+        "codebook.csv": {
+          "bytes": 178605,
+          "sha256": "e034f2f8c7d9bdf3b1bc79faef6916697cd544a8896262d8b736ee5d52eee93a"
+        },
+        "codebook.json": {
+          "bytes": 280976,
+          "sha256": "d0069c51c793c9d6f66f7cbcd1066542d98f4d7c5565a770280b8c0347428fca"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2016",
+      "wave": 2016,
+      "part": null,
+      "wave_label": "2016",
+      "tag": "2016",
+      "slug": "2016",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1499,
+      "n_variables": 479,
+      "n_variables_with_data": 412,
+      "n_respondents_pooled_release": 18311,
+      "n_countries_pooled_release": 12,
+      "is_country_file": false,
+      "fieldwork_years_series": "2016",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2016.sav",
+      "source_sha256": "12e4e0976c83207281f15d289a61df311be5f9ad7fd711d5e7438fd6ffc776f3",
+      "csv_answers_read_as_missing": {},
+      "path": "data/arab-opinion-index/2016",
+      "files": {
+        "arab-opinion-index-2016-tunisia-codes.csv": {
+          "bytes": 2331329,
+          "sha256": "7c2885385c69d86f9b0496d58f6b02e2d1406e8d5b681525235b620d328ab1b5"
+        },
+        "arab-opinion-index-2016-tunisia-labels.csv": {
+          "bytes": 10243716,
+          "sha256": "1beb382fd7bd2f4d0ac642330343771243c31a05193e3673c2ca00ab512d8c50"
+        },
+        "arab-opinion-index-2016-tunisia.dta": {
+          "bytes": 6224618,
+          "sha256": "406a1da4e13458127f49d35d55277767c9ce72a52939f3af3fd60161478ebe4d"
+        },
+        "arab-opinion-index-2016-tunisia.sav": {
+          "bytes": 5944393,
+          "sha256": "5720b2a3be21f00d35539534fd156931e496b4cfc54f770bcd391cba4a1534f2"
+        },
+        "codebook.csv": {
+          "bytes": 184648,
+          "sha256": "cf0d374760e03ae1d4ee1f2d4078380d1165dc73b89d1c997072cee333aa64cf"
+        },
+        "codebook.json": {
+          "bytes": 295697,
+          "sha256": "8feec704af856ad2029f3871c18515a21343ed359fca302b6bed3bec96f4d331"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2017-2018",
+      "wave": 2017,
+      "part": null,
+      "wave_label": "2017/2018",
+      "tag": "2017-2018",
+      "slug": "2017-2018",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1500,
+      "n_variables": 372,
+      "n_variables_with_data": 306,
+      "n_respondents_pooled_release": 18830,
+      "n_countries_pooled_release": 11,
+      "is_country_file": false,
+      "fieldwork_years_series": "2017-2018",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2017-2018.sav",
+      "source_sha256": "b6aca2f9782730cbd56f55900b6679fb9a5712be97d71d21da05434f927d19dc",
+      "csv_answers_read_as_missing": {},
+      "path": "data/arab-opinion-index/2017-2018",
+      "files": {
+        "arab-opinion-index-2017-2018-tunisia-codes.csv": {
+          "bytes": 1845858,
+          "sha256": "f902fb516c1abf821e0e526daa434c13f2017859099c607fab6ebe5da8448f8d"
+        },
+        "arab-opinion-index-2017-2018-tunisia-labels.csv": {
+          "bytes": 7975806,
+          "sha256": "6488732382d69aa15fa6b39d1ea71555d675dc97c0b085ff350939f84332ea37"
+        },
+        "arab-opinion-index-2017-2018-tunisia.dta": {
+          "bytes": 4841133,
+          "sha256": "5cc9a1a0ff40a560ddd064c138b5e0b111c53f2fdc12efe970ee8628f2a58602"
+        },
+        "arab-opinion-index-2017-2018-tunisia.sav": {
+          "bytes": 4622739,
+          "sha256": "01227ce6b369eeae9690882089dd83f41e9f3f75910abad89f5144cb3a28d559"
+        },
+        "codebook.csv": {
+          "bytes": 146932,
+          "sha256": "6fda3e8592a83a3cfa99f2666158fc4d0deef87a6554cd163c5f293f6ad5300a"
+        },
+        "codebook.json": {
+          "bytes": 233235,
+          "sha256": "70d9fc550708b5d07ac239620810238bddc61ee474d40ddfa2ec29aac83571c3"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2019-2020",
+      "wave": 2019,
+      "part": null,
+      "wave_label": "2019/2020",
+      "tag": "2019-2020",
+      "slug": "2019-2020",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {
+        "q2020.1": "q2020_1",
+        "q2020.WHAT": "q2020_WHAT",
+        "q2020.2": "q2020_2",
+        "q2020.WHERE": "q2020_WHERE",
+        "q2020.3": "q2020_3",
+        "q2020.4": "q2020_4",
+        "q2020.5": "q2020_5",
+        "QIR2020.1_1": "QIR2020_1_1",
+        "QIR2020.1_2": "QIR2020_1_2",
+        "QIR2020.1_3": "QIR2020_1_3",
+        "QIR2020.1_4": "QIR2020_1_4",
+        "QIR2020.1_5": "QIR2020_1_5",
+        "QIR2020.1_6": "QIR2020_1_6",
+        "QLE2020.1_1": "QLE2020_1_1",
+        "QLE2020.1_2": "QLE2020_1_2",
+        "QLE2020.1_3": "QLE2020_1_3",
+        "QLE2020.1_4": "QLE2020_1_4",
+        "QLE2020.1_5": "QLE2020_1_5",
+        "QLE2020.1_6": "QLE2020_1_6",
+        "QLE2020.1_7": "QLE2020_1_7",
+        "QLE2020.1_8": "QLE2020_1_8",
+        "QLE2020.1_9": "QLE2020_1_9",
+        "QLE2020.1_10": "QLE2020_1_10",
+        "QLE2020.1_11": "QLE2020_1_11",
+        "QLE2020.1_12": "QLE2020_1_12",
+        "QLE2020.1_13": "QLE2020_1_13",
+        "QLE2020.1_14": "QLE2020_1_14",
+        "QLE2020.1_15": "QLE2020_1_15",
+        "Q2020.6": "Q2020_6",
+        "Q2020.10_1": "Q2020_10_1",
+        "Q2020.10_2": "Q2020_10_2",
+        "Q2020.10_3": "Q2020_10_3",
+        "Q2020.7_1": "Q2020_7_1",
+        "Q2020.7_2": "Q2020_7_2",
+        "Q2020.8": "Q2020_8",
+        "Q2020.9": "Q2020_9",
+        "Q2020.11_1": "Q2020_11_1",
+        "Q2020.11_2": "Q2020_11_2",
+        "Q2020.12": "Q2020_12",
+        "V2020.12": "V2020_12",
+        "Q2020.13": "Q2020_13",
+        "V2020.13": "V2020_13",
+        "Q2020.14": "Q2020_14",
+        "Q2020.15": "Q2020_15",
+        "qALG2020.1": "qALG2020_1",
+        "qALG2020.2": "qALG2020_2",
+        "qALG2020.3": "qALG2020_3",
+        "qALG2020.4": "qALG2020_4",
+        "q2020.16": "q2020_16",
+        "SUD2020.1": "SUD2020_1",
+        "SUD2020.2": "SUD2020_2",
+        "SUD2020.3": "SUD2020_3",
+        "q2020.18.1": "q2020_18_1",
+        "q2020.18.2": "q2020_18_2",
+        "q2020.18.3": "q2020_18_3",
+        "Q2020.17": "Q2020_17",
+        "Q2020.56_1": "Q2020_56_1",
+        "Q2020.56_2": "Q2020_56_2",
+        "Q2020.56_3": "Q2020_56_3",
+        "Q2020.56_4": "Q2020_56_4",
+        "Q2020.56_5": "Q2020_56_5",
+        "Q2020.56_6": "Q2020_56_6",
+        "Q2020.57_1": "Q2020_57_1",
+        "Q2020.57_2": "Q2020_57_2",
+        "Q2020.58_1": "Q2020_58_1",
+        "Q2020.58_2": "Q2020_58_2",
+        "Q2020.58_3": "Q2020_58_3",
+        "Q2020.58_4": "Q2020_58_4",
+        "Q2020.59_1": "Q2020_59_1",
+        "Q2020.59_2": "Q2020_59_2",
+        "Q2020.60": "Q2020_60",
+        "Q2020.61": "Q2020_61",
+        "QQ2020.62_1": "QQ2020_62_1",
+        "Q2020.62_2": "Q2020_62_2",
+        "q2020.64": "q2020_64",
+        "q2020.65": "q2020_65",
+        "q2020.66_1": "q2020_66_1",
+        "q2020.66_2": "q2020_66_2",
+        "q2020.67_1": "q2020_67_1",
+        "q2020.67_2": "q2020_67_2",
+        "q2020.68": "q2020_68",
+        "q2020.69": "q2020_69",
+        "q2020.70": "q2020_70",
+        "Q2020.19": "Q2020_19",
+        "Q2020.20": "Q2020_20",
+        "Q2020.21": "Q2020_21",
+        "Q2020.22": "Q2020_22",
+        "Q2020.23": "Q2020_23",
+        "Q2020.23_GOOD": "Q2020_23_GOOD",
+        "Q2020.23_BAD": "Q2020_23_BAD",
+        "Q2020.24": "Q2020_24",
+        "Q2020.25": "Q2020_25",
+        "V2020.25": "V2020_25",
+        "Q2020.26": "Q2020_26",
+        "V2020.26": "V2020_26",
+        "Q2020.28": "Q2020_28",
+        "Q2020.29": "Q2020_29",
+        "Q2020.30_DATE_1": "Q2020_30_DATE_1",
+        "Q2020.30_DATE_2": "Q2020_30_DATE_2",
+        "Q2020.30_DATE_3": "Q2020_30_DATE_3",
+        "Q2020.30_WHERE_1": "Q2020_30_WHERE_1",
+        "Q2020.30_WHERE_2": "Q2020_30_WHERE_2",
+        "Q2020.30_WHERE_3": "Q2020_30_WHERE_3",
+        "Q2020.30_GOV_1": "Q2020_30_GOV_1",
+        "Q2020.30_GOV_2": "Q2020_30_GOV_2",
+        "Q2020.30_GOV_3": "Q2020_30_GOV_3",
+        "Q2020.30_NAME_1": "Q2020_30_NAME_1",
+        "Q2020.30_NAME_2": "Q2020_30_NAME_2",
+        "Q2020.30_NAME_3": "Q2020_30_NAME_3",
+        "Q2020.31_1": "Q2020_31_1",
+        "Q2020.31_2": "Q2020_31_2",
+        "Q2020.31_3": "Q2020_31_3",
+        "Q2020.31_4": "Q2020_31_4",
+        "Q2020.31_5": "Q2020_31_5",
+        "Q2020.31_6": "Q2020_31_6",
+        "Q2020.31_7": "Q2020_31_7",
+        "Q2020.31_8": "Q2020_31_8",
+        "Q2020.31_9": "Q2020_31_9",
+        "Q2020.31_10": "Q2020_31_10",
+        "Q2020.31_11": "Q2020_31_11",
+        "Q2020.31_12": "Q2020_31_12",
+        "Q2020.32": "Q2020_32",
+        "Q2020.33_1": "Q2020_33_1",
+        "Q2020.33_2": "Q2020_33_2",
+        "Q2020.33_3": "Q2020_33_3",
+        "Q2020.33_4": "Q2020_33_4",
+        "Q2020.33_5": "Q2020_33_5",
+        "Q2020.33_6": "Q2020_33_6",
+        "Q2020.33_7": "Q2020_33_7",
+        "Q2020.33_8": "Q2020_33_8",
+        "Q2020.34_1": "Q2020_34_1",
+        "Q2020.34_2": "Q2020_34_2",
+        "Q2020.35_1": "Q2020_35_1",
+        "Q2020.35_2": "Q2020_35_2",
+        "Q2020.36_1": "Q2020_36_1",
+        "Q2020.36_2": "Q2020_36_2",
+        "Q2020.36_3": "Q2020_36_3",
+        "Q2020.36_4": "Q2020_36_4",
+        "Q2020.36_5": "Q2020_36_5",
+        "Q2020.36_6": "Q2020_36_6",
+        "Q2020.36_7": "Q2020_36_7",
+        "Q2020.37": "Q2020_37",
+        "v2020.37": "v2020_37",
+        "q2020.38": "q2020_38",
+        "v2020.38": "v2020_38",
+        "q2020.39_1": "q2020_39_1",
+        "q2020.39_2": "q2020_39_2",
+        "q2020.40_1": "q2020_40_1",
+        "q2020.40_2": "q2020_40_2",
+        "q2020.41_1": "q2020_41_1",
+        "q2020.41_2": "q2020_41_2",
+        "q2020.42_1": "q2020_42_1",
+        "q2020.42_2": "q2020_42_2",
+        "q2020.43": "q2020_43",
+        "q2020.44": "q2020_44",
+        "q2020.45_1": "q2020_45_1",
+        "q2020.45_2": "q2020_45_2",
+        "q2020.46": "q2020_46",
+        "q2020.47": "q2020_47",
+        "q2020.48": "q2020_48",
+        "q2020.49": "q2020_49",
+        "q2020.50": "q2020_50",
+        "q2020.51_1": "q2020_51_1",
+        "q2020.51_2": "q2020_51_2",
+        "q2020.51_3": "q2020_51_3",
+        "q2020.51_4": "q2020_51_4",
+        "q2020.51_5": "q2020_51_5",
+        "q2020.51_6": "q2020_51_6",
+        "q2020.51_7": "q2020_51_7",
+        "q2020.51_8": "q2020_51_8",
+        "q2020.52": "q2020_52",
+        "q2020.53": "q2020_53",
+        "v2020.53": "v2020_53",
+        "v2020.54_1": "v2020_54_1",
+        "v2020.54_2": "v2020_54_2",
+        "v2020.54_3": "v2020_54_3",
+        "v2020.54_4": "v2020_54_4",
+        "v2020.55": "v2020_55",
+        "Q2020.71_1": "Q2020_71_1",
+        "Q2020.71_2": "Q2020_71_2",
+        "Q2020.71_3": "Q2020_71_3",
+        "Q2020.71_4": "Q2020_71_4",
+        "Q2020.71_5": "Q2020_71_5",
+        "Q2020.71_6": "Q2020_71_6",
+        "Q2020.71_7": "Q2020_71_7",
+        "Q2020.71_8": "Q2020_71_8",
+        "Q2020.71_9": "Q2020_71_9",
+        "Q2020.71_10": "Q2020_71_10",
+        "q2020.63": "q2020_63",
+        "q2020.63_yes": "q2020_63_yes",
+        "q2020.63_No": "q2020_63_No",
+        "q2020.72": "q2020_72",
+        "q2020.73_1": "q2020_73_1",
+        "q2020.73_2": "q2020_73_2",
+        "q2020.73_3": "q2020_73_3",
+        "q2020.73_4": "q2020_73_4"
+      },
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 2400,
+      "n_variables": 509,
+      "n_variables_with_data": 335,
+      "n_respondents_pooled_release": 27994,
+      "n_countries_pooled_release": 13,
+      "is_country_file": false,
+      "fieldwork_years_series": "2019-2020",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2019-2020.sav",
+      "source_sha256": "ca06a2c847aaaccdbac7ad26fcc364afec5e641c9e1b01b54fad6bf1b5c6f456",
+      "csv_answers_read_as_missing": {},
+      "path": "data/arab-opinion-index/2019-2020",
+      "files": {
+        "arab-opinion-index-2019-2020-tunisia-codes.csv": {
+          "bytes": 3074196,
+          "sha256": "8907d17e7c8351f9fb3d31f5bcd57df615a870d46a704a56e0f7b82ab713240d"
+        },
+        "arab-opinion-index-2019-2020-tunisia-labels.csv": {
+          "bytes": 12224422,
+          "sha256": "4964e8fcb7dd6e82f4fa3adacfbfdb496a5ac334960e37f325c028c2efc7faf5"
+        },
+        "arab-opinion-index-2019-2020-tunisia.dta": {
+          "bytes": 12413129,
+          "sha256": "26dbcb7e11aec46031c10faeed71d6dfb6cb9971b755350ac4dbf2f3fc1b7a6a"
+        },
+        "arab-opinion-index-2019-2020-tunisia.sav": {
+          "bytes": 12274188,
+          "sha256": "004cccc9707296d046b0fa0174da5061f5d3997ccae90eec54870bd8abf6eb2a"
+        },
+        "codebook.csv": {
+          "bytes": 2241066,
+          "sha256": "34f0e9576019532a3625fb374240efc8cebdb15813a5cd7cf237e4f8d0c59752"
+        },
+        "codebook.json": {
+          "bytes": 2359513,
+          "sha256": "c9adc17484003dce49a42b4e9cf774ad6417645cfb771dfefee38545542e3094"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2022",
+      "wave": 2022,
+      "part": null,
+      "wave_label": "2022",
+      "tag": "2022",
+      "slug": "2022",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 2400,
+      "n_variables": 651,
+      "n_variables_with_data": 546,
+      "n_respondents_pooled_release": 33690,
+      "n_countries_pooled_release": 14,
+      "is_country_file": false,
+      "fieldwork_years_series": "2022",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2022.sav",
+      "source_sha256": "fad1080c4e392f69cce1078b7acd41c44ed3047be458cbac4633b0f025971222",
+      "csv_answers_read_as_missing": {},
+      "path": "data/arab-opinion-index/2022",
+      "files": {
+        "arab-opinion-index-2022-tunisia-codes.csv": {
+          "bytes": 3375432,
+          "sha256": "9dad143a481ec6fa03cb5475c1f2fe3c5a9a78d6a9f01bd20dcddf346c193f82"
+        },
+        "arab-opinion-index-2022-tunisia-labels.csv": {
+          "bytes": 14237070,
+          "sha256": "dac411f5327313fcee66a8fd9f64fd59a44e55839acc57d618d94845864d5a0b"
+        },
+        "arab-opinion-index-2022-tunisia.dta": {
+          "bytes": 15357588,
+          "sha256": "b41421c76585620ee9fbd4f6f2abbd1099cd4e8178a3dd801670b3f5f5a79b66"
+        },
+        "arab-opinion-index-2022-tunisia.sav": {
+          "bytes": 15116791,
+          "sha256": "60b94355607f76437e29f3c461be07df44ba0c392fb9e1eebd7992801836aecb"
+        },
+        "codebook.csv": {
+          "bytes": 2087527,
+          "sha256": "bcc42fdaed286e3c57ccb644d22017feacda69cd3b76b6b5626c2054cb6852f0"
+        },
+        "codebook.json": {
+          "bytes": 2238629,
+          "sha256": "591fd0198d4dada5edd050c8429c817bb30c0edd7d67a3e1533c502898b75cba"
+        }
+      },
+      "notes": ""
+    },
+    {
+      "series": "arab-opinion-index",
+      "series_name": "Arab Opinion Index",
+      "series_prefix": "aoi",
+      "key": "aoi-2024-2025",
+      "wave": 2024,
+      "part": null,
+      "wave_label": "2024/2025",
+      "tag": "2024-2025",
+      "slug": "2024-2025",
+      "country": "Tunisia",
+      "country_value": 2,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 3245,
+      "n_variables": 1251,
+      "n_variables_with_data": 616,
+      "n_respondents_pooled_release": 40130,
+      "n_countries_pooled_release": 15,
+      "is_country_file": false,
+      "fieldwork_years_series": "2024-2025",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "aoi-2024-2025.sav",
+      "source_sha256": "8ebdc69259fbafce8bc845edc56ce30d77ed3889609c66b3c7cf2316052b6b1f",
+      "csv_answers_read_as_missing": {
+        "q2025_43_1": [
+          "None"
+        ],
+        "q2025_44_1": [
+          "None"
+        ]
+      },
+      "path": "data/arab-opinion-index/2024-2025",
+      "files": {
+        "arab-opinion-index-2024-2025-tunisia-codes.csv": {
+          "bytes": 5234977,
+          "sha256": "8b66cb6a5be5258eeef3d183863265bbb48dae58a069b1ff627fb6b963676d05"
+        },
+        "arab-opinion-index-2024-2025-tunisia-labels.csv": {
+          "bytes": 9691680,
+          "sha256": "d087d5b5eb82456cacfd85a08ae85522b9289223d04a989af807c3c7e13f7e9e"
+        },
+        "arab-opinion-index-2024-2025-tunisia.dta": {
+          "bytes": 36316408,
+          "sha256": "d3e1f3d7603389121c74203584b9fb8e71095fb0636ac7cbf2edddc996cb83f3"
+        },
+        "arab-opinion-index-2024-2025-tunisia.sav": {
+          "bytes": 36043689,
+          "sha256": "18adfa9e498763ca3dd1161d7554d0ab06c0ea473fe3252736737e1bdb16c755"
+        },
+        "codebook.csv": {
+          "bytes": 1376324,
+          "sha256": "147444df2794cb28744fae7f152d0d32c27a81d5dbd16c951ee2cf36cb8e35d9"
+        },
+        "codebook.json": {
+          "bytes": 1668518,
+          "sha256": "5db42dad7cb1afd7a99751505691272c2baef6c7118a9003e8164799ec3b8f3a"
+        }
+      },
+      "notes": ""
     }
   ]
 }
