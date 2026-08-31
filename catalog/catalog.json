@@ -9,7 +9,7 @@
       "wave_label": "Wave II",
       "slug": "wave-02",
       "country": "Tunisia",
-      "country_code": 21,
+      "country_value": 21,
       "n_respondents": 1196,
       "n_variables": 468,
       "n_variables_with_data": 303,
@@ -19,8 +19,12 @@
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
       "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_question_text": true,
       "source_file": "ABII_English.sav",
       "source_sha256": "6529841b97bd56463490d810ad24ceaa4866066d12e4651a7081682d413606a1",
+      "csv_answers_read_as_missing": {},
       "path": "data/arab-barometer/wave-02",
       "files": {
         "arab-barometer-w02-tunisia-codes.csv": {
@@ -33,22 +37,74 @@
         },
         "arab-barometer-w02-tunisia.dta": {
           "bytes": 4986072,
-          "sha256": "7039278db91950dd49401bf7409b9a66c90f1d890296a72550b3901d50b63d24"
+          "sha256": "9bf5b8948140eb51fe54327a700024559d00bdc23070fad655a29711b2ec3b08"
         },
         "arab-barometer-w02-tunisia.sav": {
           "bytes": 4732179,
-          "sha256": "fc886c9dfb13ae65e86e68ead1e514841eefb0a7cf674c6101b04e18bf5bc994"
+          "sha256": "487122f07d22318055ec5f78b47a417dd757049d7d55e7c4066cd08b528d4dc7"
         },
         "codebook.csv": {
-          "bytes": 241776,
-          "sha256": "205dfd561c7623f7e6c7e2e1c9b192d4ee6c924ac9a444027603178bc54b0743"
+          "bytes": 242260,
+          "sha256": "b019d258cd6ccba586cfa23ca70cf34127d675e687cc05cf8d914a7e9927b334"
         },
         "codebook.json": {
-          "bytes": 326696,
-          "sha256": "01e8706924a2addc5c6c88f06396a7eda94f77e21de81fdbb721fa8ebf4df546"
+          "bytes": 339332,
+          "sha256": "86f6d5f1a65d7699c74cd85a81946944ad51ff7cf9aa41d6e03986d61b3a9daf"
         }
       },
       "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes."
+    },
+    {
+      "series": "arab-barometer",
+      "series_name": "Arab Barometer",
+      "wave": 4,
+      "wave_label": "Wave IV",
+      "slug": "wave-04",
+      "country": "Tunisia",
+      "country_value": "Tunisia",
+      "n_respondents": 1200,
+      "n_variables": 290,
+      "n_variables_with_data": 248,
+      "n_respondents_pooled_release": 9000,
+      "n_countries_pooled_release": 7,
+      "fieldwork_years_series": "2016-2017",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "csv-labels",
+      "has_numeric_codes": false,
+      "has_question_text": false,
+      "source_file": "ABIV_English.csv",
+      "source_sha256": "523d2e052e204cc614987b519183059084bf391fc61148fa53e70b98080e64ae",
+      "csv_answers_read_as_missing": {
+        "q1019b": [
+          "None"
+        ]
+      },
+      "path": "data/arab-barometer/wave-04",
+      "files": {
+        "arab-barometer-w04-tunisia-labels.csv": {
+          "bytes": 4841704,
+          "sha256": "0fe815de59659e0f6f73e7ef7300cc147fa8da0c0c9973dcac1eed370bf9dd12"
+        },
+        "arab-barometer-w04-tunisia.dta": {
+          "bytes": 9438155,
+          "sha256": "10b31ee022492225d2f144523288dc13ea1fe1184d3116c1d37ec434fe4245b9"
+        },
+        "arab-barometer-w04-tunisia.sav": {
+          "bytes": 10323620,
+          "sha256": "17b5f559350b10eb27c27060848fbeb47f13ddba7654682db1763d2833111ca5"
+        },
+        "codebook.csv": {
+          "bytes": 47012,
+          "sha256": "abc0da63d48fdf08b1e8a253feb96574a9dfc90f764e238e921c2fb736ec84b9"
+        },
+        "codebook.json": {
+          "bytes": 108184,
+          "sha256": "c108150adda13624f25af441479d9eebcd7ae4248fda9f992cf7d06636d012fa"
+        }
+      },
+      "notes": "Only the label-text CSV release was available; no numeric codes or question text."
     },
     {
       "series": "arab-barometer",
@@ -57,18 +113,22 @@
       "wave_label": "Wave V",
       "slug": "wave-05",
       "country": "Tunisia",
-      "country_code": 21,
+      "country_value": 21,
       "n_respondents": 2400,
       "n_variables": 359,
-      "n_variables_with_data": 282,
+      "n_variables_with_data": 281,
       "n_respondents_pooled_release": 27850,
       "n_countries_pooled_release": 13,
       "fieldwork_years_series": "2018-2019",
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
       "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_question_text": true,
       "source_file": "ArabBarometer_WaveV_English_v2.sav",
       "source_sha256": "6a5cbad637ce1546833a1d4812ba6d1e8d75f85b5b199b0cf3ec5cf456068dbc",
+      "csv_answers_read_as_missing": {},
       "path": "data/arab-barometer/wave-05",
       "files": {
         "arab-barometer-w05-tunisia-codes.csv": {
@@ -81,19 +141,19 @@
         },
         "arab-barometer-w05-tunisia.dta": {
           "bytes": 7218008,
-          "sha256": "d783a12f3a7651f4771b5753ccc8bf59ee61c20d80123162c439a153b8d60dcd"
+          "sha256": "1e240c2d80dc21df4ec7cdf91d3a81dc2077724a7f3cd3cec82712d9ab3b0e3a"
         },
         "arab-barometer-w05-tunisia.sav": {
           "bytes": 7004891,
-          "sha256": "1411909a833303431e4624876066a2c4828d24d72499d9e02b7b1397bb30db8c"
+          "sha256": "c550a6df72b5df5d73502f02c0974f5f202209dfc748bfef0bfd6e98345997c3"
         },
         "codebook.csv": {
-          "bytes": 103103,
-          "sha256": "2892f56fb2fb061c78b24c21011b3dcb75eab22b24c06f079b4a5abd9cf58cb7"
+          "bytes": 103478,
+          "sha256": "aa13bea957059d0a603e0feafec92724942c65dfad0747f30d2481c109b1bfc8"
         },
         "codebook.json": {
-          "bytes": 168288,
-          "sha256": "710a4bcde4e5635af808fdfb7076d76ef3f28e320eb59833b6cc92f2f8db1dbb"
+          "bytes": 177981,
+          "sha256": "26e989aefa1f8a094cd632291f8eb162cefbcb9e0c517ab8a4996284bf0275cc"
         }
       },
       "notes": "Release v2."
@@ -105,7 +165,7 @@
       "wave_label": "Wave VIII",
       "slug": "wave-08",
       "country": "Tunisia",
-      "country_code": 21,
+      "country_value": 21,
       "n_respondents": 2406,
       "n_variables": 690,
       "n_variables_with_data": 466,
@@ -115,8 +175,12 @@
       "fieldwork_tunisia": "2023-09-13 to 2023-11-04",
       "fieldwork_source": "derived from the DATE variable in the data file",
       "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_question_text": true,
       "source_file": "ArabBarometer_WaveVIII_English_v3.sav",
       "source_sha256": "a5e83a953f03dd890e076a51da473051f1cfd1ca2e8ab93c2172eeb2517af998",
+      "csv_answers_read_as_missing": {},
       "path": "data/arab-barometer/wave-08",
       "files": {
         "arab-barometer-w08-tunisia-codes.csv": {
@@ -129,19 +193,19 @@
         },
         "arab-barometer-w08-tunisia.dta": {
           "bytes": 13898528,
-          "sha256": "83e43ad15ff4b52a1edbe8dd394a0cf0586d22907107e5e77eaec10c366fec7b"
+          "sha256": "74915c3d12d010d6cbed4ad847eeba8a7afea4ffde93674e2b1ff7f50ab81be7"
         },
         "arab-barometer-w08-tunisia.sav": {
           "bytes": 13477184,
-          "sha256": "340b67e5e1258e35a633f54bd2adc6c50e7f7e08b64bf1bd6a53a96155723bd1"
+          "sha256": "8d6973c6f09d9c6b5ff3ddf22b24fea5f07c71a257914846d40f10b82d5483e7"
         },
         "codebook.csv": {
-          "bytes": 150747,
-          "sha256": "3cae317515895e38abf6af89405fe9edc8a0b3af4ec39ad7b9801e69d5dbc296"
+          "bytes": 151453,
+          "sha256": "1154d88ae855704a51a8099e4d14821203214be63bdfbdce379538fdc4a4639e"
         },
         "codebook.json": {
-          "bytes": 276383,
-          "sha256": "af20beb0cc1c18fb7ecf0d487032cd28d1542e5af53831cd50b86c1b5e48fd47"
+          "bytes": 295013,
+          "sha256": "592a7fc17057711ad8ee6fdd40018abb54178ae3527e665d40c45676d28728cc"
         }
       },
       "notes": "Release v3 (archive labelled v2)."

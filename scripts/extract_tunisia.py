@@ -4,7 +4,7 @@
 Reads the pooled, multi-country release files placed in ``data/raw/`` and writes
 one harmonised folder per wave under ``data/<series>/<wave-slug>/``:
 
-    <stem>.sav           SPSS, full variable + value labels
+    <stem>.sav           SPSS
     <stem>.dta           Stata 14, variable labels truncated to Stata's 80 chars
     <stem>-codes.csv     numeric codes as stored in the release
     <stem>-labels.csv    value labels substituted wherever the release defines them
@@ -12,10 +12,23 @@ one harmonised folder per wave under ``data/<series>/<wave-slug>/``:
     codebook.json        same, machine readable
     README.md            wave-level provenance note
 
-The SPSS release is the authoritative input: it carries both the variable labels
-and the value labels, so every output below is derived from it. That keeps the
-three waves consistent with each other even though the upstream CSVs are not
-(Wave II ships label text, Waves V and VIII ship numeric codes).
+Two kinds of release are handled, declared per wave in ``catalog/sources.json``
+as ``source_format``:
+
+``sav`` (the default)
+    An SPSS release, which carries the question text as variable labels and the
+    response options as value labels. Every output above is derived from it, so
+    the waves stay consistent with each other even though the upstream CSVs do
+    not (Wave II ships label text where Waves V and VIII ship numeric codes).
+
+``csv-labels``
+    A CSV release holding label text and nothing else, which is all Arab
+    Barometer distributes for some waves. There are no numeric codes to write, so
+    no ``-codes.csv`` is produced, and there is no question text, so the codebook
+    records the values observed for each variable instead of a label. Columns that
+    parse as numeric throughout the pooled release are typed numeric; the rest
+    stay strings. Supplying the SPSS release for such a wave and re-running
+    upgrades it to a full ``sav`` extract with no other change.
 
 Usage:  python3 scripts/extract_tunisia.py [--raw data/raw] [--out data]
 """
@@ -33,6 +46,18 @@ import pyreadstat
 
 ROOT = Path(__file__).resolve().parent.parent
 STATA_LABEL_MAX = 80  # Stata's hard limit on a variable label
+MAX_OBSERVED_VALUES = 50  # beyond this a codebook listing stops being useful
+
+# Strings that pandas.read_csv treats as missing by default, and that several
+# other CSV readers treat the same way. A substantive answer spelled like one of
+# these -- Wave IV answers "None" to a second-language question -- silently
+# becomes missing unless the reader is told otherwise, so each wave is scanned
+# for the collision and any hit is reported in the catalog and the wave README.
+CSV_NA_STRINGS = frozenset({
+    "", "#N/A", "#N/A N/A", "#NA", "-1.#IND", "-1.#QNAN", "-NaN", "-nan",
+    "1.#IND", "1.#QNAN", "<NA>", "N/A", "NA", "NULL", "NaN", "None", "n/a",
+    "nan", "null",
+})
 
 
 def sha256(path: Path) -> str:
@@ -57,30 +82,119 @@ def clean_value_labels(labels: dict) -> dict:
     return out
 
 
-def build_codebook(df: pd.DataFrame, meta, value_labels: dict) -> list[dict]:
+def is_blank(s: pd.Series) -> pd.Series:
+    """Missing, for either kind of release: NaN, or an empty string."""
+    if pd.api.types.is_numeric_dtype(s):
+        return s.isna()
+    return s.isna() | (s.astype(str).str.strip() == "")
+
+
+def read_pooled(spec: dict, raw_dir: Path) -> tuple[pd.DataFrame, dict, dict, list[str]]:
+    """Return the pooled release plus its variable labels, value labels and
+    the columns that should be typed numeric."""
+    fmt = spec.get("source_format", "sav")
+    stem = spec["raw_file_stem"]
+
+    if fmt == "sav":
+        src = raw_dir / f"{stem}.sav"
+        require(src)
+        df, meta = pyreadstat.read_sav(str(src), user_missing=True)
+        var_labels = {c: (meta.column_names_to_labels.get(c) or "") for c in df.columns}
+        value_labels = {
+            var: clean_value_labels(labels)
+            for var, labels in meta.variable_value_labels.items()
+            if var in df.columns
+        }
+        return df, var_labels, value_labels, []
+
+    if fmt == "csv-labels":
+        src = raw_dir / f"{stem}.csv"
+        require(src)
+        # Everything is read as text so that nothing is coerced on the way in;
+        # keep_default_na=False keeps an empty cell an empty string rather than
+        # letting pandas turn strings like "NA" into missing values.
+        df = pd.read_csv(src, dtype=str, keep_default_na=False, low_memory=False)
+        # Decide numeric typing on the whole release rather than on the Tunisia
+        # subset: which columns are numeric is a property of the instrument, and
+        # deciding it per country would give a different schema for each.
+        numeric = []
+        for col in df.columns:
+            values = df[col][df[col] != ""]
+            if values.empty:
+                continue
+            try:
+                pd.to_numeric(values)
+            except (ValueError, TypeError):
+                continue
+            numeric.append(col)
+        return df, {c: "" for c in df.columns}, {}, numeric
+
+    raise SystemExit(f"unknown source_format {fmt!r} for wave {spec['slug']}")
+
+
+def require(src: Path) -> None:
+    if not src.exists():
+        raise SystemExit(
+            f"missing input {src}\n"
+            "Place the pooled Arab Barometer release files in data/raw/ first "
+            "(see docs/provenance.md)."
+        )
+
+
+def apply_numeric_types(df: pd.DataFrame, numeric: list[str]) -> pd.DataFrame:
+    out = df.copy()
+    for col in numeric:
+        out[col] = pd.to_numeric(out[col].where(out[col] != ""), errors="raise")
+    return out
+
+
+def build_codebook(df: pd.DataFrame, var_labels: dict, value_labels: dict) -> list[dict]:
     rows = []
     for pos, col in enumerate(df.columns, start=1):
         s = df[col]
+        blank = is_blank(s)
+        present = s[~blank]
         row = {
             "position": pos,
             "variable": col,
-            "label": meta.column_names_to_labels.get(col) or "",
+            "label": var_labels.get(col, ""),
             "storage_type": str(s.dtype),
-            "n_valid": int(s.notna().sum()),
-            "n_missing": int(s.isna().sum()),
-            "n_distinct": int(s.nunique(dropna=True)),
-            "value_labels": json.dumps(value_labels.get(col, {}), ensure_ascii=False)
+            "n_valid": int((~blank).sum()),
+            "n_missing": int(blank.sum()),
+            "n_distinct": int(present.nunique()),
+            "value_labels": json.dumps(value_labels[col], ensure_ascii=False)
             if col in value_labels
             else "",
+            # Where the release defines no value labels there is still something
+            # useful to record for a categorical variable: what actually appears
+            # in it. This is the only description a csv-labels wave has.
+            "observed_values": "",
         }
+        if col not in value_labels and not pd.api.types.is_numeric_dtype(s):
+            distinct = sorted(present.astype(str).unique())
+            if 0 < len(distinct) <= MAX_OBSERVED_VALUES:
+                row["observed_values"] = json.dumps(distinct, ensure_ascii=False)
         if pd.api.types.is_numeric_dtype(s) and row["n_valid"]:
-            row["min"] = float(s.min())
-            row["max"] = float(s.max())
+            row["min"] = float(present.min())
+            row["max"] = float(present.max())
         else:
             row["min"] = ""
             row["max"] = ""
         rows.append(row)
     return rows
+
+
+def scan_csv_na_collisions(df: pd.DataFrame) -> dict[str, list[str]]:
+    """Find answers that a default CSV reader would silently turn into missing."""
+    hits: dict[str, list[str]] = {}
+    for col in df.columns:
+        if pd.api.types.is_numeric_dtype(df[col]):
+            continue
+        values = {str(v) for v in df[col].dropna().unique()}
+        bad = sorted(v for v in values if v.strip() and v.strip() in CSV_NA_STRINGS)
+        if bad:
+            hits[col] = bad
+    return hits
 
 
 def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
@@ -94,44 +208,33 @@ def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
 
 
 def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict:
-    stem_in = spec["raw_file_stem"]
-    src = raw_dir / f"{stem_in}.sav"
-    if not src.exists():
-        raise SystemExit(
-            f"missing input {src}\n"
-            "Place the pooled Arab Barometer release files in data/raw/ first "
-            "(see docs/provenance.md)."
-        )
-
+    fmt = spec.get("source_format", "sav")
     country_var = spec["country_var"]
-    country_code = series["country_variable_values"]["tunisia"]
+    country_value = spec.get("country_value", series["country_variable_values"]["tunisia"])
 
-    print(f"[{spec['slug']}] reading {src.name} ...")
-    df, meta = pyreadstat.read_sav(str(src), user_missing=True)
-    n_pooled = len(df)
-    countries_pooled = sorted(df[country_var].dropna().unique().tolist())
+    print(f"[{spec['slug']}] reading {spec['raw_file_stem']} ({fmt}) ...")
+    pooled, var_labels, value_labels, numeric = read_pooled(spec, raw_dir)
+    n_pooled = len(pooled)
+    n_countries = int(pooled[country_var].nunique())
 
-    df = df[df[country_var] == country_code].reset_index(drop=True)
+    df = pooled[pooled[country_var] == country_value].reset_index(drop=True)
+    del pooled
     if df.empty:
-        raise SystemExit(f"no rows with {country_var} == {country_code} in {src.name}")
+        raise SystemExit(
+            f"no rows with {country_var} == {country_value!r} in {spec['raw_file_stem']}"
+        )
+    df = apply_numeric_types(df, numeric)
     print(f"[{spec['slug']}] Tunisia: {len(df):,} of {n_pooled:,} rows, {df.shape[1]} variables")
-
-    value_labels = {
-        var: clean_value_labels(labels)
-        for var, labels in meta.variable_value_labels.items()
-        if var in df.columns
-    }
-    var_labels = {c: (meta.column_names_to_labels.get(c) or "") for c in df.columns}
 
     dest = out_dir / spec["series"] / spec["slug"]
     dest.mkdir(parents=True, exist_ok=True)
     stem = f"{spec['series']}-w{spec['wave']:02d}-tunisia"
 
-    # SPSS: full fidelity.
+    # SPSS.
     pyreadstat.write_sav(
         df,
         str(dest / f"{stem}.sav"),
-        column_labels=[var_labels[c] for c in df.columns],
+        column_labels=[var_labels.get(c, "") for c in df.columns],
         variable_value_labels=value_labels,
         file_label=f"{series['name']} {spec['wave_label']} - Tunisia",
     )
@@ -139,7 +242,7 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
     # Stata: same content, variable labels truncated to the format's limit.
     stata_labels = [
         (lbl[: STATA_LABEL_MAX - 3] + "...") if len(lbl) > STATA_LABEL_MAX else lbl
-        for lbl in (var_labels[c] for c in df.columns)
+        for lbl in (var_labels.get(c, "") for c in df.columns)
     ]
     pyreadstat.write_dta(
         df,
@@ -149,25 +252,33 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         version=14,
     )
 
-    # CSV, numeric codes.
-    df.to_csv(dest / f"{stem}-codes.csv", index=False)
-
-    # CSV, value labels applied wherever the release defines them.
-    labelled = df.copy()
-    for var, labels in value_labels.items():
-        labelled[var] = labelled[var].map(
-            lambda v: labels.get(int(v) if isinstance(v, float) and v.is_integer() else v, v)
-        )
+    if fmt == "sav":
+        # CSV, numeric codes.
+        df.to_csv(dest / f"{stem}-codes.csv", index=False)
+        # CSV, value labels applied wherever the release defines them.
+        labelled = df.copy()
+        for var, labels in value_labels.items():
+            labelled[var] = labelled[var].map(
+                lambda v: labels.get(int(v) if isinstance(v, float) and v.is_integer() else v, v)
+            )
+    else:
+        # The release is label text already; there are no codes to write.
+        (dest / f"{stem}-codes.csv").unlink(missing_ok=True)
+        labelled = df
     labelled.to_csv(dest / f"{stem}-labels.csv", index=False)
 
-    # Codebook.
-    codebook = build_codebook(df, meta, value_labels)
+    na_collisions = scan_csv_na_collisions(labelled)
+    for var, values in na_collisions.items():
+        print(f"[{spec['slug']}] warning: {var} answers {values} read as missing by default")
+
+    codebook = build_codebook(df, var_labels, value_labels)
     n_with_data = sum(1 for r in codebook if r["n_valid"] > 0)
     pd.DataFrame(codebook).to_csv(dest / "codebook.csv", index=False)
     (dest / "codebook.json").write_text(
         json.dumps(codebook, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
+    src = raw_dir / f"{spec['raw_file_stem']}.{'sav' if fmt == 'sav' else 'csv'}"
     entry = {
         "series": spec["series"],
         "series_name": series["name"],
@@ -175,18 +286,22 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "wave_label": spec["wave_label"],
         "slug": spec["slug"],
         "country": "Tunisia",
-        "country_code": country_code,
+        "country_value": country_value,
         "n_respondents": int(len(df)),
         "n_variables": int(df.shape[1]),
         "n_variables_with_data": n_with_data,
         "n_respondents_pooled_release": n_pooled,
-        "n_countries_pooled_release": len(countries_pooled),
+        "n_countries_pooled_release": n_countries,
         "fieldwork_years_series": spec["fieldwork_years_series"],
         "fieldwork_tunisia": fieldwork_window(df, spec),
         "fieldwork_source": spec["fieldwork_source"],
         "language": "English (translated instrument and labels)",
+        "source_format": fmt,
+        "has_numeric_codes": fmt == "sav",
+        "has_question_text": fmt == "sav",
         "source_file": src.name,
         "source_sha256": sha256(src),
+        "csv_answers_read_as_missing": na_collisions,
         "path": str(dest.relative_to(ROOT)),
         "files": {},
         "notes": spec.get("notes", ""),
@@ -201,7 +316,9 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
 
 
 def render_wave_readme(e: dict, series: dict) -> str:
-    fw = e["fieldwork_tunisia"] or f"not recorded in the data file (series fieldwork {e['fieldwork_years_series']})"
+    fw = e["fieldwork_tunisia"] or (
+        f"not recorded in the data file (series fieldwork {e['fieldwork_years_series']})"
+    )
     lines = [
         f"# {e['series_name']} {e['wave_label']} — Tunisia",
         "",
@@ -222,6 +339,7 @@ def render_wave_readme(e: dict, series: dict) -> str:
     ]
     for name, info in e["files"].items():
         lines.append(f"| `{name}` | {info['bytes'] / 1_048_576:.2f} MB | `{info['sha256'][:16]}` |")
+
     lines += [
         "",
         f"The pooled release carries items asked in only some countries, so "
@@ -229,14 +347,62 @@ def render_wave_readme(e: dict, series: dict) -> str:
         "entirely missing in the Tunisia sub-sample. They are kept so that column positions",
         "line up with the pooled release; `codebook.csv` reports `n_valid` for each.",
         "",
-        "`-codes.csv` holds the numeric codes as stored in the release; `-labels.csv`",
-        "substitutes the value label wherever the release defines one. The `.sav` carries",
-        "full variable and value labels; the `.dta` is identical except that variable",
-        "labels longer than 80 characters are truncated, which Stata's format requires.",
-        "Consult `codebook.csv` for the untruncated labels.",
-        "",
-        "Regenerate with `python3 scripts/extract_tunisia.py`.",
     ]
+
+    if e["source_format"] == "sav":
+        lines += [
+            "`-codes.csv` holds the numeric codes as stored in the release; `-labels.csv`",
+            "substitutes the value label wherever the release defines one. The `.sav` carries",
+            "full variable and value labels; the `.dta` is identical except that variable",
+            "labels longer than 80 characters are truncated, which Stata's format requires.",
+            "Consult `codebook.csv` for the untruncated labels.",
+        ]
+    else:
+        lines += [
+            "## Derived from a label-only CSV release",
+            "",
+            "Arab Barometer distributes this wave as a CSV of label text, with no SPSS or",
+            "Stata release alongside it. Two things follow, and they are limitations of the",
+            "source rather than of this extract:",
+            "",
+            "- **No numeric codes.** Answers exist only as text, so there is no `-codes.csv`,",
+            "  and the `.sav` and `.dta` hold strings rather than coded categoricals. In Stata,",
+            "  `encode` them; in R, `haven::as_factor()` has nothing to do because the labels",
+            "  are already the values.",
+            "- **No question text.** The CSV carries variable names but no variable labels, so",
+            "  the `label` column of `codebook.csv` is empty. In its place the codebook records",
+            "  `observed_values`, the distinct answers each variable actually takes. For the",
+            "  question wording, use the questionnaire on the Arab Barometer site.",
+            "",
+            "Columns that parse as numeric across the whole pooled release are typed numeric;",
+            "the rest are left as text. `codebook.csv` reports the storage type of each.",
+            "",
+            "Dropping the SPSS release for this wave into `data/raw/`, setting",
+            "`source_format` to `sav` in `catalog/sources.json` and re-running the scripts",
+            "upgrades this folder to a full extract with codes and question text.",
+        ]
+
+    if e["csv_answers_read_as_missing"]:
+        listed = ", ".join(
+            f"`{var}` ({', '.join(repr(v) for v in values)})"
+            for var, values in e["csv_answers_read_as_missing"].items()
+        )
+        lines += [
+            "",
+            "## Reading the CSV",
+            "",
+            f"{listed} — these are substantive answers spelled the way most CSV readers",
+            "spell a missing value. `pandas.read_csv` and friends will turn them into",
+            "missing unless you say otherwise:",
+            "",
+            "```python",
+            "pd.read_csv(path, keep_default_na=False)   # then treat \"\" as missing",
+            "```",
+            "",
+            "The `.sav` and `.dta` are unaffected.",
+        ]
+
+    lines += ["", "Regenerate with `python3 scripts/extract_tunisia.py`."]
     if e["notes"]:
         lines += ["", f"Note: {e['notes']}"]
     return "\n".join(lines) + "\n"

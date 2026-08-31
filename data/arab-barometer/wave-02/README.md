@@ -16,10 +16,10 @@
 |---|---:|---|
 | `arab-barometer-w02-tunisia-codes.csv` | 1.57 MB | `f554c46c3d83c4cc` |
 | `arab-barometer-w02-tunisia-labels.csv` | 7.01 MB | `a34c145ff076b2ed` |
-| `arab-barometer-w02-tunisia.dta` | 4.76 MB | `7039278db91950dd` |
-| `arab-barometer-w02-tunisia.sav` | 4.51 MB | `fc886c9dfb13ae65` |
-| `codebook.csv` | 0.23 MB | `205dfd561c7623f7` |
-| `codebook.json` | 0.31 MB | `01e8706924a2addc` |
+| `arab-barometer-w02-tunisia.dta` | 4.76 MB | `9bf5b8948140eb51` |
+| `arab-barometer-w02-tunisia.sav` | 4.51 MB | `487122f07d223180` |
+| `codebook.csv` | 0.23 MB | `b019d258cd6ccba5` |
+| `codebook.json` | 0.32 MB | `86f6d5f1a65d7699` |
 
 The pooled release carries items asked in only some countries, so 165 of the 468 variables are
 entirely missing in the Tunisia sub-sample. They are kept so that column positions

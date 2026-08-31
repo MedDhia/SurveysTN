@@ -46,9 +46,17 @@ takes for Tunisia:
 }
 ```
 
-`scripts/extract_tunisia.py` assumes the release is SPSS `.sav` with variable and
-value labels attached, which is the common case. A series that ships something
-else needs a reader added to the script, not a workaround in the data.
+`scripts/extract_tunisia.py` reads two kinds of release, set per wave as
+`source_format`: `sav` for an SPSS release with variable and value labels attached,
+which is the common case and the better one, and `csv-labels` for a CSV of label
+text with no codes and no question text. A `csv-labels` wave also needs
+`country_value` set to the country's name as the CSV spells it, since there is no
+numeric country code to match on. A series that ships neither needs a reader added
+to `read_pooled()`, not a workaround in the data.
+
+Prefer the SPSS release wherever the publisher offers one. A `csv-labels` wave is
+a fallback: it loses the numeric codes and the question text, and both show up as
+gaps in the codebook.
 
 ## Ground rules
 

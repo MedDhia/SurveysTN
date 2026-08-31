@@ -5,7 +5,9 @@
       "publisher": "Arab Barometer (Princeton University / University of Michigan)",
       "homepage": "https://www.arabbarometer.org",
       "data_page": "https://www.arabbarometer.org/surveys/",
-      "country_variable_values": {"tunisia": 21}
+      "country_variable_values": {
+        "tunisia": 21
+      }
     }
   },
   "waves": [
@@ -20,6 +22,20 @@
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
       "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes."
+    },
+    {
+      "series": "arab-barometer",
+      "wave": 4,
+      "wave_label": "Wave IV",
+      "slug": "wave-04",
+      "raw_file_stem": "ABIV_English",
+      "source_format": "csv-labels",
+      "country_var": "country",
+      "country_value": "Tunisia",
+      "fieldwork_years_series": "2016-2017",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "not recorded in the data file",
+      "notes": "Only the label-text CSV release was available; no numeric codes or question text."
     },
     {
       "series": "arab-barometer",

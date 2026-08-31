@@ -8,6 +8,10 @@ compute anything. The codes differ by wave and, within a wave, by the width of
 the variable's scale, so check the variable in `codebook.csv` rather than
 applying one rule to the whole file.
 
+The table is matched on label text, so it can catch a substantive answer that
+happens to contain one of the words -- Wave IV's "Palestinians would refuse" is
+an answer, not a non-response. Check the variable before recoding.
+
 ## Arab Barometer Wave II
 
 | Code | Label | Variables using it |
@@ -47,6 +51,20 @@ applying one rule to the whole file.
 | `99997` | 99997. declined to answer | 1 |
 | `99998` | 99998. declined to answer | 1 |
 | `99999` | 99999. i don't know | 1 |
+
+## Arab Barometer Wave IV
+
+Distributed as label text only, so these answers appear as the strings
+below rather than as codes. They are ordinary values in the data.
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `—` | Don't know (Do not read) | 166 |
+| `—` | Decline to answer (Do not read) | 129 |
+| `—` | Not applicable | 3 |
+| `—` | I do not know of any relevant experiences | 1 |
+| `—` | Palestinians would refuse | 1 |
+| `—` | Refused to answer (do not read) | 1 |
 
 ## Arab Barometer Wave V
 

@@ -14,11 +14,21 @@ identifies Tunisia — plus a rewrite of the same values into four file formats.
 | 3 | The SHA-256 of the input release and of every generated file is recorded in `catalog/catalog.json`. |
 | 4 | `scripts/verify.py` re-derives the subset from the release and compares it cell by cell against what is committed. |
 
-The SPSS release is the input for all four outputs, not just the `.sav`. That is
-deliberate: it is the only one of the three distributed formats that carries both
+Where an SPSS release exists it is the input for every output, not just the `.sav`.
+That is deliberate: it is the only one of the distributed formats that carries both
 the variable labels and the value labels, and using a single input keeps the waves
 consistent with one another. Upstream they are not — the Wave II CSV ships value
 labels as text while the Wave V and Wave VIII CSVs ship numeric codes.
+
+Wave IV is the exception. Arab Barometer distributes it as a CSV of label text with
+no SPSS release, so it is read from that CSV, declared in `catalog/sources.json` as
+`"source_format": "csv-labels"`. It therefore has no `-codes.csv` and no question
+text, and its `.sav` and `.dta` hold strings rather than coded categoricals. Columns
+that parse as numeric across the whole pooled release — `qid`, `stratum`, `psu`,
+`wt` — are typed numeric; the rest stay text. That decision is made on the pooled
+release rather than on the Tunisia subset, so it does not change with the country
+being extracted. Dropping the SPSS release into `data/raw/` and switching
+`source_format` to `sav` upgrades the wave with no other change.
 
 ## Country identification
 
@@ -43,6 +53,8 @@ consult the country report on the Arab Barometer site.
 | `.sav`, `.dta` | Numeric columns are written as doubles rather than the narrower storage types some source files use. Values are unchanged; the files are larger than they strictly need to be. |
 | `-labels.csv` | Where a variable has value labels, the label text replaces the code. Where it has none, the code is written through unchanged. A label can be attached to more than one code — Wave V's party variables label both `0` and `150000` "no party" — so this file is not always reversible. Use `-codes.csv` when you need the code. |
 | `-codes.csv`, `-labels.csv` | CSV cannot distinguish an empty string from a missing value. One variable is affected: Wave V's `E2001B`, a string variable that is empty for every Tunisian respondent. The `.sav` and `.dta` preserve the distinction. |
+| `-codes.csv`, `-labels.csv` | An answer spelled the way CSV readers spell a missing value is read as missing by default. One is affected: Wave IV's `q1019b` answers "None" to a second-language question. Read with `keep_default_na=False`, or use the `.sav` or `.dta`. Every wave is scanned for this and hits are recorded in `catalog/catalog.json` under `csv_answers_read_as_missing`. |
+| `.sav`, `.dta` | Both formats embed a creation timestamp, so re-running the extractor produces byte-different files with identical content. The recorded SHA-256 identifies the committed file; it is not a reproducible-build guarantee. `scripts/verify.py` compares values, not bytes. |
 | all | Column order and column names are exactly those of the pooled release. |
 
 None of these lose information that the format in question could have carried, and

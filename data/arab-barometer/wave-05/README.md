@@ -3,7 +3,7 @@
 | | |
 |---|---|
 | Respondents | 2,400 |
-| Variables | 359 (282 with at least one non-missing answer in Tunisia) |
+| Variables | 359 (281 with at least one non-missing answer in Tunisia) |
 | Fieldwork (Tunisia) | not recorded in the data file (series fieldwork 2018-2019) |
 | Language | English (translated instrument and labels) |
 | Pooled release | 27,850 respondents across 13 countries |
@@ -16,12 +16,12 @@
 |---|---:|---|
 | `arab-barometer-w05-tunisia-codes.csv` | 2.34 MB | `3fa5981a055e2fed` |
 | `arab-barometer-w05-tunisia-labels.csv` | 4.90 MB | `46d1c6c631be1418` |
-| `arab-barometer-w05-tunisia.dta` | 6.88 MB | `d783a12f3a7651f4` |
-| `arab-barometer-w05-tunisia.sav` | 6.68 MB | `1411909a83330343` |
-| `codebook.csv` | 0.10 MB | `2892f56fb2fb061c` |
-| `codebook.json` | 0.16 MB | `710a4bcde4e5635a` |
+| `arab-barometer-w05-tunisia.dta` | 6.88 MB | `1e240c2d80dc21df` |
+| `arab-barometer-w05-tunisia.sav` | 6.68 MB | `c550a6df72b5df5d` |
+| `codebook.csv` | 0.10 MB | `aa13bea957059d0a` |
+| `codebook.json` | 0.17 MB | `26e989aefa1f8a09` |
 
-The pooled release carries items asked in only some countries, so 77 of the 359 variables are
+The pooled release carries items asked in only some countries, so 78 of the 359 variables are
 entirely missing in the Tunisia sub-sample. They are kept so that column positions
 line up with the pooled release; `codebook.csv` reports `n_valid` for each.
 

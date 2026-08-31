@@ -44,15 +44,28 @@ def main() -> None:
         )
         counts: Counter = Counter()
         for row in codebook:
-            if not row["value_labels"]:
-                continue
-            for code, label in json.loads(row["value_labels"]).items():
-                if any(m in str(label).lower() for m in MARKERS):
-                    counts[(str(code), str(label))] += 1
+            if row["value_labels"]:
+                for code, label in json.loads(row["value_labels"]).items():
+                    if any(m in str(label).lower() for m in MARKERS):
+                        counts[(str(code), str(label))] += 1
+            elif row["observed_values"]:
+                # A label-only release has no codes; the answer text is the value,
+                # so it stands in the code column too.
+                for label in json.loads(row["observed_values"]):
+                    if any(m in str(label).lower() for m in MARKERS):
+                        counts[("—", str(label))] += 1
 
         lines = [
             f"## {s['series_name']} {s['wave_label']}",
             "",
+        ]
+        if not s["has_numeric_codes"]:
+            lines += [
+                "Distributed as label text only, so these answers appear as the strings",
+                "below rather than as codes. They are ordinary values in the data.",
+                "",
+            ]
+        lines += [
             "| Code | Label | Variables using it |",
             "|---:|---|---:|",
         ]
@@ -70,7 +83,10 @@ def main() -> None:
         "every format in this repository as ordinary values. Recode them before you\n"
         "compute anything. The codes differ by wave and, within a wave, by the width of\n"
         "the variable's scale, so check the variable in `codebook.csv` rather than\n"
-        "applying one rule to the whole file.\n\n" + body + "\n",
+        "applying one rule to the whole file.\n\n"
+        "The table is matched on label text, so it can catch a substantive answer that\n"
+        "happens to contain one of the words -- Wave IV's \"Palestinians would refuse\" is\n"
+        "an answer, not a non-response. Check the variable before recoding.\n\n" + body + "\n",
         encoding="utf-8",
     )
     print("wrote docs/missing-value-codes.md")
