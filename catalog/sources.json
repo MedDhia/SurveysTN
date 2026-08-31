@@ -248,13 +248,17 @@
         "url": null,
         "language": "Arabic (Tunisia field instrument)",
         "parsed_for_question_text": false,
-        "note": "Arabic text does not extract as text, and the question wording is already in the release headers."
+        "note": "Arabic text does not extract as text, and the question wording is already in the release headers. The World Values Survey serves its documentation through a download form rather than a stable file URL, so the reference is the wave's documentation page plus the document id the file is published under.",
+        "source_page": "https://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp",
+        "document_id": "F00002608"
       },
       "notes": "Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7.",
       "methodology_document": {
         "file": "docs/questionnaires/wvs-w06-methodology.pdf",
         "url": null,
-        "note": "WVS methodological questionnaire for Tunisia 2013: how the survey was run, not the instrument."
+        "note": "WVS methodological questionnaire for Tunisia 2013: how the survey was run, not the instrument. The World Values Survey serves its documentation through a download form rather than a stable file URL, so the reference is the wave's documentation page plus the document id the file is published under.",
+        "source_page": "https://www.worldvaluessurvey.org/WVSDocumentationWV6.jsp",
+        "document_id": "F00002876"
       }
     },
     {
@@ -276,7 +280,9 @@
         "url": null,
         "language": "Arabic (MENA field instrument, with English technical codes)",
         "parsed_for_question_text": false,
-        "note": "Question wording is already in the release headers; this is the fielded Arabic instrument."
+        "note": "Question wording is already in the release headers; this is the fielded Arabic instrument. The World Values Survey serves its documentation through a download form rather than a stable file URL, so the reference is the wave's documentation page plus the document id the file is published under.",
+        "source_page": "https://www.worldvaluessurvey.org/WVSDocumentationWV7.jsp",
+        "document_id": "F00010989"
       },
       "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release.",
       "language": "English (translated instrument; variable labels only, no value labels)"

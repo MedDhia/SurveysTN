@@ -6,8 +6,19 @@ with, and for some surveys they are the only place the question wording exists i
 English.
 
 They are the publishers' own documents, reproduced so the archive describes itself.
-`catalog/sources.json` records the source URL for each. Cite the programme, not this
+`catalog/sources.json` records where each came from. Cite the programme, not this
 repository.
+
+`scripts/verify.py` checks the claim rather than repeating it: every survey must
+have a questionnaire, the file must be present, open as a PDF and have pages, no two
+surveys may point at the same file, and each must record a source. Any of those
+failing is an error, because each is a way of appearing to have an instrument
+without having one.
+
+Most entries carry a direct URL. The two World Values Survey instruments do not:
+the WVS serves its documentation through a download form rather than a stable file
+address, so those record the wave's documentation page and the document id the file
+is published under (`F00002608`, `F00010989`) instead of a link that would break.
 
 ## Arab Barometer
 

@@ -238,7 +238,8 @@ python3 scripts/verify.py                 # cell-by-cell against the releases
 
 `scripts/verify.py` re-derives every subset from its release and compares it cell
 by cell, checks the stacked Wave VI file against the three rounds it came from,
-and confirms every recorded checksum. `--offline` is the quicker version, checking
+confirms every recorded checksum, and checks that every survey's questionnaire is
+present, opens as a PDF, is not shared with another survey, and records a source. `--offline` is the quicker version, checking
 the committed files against the catalog without re-reading the releases.
 
 ## Adding a survey
