@@ -1,99 +1,100 @@
-# Questionnaires
+# Questionnaires and codebooks
 
-The published English questionnaire for each wave, as distributed by Arab
-Barometer. These are the instruments the data was collected with, and the source
-of the question text in [`../crosswalk.csv`](../crosswalk.csv) wherever a release
-carries no variable labels of its own.
+The published instrument for every survey in the archive, as the programme released
+it. **All 25 surveys have one.** These are the documents the data was collected
+with, and for some surveys they are the only place the question wording exists in
+English.
 
-| File | Wave | Data in the archive |
+They are the publishers' own documents, reproduced so the archive describes itself.
+`catalog/sources.json` records the source URL for each. Cite the programme, not this
+repository.
+
+## Arab Barometer
+
+| File | Survey | Parsed |
 |---|---|---|
-| `ab-w02-questionnaire.pdf` | Wave II | [`wave-02`](../../data/arab-barometer/wave-02) |
-| `ab-w03-questionnaire.pdf` | Wave III | [`wave-03`](../../data/arab-barometer/wave-03) |
-| `ab-w04-questionnaire.pdf` | Wave IV | [`wave-04`](../../data/arab-barometer/wave-04) |
-| `ab-w05-questionnaire.pdf` | Wave V | [`wave-05`](../../data/arab-barometer/wave-05) |
-| `ab-w06p1-questionnaire.pdf` | Wave VI Part 1 | [`wave-06-part-1`](../../data/arab-barometer/wave-06-part-1) |
-| `ab-w06p2-questionnaire.pdf` | Wave VI Part 2 | [`wave-06-part-2`](../../data/arab-barometer/wave-06-part-2) |
-| `ab-w06p3-questionnaire.pdf` | Wave VI Part 3 | [`wave-06-part-3`](../../data/arab-barometer/wave-06-part-3) |
-| `ab-w07-questionnaire.pdf` | Wave VII | [`wave-07`](../../data/arab-barometer/wave-07) |
-| `ab-w08-questionnaire.pdf` | Wave VIII | [`wave-08`](../../data/arab-barometer/wave-08) |
+| `ab-w02-questionnaire.pdf` | [Wave II](../../data/arab-barometer/wave-02) | yes |
+| `ab-w03-questionnaire.pdf` | [Wave III](../../data/arab-barometer/wave-03) | yes |
+| `ab-w04-questionnaire.pdf` | [Wave IV](../../data/arab-barometer/wave-04) | yes |
+| `ab-w05-questionnaire.pdf` | [Wave V](../../data/arab-barometer/wave-05) | yes |
+| `ab-w06p1/2/3-questionnaire.pdf` | [Wave VI Parts 1–3](../../data/arab-barometer/wave-06-part-1) | yes |
+| `ab-w07-questionnaire.pdf` | [Wave VII](../../data/arab-barometer/wave-07) | yes |
+| `ab-w08-questionnaire.pdf` | [Wave VIII](../../data/arab-barometer/wave-08) | yes |
 
-| `wvs-w06-questionnaire.pdf` | WVS Wave 6 | [`wave-06`](../../data/world-values-survey/wave-06) |
-| `wvs-w06-methodology.pdf` | WVS Wave 6 | methodology, not the instrument |
-| `wvs-w07-questionnaire.pdf` | WVS Wave 7 | [`wave-07`](../../data/world-values-survey/wave-07) |
-| `aoi-2011-codebook.pdf` | Arab Opinion Index 2011 | [`2011`](../../data/arab-opinion-index/2011) |
-| `aoi-2012-2013-codebook.pdf` | Arab Opinion Index 2012/2013 | [`2012-2013`](../../data/arab-opinion-index/2012-2013) |
-| `aoi-2014-codebook.pdf` | Arab Opinion Index 2014 | [`2014`](../../data/arab-opinion-index/2014) |
-| `aoi-2015-codebook.pdf` | Arab Opinion Index 2015 | [`2015`](../../data/arab-opinion-index/2015) |
-| `aoi-2016-codebook.pdf` | Arab Opinion Index 2016 | [`2016`](../../data/arab-opinion-index/2016) |
-| `aoi-2017-2018-codebook.pdf` | Arab Opinion Index 2017/2018 | [`2017-2018`](../../data/arab-opinion-index/2017-2018) |
-| `aoi-2022-codebook.pdf` | Arab Opinion Index 2022 | [`2022`](../../data/arab-opinion-index/2022) |
-| `aoi-2024-2025-codebook.pdf` | Arab Opinion Index 2024/2025 | [`2024-2025`](../../data/arab-opinion-index/2024-2025) |
+These nine are the only questionnaires parsed for question text. Wave IV's release
+carries no variable labels at all and Wave V's are topic tags, so for those the
+questionnaire is where the wording comes from.
 
-Not every survey has one. Afrobarometer's five rounds have none here, and the Arab
-Opinion Index 2019/2020 round has none because the publisher's own link for it
-returns 404. Neither is a loss for the crosswalk: both series carry their question
-wording in the release itself.
+## World Values Survey
 
-The Arab Opinion Index calls its instrument a **codebook**, and it is the document
-that gives the response options behind the variable labels. It is not the same
-thing as the `codebook.csv` this archive generates in each survey folder, which is
-a per-variable summary of the data as extracted.
+| File | Survey | Parsed |
+|---|---|---|
+| `wvs-w06-questionnaire.pdf` | [Wave 6](../../data/world-values-survey/wave-06) | no |
+| `wvs-w06-methodology.pdf` | Wave 6 — how the survey was run, not what it asked | no |
+| `wvs-w07-questionnaire.pdf` | [Wave 7](../../data/world-values-survey/wave-07) | no |
 
-Only the nine Arab Barometer questionnaires are parsed for question text. The other
-instruments are documentation: the WVS and Arab Opinion Index releases already carry
-their question wording, in column headers and variable labels respectively, so
-parsing a PDF for it would add a second and less reliable source for something the
-data states directly.
+Both instruments are the Arabic as fielded, and the Arabic does not extract as text.
+It is not needed: the WVS releases carry their question wording in their own column
+headers. The Wave 7 instrument earns its place another way — its first page defines
+the negative sentinel codes (`-1` don't know, `-2` no answer/refused, `-3` not
+applicable, `-5` missing) that the spreadsheet releases ship bare, and it is the
+source `docs/missing-value-codes.md` quotes.
 
-The two WVS questionnaires could not be parsed in any case. They are the Arabic
-instruments as fielded, and are **not** parsed for question text: the Arabic does not extract as text, and it is not needed
-— the WVS releases carry the question wording in their own column headers. The Wave
-7 one earns its place another way. Its first page lists the technical codes in
-English — `-1 Don't know`, `-2 No answer/refused`, `-3 Not applicable (filter)`,
-`-5 Missing; Not applicable for other reasons` — which is the only documentation in
-this archive of what the WVS negative codes mean, since the spreadsheet releases
-ship them bare. `catalog/sources.json` quotes them with that page as the source.
+## Afrobarometer
 
-`wvs-w06-methodology.pdf` is the WVS methodological questionnaire for Tunisia 2013:
-how the survey was run rather than what it asked. It is kept as documentation and
-is not parsed.
+| File | Round | Language | Parsed |
+|---|---|---|---|
+| `afro-w06-questionnaire.pdf` + `afro-w06-codebook.pdf` | [Round 6](../../data/afrobarometer/round-06) | English | no |
+| `afro-w07-questionnaire.pdf` + `afro-w07-codebook.pdf` | [Round 7](../../data/afrobarometer/round-07) | English | no |
+| `afro-w08-questionnaire.pdf` + `afro-w08-codebook.pdf` | [Round 8](../../data/afrobarometer/round-08) | questionnaire Arabic, codebook English | no |
+| `afro-w09-questionnaire.pdf` + `afro-w09-codebook.pdf` | [Round 9](../../data/afrobarometer/round-09) | English | no |
+| `afro-w10-questionnaire.pdf` + `afro-w10-codebook.pdf` | [Round 10](../../data/afrobarometer/round-10) | English | no |
 
-The source URL for each file is recorded per wave in
-[`../../catalog/sources.json`](../../catalog/sources.json), under `questionnaire`.
-They were downloaded from <https://www.arabbarometer.org>, which publishes them
-openly; they are the publisher's documents, reproduced here so the archive
-describes itself. Cite Arab Barometer, not this repository.
+**These are not parsed, and the reason is a trap worth knowing about.** Afrobarometer
+numbers its variables differently from its questionnaire in places: in Round 10 the
+variable `Q6` is labelled `Q5b.`, `Q52C` is labelled `Q53c.`, and 18 more diverge the
+same way. Mapping a question number onto the variable of the same name would attach
+the wrong question to those. The releases carry usable labels of their own, so the
+cost of not parsing is small and the cost of parsing wrongly is not.
+
+Round 8's questionnaire is the Arabic as fielded; Afrobarometer publishes no English
+questionnaire for that round, and its English codebook covers the same instrument.
+
+**Round 9 is distributed as the English release but its variable labels are in
+French** — `Raison d'un entretien infructueux Ménage1`, not `Reason for Unsuccessful
+Call Household 1`. The crosswalk marks every one of those 269 entries
+`release label (French)` rather than letting French text pass as English. The English
+questionnaire and codebook here are the English wording for that round.
+
+## Arab Opinion Index
+
+Nine codebooks, one per round, `aoi-2011-codebook.pdf` through
+`aoi-2024-2025-codebook.pdf`. None is parsed: the releases carry full question text
+as variable labels, so the codebook is documentation of the response options rather
+than a source of wording.
+
+The Arab Opinion Index calls its instrument a **codebook**. That is not the same
+thing as the `codebook.csv` this archive generates in each survey folder, which
+summarises the data as extracted.
+
+The 2019/2020 one needed finding. The link the publisher prints for it,
+`CodeBook-2019-2020-EN.pdf`, returns 404; the same page also links
+`CodeBook-2019-2022-EN.pdf`, which is this round's codebook under a mistyped name.
+That is the file here, and `catalog/sources.json` records the URL that works.
 
 ## Reading them by machine
 
-`scripts/build_crosswalk.py` parses these PDFs into question number → question
-text. Three things about the extracted text are worth knowing if you write your
-own parser:
+`scripts/build_crosswalk.py` parses only the Arab Barometer set. Three things about
+the extracted text matter if you write your own parser:
 
 - Question numbers sit at the start of a line, but the prefix varies — `q101`,
   `Q127`, `aid1a`, `t302` — and the case is not stable across waves.
 - Where the number sits depends on the wave. Most put it in front of the question;
   the Wave V PDF puts it alone on its own line, with the question below it and often
   a routing directive in between.
-- The Wave IV PDF extracts some numbers **reversed**: `101q` for `q101`, a bidi
-  artifact of the bilingual original. The parser matches both forms.
-- Response options sometimes extract onto the question's own line
-  (`Gender 1. Male2. Female`) and sometimes onto the following lines, depending on
-  the wave.
-- Answer boxes and rules extract as runs of `|__|`, underscores and dashes, and
-  occasionally as untranslated Arabic. A capture that is mostly those is discarded
-  rather than kept as a question.
+- The Afrobarometer PDFs extract **one word per line**, so a line-based reader sees
+  nothing. They need the text flowed back together first.
 
-The parse is validated against the releases that carry their own labels, and agrees
-with them on 85–97% of comparable variables per wave.
-
-Two waves cannot be checked that way and are reported as unvalidated, with the
-reason, rather than given a number. Wave IV carries no labels. Wave V labels every
-variable from a controlled vocabulary in capitals — `DEMOCRACY: SUITABILITY`,
-`ELECTORAL PARTICIPATION: VISITED RALLY DURING PARLIAMENTARY ELECTION` — which
-names the question without restating it, so a character-level comparison against
-the wording scores near zero however good the parse is. Only two Wave V labels are
-wording rather than tag, which is too few to conclude anything from.
-
-The per-wave figures are in
+The parse is validated against the releases that carry wording as labels, and agrees
+with them on 85–97% of comparable variables per wave. Per-wave figures are in
 [`../../catalog/crosswalk-report.json`](../../catalog/crosswalk-report.json).

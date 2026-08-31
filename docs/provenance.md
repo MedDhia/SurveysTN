@@ -50,6 +50,21 @@ of a rate: Wave IV has no labels, and Wave V's are a controlled vocabulary in
 capitals that names each question without restating it, so comparing them with the
 wording would score the labelling style rather than the parse.
 
+## Two releases do not say what they seem to
+
+**Afrobarometer Round 9 is distributed as the English release and labels its
+variables in French** — `Raison d'un entretien infructueux Ménage1` where the other
+rounds say `Reason for Unsuccessful Call Household 1`. 277 of its 386 labels are
+French. Nothing is changed in the data; `catalog/sources.json` records
+`"release_label_language": "French"` for that survey, and the crosswalk marks the
+269 entries that take their text from it `release label (French)` rather than
+letting French wording pass as English.
+
+**Afrobarometer numbers variables differently from its own questionnaire.** In Round
+10 the variable `Q6` carries the label `Q5b.`, `Q52C` carries `Q53c.`, and 18 more
+diverge. That is why no Afrobarometer questionnaire is parsed for question text: a
+number-to-variable mapping would be wrong for those twenty.
+
 ## Wave VI is three surveys
 
 Arab Barometer fielded Wave VI as three telephone rounds during the pandemic, each

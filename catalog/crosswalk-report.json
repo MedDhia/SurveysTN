@@ -136,7 +136,7 @@
       "compared": 0,
       "agreeing": 0,
       "agreement_rate": null,
-      "not_validated_reason": "no questionnaire in the archive for this survey"
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     },
     "afro-w07": {
       "wave_label": "Round 7",
@@ -146,7 +146,7 @@
       "compared": 0,
       "agreeing": 0,
       "agreement_rate": null,
-      "not_validated_reason": "no questionnaire in the archive for this survey"
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     },
     "afro-w08": {
       "wave_label": "Round 8",
@@ -156,7 +156,7 @@
       "compared": 0,
       "agreeing": 0,
       "agreement_rate": null,
-      "not_validated_reason": "no questionnaire in the archive for this survey"
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     },
     "afro-w09": {
       "wave_label": "Round 9",
@@ -166,7 +166,7 @@
       "compared": 0,
       "agreeing": 0,
       "agreement_rate": null,
-      "not_validated_reason": "no questionnaire in the archive for this survey"
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     },
     "afro-w10": {
       "wave_label": "Round 10",
@@ -176,7 +176,7 @@
       "compared": 0,
       "agreeing": 0,
       "agreement_rate": null,
-      "not_validated_reason": "no questionnaire in the archive for this survey"
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     },
     "aoi-2011": {
       "wave_label": "2011",
@@ -246,7 +246,7 @@
       "compared": 0,
       "agreeing": 0,
       "agreement_rate": null,
-      "not_validated_reason": "no questionnaire in the archive for this survey"
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     },
     "aoi-2022": {
       "wave_label": "2022",
@@ -272,7 +272,7 @@
   "variables": 6404,
   "with_question_text": 6338,
   "in_every_wave": 0,
-  "wording_drifts": 526,
+  "wording_drifts": 352,
   "suggested_matches": 648,
   "suggestion_floor": 0.95
 }

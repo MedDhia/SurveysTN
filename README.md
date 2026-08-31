@@ -173,16 +173,22 @@ PARLIAMENTARY ELECTION` for a question reading "did you attend a campaign meetin
 or rally?" — which is correct and shares almost no characters with the wording, so
 comparing them would measure labelling style.
 
-Nine Arab Barometer questionnaires are parsed. Nothing else needs to be: the WVS
-and Arab Opinion Index releases carry their question wording themselves, in column
-headers and variable labels respectively, so their instruments are kept as
-documentation rather than as parsing inputs. The two WVS instruments could not be
-parsed anyway — they are the Arabic as fielded, and the Arabic does not extract as
-text. Afrobarometer has no questionnaire in the archive yet.
+**Every survey has its published instrument** in
+[`docs/questionnaires/`](docs/questionnaires) — 31 documents, questionnaires and
+codebooks, each with its source URL in the catalog.
 
-The documentation still earns its keep. The WVS Wave 7 instrument's first page is
-where the negative sentinel codes those releases ship bare are defined; eight Arab
-Opinion Index codebooks give the response options behind its labels.
+Nine of them, the Arab Barometer set, are parsed for question text. The rest are
+documentation, for two different reasons. The WVS and Arab Opinion Index releases
+carry their wording themselves, in column headers and variable labels, so a PDF
+would be a second and less reliable source for something the data already states.
+Afrobarometer's are deliberately not parsed: it numbers variables differently from
+its questionnaire in places — Round 10 labels the variable `Q6` as question `Q5b`,
+and 19 more diverge the same way — so mapping question numbers onto variables would
+attach the wrong wording.
+
+The documentation still earns its keep. The WVS Wave 7 instrument's first page
+defines the negative sentinel codes those releases ship bare, and is what
+`docs/missing-value-codes.md` quotes.
 
 ## Repository layout
 
@@ -191,7 +197,7 @@ Opinion Index codebooks give the response options behind its labels.
 | `data/<series>/<survey>/` | one folder per survey — the extracts |
 | `data/arab-barometer/wave-06-merged/` | derived: the three Wave VI rounds stacked |
 | `data/raw/` | the publishers' releases, tracked, so the archive rebuilds from a clone |
-| `docs/questionnaires/` | published instruments and codebooks, where a programme has one here |
+| `docs/questionnaires/` | the published instrument for every survey — 31 documents |
 | `catalog/` | `catalog.json` / `catalog.csv` and the reports, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the crosswalk, missing-value codes |
 | `main/figures/` | generated figures and the data behind them |

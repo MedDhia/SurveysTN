@@ -211,8 +211,14 @@ def stem_candidates(name: str) -> list[str]:
     return out
 
 
-def load_wave(survey: dict, questions: dict[str, str]) -> dict:
-    """Variable names and best-available question text for one wave."""
+def load_wave(survey: dict, questions: dict[str, str], label_language: str = "English") -> dict:
+    """Variable names and best-available question text for one wave.
+
+    ``label_language`` is what the release's own variable labels are written in.
+    Afrobarometer Round 9 is distributed as the English release but labels its
+    variables in French, and a French label is not the English wording however
+    accurate it is -- so where it is not English the questionnaire wins.
+    """
     sav = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
     _, meta = pyreadstat.read_sav(str(sav), metadataonly=True)
 
@@ -235,16 +241,22 @@ def load_wave(survey: dict, questions: dict[str, str]) -> dict:
                     break
 
         # The release label is what the publisher attached to the column, so it
-        # wins where it exists; the questionnaire fills the gaps.
-        if key in label_text:
+        # wins where it exists and is in the archive's language; the questionnaire
+        # fills the gaps, and takes over entirely where the labels are not English.
+        english_labels = label_language == "English"
+        if key in label_text and english_labels:
             text[key] = label_text[key]
             source[key] = "release label"
         elif key in sheet_text:
             text[key] = sheet_text[key]
             source.setdefault(key, "questionnaire")
+        elif key in label_text:
+            text[key] = label_text[key]
+            source[key] = f"release label ({label_language})"
 
     return {
         "names": names,
+        "label_language": label_language,
         "label_text": label_text,
         "sheet_text": sheet_text,
         "text": text,
@@ -261,7 +273,10 @@ def check_parse(wave: dict, questions: dict[str, str]) -> dict:
         for c in meta.column_names
     }
     labels = {k: v for k, v in labels.items() if v}
+    if wave["label_language"] != "English":
+        labels = {}
     wording = {k: v for k, v in labels.items() if looks_like_wording(v)}
+    wave_language = wave["label_language"]
     shared = [k for k in wording if k in questions]
     ratios = [agree(wording[k], questions[k]) for k in shared]
     agreeing = sum(1 for r in ratios if r >= AGREEMENT_FLOOR)
@@ -277,6 +292,8 @@ def check_parse(wave: dict, questions: dict[str, str]) -> dict:
         "not_validated_reason": (
             None
             if len(shared) >= MINIMUM_COMPARISONS
+            else f"release labels are in {wave_language}, not English"
+            if wave_language != "English"
             else "release labels are topic tags, not question wording"
             if len(labels) >= MINIMUM_COMPARISONS
             else "release carries no variable labels"
@@ -393,7 +410,11 @@ def build_rows(series: str, tags: list[str], all_tags: list[str], waves: dict) -
         # ("Age") where the questionnaire spells the question out ("How old are
         # you?"), and comparing the two forms would read as drift that is not there.
         sheet = [waves[t]["sheet_text"][name] for t in present if name in waves[t]["sheet_text"]]
-        labels = [waves[t]["label_text"][name] for t in present if name in waves[t]["label_text"]]
+        labels = [
+            waves[t]["label_text"][name]
+            for t in present
+            if name in waves[t]["label_text"] and waves[t]["label_language"] == "English"
+        ]
         if len(sheet) >= 2:
             wordings, basis = sheet, "questionnaire"
         elif len(labels) >= 2:
@@ -458,7 +479,8 @@ def main() -> None:
         # wording is in the release headers anyway.
         parse_it = bool(questionnaire) and questionnaire.get("parsed_for_question_text", True)
         questions = parse_questionnaire(ROOT / questionnaire["file"]) if parse_it else {}
-        waves[s["key"]] = load_wave(s, questions)
+        label_language = spec.get("release_label_language", "English")
+        waves[s["key"]] = load_wave(s, questions, label_language)
         entry = {
             "wave_label": s["wave_label"],
             "series": s["series"],

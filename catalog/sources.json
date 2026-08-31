@@ -295,8 +295,19 @@
       "fieldwork_tunisia": "derive",
       "fieldwork_date_var": "DATEINTR",
       "fieldwork_source": "derived from the DATEINTR variable in the data file",
-      "questionnaire": null,
-      "notes": "Round 6 release, English."
+      "questionnaire": {
+        "file": "docs/questionnaires/afro-w06-questionnaire.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/02/tun_r6_questionnaire.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "Not parsed for question text: the release numbers variables differently from the questionnaire in places (Round 10 labels the variable Q6 as question Q5b, and 19 more like it), so mapping question numbers onto variables would attach the wrong wording. The release's own labels are used instead."
+      },
+      "notes": "Round 6 release, English.",
+      "codebook": {
+        "file": "docs/questionnaires/afro-w06-codebook.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/02/tun-_r6_codebook_en.pdf",
+        "language": "English"
+      }
     },
     {
       "series": "afrobarometer",
@@ -312,8 +323,19 @@
       "fieldwork_tunisia": "derive",
       "fieldwork_date_var": "DATEINTR",
       "fieldwork_source": "derived from the DATEINTR variable in the data file",
-      "questionnaire": null,
-      "notes": "Round 7 release, English."
+      "questionnaire": {
+        "file": "docs/questionnaires/afro-w07-questionnaire.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/02/afrobarometer_questionnaire_tun_r7_en_2021-06-21.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "Not parsed for question text: the release numbers variables differently from the questionnaire in places (Round 10 labels the variable Q6 as question Q5b, and 19 more like it), so mapping question numbers onto variables would attach the wrong wording. The release's own labels are used instead."
+      },
+      "notes": "Round 7 release, English.",
+      "codebook": {
+        "file": "docs/questionnaires/afro-w07-codebook.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/11/TUN_R7.Codebook_11sept20_final.pdf",
+        "language": "English"
+      }
     },
     {
       "series": "afrobarometer",
@@ -329,8 +351,19 @@
       "fieldwork_tunisia": "derive",
       "fieldwork_date_var": "DATEINTR",
       "fieldwork_source": "derived from the DATEINTR variable in the data file",
-      "questionnaire": null,
-      "notes": "Round 8 release of 31 March 2021, English."
+      "questionnaire": {
+        "file": "docs/questionnaires/afro-w08-questionnaire.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/02/afrobarometer_questionnaire_tun_r8_ar_2020-02-22.pdf",
+        "language": "Arabic (as fielded; no English questionnaire is published for this round)",
+        "parsed_for_question_text": false,
+        "note": "Arabic as fielded; no English questionnaire is published for this round. Not parsed for question text: the release numbers variables differently from the questionnaire in places (Round 10 labels the variable Q6 as question Q5b, and 19 more like it), so mapping question numbers onto variables would attach the wrong wording. The release's own labels are used instead."
+      },
+      "notes": "Round 8 release of 31 March 2021, English.",
+      "codebook": {
+        "file": "docs/questionnaires/afro-w08-codebook.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/06/afrobarometer_codebook_tun_r8_en_2021-06-18.pdf",
+        "language": "English"
+      }
     },
     {
       "series": "afrobarometer",
@@ -346,8 +379,20 @@
       "fieldwork_tunisia": "derive",
       "fieldwork_date_var": "DATEINTR",
       "fieldwork_source": "derived from the DATEINTR variable in the data file",
-      "questionnaire": null,
-      "notes": "Round 9 release of 1 March 2023, English."
+      "questionnaire": {
+        "file": "docs/questionnaires/afro-w09-questionnaire.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2023/06/TUN_R9.Indigenised-Questionnaire_12Apr22_NEW-Final.docx.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "Not parsed for question text: the release numbers variables differently from the questionnaire in places (Round 10 labels the variable Q6 as question Q5b, and 19 more like it), so mapping question numbers onto variables would attach the wrong wording. The release's own labels are used instead."
+      },
+      "notes": "Round 9 release of 1 March 2023, English. Its variable labels are in French despite the English release; question text comes from the questionnaire.",
+      "codebook": {
+        "file": "docs/questionnaires/afro-w09-codebook.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2024/07/TUN_R9.Codebook_20Jun24.final_.pdf",
+        "language": "English"
+      },
+      "release_label_language": "French"
     },
     {
       "series": "afrobarometer",
@@ -363,8 +408,19 @@
       "fieldwork_tunisia": "derive",
       "fieldwork_date_var": "DATEINTR",
       "fieldwork_source": "derived from the DATEINTR variable in the data file",
-      "questionnaire": null,
-      "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English."
+      "questionnaire": {
+        "file": "docs/questionnaires/afro-w10-questionnaire.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2025/12/TUN_R10.questionnaire_26Feb24_Final.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "Not parsed for question text: the release numbers variables differently from the questionnaire in places (Round 10 labels the variable Q6 as question Q5b, and 19 more like it), so mapping question numbers onto variables would attach the wrong wording. The release's own labels are used instead."
+      },
+      "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English.",
+      "codebook": {
+        "file": "docs/questionnaires/afro-w10-codebook.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2025/06/TUN_R10.Codebook_30May25.final_.pdf",
+        "language": "English"
+      }
     },
     {
       "series": "arab-opinion-index",
@@ -524,8 +580,14 @@
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
       "release_page": "https://arabindex.dohainstitute.org/EN/Pages/Arab-Opinion-Index-2019-2020.aspx",
-      "questionnaire": null,
-      "notes": "The publisher's codebook link for this round returns 404; no codebook is in the archive.",
+      "questionnaire": {
+        "file": "docs/questionnaires/aoi-2019-2020-codebook.pdf",
+        "url": "https://arabindex.dohainstitute.org/EN/Documents/CodeBook-2019-2022-EN.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "The link the publisher prints for this round, CodeBook-2019-2020-EN.pdf, returns 404; the page also carries CodeBook-2019-2022-EN.pdf, which is this round's."
+      },
+      "notes": "",
       "download_url": "https://arabindex.dohainstitute.org/AR/Documents/AOI-DATA-2019-2020-EN-SPSS.sav"
     },
     {

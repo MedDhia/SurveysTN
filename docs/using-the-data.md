@@ -32,7 +32,7 @@ meta.variable_value_labels["Q101"]    # the response options
 use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 ```
 
-## Seven things to check before you analyse
+## Eight things to check before you analyse
 
 **Weights.** Every survey here carries a design weight except Arab Barometer Wave
 II, and each series names it differently:
@@ -87,6 +87,12 @@ Wave II's 468. The Afrobarometer and WVS country files are the clean ones, with
 almost nothing empty. Columns are kept so positions match the release;
 `codebook.csv` gives `n_valid` per variable, and filtering on it is usually the
 first thing to do.
+
+**Afrobarometer Round 9's variable labels are in French.** The release is the
+English one, but 277 of its 386 labels read `Raison d'un entretien infructueux
+Ménage1` rather than `Reason for Unsuccessful Call Household 1`. The crosswalk marks
+them `release label (French)`; the English wording for that round is in
+`docs/questionnaires/afro-w09-questionnaire.pdf`.
 
 **Wave VI is three surveys, not one.** Three telephone rounds, months apart, with
 separate samples and separate questionnaires. Their ID numbers overlap but do not
