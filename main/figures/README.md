@@ -82,10 +82,13 @@ inside Afrobarometer, or inside the Arab Opinion Index, and never between them.
 21 of the 22 recur with an identical response scale; the one that does not is
 marked `differs` and greyed.
 
-Rows carry the clause that *differs*, not the first words of the question. Thirteen
-of them open with the same twelve words and close with the same five, so a label
-truncated at the front prints thirteen identical rows; the shared stems are named
-under the standfirst.
+Thirteen of the 22 are one Arab Opinion Index battery, opening with the same words
+and closing with the same words. Truncating those labels at the front prints thirteen
+identical rows; deleting the shared part instead leaves rows reading "religion",
+"wealth", "gender/sex" — categories, with nothing left saying what was asked about
+them. So the battery is drawn as a shaded block under a heading carrying the wording
+its items share, *Equality … is applied in your country?*, and each row beneath it
+carries only the clause that varies.
 
 ### `inequality-distributions.png` / `.svg`
 
@@ -98,6 +101,10 @@ dropped rather than counted as an answer.
 **Stacked proportions, not densities.** These are four-point ordinal items, and a
 smoothed density over four categories invents shape between points that do not
 exist.
+
+**Every panel says what it measures.** Seven of the ten belong to the same battery,
+and a panel titled only "Religion" has lost the question — so each of those carries
+the wording it shares with the rest of the battery on a line under its title.
 
 **Each panel carries its own scale**, because the releases do not share one and do
 not all run the same way: the Arab Opinion Index codes `applied completely` as 1,

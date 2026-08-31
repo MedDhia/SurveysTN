@@ -121,14 +121,50 @@ def _runs(texts: list[str]) -> tuple[int, int]:
     return lead, tail
 
 
-def shorten(texts: list[str]) -> tuple[list[str], list[str]]:
-    """Label a battery by the clause that differs, not by its first 70 characters.
+# Phrases that ask a question without saying what it is about. Only these come off
+# the front of a shared stem; whatever follows is the subject and has to survive.
+BOILERPLATE = (
+    "to what extent do you believe that the",
+    "to what extent do you believe that",
+    "to what extent do you think that the",
+    "to what extent do you think that",
+    "please indicate your level of personal agreement/disagreement with each of this",
+    "please indicate your level of personal agreement/disagreement with each of these",
+    "do you think the availability of",
+    "how would you evaluate the",
+)
 
-    Ten of these questions open with the same twelve words and close with the same
-    five, so a truncated label prints ten identical rows. Where several questions
-    share a long opening, the shared stem is hoisted out and returned as a note; each
-    row then carries only the words that distinguish it. Questions that share nothing
-    keep their own wording.
+
+def strip_boilerplate(stem: str) -> str:
+    low = stem.lower()
+    for phrase in sorted(BOILERPLATE, key=len, reverse=True):
+        if low.startswith(phrase):
+            return stem[len(phrase):].strip()
+    return stem
+
+
+class Family:
+    """A battery: several questions sharing an opening, and the subject they share."""
+
+    def __init__(self, subject: str | None, members: list[int]) -> None:
+        self.subject, self.members = subject, members
+
+
+def shorten(texts: list[str]) -> tuple[list[str], list[Family]]:
+    """Split a battery into the subject it shares and the clause each item varies.
+
+    Thirteen of these questions open with the same words and close with the same
+    words, so a label truncated at the front prints thirteen identical rows. But the
+    shared part is not boilerplate — it is the substance. ``the Equality of all
+    citizens regardless of … is applied in your country`` is the entire reason these
+    items belong to a page about inequality, and a row reading only ``religion`` has
+    lost what was being measured.
+
+    So the stem is not deleted, it is promoted: returned as a *subject* for the
+    caller to draw as a heading over the rows it covers. Only a leading interrogative
+    phrase is dropped from it. A family whose stem is nothing but boilerplate — ``please
+    indicate your level of personal agreement/disagreement with each of this`` — gets
+    no subject, because its items already say what they are about.
     """
     stems: dict[tuple[str, ...], list[int]] = {}
     for i, text in enumerate(texts):
@@ -136,26 +172,28 @@ def shorten(texts: list[str]) -> tuple[list[str], list[str]]:
         stems.setdefault(key, []).append(i)
 
     labels = list(texts)
-    notes: list[str] = []
-    for members in stems.values():
+    families: list[Family] = []
+    for members in sorted(stems.values(), key=min):
         if len(members) < 2:
+            families.append(Family(None, members))
             continue
-        family = [texts[i] for i in members]
-        lead, tail = _runs(family)
+        group = [texts[i] for i in members]
+        lead, tail = _runs(group)
         if lead < 4:
+            families.append(Family(None, members))
             continue
-        words = family[0].split()
-        stem = " ".join(words[:lead])
+        words = group[0].split()
+        stem = strip_boilerplate(" ".join(words[:lead]))
         close = " ".join(words[len(words) - tail:]) if tail else ""
-        for i, text in zip(members, family):
+        for i, text in zip(members, group):
             middle = text.split()[lead : len(text.split()) - tail or None]
             clause = " ".join(middle) or text
             labels[i] = clause[0].upper() + clause[1:]
-        notes.append(
-            f"{len(members)} rows share the stem “{stem} … {close}”" if close
-            else f"{len(members)} rows share the stem “{stem} …”"
-        )
-    return labels, notes
+        subject = f"{stem} … {close}".strip(" …") if (stem or close) else ""
+        if subject:
+            subject = subject[0].upper() + subject[1:]
+        families.append(Family(subject or None, members))
+    return labels, families
 
 
 def clip(text: str, width: int) -> str:
@@ -193,34 +231,56 @@ def coverage_figure(rows: pd.DataFrame, surveys: dict) -> None:
         .agg(n=("survey", "nunique"), question=("question", "first"), scale=("scale", "first"))
         .sort_values("n", ascending=False)
     )
-    labels, notes = shorten([tidy(q) for q in order["question"]])
+    clusters = list(order.index)
+    labels, families = shorten([tidy(q) for q in order["question"]])
 
-    height = max(4.5, 0.44 * len(order) + 3)
+    # A battery is drawn as a block under its own heading, so the rows stay contiguous
+    # and the subject they share is on screen next to them.
+    families.sort(key=lambda f: -max(order["n"].iloc[i] for i in f.members))
+    entries: list[tuple] = []
+    for family in families:
+        members = sorted(family.members, key=lambda i: -order["n"].iloc[i])
+        if family.subject:
+            entries.append(("head", family.subject, len(members)))
+        for i in members:
+            entries.append(("row", i))
+
+    height = max(4.5, 0.42 * len(entries) + 3)
     fig, ax = plt.subplots(figsize=(13.5, height), facecolor=SURFACE)
     ax.set_facecolor(SURFACE)
 
-    present, ticks = set(), []
-    for i, (cluster, meta) in enumerate(order.iterrows()):
-        y = len(order) - i
+    present, ticks, heads = set(), [], []
+    for position, entry in enumerate(entries):
+        y = len(entries) - position
+        if entry[0] == "head":
+            heads.append((y, entry[1], entry[2]))
+            continue
+        i = entry[1]
+        cluster, meta = clusters[i], order.iloc[i]
         members = rows[rows["cluster"] == cluster]
         years = sorted({year_of(surveys[s]) for s in members["survey"]})
-        ax.plot([min(years), max(years)], [y, y], color=GRID, lw=1.4, zorder=1)
+        ax.plot([min(years), max(years)], [y, y], color=GRID, lw=1.4, zorder=2)
         for survey in members["survey"]:
             series = surveys[survey]["series"]
             present.add(series)
-            ax.scatter(
-                year_of(surveys[survey]), y, s=64, zorder=3,
-                color=SERIES_COLOUR[series], edgecolor=SURFACE, linewidth=1.2,
-            )
-        ticks.append((y, clip(labels[i], 64), int(meta["n"]), meta["scale"]))
+            ax.scatter(year_of(surveys[survey]), y, s=64, zorder=3,
+                       color=SERIES_COLOUR[series], edgecolor=SURFACE, linewidth=1.2)
+        ticks.append((y, clip(labels[i], 60), int(meta["n"]), meta["scale"]))
 
     span = sorted({year_of(surveys[s]) for s in rows["survey"]})
     first, last = min(span), max(span)
     ax.set_xlim(first - 0.9, last + 0.9)
     ax.set_xticks([y for y in range(first, last + 1) if y % 2 == first % 2])
-    ax.set_ylim(0.3, len(order) + 0.7)
+    ax.set_ylim(0.3, len(entries) + 0.9)
     ax.grid(axis="x", color=GRID, lw=0.8, zorder=0)
     frame_style(ax)
+
+    for y, subject, count in heads:
+        ax.axhspan(y - count - 0.5, y + 0.45, color="#f3f2ef", zorder=0, lw=0)
+        ax.text(-0.012, y - 0.15, subject, transform=ax.get_yaxis_transform(), ha="right",
+                va="center", fontsize=8.8, fontweight="bold", color=INK)
+        ax.text(1.012, y - 0.15, f"{count} items", transform=ax.get_yaxis_transform(),
+                ha="left", va="center", fontsize=8, color=INK_FAINT)
 
     ax.set_yticks([y for y, *_ in ticks])
     ax.set_yticklabels([t for _, t, *_ in ticks], fontsize=8.6, color=INK)
@@ -238,18 +298,17 @@ def coverage_figure(rows: pd.DataFrame, surveys: dict) -> None:
 
     lines = [
         f"{len(order)} questions, and the years each was asked. A run of dots in one colour is a series "
-        "that can be built; the archive has no run that changes colour."
+        "that can be built; the archive has no run that changes colour.",
+        "A shaded block is one battery: the heading carries the wording its items share, and each row "
+        "beneath it carries only the clause that varies.",
     ]
-    if notes:
-        lines.append("Rows carry the clause that differs, not the first words of the question:")
-        lines += [f"    · {note}" for note in notes]
     top = header(fig, "Inequality questions asked in more than two surveys", lines)
     fig.tight_layout(rect=(0, 0, 1, top))
     for suffix in ("png", "svg"):
         fig.savefig(FIGURES / f"inequality-coverage.{suffix}", dpi=200, facecolor=SURFACE,
                     bbox_inches="tight")
     plt.close(fig)
-    print(f"coverage: {len(order)} questions")
+    print(f"coverage: {len(order)} questions, {sum(1 for f in families if f.subject)} batteries")
 
 
 POSITIVE = {"good", "well", "applied", "agree", "satisfied", "fair", "equal", "always", "often"}
@@ -323,7 +382,8 @@ def distribution_figure(rows: pd.DataFrame, surveys: dict) -> None:
         print("distributions: nothing with an identical scale")
         return
 
-    labels, notes = shorten([tidy(q) for _, q, _, _ in panels])
+    labels, families = shorten([tidy(q) for _, q, _, _ in panels])
+    subject_of = {i: f.subject for f in families for i in f.members if f.subject}
     reversed_any = False
 
     cols = 3
@@ -356,7 +416,14 @@ def distribution_figure(rows: pd.DataFrame, surveys: dict) -> None:
         ax.set_yticks([0, 0.5, 1])
         ax.set_yticklabels(["0%", "50%", "100%"], fontsize=7.6)
         frame_style(ax)
-        ax.set_title(clip(labels[panel], 66), fontsize=8.8, color=INK, loc="left", pad=6)
+        subject = subject_of.get(panel)
+        ax.set_title(clip(labels[panel], 62), fontsize=8.8, color=INK, loc="left",
+                     pad=20 if subject else 6)
+        if subject:
+            # Without this line the panel is titled "Religion", and nothing on it says
+            # what was asked about religion.
+            ax.text(0, 1.055, clip(subject, 74), transform=ax.transAxes, ha="left",
+                    va="bottom", fontsize=7.6, color=INK_SOFT)
         ax.legend(loc="upper center", bbox_to_anchor=(0.5, -0.30), ncol=2, frameon=False,
                   fontsize=7.2, labelcolor=INK_SOFT, handlelength=1.1, handleheight=1.1,
                   columnspacing=1.1, borderpad=0)
@@ -372,8 +439,9 @@ def distribution_figure(rows: pd.DataFrame, surveys: dict) -> None:
         "Bars read affirmative (dark blue) to negative (dark red) in every panel"
         + (", which reverses the code order of the Afrobarometer items." if reversed_any else "."),
     ]
-    if notes:
-        lines += [f"    · {note}" for note in notes]
+    if subject_of:
+        lines.append("A panel whose title is a bare category carries the wording it shares with the rest of "
+                     "its battery on the line above it.")
     top = header(fig, "How Tunisians answered the recurring inequality questions", lines)
     fig.tight_layout(rect=(0, 0, 1, top), h_pad=3.4)
     for suffix in ("png", "svg"):
