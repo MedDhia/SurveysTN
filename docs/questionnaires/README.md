@@ -1,7 +1,7 @@
 # Questionnaires and codebooks
 
 The published instrument for every survey in the archive, as the programme released
-it. **All 25 surveys have one.** These are the documents the data was collected
+it. **All 26 surveys have one.** These are the documents the data was collected
 with, and for some surveys they are the only place the question wording exists in
 English.
 
@@ -44,6 +44,7 @@ source `docs/missing-value-codes.md` quotes.
 
 | File | Round | Language | Parsed |
 |---|---|---|---|
+| `afro-w05-questionnaire.pdf` + `afro-w05-codebook.pdf` | [Round 5](../../data/afrobarometer/round-05) | English | no |
 | `afro-w06-questionnaire.pdf` + `afro-w06-codebook.pdf` | [Round 6](../../data/afrobarometer/round-06) | English | no |
 | `afro-w07-questionnaire.pdf` + `afro-w07-codebook.pdf` | [Round 7](../../data/afrobarometer/round-07) | English | no |
 | `afro-w08-questionnaire.pdf` + `afro-w08-codebook.pdf` | [Round 8](../../data/afrobarometer/round-08) | questionnaire Arabic, codebook English | no |

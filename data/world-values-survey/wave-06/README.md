@@ -17,8 +17,8 @@
 | `codebook.csv` | 0.03 MB | `7d0f0c8b7b1878a7` |
 | `codebook.json` | 0.11 MB | `4e5c23cf24c00144` |
 | `world-values-survey-w06-tunisia-codes.csv` | 1.09 MB | `d9bf7fd3a9a481ad` |
-| `world-values-survey-w06-tunisia.dta` | 3.63 MB | `38c309d787369e0d` |
-| `world-values-survey-w06-tunisia.sav` | 3.44 MB | `515007824c46a0f7` |
+| `world-values-survey-w06-tunisia.dta` | 3.63 MB | `af334bc49888cfb8` |
+| `world-values-survey-w06-tunisia.sav` | 3.44 MB | `89ecb9983e28be67` |
 
 Every variable carries data for at least one respondent.
 

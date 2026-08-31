@@ -41,7 +41,7 @@ II, and each series names it differently:
 |---|---|---|
 | Arab Barometer | `wt`, `WT` | stratum and PSU in Waves IV, V, VII, VIII; PSU only in the Wave VI rounds; none in Wave III |
 | World Values Survey | `W_WEIGHT` | — |
-| Afrobarometer | `withinwt` (Rounds 6–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | — |
+| Afrobarometer | `withinwt` (Rounds 5–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | — |
 | Arab Opinion Index | `Weight` | — |
 
 Unweighted estimates from a weighted survey are not nationally representative.
@@ -57,7 +57,7 @@ matches within a series only, and so should you. Within WVS, Wave 6 numbers its 
 `V9` and `Q6` are the same question — so name matching finds only the derived
 indices. Afrobarometer renumbers between rounds while keeping the `Q` prefix, which is
 worse: a shared name there is often a different question, and 423 of its 901
-variables are flagged for wording that does not match. The Arab Opinion Index names
+variables are flagged for wording that does not match — 311 of 987. The Arab Opinion Index names
 many variables for the year they were asked in — `Q2020_71_1`, `q2025_43_1` — so its
 rounds overlap little by construction: 54 of 2,813 variables appear in all nine. Use
 [`crosswalk-suggested.csv`](crosswalk-suggested.csv), which pairs them by question
@@ -121,7 +121,7 @@ appear in exactly one survey, and how much genuinely carries over differs sharpl
 |---|---:|---:|
 | Arab Barometer | 13 of 1,966 | 97 |
 | World Values Survey | 43 of 724 | 3 |
-| Afrobarometer | 61 of 901 | 423 |
+| Afrobarometer | 43 of 987 | 311 |
 | Arab Opinion Index | 54 of 2,813 | 3 |
 
 A shared name is not evidence of a shared question — Afrobarometer is the warning,

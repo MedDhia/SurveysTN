@@ -5,7 +5,7 @@ Survey, Afrobarometer and the Arab Opinion Index so far — reorganised so that 
 survey is one self-describing folder: the respondents, in every common format, with a codebook
 and a provenance record.
 
-**39,188 Tunisian respondents across twenty-five surveys and four series, 2010 to
+**40,388 Tunisian respondents across twenty-six surveys and four series, 2010 to
 2025.** The releases they come from are in the repository too, so a clone can
 rebuild the whole archive and check every cell of it against the publishers' own
 files.
@@ -40,10 +40,11 @@ recoded.
 | [Wave 6](data/world-values-survey/wave-06) | 1,205 | 370 | Nov–Dec 2013 |
 | [Wave 7](data/world-values-survey/wave-07) | 1,208 | 397 | Apr–May 2019 |
 
-### Afrobarometer — 5 surveys, 5,999 respondents
+### Afrobarometer — 6 surveys, 7,199 respondents
 
 | Survey | Respondents | Variables | Fieldwork |
 |---|---:|---:|---|
+| [Round 5](data/afrobarometer/round-05) | 1,200 | 300 | Jan–Feb 2013 |
 | [Round 6](data/afrobarometer/round-06) | 1,200 | 334 | Apr–May 2015 |
 | [Round 7](data/afrobarometer/round-07) | 1,199 | 339 | Mar–May 2018 |
 | [Round 8](data/afrobarometer/round-08) | 1,200 | 377 | Feb–Mar 2020 |
@@ -100,10 +101,12 @@ by survey, and one answer that a default CSV reader silently turns into missing.
 
 ![Fieldwork coverage](main/figures/fieldwork-coverage.png)
 
-The archive spans sixteen years and does not cover them. Twelve of the twenty-five
-surveys record an interview date per respondent; between them those cover **292
-distinct days**, and no two surveys were ever in the field on the same day. The
-longest gap between two covered days is 1,057 days. The other thirteen releases
+The archive spans sixteen years and does not cover them. Thirteen of the twenty-six
+surveys record an interview date per respondent; between them those cover **314
+distinct days**, and no two surveys were ever in the field on the same day — though
+Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
+in early 2013, which is as close to a contemporaneous cross-programme reading as the
+archive gets. The longest gap between two covered days is 1,057 days. The other thirteen releases
 carry only a month or a year, and the figure draws them at that resolution rather
 than implying more. [`main/figures/README.md`](main/figures/README.md) reads it in
 full, and the day-level data sits beside it as CSV.
@@ -129,7 +132,7 @@ depends on the estimand.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the surveys up: one row per
 variable, the name it takes in each survey, the question each one asked, and
-whether the wording held. **6,404 variables, 6,338 of them with question text.**
+whether the wording held. **6,490 variables, 6,424 of them with question text.**
 
 Variables are matched **within a series and never across one**. `Q1` is the
 governorate in Arab Barometer and "Important in life: Family" in the World Values
@@ -142,7 +145,7 @@ one varies by series:
 |---|---:|---:|
 | Arab Barometer | 13 of 1,966 | 97 |
 | World Values Survey | 43 of 724 | 3 |
-| Afrobarometer | 61 of 901 | 423 |
+| Afrobarometer | 43 of 987 | 311 |
 | Arab Opinion Index | 54 of 2,813 | 3 |
 
 Afrobarometer is the cautionary one: it renumbers between rounds while keeping the
@@ -152,7 +155,7 @@ Afrobarometer is the cautionary one: it renumbers between rounds while keeping t
 Where a programme renumbers outright, name matching finds nothing at all — WVS
 asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
 [`docs/crosswalk-suggested.csv`](docs/crosswalk-suggested.csv) pairs those up by
-question text instead: **648 pairs**, offered only where the wordings are all but
+question text instead: **859 pairs**, offered only where the wordings are all but
 identical, unambiguous, and agreed on any numbers they contain. They are
 suggestions to confirm against the publisher's own crosswalk, not findings.
 
@@ -174,7 +177,7 @@ or rally?" — which is correct and shares almost no characters with the wording
 comparing them would measure labelling style.
 
 **Every survey has its published instrument** in
-[`docs/questionnaires/`](docs/questionnaires) — 31 documents, questionnaires and
+[`docs/questionnaires/`](docs/questionnaires) — 33 documents, questionnaires and
 codebooks, each with its source URL in the catalog.
 
 Nine of them, the Arab Barometer set, are parsed for question text. The rest are
@@ -197,7 +200,7 @@ defines the negative sentinel codes those releases ship bare, and is what
 | `data/<series>/<survey>/` | one folder per survey — the extracts |
 | `data/arab-barometer/wave-06-merged/` | derived: the three Wave VI rounds stacked |
 | `data/raw/` | the publishers' releases, tracked, so the archive rebuilds from a clone |
-| `docs/questionnaires/` | the published instrument for every survey — 31 documents |
+| `docs/questionnaires/` | the published instrument for every survey — 33 documents |
 | `catalog/` | `catalog.json` / `catalog.csv` and the reports, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the crosswalk, missing-value codes |
 | `main/figures/` | generated figures and the data behind them |

@@ -1,4 +1,215 @@
 series,from_survey,from_variable,to_survey,to_variable,similarity,question_text
+afrobarometer,afro-w05,EA_ROAD,afro-w06,EA_ROAD_A,0.962,EA-ROAD. Tarred/ paved road
+afrobarometer,afro-w05,Q107A,afro-w10,Q104A,1.0,Q107a. Check with others
+afrobarometer,afro-w05,Q107B,afro-w10,Q104B,1.0,Q107b. Influence by others
+afrobarometer,afro-w05,Q107C,afro-w10,Q104C,1.0,Q107c. Approached by community/party representatives
+afrobarometer,afro-w05,Q107D,afro-w10,Q104D,1.0,Q107d. Feel threatened
+afrobarometer,afro-w05,Q107E,afro-w10,Q104E,1.0,Q107e. Physically threatened
+afrobarometer,afro-w05,Q110A,afro-w10,Q106A,1.0,Q110a. Respondent friendly
+afrobarometer,afro-w05,Q110B,afro-w10,Q106B,1.0,Q110b. Respondent interested
+afrobarometer,afro-w05,Q110C,afro-w10,Q106C,1.0,Q110c. Respondent cooperative
+afrobarometer,afro-w05,Q110D,afro-w10,Q106D,1.0,Q110d. Respondent patient
+afrobarometer,afro-w05,Q110E,afro-w10,Q106E,1.0,Q110e. Respondent at ease
+afrobarometer,afro-w05,Q110F,afro-w10,Q106F,1.0,Q110f. Respondent honest
+afrobarometer,afro-w05,Q117,afro-w07,Q118,1.0,Q117. Interviewer's education
+afrobarometer,afro-w05,Q13A,afro-w06,Q12A,1.0,Q13a. Radio news
+afrobarometer,afro-w05,Q13A,afro-w07,Q12A,1.0,Q13a. Radio news
+afrobarometer,afro-w05,Q13A,afro-w08,Q55A,1.0,Q13a. Radio news
+afrobarometer,afro-w05,Q13B,afro-w06,Q12B,1.0,Q13b. Television news
+afrobarometer,afro-w05,Q13B,afro-w07,Q12B,1.0,Q13b. Television news
+afrobarometer,afro-w05,Q13B,afro-w08,Q55B,1.0,Q13b. Television news
+afrobarometer,afro-w05,Q13C,afro-w06,Q12C,1.0,Q13c. Newspaper news
+afrobarometer,afro-w05,Q13C,afro-w07,Q12C,1.0,Q13c. Newspaper news
+afrobarometer,afro-w05,Q13C,afro-w08,Q55C,1.0,Q13c. Newspaper news
+afrobarometer,afro-w05,Q13D,afro-w06,Q12D,1.0,Q13d. Internet
+afrobarometer,afro-w05,Q15,afro-w08,Q9,1.0,Q15. Discuss politics
+afrobarometer,afro-w05,Q17A,afro-w06,Q15A,1.0,Q17a. Freedom to say what you think
+afrobarometer,afro-w05,Q17B,afro-w06,Q15B,1.0,Q17b. Freedom to join any political organizations
+afrobarometer,afro-w05,Q17C,afro-w06,Q15C,1.0,Q17c. Freedom to choose who to vote for
+afrobarometer,afro-w05,Q19,afro-w08,Q19A,1.0,Q19. Government bans organizations vs. join any
+afrobarometer,afro-w05,Q20,afro-w06,Q17,1.0,Q20. Newspapers free to publish vs. government control
+afrobarometer,afro-w05,Q20,afro-w07,Q17,1.0,Q20. Newspapers free to publish vs. government control
+afrobarometer,afro-w05,Q26A,afro-w08,Q11A,1.0,Q26a. Attend a community meeting
+afrobarometer,afro-w05,Q26B,afro-w08,Q11B,1.0,Q26b. Join others to raise an issue
+afrobarometer,afro-w05,Q26D,afro-w08,Q11C,1.0,Q26d. Attend a demonstration or protest march
+afrobarometer,afro-w05,Q26D,afro-w10,Q11D,1.0,Q26d. Attend a demonstration or protest march
+afrobarometer,afro-w05,Q29C,afro-w07,Q24B,1.0,Q29c. Last national election: work for a candidate or party
+afrobarometer,afro-w05,Q29C,afro-w08,Q15B,1.0,Q29c. Last national election: work for a candidate or party
+afrobarometer,afro-w05,Q30A,afro-w06,Q24A,1.0,Q30a. Contact local government councillor
+afrobarometer,afro-w05,Q30A,afro-w08,Q12A,1.0,Q30a. Contact local government councillor
+afrobarometer,afro-w05,Q30B,afro-w06,Q24B,1.0,Q30b. Contact MP
+afrobarometer,afro-w05,Q30B,afro-w08,Q12B,1.0,Q30b. Contact MP
+afrobarometer,afro-w05,Q30B,afro-w10,Q12A,1.0,Q30b. Contact MP
+afrobarometer,afro-w05,Q30C,afro-w06,Q24C,1.0,Q30c. Contact official of a government agency
+afrobarometer,afro-w05,Q30C,afro-w07,Q25C,1.0,Q30c. Contact official of a government agency
+afrobarometer,afro-w05,Q30D,afro-w06,Q24D,1.0,Q30d. Contact political party official
+afrobarometer,afro-w05,Q30D,afro-w07,Q25D,1.0,Q30d. Contact political party official
+afrobarometer,afro-w05,Q30D,afro-w08,Q12C,1.0,Q30d. Contact political party official
+afrobarometer,afro-w05,Q30D,afro-w10,Q12B,1.0,Q30d. Contact political party official
+afrobarometer,afro-w05,Q31A,afro-w06,Q28A,1.0,Q31a. Reject one-party rule
+afrobarometer,afro-w05,Q31A,afro-w07,Q27A,1.0,Q31a. Reject one-party rule
+afrobarometer,afro-w05,Q31A,afro-w08,Q20A,1.0,Q31a. Reject one-party rule
+afrobarometer,afro-w05,Q31B,afro-w06,Q28B,1.0,Q31b. Reject military rule
+afrobarometer,afro-w05,Q31B,afro-w07,Q27B,1.0,Q31b. Reject military rule
+afrobarometer,afro-w05,Q31B,afro-w08,Q20B,1.0,Q31b. Reject military rule
+afrobarometer,afro-w05,Q31C,afro-w06,Q28C,1.0,Q31c. Reject one-man rule
+afrobarometer,afro-w05,Q31C,afro-w07,Q27C,1.0,Q31c. Reject one-man rule
+afrobarometer,afro-w05,Q31C,afro-w08,Q20C,1.0,Q31c. Reject one-man rule
+afrobarometer,afro-w05,Q31C,afro-w10,Q21C,1.0,Q31c. Reject one-man rule
+afrobarometer,afro-w05,Q35,afro-w08,Q25,1.0,Q35. Political parties divisive vs. many parties needed
+afrobarometer,afro-w05,Q38,afro-w10,Q18B,1.0,Q38. Media checks government vs. avoid negative reporting
+afrobarometer,afro-w05,Q3A,afro-w06,Q4A,1.0,Q3a. Country's present economic condition
+afrobarometer,afro-w05,Q3A,afro-w07,Q4A,1.0,Q3a. Country's present economic condition
+afrobarometer,afro-w05,Q3A,afro-w08,Q4A,1.0,Q3a. Country's present economic condition
+afrobarometer,afro-w05,Q3A,afro-w10,Q4A,1.0,Q3a. Country's present economic condition
+afrobarometer,afro-w05,Q3B,afro-w06,Q4B,1.0,Q3b. Your present living conditions
+afrobarometer,afro-w05,Q3B,afro-w07,Q4B,1.0,Q3b. Your present living conditions
+afrobarometer,afro-w05,Q3B,afro-w08,Q4B,1.0,Q3b. Your present living conditions
+afrobarometer,afro-w05,Q3B,afro-w10,Q4B,1.0,Q3b. Your present living conditions
+afrobarometer,afro-w05,Q4,afro-w06,Q5,1.0,Q4. Your living conditions vs. others
+afrobarometer,afro-w05,Q4,afro-w07,Q5,1.0,Q4. Your living conditions vs. others
+afrobarometer,afro-w05,Q40,afro-w08,Q30,1.0,Q40. President free to act vs. obey the laws and courts
+afrobarometer,afro-w05,Q41,afro-w10,Q29,1.0,Q41. Presidential two term limit vs. no term limits
+afrobarometer,afro-w05,Q41A_ARB,afro-w06,Q39_NAF_A,0.968,Q41a.arb. Democracy is a system that contradicts the teachings of Islam
+afrobarometer,afro-w05,Q41B_ARB,afro-w06,Q39_NAF_B,0.975,"Q41b.arb. In a Muslim country, non-Muslims should enjoy less political rights than Muslims"
+afrobarometer,afro-w05,Q41C_ARB,afro-w07,Q82C_TUN,0.973,Q41c.arb. Religious leaders should not interfere in voters’ decisions in elections
+afrobarometer,afro-w05,Q41D_ARB,afro-w06,Q39_NAF_D,0.951,Q41d.arb. The country is better off if religious people hold public positions in the state
+afrobarometer,afro-w05,Q41D_ARB,afro-w07,Q82D_TUN,0.95,Q41d.arb. The country is better off if religious people hold public positions in the state
+afrobarometer,afro-w05,Q52B,afro-w07,Q39A,1.0,Q52b. How often party competition leads to conflict
+afrobarometer,afro-w05,Q52C,afro-w07,Q39B,1.0,Q52c. How often president ignores laws
+afrobarometer,afro-w05,Q52C,afro-w08,Q40B,1.0,Q52c. How often president ignores laws
+afrobarometer,afro-w05,Q52E,afro-w07,Q39C,1.0,Q52e. How often president ignores parliament
+afrobarometer,afro-w05,Q52E,afro-w08,Q40C,1.0,Q52e. How often president ignores parliament
+afrobarometer,afro-w05,Q52E,afro-w10,Q34B,1.0,Q52e. How often president ignores parliament
+afrobarometer,afro-w05,Q53,afro-w06,Q46,1.0,Q53. How effective the news media reveals government mistakes and corruption
+afrobarometer,afro-w05,Q56A,afro-w06,Q51A,1.0,Q56a. How often careful what you say
+afrobarometer,afro-w05,Q56A,afro-w08,Q40D,1.0,Q56a. How often careful what you say
+afrobarometer,afro-w05,Q56B,afro-w06,Q51B,1.0,Q56b. How often people treated unequally
+afrobarometer,afro-w05,Q56B,afro-w08,Q40E,1.0,Q56b. How often people treated unequally
+afrobarometer,afro-w05,Q56F,afro-w06,Q51C,1.0,Q56f. How often officials unpunished
+afrobarometer,afro-w05,Q56F,afro-w08,Q40F,1.0,Q56f. How often officials unpunished
+afrobarometer,afro-w05,Q56F,afro-w10,Q34E,1.0,Q56f. How often officials unpunished
+afrobarometer,afro-w05,Q56G,afro-w06,Q51D,1.0,Q56g. How often ordinary people unpunished
+afrobarometer,afro-w05,Q56G,afro-w08,Q40G,1.0,Q56g. How often ordinary people unpunished
+afrobarometer,afro-w05,Q56G,afro-w10,Q34F,1.0,Q56g. How often ordinary people unpunished
+afrobarometer,afro-w05,Q59E,afro-w07,Q43D,1.0,Q59e. Trust your elected local government council
+afrobarometer,afro-w05,Q59E,afro-w10,Q37D,1.0,Q59e. Trust your elected local government council
+afrobarometer,afro-w05,Q59F,afro-w06,Q52F,1.0,Q59f. Trust the ruling party
+afrobarometer,afro-w05,Q59F,afro-w07,Q43E,1.0,Q59f. Trust the ruling party
+afrobarometer,afro-w05,Q59F,afro-w10,Q37E,1.0,Q59f. Trust the ruling party
+afrobarometer,afro-w05,Q59G,afro-w06,Q52G,1.0,Q59g. Trust opposition political parties
+afrobarometer,afro-w05,Q59G,afro-w07,Q43F,1.0,Q59g. Trust opposition political parties
+afrobarometer,afro-w05,Q59G,afro-w08,Q41F,1.0,Q59g. Trust opposition political parties
+afrobarometer,afro-w05,Q59G,afro-w10,Q37F,1.0,Q59g. Trust opposition political parties
+afrobarometer,afro-w05,Q59H,afro-w06,Q52H,1.0,Q59h. Trust police
+afrobarometer,afro-w05,Q59H,afro-w07,Q43G,1.0,Q59h. Trust police
+afrobarometer,afro-w05,Q59H,afro-w08,Q41G,1.0,Q59h. Trust police
+afrobarometer,afro-w05,Q59H,afro-w10,Q37G,1.0,Q59h. Trust police
+afrobarometer,afro-w05,Q59I,afro-w06,Q52I,1.0,Q59i. Trust army
+afrobarometer,afro-w05,Q59I,afro-w07,Q43H,1.0,Q59i. Trust army
+afrobarometer,afro-w05,Q59I,afro-w08,Q41H,1.0,Q59i. Trust army
+afrobarometer,afro-w05,Q59I,afro-w10,Q37H,1.0,Q59i. Trust army
+afrobarometer,afro-w05,Q59J,afro-w06,Q52J,1.0,Q59j. Trust courts of law
+afrobarometer,afro-w05,Q59J,afro-w07,Q43I,1.0,Q59j. Trust courts of law
+afrobarometer,afro-w05,Q59J,afro-w08,Q41I,1.0,Q59j. Trust courts of law
+afrobarometer,afro-w05,Q59J,afro-w10,Q37I,1.0,Q59j. Trust courts of law
+afrobarometer,afro-w05,Q5A,afro-w06,Q6,1.0,Q5a. Country's economic condition compared to 12 months ago
+afrobarometer,afro-w05,Q5A,afro-w07,Q6,1.0,Q5a. Country's economic condition compared to 12 months ago
+afrobarometer,afro-w05,Q60B,afro-w06,Q53B,1.0,Q60b. Corruption: Members of Parliament
+afrobarometer,afro-w05,Q60B,afro-w08,Q42B,1.0,Q60b. Corruption: Members of Parliament
+afrobarometer,afro-w05,Q60C,afro-w06,Q53C,1.0,Q60c. Corruption: government officials
+afrobarometer,afro-w05,Q60D,afro-w06,Q53D,1.0,Q60d. Corruption: local government councilors
+afrobarometer,afro-w05,Q60D,afro-w08,Q42D,0.987,Q60d. Corruption: local government councilors
+afrobarometer,afro-w05,Q60D,afro-w10,Q38D,0.987,Q60d. Corruption: local government councilors
+afrobarometer,afro-w05,Q60E,afro-w06,Q53E,1.0,Q60e. Corruption: police
+afrobarometer,afro-w05,Q60E,afro-w07,Q44E,1.0,Q60e. Corruption: police
+afrobarometer,afro-w05,Q60E,afro-w08,Q42E,1.0,Q60e. Corruption: police
+afrobarometer,afro-w05,Q60E,afro-w10,Q38E,1.0,Q60e. Corruption: police
+afrobarometer,afro-w05,Q60F,afro-w06,Q53F,1.0,Q60f. Corruption: tax officials
+afrobarometer,afro-w05,Q60F,afro-w08,Q42G,1.0,Q60f. Corruption: tax officials
+afrobarometer,afro-w05,Q60F,afro-w10,Q38G,1.0,Q60f. Corruption: tax officials
+afrobarometer,afro-w05,Q60G,afro-w06,Q53G,1.0,Q60g. Corruption: judges and magistrates
+afrobarometer,afro-w05,Q60G,afro-w07,Q44F,1.0,Q60g. Corruption: judges and magistrates
+afrobarometer,afro-w05,Q60G,afro-w08,Q42F,1.0,Q60g. Corruption: judges and magistrates
+afrobarometer,afro-w05,Q60G,afro-w10,Q38F,1.0,Q60g. Corruption: judges and magistrates
+afrobarometer,afro-w05,Q61D,afro-w06,Q55J,0.961,Q61d. Pay bribe for: avoid problem with police
+afrobarometer,afro-w05,Q61D,afro-w07,Q49T,0.961,Q61d. Pay bribe for: avoid problem with police
+afrobarometer,afro-w05,Q61D,afro-w08,Q44N,0.961,Q61d. Pay bribe for: avoid problem with police
+afrobarometer,afro-w05,Q61D,afro-w10,Q45E,0.961,Q61d. Pay bribe for: avoid problem with police
+afrobarometer,afro-w05,Q62A,afro-w07,Q54A,1.0,Q62a. MPs listen
+afrobarometer,afro-w05,Q62A,afro-w08,Q38A,1.0,Q62a. MPs listen
+afrobarometer,afro-w05,Q62B,afro-w07,Q54B,0.986,Q62b. Local government councilors listen
+afrobarometer,afro-w05,Q62B,afro-w08,Q38B,0.986,Q62b. Local government councilors listen
+afrobarometer,afro-w05,Q63PT1,afro-w06,Q60PT1,1.0,Q63pt1. Most important problems - 1st response
+afrobarometer,afro-w05,Q63PT1,afro-w07,Q55PT1,1.0,Q63pt1. Most important problems - 1st response
+afrobarometer,afro-w05,Q63PT1,afro-w08,Q48PT1,1.0,Q63pt1. Most important problems - 1st response
+afrobarometer,afro-w05,Q63PT1,afro-w10,Q46PT1,1.0,Q63pt1. Most important problems - 1st response
+afrobarometer,afro-w05,Q63PT1OTHER,afro-w07,Q55PT1Other,1.0,Q63pt1other. MIP - 1st response (verbatim other)
+afrobarometer,afro-w05,Q63PT1OTHER,afro-w10,Q46PT1OTHER,1.0,Q63pt1other. MIP - 1st response (verbatim other)
+afrobarometer,afro-w05,Q63PT2,afro-w06,Q60PT2,1.0,Q63pt2. Most important problems - 2nd response
+afrobarometer,afro-w05,Q63PT2,afro-w07,Q55PT2,1.0,Q63pt2. Most important problems - 2nd response
+afrobarometer,afro-w05,Q63PT2,afro-w08,Q48PT2,1.0,Q63pt2. Most important problems - 2nd response
+afrobarometer,afro-w05,Q63PT2,afro-w10,Q46PT2,1.0,Q63pt2. Most important problems - 2nd response
+afrobarometer,afro-w05,Q63PT2OTHER,afro-w07,Q55PT2Other,1.0,Q63pt2other. MIP - 2nd response (verbatim other)
+afrobarometer,afro-w05,Q63PT2OTHER,afro-w10,Q46PT2OTHER,1.0,Q63pt2other. MIP - 2nd response (verbatim other)
+afrobarometer,afro-w05,Q63PT3,afro-w06,Q60PT3,1.0,Q63pt3. Most important problems - 3rd response
+afrobarometer,afro-w05,Q63PT3,afro-w07,Q55PT3,1.0,Q63pt3. Most important problems - 3rd response
+afrobarometer,afro-w05,Q63PT3,afro-w08,Q48PT3,1.0,Q63pt3. Most important problems - 3rd response
+afrobarometer,afro-w05,Q63PT3,afro-w10,Q46PT3,1.0,Q63pt3. Most important problems - 3rd response
+afrobarometer,afro-w05,Q63PT3OTHER,afro-w07,Q55PT3Other,1.0,Q63pt3other. MIP - 3rd response (verbatim other)
+afrobarometer,afro-w05,Q63PT3OTHER,afro-w10,Q46PT3OTHER,1.0,Q63pt3other. MIP - 3rd response (verbatim other)
+afrobarometer,afro-w05,Q65E,afro-w08,Q50E,1.0,Q65e. Handling narrowing income gaps
+afrobarometer,afro-w05,Q65F,afro-w06,Q66F,1.0,Q65f. Handling reducing crime
+afrobarometer,afro-w05,Q65F,afro-w08,Q50F,1.0,Q65f. Handling reducing crime
+afrobarometer,afro-w05,Q65F,afro-w10,Q47F,1.0,Q65f. Handling reducing crime
+afrobarometer,afro-w05,Q65G,afro-w06,Q66G,1.0,Q65g. Handling improving basic health services
+afrobarometer,afro-w05,Q65G,afro-w08,Q50G,1.0,Q65g. Handling improving basic health services
+afrobarometer,afro-w05,Q65G,afro-w10,Q47G,1.0,Q65g. Handling improving basic health services
+afrobarometer,afro-w05,Q65H,afro-w06,Q66H,1.0,Q65h. Handling addressing educational needs
+afrobarometer,afro-w05,Q65H,afro-w08,Q50H,1.0,Q65h. Handling addressing educational needs
+afrobarometer,afro-w05,Q65H,afro-w10,Q47H,1.0,Q65h. Handling addressing educational needs
+afrobarometer,afro-w05,Q65I,afro-w06,Q66I,1.0,Q65i. Handling providing water and sanitation services
+afrobarometer,afro-w05,Q65I,afro-w08,Q50I,1.0,Q65i. Handling providing water and sanitation services
+afrobarometer,afro-w05,Q65I,afro-w10,Q47I,1.0,Q65i. Handling providing water and sanitation services
+afrobarometer,afro-w05,Q65J,afro-w06,Q66J,1.0,Q65j. Handling ensuring enough to eat
+afrobarometer,afro-w05,Q65J,afro-w07,Q56J,1.0,Q65j. Handling ensuring enough to eat
+afrobarometer,afro-w05,Q65K,afro-w06,Q66K,1.0,Q65k. Handling fighting corruption
+afrobarometer,afro-w05,Q65K,afro-w07,Q56K,1.0,Q65k. Handling fighting corruption
+afrobarometer,afro-w05,Q65K,afro-w08,Q50J,1.0,Q65k. Handling fighting corruption
+afrobarometer,afro-w05,Q65K,afro-w10,Q47J,1.0,Q65k. Handling fighting corruption
+afrobarometer,afro-w05,Q65N,afro-w06,Q66L,1.0,Q65n. Handling maintaining roads and bridges
+afrobarometer,afro-w05,Q65N,afro-w07,Q56L,1.0,Q65n. Handling maintaining roads and bridges
+afrobarometer,afro-w05,Q65N,afro-w08,Q50K,1.0,Q65n. Handling maintaining roads and bridges
+afrobarometer,afro-w05,Q65N,afro-w10,Q47K,1.0,Q65n. Handling maintaining roads and bridges
+afrobarometer,afro-w05,Q65O,afro-w06,Q66M,1.0,Q65o. Handling providing reliable electric supply
+afrobarometer,afro-w05,Q65O,afro-w07,Q56M,1.0,Q65o. Handling providing reliable electric supply
+afrobarometer,afro-w05,Q67A,afro-w07,Q49I,1.0,Q67a. Difficulty to obtain identity document
+afrobarometer,afro-w05,Q67A,afro-w08,Q44H,1.0,Q67a. Difficulty to obtain identity document
+afrobarometer,afro-w05,Q67B,afro-w07,Q49M,1.0,Q67b. Difficulty to obtain household services
+afrobarometer,afro-w05,Q67C,afro-w06,Q55I,1.0,Q67c. Difficulty to obtain help from the police
+afrobarometer,afro-w05,Q67E,afro-w06,Q55C,1.0,Q67e. Difficulty to obtain medical treatment
+afrobarometer,afro-w05,Q69E,afro-w10,Q40F,1.0,Q69e. Problems with public clinic: long waiting time
+afrobarometer,afro-w05,Q6A,afro-w10,Q6,1.0,Q6a. Country's economic condition in 12 months time
+afrobarometer,afro-w05,Q7,afro-w08,Q3,1.0,Q7. Overall direction of the country
+afrobarometer,afro-w05,Q7,afro-w10,Q3,1.0,Q7. Overall direction of the country
+afrobarometer,afro-w05,Q71B,afro-w07,Q58B,1.0,Q71b. Performance: MP/National Assembly rep
+afrobarometer,afro-w05,Q71B,afro-w08,Q51B,1.0,Q71b. Performance: MP/National Assembly rep
+afrobarometer,afro-w05,Q71C,afro-w06,Q68_TUN_C,0.987,Q71c. Performance: local government councilor
+afrobarometer,afro-w05,Q71C,afro-w07,Q58C_TUN,0.987,Q71c. Performance: local government councilor
+afrobarometer,afro-w05,Q71C,afro-w08,Q51C,0.987,Q71c. Performance: local government councilor
+afrobarometer,afro-w05,Q87,afro-w08,Q83,1.0,Q87. Most people can be trusted
+afrobarometer,afro-w05,Q8C,afro-w08,Q7C,1.0,Q8c. How often gone without medical care
+afrobarometer,afro-w05,Q8D,afro-w08,Q7D,1.0,Q8d. How often gone without cooking fuel
+afrobarometer,afro-w05,Q8D,afro-w10,Q7D,1.0,Q8d. How often gone without cooking fuel
+afrobarometer,afro-w05,Q8E,afro-w08,Q7E,1.0,Q8e. How often gone without cash income
+afrobarometer,afro-w05,Q8E,afro-w10,Q7E,1.0,Q8e. How often gone without cash income
+afrobarometer,afro-w05,Q90A,afro-w08,Q92A,1.0,Q90a. Own radio
+afrobarometer,afro-w05,Q90B,afro-w08,Q92B,1.0,Q90b. Own television
+afrobarometer,afro-w05,Q90C,afro-w06,Q91C,1.0,"Q90c. Own motor vehicle, car or motorcycle"
+afrobarometer,afro-w05,Q90C,afro-w07,Q89C,1.0,"Q90c. Own motor vehicle, car or motorcycle"
+afrobarometer,afro-w05,Q90C,afro-w08,Q92C,1.0,"Q90c. Own motor vehicle, car or motorcycle"
+afrobarometer,afro-w05,Q96,afro-w06,Q95,1.0,Q96. Employment status
+afrobarometer,afro-w05,Q98A,afro-w07,Q98,1.0,Q98a. Religion of respondent
 afrobarometer,afro-w06,Q103OTHER,afro-w10,Q102Other,1.0,Q103other. Language of interview (verbatim)
 afrobarometer,afro-w06,Q107A,afro-w10,Q104A,1.0,Q107a. Check with others
 afrobarometer,afro-w06,Q107B,afro-w10,Q104B,1.0,Q107b. Influence by others

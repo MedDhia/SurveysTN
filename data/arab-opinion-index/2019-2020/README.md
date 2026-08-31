@@ -16,8 +16,8 @@
 |---|---:|---|
 | `arab-opinion-index-2019-2020-tunisia-codes.csv` | 2.93 MB | `8907d17e7c8351f9` |
 | `arab-opinion-index-2019-2020-tunisia-labels.csv` | 11.66 MB | `4964e8fcb7dd6e82` |
-| `arab-opinion-index-2019-2020-tunisia.dta` | 11.84 MB | `26dbcb7e11aec460` |
-| `arab-opinion-index-2019-2020-tunisia.sav` | 11.71 MB | `004cccc9707296d0` |
+| `arab-opinion-index-2019-2020-tunisia.dta` | 11.84 MB | `f86521cd68962334` |
+| `arab-opinion-index-2019-2020-tunisia.sav` | 11.71 MB | `72746853eead68ad` |
 | `codebook.csv` | 2.14 MB | `34f0e9576019532a` |
 | `codebook.json` | 2.25 MB | `c9adc17484003dce` |
 

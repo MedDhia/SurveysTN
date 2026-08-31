@@ -46,11 +46,11 @@
         },
         "arab-barometer-w02-tunisia.dta": {
           "bytes": 4986072,
-          "sha256": "8cf93998be1bbe2fe145ccd603d5608dc2b39c08bfa771d9c1b660e5e7e516c9"
+          "sha256": "6517438a6aa0423bffd1efb9f365e71a0bf48a2cc33946fa2e7b28d3c445c627"
         },
         "arab-barometer-w02-tunisia.sav": {
           "bytes": 4732179,
-          "sha256": "4ef44784e073774197f5d2609da28cdfffa481050b69f714facc9bb7e1fdd602"
+          "sha256": "343174f9ba9885cbebe869f092294c1c97f5c99c9fa0c7f1c6ddfedf5bfbba5c"
         },
         "codebook.csv": {
           "bytes": 242743,
@@ -107,11 +107,11 @@
         },
         "arab-barometer-w03-tunisia.dta": {
           "bytes": 3134417,
-          "sha256": "069452a3e3e1dfef5049198c303b881da3a297f3ca087475ecd74cc139f792fe"
+          "sha256": "3e97f62b24dda368f5b4be2f1497cfe979de7c9bf59f7e2198328af07962913f"
         },
         "arab-barometer-w03-tunisia.sav": {
           "bytes": 2966293,
-          "sha256": "f0d40d5a5de37d8bf5440a6f60cea3fe808937445c7e5c386394afd270f1405a"
+          "sha256": "8c01218cc5ac1e1f39a25af87451c8de153d5a3d2aa4903a2e799ac168cefbaf"
         },
         "codebook.csv": {
           "bytes": 118976,
@@ -168,11 +168,11 @@
         },
         "arab-barometer-w04-tunisia.dta": {
           "bytes": 9438155,
-          "sha256": "273553d0f5d5fb00723c0ef058117ee8b1a7c258d9e05edc697dcc110255f141"
+          "sha256": "550c134facc6d524f069c11035597090ef792c5fffe9f3a830aa773e10b7ebfe"
         },
         "arab-barometer-w04-tunisia.sav": {
           "bytes": 10323620,
-          "sha256": "37fb8a4bac068da12a31723f534a0ca58a3b054349a9f702a013937c5e0f8135"
+          "sha256": "33f22c940edd37017bf0242ee03c8506cbb40f0fd14fd454b0bf5453e10b4241"
         },
         "codebook.csv": {
           "bytes": 47317,
@@ -229,11 +229,11 @@
         },
         "arab-barometer-w05-tunisia.dta": {
           "bytes": 7218008,
-          "sha256": "6842073da20105aa36364f60ed59480d6a6badc35f817c6e3a94d3cd93b88b85"
+          "sha256": "dc406714e7151e36b0bdce83cac49daaab95728ea8fbe90f176b52acc538dbd4"
         },
         "arab-barometer-w05-tunisia.sav": {
           "bytes": 7004891,
-          "sha256": "6c8bff7dd914770cb1a410fe8ec9d3498f32b02d29f04f808e004297e1d92ea8"
+          "sha256": "4fa0089cdfb98ea6bccf0534e2289766db321f7c4b2635184577f35eb9c64d8f"
         },
         "codebook.csv": {
           "bytes": 103852,
@@ -290,11 +290,11 @@
         },
         "arab-barometer-w06p1-tunisia.dta": {
           "bytes": 852365,
-          "sha256": "dd46442b17c1edd614b1ac6034c699166d33e3d9d3321d0553a477e2ac8db8b9"
+          "sha256": "935122a7ddba4bbcd04f4eb043ffb44b922562f54b2d6c9e521cfb6e9412594c"
         },
         "arab-barometer-w06p1-tunisia.sav": {
           "bytes": 819264,
-          "sha256": "d28749a6d7300487848b6c990726cac88415c430db91cdcf3be3134bb4ac60a4"
+          "sha256": "57d001ec1fa107152e42e793f2b3d270944669f281d2a571f873020b043e02fd"
         },
         "codebook.csv": {
           "bytes": 28283,
@@ -351,11 +351,11 @@
         },
         "arab-barometer-w06p2-tunisia.dta": {
           "bytes": 739920,
-          "sha256": "5aa668e8b61a5327d51612b2ec68e58ef4043000245b451b0d4258a6b59b827e"
+          "sha256": "129bf90c8843afecde4fcd5869cacca829696b41cef0fd6911bada645fef0f89"
         },
         "arab-barometer-w06p2-tunisia.sav": {
           "bytes": 688268,
-          "sha256": "e73724921fe4bcd5b3a91fb4fa4bd86b16716cbae36baaa4fbae07002f3265fb"
+          "sha256": "0455d757efe9dee7c2a06e839eb38c107f3ceb9942cb80d6be5b8a67ecedee85"
         },
         "codebook.csv": {
           "bytes": 28643,
@@ -412,11 +412,11 @@
         },
         "arab-barometer-w06p3-tunisia.dta": {
           "bytes": 1115483,
-          "sha256": "98ba5f7eae1b139b8ea1d58d4e54ea5b1d4c61eecfa1f3d3fd1f2d3d8e7f0283"
+          "sha256": "9cd1a059f6cbd87834a315306ff239427c51c23fa349d99c749c9f27e2856320"
         },
         "arab-barometer-w06p3-tunisia.sav": {
           "bytes": 1056916,
-          "sha256": "cefd66190f01147761d40d95bbede30985a4e56286475cfd721c785c2c11cfda"
+          "sha256": "1fddb26680ae8da52a4c0180dd3747fffeea5d4235ce818f5eecaab1c07ccadf"
         },
         "codebook.csv": {
           "bytes": 36266,
@@ -473,11 +473,11 @@
         },
         "arab-barometer-w07-tunisia.dta": {
           "bytes": 9143792,
-          "sha256": "f07a126638f8b53081f10a6a84bcaf2fae4ef423290d15c7a61d36a975015b30"
+          "sha256": "f0ecdd6cf10b9515f42d57abbfef8954bfe2f2fdd590dd292eaff04260798cc0"
         },
         "arab-barometer-w07-tunisia.sav": {
           "bytes": 8880088,
-          "sha256": "e290268aaed20a2847fbae21cd661a84c7ceb8903f964b1feea13101470a7120"
+          "sha256": "6838f4318d0e60bb9e78e90881f32d96a950a22d75353bcca745a1545389e7e9"
         },
         "codebook.csv": {
           "bytes": 151161,
@@ -534,11 +534,11 @@
         },
         "arab-barometer-w08-tunisia.dta": {
           "bytes": 13898528,
-          "sha256": "32fc6f0093e2a726a666bedddf644845e056118c67405ec9ff9b421f3ca52512"
+          "sha256": "341c9150a520bf19c666553627064976c1a46277d28d20bbfb75284dfcd718bd"
         },
         "arab-barometer-w08-tunisia.sav": {
           "bytes": 13477184,
-          "sha256": "0d8aea3a2669cf14da3d4d87b8788c014b43ff3b8be8ebad45b415bc2aa4c18c"
+          "sha256": "96aaa3b6db2145a6bf4a578243a9ec78a228a77d82c26ed9401e47c83eceb346"
         },
         "codebook.csv": {
           "bytes": 152158,
@@ -599,11 +599,11 @@
         },
         "world-values-survey-w06-tunisia.dta": {
           "bytes": 3804155,
-          "sha256": "38c309d787369e0da8c52c939282954a477049e0f273da2aa1ad78f5cbfba72a"
+          "sha256": "af334bc49888cfb8dd8ffd831c6cb45ccae6ce83126eecefdeb57350f40df39c"
         },
         "world-values-survey-w06-tunisia.sav": {
           "bytes": 3606836,
-          "sha256": "515007824c46a0f7345431400e71060a7afc57969d1ef15522de31f40cb07a99"
+          "sha256": "89ecb9983e28be67e74aeee35f322e8dfddcfccdf3556d8f2a28c4b2e5e2d081"
         }
       },
       "notes": "Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7."
@@ -656,14 +656,106 @@
         },
         "world-values-survey-w07-tunisia.dta": {
           "bytes": 4103323,
-          "sha256": "29ce956d69bf7e3b739be78c3f2b317500ac002a1ddf84a55313d342362acee7"
+          "sha256": "d594abc9bee4ad839d70f87f927ea4c11ad014f32733ea5433b62313e0fd84d4"
         },
         "world-values-survey-w07-tunisia.sav": {
           "bytes": 3917478,
-          "sha256": "b795ecc530e1da7cff23c484dcb954b11c35d59d3af5cc3e2441eaf42912670a"
+          "sha256": "aebb3197fc25f7e63ddc5f9c1998f9319599258aad23ae73019c8c8c0e8b120a"
         }
       },
       "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release."
+    },
+    {
+      "series": "afrobarometer",
+      "series_name": "Afrobarometer",
+      "series_prefix": "afro",
+      "key": "afro-w05",
+      "wave": 5,
+      "part": null,
+      "wave_label": "Round 5",
+      "tag": "w05",
+      "slug": "round-05",
+      "country": "Tunisia",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "renamed_variables": {},
+      "value_labels_dropped_on_temporal_columns": [
+        "STRTIME",
+        "ENDTIME"
+      ],
+      "n_respondents": 1200,
+      "n_variables": 300,
+      "n_variables_with_data": 300,
+      "n_respondents_pooled_release": 1200,
+      "n_countries_pooled_release": 1200,
+      "is_country_file": false,
+      "fieldwork_years_series": "2011-2013",
+      "fieldwork_tunisia": "2013-01-10 to 2013-02-01",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "afrobarometer_tun_r5_en.sav",
+      "source_sha256": "1b2d7d9acb91b7d610040ae2cb43b0d43df6dbaad6ec04a0bc33fc1440e5afad",
+      "csv_answers_read_as_missing": {
+        "Q60A": [
+          "None"
+        ],
+        "Q60A1_TUN": [
+          "None"
+        ],
+        "Q60B": [
+          "None"
+        ],
+        "Q60C": [
+          "None"
+        ],
+        "Q60D": [
+          "None"
+        ],
+        "Q60E": [
+          "None"
+        ],
+        "Q60F": [
+          "None"
+        ],
+        "Q60G": [
+          "None"
+        ],
+        "Q108": [
+          "None"
+        ]
+      },
+      "path": "data/afrobarometer/round-05",
+      "files": {
+        "afrobarometer-w05-tunisia-codes.csv": {
+          "bytes": 1511476,
+          "sha256": "097531fe48b7c387f8e96b9b85d44b7bf98e9b35cf0b674c31632f7d7e7c5f9a"
+        },
+        "afrobarometer-w05-tunisia-labels.csv": {
+          "bytes": 4915550,
+          "sha256": "557fd52fbc31e64c5c70fff9c89bd44459ce04b02b55f14080d4146c4bfa1ceb"
+        },
+        "afrobarometer-w05-tunisia.dta": {
+          "bytes": 3476285,
+          "sha256": "7f18a48f787ae051d4ffade5a6cf4bf56776239e4c69da932001a1c135952b97"
+        },
+        "afrobarometer-w05-tunisia.sav": {
+          "bytes": 3327700,
+          "sha256": "730bcf6d6a37681e4fcb0924492b1684ec868a91976a16e7e456b56ff621211f"
+        },
+        "codebook.csv": {
+          "bytes": 87010,
+          "sha256": "ffa9a4994fe23c30bb630fd473e6d3831f47555cb94aea2403b1f326050d9672"
+        },
+        "codebook.json": {
+          "bytes": 156537,
+          "sha256": "94378d0550badc6df5606be973ab47d675fe9210c1ab296f694dc86176f81e34"
+        }
+      },
+      "notes": "Round 5 release, English."
     },
     {
       "series": "afrobarometer",
@@ -752,11 +844,11 @@
         },
         "afrobarometer-w06-tunisia.dta": {
           "bytes": 4390952,
-          "sha256": "8cdcb4daf304482638ab41e1410da2d4cbec22e8fba65f7840033bb5c715b1b6"
+          "sha256": "77defe6f4bc8b54b15d8fe2ef8c7f5b47ceb82d2f9a713d7eb6cc4916d7dce1b"
         },
         "afrobarometer-w06-tunisia.sav": {
           "bytes": 4285065,
-          "sha256": "33eabe1cb1773e149c31c762700bdfd6ca7b5a8b1162da97fd9bee6305b8ed19"
+          "sha256": "15e55439d6ed412790a64945ce3243232e8e6d9f6596c7ed96c1765ab9055afa"
         },
         "codebook.csv": {
           "bytes": 102354,
@@ -850,11 +942,11 @@
         },
         "afrobarometer-w07-tunisia.dta": {
           "bytes": 4002133,
-          "sha256": "8574dfb84f879c318b0f7714788b2c16eb96e501cf5004634e19e342778c0f2d"
+          "sha256": "de2de5ccfb81fa5b410ea64e4e62cbeebc1e72f559b4bfc99f552641466efe26"
         },
         "afrobarometer-w07-tunisia.sav": {
           "bytes": 3842095,
-          "sha256": "4fb44fb7184495efcc08552755820187160785f8c7e9e31f977d1455a9f9d4d8"
+          "sha256": "16f283b779ce089e2132af8b0cdc63a53710b175d3868e86927803df0f98c368"
         },
         "codebook.csv": {
           "bytes": 91990,
@@ -945,11 +1037,11 @@
         },
         "afrobarometer-w08-tunisia.dta": {
           "bytes": 4213695,
-          "sha256": "3a907704894fb37d6ce710cffd6332852d08fd5b99640d0e64ea9ac30ab2ef66"
+          "sha256": "fd8518ec6e5d6fb12fb1d7dd3d17a01db817536bb0e3cf2e33ba894049aa7112"
         },
         "afrobarometer-w08-tunisia.sav": {
           "bytes": 4025427,
-          "sha256": "f52d0d49fd55ba095541cf44ad3ad087d5e596b0ba3dbb844f847da5cf5bc75b"
+          "sha256": "f21ceea7bdfd426e513f907d0acb47039a68df0d286bba4085ca5a6d01383d42"
         },
         "codebook.csv": {
           "bytes": 109954,
@@ -1008,11 +1100,11 @@
         },
         "afrobarometer-w09-tunisia.dta": {
           "bytes": 4354464,
-          "sha256": "ac90efe24b6240960d5c11af5be6a6674de5a9596bf1a407cb0e0bad04252045"
+          "sha256": "b0952dd677b97f8cad84983bc5530c1f8c3849db5056c745183025248d5611be"
         },
         "afrobarometer-w09-tunisia.sav": {
           "bytes": 4234646,
-          "sha256": "4d9f84326b47aefb68af0a9445f64d86ba4d6c80bbb29db3c7d473ad6c387b3d"
+          "sha256": "41fe913a4a04d4578ab8a504309b0b4d86e78c358de1ec7249326b71f3fff8d9"
         },
         "codebook.csv": {
           "bytes": 125100,
@@ -1023,7 +1115,7 @@
           "sha256": "2b8ec7e8c722982f9d56e63a1f493ddc986fd934656dfd0483c5ec5e5280c63a"
         }
       },
-      "notes": "Round 9 release of 1 March 2023, English."
+      "notes": "Round 9 release of 1 March 2023, English. Its variable labels are in French despite the English release; question text comes from the questionnaire."
     },
     {
       "series": "afrobarometer",
@@ -1102,11 +1194,11 @@
         },
         "afrobarometer-w10-tunisia.dta": {
           "bytes": 4183902,
-          "sha256": "aa370cf40a7dda0f2dd28cbf6dd3509e360fc46ad45cd759ac744a7bd7b5e10b"
+          "sha256": "a72885f083638672969c20c8252512b16fccdce567a6ee2a150fc213ec8f69b7"
         },
         "afrobarometer-w10-tunisia.sav": {
           "bytes": 4086484,
-          "sha256": "ebf1ba7c89c72dc8d6aaf8de6121a6df99fa2f03e97ea7cc1a36d9eced16eab3"
+          "sha256": "ca33f5010d7c1b42260230c5dfb10caa28dfa24e6e1782360895ba8d9ea1d9c0"
         },
         "codebook.csv": {
           "bytes": 111624,
@@ -1167,11 +1259,11 @@
         },
         "arab-opinion-index-2011-tunisia.dta": {
           "bytes": 2121533,
-          "sha256": "1ecefc040843219bae11effa908bce08c436c16369f4f213ff0257f122292586"
+          "sha256": "694d7929d687c2a089b143e3a6c629dd57ecc526df7c541907917d8bb0e5d985"
         },
         "arab-opinion-index-2011-tunisia.sav": {
           "bytes": 2006509,
-          "sha256": "7ce7ba1f96f64b5a16cc94ce5ce05ecbf4c8a4f4ebcab50a388f5ae2c51a11ad"
+          "sha256": "dee1d6f2e89f1ec592db01894db1dc02a3a54d1ffad31e4d741a8f84f1f78931"
         },
         "codebook.csv": {
           "bytes": 73127,
@@ -1228,11 +1320,11 @@
         },
         "arab-opinion-index-2012-2013-tunisia.dta": {
           "bytes": 7092805,
-          "sha256": "bf4f0e17f522a778c8007264da013abb8c62b93cf3e1bb81139c39d35e1ebcbf"
+          "sha256": "a9f2736dfb5eb7e5c8921db8059aa6da3a107478133abb468f083276d26d5e5b"
         },
         "arab-opinion-index-2012-2013-tunisia.sav": {
           "bytes": 6780509,
-          "sha256": "d8866abef3f91bf10eab683828af499e36a762dc1194d669bbd8728ab40805d5"
+          "sha256": "17871f45a2681d8b16dae9e80e6790b8846ba9f16cb8211681d5692a203ff3e3"
         },
         "codebook.csv": {
           "bytes": 209582,
@@ -1289,11 +1381,11 @@
         },
         "arab-opinion-index-2014-tunisia.dta": {
           "bytes": 7218170,
-          "sha256": "670ffa31c978925b436c6f758cf02d84d1b758d8be5edf8d8a8ec6c223c3ebe3"
+          "sha256": "b22ac65ad57faf6a4ae86ad25acced11d6bfab950d85fad12b703fa29ff40d04"
         },
         "arab-opinion-index-2014-tunisia.sav": {
           "bytes": 6900336,
-          "sha256": "c76de2f2e307fe84fb1848fd5732fc9fdabaa9f9ed15738da83e1c5f4dfb68d9"
+          "sha256": "86a8cbd687b6a9e8f415273adfa721ec329d7fba170cf93db1949d4695f581be"
         },
         "codebook.csv": {
           "bytes": 230976,
@@ -1350,11 +1442,11 @@
         },
         "arab-opinion-index-2015-tunisia.dta": {
           "bytes": 5730283,
-          "sha256": "defdd0807d60a0b82874598a49c1270a4b1e41a67f6df1c7cafd3b390044603d"
+          "sha256": "6254a75de3fb5ae3862630401b5941a3a027b0be2490936d3eeea2e57d1e3ea6"
         },
         "arab-opinion-index-2015-tunisia.sav": {
           "bytes": 5474139,
-          "sha256": "9fd86bc664b98aeaa40aa372d0789123c2bf5e76036609dee66bb8496999d178"
+          "sha256": "cb0333e2603cf9343c5d164928c0401535fa4b68197cc66412c0f3ac232c79ca"
         },
         "codebook.csv": {
           "bytes": 178605,
@@ -1411,11 +1503,11 @@
         },
         "arab-opinion-index-2016-tunisia.dta": {
           "bytes": 6224618,
-          "sha256": "406a1da4e13458127f49d35d55277767c9ce72a52939f3af3fd60161478ebe4d"
+          "sha256": "8c271c9dc47a16b256c6b93838a20c23ea28c9b10b2781d5fde47710a03cae86"
         },
         "arab-opinion-index-2016-tunisia.sav": {
           "bytes": 5944393,
-          "sha256": "5720b2a3be21f00d35539534fd156931e496b4cfc54f770bcd391cba4a1534f2"
+          "sha256": "ffe5b0f966e0ed4c351456c446f1a1732a04a87be9b1eb81f0c6af7be0567199"
         },
         "codebook.csv": {
           "bytes": 184648,
@@ -1472,11 +1564,11 @@
         },
         "arab-opinion-index-2017-2018-tunisia.dta": {
           "bytes": 4841133,
-          "sha256": "5cc9a1a0ff40a560ddd064c138b5e0b111c53f2fdc12efe970ee8628f2a58602"
+          "sha256": "650948b44790a011e119983e4aff4e96307edc4bf82cbf51fe203579b057c271"
         },
         "arab-opinion-index-2017-2018-tunisia.sav": {
           "bytes": 4622739,
-          "sha256": "01227ce6b369eeae9690882089dd83f41e9f3f75910abad89f5144cb3a28d559"
+          "sha256": "ce1aa4e44a130cce67ba449f72b2ab9e1f9acb850d33d7780ac16849660eab85"
         },
         "codebook.csv": {
           "bytes": 146932,
@@ -1730,11 +1822,11 @@
         },
         "arab-opinion-index-2019-2020-tunisia.dta": {
           "bytes": 12413129,
-          "sha256": "26dbcb7e11aec46031c10faeed71d6dfb6cb9971b755350ac4dbf2f3fc1b7a6a"
+          "sha256": "f86521cd6896233410dfcedbefd3eecb6d2d4cbc12f518b8f26b13fd517bb459"
         },
         "arab-opinion-index-2019-2020-tunisia.sav": {
           "bytes": 12274188,
-          "sha256": "004cccc9707296d046b0fa0174da5061f5d3997ccae90eec54870bd8abf6eb2a"
+          "sha256": "72746853eead68ad4c85271228650638fbf7d8c5293368a589360fede877bc6d"
         },
         "codebook.csv": {
           "bytes": 2241066,
@@ -1791,11 +1883,11 @@
         },
         "arab-opinion-index-2022-tunisia.dta": {
           "bytes": 15357588,
-          "sha256": "b41421c76585620ee9fbd4f6f2abbd1099cd4e8178a3dd801670b3f5f5a79b66"
+          "sha256": "1db472374e736422288bf95c7ed2a3b9496184c00c206dc749577b682d8e1ca1"
         },
         "arab-opinion-index-2022-tunisia.sav": {
           "bytes": 15116791,
-          "sha256": "60b94355607f76437e29f3c461be07df44ba0c392fb9e1eebd7992801836aecb"
+          "sha256": "06f43707ed6b79b871caf267d56a796b3b368fddff99ce35ff0c075d14b413fa"
         },
         "codebook.csv": {
           "bytes": 2087527,
@@ -1859,11 +1951,11 @@
         },
         "arab-opinion-index-2024-2025-tunisia.dta": {
           "bytes": 36316408,
-          "sha256": "d3e1f3d7603389121c74203584b9fb8e71095fb0636ac7cbf2edddc996cb83f3"
+          "sha256": "f6e7acce0d9d1a4ff82097b167f3f7329e2e92c54993ce76433b5c74929cf366"
         },
         "arab-opinion-index-2024-2025-tunisia.sav": {
           "bytes": 36043689,
-          "sha256": "18adfa9e498763ca3dd1161d7554d0ab06c0ea473fe3252736737e1bdb16c755"
+          "sha256": "bd336e0dca52d6b391dd4b73f21614a33db747724c87ff11cdb6a3559fe7834b"
         },
         "codebook.csv": {
           "bytes": 1376324,

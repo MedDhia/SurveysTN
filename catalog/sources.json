@@ -283,6 +283,35 @@
     },
     {
       "series": "afrobarometer",
+      "wave": 5,
+      "wave_label": "Round 5",
+      "slug": "round-05",
+      "raw_file_stem": "afrobarometer_tun_r5_en",
+      "source_format": "sav",
+      "country_var": "RESPNO",
+      "country_value": "TUN",
+      "country_match": "startswith",
+      "fieldwork_years_series": "2011-2013",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATEINTR",
+      "fieldwork_source": "derived from the DATEINTR variable in the data file",
+      "download_url": "https://www.afrobarometer.org/wp-content/uploads/2022/02/tun_r5_data.sav",
+      "questionnaire": {
+        "file": "docs/questionnaires/afro-w05-questionnaire.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/02/tun_r5_questionnaire_eng.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "Not parsed for question text: the release numbers variables differently from the questionnaire in places (Round 10 labels the variable Q6 as question Q5b, and 19 more like it), so mapping question numbers onto variables would attach the wrong wording. The release's own labels are used instead."
+      },
+      "codebook": {
+        "file": "docs/questionnaires/afro-w05-codebook.pdf",
+        "url": "https://www.afrobarometer.org/wp-content/uploads/2022/02/tun_r5_codebook.pdf",
+        "language": "English"
+      },
+      "notes": "Round 5 release, English."
+    },
+    {
+      "series": "afrobarometer",
       "wave": 6,
       "wave_label": "Round 6",
       "slug": "round-06",

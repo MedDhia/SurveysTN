@@ -10,24 +10,25 @@ Arab Barometer and "Important in life: Family" in the World Values Survey.
 
 ## Afrobarometer
 
-901 variables across 5 surveys, 901 with question text.
+987 variables across 6 surveys, 987 with question text.
 
 | Surveys | Variables |
 |---:|---:|
-| 5 | 61 |
-| 4 | 86 |
-| 3 | 109 |
-| 2 | 189 |
-| 1 | 456 |
+| 6 | 43 |
+| 5 | 64 |
+| 4 | 68 |
+| 3 | 132 |
+| 2 | 184 |
+| 1 | 496 |
 
-249 variables carry a name in more than one survey but wording that
+311 variables carry a name in more than one survey but wording that
 does not match between them. That is the column worth checking before pooling:
 `text_varies_across_waves`, with the weakest pairwise agreement in
 `lowest_text_agreement` and the kind of text compared in `comparison_basis`.
 
-### Present in all 5 with stable wording
+### Present in all 6 with stable wording
 
-37 variables. The safest to stack, and even here confirm the response
+31 variables. The safest to stack, and even here confirm the response
 scale in each survey's `codebook.csv` — the crosswalk compares question wording,
 not answer options.
 
@@ -39,12 +40,9 @@ not answer options.
 | `EA_FAC_C` | EA-FAC-C. Poste de police/gendarmerie dans la ZD |
 | `EA_FAC_D` | EA-FAC-D. Health Clinic in the PSU/EA |
 | `EA_FAC_E` | EA-FAC-E. Market stalls in the PSU/EA |
-| `EA_FAC_F` | EA-FAC-F. Bank or money services in the PSU/EA |
-| `EA_FAC_G` | EA-FAC-G. Moyen de transport payant dans la ZD |
 | `EA_SEC_A` | EA-SEC-A. Policiers/gendarmes ou leurs véhicules dans la ZD |
 | `EA_SEC_B` | EA-SEC-B. Militaires ou des véhicules de l'armée dans la ZD |
 | `EA_SEC_C` | EA-SEC-C. Barrages de police/gendarme ou de l'armée dans la ZD |
-| `EA_SEC_D` | EA-SEC-D. Customs checkpoints in the PSU/EA |
 | `EA_SEC_E` | EA-SEC-E. Barrages / estacades des services de sécurité privés / communauté dans la ZD |
 | `EA_SVC_A` | EA-SVC-A. Electricity grid in the PSU/EA |
 | `EA_SVC_B` | EA-SVC-B. Système d'adduction d'eau dans la ZD |
@@ -63,13 +61,10 @@ not answer options.
 | `Q112` | Q112. Interviewer's home language |
 | `Q113` | Q113. Interviewer's ethnic group or tribe |
 | `Q114` | Q114. Interviewer's education |
-| `Q3` | Q3. Overall direction of the country |
-| `Q4A` | Q4a. Situation économique actuelle du pays |
-| `Q4B` | Q4b. Vos propres conditions de vie actuelles |
 | `Q97` | Q97. Sponsor perçu de l'enquête |
 | `RESPNO` | Numéro du répondant |
 | `STRTIME` | Heure de début de l'entretien |
-| `URBRUR` | Urban or rural Primary Sampling Unit |
+| `URBRUR` | Urban or Rural Primary Sampling Unit |
 
 ## Arab Barometer
 
@@ -258,11 +253,11 @@ matches but whose question text is the same. It exists because the World Values
 Survey renumbered between waves: Wave 6 asks `V9` what Wave 7 asks as `Q6`, and
 matching on name finds only the derived indices and the admin columns. Arab
 Barometer needs it less often, but it also renames — Wave II's Tunisia-specific
-`te105` is Wave III's `q105a`. 648 pairs in total:
+`te105` is Wave III's `q105a`. 859 pairs in total:
 
 | Series | Pairs |
 |---|---:|
-| Afrobarometer | 381 |
+| Afrobarometer | 592 |
 | Arab Barometer | 25 |
 | Arab Opinion Index | 53 |
 | World Values Survey | 189 |
@@ -294,6 +289,7 @@ releases that carry wording as labels:
 | Arab Barometer Wave VIII | 251 | 115 | 97% |
 | World Values Survey Wave 6 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | World Values Survey Wave 7 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Afrobarometer Round 5 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Afrobarometer Round 6 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Afrobarometer Round 7 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Afrobarometer Round 8 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |

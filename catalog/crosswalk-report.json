@@ -128,6 +128,16 @@
       "agreement_rate": null,
       "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     },
+    "afro-w05": {
+      "wave_label": "Round 5",
+      "series": "afrobarometer",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null,
+      "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
+    },
     "afro-w06": {
       "wave_label": "Round 6",
       "series": "afrobarometer",
@@ -269,10 +279,10 @@
       "not_validated_reason": "question text comes from the release itself; no questionnaire is parsed"
     }
   },
-  "variables": 6404,
-  "with_question_text": 6338,
+  "variables": 6490,
+  "with_question_text": 6424,
   "in_every_wave": 0,
-  "wording_drifts": 352,
-  "suggested_matches": 648,
+  "wording_drifts": 414,
+  "suggested_matches": 859,
   "suggestion_floor": 0.95
 }
