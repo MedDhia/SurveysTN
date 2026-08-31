@@ -114,7 +114,12 @@ spelling used in each wave, the question each wave asked, and `n_waves`.
 
 ## Pooling surveys
 
-Read [`crosswalk.md`](crosswalk.md) first. Across every series, most variables
+For comparing **across programmes**, read
+[`question-concordance.md`](question-concordance.md) instead: it groups variables by
+the question they carry rather than by name, and its 17 cross-series groups are what
+the archive actually supports comparing between programmes.
+
+For pooling **within** a programme, read [`crosswalk.md`](crosswalk.md) first. Across every series, most variables
 appear in exactly one survey, and how much genuinely carries over differs sharply:
 
 | Series | Present in all its surveys | Named alike but worded differently |

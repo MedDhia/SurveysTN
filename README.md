@@ -159,6 +159,24 @@ question text instead: **859 pairs**, offered only where the wordings are all bu
 identical, unambiguous, and agreed on any numbers they contain. They are
 suggestions to confirm against the publisher's own crosswalk, not findings.
 
+### The same question in more than one survey
+
+The crosswalk answers what one programme asked across its own waves. It cannot
+answer what two programmes both asked, because it matches on names and a name means
+nothing between series. [`docs/question-concordance.md`](docs/question-concordance.md)
+does that instead: it ignores names and groups variables by the question itself,
+anywhere in the archive.
+
+**1,468 question groups span two or more surveys** — 1,393 word-for-word identical,
+75 near-identical. **17 span more than one series**, and those are the ones that make
+a cross-programme comparison possible at all: employment status, marital status,
+trust in the police and in religious leaders, internet use, interpersonal trust,
+household income, whether you would accept neighbours of various kinds.
+
+Seventeen is small, and it is the honest number for lexical matching. Two questions
+that ask the same thing in different words are not found, so the concordance is a
+floor on what is comparable, not a ceiling.
+
 ### Where the question text comes from
 
 The release's own variable labels where it has them, and otherwise the survey's
@@ -230,6 +248,7 @@ pip install -r scripts/requirements.txt
 python3 scripts/fetch_raw.py              # the two releases too large to commit
 python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
 python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, -suggested.csv, crosswalk.md
+python3 scripts/build_question_concordance.py   # docs/question-concordance.csv, .md
 python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
