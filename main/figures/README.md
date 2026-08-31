@@ -62,11 +62,11 @@ Both are generated from the extracts in `data/`, so they carry only what the
 releases record. Every date is derived, never asserted: `catalog/sources.json` names
 the variable each one comes from.
 
-## `inequality-coverage`, `inequality-distributions`, `inequality-correlations`
+## `inequality-coverage`, `-trends`, `-distributions`, `-correlations`
 
 `python3 scripts/build_inequality_figures.py`
 
-Three figures for the inequality questions, indexed in
+Four figures for the inequality questions, indexed in
 [`docs/topics/inequality.md`](../../docs/topics/inequality.md). Each answers a
 different question, and each has a limit worth stating before it is read.
 
@@ -90,6 +90,24 @@ them. So the battery is drawn as a shaded block under a heading carrying the wor
 its items share, *Equality … is applied in your country?*, and each row beneath it
 carries only the clause that varies.
 
+### `inequality-trends.png` / `.svg`
+
+The share giving either affirmative answer, per question, over time — the same ten
+questions as the distributions, on one common baseline.
+
+This is the figure that answers *did it move*. Behind each panel, in grey, are the
+other questions sharing its response scale, so a line is read against its siblings
+rather than in isolation, which is what a battery is for. The Arab Opinion Index
+battery separates sharply and stays separated: equality is most often seen as applied
+regardless of **religion** (59% → 63%) and **gender/sex** (60% → 51%), least often
+regardless of **wealth** (27% → 28%) and **social status** (31% → 30%). Every item in
+that battery dips together in 2022 and recovers in 2024.
+
+It buys that readability by collapsing four categories into two, which discards how
+strongly people answered — so it sits beside the distributions rather than replacing
+them. Each point is a separate cross-section, not a panel of the same respondents;
+the line between two points is drawn to be followed, not measured.
+
 ### `inequality-distributions.png` / `.svg`
 
 How Tunisians answered ten of the most-repeated of those questions — the twelve that
@@ -98,9 +116,17 @@ weighted shares
 of substantive answers — each survey's own design weight, don't-know and refused
 dropped rather than counted as an answer.
 
-**Stacked proportions, not densities.** These are four-point ordinal items, and a
-smoothed density over four categories invents shape between points that do not
-exist.
+**Diverging from zero, not stacked to 100%.** A 100%-stacked bar gives a common
+baseline to exactly two things: the bottom segment and the total. Every middle
+category floats on the one below it, so `applied to some extent` cannot be read across
+years — both of its ends move — and that comparison is the point of a battery asked
+eight times. Splitting the scale at its midpoint and running the affirmative half up
+from zero and the negative half down gives *each pole* a common baseline. Nothing is
+aggregated away: all four categories are drawn at their real shares, which is what
+this figure has over the trends.
+
+They are also not densities. These are four-point ordinal items, and a smoothed
+density over four categories invents shape between points that do not exist.
 
 **Every panel says what it measures.** Seven of the ten belong to the same battery,
 and a panel titled only "Religion" has lost the question — so each of those carries

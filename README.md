@@ -199,10 +199,11 @@ opportunity. 45 recur across surveys and **not one recurs across two programmes*
 an inequality series can be built inside Arab Barometer or inside the Arab Opinion
 Index and not between them. The only two questions that name Tunisian inequality
 directly — Afrobarometer Round 6's "The income gap between the rich and the poor" and
-"Regional inequality" — are country-specific items asked once, in 2015. Three figures
+"Regional inequality" — are country-specific items asked once, in 2015. Four figures
 sit on that page: which 22 questions are asked in more than two surveys and when, how
-Tunisians answered the ten most repeated of them, and whether the items of a single
-survey move together — they mostly do not, peaking at ρ = 0.49.
+the share saying equality is applied moved over time, how Tunisians answered in full,
+and whether the items of a single survey move together — they mostly do not, peaking
+at ρ = 0.49.
 
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
