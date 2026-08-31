@@ -184,6 +184,23 @@ never to every day, the Arab Opinion Index from daily to "I do not use the inter
 — or with options the release does not label at all. A cross-programme series has to
 be built by recoding, question by question, with the codebooks open.
 
+### Finding questions on a subject
+
+[`docs/topics/`](docs/topics) indexes the archive by subject rather than by variable:
+which of the 26 surveys carry anything on it, in which years, and which items recur
+often enough to build a series from. The lexicon is
+[`catalog/topics.json`](catalog/topics.json) — a file to read and argue with, not a
+judgement buried in code.
+
+**[Inequality](docs/topics/inequality.md)** is the first: 300 variables in 22 of the
+26 surveys, across economic gaps, gender, discrimination, wasta, equality as a
+principle, and opportunity. Two findings worth having before designing anything:
+45 of those questions recur across surveys, but **not one recurs across two
+programmes** — an inequality series can be built inside Arab Barometer or inside the
+Arab Opinion Index and not between them. And the only two questions that name
+Tunisian inequality directly, Afrobarometer Round 6's "The income gap between the
+rich and the poor" and "Regional inequality", are country-specific items asked once.
+
 ### Where the question text comes from
 
 The release's own variable labels where it has them, and otherwise the survey's
@@ -227,7 +244,8 @@ defines the negative sentinel codes those releases ship bare, and is what
 | `data/raw/` | the publishers' releases, tracked, so the archive rebuilds from a clone |
 | `docs/questionnaires/` | the published instrument for every survey — 33 documents |
 | `catalog/` | `catalog.json` / `catalog.csv` and the reports, generated; `sources.json`, hand-maintained |
-| `docs/` | how to use the data, provenance, the crosswalk, missing-value codes |
+| `docs/` | how to use the data, provenance, the crosswalk, the concordance, missing-value codes |
+| `docs/topics/` | the archive indexed by subject, from the lexicon in `catalog/topics.json` |
 | `main/figures/` | generated figures and the data behind them |
 | `scripts/` | extraction, verification, figures, doc generation |
 
@@ -256,6 +274,7 @@ python3 scripts/fetch_raw.py              # the two releases too large to commit
 python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
 python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, -suggested.csv, crosswalk.md
 python3 scripts/build_question_concordance.py   # docs/question-concordance.csv, .md
+python3 scripts/build_topic_index.py      # docs/topics/<topic>.csv, .md
 python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png

@@ -1,0 +1,105 @@
+{
+  "_comment": "Topic lexicons for scripts/build_topic_index.py. Patterns are case-insensitive regular expressions matched against a variable's question text. They are phrase-led on purpose: a bare word list picks up 'free and fair elections' for fairness, 'overcrowded classrooms' for class and 'poor teaching' for poverty. Every pattern here was written after reading what it matches. Edit and re-run to change what the index counts.",
+  "topics": {
+    "inequality": {
+      "title": "Inequality",
+      "description": "Questions about unequal outcomes, unequal treatment and unequal access, across every survey in the archive.",
+      "facets": {
+        "economic-gap": {
+          "title": "Economic gap and redistribution",
+          "patterns": [
+            "income gap",
+            "narrowing income",
+            "gap between the rich and the poor",
+            "\\brich and poor\\b",
+            "\\binequalit",
+            "regional inequalit",
+            "living standards of the poor",
+            "improving the standard of living",
+            "standard of living comparing",
+            "living conditions vs",
+            "living conditions .{0,15}compared (to|with) other",
+            "social class",
+            "socioeconomic class",
+            "lowest social class",
+            "fair(ly)? distribut",
+            "distribution .{0,40}(equitable|fair)",
+            "rich to pay higher taxes",
+            "healthcare for all even if"
+          ]
+        },
+        "gender": {
+          "title": "Gender inequality",
+          "patterns": [
+            "women .{0,30}equal",
+            "equal .{0,30}(right|opportunit|treatment) .{0,20}(for |of )?women",
+            "women and men .{0,30}equal",
+            "women.{0,25}same rights",
+            "same rights as men",
+            "women.{0,30}inherit",
+            "women.{0,20}(own|inherit) land",
+            "share of inheritance",
+            "women treated unequally",
+            "girl students",
+            "women.{0,30}(harass|violence)",
+            "discrimination based on gender",
+            "women have equal",
+            "promoting equal rights",
+            "women.{0,30}(run the office|political leader|leadership)"
+          ]
+        },
+        "discrimination": {
+          "title": "Discrimination and unfair treatment",
+          "patterns": [
+            "discriminat",
+            "treated unfairly",
+            "unfair treatment",
+            "treated unequally",
+            "people treated unequally",
+            "\\bunfairly\\b"
+          ]
+        },
+        "connections": {
+          "title": "Wasta and access through connections",
+          "patterns": [
+            "\\bwasta\\b",
+            "without connections",
+            "job without connections",
+            "connections .{0,20}(to get|for) a job"
+          ]
+        },
+        "equality-principle": {
+          "title": "Equality as a principle",
+          "patterns": [
+            "equality of all citizens",
+            "equality for all citizens",
+            "equality under the law",
+            "same rights regardless",
+            "equal.{0,25}regardless of",
+            "all people have the same rights",
+            "characteristics of democracy: equality"
+          ]
+        },
+        "opportunity": {
+          "title": "Opportunity and mobility",
+          "patterns": [
+            "equal opportunit",
+            "working their way out of",
+            "difficulty accessing",
+            "education opportunities",
+            "opportunities for disabled",
+            "rights, promoting opportunities"
+          ]
+        }
+      },
+      "excluded_because_they_are_false_friends": {
+        "fair": "free and fair elections, fair count of votes, fair coverage, fair punishment — electoral and judicial fairness, not distributive",
+        "class": "overcrowded classrooms, religious classes",
+        "poor": "poor teaching, poor services, poor condition of facilities — quality, not poverty",
+        "region": "province or region sampling variables, and regional organisations such as the Arab Maghreb Union",
+        "tax": "tax compliance and tax authority questions, which are about the state's reach rather than redistribution",
+        "living conditions compared": "'your living conditions compared to 12 months ago' is a change over time, not a gap between people; only the relational form is matched"
+      }
+    }
+  }
+}
