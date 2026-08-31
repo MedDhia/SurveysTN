@@ -83,6 +83,17 @@ below rather than as codes. They are ordinary values in the data.
 | `998` | don't know | 1 |
 | `99999` | refused | 1 |
 
+## Arab Barometer Wave VII
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `99` | Refused to answer | 312 |
+| `98` | Don’t know | 304 |
+| `99999` | Refused to answer | 3 |
+| `97` | Not applicable | 2 |
+| `999999998` | Don't know | 1 |
+| `999999999` | Refused to answer | 1 |
+
 ## Arab Barometer Wave VIII
 
 | Code | Label | Variables using it |

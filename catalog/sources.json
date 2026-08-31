@@ -51,6 +51,19 @@
     },
     {
       "series": "arab-barometer",
+      "wave": 7,
+      "wave_label": "Wave VII",
+      "slug": "wave-07",
+      "raw_file_stem": "AB7_ENG_Release_Version6",
+      "country_var": "COUNTRY",
+      "fieldwork_years_series": "2021-2022",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATE",
+      "fieldwork_source": "derived from the DATE variable in the data file",
+      "notes": "Release version 6."
+    },
+    {
+      "series": "arab-barometer",
       "wave": 8,
       "wave_label": "Wave VIII",
       "slug": "wave-08",

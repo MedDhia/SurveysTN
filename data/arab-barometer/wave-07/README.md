@@ -1,27 +1,27 @@
-# Arab Barometer Wave V — Tunisia
+# Arab Barometer Wave VII — Tunisia
 
 | | |
 |---|---|
 | Respondents | 2,400 |
-| Variables | 359 (281 with at least one non-missing answer in Tunisia) |
-| Fieldwork (Tunisia) | not recorded in the data file (series fieldwork 2018-2019) |
+| Variables | 453 (373 with at least one non-missing answer in Tunisia) |
+| Fieldwork (Tunisia) | 2021-10-01 to 2021-11-20 |
 | Language | English (translated instrument and labels) |
-| Pooled release | 27,850 respondents across 13 countries |
-| Source file | `ArabBarometer_WaveV_English_v2.sav` |
+| Pooled release | 26,154 respondents across 12 countries |
+| Source file | `AB7_ENG_Release_Version6.sav` |
 | Publisher | Arab Barometer (Princeton University / University of Michigan) |
 
 ## Files
 
 | File | Size | SHA-256 (first 16) |
 |---|---:|---|
-| `arab-barometer-w05-tunisia-codes.csv` | 2.34 MB | `3fa5981a055e2fed` |
-| `arab-barometer-w05-tunisia-labels.csv` | 4.90 MB | `46d1c6c631be1418` |
-| `arab-barometer-w05-tunisia.dta` | 6.88 MB | `329f4ca6da5902b5` |
-| `arab-barometer-w05-tunisia.sav` | 6.68 MB | `d060dcaba1b6aee4` |
-| `codebook.csv` | 0.10 MB | `aa13bea957059d0a` |
-| `codebook.json` | 0.17 MB | `26e989aefa1f8a09` |
+| `arab-barometer-w07-tunisia-codes.csv` | 2.78 MB | `ef7fbaf899f1e75a` |
+| `arab-barometer-w07-tunisia-labels.csv` | 7.95 MB | `176c436c2ad0f31c` |
+| `arab-barometer-w07-tunisia.dta` | 8.72 MB | `d19da4d24902e8f7` |
+| `arab-barometer-w07-tunisia.sav` | 8.47 MB | `196d57a3b5f61a3f` |
+| `codebook.csv` | 0.14 MB | `2a54c53646f665c6` |
+| `codebook.json` | 0.23 MB | `7fa50da7c0855e4c` |
 
-The pooled release carries items asked in only some countries, so 78 of the 359 variables are
+The pooled release carries items asked in only some countries, so 80 of the 453 variables are
 entirely missing in the Tunisia sub-sample. They are kept so that column positions
 line up with the pooled release; `codebook.csv` reports `n_valid` for each.
 
@@ -33,4 +33,4 @@ Consult `codebook.csv` for the untruncated labels.
 
 Regenerate with `python3 scripts/extract_tunisia.py`.
 
-Note: Release v2.
+Note: Release version 6.

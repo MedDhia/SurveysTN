@@ -18,9 +18,10 @@ consistent, with nothing recoded.
 | Arab Barometer Wave II | 1,196 | 468 (303 with data) | 2010–2011 | [`data/arab-barometer/wave-02`](data/arab-barometer/wave-02) |
 | Arab Barometer Wave IV | 1,200 | 290 (248 with data) | 2016–2017 | [`data/arab-barometer/wave-04`](data/arab-barometer/wave-04) |
 | Arab Barometer Wave V | 2,400 | 359 (281 with data) | 2018–2019 | [`data/arab-barometer/wave-05`](data/arab-barometer/wave-05) |
+| Arab Barometer Wave VII | 2,400 | 453 (373 with data) | Oct–Nov 2021 | [`data/arab-barometer/wave-07`](data/arab-barometer/wave-07) |
 | Arab Barometer Wave VIII | 2,406 | 690 (466 with data) | Sep–Nov 2023 | [`data/arab-barometer/wave-08`](data/arab-barometer/wave-08) |
 
-7,202 Tunisian respondents. `catalog/catalog.csv` and `catalog/catalog.json` carry
+9,602 Tunisian respondents. `catalog/catalog.csv` and `catalog/catalog.json` carry
 the same table in machine-readable form, with per-file checksums.
 
 Wave IV is the one partial entry: Arab Barometer distributes it as a CSV of label
