@@ -30,6 +30,32 @@ release rather than on the Tunisia subset, so it does not change with the countr
 being extracted. Dropping the SPSS release into `data/raw/` and switching
 `source_format` to `sav` upgrades the wave with no other change.
 
+## Questionnaires
+
+`docs/questionnaires/` holds the published English instrument for each wave, and
+`catalog/sources.json` records the source URL per wave. They are the publisher's
+own documents, downloaded from arabbarometer.org.
+
+They are documentation, but they are also an input: `scripts/build_crosswalk.py`
+parses them for question text where a release carries no variable labels, which is
+the whole of Wave IV. Anything the crosswalk sourced that way is marked in its
+`text_from_questionnaire` column, and a sub-item that inherited its parent
+question's wording is marked `questionnaire (stem …)`. The parse is validated
+against the releases that do carry labels — 88–96% agreement per wave, recorded in
+`catalog/crosswalk-report.json` — rather than taken on trust.
+
+## Wave VI is three surveys
+
+Arab Barometer fielded Wave VI as three telephone rounds during the pandemic, each
+with its own sample and questionnaire, so the archive carries three surveys rather
+than one: `wave-06-part-1`, `-2` and `-3`, fielded July 2020, October 2020 and
+March 2021.
+
+They are not a panel. Their `ID` values overlap — 223 to 339 shared values between
+any two rounds — but on those shared IDs sex agrees 51–57% of the time and age 1–3%,
+which is what coincidence looks like rather than a link. The IDs are per-release
+sequence numbers. Do not join the rounds on them.
+
 ## Country identification
 
 Arab Barometer numbers Tunisia **21** in the country variable in all three waves.

@@ -21,7 +21,11 @@
       "fieldwork_years_series": "2010-2011",
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
-      "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes."
+      "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes.",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w02-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABII_Questionnaire_English-1.pdf"
+      }
     },
     {
       "series": "arab-barometer",
@@ -35,7 +39,11 @@
       "fieldwork_years_series": "2016-2017",
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
-      "notes": "Only the label-text CSV release was available; no numeric codes or question text."
+      "notes": "Only the label-text CSV release was available; no numeric codes or question text.",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w04-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ABIV_Questionnaire_ENG-2.pdf"
+      }
     },
     {
       "series": "arab-barometer",
@@ -47,7 +55,62 @@
       "fieldwork_years_series": "2018-2019",
       "fieldwork_tunisia": null,
       "fieldwork_source": "not recorded in the data file",
-      "notes": "Release v2."
+      "notes": "Release v2.",
+      "questionnaire": null
+    },
+    {
+      "series": "arab-barometer",
+      "wave": 6,
+      "part": 1,
+      "wave_label": "Wave VI Part 1",
+      "slug": "wave-06-part-1",
+      "raw_file_stem": "Arab_Barometer_Wave_6_Part_1_ENG_RELEASE",
+      "country_var": "COUNTRY",
+      "fieldwork_years_series": "2020-2021",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATE",
+      "fieldwork_source": "derived from the DATE variable in the data file",
+      "notes": "Round 1, fielded by telephone during the COVID-19 pandemic.",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w06p1-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-I-Questionnaire-2.pdf"
+      }
+    },
+    {
+      "series": "arab-barometer",
+      "wave": 6,
+      "part": 2,
+      "wave_label": "Wave VI Part 2",
+      "slug": "wave-06-part-2",
+      "raw_file_stem": "Arab_Barometer_Wave_6_Part_2_ENG_RELEASE",
+      "country_var": "COUNTRY",
+      "fieldwork_years_series": "2020-2021",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATE",
+      "fieldwork_source": "derived from the DATE variable in the data file",
+      "notes": "Round 2, a fresh sample with its own questionnaire.",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w06p2-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-II-Questionnaire-2.pdf"
+      }
+    },
+    {
+      "series": "arab-barometer",
+      "wave": 6,
+      "part": 3,
+      "wave_label": "Wave VI Part 3",
+      "slug": "wave-06-part-3",
+      "raw_file_stem": "Arab_Barometer_Wave_6_Part_3_ENG_RELEASE",
+      "country_var": "COUNTRY",
+      "fieldwork_years_series": "2020-2021",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "DATE",
+      "fieldwork_source": "derived from the DATE variable in the data file",
+      "notes": "Round 3, a fresh sample with its own questionnaire.",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w06p3-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VI-Part-III-Questionnaire.pdf"
+      }
     },
     {
       "series": "arab-barometer",
@@ -60,7 +123,11 @@
       "fieldwork_tunisia": "derive",
       "fieldwork_date_var": "DATE",
       "fieldwork_source": "derived from the DATE variable in the data file",
-      "notes": "Release version 6."
+      "notes": "Release version 6.",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w07-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VII-Questionnaire-RELEASE-v2.pdf"
+      }
     },
     {
       "series": "arab-barometer",
@@ -73,7 +140,21 @@
       "fieldwork_tunisia": "derive",
       "fieldwork_date_var": "DATE",
       "fieldwork_source": "derived from the DATE variable in the data file",
-      "notes": "Release v3 (archive labelled v2)."
+      "notes": "Release v3 (archive labelled v2).",
+      "questionnaire": {
+        "file": "docs/questionnaires/ab-w08-questionnaire.pdf",
+        "url": "https://www.arabbarometer.org/wp-content/uploads/ENG-Arab-Barometer-Wave-VIII-Questionnaire-RELEASE-FIN-NOV-2024-1.pdf"
+      }
+    }
+  ],
+  "unmatched_questionnaires": [
+    {
+      "series": "arab-barometer",
+      "wave": 3,
+      "wave_label": "Wave III",
+      "file": "docs/questionnaires/ab-w03-questionnaire.pdf",
+      "url": "https://www.arabbarometer.org/wp-content/uploads/ABIII_Questionnaire_ENG.pdf",
+      "note": "Questionnaire only; no Wave III data release has been added to the archive."
     }
   ]
 }

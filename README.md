@@ -18,11 +18,22 @@ consistent, with nothing recoded.
 | Arab Barometer Wave II | 1,196 | 468 (303 with data) | 2010–2011 | [`data/arab-barometer/wave-02`](data/arab-barometer/wave-02) |
 | Arab Barometer Wave IV | 1,200 | 290 (248 with data) | 2016–2017 | [`data/arab-barometer/wave-04`](data/arab-barometer/wave-04) |
 | Arab Barometer Wave V | 2,400 | 359 (281 with data) | 2018–2019 | [`data/arab-barometer/wave-05`](data/arab-barometer/wave-05) |
+| Arab Barometer Wave VI Part 1 | 1,005 | 98 (75 with data) | Jul 2020 | [`data/arab-barometer/wave-06-part-1`](data/arab-barometer/wave-06-part-1) |
+| Arab Barometer Wave VI Part 2 | 1,002 | 82 (78 with data) | Oct 2020 | [`data/arab-barometer/wave-06-part-2`](data/arab-barometer/wave-06-part-2) |
+| Arab Barometer Wave VI Part 3 | 1,200 | 105 (98 with data) | Mar 2021 | [`data/arab-barometer/wave-06-part-3`](data/arab-barometer/wave-06-part-3) |
 | Arab Barometer Wave VII | 2,400 | 453 (373 with data) | Oct–Nov 2021 | [`data/arab-barometer/wave-07`](data/arab-barometer/wave-07) |
 | Arab Barometer Wave VIII | 2,406 | 690 (466 with data) | Sep–Nov 2023 | [`data/arab-barometer/wave-08`](data/arab-barometer/wave-08) |
 
-9,602 Tunisian respondents. `catalog/catalog.csv` and `catalog/catalog.json` carry
-the same table in machine-readable form, with per-file checksums.
+12,809 Tunisian respondents across eight surveys. `catalog/catalog.csv` and
+`catalog/catalog.json` carry the same table in machine-readable form, with
+per-file checksums.
+
+Wave VI is carried as three surveys rather than one. Arab Barometer fielded it as
+three telephone rounds during the pandemic, months apart, each with its own sample
+and its own questionnaire. They are not a panel: the ID numbers overlap between
+rounds, but on the overlapping IDs sex agrees at chance and age almost never, so
+the numbers are per-release sequence numbers and must not be used to link
+respondents.
 
 Wave IV is the one partial entry: Arab Barometer distributes it as a CSV of label
 text with no SPSS release, so it has no numeric codes and no question text. It is
@@ -55,7 +66,8 @@ Wave II does not have and don't-know codes that are not declared missing.
 | `data/<series>/<wave>/` | one folder per survey — the extracts |
 | `data/raw/` | pooled multi-country releases, not tracked in git |
 | `catalog/` | `catalog.json` / `catalog.csv`, generated; `sources.json`, hand-maintained |
-| `docs/` | how to use the data, provenance, cross-wave variable index, missing-value codes |
+| `docs/` | how to use the data, provenance, the cross-wave crosswalk, missing-value codes |
+| `docs/questionnaires/` | the published questionnaire for each wave, as PDF |
 | `scripts/` | extraction, verification, doc generation |
 
 ## Regenerating
@@ -67,13 +79,32 @@ then:
 ```bash
 pip install -r scripts/requirements.txt
 python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
-python3 scripts/build_variable_index.py   # docs/variable-index.csv
+python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, docs/crosswalk.md
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/verify.py                 # cell-by-cell check against the releases
 ```
 
 Without the releases, `python3 scripts/verify.py --offline` checks the committed
 files against the checksums and counts in `catalog/catalog.json`.
+
+## Matching the waves to each other
+
+[`docs/crosswalk.md`](docs/crosswalk.md) and the full
+[`docs/crosswalk.csv`](docs/crosswalk.csv) line the waves up: one row per variable,
+the name it takes in each wave, the question each wave asked, and whether the
+wording held. 1,856 variables, 1,761 of them with question text, 13 present in
+all eight surveys.
+
+The question text comes from the release's own variable labels where it has them,
+and otherwise from the wave's questionnaire in
+[`docs/questionnaires/`](docs/questionnaires), parsed by question number. That is
+the only source for Wave IV, and it also repairs labels that are truncated in the
+release — Arab Barometer's own Wave VIII label for `Q101` ends "the current
+economic situation in?". The parse is checked against the waves that do carry
+labels and agrees on 88–96% of them, per wave.
+
+Matching on name alone would mislead: 86 variables share a name across waves but
+not a wording. Check `text_varies_across_waves` before pooling anything.
 
 ## Adding a survey
 

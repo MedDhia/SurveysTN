@@ -60,6 +60,18 @@ CSV_NA_STRINGS = frozenset({
 })
 
 
+def wave_tag(spec: dict) -> str:
+    """Short identifier for a wave, or for one part of a wave fielded in parts.
+
+    Arab Barometer ran Wave VI as three separate rounds with their own samples and
+    questionnaires, so each is carried as its own survey: w06p1, w06p2, w06p3.
+    """
+    tag = f"w{spec['wave']:02d}"
+    if spec.get("part"):
+        tag += f"p{spec['part']}"
+    return tag
+
+
 def sha256(path: Path) -> str:
     h = hashlib.sha256()
     with path.open("rb") as fh:
@@ -228,7 +240,7 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
 
     dest = out_dir / spec["series"] / spec["slug"]
     dest.mkdir(parents=True, exist_ok=True)
-    stem = f"{spec['series']}-w{spec['wave']:02d}-tunisia"
+    stem = f"{spec['series']}-{wave_tag(spec)}-tunisia"
 
     # SPSS.
     pyreadstat.write_sav(
@@ -283,7 +295,9 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "series": spec["series"],
         "series_name": series["name"],
         "wave": spec["wave"],
+        "part": spec.get("part"),
         "wave_label": spec["wave_label"],
+        "tag": wave_tag(spec),
         "slug": spec["slug"],
         "country": "Tunisia",
         "country_value": country_value,

@@ -1,0 +1,79 @@
+{
+  "waves": {
+    "w02": {
+      "wave_label": "Wave II",
+      "questionnaire": "docs/questionnaires/ab-w02-questionnaire.pdf",
+      "variables_with_labels": 468,
+      "questions_parsed": 136,
+      "compared": 86,
+      "agreeing": 79,
+      "agreement_rate": 0.919
+    },
+    "w04": {
+      "wave_label": "Wave IV",
+      "questionnaire": "docs/questionnaires/ab-w04-questionnaire.pdf",
+      "variables_with_labels": 0,
+      "questions_parsed": 154,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null
+    },
+    "w05": {
+      "wave_label": "Wave V",
+      "questionnaire": null,
+      "questions_parsed": 0,
+      "compared": 0,
+      "agreeing": 0,
+      "agreement_rate": null
+    },
+    "w06p1": {
+      "wave_label": "Wave VI Part 1",
+      "questionnaire": "docs/questionnaires/ab-w06p1-questionnaire.pdf",
+      "variables_with_labels": 90,
+      "questions_parsed": 57,
+      "compared": 40,
+      "agreeing": 35,
+      "agreement_rate": 0.875
+    },
+    "w06p2": {
+      "wave_label": "Wave VI Part 2",
+      "questionnaire": "docs/questionnaires/ab-w06p2-questionnaire.pdf",
+      "variables_with_labels": 82,
+      "questions_parsed": 49,
+      "compared": 34,
+      "agreeing": 32,
+      "agreement_rate": 0.941
+    },
+    "w06p3": {
+      "wave_label": "Wave VI Part 3",
+      "questionnaire": "docs/questionnaires/ab-w06p3-questionnaire.pdf",
+      "variables_with_labels": 105,
+      "questions_parsed": 62,
+      "compared": 46,
+      "agreeing": 42,
+      "agreement_rate": 0.913
+    },
+    "w07": {
+      "wave_label": "Wave VII",
+      "questionnaire": "docs/questionnaires/ab-w07-questionnaire.pdf",
+      "variables_with_labels": 435,
+      "questions_parsed": 208,
+      "compared": 153,
+      "agreeing": 136,
+      "agreement_rate": 0.889
+    },
+    "w08": {
+      "wave_label": "Wave VIII",
+      "questionnaire": "docs/questionnaires/ab-w08-questionnaire.pdf",
+      "variables_with_labels": 513,
+      "questions_parsed": 242,
+      "compared": 134,
+      "agreeing": 128,
+      "agreement_rate": 0.955
+    }
+  },
+  "variables": 1856,
+  "with_question_text": 1761,
+  "in_every_wave": 13,
+  "wording_drifts": 86
+}

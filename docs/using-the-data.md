@@ -31,11 +31,12 @@ meta.variable_value_labels["Q101"]    # the response options
 use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 ```
 
-## Five things to check before you analyse
+## Six things to check before you analyse
 
-**Weights.** Waves IV, V, VII and VIII carry a design weight (`wt`, `WT`) with a
-stratum and PSU alongside it; Wave II does not. Unweighted estimates from the four
-weighted waves are not nationally representative.
+**Weights.** Every wave except Wave II carries a design weight (`wt`, `WT`);
+Waves IV, V, VII and VIII carry a stratum and PSU alongside it, and the three
+Wave VI rounds a PSU only. Unweighted estimates from the weighted waves are not
+nationally representative.
 
 ```stata
 svyset psu [pw=wt], strata(stratum)
@@ -55,8 +56,14 @@ covers a whole file.
 **Many columns are empty here.** The pooled releases carry items asked in only
 some countries. In the Tunisia sub-sample 165 of Wave II's 468 variables, 42 of
 Wave IV's 290, 78 of Wave V's 359, 80 of Wave VII's 453 and 224 of Wave VIII's 690
-have no data at all. They are kept so column positions match the pooled release.
-`codebook.csv` gives `n_valid` per variable; filter on it.
+have no data at all; the three Wave VI rounds are tighter, at 23, 4 and 7. They are
+kept so column positions match the pooled release. `codebook.csv` gives `n_valid`
+per variable; filter on it.
+
+**Wave VI is three surveys, not one.** Three telephone rounds, months apart, with
+separate samples and separate questionnaires. Their ID numbers overlap but do not
+link: on the overlapping IDs sex agrees at chance and age almost never. Treat them
+as three cross-sections.
 
 **One answer reads as missing in CSV.** Wave IV's `q1019b`, a second-language
 question, records "None" as a substantive answer — and `pandas.read_csv` turns
@@ -67,17 +74,23 @@ treat `""` as missing, or use the `.sav` or `.dta`, which are unaffected.
 so the check runs on every wave added later.
 
 **Variable names change case between waves.** `country` in Waves II, IV and V,
-`COUNTRY` in Waves VII and VIII, and the same for most question numbers. Match on
-the upper-cased name. `docs/variable-index.csv` does this for you: one row per
-variable, the spelling used in each wave, its label in each wave, and `n_waves`.
+`COUNTRY` from Wave VI on, and the same for most question numbers. Match on the
+upper-cased name. `docs/crosswalk.csv` does this for you: one row per variable, the
+spelling used in each wave, the question each wave asked, and `n_waves`.
 
 ## Pooling waves
 
-Only 21 variables appear in all five waves under a shared name, 10 more in four,
-69 in three and 236 in exactly two — thirteen years of questionnaire revision, and
-Wave II predates much of the current numbering. Wave IV compounds it: its release
-carries no question text, so `docs/variable-index.csv` gives its column names with
-no labels to compare against. Start from that index, and confirm from the labels
-that a shared name really is the same question before you stack it — a matching
-name is not by itself evidence that the wording or the response scale survived
-unchanged.
+Read [`crosswalk.md`](crosswalk.md) first. 13 variables appear in all eight surveys
+under a shared name; most appear in only one. Thirteen years of questionnaire
+revision, three short pandemic rounds with cut-down instruments, and a Wave II that
+predates much of the current numbering.
+
+A shared name is not evidence of a shared question: 86 variables carry a name in
+more than one wave and a wording that does not match between them. The crosswalk
+gives you `text_varies_across_waves` and `lowest_text_agreement` to check that, and
+the per-wave question text to read for yourself. It compares wording only — confirm
+the response scale in each wave's `codebook.csv` before you stack anything, since a
+question that survived unchanged can still have been rescaled.
+
+Wave IV has no question text of its own; what the crosswalk shows for it is parsed
+from its questionnaire PDF.

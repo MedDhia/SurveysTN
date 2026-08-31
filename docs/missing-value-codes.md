@@ -83,6 +83,58 @@ below rather than as codes. They are ordinary values in the data.
 | `998` | don't know | 1 |
 | `99999` | refused | 1 |
 
+## Arab Barometer Wave VI Part 1
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `99` | Refused to answer | 78 |
+| `98` | Don’t know | 65 |
+| `98` | Don't know | 13 |
+| `97` | Not Applicable | 5 |
+| `98` | I don’t know | 3 |
+| `99` | Refused | 3 |
+| `99` | Declined to answer | 3 |
+| `99` | Decline to answer | 2 |
+| `97` | Not applicable | 1 |
+| `99` | refused to answer | 1 |
+| `99998` | Don't know | 1 |
+| `99999` | Refused | 1 |
+
+## Arab Barometer Wave VI Part 2
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `99` | Refused to answer | 65 |
+| `98` | Don’t know | 64 |
+| `99` | Decline to answer | 5 |
+| `98` | Don't know | 3 |
+| `98` | I don’t know | 2 |
+| `99` | Refused | 2 |
+| `99` | Declined to answer | 2 |
+| `98` | Don't know' | 1 |
+| `9999` | Refused | 1 |
+| `99998` | Don't know | 1 |
+| `99999` | Refused | 1 |
+
+## Arab Barometer Wave VI Part 3
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `99` | Refused to answer | 82 |
+| `100` | Respondent refused to continue | 66 |
+| `98` | Don’t know | 58 |
+| `98` | Don't know | 21 |
+| `99` | Decline to answer | 3 |
+| `99` | Declined to answer | 3 |
+| `98` | I don’t know | 2 |
+| `100` | Refuse to continue | 1 |
+| `97` | Not applicable- was not employed before the outbreak | 1 |
+| `98` | Don't know' | 1 |
+| `999` | Refused to answer | 1 |
+| `99998` | Don't know | 1 |
+| `99999` | Refused | 1 |
+| `99999` | Refused to answer | 1 |
+
 ## Arab Barometer Wave VII
 
 | Code | Label | Variables using it |

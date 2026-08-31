@@ -29,7 +29,16 @@ means describing it rather than committing files by hand.
    `"fieldwork_date_var"` to the date variable, and the extractor will read the
    window out of the data instead of taking it on trust.
 
-3. Run the four scripts in the order given in the README, and commit what changes.
+   A wave fielded in separate rounds — as Wave VI was — takes a `part` number as
+   well, and becomes one entry per round with its own `slug`. The extractor tags
+   those `w06p1`, `w06p2`, `w06p3`.
+
+   Add `questionnaire` with the published instrument's path and source URL if one
+   exists, and put the PDF in `docs/questionnaires/` as `ab-<tag>-questionnaire.pdf`.
+   The crosswalk parses it for question text, which matters most when the release
+   has no variable labels.
+
+3. Run the scripts in the order given in the README, and commit what changes.
 
 ## If it is a new series
 

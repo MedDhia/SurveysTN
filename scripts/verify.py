@@ -24,7 +24,7 @@ from pathlib import Path
 import pandas as pd
 import pyreadstat
 
-from extract_tunisia import ROOT, apply_numeric_types, is_blank, read_pooled, sha256
+from extract_tunisia import ROOT, apply_numeric_types, is_blank, read_pooled, sha256, wave_tag
 
 TOL = 1e-9
 
@@ -92,7 +92,7 @@ def check_offline(catalog: dict) -> list[str]:
     """Check the committed files against the catalog, without the pooled releases."""
     errors: list[str] = []
     for s in catalog["surveys"]:
-        tag = f"{s['series']} w{s['wave']:02d}"
+        tag = f"{s['series']} {s['tag']}"
         folder = ROOT / s["path"]
         for name, info in s["files"].items():
             f = folder / name
@@ -103,7 +103,7 @@ def check_offline(catalog: dict) -> list[str]:
             elif sha256(f) != info["sha256"]:
                 errors.append(f"{tag}: {name} does not match the recorded SHA-256")
 
-        sav = folder / f"{s['series']}-w{s['wave']:02d}-tunisia.sav"
+        sav = folder / f"{s['series']}-{s['tag']}-tunisia.sav"
         if not sav.exists():
             continue
         df, _ = pyreadstat.read_sav(str(sav), user_missing=True)
@@ -125,7 +125,7 @@ def check_offline(catalog: dict) -> list[str]:
 
 
 def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) -> None:
-    tag = f"{s['series']} w{s['wave']:02d}"
+    tag = f"{s['series']} {s['tag']}"
     raw_dir = ROOT / "data" / "raw"
     src = raw_dir / s["source_file"]
     if not src.exists():
@@ -149,7 +149,7 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
         elif sha256(f) != info["sha256"]:
             errors.append(f"{tag}: {name} does not match the recorded SHA-256")
 
-    stem = folder / f"{s['series']}-w{s['wave']:02d}-tunisia"
+    stem = folder / f"{s['series']}-{s['tag']}-tunisia"
     got_sav, _ = pyreadstat.read_sav(f"{stem}.sav", user_missing=True)
     same_frame(expect, got_sav, f"{tag} .sav", errors)
 
@@ -184,7 +184,7 @@ def main() -> int:
 
     catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
     manifest = json.loads((ROOT / "catalog" / "sources.json").read_text(encoding="utf-8"))
-    specs = {(s["series"], s["wave"]): s for s in manifest["waves"]}
+    specs = {(s["series"], wave_tag(s)): s for s in manifest["waves"]}
 
     if args.offline:
         errors = check_offline(catalog)
@@ -192,7 +192,7 @@ def main() -> int:
     else:
         errors = []
         for s in catalog["surveys"]:
-            spec = specs[(s["series"], s["wave"])]
+            spec = specs[(s["series"], s["tag"])]
             check_against_release(s, spec, manifest["series"][s["series"]], errors)
         label = "all extracts match their pooled releases"
 
