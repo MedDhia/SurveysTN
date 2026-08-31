@@ -1,0 +1,26 @@
+series,tag,label,respondents,precision,n_days,start,end,span
+arab-barometer,w02,Arab Barometer Wave II,1196,year,,2010-01-01,2011-12-31,2010–2011 · year only
+arab-barometer,w03,Arab Barometer Wave III,1199,day,24.0,2013-02-03,2013-03-25,3 Feb – 25 Mar 2013 · 24 days
+arab-barometer,w04,Arab Barometer Wave IV,1200,year,,2016-01-01,2017-12-31,2016–2017 · year only
+arab-barometer,w05,Arab Barometer Wave V,2400,year,,2018-01-01,2019-12-31,2018–2019 · year only
+arab-barometer,w06p1,Arab Barometer Wave VI Part 1,1005,day,5.0,2020-07-24,2020-07-28,24 Jul – 28 Jul 2020 · 5 days
+arab-barometer,w06p2,Arab Barometer Wave VI Part 2,1002,day,10.0,2020-10-06,2020-10-15,6 Oct – 15 Oct 2020 · 10 days
+arab-barometer,w06p3,Arab Barometer Wave VI Part 3,1200,day,7.0,2021-03-06,2021-03-16,6 Mar – 16 Mar 2021 · 7 days
+arab-barometer,w07,Arab Barometer Wave VII,2400,day,50.0,2021-10-01,2021-11-20,1 Oct – 20 Nov 2021 · 50 days
+arab-barometer,w08,Arab Barometer Wave VIII,2406,day,53.0,2023-09-13,2023-11-04,13 Sep – 4 Nov 2023 · 53 days
+world-values-survey,w06,WVS Wave 6,1205,month,,2013-11-01,2013-12-31,Nov – Dec 2013 · month only
+world-values-survey,w07,WVS Wave 7,1208,day,25.0,2019-04-26,2019-05-20,26 Apr – 20 May 2019 · 25 days
+afrobarometer,w06,Afrobarometer Round 6,1200,day,25.0,2015-04-14,2015-05-09,14 Apr – 9 May 2015 · 25 days
+afrobarometer,w07,Afrobarometer Round 7,1199,day,29.0,2018-03-31,2018-05-07,31 Mar – 7 May 2018 · 29 days
+afrobarometer,w08,Afrobarometer Round 8,1200,day,24.0,2020-02-24,2020-03-18,24 Feb – 18 Mar 2020 · 24 days
+afrobarometer,w09,Afrobarometer Round 9,1200,day,24.0,2022-02-21,2022-03-17,21 Feb – 17 Mar 2022 · 24 days
+afrobarometer,w10,Afrobarometer Round 10,1200,day,16.0,2024-02-25,2024-03-11,25 Feb – 11 Mar 2024 · 16 days
+arab-opinion-index,2011,Arab Opinion Index 2011,1229,year,,2011-01-01,2011-12-31,2011 · year only
+arab-opinion-index,2012-2013,Arab Opinion Index 2012/2013,1500,year,,2012-01-01,2013-12-31,2012–2013 · year only
+arab-opinion-index,2014,Arab Opinion Index 2014,1498,year,,2014-01-01,2014-12-31,2014 · year only
+arab-opinion-index,2015,Arab Opinion Index 2015,1497,year,,2015-01-01,2015-12-31,2015 · year only
+arab-opinion-index,2016,Arab Opinion Index 2016,1499,year,,2016-01-01,2016-12-31,2016 · year only
+arab-opinion-index,2017-2018,Arab Opinion Index 2017/2018,1500,year,,2017-01-01,2018-12-31,2017–2018 · year only
+arab-opinion-index,2019-2020,Arab Opinion Index 2019/2020,2400,year,,2019-01-01,2020-12-31,2019–2020 · year only
+arab-opinion-index,2022,Arab Opinion Index 2022,2400,year,,2022-01-01,2022-12-31,2022 · year only
+arab-opinion-index,2024-2025,Arab Opinion Index 2024/2025,3245,year,,2024-01-01,2025-12-31,2024–2025 · year only

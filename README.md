@@ -96,6 +96,18 @@ the seven things worth checking before you analyse anything — among them a wei
 Wave II does not have, don't-know codes that are not declared missing and differ
 by survey, and one answer that a default CSV reader silently turns into missing.
 
+## When the fieldwork happened
+
+![Fieldwork coverage](main/figures/fieldwork-coverage.png)
+
+The archive spans sixteen years and does not cover them. Twelve of the twenty-five
+surveys record an interview date per respondent; between them those cover **292
+distinct days**, and no two surveys were ever in the field on the same day. The
+longest gap between two covered days is 1,057 days. The other thirteen releases
+carry only a month or a year, and the figure draws them at that resolution rather
+than implying more. [`main/figures/README.md`](main/figures/README.md) reads it in
+full, and the day-level data sits beside it as CSV.
+
 ## Wave VI, and the one derived file
 
 Arab Barometer fielded Wave VI as three telephone rounds during the pandemic,
@@ -182,7 +194,8 @@ Opinion Index codebooks give the response options behind its labels.
 | `docs/questionnaires/` | published instruments and codebooks, where a programme has one here |
 | `catalog/` | `catalog.json` / `catalog.csv` and the reports, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the crosswalk, missing-value codes |
-| `scripts/` | extraction, verification, doc generation |
+| `main/figures/` | generated figures and the data behind them |
+| `scripts/` | extraction, verification, figures, doc generation |
 
 The clone carries its own sources, which is most of its size; nothing you need for
 analysis depends on `data/raw/`.
@@ -210,6 +223,7 @@ python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
 python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, -suggested.csv, crosswalk.md
 python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
+python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
 python3 scripts/verify.py                 # cell-by-cell against the releases
 ```
 
