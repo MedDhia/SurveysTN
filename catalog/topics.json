@@ -22,8 +22,8 @@
         },
         {
           "file": "inequality-correlations",
-          "title": "Whether the items move together",
-          "caption": "Spearman rank correlations among the inequality items of the survey that carries the most of them. Within one survey only — other surveys are other people."
+          "title": "Is it one attitude, or several?",
+          "caption": "Spearman rank correlations among the 25 inequality items of the survey that can support the most comparisons, grouped by battery. Within one survey only — other surveys are other people."
         }
       ],
       "facets": {

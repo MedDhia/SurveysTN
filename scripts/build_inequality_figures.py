@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import json
 import re
+import textwrap
 from pathlib import Path
 
 import matplotlib
@@ -570,45 +571,107 @@ def trend_figure(rows: pd.DataFrame, surveys: dict) -> None:
     print(f"trends: {len(panels)} questions in {len(groups)} scale groups")
 
 
-def correlation_figure(surveys: dict) -> None:
-    topic = pd.read_csv(TOPIC)
-    counts = topic["survey"].value_counts()
-    key = counts.index[0]
-    survey = surveys[key]
-    items = topic[topic["survey"] == key]
+def battery_of(variable: str) -> str:
+    """The battery a variable belongs to, from its name: Q422_1 and Q422_2 are one item."""
+    match = re.match(r"([A-Za-z]+\d+)", variable)
+    return match.group(1) if match else variable
 
-    scales = {v: substantive(survey, v) for v in items["variable"]}
-    ordinal = {
-        v: s for v, s in scales.items() if s and 3 <= len(s) <= 7
-    }  # a rank correlation wants an ordered scale, not a nominal list
-    if len(ordinal) < 3:
+
+def eligible(survey: dict, topic: pd.DataFrame) -> list[str]:
+    """Inequality items of a survey that can enter a rank correlation, from the codebook.
+
+    Read from ``codebook.json`` rather than the data so every survey can be weighed
+    without loading them all. An item qualifies if it has an ordered scale of three to
+    seven substantive answers and enough respondents to correlate.
+    """
+    wanted = set(topic.loc[topic["survey"] == survey["key"], "variable"].str.upper())
+    rows = json.loads((ROOT / survey["path"] / "codebook.json").read_text(encoding="utf-8"))
+    out = []
+    for row in rows:
+        if row["variable"].upper() not in wanted or row["n_valid"] < 100:
+            continue
+        scale = substantive_scale(row["value_labels"])
+        if scale and 3 <= len(scale) <= 7:
+            out.append(row["variable"])
+    return out
+
+
+def correlation_target(surveys: dict) -> tuple[dict, list[str]]:
+    """The survey whose inequality items can actually support the most comparisons.
+
+    Not the survey with the most rows in the topic table. Arab Barometer Wave VIII
+    tops that count with 43, but 28 of them are one multi-response question exploded
+    into ``Q884A_*``/``Q884B_*`` dummy columns — a tally of columns, not of questions.
+    Counting only the items eligible for the matrix ranks by what the figure can
+    actually show.
+    """
+    topic = pd.read_csv(TOPIC)
+    ranked = sorted(
+        ((survey, eligible(survey, topic)) for survey in surveys.values()),
+        key=lambda pair: (-len(pair[1]), pair[0]["key"]),
+    )
+    return ranked[0]
+
+
+def correlation_figure(surveys: dict) -> None:
+    """Whether perceived inequality is one attitude or several.
+
+    A correlation matrix over an arbitrary handful of a survey's items answers a
+    question about the questionnaire — do neighbouring items in a battery move
+    together — and not one about inequality. Grouped by battery, it answers the
+    question worth asking of an inequality page: does someone who sees inequality on
+    one dimension see it on the others?
+    """
+    topic = pd.read_csv(TOPIC)
+    survey, items = correlation_target(surveys)
+    key = survey["key"]
+    text_of = topic[topic["survey"] == key].set_index("variable")["question_text"]
+
+    scales = {v: substantive(survey, v) for v in items}
+    data = load(survey, items)
+    frame = pd.DataFrame(
+        {v: data[v].where(data[v].isin(scales[v].keys())) for v in items if v in data}
+    )
+    frame = frame.loc[:, frame.notna().sum() >= 100]
+    if frame.shape[1] < 3:
         print("correlations: too few ordinal items")
         return
 
-    data = load(survey, list(ordinal))
-    frame = pd.DataFrame(
-        {v: data[v].where(data[v].isin(scales[v].keys())) for v in ordinal if v in data}
-    )
-    frame = frame.loc[:, frame.notna().sum() >= 100]
+    # Group the matrix by battery, so within-battery blocks are visibly separate from
+    # the cross-battery cells that carry the actual finding.
+    batteries: dict[str, list[str]] = {}
+    for v in frame.columns:
+        batteries.setdefault(battery_of(v), []).append(v)
+    blocks = sorted(batteries.items(), key=lambda kv: (-len(kv[1]), kv[0]))
+    columns = [v for _, members in blocks for v in members]
+    frame = frame[columns]
     matrix = frame.corr(method="spearman", min_periods=100)
+
+    labels, headings, edges = [], [], []
+    at = 0
+    for name, members in blocks:
+        clauses, families = shorten([tidy(text_of[v]) for v in members])
+        subject = families[0].subject if len(families) == 1 else None
+        headings.append((at, at + len(members), name, subject))
+        edges.append(at + len(members))
+        labels += [f"{v} · {clip(c, 44)}" for v, c in zip(members, clauses)]
+        at += len(members)
 
     grid = matrix.to_numpy(dtype=float).copy()
     np.fill_diagonal(grid, np.nan)
     finite = grid[np.isfinite(grid)]
     unmeasured = int(np.isnan(grid).sum() - len(grid))
-
-    # A correlation runs to ±1, but nothing here comes near it: drawn on the full range
-    # every cell washes to white and the figure says nothing. The scale is set to the
-    # strongest pair present, symmetrically, and the limit is stated on the bar.
     limit = max(0.2, float(np.ceil(np.abs(finite).max() * 10) / 10))
 
-    labels = []
-    for v in matrix.columns:
-        text = tidy(items.loc[items["variable"] == v, "question_text"].iloc[0])
-        labels.append(f"{v} · {clip(text, 52)}")
+    same = np.zeros_like(grid, dtype=bool)
+    for lo, hi, _, _ in headings:
+        same[lo:hi, lo:hi] = True
+    np.fill_diagonal(same, False)
+    within = np.abs(grid[same & np.isfinite(grid)])
+    between = np.abs(grid[~same & np.isfinite(grid)])
 
-    size = max(7.5, 0.52 * len(matrix) + 3)
-    fig, ax = plt.subplots(figsize=(size + 4.5, size), facecolor=SURFACE)
+    size = max(8.0, 0.46 * len(matrix) + 3)
+    fig, ax = plt.subplots(figsize=(size + 3.4, size), facecolor=SURFACE)
     ax.set_facecolor(SURFACE)
     diverging = LinearSegmentedColormap.from_list(
         "diverging", ["#104281", "#5598e7", "#f4f3f0", "#f2896f", "#ab2f2e"]
@@ -629,46 +692,64 @@ def correlation_figure(surveys: dict) -> None:
                                            hatch="////", edgecolor="#c2c1bc", lw=0))
                 continue
             text = f"{abs(value):.2f}"[1:] if abs(value) < 0.005 else f"{value:.2f}".replace("0.", ".")
-            ax.text(j, i, text.replace("-.", "−."), ha="center", va="center", fontsize=6.6,
+            ax.text(j, i, text.replace("-.", "−."), ha="center", va="center", fontsize=6.4,
                     color="#ffffff" if abs(value) > 0.62 * limit else INK_SOFT)
+
+    for edge in edges[:-1]:
+        ax.axhline(edge - 0.5, color=INK, lw=1.6)
+        ax.axvline(edge - 0.5, color=INK, lw=1.6)
+
+    for lo, hi, name, subject in headings:
+        middle = (lo + hi - 1) / 2
+        ax.plot([-0.30, -0.30], [lo - 0.4, hi - 0.6], transform=ax.get_yaxis_transform(),
+                color=INK_FAINT, lw=1.2, clip_on=False)
+        # Rotated text is bounded by the block's height, and a three-row block has no
+        # room for a question. The codes go here; their wording goes in the key above.
+        ax.text(-0.315, middle, name, transform=ax.get_yaxis_transform(), rotation=90,
+                ha="right", va="center", fontsize=8.6, fontweight="bold", color=INK)
 
     ax.set_xticks(range(len(matrix)))
     ax.set_yticks(range(len(matrix)))
-    ax.set_xticklabels(matrix.columns, rotation=90, fontsize=7.4, color=INK_SOFT)
-    ax.set_yticklabels(labels, fontsize=7.4, color=INK)
-    ax.set_xticks(np.arange(len(matrix) + 1) - 0.5, minor=True)
-    ax.set_yticks(np.arange(len(matrix) + 1) - 0.5, minor=True)
-    ax.grid(which="minor", color=SURFACE, lw=1.4)
-    ax.tick_params(which="both", length=0)
+    ax.set_xticklabels(matrix.columns, rotation=90, fontsize=7.2, color=INK_SOFT)
+    ax.set_yticklabels(labels, fontsize=7.2, color=INK)
+    ax.tick_params(length=0)
     for side in ax.spines.values():
         side.set_visible(False)
 
-    bar = fig.colorbar(image, ax=ax, shrink=0.5, pad=0.02, ticks=[-limit, 0, limit])
+    bar = fig.colorbar(image, ax=ax, shrink=0.42, pad=0.015, fraction=0.028,
+                       ticks=[-limit, 0, limit])
     bar.set_label(f"Spearman ρ (scale ends at ±{limit:g}, the strongest pair here)",
                   fontsize=8.4, color=INK_SOFT)
     bar.ax.tick_params(labelsize=8, colors=INK_SOFT)
     bar.outline.set_visible(False)
 
-    strongest = matrix.where(~np.eye(len(matrix), dtype=bool)).stack().idxmax()
-    peak = matrix.loc[strongest]
     label = f"{SHORT[survey['series']]} {survey['wave_label']}"
     lines = [
         f"Spearman rank correlations among {len(matrix)} ordinal inequality items, "
         f"{survey['n_respondents']:,} respondents, don't-know and refused set missing. Within one survey "
         "only: other surveys are other people, so there is no cross-survey correlation to compute.",
-        f"Almost nothing here moves together — the strongest pair, {strongest[0]} and {strongest[1]}, "
-        f"reaches ρ = {peak:.2f}, and most cells sit inside ±0.1. Grey on the diagonal is a variable "
-        "against itself"
-        + (f"; the {unmeasured // 2} hatched pairs were never put to the same respondents, "
-           "which is not the same as no relationship." if unmeasured else "."),
+        f"Inside a battery the mean |ρ| is {within.mean():.2f}; between batteries it is {between.mean():.2f}. "
+        "Someone who thinks equality is not applied on one dimension is only weakly more likely to think so "
+        "on another — even where two batteries measure the same thing, and the strongest pair spanning two "
+        f"of them reaches only {between.max():.2f}. Part of the within-battery figure is question order and "
+        "response set rather than agreement, which is why the blocks are drawn apart.",
+        "Grey on the diagonal is a variable against itself"
+        + (f"; the {unmeasured // 2} hatched pairs were never put to the same respondents, which is not the "
+           "same as no relationship." if unmeasured else "."),
     ]
-    top = header(fig, f"Inequality items barely move together — {label}", lines)
+    battery_key = [f"{n} — {clip(sub, 58)}" for _, _, n, sub in headings if sub]
+    if battery_key:
+        width = int(fig.get_figwidth() * 72 / (8.6 * 0.56))
+        lines += textwrap.wrap("Batteries:  " + "   ·   ".join(battery_key), width=width,
+                               subsequent_indent="    ")
+    top = header(fig, f"Perceived inequality is not one attitude — {label}", lines)
     fig.tight_layout(rect=(0, 0, 1, top))
     for suffix in ("png", "svg"):
         fig.savefig(FIGURES / f"inequality-correlations.{suffix}", dpi=200, facecolor=SURFACE,
                     bbox_inches="tight")
     plt.close(fig)
-    print(f"correlations: {len(matrix)} items from {key}, peak {peak:.2f}, {unmeasured // 2} blank pairs")
+    print(f"correlations: {len(matrix)} items from {key} in {len(blocks)} batteries, "
+          f"within {within.mean():.2f} vs between {between.mean():.2f}")
 
 
 def main() -> None:

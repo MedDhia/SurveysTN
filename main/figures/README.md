@@ -140,17 +140,37 @@ read the panel's own legend, never the colour alone, when comparing across panel
 
 ### `inequality-correlations.png` / `.svg`
 
-Spearman rank correlations among the ordinal inequality items of **Arab Barometer
-Wave VIII**, the survey carrying the most of them (43 items, 14 of them ordinal and
-populated enough to correlate).
+Spearman rank correlations among the **25 ordinal inequality items of Arab Opinion
+Index 2016**, 1,499 respondents, grouped by battery with the blocks drawn apart.
+
+**Why that survey.** Not the one with the most rows in `inequality.csv` — that is Arab
+Barometer Wave VIII with 43, but 28 of those are a single multi-response question
+exploded into `Q884A_*`/`Q884B_*` dummy columns. That is a count of columns, not of
+questions, and ranking on it picked a survey whose 14 usable items were a grab-bag
+where the three strongest cells were simply neighbouring items in the same battery.
+The script now ranks surveys by the items actually eligible for the matrix — an
+ordered scale of three to seven substantive answers, at least 100 respondents — read
+from each `codebook.json` without loading the data.
+
+**What it shows.** Perceived inequality is not one attitude. Inside a battery the mean
+|ρ| is **0.34**; between batteries it is **0.12**. Someone who thinks equality is not
+applied on one dimension is only weakly more likely to think so on another — and that
+holds even where two batteries measure the same thing: *equality applied regardless of
+gender/sex* and *are men and women equal in law* sit in the same questionnaire and
+reach only 0.33, the strongest pair spanning two batteries.
+
+Read the within-battery figure with care: part of it is question order and response
+set rather than agreement, which is why the blocks are separated rather than left to
+blend into one red field. One item argues against pure acquiescence — `Q504_3`, *"in
+general, men are better than women at positions of political leadership"*, is worded
+against its battery mates and correlates negatively with them (−0.13, −0.10), which is
+what a real attitude does and a yea-saying pattern would not.
 
 **Within one survey only.** Different surveys are different respondents, so there is
 no cross-survey correlation to compute, and a matrix spanning them would be an
 artefact of the layout rather than a finding.
 
-Almost nothing moves together: the strongest pair reaches ρ = 0.49 and most cells sit
-inside ±0.1, so the scale ends at ±0.5 rather than ±1 — on the full range every cell
-washes to white. The limit is printed on the colour bar. Grey on the diagonal is a
-variable against itself; **hatched cells are pairs never put to the same respondents**
-(split-ballot items), which is not the same as a pair that was asked and came back
-uncorrelated.
+The scale ends at ±0.6 rather than ±1 — on the full range every cell washes to white —
+and the limit is printed on the colour bar. Grey on the diagonal is a variable against
+itself; hatched cells, where any appear, are pairs never put to the same respondents,
+which is not the same as a pair that was asked and came back uncorrelated.

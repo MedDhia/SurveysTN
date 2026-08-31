@@ -202,8 +202,9 @@ directly — Afrobarometer Round 6's "The income gap between the rich and the po
 "Regional inequality" — are country-specific items asked once, in 2015. Four figures
 sit on that page: which 22 questions are asked in more than two surveys and when, how
 the share saying equality is applied moved over time, how Tunisians answered in full,
-and whether the items of a single survey move together — they mostly do not, peaking
-at ρ = 0.49.
+and whether perceived inequality is one attitude or several. It is several: across the
+25 inequality items of the Arab Opinion Index 2016 round, the mean correlation inside a
+battery is 0.34 and between batteries 0.12.
 
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives

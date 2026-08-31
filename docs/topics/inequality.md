@@ -34,11 +34,11 @@ How Tunisians answered the recurring questions, as weighted shares of substantiv
 
 [PNG](../../main/figures/inequality-distributions.png) · [SVG](../../main/figures/inequality-distributions.svg) · rebuilt with `python3 scripts/build_inequality_figures.py`
 
-### Whether the items move together
+### Is it one attitude, or several?
 
-[![Whether the items move together](../../main/figures/inequality-correlations.png)](../../main/figures/inequality-correlations.png)
+[![Is it one attitude, or several?](../../main/figures/inequality-correlations.png)](../../main/figures/inequality-correlations.png)
 
-Spearman rank correlations among the inequality items of the survey that carries the most of them. Within one survey only — other surveys are other people.
+Spearman rank correlations among the 25 inequality items of the survey that can support the most comparisons, grouped by battery. Within one survey only — other surveys are other people.
 
 [PNG](../../main/figures/inequality-correlations.png) · [SVG](../../main/figures/inequality-correlations.svg) · rebuilt with `python3 scripts/build_inequality_figures.py`
 
