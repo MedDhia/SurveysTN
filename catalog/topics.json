@@ -370,6 +370,12 @@
       },
       "figures": [
         {
+          "file": "democracy-fear-claim",
+          "title": "Testing 'Tunisians fear democracy'",
+          "caption": "The claim tested on its own terms, four ways, across three programmes and 17 surveys. Support for democracy in principle never collapses; what fell is confidence that democracy is decisive, and disapproval of one-man rule — the latter by 2020, before the coup. Draws on items indexed under both this topic and regime preference.",
+          "script": "scripts/build_democracy_figures.py"
+        },
+        {
           "file": "democracy-assessment-and-satisfaction",
           "title": "Before and after the self-coup",
           "caption": "How democratic Tunisians say their country is, and how satisfied they are with the way it works, across six Afrobarometer rounds. Round 8 was fielded 17 months before 25 July 2021 and Round 9 seven months after; both readings fall sharply across that break and then exceed their pre-coup levels by 2024.",

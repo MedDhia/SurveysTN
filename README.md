@@ -234,6 +234,15 @@ past where it started. Read the 2024 rise carefully — these are separate cross
 and in 2013 Tunisians ranked delivery far above procedural liberty as essential to
 democracy, so the word may not hold its meaning fixed across a change of regime.
 
+A fifth figure on that page tests the claim that **Tunisians turned against democracy**,
+four ways across three programmes and 17 surveys. It fails as stated: agreement that
+democracy remains better than the alternatives never falls below 81% in nine Arab Opinion
+Index rounds and stands at 89% in 2024, and between 2013 and 2019 Tunisians moved away
+from every authoritarian alternative they were asked to rate. What did change is
+confidence that democracy is decisive, and disapproval of one-man rule — which fell from
+84% in 2013 to 40% by early 2020, seventeen months before the coup, while disapproval of
+one-party rule barely moved.
+
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
 (strong leader, army rule, unelected experts, rule by religious law), support for

@@ -391,3 +391,46 @@ respondent, a government judged to deliver can be called democratic by someone w
 not call it liberal — which bears on the 2024 reading above without establishing it.
 This was asked in 2013 and not since, so the connection is a hypothesis the archive
 cannot test.
+
+### `democracy-fear-claim.png` / `.svg`
+
+The argument that Tunisians turned against democracy — offered widely to explain Kais
+Saied's popularity — tested on its own terms, four ways, across three programmes and 17
+surveys. It draws on items indexed under both `democracy-perception` and
+`regime-preference`.
+
+**The claim fails as stated.** Agreement that *"democracy has its own problems but
+remains better than other systems"* never falls below **81%** in nine Arab Opinion Index
+rounds and stands at **89% in 2024**. On Afrobarometer's harder forced choice —
+*"democracy is preferable to any other kind of government"*, against two rival statements
+— the floor is **48%, and it came in 2018**, before the coup rather than after; 2024 sits
+at 55%. Asked to rate systems one at a time in 2013 and again in 2019, Tunisians moved
+*away* from every alternative: a strong leader unbothered by parliament fell 48% → 22%,
+rule by experts 77% → 43%, army rule 37% → 30%.
+
+**What did change is not desire.** Two things moved, and the figure shows both rather
+than only the convenient one:
+
+- Agreement that *"democracies are characterised by indecisiveness and discord"* rose
+  from **32% (2011) to 69% (2022)**, easing to 51% in 2024.
+- Disapproval of **one-man rule collapsed: 84% (2013) → 63% (2018) → 40% (2020)**,
+  recovering only to 48% by 2024. Disapproval of *one-party* rule barely moved over the
+  same period (61% → 57%), so this is specific to personalised rule rather than a general
+  softening toward authoritarianism.
+
+The 2020 reading matters for sequencing: Afrobarometer Round 8 left the field on 18 March
+2020, **seventeen months before** Saied acted. The guardrail was down first.
+
+So the population that emerges from these data kept wanting democracy and stopped
+objecting to a strongman. That is a different claim from fearing democracy, and it points
+at performance rather than principle.
+
+**Cautions.** Levels are instrument-specific and not comparable across programmes: the
+Arab Opinion Index and World Values items ask for agreement with a statement and run
+high; Afrobarometer forces a choice and runs lower. The 2022 Afrobarometer round is in
+French and words the third rejection item as *"rejet de la dictature"* rather than of
+one-man rule. Every point is a separate cross-section. And the WVS and Afrobarometer
+readings on strongman rule are in some tension over 2013–2020 — approval of a strong
+leader falls on one instrument while disapproval of one-man rule also falls on the other
+— which is a reason to weigh the direction of movement within an instrument rather than
+the levels across them.

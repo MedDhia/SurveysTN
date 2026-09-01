@@ -37,7 +37,7 @@ from build_inequality_figures import (
 )
 from build_inequality_breakdowns import REGIONS, share
 
-PRIMARY, SECOND = "#2a78d6", "#eb6834"
+PRIMARY, SECOND, THIRD = "#2a78d6", "#eb6834", "#1baf7a"
 COUP = "25 July 2021"
 
 EXTENT = re.compile(r"extent of democracy|niveau de d[ée]mocratie$", re.I)
@@ -439,6 +439,212 @@ def meaning_figure() -> None:
     print(f"meaning: {len(rows)} options across four questions")
 
 
+
+# The three-statement forced choice: 3 is "democracy is preferable to any other kind of
+# government", 2 "sometimes a non-democratic government can be preferable", 1 "it doesn't
+# matter". The rejection battery runs 1 strongly disapprove to 5 strongly approve, so
+# rejecting a form of rule is codes 1 and 2.
+SUPPORT = re.compile(r"support for democracy|soutien à la démocratie", re.I)
+REJECT = {
+    "One-party rule": re.compile(r"reject one-party rule|rejet de la règle du parti unique", re.I),
+    "Military rule": re.compile(r"reject military rule|rejet d'un gouvernement militaire", re.I),
+    "One-man rule": re.compile(r"reject one-man rule|rejet de la dictature", re.I),
+}
+WVS_SYSTEMS = {
+    "wvs-w06": {"V130": "A democratic political system", "V128": "Experts, not government, decide",
+                "V127": "A strong leader, no parliament or elections", "V129": "The army rules"},
+    "wvs-w07": {"Q238": "A democratic political system", "Q236": "Experts, not government, decide",
+                "Q235": "A strong leader, no parliament or elections", "Q237": "The army rules"},
+}
+
+
+def weighted_share(frame: pd.DataFrame, column: str, wanted: list, universe: list) -> float:
+    values, weight = frame[column], frame["weight"]
+    keep = values.isin(universe)
+    if not keep.any() or weight[keep].sum() <= 0:
+        return float("nan")
+    return float((values[keep].isin(wanted) * weight[keep]).sum() / weight[keep].sum())
+
+
+def series_for(pattern, wanted, universe, programme: str) -> list[tuple[int, float]]:
+    points = []
+    for key, survey in catalog().items():
+        if survey["series"] != programme:
+            continue
+        path = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
+        data, meta = pyreadstat.read_sav(str(path), user_missing=True)
+        upper = {c.upper(): c for c in data.columns}
+        weight = next((upper[w.upper()] for w in WEIGHTS if w.upper() in upper), None)
+        if isinstance(pattern, str):
+            column = upper.get(pattern.upper())
+        else:
+            labels = {c: str(meta.column_names_to_labels.get(c) or "") for c in data.columns}
+            column = next((c for c in data.columns if pattern.search(labels[c])), None)
+        if column is None:
+            continue
+        frame = pd.DataFrame({column: data[column], "weight": data[weight] if weight else 1.0})
+        value = weighted_share(frame, column, wanted, universe)
+        if np.isfinite(value):
+            points.append((year_of(survey), value))
+    return sorted(points)
+
+
+def line(ax, points, colour, label, annotate=True, lift: float = 9.0) -> None:
+    """One series, with its end values labelled. ``lift`` staggers those labels so that
+    three lines converging on the same value do not print their numbers on top of
+    each other."""
+    xs, ys = zip(*points)
+    ax.plot(xs, ys, color=colour, lw=2.1, zorder=3, label=label)
+    ax.plot(xs, ys, "o", color=colour, ms=5.2, mec=SURFACE, mew=1.2, zorder=4)
+    if annotate:
+        for x, y in ((xs[0], ys[0]), (xs[-1], ys[-1])):
+            ax.annotate(f"{y:.0%}", (x, y), textcoords="offset points", xytext=(0, lift),
+                        ha="center", fontsize=7.6, color=colour, fontweight="bold")
+
+
+def coup_line(ax, y: float = 0.06) -> None:
+    ax.axvline(2021.56, color=INK, lw=1.1, ls=(0, (4, 3)), zorder=5)
+    ax.annotate(COUP, (2021.56, y), ha="center", va="bottom", fontsize=7.4,
+                fontweight="bold", color=INK, rotation=90)
+
+
+def time_axis(ax) -> None:
+    ax.set_xlim(2009.5, 2025.8)
+    ax.set_xticks(range(2011, 2026, 3))
+    ax.set_ylim(0, 1.02)
+    ax.set_yticks([0, 0.25, 0.5, 0.75, 1.0])
+    ax.set_yticklabels(["0", "25%", "50%", "75%", "100%"], fontsize=7.8)
+    ax.tick_params(labelsize=7.8)
+    ax.grid(color=GRID, lw=0.8, zorder=0)
+    frame_style(ax)
+
+
+def fear_figure() -> None:
+    """Test the claim that Tunisians turned against democracy, on its own terms."""
+    churchill = series_for("Q405_6", [1, 2], [1, 2, 3, 4], "arab-opinion-index")
+    indecisive = series_for("Q405_2", [1, 2], [1, 2, 3, 4], "arab-opinion-index")
+    preferable = series_for(SUPPORT, [3], [1, 2, 3], "afrobarometer")
+    wvs_democracy = series_for("Q238", [1, 2], [1, 2, 3, 4], "world-values-survey")
+    wvs_democracy += series_for("V130", [1, 2], [1, 2, 3, 4], "world-values-survey")
+    wvs_democracy.sort()
+    rejects = {name: series_for(pattern, [1, 2], [1, 2, 3, 4, 5], "afrobarometer")
+               for name, pattern in REJECT.items()}
+
+    systems = {}
+    for key, mapping in WVS_SYSTEMS.items():
+        survey = catalog()[key]
+        path = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
+        data, _ = pyreadstat.read_sav(str(path), user_missing=True)
+        upper = {c.upper(): c for c in data.columns}
+        weight = next((upper[w.upper()] for w in WEIGHTS if w.upper() in upper), None)
+        for variable, name in mapping.items():
+            if variable.upper() not in upper:
+                continue
+            column = upper[variable.upper()]
+            frame = pd.DataFrame({column: data[column], "weight": data[weight] if weight else 1.0})
+            systems.setdefault(name, {})[year_of(survey)] = weighted_share(
+                frame, column, [1, 2], [1, 2, 3, 4])
+
+    fig, axes = plt.subplots(2, 2, figsize=(15.0, 10.4), facecolor=SURFACE)
+    axes = axes.ravel()
+
+    ax = axes[0]
+    ax.set_facecolor(SURFACE)
+    line(ax, churchill, PRIMARY, "Arab Opinion Index · agree 'democracy has problems but remains better'")
+    line(ax, preferable, SECOND, "Afrobarometer · 'democracy is preferable to any other kind of government'")
+    line(ax, wvs_democracy, THIRD, "World Values Survey · 'a democratic political system' would be good")
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("Do Tunisians want democracy?", fontsize=10.4, color=INK, loc="left",
+                 pad=10, fontweight="bold")
+    ax.legend(loc="lower left", bbox_to_anchor=(0, -0.42), frameon=False, fontsize=7.8,
+              labelcolor=INK_SOFT, handlelength=1.6)
+
+    ax = axes[1]
+    ax.set_facecolor(SURFACE)
+    for i, (colour, (name, points)) in enumerate(zip((PRIMARY, SECOND, THIRD), rejects.items())):
+        if points:
+            line(ax, points, colour, name, lift=(9.0, -15.0, 9.0)[i])
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("Do they still reject the alternatives?", fontsize=10.4, color=INK,
+                 loc="left", pad=10, fontweight="bold")
+    ax.legend(loc="lower left", bbox_to_anchor=(0, -0.42), frameon=False, fontsize=7.8,
+              labelcolor=INK_SOFT, handlelength=1.6, title="Share disapproving of…",
+              title_fontproperties={"size": 7.8, "weight": "bold"})
+
+    ax = axes[2]
+    ax.set_facecolor(SURFACE)
+    names = list(WVS_SYSTEMS["wvs-w07"].values())
+    ys = [len(names) - i for i in range(len(names))]
+    for y, name in zip(ys, names):
+        early, late = systems[name].get(2013), systems[name].get(2019)
+        if early is None or late is None:
+            continue
+        ax.plot([early, late], [y, y], color=INK_FAINT, lw=1.6, zorder=2)
+        ax.scatter([early], [y], s=74, color=INK_FAINT, edgecolor=SURFACE, linewidth=1.2, zorder=3)
+        ax.scatter([late], [y], s=84, color=PRIMARY, edgecolor=SURFACE, linewidth=1.2, zorder=4)
+        ax.annotate(f"{early:.0%}", (early, y), textcoords="offset points", xytext=(0, 10),
+                    ha="center", fontsize=7.6, color=INK_SOFT)
+        ax.annotate(f"{late:.0%}", (late, y), textcoords="offset points", xytext=(0, 10),
+                    ha="center", fontsize=7.6, color=INK, fontweight="bold")
+    ax.set_yticks(ys)
+    ax.set_yticklabels([clip(n, 42) for n in names], fontsize=8.4, color=INK)
+    ax.set_xlim(0.12, 1.0)
+    ax.set_xticks([0.2, 0.4, 0.6, 0.8, 1.0])
+    ax.set_xticklabels(["20%", "40%", "60%", "80%", "100%"], fontsize=7.8)
+    ax.set_ylim(0.4, len(names) + 0.8)
+    ax.grid(axis="x", color=GRID, lw=0.8, zorder=0)
+    frame_style(ax)
+    ax.set_title("Rated one by one — 2013 (grey) to 2019 (blue); all four fell", fontsize=10.4, color=INK,
+                 loc="left", pad=10, fontweight="bold")
+
+    ax = axes[3]
+    ax.set_facecolor(SURFACE)
+    line(ax, indecisive, SECOND, "Agree")
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("'Democracies are characterised by indecisiveness and discord'",
+                 fontsize=10.4, color=INK, loc="left", pad=10, fontweight="bold")
+
+    low_churchill = min(churchill, key=lambda p: p[1])
+    low_pref = min(preferable, key=lambda p: p[1])
+    one_man = rejects["One-man rule"]
+    peak_ind = max(indecisive, key=lambda p: p[1])
+    counted = len({y for y, _ in churchill} | {y for y, _ in preferable} | {y for y, _ in wvs_democracy})
+    top = header(fig, "'Tunisians fear democracy' — what the surveys actually say", [
+        f"Four ways of putting the question, across three programmes and {len(churchill) + len(preferable) + len(wvs_democracy)} "
+        f"surveys covering {counted} distinct years. Weighted shares; the dashed line is 25 July 2021, "
+        "when Kais Saied suspended parliament.",
+        f"The claim fails on its own terms. Agreement that democracy remains better than other systems "
+        f"never drops below {low_churchill[1]:.0%} in nine Arab Opinion Index rounds and stands at "
+        f"{churchill[-1][1]:.0%} in 2024. On Afrobarometer's harder forced choice the floor is "
+        f"{low_pref[1]:.0%}, and it came in {low_pref[0]} — before the coup, not after. Asked to rate "
+        "systems one by one, Tunisians moved away from the alternatives between 2013 and 2019: a strong "
+        f"leader unbothered by parliament fell from {systems['A strong leader, no parliament or elections'][2013]:.0%} "
+        f"to {systems['A strong leader, no parliament or elections'][2019]:.0%}, rule by experts from "
+        f"{systems['Experts, not government, decide'][2013]:.0%} to {systems['Experts, not government, decide'][2019]:.0%}.",
+        f"What did change is not desire but confidence and one guardrail. Agreement that democracies are "
+        f"indecisive rose from {indecisive[0][1]:.0%} in {indecisive[0][0]} to {peak_ind[1]:.0%} in "
+        f"{peak_ind[0]}. And disapproval of one-man rule fell from {one_man[0][1]:.0%} in {one_man[0][0]} "
+        f"to {min(one_man, key=lambda p: p[1])[1]:.0%} by {min(one_man, key=lambda p: p[1])[0]} — "
+        "seventeen months before the coup — while disapproval of one-party rule barely moved. That is a "
+        "population that kept wanting democracy and stopped objecting to a strongman, which is a "
+        "different claim from fearing democracy and points at performance rather than principle.",
+        "Read the levels as instrument-specific: the Arab Opinion Index and World Values items ask for "
+        "agreement with a statement and run high, Afrobarometer forces a choice between three and runs "
+        "lower. The 2022 Afrobarometer round is in French and words the third item as 'rejection of "
+        "dictatorship' rather than of one-man rule. Every point is a separate cross-section.",
+    ])
+    fig.tight_layout(rect=(0, 0, 1, top), h_pad=4.0, w_pad=3.0)
+    for suffix in ("png", "svg"):
+        fig.savefig(FIGURES / f"democracy-fear-claim.{suffix}", dpi=200, facecolor=SURFACE,
+                    bbox_inches="tight")
+    plt.close(fig)
+    print(f"fear-claim: churchill {churchill[0][1]:.0%}..{churchill[-1][1]:.0%} (min {low_churchill[1]:.0%}), "
+          f"one-man rejection {one_man[0][1]:.0%} -> {min(one_man, key=lambda p: p[1])[1]:.0%}")
+
+
 def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     afro = afrobarometer()
@@ -446,6 +652,7 @@ def main() -> None:
     ratings_figure(afro)
     who_figure(afro)
     meaning_figure()
+    fear_figure()
 
 
 if __name__ == "__main__":
