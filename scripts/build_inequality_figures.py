@@ -205,18 +205,24 @@ def header(fig, title: str, lines: list[str]) -> float:
     """Title and standfirst at fixed inch offsets from the top edge.
 
     These figures vary in height with their row count, so a header placed in figure
-    fractions crowds on the tall ones and floats on the short ones. Returns the
-    fraction the plotting area should stop at.
+    fractions crowds on the tall ones and floats on the short ones. Lines are wrapped
+    to the figure's own width: an unwrapped one does not overflow, it drags the saved
+    figure out to the width of the text, because these are saved with a tight bounding
+    box. Returns the fraction the plotting area should stop at.
     """
     inches = fig.get_figheight()
     fig.suptitle(title, x=0.012, y=1 - 0.28 / inches, ha="left", va="top",
                  fontsize=15, fontweight="bold", color=INK)
     offset = 0.62
     for i, line in enumerate(lines):
-        fig.text(0.012, 1 - offset / inches, line, ha="left", va="top",
-                 fontsize=9.6 if i == 0 else 8.6, color=INK_SOFT if i == 0 else INK_FAINT)
-        offset += 0.26 if i == 0 else 0.21
-    return 1 - (offset + 0.12) / inches
+        size = 9.6 if i == 0 else 8.6
+        room = max(40, int(fig.get_figwidth() * 72 / (size * 0.52)))
+        for piece in textwrap.wrap(line, width=room) or [""]:
+            fig.text(0.012, 1 - offset / inches, piece, ha="left", va="top",
+                     fontsize=size, color=INK_SOFT if i == 0 else INK_FAINT)
+            offset += 0.21 if i == 0 else 0.185
+        offset += 0.05
+    return 1 - (offset + 0.10) / inches
 
 
 def frame_style(ax) -> None:

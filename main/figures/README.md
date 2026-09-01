@@ -62,11 +62,12 @@ Both are generated from the extracts in `data/`, so they carry only what the
 releases record. Every date is derived, never asserted: `catalog/sources.json` names
 the variable each one comes from.
 
-## `inequality-coverage`, `-trends`, `-distributions`, `-correlations`
+## Inequality — eight figures
 
 `python3 scripts/build_inequality_figures.py`
+`python3 scripts/build_inequality_breakdowns.py`
 
-Four figures for the inequality questions, indexed in
+Eight figures for the inequality questions, indexed in
 [`docs/topics/inequality.md`](../../docs/topics/inequality.md). Each answers a
 different question, and each has a limit worth stating before it is read.
 
@@ -174,3 +175,69 @@ The scale ends at ±0.6 rather than ±1 — on the full range every cell washes 
 and the limit is printed on the colour bar. Grey on the diagonal is a variable against
 itself; hatched cells, where any appear, are pairs never put to the same respondents,
 which is not the same as a pair that was asked and came back uncorrelated.
+
+The four above take a **question** as the unit. The four below take a **respondent**
+as the unit, or step back to the archive. They come from
+`scripts/build_inequality_breakdowns.py`.
+
+All three respondent-level figures pool the eight Arab Opinion Index rounds that carry
+the `Q422` equality battery — 15,539 respondents, 2012 to 2025. The 2011 round is left
+out: it codes location by region rather than governorate, on codes the release's shared
+multi-country label map names for another country entirely, and it carries none of the
+battery anyway.
+
+Intervals are 95% and use **Kish's effective sample size**, so the weighting is paid
+for rather than ignored. The spread is the weighted sample variance, not the binomial
+`p(1−p)`: for a single yes/no dimension the two agree, but the index is a mean of eight
+of them and is far less variable than a coin at the same rate. No Arab Opinion Index
+release carries the stratum and PSU a full design correction wants, so these are still
+narrower than a design-based interval would be.
+
+### `inequality-by-dimension.png` / `.svg`
+
+The share saying equality is applied, ranked by dimension. **The ordering is the
+finding.** Equality is reported to hold across the lines people are born on — skin
+colour 64%, religion 55%, gender 54% — and to fail across the lines of money and power
+— geographic area 32%, social status 31%, political influence 29%, wealth 26%. The two
+ends are 38 points apart, far outside the intervals.
+
+### `inequality-by-region.png` / `.svg`
+
+The same, by Tunisia's seven statistical regions, alongside the one item that asks about
+regional equality directly. The **Centre West** — Kairouan, Kasserine and Sidi Bouzid,
+the poorest region and where the 2010 uprising began — is lowest on both measures, 37%
+against 46% in the South West.
+
+Poverty does not order the rest, and the figure says so: the South West is interior too
+and ranks highest, Grand Tunis sits below both southern regions, and most adjacent pairs
+have overlapping intervals. The coast/interior marker on each row is there to be checked
+against the ranking, not to assert it.
+
+The regional grouping is **not in any release**. It is applied from
+[`catalog/tunisia-regions.json`](../../catalog/tunisia-regions.json), which names its
+source (the INS *grandes régions*) and maps by governorate name rather than code —
+the Arab Opinion Index ships one value-label map for every country it covers, so the
+same code carries different names across releases.
+
+### `inequality-by-group.png` / `.svg`
+
+The same index by household income, education, age and sex. A panel's ends count as
+**separated** when the highest group's interval clears the lowest group's — a test the
+reader can run off the figure — and separated is reported apart from **ordered**, because
+a difference between the ends says nothing about the order of the middle. Household
+income is the only grouping that is both. Education differs end to end while running down
+and back up in between; sex does not separate at all across 15,539 respondents. Flat
+panels are drawn rather than dropped: a null that large is a result.
+
+### `inequality-archive-map.png` / `.svg`
+
+Every one of the 300 inequality variables by facet and survey, in fieldwork order — the
+only inequality figure covering the whole archive rather than the questions that recur.
+A variable matching two facets is counted in both, so the cells sum to more than 300, and
+blank means nothing rather than a small number.
+
+Coverage is uneven enough that the facet decides which programme you can use: the Arab
+Opinion Index carries equality-as-a-principle and gender, Afrobarometer and Arab Barometer
+Wave VIII carry discrimination, and wasta appears only in Arab Barometer. Four of the 26
+surveys carry nothing on inequality at all. Counts are on a log scale, so a dark cell is
+many times a pale one rather than a few more.

@@ -6,24 +6,52 @@
       "description": "Questions about unequal outcomes, unequal treatment and unequal access, across every survey in the archive.",
       "figures": [
         {
+          "file": "inequality-archive-map",
+          "title": "What the archive holds",
+          "caption": "Every inequality variable in the archive by facet and by survey, in fieldwork order — not only the ones that recur. Coverage is uneven enough that the facet decides which programme you can use.",
+          "script": "scripts/build_inequality_breakdowns.py"
+        },
+        {
           "file": "inequality-coverage",
           "title": "What can be followed over time",
-          "caption": "Every inequality question asked in more than two surveys, and the years it was asked in. A run of dots in one colour is a series that can be built."
+          "caption": "Every inequality question asked in more than two surveys, and the years it was asked in. A run of dots in one colour is a series that can be built.",
+          "script": "scripts/build_inequality_figures.py"
         },
         {
           "file": "inequality-trends",
           "title": "How it moved",
-          "caption": "The share saying equality is applied, on one common baseline, with the rest of each question's battery drawn behind it in grey."
+          "caption": "The share saying equality is applied, on one common baseline, with the rest of each question's battery drawn behind it in grey.",
+          "script": "scripts/build_inequality_figures.py"
         },
         {
           "file": "inequality-distributions",
           "title": "How Tunisians answered",
-          "caption": "How Tunisians answered the recurring questions, as weighted shares of substantive answers. Bars diverge from zero rather than stacking to 100%, so each pole keeps a common baseline; each panel carries its own scale, because the releases do not share one."
+          "caption": "How Tunisians answered the recurring questions, as weighted shares of substantive answers. Bars diverge from zero rather than stacking to 100%, so each pole keeps a common baseline; each panel carries its own scale, because the releases do not share one.",
+          "script": "scripts/build_inequality_figures.py"
+        },
+        {
+          "file": "inequality-by-dimension",
+          "title": "Which kinds of equality",
+          "caption": "The share saying equality is applied, by the dimension asked about, pooled over eight Arab Opinion Index rounds with 95% intervals. Equality is reported to hold across the lines people are born on and to fail across the lines of money and power.",
+          "script": "scripts/build_inequality_breakdowns.py"
+        },
+        {
+          "file": "inequality-by-region",
+          "title": "Where",
+          "caption": "The same, by Tunisia's seven statistical regions. The Centre West — the poorest region, and where the 2010 uprising began — is lowest, though poverty does not order the rest.",
+          "script": "scripts/build_inequality_breakdowns.py"
+        },
+        {
+          "file": "inequality-by-group",
+          "title": "Who",
+          "caption": "The same, by household income, education, age and sex. Only household income orders people cleanly; sex does not separate them at all.",
+          "script": "scripts/build_inequality_breakdowns.py"
         },
         {
           "file": "inequality-correlations",
           "title": "Is it one attitude, or several?",
-          "caption": "Spearman rank correlations among the 25 inequality items of the survey that can support the most comparisons, grouped by battery. Within one survey only — other surveys are other people."
+          "caption": "Spearman rank correlations among the 25 inequality items of the survey that can support the most comparisons, grouped by battery. Within one survey only — other surveys are other people.",
+          "script": "scripts/build_inequality_figures.py"
         }
       ],
       "facets": {

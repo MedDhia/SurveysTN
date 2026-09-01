@@ -127,7 +127,7 @@ def figure_block(topic: dict) -> list[str]:
             figure["caption"],
             "",
             f"[PNG]({link}.png) · [SVG]({link}.svg) · rebuilt with "
-            "`python3 scripts/build_inequality_figures.py`",
+            f"`python3 {figure['script']}`",
             "",
         ]
     return lines

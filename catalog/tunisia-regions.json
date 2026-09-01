@@ -1,0 +1,29 @@
+{
+  "_comment": [
+    "Tunisia's 24 governorates grouped into the seven 'grandes régions' used by the Institut",
+    "National de la Statistique for regional development statistics. This grouping is not in any",
+    "survey release — it is applied here so that governorate-level answers can be read against the",
+    "country's material geography, whose interior/coastal divide is the central cleavage in Tunisian",
+    "political economy. It is kept as data rather than in code so it can be read, disputed and",
+    "changed without touching a script.",
+    "",
+    "'coastal' marks the three regions of the littoral, the conventional line in that literature.",
+    "Mapping is by governorate name, not by code: the Arab Opinion Index ships one value-label map",
+    "for every country it covers, so the same numeric code carries different names across releases."
+  ],
+  "source": "Institut National de la Statistique (Tunisia), grandes régions used in regional accounts",
+  "regions": {
+    "Grand Tunis":  {"coastal": true,  "governorates": ["Tunis", "Ariana", "Ben Arous", "Manouba"]},
+    "North East":   {"coastal": true,  "governorates": ["Nabeul", "Zaghouan", "Bizerte"]},
+    "North West":   {"coastal": false, "governorates": ["Beja", "Jendouba", "El Kef", "Siliana"]},
+    "Centre East":  {"coastal": true,  "governorates": ["Sousse", "Monastir", "Mahdia", "Sfax"]},
+    "Centre West":  {"coastal": false, "governorates": ["Kairouan", "Kasserine", "Sidi Bouzid"]},
+    "South East":   {"coastal": false, "governorates": ["Gabes", "Medenine", "Tataouine"]},
+    "South West":   {"coastal": false, "governorates": ["Gafsa", "Tozeur", "Kebili"]}
+  },
+  "spelling_variants": {
+    "Gabès": "Gabes", "Béja": "Beja", "Kef": "El Kef", "Le Kef": "El Kef",
+    "Sidi Bou Zid": "Sidi Bouzid", "Kébili": "Kebili", "Médenine": "Medenine",
+    "La Manouba": "Manouba", "Ben Arouss": "Ben Arous"
+  }
+}
