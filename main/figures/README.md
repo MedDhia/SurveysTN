@@ -241,3 +241,79 @@ Opinion Index carries equality-as-a-principle and gender, Afrobarometer and Arab
 Wave VIII carry discrimination, and wasta appears only in Arab Barometer. Four of the 26
 surveys carry nothing on inequality at all. Counts are on a log scale, so a dark cell is
 many times a pale one rather than a few more.
+
+## Economic and spatial inequality — four figures
+
+`python3 scripts/build_spatial_economic_figures.py`
+
+The inequality figures above ask what people *think* about equality. These four ask
+what they **have**, and **where**, using the two instruments in the archive that
+measure material conditions rather than opinions about them. Regions are the seven
+Tunisia uses for regional accounts, from
+[`catalog/tunisia-regions.json`](../../catalog/tunisia-regions.json); Afrobarometer
+Rounds 7–10 code them directly, Rounds 5–6 code governorates that roll up, and the
+Arab Opinion Index codes governorates throughout.
+
+**Littoral is a development category, not a coastline.** The South East (Gabes,
+Medenine, Tataouine) fronts the sea but is counted outside the littoral, as it is in
+Tunisia's own regional accounts.
+
+**Batteries are matched on question wording, never on variable names.** The
+lived-poverty items are `Q8A–E` in Rounds 5–7, `Q7A–E` in Rounds 8 and 10, and `Q6A–E`
+in Round 9 — where `Q7A` is instead *"did not feel safe in the neighbourhood"*, which a
+name-based match would fold into a poverty index without complaint.
+
+### `spatial-conditions-and-perception.png` / `.svg`
+
+The payoff. Left panel: each of the seven regions plotted with Afrobarometer's lived
+poverty on one axis and the Arab Opinion Index's perceived equality on the other. The
+two axes come from **different programmes, different respondents and different years**
+— Afrobarometer 2013–2024 against the Arab Opinion Index 2012–2025 — and rank the
+regions almost identically, **ρ = −0.89 (p = 0.007)**. Neither survey could produce that
+agreement alone.
+
+Right panel re-runs it inside one programme across 20 governorates, where it is weaker
+but holds, **ρ = −0.64 (p = 0.002)**.
+
+This also explains why the littoral/interior line did so little work in
+`inequality-by-region`: the interior holds both the worst two regions and the best two.
+The material axis orders the regions; the coastline does not.
+
+Read as association between places. Seven points carry little weight, both panels are
+ecological — they describe regions, not the individuals in them — and nothing here
+identifies which way the relationship runs.
+
+### `spatial-lived-poverty.png` / `.svg`
+
+The Lived Poverty Index by region across six rounds, 7,198 respondents: how often a
+household went without food, clean water, medical care, cooking fuel or cash income,
+averaged over the five items on their 0-to-4 scale. Each panel carries the other six
+regions in grey.
+
+North West and Centre West sit above every littoral region in almost every round. 2022
+is the exception — deprivation rose in most regions and they converge, rather than the
+interior improving — and the steepest climb over the period is **Centre East**, a
+littoral region, which nearly doubles.
+
+### `spatial-provision.png` / `.svg`
+
+Share of respondents whose enumeration area contains each amenity, pooled over six
+rounds and weighted. Electricity is universal; almost nothing else is. A bank is in
+reach for **63%** in Grand Tunis and **17%** in the North West; a sewage system for 95%
+against 40% in the Centre West.
+
+Note what this is not: an enumeration area is where the interview happened, so it
+describes the places sampled rather than the territory, and "in the area" is a coarser
+thing than a household connection.
+
+### `economic-hardship-by-governorate.png` / `.svg`
+
+Share saying household income does not cover their requirements, by governorate, pooled
+over eight Arab Opinion Index rounds. This is the finest geography the archive supports
+for a material measure — Afrobarometer's lived-poverty items exist only at region level
+from Round 7 on.
+
+The seven hardest governorates are all interior, from Beja at 66% down through Jendouba,
+El Kef, Kairouan, Siliana, Kasserine and Sidi Bouzid. But the split is not clean: two
+interior governorates, Medenine and Tataouine, sit among the five easiest. A governorate
+enters with at least 150 effective respondents.

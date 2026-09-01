@@ -211,7 +211,7 @@ def region_figure(pool: pd.DataFrame) -> None:
 
     ax.set_yticks([len(rows) - i for i in range(len(rows))])
     ax.set_yticklabels(
-        [f"{r[0]}  ·  {'coast' if r[0] in coastal else 'interior'}" for r in rows],
+        [f"{r[0]}  ·  {'littoral' if r[0] in coastal else 'interior'}" for r in rows],
         fontsize=9.4, color=INK,
     )
     ax.set_xlim(0.18, 0.55)
@@ -234,7 +234,7 @@ def region_figure(pool: pd.DataFrame) -> None:
         f"{bottom[0]} — Kairouan, Kasserine and Sidi Bouzid, the poorest region and where the 2010 "
         f"uprising began — is lowest on both measures, at {bottom[1]:.0%} against {top_region[1]:.0%} in "
         f"{top_region[0]}. But poverty does not order the rest: {top_region[0]} is interior too and ranks "
-        "highest, and Grand Tunis sits below both southern regions. The coast/interior line, marked "
+        "highest, and Grand Tunis sits below both southern regions. The littoral/interior line, marked "
         "against each row, does not by itself explain this ranking, and the intervals overlap across "
         "most adjacent pairs.",
         "The grouping is not in any release. It is applied here from "

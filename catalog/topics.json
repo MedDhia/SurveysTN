@@ -6,6 +6,30 @@
       "description": "Questions about unequal outcomes, unequal treatment and unequal access, across every survey in the archive.",
       "figures": [
         {
+          "file": "spatial-conditions-and-perception",
+          "title": "Conditions and perception",
+          "caption": "Region by region, what people go without against whether they say equality is applied. The two axes come from different programmes and different respondents, and rank the seven regions almost identically (ρ = −0.89); the relationship is re-run across governorates within one programme, where it is weaker but holds.",
+          "script": "scripts/build_spatial_economic_figures.py"
+        },
+        {
+          "file": "spatial-lived-poverty",
+          "title": "What people go without",
+          "caption": "Afrobarometer's Lived Poverty Index — how often a household went without food, clean water, medical care, cooking fuel or cash income — by region across six rounds, 2013 to 2024.",
+          "script": "scripts/build_spatial_economic_figures.py"
+        },
+        {
+          "file": "spatial-provision",
+          "title": "What is in the place",
+          "caption": "Whether the enumeration area has piped water, a sewage system, a clinic, a bank, a paved road, recorded by the interviewer rather than reported by the respondent. The archive's only non-attitudinal measure of spatial inequality.",
+          "script": "scripts/build_spatial_economic_figures.py"
+        },
+        {
+          "file": "economic-hardship-by-governorate",
+          "title": "Hardship by governorate",
+          "caption": "Share saying household income does not cover the household, by governorate — the finest geography the archive supports for a material measure.",
+          "script": "scripts/build_spatial_economic_figures.py"
+        },
+        {
           "file": "inequality-archive-map",
           "title": "What the archive holds",
           "caption": "Every inequality variable in the archive by facet and by survey, in fieldwork order — not only the ones that recur. Coverage is uneven enough that the facet decides which programme you can use.",
@@ -140,6 +164,23 @@
             "opportunities for disabled",
             "rights, promoting opportunities"
           ]
+        },
+        "lived-poverty": {
+          "title": "Lived poverty and going without",
+          "patterns": [
+            "gone without",
+            "go without",
+            "manque\\s+d[eu']?\\s*(nourriture|eau potable|soins m|combustible|revenus)"
+          ]
+        },
+        "spatial": {
+          "title": "Spatial and regional inequality",
+          "patterns": [
+            "regardless of (their )?geographic",
+            "availability of Equality of all citizens regardless of their geographic",
+            "regional inequalit",
+            "^EA[-_](SVC|FAC|ROAD)[-_][A-G]\\b"
+          ]
         }
       },
       "excluded_because_they_are_false_friends": {
@@ -149,6 +190,10 @@
         "region": "province or region sampling variables, and regional organisations such as the Arab Maghreb Union",
         "tax": "tax compliance and tax authority questions, which are about the state's reach rather than redistribution",
         "living conditions compared": "'your living conditions compared to 12 months ago' is a change over time, not a gap between people; only the relational form is matched"
+      },
+      "_facet_notes": {
+        "lived-poverty": "Afrobarometer's five-item Lived Poverty Index and the World Values Survey's shorter version: how often a household went without food, water, medical care, cooking fuel or cash income. Experienced deprivation, not an opinion about inequality — the only measure here of what people actually lack.",
+        "spatial": "Two different things, deliberately together. The Arab Opinion Index and Afrobarometer each ask one question about equality across regions. The rest are Afrobarometer's enumeration-area checklist (EA-SVC, EA-FAC, EA-ROAD), which the interviewer records on arrival: whether the place has piped water, a sewage system, a clinic, a bank, a paved road. Those are observations of a place rather than answers from a respondent, and are the archive's only non-attitudinal measure of spatial inequality."
       }
     },
     "regime-preference": {

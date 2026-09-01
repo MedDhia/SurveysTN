@@ -213,6 +213,15 @@ The eighth asks whether perceived inequality is one attitude or several. It is s
 across the 25 inequality items of the 2016 round, the mean correlation inside a battery
 is 0.34 and between batteries 0.12.
 
+Four further figures take up **economic and spatial inequality** specifically, using the
+two instruments that measure conditions rather than opinions: Afrobarometer's Lived
+Poverty Index across six rounds, and its enumeration-area checklist, where an interviewer
+records whether a place has piped water, a clinic, a bank, a paved road. A bank is in
+reach for 63% of respondents in Grand Tunis and 17% in the North West. Put those beside
+the perception data and the two line up: across the seven regions, lived poverty and the
+share saying equality is applied correlate at **ρ = −0.89** — and the two axes come from
+different programmes, different respondents and different years.
+
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
 (strong leader, army rule, unelected experts, rule by religious law), support for
@@ -303,6 +312,7 @@ python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
 python3 scripts/build_inequality_figures.py     # main/figures/inequality-*.png
 python3 scripts/build_inequality_breakdowns.py  # inequality by dimension, region, group
+python3 scripts/build_spatial_economic_figures.py  # economic and spatial inequality
 python3 scripts/verify.py                 # cell-by-cell against the releases
 ```
 
