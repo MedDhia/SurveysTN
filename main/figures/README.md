@@ -317,3 +317,120 @@ The seven hardest governorates are all interior, from Beja at 66% down through J
 El Kef, Kairouan, Siliana, Kasserine and Sidi Bouzid. But the split is not clean: two
 interior governorates, Medenine and Tataouine, sit among the five easiest. A governorate
 enters with at least 150 effective respondents.
+
+## Perception of democracy — four figures
+
+`python3 scripts/build_democracy_figures.py`
+
+Indexed in [`docs/topics/democracy-perception.md`](../../docs/topics/democracy-perception.md).
+**Assessment, not preference** — whether Tunisians *want* democracy is a different
+question and lives in [`regime-preference.md`](../../docs/topics/regime-preference.md).
+
+**Both Afrobarometer items are matched on question wording, never variable names.**
+Extent of democracy is `Q42`, `Q40`, `Q35`, `Q36`, `Q30`, `Q32` across the six rounds and
+satisfaction is `Q43`, `Q41`, `Q36`, `Q37`, `Q31`, `Q33` — note that **`Q36` is the
+assessment item in one round and the satisfaction item in another**, so a name-based
+match would silently swap two different questions.
+
+### `democracy-assessment-and-satisfaction.png` / `.svg`
+
+The period is the point. Afrobarometer fielded Round 8 from 24 February to 18 March
+2020, **seventeen months before Kais Saied suspended parliament on 25 July 2021**, and
+Round 9 from 21 February to 17 March 2022, **seven months after**. The break falls
+cleanly between two rounds of an identical question.
+
+| | 2020 | 2022 | 2024 |
+|---|---:|---:|---:|
+| A democracy with minor problems or better | 47% | 28% | **53%** |
+| Not a democracy at all | 22% | 32% | **16%** |
+| Fairly or very satisfied | 55% | 38% | **63%** |
+
+It fell hard across the coup and then **reversed past where it started**: by 2024 both
+readings are the strongest in the series.
+
+Three cautions are on the figure. These are separate cross-sections, not the same people
+asked twice. The satisfaction scale's answer "the country is not a democracy" is not a
+point on that scale and is excluded, reported separately (3% in 2022, its high point).
+And a question about how democratic a country is need not hold its meaning fixed across
+a change of regime — which is a reason to read the 2024 rise as a change in what
+respondents say rather than a measurement of what Tunisia became.
+
+### `democracy-rating-across-programmes.png` / `.svg`
+
+Three programmes ask the question and none asks it the same way, so they are drawn apart
+rather than joined. Left: numeric self-ratings rescaled to 0–100 on their own floor and
+ceiling, each survey's raw range printed beside its point — Arab Barometer Waves II and
+III run 0–10, Wave IV and both WVS waves run 1–10, so their floors are a step apart.
+Right: Afrobarometer's four-point item, which has no numeric scale to rescale.
+
+Two surveys landed in 2013 nine months apart, and that is the only check available.
+**It comes out badly: they disagree by 10 points**, Arab Barometer reading 43 and the
+World Values Survey 33. Read the levels as programme-specific and the movement within a
+programme as the thing worth comparing.
+
+### `democracy-perception-who.png` / `.svg`
+
+Whether the swing was general or concentrated: the share calling Tunisia a democracy, by
+region and by urban or rural residence, in the round before the coup and the two after.
+Every region falls across the break and every region recovers; town and country move
+together. A bar is drawn only where at least 40 effective respondents fall in the cell,
+which at this resolution binds — region intervals are wide, and the ordering between
+regions within a round should not be read as a ranking.
+
+### `democracy-meaning.png` / `.svg`
+
+What Tunisians picked as most essential to democracy, Afrobarometer Round 5, 2013. Four
+separate questions each offered four candidates; shares are within a question, so options
+from different questions are not rivals and the code in the right margin says which
+question each came from.
+
+**Delivery ranks far above procedure.** Basic necessities 62%, clean politics 61% and
+jobs for all 55%, against free expression 15%, a critical press 13%, parties competing
+fairly 12% and the right to demonstrate 4%. If that is what the word means to a
+respondent, a government judged to deliver can be called democratic by someone who would
+not call it liberal — which bears on the 2024 reading above without establishing it.
+This was asked in 2013 and not since, so the connection is a hypothesis the archive
+cannot test.
+
+### `democracy-fear-claim.png` / `.svg`
+
+The argument that Tunisians turned against democracy — offered widely to explain Kais
+Saied's popularity — tested on its own terms, four ways, across three programmes and 17
+surveys. It draws on items indexed under both `democracy-perception` and
+`regime-preference`.
+
+**The claim fails as stated.** Agreement that *"democracy has its own problems but
+remains better than other systems"* never falls below **81%** in nine Arab Opinion Index
+rounds and stands at **89% in 2024**. On Afrobarometer's harder forced choice —
+*"democracy is preferable to any other kind of government"*, against two rival statements
+— the floor is **48%, and it came in 2018**, before the coup rather than after; 2024 sits
+at 55%. Asked to rate systems one at a time in 2013 and again in 2019, Tunisians moved
+*away* from every alternative: a strong leader unbothered by parliament fell 48% → 22%,
+rule by experts 77% → 43%, army rule 37% → 30%.
+
+**What did change is not desire.** Two things moved, and the figure shows both rather
+than only the convenient one:
+
+- Agreement that *"democracies are characterised by indecisiveness and discord"* rose
+  from **32% (2011) to 69% (2022)**, easing to 51% in 2024.
+- Disapproval of **one-man rule collapsed: 84% (2013) → 63% (2018) → 40% (2020)**,
+  recovering only to 48% by 2024. Disapproval of *one-party* rule barely moved over the
+  same period (61% → 57%), so this is specific to personalised rule rather than a general
+  softening toward authoritarianism.
+
+The 2020 reading matters for sequencing: Afrobarometer Round 8 left the field on 18 March
+2020, **seventeen months before** Saied acted. The guardrail was down first.
+
+So the population that emerges from these data kept wanting democracy and stopped
+objecting to a strongman. That is a different claim from fearing democracy, and it points
+at performance rather than principle.
+
+**Cautions.** Levels are instrument-specific and not comparable across programmes: the
+Arab Opinion Index and World Values items ask for agreement with a statement and run
+high; Afrobarometer forces a choice and runs lower. The 2022 Afrobarometer round is in
+French and words the third rejection item as *"rejet de la dictature"* rather than of
+one-man rule. Every point is a separate cross-section. And the WVS and Afrobarometer
+readings on strongman rule are in some tension over 2013–2020 — approval of a strong
+leader falls on one instrument while disapproval of one-man rule also falls on the other
+— which is a reason to weigh the direction of movement within an instrument rather than
+the levels across them.

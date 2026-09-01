@@ -296,6 +296,110 @@
         "political system (trust)": "trust in political institutions, which is support for incumbents rather than for a system",
         "level of democracy (elsewhere)": "Afrobarometer Round 5 and the Arab Opinion Index 2011 rate how democratic China, the USA, France, Iran, Turkey, Israel and Saudi Arabia are; those are ratings of other countries and sit in their own facet rather than in this country's assessment"
       }
+    },
+    "democracy-perception": {
+      "title": "Perception of democracy",
+      "description": "How Tunisians judge and rate democracy — how democratic they say their country is, how satisfied they are with the way it works, what they take democracy to mean, and how free they think elections are. This is assessment, not preference: whether people want democracy is a separate question, indexed under [regime preference](regime-preference.md), which keeps its own assessment facets for the same items seen from the other side.",
+      "facets": {
+        "assessment": {
+          "title": "How democratic the country is judged to be",
+          "patterns": [
+            "extent of democracy",
+            "niveau de d[ée]mocratie$",
+            "to what extent is (your country|tunisia)\\b.{0,25}democratic",
+            "how democratically is (this|the) country",
+            "much of a democracy"
+          ]
+        },
+        "satisfaction": {
+          "title": "Satisfaction with the way democracy works",
+          "patterns": [
+            "satisfaction with democracy",
+            "satisfaction avec la d[ée]mocratie",
+            "satisf\\w*.{0,30}the way democracy"
+          ]
+        },
+        "trajectory": {
+          "title": "Whether democracy is judged to be advancing or retreating",
+          "patterns": [
+            "niveau de d[ée]mocratie (par rapport|dans cinq)",
+            "democracy.{0,30}(compared to|five years ago|in five years)",
+            "extent of democracy.{0,25}(compared|five years)"
+          ]
+        },
+        "meaning": {
+          "title": "What democracy is taken to mean",
+          "patterns": [
+            "essential characteristics of democracy",
+            "understand democracy",
+            "meaning of democracy",
+            "caract[ée]ristiques essentielles de la d[ée]mocratie"
+          ]
+        },
+        "elections": {
+          "title": "Whether elections are judged free and fair",
+          "patterns": [
+            "free and fair",
+            "votes are counted fairly",
+            "fair count of votes",
+            "election\\w*[:,].{0,40}(fair|free|honest)",
+            "elections free and fair",
+            "covers all candidates fairly"
+          ]
+        },
+        "benchmark": {
+          "title": "How democratic other countries are judged to be (a yardstick, not this country)",
+          "patterns": [
+            "level of democracy in (USA|United States|France|Turkey|Israel|Iran|China|Saudi|Germany|Britain|Russia|Egypt|Morocco|Algeria|Qatar|Jordan|Lebanon)",
+            "to what extent is (USA|United States|France|Turkey|Israel|Iran|China|Saudi|Germany|Britain|Russia|Egypt|Morocco|Algeria|Qatar|Jordan|Lebanon)\\b.{0,25}democratic"
+          ]
+        },
+        "suitability": {
+          "title": "Whether democracy is judged to fit the country",
+          "patterns": [
+            "extent to which democracy is suit",
+            "appropriate level of democracy",
+            "democracy.{0,25}(suitable|suits) (for|your country)"
+          ]
+        }
+      },
+      "excluded_because_they_are_false_friends": {
+        "democratic party": "party names containing 'Democratic' are organisations, not judgements",
+        "democracy as a preference": "wanting democracy is regime preference; this topic is about how people rate what they have",
+        "scale measuring the level of democracy": "the shared preamble of Arab Barometer's rating battery, repeated on the item for every country it asks about — it matched the Iran item as though it were about Tunisia"
+      },
+      "figures": [
+        {
+          "file": "democracy-fear-claim",
+          "title": "Testing 'Tunisians fear democracy'",
+          "caption": "The claim tested on its own terms, four ways, across three programmes and 17 surveys. Support for democracy in principle never collapses; what fell is confidence that democracy is decisive, and disapproval of one-man rule — the latter by 2020, before the coup. Draws on items indexed under both this topic and regime preference.",
+          "script": "scripts/build_democracy_figures.py"
+        },
+        {
+          "file": "democracy-assessment-and-satisfaction",
+          "title": "Before and after the self-coup",
+          "caption": "How democratic Tunisians say their country is, and how satisfied they are with the way it works, across six Afrobarometer rounds. Round 8 was fielded 17 months before 25 July 2021 and Round 9 seven months after; both readings fall sharply across that break and then exceed their pre-coup levels by 2024.",
+          "script": "scripts/build_democracy_figures.py"
+        },
+        {
+          "file": "democracy-rating-across-programmes",
+          "title": "What each programme says",
+          "caption": "Every reading the archive holds on how democratic Tunisia is, from three programmes that ask it three different ways — drawn apart rather than joined, with the one same-year check reported whichever way it comes out.",
+          "script": "scripts/build_democracy_figures.py"
+        },
+        {
+          "file": "democracy-perception-who",
+          "title": "Whether the swing was general",
+          "caption": "The share calling Tunisia a democracy, by region and by urban or rural residence, in the round before the self-coup and the two after.",
+          "script": "scripts/build_democracy_figures.py"
+        },
+        {
+          "file": "democracy-meaning",
+          "title": "What the word is taken to mean",
+          "caption": "What Tunisians picked as most essential to democracy in 2013: delivery ranks far above procedural liberty, which bears on how a later rating should be read.",
+          "script": "scripts/build_democracy_figures.py"
+        }
+      ]
     }
   }
 }
