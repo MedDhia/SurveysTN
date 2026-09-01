@@ -1,0 +1,88 @@
+series,survey,variable,question_text,facets,concordance_group
+afrobarometer,afro-w05,Q42,Q42. Extent of democracy,assessment,Q0220
+afrobarometer,afro-w06,Q40,Q40. Extent of democracy,assessment,Q0220
+afrobarometer,afro-w07,Q35,Q35. Extent of democracy,assessment,Q0220
+afrobarometer,afro-w08,Q36,Q36. Extent of democracy,assessment,Q0220
+afrobarometer,afro-w09,Q30,Q30. Niveau de démocratie,assessment,
+afrobarometer,afro-w10,Q32,Q32. Extent of democracy,assessment,Q0220
+arab-barometer,ab-w02,q511,"q511 In your opinion, to what extent is your country democratic?",assessment,Q0780
+arab-barometer,ab-w03,q511,"q511 In your opinion, to what extent is your country democratic?",assessment,Q0780
+arab-barometer,ab-w04,q511,"In your opinion, to what extent is your country democratic? (Not asked in Lebanon or Qatar) 0 1 2 3 4 5 6 7 8 9 10Democratic to No democracy whatsoeverthe greatest extentpossible",assessment,
+arab-barometer,ab-w04,q511leb,"In your opinion, to what extent is your country democratic? (Lebanon only) 1 2 3 4 5 6 7 8 9 10Democratic to No democracy whatsoeverthe greatest extentpossible",assessment,
+world-values-survey,wvs-w06,V141,How democratically is this country being governed today,assessment,Q1403
+world-values-survey,wvs-w07,Q251,How democratically is this country being governed today,assessment,Q1403
+arab-barometer,ab-w02,q505,"q505 Supposing there was a scale measuring the level of democracy between 0 and 10, in which 0 indicates no democracy whatsoever and 10 means that the state is democratic to the greatest extent possible. In your opinion, to what extent is Iran a democratic",benchmark,
+arab-barometer,ab-w02,q506,"q506 In your opinion, to what extent is Turkey a democratic country?",benchmark,
+arab-barometer,ab-w02,q507,"q507 In your opinion, to what extent is Saudi Arabia a democratic country?",benchmark,
+arab-barometer,ab-w02,q509,"q509 In your opinion, to what extent is China a democratic country?",benchmark,Q0894
+arab-barometer,ab-w02,q510,"q510 In your opinion, to what extent is Israel a democratic country?",benchmark,
+arab-barometer,ab-w08,Q508B,"Q508B In your opinion, to what extent is Germany a democratic country?",benchmark,
+arab-barometer,ab-w08,Q509,"Q509 In your opinion, to what extent is China a democratic country?",benchmark,Q0894
+arab-opinion-index,aoi-2011,Q403_1,"Q403_1.From 0-10, how would you rate the level of democracy in USA",benchmark,
+arab-opinion-index,aoi-2011,Q403_2,"Q403_2.From 0-10, how would you rate the level of democracy in France",benchmark,
+arab-opinion-index,aoi-2011,Q403_3,"Q403_3.From 0-10, how would you rate the level of democracy in Turkey",benchmark,
+arab-opinion-index,aoi-2011,Q403_4,"Q403_4.From 0-10, how would you rate the level of democracy in Israel",benchmark,
+arab-opinion-index,aoi-2011,Q403_5,"Q403_5.From 0-10, how would you rate the level of democracy in Iran",benchmark,
+afrobarometer,afro-w06,Q48A,Q48a. Elections: fair count of votes,elections,
+afrobarometer,afro-w06,Q48C,Q48c. Elections: fair media coverage,elections,
+afrobarometer,afro-w08,Q16A,Q16a. Last national election: media covers all candidates fairly,elections,
+arab-barometer,ab-w02,eg2043,eg2043 To what extent do you think the Supreme Council of the Armed Forces will work to 3. Conduct free and fair elections,elections,
+arab-barometer,ab-w02,eg301,eg301 Do you think Egypt is ready to conduct free and fair parliamentary elections...?,elections,
+arab-barometer,ab-w02,eg310,eg310 Do you think Egypt is ready to conduct free and fair presidential elections...?,elections,
+arab-barometer,ab-w05,Q303A,EVALUATION: ELECTIONS FREE AND FAIR,elections,
+arab-barometer,ab-w08,Q303B_1,Q303B_1 Votes are counted fairly,elections,
+arab-opinion-index,aoi-2011,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2011,Q420_2,Q420_2.Would you agree or disagree with one of the Islamist (“Islamic”) political parties to power through winning enough votes in free and fair elections?,elections,Q0306
+arab-opinion-index,aoi-2011,Q420_3,Q420_3.Would you agree or disagree with one of the Non-Islamist /secular political parties to power through winning enough votes in free and fair elections?,elections,Q0307
+arab-opinion-index,aoi-2012-2013,Q415_5,"Q415_5.Do you believe that the existence of the following rights in The principle of holding regular, free and fair, elections is important/not important?",elections,
+arab-opinion-index,aoi-2012-2013,Q416_5,"Q416_5.To what extent do you believe that the The principle of holding regular, free and fair, elections Is safeguarded in your home country?",elections,Q0150
+arab-opinion-index,aoi-2012-2013,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2014,Q416_5,"Q416_5.To what extent do you believe that the The principle of holding regular, free and fair, elections Is safeguarded in your home country?",elections,Q0150
+arab-opinion-index,aoi-2014,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2014,Q420_2,Q420_2.Would you agree or disagree with one of the Islamist (“Islamic”) political parties to power through winning enough votes in free and fair elections?,elections,Q0306
+arab-opinion-index,aoi-2014,Q420_3,Q420_3.Would you agree or disagree with one of the Non-Islamist /secular political parties to power through winning enough votes in free and fair elections?,elections,Q0307
+arab-opinion-index,aoi-2014,Q420_4,Q420_4.Would you agree or disagree with one of the Political parties founded along sectarian lines to power through winning enough votes in free and fair elections?,elections,Q0586
+arab-opinion-index,aoi-2015,Q416_5,"Q416_5.To what extent do you believe that the The principle of holding regular, free and fair, elections Is safeguarded in your home country?",elections,Q0150
+arab-opinion-index,aoi-2015,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2015,Q420_2,Q420_2.Would you agree or disagree with one of the Islamist (“Islamic”) political parties to power through winning enough votes in free and fair elections?,elections,Q0306
+arab-opinion-index,aoi-2015,Q420_3,Q420_3.Would you agree or disagree with one of the Non-Islamist /secular political parties to power through winning enough votes in free and fair elections?,elections,Q0307
+arab-opinion-index,aoi-2015,Q420_4,Q420_4.Would you agree or disagree with one of the Political parties founded along sectarian lines to power through winning enough votes in free and fair elections?,elections,Q0586
+arab-opinion-index,aoi-2016,Q416_5,"Q416_5.To what extent do you believe that the The principle of holding regular, free and fair, elections Is safeguarded in your home country?",elections,Q0150
+arab-opinion-index,aoi-2016,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2016,Q420_2,Q420_2.Would you agree or disagree with one of the Islamist (“Islamic”) political parties to power through winning enough votes in free and fair elections?,elections,Q0306
+arab-opinion-index,aoi-2016,Q420_3,Q420_3.Would you agree or disagree with one of the Non-Islamist /secular political parties to power through winning enough votes in free and fair elections?,elections,Q0307
+arab-opinion-index,aoi-2016,Q420_4,Q420_4.Would you agree or disagree with one of the Political parties founded along sectarian lines to power through winning enough votes in free and fair elections?,elections,Q0586
+arab-opinion-index,aoi-2017-2018,Q416_5,"Q416_5.To what extent do you believe that the The principle of holding regular, free and fair, elections Is safeguarded in your home country?",elections,Q0150
+arab-opinion-index,aoi-2017-2018,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2019-2020,Q416_5,"Q416_5.To what extent do you believe that the The principle of holding regular, free and fair, elections Is safeguarded in your home country?",elections,Q0150
+arab-opinion-index,aoi-2019-2020,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2019-2020,Q420_2,Q420_2.Would you agree or disagree with one of the Islamist (“Islamic”) political parties to power through winning enough votes in free and fair elections?,elections,Q0306
+arab-opinion-index,aoi-2019-2020,Q420_3,Q420_3.Would you agree or disagree with one of the Non-Islamist /secular political parties to power through winning enough votes in free and fair elections?,elections,Q0307
+arab-opinion-index,aoi-2022,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+arab-opinion-index,aoi-2024-2025,Q420_1,Q420_1.Would you agree or disagree with one of the Political parties with which you disagree in terms of ideas and agendas to power through winning enough votes in free and fair elections?,elections,Q0041
+world-values-survey,wvs-w06,V228A,How often in country's elections: Votes are counted fairly,elections,Q1381
+world-values-survey,wvs-w06,V228E,How often in country's elections: Journalists provide fair coverage of elections,elections,Q1385
+world-values-survey,wvs-w06,V228F,How often in country's elections: Election officials are fair,elections,Q1386
+world-values-survey,wvs-w07,Q224,How often in country's elections: Votes are counted fairly,elections,Q1381
+world-values-survey,wvs-w07,Q228,How often in country's elections: Journalists provide fair coverage of elections,elections,Q1385
+world-values-survey,wvs-w07,Q229,How often in country's elections: Election officials are fair,elections,Q1386
+afrobarometer,afro-w05,Q44,"Q44. Essential characteristics of democracy: equality, fair election, etc",meaning,
+afrobarometer,afro-w05,Q45,"Q45. Essential characteristics of democracy: law and order, job, etc",meaning,
+afrobarometer,afro-w05,Q57,"Q57. Essential characteristics of democracy: legislature, government, people etc",meaning,
+afrobarometer,afro-w05,Q58,"Q58. Essential characteristics of democracy: participation, no corruption, courts etc",meaning,
+afrobarometer,afro-w06,Q29A,Q29a. Understand democracy,meaning,
+arab-barometer,ab-w04,q515a1,"Many things may be desirable, but not all of themare essential characteristics of democracy. If youhave to choose only one from each four sets ofstatements that I am going to read, which onewould you choose as the most essentialcharacteristics of a democracy?",meaning,
+arab-barometer,ab-w04,q515a2,"Many things may be desirable, but not all of themare essential characteristics of democracy. If youhave to choose only one from each four sets ofstatements that I am going to read, which onewould you choose as the most essentialcharacteristics of a democracy?",meaning,
+arab-barometer,ab-w04,q515a3,"Many things may be desirable, but not all of themare essential characteristics of democracy. If youhave to choose only one from each four sets ofstatements that I am going to read, which onewould you choose as the most essentialcharacteristics of a democracy?",meaning,
+afrobarometer,afro-w05,Q43,Q43. Satisfaction with democracy,satisfaction,Q0222
+afrobarometer,afro-w06,Q41,Q41. Satisfaction with democracy,satisfaction,Q0222
+afrobarometer,afro-w07,Q36,Q36. Satisfaction with democracy,satisfaction,Q0222
+afrobarometer,afro-w08,Q37,Q37. Satisfaction with democracy,satisfaction,Q0222
+afrobarometer,afro-w09,Q31,Q31. Satisfaction avec la démocratie,satisfaction,
+afrobarometer,afro-w10,Q33,Q33. Satisfaction with democracy,satisfaction,Q0222
+arab-barometer,ab-w02,q512,"q512 Suppose there was a scale from 1-10 measuring the extent to which democracy is suitable for your country, with 1 meaning that democracy is absolutely inappropriate for your country and 10 meaning that democracy is completely appropriate for your count",suitability,
+arab-barometer,ab-w03,q512,"q512 Suppose there was a scale from 0-10 measuring the extent to which democracy is suitable for your country, to what extent do you think democracy is appropriate for your country?",suitability,
+arab-barometer,ab-w04,q512leb,"Suppose there was a scale from 0-10 measuring the extent to which democracy is suitable for yourcountry, with 0 meaning that democracy is absolutely inappropriate for your country and 10meaning that democracy is completely appropriate for your country. To what extent do you think democracy is appropriate for your country? (Lebanon only) 1 2 3 4 5 6 7 8 9 10Completely Absolutelyappropriate inappropriate",suitability,
+arab-barometer,ab-w08,Q512,Q512 What is an appropriate level of democracy for your country?,suitability,
+afrobarometer,afro-w09,Q32A,Q32a. Niveau de démocratie par rapport à il y a cinq ans,trajectory,
+afrobarometer,afro-w09,Q32B,Q32b. Niveau de démocratie dans cinq ans,trajectory,

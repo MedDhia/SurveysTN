@@ -222,6 +222,18 @@ the perception data and the two line up: across the seven regions, lived poverty
 share saying equality is applied correlate at **ρ = −0.89** — and the two axes come from
 different programmes, different respondents and different years.
 
+**[Perception of democracy](docs/topics/democracy-perception.md)** — 87 variables in 22
+surveys: how democratic people say Tunisia is, how satisfied they are with the way it
+works, whether elections are judged free and fair, and what they take the word to mean.
+Assessment, not preference. The period is the point — Afrobarometer fielded Round 8
+seventeen months before Kais Saied suspended parliament on 25 July 2021 and Round 9 seven
+months after, so the break falls between two rounds of an identical question. The share
+calling Tunisia a democracy with minor problems or better went **47% → 28% → 53%** across
+2020, 2022 and 2024, and satisfaction **55% → 38% → 63%**: it fell hard and then reversed
+past where it started. Read the 2024 rise carefully — these are separate cross-sections,
+and in 2013 Tunisians ranked delivery far above procedural liberty as essential to
+democracy, so the word may not hold its meaning fixed across a change of regime.
+
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
 (strong leader, army rule, unelected experts, rule by religious law), support for
@@ -313,6 +325,7 @@ python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
 python3 scripts/build_inequality_figures.py     # main/figures/inequality-*.png
 python3 scripts/build_inequality_breakdowns.py  # inequality by dimension, region, group
 python3 scripts/build_spatial_economic_figures.py  # economic and spatial inequality
+python3 scripts/build_democracy_figures.py      # perception of democracy
 python3 scripts/verify.py                 # cell-by-cell against the releases
 ```
 
