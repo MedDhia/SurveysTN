@@ -251,6 +251,14 @@ laws and courts from 71% to 44%. Elections kept, accountability abandoned — an
 three-item constraint index had already lost 19 of its eventual 28 points by 2018, three
 years before parliament was suspended.
 
+A seventh tests **"Tunisians want military rule"** and returns a third verdict: the
+archive cannot settle it. Afrobarometer has approval of army rule overtaking disapproval
+by 2022 and reaching 56%; the World Values Survey has it a falling minority, 30% in 2019.
+Two readings a year apart differ by 17 points. What the usual explanation cannot do is
+carry the change — trust in the army has sat at 94–99% across nine rounds and was already
+97% in 2011, when only a third approved of army rule. A constant cannot explain a change;
+what moved is trust in the elected legislature, from 42% to 14%.
+
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
 (strong leader, army rule, unelected experts, rule by religious law), support for

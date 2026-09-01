@@ -26,6 +26,14 @@ The companion test, and it comes out the other way. Support for choosing leaders
 
 [PNG](../../main/figures/democracy-strongman-claim.png) · [SVG](../../main/figures/democracy-strongman-claim.svg) · rebuilt with `python3 scripts/build_democracy_figures.py`
 
+### Testing 'Tunisians want military rule'
+
+[![Testing 'Tunisians want military rule'](../../main/figures/democracy-military-claim.png)](../../main/figures/democracy-military-claim.png)
+
+The third test, and the archive cannot settle it: Afrobarometer has approval of army rule overtaking disapproval, the World Values Survey has it falling and a minority throughout. What the usual explanation cannot do is carry the change — trust in the army has sat at 94–99% since 2011, when only a third approved of army rule.
+
+[PNG](../../main/figures/democracy-military-claim.png) · [SVG](../../main/figures/democracy-military-claim.svg) · rebuilt with `python3 scripts/build_democracy_figures.py`
+
 ### Before and after the self-coup
 
 [![Before and after the self-coup](../../main/figures/democracy-assessment-and-satisfaction.png)](../../main/figures/democracy-assessment-and-satisfaction.png)

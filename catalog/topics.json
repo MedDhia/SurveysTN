@@ -382,6 +382,12 @@
           "script": "scripts/build_democracy_figures.py"
         },
         {
+          "file": "democracy-military-claim",
+          "title": "Testing 'Tunisians want military rule'",
+          "caption": "The third test, and the archive cannot settle it: Afrobarometer has approval of army rule overtaking disapproval, the World Values Survey has it falling and a minority throughout. What the usual explanation cannot do is carry the change — trust in the army has sat at 94–99% since 2011, when only a third approved of army rule.",
+          "script": "scripts/build_democracy_figures.py"
+        },
+        {
           "file": "democracy-assessment-and-satisfaction",
           "title": "Before and after the self-coup",
           "caption": "How democratic Tunisians say their country is, and how satisfied they are with the way it works, across six Afrobarometer rounds. Round 8 was fielded 17 months before 25 July 2021 and Round 9 seven months after; both readings fall sharply across that break and then exceed their pre-coup levels by 2024.",

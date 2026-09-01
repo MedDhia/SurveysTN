@@ -477,3 +477,37 @@ composition is fixed. The law-making item was not asked in 2018 or 2020 and its 
 drawn with the gap. Round 10 recorded only agreement and not its strength, so its bars
 carry no "strongly" category, and the 2022 round is in French and words the blunt item as
 *"rejet de la dictature"*.
+
+### `democracy-military-claim.png` / `.svg`
+
+The third of the claim tests, and the one the archive **cannot settle** — because the two
+instruments that ask it disagree.
+
+| | 2013 | 2019/20 | 2024 |
+|---|---:|---:|---:|
+| Afrobarometer · approves of army rule | 35% | 47% | **56%** |
+| Afrobarometer · disapproves | 59% | 52% | 42% |
+| World Values Survey · "the army rules" would be good | 37% | **30%** | — |
+
+On Afrobarometer approval draws level with disapproval in 2018 (49.1 against 49.0), falls
+behind again in 2020, and stands clearly above it from 2022. On the World Values Survey
+army rule is a minority answer throughout and **falling**. The two nearest readings are a
+year apart and **17 points apart**.
+
+**The usual explanation cannot carry the change.** Trust in the army has been at the
+ceiling for the whole period — **94% to 99% across nine Arab Opinion Index rounds, and
+already 97% in 2011**, when approval of army rule was barely a third. A constant cannot
+explain a change. What moved is the other side of the ledger: trust in the elected
+legislature fell from 42% to 14% at its floor in 2022, and political parties from 33% to
+12%, before both recovered in 2024.
+
+**Nor does army rule stand out from its neighbours.** It rises 21 points over the period
+against 38 for one-man rule, so if anything the appetite is for a strong civilian rather
+than for the barracks — which is also what actually happened.
+
+**Where the sentiment is consistent, it is conditional.** Only 34% said in 2024 that the
+armed forces should never intervene — but the alternative on offer is intervention *when
+leaders abuse power*. That is a check of last resort, not a government.
+
+So: real support on one instrument, none on the other, and nothing here to break the tie.
+Every point is a separate cross-section; the 2022 Afrobarometer round is in French.

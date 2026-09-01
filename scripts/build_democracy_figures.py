@@ -863,6 +863,138 @@ def strongman_figure() -> None:
           f"constraint index {index[0][1]:.0%}->{index[-1][1]:.0%}, gap {gap_first*100:.0f}->{gap_last*100:.0f}pts")
 
 
+
+AOI_TRUST = {"Q201_6": "The army", "Q201_3": "Elected legislature", "Q201_5": "Political parties"}
+INTERVENE = re.compile(r"armed forces never intervene|forces armées n'interviennent jamais", re.I)
+
+
+def military_figure() -> None:
+    """Test the claim that Tunisians want military rule, on its own terms."""
+    approve = series_for(REJECT["Military rule"], [4, 5], [1, 2, 3, 4, 5], "afrobarometer")
+    disapprove = series_for(REJECT["Military rule"], [1, 2], [1, 2, 3, 4, 5], "afrobarometer")
+    one_man = series_for(REJECT["One-man rule"], [4, 5], [1, 2, 3, 4, 5], "afrobarometer")
+    one_party = series_for(REJECT["One-party rule"], [4, 5], [1, 2, 3, 4, 5], "afrobarometer")
+    wvs_army = (series_for("V129", [1, 2], [1, 2, 3, 4], "world-values-survey")
+                + series_for("Q237", [1, 2], [1, 2, 3, 4], "world-values-survey"))
+    wvs_army.sort()
+
+    trust = {name: series_for(variable, [1, 2], [1, 2, 3, 4], "arab-opinion-index")
+             for variable, name in AOI_TRUST.items()}
+    never = paired_series(INTERVENE.pattern, [1, 2])
+    when_abused = paired_series(INTERVENE.pattern, [3, 4])
+
+    fig, axes = plt.subplots(2, 2, figsize=(15.0, 10.6), facecolor=SURFACE)
+    axes = axes.ravel()
+
+    ax = axes[0]
+    ax.set_facecolor(SURFACE)
+    line(ax, approve, SECOND, "Afrobarometer · approves of army rule")
+    line(ax, disapprove, PRIMARY, "Afrobarometer · disapproves", lift=-16.0)
+    line(ax, wvs_army, THIRD, "World Values Survey · 'the army rules' would be good", lift=-16.0)
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("The two instruments disagree", fontsize=10.4, color=INK, loc="left",
+                 pad=10, fontweight="bold")
+    inside_legend(ax, "lower left", 7.8)
+
+    ax = axes[1]
+    ax.set_facecolor(SURFACE)
+    for colour, (name, points) in zip((PRIMARY, SECOND, THIRD), trust.items()):
+        if points:
+            line(ax, points, colour, name)
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("Trust in the army is a constant, not a variable", fontsize=10.4, color=INK,
+                 loc="left", pad=10, fontweight="bold")
+    inside_legend(ax, "center left", 7.8)
+
+    ax = axes[2]
+    ax.set_facecolor(SURFACE)
+    line(ax, approve, SECOND, "Army rule")
+    line(ax, one_man, PRIMARY, "One-man rule", lift=-16.0)
+    line(ax, one_party, THIRD, "One-party rule", lift=-16.0)
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("Army rule rises — but less than one-man rule", fontsize=10.4, color=INK,
+                 loc="left", pad=10, fontweight="bold")
+    inside_legend(ax, "lower left", 7.8)
+
+    ax = axes[3]
+    ax.set_facecolor(SURFACE)
+    years = [y for y, _ in never]
+    ax.bar(years, [v for _, v in never], width=0.8, color=PRIMARY, edgecolor=SURFACE,
+           linewidth=1.2, label="The armed forces should never intervene")
+    ax.bar(years, [-v for _, v in when_abused], width=0.8, color=SECOND, edgecolor=SURFACE,
+           linewidth=1.2, label="They should intervene when leaders abuse power")
+    for year, value in never:
+        ax.annotate(f"{value:.0%}", (year, value), textcoords="offset points", xytext=(0, 7),
+                    ha="center", fontsize=8.4, color=INK, fontweight="bold")
+    for year, value in when_abused:
+        ax.annotate(f"{value:.0%}", (year, -value), textcoords="offset points", xytext=(0, -15),
+                    ha="center", fontsize=8.4, color=INK, fontweight="bold")
+    ax.axhline(0, color=INK_SOFT, lw=0.9, zorder=4)
+    ax.set_ylim(-0.95, 0.75)
+    ax.set_yticks([-0.75, -0.5, -0.25, 0, 0.25, 0.5])
+    ax.set_yticklabels(["75%", "50%", "25%", "0", "25%", "50%"], fontsize=7.8)
+    ax.set_xlim(2020.8, 2025.2)
+    ax.set_xticks(years)
+    ax.set_xticklabels(years, fontsize=8.2)
+    ax.grid(axis="y", color=GRID, lw=0.8, zorder=0)
+    frame_style(ax)
+    ax.spines["bottom"].set_visible(False)
+    ax.set_title("Where it is consistent, it is conditional", fontsize=10.4, color=INK,
+                 loc="left", pad=10, fontweight="bold")
+    inside_legend(ax, "upper left", 7.8)
+
+    # The crossing is not monotone, so "passes disapproval" needs the first year from
+    # which it stays ahead in every later round — not merely the first year it leads.
+    rounds = [y for y, _ in approve]
+    up, down = dict(approve), dict(disapprove)
+    durable = next(y for y in rounds if all(up[z] > down[z] for z in rounds if z >= y))
+    level = [y for y, v in approve if abs(v - down[y]) < 0.01]
+    army_trust = trust["The army"]
+    legislature = trust["Elected legislature"]
+    top = header(fig, "'Tunisians want military rule' — what the surveys actually say", [
+        "Afrobarometer's approve/disapprove item against the World Values Survey's rating of the same "
+        "system, alongside nine Arab Opinion Index rounds on trust. Weighted shares; the dashed line "
+        "is 25 July 2021.",
+        f"This one the archive cannot settle, because the two instruments that ask it disagree. On "
+        f"Afrobarometer, approval of the army coming in to govern rises from {approve[0][1]:.0%} in "
+        f"{approve[0][0]} to {approve[-1][1]:.0%} in {approve[-1][0]}, drawing level with disapproval "
+        f"in {level[0]}, falling behind again in 2020, and standing clearly above it from {durable}. "
+        "On the World Values Survey, "
+        f"'the army rules' is called a good way of governing by {wvs_army[0][1]:.0%} in "
+        f"{wvs_army[0][0]} and {wvs_army[-1][1]:.0%} in {wvs_army[-1][0]} — falling, not rising. The "
+        f"two nearest readings are a year apart and {abs(dict(approve)[2020] - wvs_army[-1][1]) * 100:.0f} "
+        "points apart.",
+        f"What the usual explanation cannot do is carry the change. Trust in the army has been at the "
+        f"ceiling throughout — {min(v for _, v in army_trust):.0%} to {max(v for _, v in army_trust):.0%} "
+        f"across nine rounds, and already {army_trust[0][1]:.0%} in {army_trust[0][0]}, when approval of "
+        "army rule was barely a third. A constant cannot explain a change. What moved is the other side "
+        f"of the ledger: trust in the elected legislature fell from {legislature[0][1]:.0%} to "
+        f"{min(v for _, v in legislature):.0%} at its floor.",
+        f"And approval of army rule does not stand out from its neighbours. It rises "
+        f"{(approve[-1][1] - approve[0][1]) * 100:.0f} points over the period against "
+        f"{(one_man[-1][1] - one_man[0][1]) * 100:.0f} for one-man rule, so if anything the appetite "
+        "is for a strong civilian rather than for the barracks. Where the sentiment is consistent it "
+        "is conditional: "
+        f"only {never[-1][1]:.0%} say in {never[-1][0]} that the armed forces should never intervene, "
+        "but the alternative on offer is intervention 'when leaders abuse power' — a check of last "
+        "resort, not a government.",
+        "So the claim is not established here. It has real support on one instrument and none on the "
+        "other, and the archive holds nothing to break the tie. Every point is a separate "
+        "cross-section; the 2022 Afrobarometer round is in French.",
+    ])
+    fig.tight_layout(rect=(0, 0, 1, top), h_pad=3.0, w_pad=3.0)
+    for suffix in ("png", "svg"):
+        fig.savefig(FIGURES / f"democracy-military-claim.{suffix}", dpi=200, facecolor=SURFACE,
+                    bbox_inches="tight")
+    plt.close(fig)
+    print(f"military: afro approve {approve[0][1]:.0%}->{approve[-1][1]:.0%}, "
+          f"wvs good {wvs_army[0][1]:.0%}->{wvs_army[-1][1]:.0%}, "
+          f"army trust {min(v for _, v in army_trust):.0%}-{max(v for _, v in army_trust):.0%}")
+
+
 def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     afro = afrobarometer()
@@ -872,6 +1004,7 @@ def main() -> None:
     meaning_figure()
     fear_figure()
     strongman_figure()
+    military_figure()
 
 
 if __name__ == "__main__":
