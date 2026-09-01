@@ -434,3 +434,46 @@ readings on strongman rule are in some tension over 2013–2020 — approval of 
 leader falls on one instrument while disapproval of one-man rule also falls on the other
 — which is a reason to weigh the direction of movement within an instrument rather than
 the levels across them.
+
+### `democracy-strongman-claim.png` / `.svg`
+
+The companion to `democracy-fear-claim`, and **it does not come out the same way.** The
+same six Afrobarometer rounds, separating two questions the claim runs together: who
+should choose the leader, and what the leader may then do.
+
+**On constraining the president, the claim is largely borne out.**
+
+| Share taking the constraining side | 2013 | 2024 |
+|---|---:|---:|
+| Parliament rather than the president makes the laws | 78% | **33%** |
+| President must obey the laws and courts | 71% | **44%** |
+| President limited to two terms | 87% | **51%** |
+| President monitored by parliament | 71% | 50% |
+| Armed forces never intervene | — | 34% (2022: 26%) |
+
+On the blunt item — *one leader, elections and parliament abolished* — **approval has
+outweighed disapproval since 2020**.
+
+**What survives is the vote.** Agreement that leaders should be chosen through elections
+has never fallen below 66% and stands at **77%**; agreement that democracy remains the
+better system stands at 89%. The gap between wanting elections and wanting the winner
+constrained widens from 19 points in 2013 to 28 in 2024.
+
+So the accurate version is narrower and stranger than the claim: **Tunisians want to
+elect a leader and then let him govern unchecked.** That is a rejection of horizontal
+accountability rather than of democracy — and most of it predates the coup. The
+three-item index had already fallen 19 of its eventual 28 points by 2018, three years
+before parliament was suspended, under the elected governments those constraints belonged
+to. Of the four items measured in every round, two fall furthest in the step ending 2018
+and two in the step ending 2022, so no single moment carries it.
+
+**A coding trap worth naming.** These are paired-statement items where Statement 1 is
+coded 1–2 and Statement 2 is 3–4. *"President free to act vs obey the laws and courts"*
+puts the **strongman option first**, the opposite way round from every other item in the
+battery. Coding them all alike reverses that series.
+
+The index is the mean of the three constraint items asked in all six rounds, so its
+composition is fixed. The law-making item was not asked in 2018 or 2020 and its line is
+drawn with the gap. Round 10 recorded only agreement and not its strength, so its bars
+carry no "strongly" category, and the 2022 round is in French and words the blunt item as
+*"rejet de la dictature"*.

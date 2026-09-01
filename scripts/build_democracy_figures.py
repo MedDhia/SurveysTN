@@ -645,6 +645,224 @@ def fear_figure() -> None:
           f"one-man rejection {one_man[0][1]:.0%} -> {min(one_man, key=lambda p: p[1])[1]:.0%}")
 
 
+
+# Afrobarometer's paired-statement items. Statement 1 is the one named first in the
+# label, coded 1-2; Statement 2 is coded 3-4; 5 is "agree with neither". Note that
+# "President free to act vs obey the laws and courts" puts the STRONGMAN option first,
+# the opposite way round from every other item here — coding them all alike would
+# reverse that one.
+CONSTRAINTS = [
+    ("President limited to two terms",
+     r"two term limit|mandats du président à deux", [1, 2]),
+    ("President must obey laws and courts",
+     r"president free to act vs\.? obey|président est libre d'agir vs doit obéir", [3, 4]),
+    ("President monitored by parliament",
+     r"president monitored by parliament|rend compte au parlement", [1, 2]),
+    ("Parliament makes the laws, not the president",
+     r"parliament makes laws|parlement fait des lois", [1, 2]),
+    ("Armed forces never intervene",
+     r"armed forces never intervene|forces armées n'interviennent jamais", [1, 2]),
+]
+ELECTIONS = (r"choose leaders through.{0,20}election|choisir les dirigeants.{0,25}élections", [1, 2])
+# The three constraint items asked in every round, so the index has a fixed composition.
+INDEX_ITEMS = ("President limited to two terms", "President must obey laws and courts",
+               "President monitored by parliament")
+
+
+def paired_series(pattern: str, wanted: list[int]) -> list[tuple[int, float]]:
+    points = []
+    for key, survey in catalog().items():
+        if survey["series"] != "afrobarometer":
+            continue
+        path = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
+        data, meta = pyreadstat.read_sav(str(path), user_missing=True)
+        upper = {c.upper(): c for c in data.columns}
+        labels = {c: str(meta.column_names_to_labels.get(c) or "") for c in data.columns}
+        column = next((c for c in data.columns if re.search(pattern, labels[c], re.I)), None)
+        if column is None:
+            continue
+        weight = next((upper[w.upper()] for w in WEIGHTS if w.upper() in upper), None)
+        frame = pd.DataFrame({column: data[column], "weight": data[weight] if weight else 1.0})
+        value = weighted_share(frame, column, wanted, [1, 2, 3, 4, 5])
+        if np.isfinite(value):
+            points.append((year_of(survey), value))
+    return sorted(points)
+
+
+def inside_legend(ax, where: str, size: float, ncol: int = 1, handleheight: float = 0.7):
+    """Legend inside the panel on an opaque patch.
+
+    Hung below the axes it lands on the tick labels, and reserving room for it with
+    tight_layout does not survive a four-panel grid.
+    """
+    legend = ax.legend(loc=where, frameon=True, fontsize=size, labelcolor=INK_SOFT,
+                       handlelength=1.5, handleheight=handleheight, ncol=ncol,
+                       borderpad=0.5, labelspacing=0.4)
+    legend.get_frame().set_facecolor(SURFACE)
+    legend.get_frame().set_edgecolor("none")
+    legend.get_frame().set_alpha(0.92)
+    return legend
+
+
+def strongman_figure() -> None:
+    """Test the claim that Tunisians prefer strongman rule, on its own terms."""
+    elections = paired_series(*ELECTIONS)
+    constraints = {name: paired_series(pattern, wanted) for name, pattern, wanted in CONSTRAINTS}
+    churchill = series_for("Q405_6", [1, 2], [1, 2, 3, 4], "arab-opinion-index")
+    one_man = series_for(REJECT["One-man rule"], [1, 2], [1, 2, 3, 4, 5], "afrobarometer")
+    one_man_full = []
+    for key, survey in catalog().items():
+        if survey["series"] != "afrobarometer":
+            continue
+        path = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
+        data, meta = pyreadstat.read_sav(str(path), user_missing=True)
+        upper = {c.upper(): c for c in data.columns}
+        labels = {c: str(meta.column_names_to_labels.get(c) or "") for c in data.columns}
+        column = next((c for c in data.columns if REJECT["One-man rule"].search(labels[c])), None)
+        if column is None:
+            continue
+        weight = next((upper[w.upper()] for w in WEIGHTS if w.upper() in upper), None)
+        frame = pd.DataFrame({column: data[column], "weight": data[weight] if weight else 1.0})
+        one_man_full.append((year_of(survey), {
+            code: weighted_share(frame, column, [code], [1, 2, 3, 4, 5]) for code in (1, 2, 3, 4, 5)}))
+    one_man_full.sort()
+
+    index = []
+    for year in [y for y, _ in elections]:
+        values = [dict(points).get(year) for name, points in constraints.items()
+                  if name in INDEX_ITEMS]
+        values = [v for v in values if v is not None]
+        if len(values) == len(INDEX_ITEMS):
+            index.append((year, float(np.mean(values))))
+
+    fig, axes = plt.subplots(2, 2, figsize=(15.0, 10.6), facecolor=SURFACE)
+    axes = axes.ravel()
+
+    ax = axes[0]
+    ax.set_facecolor(SURFACE)
+    line(ax, elections, PRIMARY, "Leaders should be chosen by election")
+    line(ax, churchill, THIRD, "Democracy remains better than other systems (Arab Opinion Index)")
+    line(ax, one_man, SECOND, "Disapproves of one-man rule", lift=-15.0)
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("Elections: still wanted", fontsize=10.4, color=INK, loc="left",
+                 pad=10, fontweight="bold")
+    inside_legend(ax, "lower left", 7.8)
+
+    ax = axes[1]
+    ax.set_facecolor(SURFACE)
+    palette = (PRIMARY, SECOND, THIRD, "#4a3aa7", "#eda100")
+    for i, (colour, (name, points)) in enumerate(zip(palette, constraints.items())):
+        if points:
+            # Five lines converging in a 20-point band cannot each carry an end label.
+            line(ax, points, colour, name, annotate=False)
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("Constraints on the elected president: abandoned", fontsize=10.4, color=INK,
+                 loc="left", pad=10, fontweight="bold")
+    inside_legend(ax, "lower left", 7.4)
+
+    ax = axes[2]
+    ax.set_facecolor(SURFACE)
+    years = [y for y, _ in index]
+    ax.fill_between(years, [dict(elections)[y] for y in years], [v for _, v in index],
+                    color="#e6ecf6", zorder=1)
+    line(ax, [(y, dict(elections)[y]) for y in years], PRIMARY, "Leaders chosen by election")
+    line(ax, index, SECOND, "Constraints on the president (mean of three items)")
+    coup_line(ax)
+    time_axis(ax)
+    ax.set_title("The two come apart", fontsize=10.4, color=INK, loc="left",
+                 pad=10, fontweight="bold")
+    inside_legend(ax, "lower left", 7.8)
+
+    ax = axes[3]
+    ax.set_facecolor(SURFACE)
+    years = [y for y, _ in one_man_full]
+    up = np.zeros(len(years))
+    down = np.zeros(len(years))
+    for code, colour, label in ((1, DIVERGING[0], "Strongly disapprove"), (2, DIVERGING[1], "Disapprove")):
+        values = np.array([p[1][code] for p in one_man_full])
+        ax.bar(years, values, bottom=up, width=1.05, color=colour, edgecolor=SURFACE,
+               linewidth=1.2, label=label)
+        up = up + values
+    for code, colour, label in ((4, DIVERGING[2], "Approve"), (5, DIVERGING[3], "Strongly approve")):
+        values = np.array([p[1][code] for p in one_man_full])
+        ax.bar(years, -values, bottom=down, width=1.05, color=colour, edgecolor=SURFACE,
+               linewidth=1.2, label=label)
+        down = down - values
+    ax.axhline(0, color=INK_SOFT, lw=0.9, zorder=4)
+    ax.set_ylim(-0.75, 1.12)
+    ax.set_yticks([-0.6, -0.3, 0, 0.3, 0.6, 0.9])
+    ax.set_yticklabels(["60%", "30%", "0", "30%", "60%", "90%"], fontsize=7.8)
+    ax.set_xlim(2011.5, 2025.5)
+    ax.set_xticks(years)
+    ax.set_xticklabels(years, fontsize=7.8)
+    ax.grid(axis="y", color=GRID, lw=0.8, zorder=0)
+    frame_style(ax)
+    ax.spines["bottom"].set_visible(False)
+    ax.axvline(2021.0, color=INK, lw=1.1, ls=(0, (4, 3)), zorder=5)
+    ax.set_title("'Only one leader, elections and parliament abolished'", fontsize=10.4,
+                 color=INK, loc="left", pad=10, fontweight="bold")
+    inside_legend(ax, "upper right", 7.8, ncol=2, handleheight=1.2)
+
+    laws = constraints["Parliament makes the laws, not the president"]
+    obey = constraints["President must obey laws and courts"]
+    terms = constraints["President limited to two terms"]
+    # How much of the decline is already done before the coup, computed rather than eyeballed.
+    total = index[0][1] - index[-1][1]
+    early = index[0][1] - index[2][1]
+    # Where each item falls hardest. Only items measured in every round can be read this
+    # way: the law-making item skips 2018 and 2020, so its worst "step" spans seven years.
+    rounds = [y for y, _ in elections]
+    steady = {name: points for name, points in
+              list(constraints.items()) + [("Leaders chosen by election", elections)]
+              if [y for y, _ in points] == rounds}
+    worst = {}
+    for name, points in steady.items():
+        drops = [(points[i + 1][0], points[i + 1][1] - points[i][1]) for i in range(len(points) - 1)]
+        worst[name] = min(drops, key=lambda d: d[1])[0]
+    pre = sum(1 for y in worst.values() if y <= 2018)
+    post = len(worst) - pre
+    gap_first = dict(elections)[index[0][0]] - index[0][1]
+    gap_last = dict(elections)[index[-1][0]] - index[-1][1]
+    top = header(fig, "'Tunisians prefer strongman rule' — what the surveys actually say", [
+        "The same six Afrobarometer rounds, separating two questions the claim runs together: who "
+        "should choose the leader, and what the leader may then do. Weighted shares; the dashed line "
+        "is 25 July 2021.",
+        f"This claim does not fail the way the last one did. On everything to do with restraining the "
+        f"president it is largely borne out: agreement that parliament rather than the president should "
+        f"make the laws fell from {laws[0][1]:.0%} in {laws[0][0]} to {laws[-1][1]:.0%} in {laws[-1][0]}, "
+        f"that the president must obey the laws and courts from {obey[0][1]:.0%} to {obey[-1][1]:.0%}, "
+        f"and that he should be limited to two terms from {terms[0][1]:.0%} to {terms[-1][1]:.0%}. On the "
+        "blunt item — one leader, elections and parliament abolished — approval has outweighed "
+        "disapproval since 2020.",
+        f"What survives is the vote. Agreement that leaders should be chosen through elections has "
+        f"never fallen below {min(v for _, v in elections):.0%} and stands at {elections[-1][1]:.0%}, "
+        f"while agreement that democracy remains the better system stands at {churchill[-1][1]:.0%}. The "
+        f"gap between wanting elections and wanting the winner constrained widens from "
+        f"{gap_first * 100:.0f} points in {index[0][0]} to {gap_last * 100:.0f} in {index[-1][0]}.",
+        "So the accurate version is narrower and stranger than the claim: Tunisians want to elect a "
+        "leader and then let him govern unchecked. That is a rejection of horizontal accountability "
+        f"rather than of democracy, and most of it predates the coup — the index had already fallen "
+        f"{early * 100:.0f} of its eventual {total * 100:.0f} points by {index[2][0]}, three years "
+        "before parliament was suspended and under the elected governments those constraints belonged "
+        f"to. Of the {len(worst)} items measured in every round, {pre} fall furthest in the step ending "
+        f"2018 and {post} in the step ending 2022, so no single moment carries it.",
+        "The index is the mean of the three constraint items asked in all six rounds, so its "
+        "composition is fixed; the law-making item was not asked in 2018 or 2020 and its line is drawn "
+        "with the gap. Round 10 recorded only agreement, not its strength, so its bars carry no "
+        "'strongly' category, and the 2022 round is in French and words the blunt item as 'rejection of "
+        "dictatorship' rather than of one-man rule. Every point is a separate cross-section.",
+    ])
+    fig.tight_layout(rect=(0, 0, 1, top), h_pad=3.0, w_pad=3.0)
+    for suffix in ("png", "svg"):
+        fig.savefig(FIGURES / f"democracy-strongman-claim.{suffix}", dpi=200, facecolor=SURFACE,
+                    bbox_inches="tight")
+    plt.close(fig)
+    print(f"strongman: elections {elections[0][1]:.0%}->{elections[-1][1]:.0%}, "
+          f"constraint index {index[0][1]:.0%}->{index[-1][1]:.0%}, gap {gap_first*100:.0f}->{gap_last*100:.0f}pts")
+
+
 def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     afro = afrobarometer()
@@ -653,6 +871,7 @@ def main() -> None:
     who_figure(afro)
     meaning_figure()
     fear_figure()
+    strongman_figure()
 
 
 if __name__ == "__main__":

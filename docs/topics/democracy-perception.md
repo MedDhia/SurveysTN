@@ -18,6 +18,14 @@ The claim tested on its own terms, four ways, across three programmes and 17 sur
 
 [PNG](../../main/figures/democracy-fear-claim.png) · [SVG](../../main/figures/democracy-fear-claim.svg) · rebuilt with `python3 scripts/build_democracy_figures.py`
 
+### Testing 'Tunisians prefer strongman rule'
+
+[![Testing 'Tunisians prefer strongman rule'](../../main/figures/democracy-strongman-claim.png)](../../main/figures/democracy-strongman-claim.png)
+
+The companion test, and it comes out the other way. Support for choosing leaders by election holds at 77%, but support for constraining the leader elections produce has collapsed — parliament rather than the president making the laws from 78% to 33%. Elections kept, accountability abandoned, and most of the fall predates the coup.
+
+[PNG](../../main/figures/democracy-strongman-claim.png) · [SVG](../../main/figures/democracy-strongman-claim.svg) · rebuilt with `python3 scripts/build_democracy_figures.py`
+
 ### Before and after the self-coup
 
 [![Before and after the self-coup](../../main/figures/democracy-assessment-and-satisfaction.png)](../../main/figures/democracy-assessment-and-satisfaction.png)

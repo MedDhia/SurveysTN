@@ -243,6 +243,14 @@ confidence that democracy is decisive, and disapproval of one-man rule — which
 84% in 2013 to 40% by early 2020, seventeen months before the coup, while disapproval of
 one-party rule barely moved.
 
+A sixth figure runs the same test on the claim that **Tunisians prefer strongman rule**,
+and it comes out the other way. Support for choosing leaders by election holds at 77%,
+but support for constraining the leader those elections produce has collapsed: parliament
+rather than the president making the laws falls from 78% to 33%, the president obeying
+laws and courts from 71% to 44%. Elections kept, accountability abandoned — and the
+three-item constraint index had already lost 19 of its eventual 28 points by 2018, three
+years before parliament was suspended.
+
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
 (strong leader, army rule, unelected experts, rule by religious law), support for
