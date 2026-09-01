@@ -199,10 +199,28 @@ opportunity. 45 recur across surveys and **not one recurs across two programmes*
 an inequality series can be built inside Arab Barometer or inside the Arab Opinion
 Index and not between them. The only two questions that name Tunisian inequality
 directly — Afrobarometer Round 6's "The income gap between the rich and the poor" and
-"Regional inequality" — are country-specific items asked once, in 2015. Three figures
-sit on that page: which 22 questions are asked in more than two surveys and when, how
-Tunisians answered the ten most repeated of them, and whether the items of a single
-survey move together — they mostly do not, peaking at ρ = 0.49.
+"Regional inequality" — are country-specific items asked once, in 2015. Eight figures
+sit on that page. Four take a question as the unit: what the archive holds, which 22
+questions are asked in more than two surveys, how the share saying equality is applied
+moved, and how Tunisians answered in full. Three take a respondent as the unit, pooling
+the 15,539 Arab Opinion Index respondents asked the equality battery between 2012 and
+2025: equality is reported to hold across the lines people are born on — skin colour
+64%, religion 55%, gender 54% — and to fail across the lines of money and power —
+social status 31%, political influence 29%, wealth 26%. It is lowest in the Centre West,
+the poorest region and where the 2010 uprising began, and household income is the only
+respondent characteristic that orders people cleanly; sex does not separate them at all.
+The eighth asks whether perceived inequality is one attitude or several. It is several:
+across the 25 inequality items of the 2016 round, the mean correlation inside a battery
+is 0.34 and between batteries 0.12.
+
+Four further figures take up **economic and spatial inequality** specifically, using the
+two instruments that measure conditions rather than opinions: Afrobarometer's Lived
+Poverty Index across six rounds, and its enumeration-area checklist, where an interviewer
+records whether a place has piped water, a clinic, a bank, a paved road. A bank is in
+reach for 63% of respondents in Grand Tunis and 17% in the North West. Put those beside
+the perception data and the two line up: across the seven regions, lived poverty and the
+share saying equality is applied correlate at **ρ = −0.89** — and the two axes come from
+different programmes, different respondents and different years.
 
 **[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
 surveys: which system is preferred, support for the non-democratic alternatives
@@ -293,6 +311,8 @@ python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
 python3 scripts/build_inequality_figures.py     # main/figures/inequality-*.png
+python3 scripts/build_inequality_breakdowns.py  # inequality by dimension, region, group
+python3 scripts/build_spatial_economic_figures.py  # economic and spatial inequality
 python3 scripts/verify.py                 # cell-by-cell against the releases
 ```
 

@@ -91,7 +91,6 @@ afrobarometer,afro-w06,Q5,Q5. Your living conditions vs. others,economic-gap,Q05
 afrobarometer,afro-w06,Q66B,Q66b. Handling improving living standards of the poor,economic-gap,Q0225
 afrobarometer,afro-w06,Q66E,Q66e. Handling narrowing income gaps,economic-gap,Q0262
 afrobarometer,afro-w06,Q83_TUN_E,Q83_TUN_e. The income gap between the rich and the poor,economic-gap,
-afrobarometer,afro-w06,Q83_TUN_F,Q83_TUN_f. Regional inequality,economic-gap,
 afrobarometer,afro-w07,Q5,Q5. Your living conditions vs. others,economic-gap,Q0507
 afrobarometer,afro-w07,Q56B,Q56b. Handling improving living standards of the poor,economic-gap,Q0225
 afrobarometer,afro-w07,Q56E,Q56e. Handling narrowing income gaps,economic-gap,Q0262
@@ -124,6 +123,7 @@ arab-opinion-index,aoi-2024-2025,Q210_5,Q210_5.How would you evaluate the govern
 world-values-survey,wvs-w06,V238,Social class (subjective),economic-gap,Q1419
 world-values-survey,wvs-w07,Q287,Social class (subjective),economic-gap,Q1419
 world-values-survey,wvs-w07,Q56,Standard of living comparing with your parents,economic-gap,
+afrobarometer,afro-w06,Q83_TUN_F,Q83_TUN_f. Regional inequality,economic-gap;spatial,
 afrobarometer,afro-w05,Q44,"Q44. Essential characteristics of democracy: equality, fair election, etc",equality-principle,
 arab-barometer,ab-w06p2,Q512A3_5,Q512A3_5.All people have the same rights regardless of religion or ethnicity,equality-principle,
 arab-barometer,ab-w08,Q550A_1,Q550A_1 Equality under the law,equality-principle,
@@ -140,7 +140,6 @@ arab-opinion-index,aoi-2012-2013,Q421_3,Q421_3.Do you think the availability of 
 arab-opinion-index,aoi-2012-2013,Q421_4,Q421_4.Do you think the availability of Equality of all citizens regardless of social status in your country is important?,equality-principle,Q1111
 arab-opinion-index,aoi-2012-2013,Q421_5,Q421_5.Do you think the availability of Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds in your country is important?,equality-principle,Q1112
 arab-opinion-index,aoi-2012-2013,Q421_6,Q421_6.Do you think the availability of Equality of all citizens regardless of their political influence in your country is important?,equality-principle,Q1113
-arab-opinion-index,aoi-2012-2013,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle,Q1114
 arab-opinion-index,aoi-2012-2013,Q421_8,Q421_8.Do you think the availability of Equality of citizens regardless of their religious sects (mathhab) in your country is important?,equality-principle,Q1115
 arab-opinion-index,aoi-2012-2013,Q421_9,Q421_9.Do you think the availability of Equality of all citizens regardless of their tribe? in your country is important?,equality-principle,Q1116
 arab-opinion-index,aoi-2012-2013,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
@@ -155,7 +154,6 @@ arab-opinion-index,aoi-2012-2013,Q422_3,Q422_3.to what extent do you believe tha
 arab-opinion-index,aoi-2012-2013,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
 arab-opinion-index,aoi-2012-2013,Q422_5,Q422_5.to what extent do you believe that the Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds Is applied in your country?,equality-principle,Q0094
 arab-opinion-index,aoi-2012-2013,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
-arab-opinion-index,aoi-2012-2013,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle,Q0122
 arab-opinion-index,aoi-2012-2013,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2012-2013,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2014,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
@@ -167,7 +165,6 @@ arab-opinion-index,aoi-2014,Q422_3,Q422_3.to what extent do you believe that the
 arab-opinion-index,aoi-2014,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
 arab-opinion-index,aoi-2014,Q422_5,Q422_5.to what extent do you believe that the Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds Is applied in your country?,equality-principle,Q0094
 arab-opinion-index,aoi-2014,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
-arab-opinion-index,aoi-2014,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle,Q0122
 arab-opinion-index,aoi-2014,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2014,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2015,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
@@ -177,7 +174,6 @@ arab-opinion-index,aoi-2015,Q422_3,Q422_3.to what extent do you believe that the
 arab-opinion-index,aoi-2015,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
 arab-opinion-index,aoi-2015,Q422_5,Q422_5.to what extent do you believe that the Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds Is applied in your country?,equality-principle,Q0094
 arab-opinion-index,aoi-2015,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
-arab-opinion-index,aoi-2015,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle,Q0122
 arab-opinion-index,aoi-2015,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2015,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2016,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
@@ -189,7 +185,6 @@ arab-opinion-index,aoi-2016,Q422_3,Q422_3.to what extent do you believe that the
 arab-opinion-index,aoi-2016,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
 arab-opinion-index,aoi-2016,Q422_5,Q422_5.to what extent do you believe that the Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds Is applied in your country?,equality-principle,Q0094
 arab-opinion-index,aoi-2016,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
-arab-opinion-index,aoi-2016,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle,Q0122
 arab-opinion-index,aoi-2016,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2016,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2017-2018,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
@@ -201,7 +196,6 @@ arab-opinion-index,aoi-2017-2018,Q422_3,Q422_3.to what extent do you believe tha
 arab-opinion-index,aoi-2017-2018,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
 arab-opinion-index,aoi-2017-2018,Q422_5,Q422_5.to what extent do you believe that the Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds Is applied in your country?,equality-principle,Q0094
 arab-opinion-index,aoi-2017-2018,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
-arab-opinion-index,aoi-2017-2018,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle,Q0122
 arab-opinion-index,aoi-2017-2018,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2017-2018,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2019-2020,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
@@ -215,7 +209,6 @@ arab-opinion-index,aoi-2022,Q422_3,Q422_3.to what extent do you believe that the
 arab-opinion-index,aoi-2022,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
 arab-opinion-index,aoi-2022,Q422_5,Q422_5.to what extent do you believe that the Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds Is applied in your country?,equality-principle,Q0094
 arab-opinion-index,aoi-2022,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
-arab-opinion-index,aoi-2022,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle,Q0122
 arab-opinion-index,aoi-2022,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2022,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2024-2025,Q421_1,Q421_1.Do you think the availability of Equality of all citizens regardless of wealth in your country is important?,equality-principle,Q1108
@@ -225,7 +218,6 @@ arab-opinion-index,aoi-2024-2025,Q421_3,Q421_3.Do you think the availability of 
 arab-opinion-index,aoi-2024-2025,Q421_4,Q421_4.Do you think the availability of Equality of all citizens regardless of social status in your country is important?,equality-principle,Q1111
 arab-opinion-index,aoi-2024-2025,Q421_5,Q421_5.Do you think the availability of Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds in your country is important?,equality-principle,Q1112
 arab-opinion-index,aoi-2024-2025,Q421_6,Q421_6.Do you think the availability of Equality of all citizens regardless of their political influence in your country is important?,equality-principle,Q1113
-arab-opinion-index,aoi-2024-2025,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle,Q1114
 arab-opinion-index,aoi-2024-2025,Q421_8,Q421_8.Do you think the availability of Equality of citizens regardless of their religious sects (mathhab) in your country is important?,equality-principle,Q1115
 arab-opinion-index,aoi-2024-2025,Q421_9,Q421_9.Do you think the availability of Equality of all citizens regardless of their tribe? in your country is important?,equality-principle,Q1116
 arab-opinion-index,aoi-2024-2025,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
@@ -235,9 +227,17 @@ arab-opinion-index,aoi-2024-2025,Q422_3,Q422_3.to what extent do you believe tha
 arab-opinion-index,aoi-2024-2025,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
 arab-opinion-index,aoi-2024-2025,Q422_5,Q422_5.to what extent do you believe that the Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds Is applied in your country?,equality-principle,Q0094
 arab-opinion-index,aoi-2024-2025,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
-arab-opinion-index,aoi-2024-2025,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle,Q0122
 arab-opinion-index,aoi-2024-2025,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2024-2025,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
+arab-opinion-index,aoi-2012-2013,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle;spatial,Q1114
+arab-opinion-index,aoi-2012-2013,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
+arab-opinion-index,aoi-2014,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
+arab-opinion-index,aoi-2015,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
+arab-opinion-index,aoi-2016,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
+arab-opinion-index,aoi-2017-2018,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
+arab-opinion-index,aoi-2022,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
+arab-opinion-index,aoi-2024-2025,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle;spatial,Q1114
+arab-opinion-index,aoi-2024-2025,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
 afrobarometer,afro-w05,Q23,Q23. Women have equal rights vs. subject to traditional laws,gender,
 afrobarometer,afro-w05,Q73A_ARB,Q73a.arb. Women and men should have equal work opportunities,gender,
 afrobarometer,afro-w05,Q73C_ARB,Q73c.arb. Women’s share of inheritance should be equal to that of men,gender,
@@ -293,9 +293,127 @@ world-values-survey,wvs-w06,V139,Democracy: Women have the same rights as men,ge
 world-values-survey,wvs-w07,Q249,Democracy: Women have the same rights as men,gender,Q1401
 afrobarometer,afro-w07,Q57G,Q57g. Better or worse: equal opportunities and treatment for women,gender;opportunity,
 world-values-survey,wvs-w07,Q233,How often in country's elections: Women have equal opportunities to run the office,gender;opportunity,
+afrobarometer,afro-w05,Q8A,Q8a. How often gone without food,lived-poverty,Q0229
+afrobarometer,afro-w05,Q8B,Q8b. How often gone without water,lived-poverty,Q0230
+afrobarometer,afro-w05,Q8C,Q8c. How often gone without medical care,lived-poverty,Q0242
+afrobarometer,afro-w05,Q8D,Q8d. How often gone without cooking fuel,lived-poverty,Q0253
+afrobarometer,afro-w05,Q8E,Q8e. How often gone without cash income,lived-poverty,Q0254
+afrobarometer,afro-w06,Q8A,Q8a. How often gone without food,lived-poverty,Q0229
+afrobarometer,afro-w06,Q8B,Q8b. How often gone without water,lived-poverty,Q0230
+afrobarometer,afro-w06,Q8C,Q8c. How often gone without medical care,lived-poverty,Q0242
+afrobarometer,afro-w06,Q8D,Q8d. How often gone without cooking fuel,lived-poverty,Q0253
+afrobarometer,afro-w06,Q8E,Q8e. How often gone without cash income,lived-poverty,Q0254
+afrobarometer,afro-w07,Q8A,Q8a. How often gone without food,lived-poverty,Q0229
+afrobarometer,afro-w07,Q8B,Q8b. How often gone without water,lived-poverty,Q0230
+afrobarometer,afro-w07,Q8C,Q8c. How often gone without medical care,lived-poverty,Q0242
+afrobarometer,afro-w07,Q8D,Q8d. How often gone without cooking fuel,lived-poverty,Q0253
+afrobarometer,afro-w07,Q8E,Q8e. How often gone without cash income,lived-poverty,Q0254
+afrobarometer,afro-w08,Q7A,Q7a. How often gone without food,lived-poverty,Q0229
+afrobarometer,afro-w08,Q7B,Q7b. How often gone without water,lived-poverty,Q0230
+afrobarometer,afro-w08,Q7C,Q7c. How often gone without medical care,lived-poverty,Q0242
+afrobarometer,afro-w08,Q7D,Q7d. How often gone without cooking fuel,lived-poverty,Q0253
+afrobarometer,afro-w08,Q7E,Q7e. How often gone without cash income,lived-poverty,Q0254
+afrobarometer,afro-w09,Q6A,Q6a. Fréquence de manque de nourriture,lived-poverty,
+afrobarometer,afro-w09,Q6B,Q6b. Fréquence de manque d'eau potable,lived-poverty,
+afrobarometer,afro-w09,Q6C,Q6c. Fréquence de manque de soins médicaux,lived-poverty,
+afrobarometer,afro-w09,Q6D,Q6d. Fréquence de manque de combustible pour la cuisson des repas,lived-poverty,
+afrobarometer,afro-w09,Q6E,Q6e. Fréquence de manque de revenus en espèces,lived-poverty,
+afrobarometer,afro-w10,Q7A,Q7a. How often gone without food,lived-poverty,Q0229
+afrobarometer,afro-w10,Q7B,Q7b. How often gone without water,lived-poverty,Q0230
+afrobarometer,afro-w10,Q7C,Q7c. How often gone without medical care,lived-poverty,Q0242
+afrobarometer,afro-w10,Q7D,Q7d. How often gone without cooking fuel,lived-poverty,Q0253
+afrobarometer,afro-w10,Q7E,Q7e. How often gone without cash income,lived-poverty,Q0254
+world-values-survey,wvs-w06,V188,Frequency you/family (last 12 month): Gone without enough food to eat,lived-poverty,Q1442
+world-values-survey,wvs-w06,V190,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,lived-poverty,Q1444
+world-values-survey,wvs-w06,V191,Frequency you/family (last 12 month): Gone without a cash income,lived-poverty,Q1445
+world-values-survey,wvs-w07,Q51,Frequency you/family (last 12 month): Gone without enough food to eat,lived-poverty,Q1442
+world-values-survey,wvs-w07,Q53,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,lived-poverty,Q1444
+world-values-survey,wvs-w07,Q54,Frequency you/family (last 12 month): Gone without a cash income,lived-poverty,Q1445
+world-values-survey,wvs-w07,Q55,"In the last 12 month, how often have you or your family: Gone without a safe shelter over your head",lived-poverty,
 afrobarometer,afro-w07,Q56S,"Q56s. Handling protecting rights, promoting opportunities for disabled",opportunity,Q0747
 afrobarometer,afro-w08,Q50O,"Q50o. Handling protecting rights, promoting opportunities for disabled",opportunity,Q0747
 arab-barometer,ab-w07,Q104A_2_5,Q104A. Education opportunities,opportunity,
 arab-barometer,ab-w07,Q870A_MAUR_2,"Q870A_MAUR_2. In your opinion, which group of people faces difficulty working their way out of the lower class because of unequal opportunity?",opportunity,
 arab-barometer,ab-w07,Q870B_MAUR_2,"Q870B_MAUR_2. In your opinion, which group of people faces difficulty accessing public healthcare services because of unequal opportunity?",opportunity,
 arab-barometer,ab-w08,Q104A_2_5,Education opportunities (for self or family members),opportunity,
+afrobarometer,afro-w05,EA_FAC_A,EA-FAC-A. Post office in the PSU/EA,spatial,Q0164
+afrobarometer,afro-w05,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
+afrobarometer,afro-w05,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
+afrobarometer,afro-w05,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
+afrobarometer,afro-w05,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
+afrobarometer,afro-w05,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial,Q0172
+afrobarometer,afro-w05,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
+afrobarometer,afro-w05,EA_SVC_C,EA-SVC-C. Sewage system in the PSU/EA,spatial,Q0174
+afrobarometer,afro-w05,EA_SVC_D,EA-SVC-D. Cell phone service in the PSU/EA,spatial,Q0340
+afrobarometer,afro-w06,EA_FAC_A,EA-FAC-A. Post office in the PSU/EA,spatial,Q0164
+afrobarometer,afro-w06,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
+afrobarometer,afro-w06,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
+afrobarometer,afro-w06,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
+afrobarometer,afro-w06,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
+afrobarometer,afro-w06,EA_FAC_F,EA-FAC-F. Bank in the PSU/EA,spatial,Q0651
+afrobarometer,afro-w06,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
+afrobarometer,afro-w06,EA_ROAD_A,EA-ROAD-A. Tarred/ paved road,spatial,Q0653
+afrobarometer,afro-w06,EA_ROAD_B,EA-ROAD-B. Impassable road,spatial,
+afrobarometer,afro-w06,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial,Q0172
+afrobarometer,afro-w06,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
+afrobarometer,afro-w06,EA_SVC_C,EA-SVC-C. Sewage system in the PSU/EA,spatial,Q0174
+afrobarometer,afro-w06,EA_SVC_D,EA-SVC-D. Cell phone service in the PSU/EA,spatial,Q0340
+afrobarometer,afro-w07,EA_FAC_A,EA-FAC-A. Post office in the PSU/EA,spatial,Q0164
+afrobarometer,afro-w07,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
+afrobarometer,afro-w07,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
+afrobarometer,afro-w07,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
+afrobarometer,afro-w07,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
+afrobarometer,afro-w07,EA_FAC_F,EA-FAC-F. Bank in the PSU/EA,spatial,Q0651
+afrobarometer,afro-w07,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
+afrobarometer,afro-w07,EA_ROAD_A,EA-ROAD-A. Road surface at start point,spatial,Q0472
+afrobarometer,afro-w07,EA_ROAD_B,EA-ROAD-B. Road surface last 5 km,spatial,Q0473
+afrobarometer,afro-w07,EA_ROAD_C,EA-ROAD-C. Road condition last 5 km,spatial,Q0479
+afrobarometer,afro-w07,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial,Q0172
+afrobarometer,afro-w07,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
+afrobarometer,afro-w07,EA_SVC_C,EA-SVC-C. Sewage system in the PSU/EA,spatial,Q0174
+afrobarometer,afro-w07,EA_SVC_D,EA-SVC-D. Cell phone service in the PSU/EA,spatial,Q0340
+afrobarometer,afro-w08,EA_FAC_A,EA-FAC-A. Post office in the PSU/EA,spatial,Q0164
+afrobarometer,afro-w08,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
+afrobarometer,afro-w08,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
+afrobarometer,afro-w08,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
+afrobarometer,afro-w08,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
+afrobarometer,afro-w08,EA_FAC_F,EA-FAC-F. Bank or money services in the PSU/EA,spatial,Q0652
+afrobarometer,afro-w08,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
+afrobarometer,afro-w08,EA_ROAD_A,EA-ROAD-A. Road surface at start point,spatial,Q0472
+afrobarometer,afro-w08,EA_ROAD_B,EA-ROAD-B. Road surface last 5 km,spatial,Q0473
+afrobarometer,afro-w08,EA_ROAD_C,EA-ROAD-C. Road condition last 5 km,spatial,Q0479
+afrobarometer,afro-w08,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial,Q0172
+afrobarometer,afro-w08,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
+afrobarometer,afro-w08,EA_SVC_C,EA-SVC-C. Sewage system in the PSU/EA,spatial,Q0174
+afrobarometer,afro-w08,EA_SVC_D,EA-SVC-D. Cell phone service in the PSU/EA,spatial,Q0340
+afrobarometer,afro-w08,EA_SVC_E,EA-SVC-E. Borehole or tubewell in PSU/EA,spatial,Q0687
+afrobarometer,afro-w09,EA_FAC_A,EA-FAC-A. Bureau de poste dans la ZD,spatial,
+afrobarometer,afro-w09,EA_FAC_B,EA-FAC-B. École dans la ZD,spatial,
+afrobarometer,afro-w09,EA_FAC_C,EA-FAC-C. Poste de police/gendarmerie dans la ZD,spatial,
+afrobarometer,afro-w09,EA_FAC_D,EA-FAC-D. Centre de santé dans la ZD,spatial,
+afrobarometer,afro-w09,EA_FAC_E,EA-FAC-E. Marché dans la ZD,spatial,
+afrobarometer,afro-w09,EA_FAC_F,EA-FAC-F. Banque / microfinance dans la ZD,spatial,
+afrobarometer,afro-w09,EA_FAC_G,EA-FAC-G. Moyen de transport payant dans la ZD,spatial,
+afrobarometer,afro-w09,EA_ROAD_A,EA-ROAD-A. Route au point de départ,spatial,
+afrobarometer,afro-w09,EA_ROAD_B,EA-ROAD-B. Matériau sur les derniers 5km,spatial,
+afrobarometer,afro-w09,EA_ROAD_C,EA-ROAD-C. État de la route sur les derniers 5km,spatial,
+afrobarometer,afro-w09,EA_SVC_A,EA-SVC-A. Réseau électrique dans la ZD,spatial,
+afrobarometer,afro-w09,EA_SVC_B,EA-SVC-B. Système d'adduction d'eau dans la ZD,spatial,
+afrobarometer,afro-w09,EA_SVC_C,EA-SVC-C. Système d'évacuation des eaux usées dans la ZD,spatial,
+afrobarometer,afro-w09,EA_SVC_D,EA-SVC-D. Réseau GSM dans la ZD,spatial,
+afrobarometer,afro-w09,EA_SVC_E,EA-SVC-E. Forage ou puits foré dans la ZD,spatial,
+afrobarometer,afro-w10,EA_FAC_A,EA-FAC-A. Post office in the PSU/EA,spatial,Q0164
+afrobarometer,afro-w10,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
+afrobarometer,afro-w10,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
+afrobarometer,afro-w10,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
+afrobarometer,afro-w10,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
+afrobarometer,afro-w10,EA_FAC_F,EA-FAC-F. Bank or money services in the PSU/EA,spatial,Q0652
+afrobarometer,afro-w10,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
+afrobarometer,afro-w10,EA_ROAD_A,EA-ROAD-A. Road surface at start point,spatial,Q0472
+afrobarometer,afro-w10,EA_ROAD_B,EA-ROAD-B. Road surface last 5 km,spatial,Q0473
+afrobarometer,afro-w10,EA_ROAD_C,EA-ROAD-C. Road condition last 5 km,spatial,Q0479
+afrobarometer,afro-w10,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial,Q0172
+afrobarometer,afro-w10,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
+afrobarometer,afro-w10,EA_SVC_C,EA-SVC-C. Sewage system in the PSU/EA,spatial,Q0174
+afrobarometer,afro-w10,EA_SVC_D,EA-SVC-D. Mobile phone service in the PSU/EA,spatial,
+afrobarometer,afro-w10,EA_SVC_E,EA-SVC-E. Borehole or tubewell in PSU/EA,spatial,Q0687
