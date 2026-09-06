@@ -8,9 +8,9 @@ Generated. Rebuild with the script named under each figure; do not edit the outp
 
 When Tunisian survey fieldwork actually happened, one row per survey, 2010 to 2025.
 
-The archive spans sixteen years. It does not cover them. Thirteen of the twenty-six
+The archive spans sixteen years. It does not cover them. Fourteen of the twenty-seven
 surveys record an interview date per respondent, and between them those account for
-**314 distinct days** — from 17,619 of the archive's 40,388 interviews. The rest is
+**389 distinct days** — from 18,655 of the archive's 41,424 interviews. The rest is
 inference from what the publisher printed on the release.
 
 The figure keeps three levels of knowledge apart, because drawing them alike would
@@ -18,13 +18,13 @@ claim a precision the archive does not have:
 
 | Drawn as | Means | Surveys |
 |---|---|---:|
-| solid bar | an interview date per respondent; the days are exact | 13 |
+| solid bar | an interview date per respondent; the days are exact | 14 |
 | hatched bar | only the month fieldwork opened and closed | 1 |
 | outlined bar | only the year the publisher gives for the wave | 12 |
 
 ### What it shows
 
-- **No two surveys were ever in the field on the same day.** Not once in 314 days.
+- **No two surveys were ever in the field on the same day.** Not once in 389 days.
   But two came within **two days** of each other, and they are from different
   programmes: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer
   Wave III opened on 3 February. That pair is as close to a contemporaneous
@@ -73,14 +73,15 @@ different question, and each has a limit worth stating before it is read.
 
 ### `inequality-coverage.png` / `.svg`
 
-The **22 inequality questions asked in more than two surveys**, and the years each
+The **40 inequality questions asked in more than two surveys**, and the years each
 was asked in — drawn from the concordance, so a row is a question rather than a
-variable name. 16 surveys, 2012 to 2024.
+variable name. 16 surveys, 2012 to 2024. The count rose from 22 when the
+lived-poverty and spatial facets were added to the lexicon.
 
 Every row is one colour. No inequality question in this archive is asked by two
 different programmes, so a run over time can be built inside Arab Barometer, or
 inside Afrobarometer, or inside the Arab Opinion Index, and never between them.
-21 of the 22 recur with an identical response scale; the one that does not is
+37 of the 40 recur with an identical response scale; the three that do not are
 marked `differs` and greyed.
 
 Thirteen of the 22 are one Arab Opinion Index battery, opening with the same words
@@ -434,3 +435,80 @@ readings on strongman rule are in some tension over 2013–2020 — approval of 
 leader falls on one instrument while disapproval of one-man rule also falls on the other
 — which is a reason to weigh the direction of movement within an instrument rather than
 the levels across them.
+
+### `democracy-strongman-claim.png` / `.svg`
+
+The companion to `democracy-fear-claim`, and **it does not come out the same way.** The
+same six Afrobarometer rounds, separating two questions the claim runs together: who
+should choose the leader, and what the leader may then do.
+
+**On constraining the president, the claim is largely borne out.**
+
+| Share taking the constraining side | 2013 | 2024 |
+|---|---:|---:|
+| Parliament rather than the president makes the laws | 78% | **33%** |
+| President must obey the laws and courts | 71% | **44%** |
+| President limited to two terms | 87% | **51%** |
+| President monitored by parliament | 71% | 50% |
+| Armed forces never intervene | — | 34% (2022: 26%) |
+
+On the blunt item — *one leader, elections and parliament abolished* — **approval has
+outweighed disapproval since 2020**.
+
+**What survives is the vote.** Agreement that leaders should be chosen through elections
+has never fallen below 66% and stands at **77%**; agreement that democracy remains the
+better system stands at 89%. The gap between wanting elections and wanting the winner
+constrained widens from 19 points in 2013 to 28 in 2024.
+
+So the accurate version is narrower and stranger than the claim: **Tunisians want to
+elect a leader and then let him govern unchecked.** That is a rejection of horizontal
+accountability rather than of democracy — and most of it predates the coup. The
+three-item index had already fallen 19 of its eventual 28 points by 2018, three years
+before parliament was suspended, under the elected governments those constraints belonged
+to. Of the four items measured in every round, two fall furthest in the step ending 2018
+and two in the step ending 2022, so no single moment carries it.
+
+**A coding trap worth naming.** These are paired-statement items where Statement 1 is
+coded 1–2 and Statement 2 is 3–4. *"President free to act vs obey the laws and courts"*
+puts the **strongman option first**, the opposite way round from every other item in the
+battery. Coding them all alike reverses that series.
+
+The index is the mean of the three constraint items asked in all six rounds, so its
+composition is fixed. The law-making item was not asked in 2018 or 2020 and its line is
+drawn with the gap. Round 10 recorded only agreement and not its strength, so its bars
+carry no "strongly" category, and the 2022 round is in French and words the blunt item as
+*"rejet de la dictature"*.
+
+### `democracy-military-claim.png` / `.svg`
+
+The third of the claim tests, and the one the archive **cannot settle** — because the two
+instruments that ask it disagree.
+
+| | 2013 | 2019/20 | 2024 |
+|---|---:|---:|---:|
+| Afrobarometer · approves of army rule | 35% | 47% | **56%** |
+| Afrobarometer · disapproves | 59% | 52% | 42% |
+| World Values Survey · "the army rules" would be good | 37% | **30%** | — |
+
+On Afrobarometer approval draws level with disapproval in 2018 (49.1 against 49.0), falls
+behind again in 2020, and stands clearly above it from 2022. On the World Values Survey
+army rule is a minority answer throughout and **falling**. The two nearest readings are a
+year apart and **17 points apart**.
+
+**The usual explanation cannot carry the change.** Trust in the army has been at the
+ceiling for the whole period — **94% to 99% across nine Arab Opinion Index rounds, and
+already 97% in 2011**, when approval of army rule was barely a third. A constant cannot
+explain a change. What moved is the other side of the ledger: trust in the elected
+legislature fell from 42% to 14% at its floor in 2022, and political parties from 33% to
+12%, before both recovered in 2024.
+
+**Nor does army rule stand out from its neighbours.** It rises 21 points over the period
+against 38 for one-man rule, so if anything the appetite is for a strong civilian rather
+than for the barracks — which is also what actually happened.
+
+**Where the sentiment is consistent, it is conditional.** Only 34% said in 2024 that the
+armed forces should never intervene — but the alternative on offer is intervention *when
+leaders abuse power*. That is a check of last resort, not a government.
+
+So: real support on one instrument, none on the other, and nothing here to break the tie.
+Every point is a separate cross-section; the 2022 Afrobarometer round is in French.

@@ -10,7 +10,7 @@ identifies Tunisia — plus a rewrite of the same values into four file formats.
 | Step | What happens |
 |---|---|
 | 1 | The publisher's release is placed in `data/raw/`, which is tracked, so the input is in the repository beside the output. Two files exceed GitHub's 100 MB limit and are fetched by `scripts/fetch_raw.py` against a recorded checksum instead (see `data/raw/README.md`). |
-| 2 | `scripts/extract_tunisia.py` reads the SPSS (`.sav`) release, filters to the Tunisia country code, and writes `.sav`, `.dta`, `-codes.csv` and `-labels.csv` plus a codebook. |
+| 2 | `scripts/extract_tunisia.py` reads the release — SPSS (`.sav`) for most, Stata (`.dta`) for the Life in Transition Survey, and a CSV or spreadsheet where the publisher ships nothing else — filters to the Tunisia country code, and writes `.sav`, `.dta`, `-codes.csv` and `-labels.csv` plus a codebook. |
 | 3 | The SHA-256 of the input release and of every generated file is recorded in `catalog/catalog.json`. |
 | 4 | `scripts/verify.py` re-derives the subset from the release and compares it cell by cell against what is committed. |
 
@@ -126,3 +126,18 @@ makes its data freely available for research but asks users to register and to
 cite the source; it is redistributed here in subset form for research use. Anyone
 using these files should cite Arab Barometer and the specific wave, not this
 repository, as the source of the data. See <https://www.arabbarometer.org>.
+
+## The one typing decision
+
+A Stata release read with the user-missing values kept hands back extended missings
+(`.a`, `.b`) as their labels, so a column that is numeric for most countries arrives
+as untyped for all of them. Filtering to Tunisia leaves 309 such columns in the Life
+in Transition release holding nothing but integers, which the SPSS writer then
+refuses because it takes them for text.
+
+`settle_object_types` gives each of those columns the type its own surviving values
+warrant: numeric where every value is a number, text where any label survives, so
+nothing is coerced away. The count is recorded per survey in `catalog/catalog.json`
+as `columns_retyped_from_values`, and `scripts/verify.py` replays the same step and
+checks the count matches — a re-derivation that skipped it would report every one of
+those columns as differing, which is how the step came to be documented here.

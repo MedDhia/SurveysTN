@@ -183,6 +183,17 @@ not answer options.
 | `VQID` | vQID.QID |
 | `WEIGHT` | Weight.Weight |
 
+## Life in Transition Survey
+
+1,319 variables across 1 surveys, 1,319 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 1 | 1,319 |
+
+Only one survey in this series so far, so there is nothing to match it
+against; the rows carry its names and question text and wait for a second.
+
 ## World Values Survey
 
 724 variables across 2 surveys, 724 with question text.
@@ -304,6 +315,7 @@ releases that carry wording as labels:
 | Arab Opinion Index 2019/2020 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Arab Opinion Index 2022 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Arab Opinion Index 2024/2025 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Life in Transition Survey Round IV | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 
 Agreement is the share of comparable variables where the parsed text and the
 release label match at a difflib ratio of 0.6 or better. It is a check on the

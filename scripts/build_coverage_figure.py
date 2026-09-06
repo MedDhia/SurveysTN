@@ -28,16 +28,24 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pyreadstat
 
-from extract_tunisia import ROOT, wave_tag
+from extract_tunisia import parse_fieldwork_dates, ROOT, wave_tag
 
 FIGURES = ROOT / "main" / "figures"
 
-SERIES_ORDER = ["arab-barometer", "world-values-survey", "afrobarometer", "arab-opinion-index"]
+# Series in the order they are drawn. A series missing from this list sorts to the end
+# rather than raising, so adding one to the archive does not break the figure.
+SERIES_ORDER = ["arab-barometer", "world-values-survey", "afrobarometer", "arab-opinion-index",
+                "ebrd-life-in-transition"]
+
+
+def series_rank(name: str) -> int:
+    return SERIES_ORDER.index(name) if name in SERIES_ORDER else len(SERIES_ORDER)
 SERIES_COLOUR = {
     "arab-barometer": "#2a78d6",
     "world-values-survey": "#eb6834",
     "afrobarometer": "#1baf7a",
     "arab-opinion-index": "#4a3aa7",
+    "ebrd-life-in-transition": "#e87ba4",
 }
 INK = "#0b0b0b"
 INK_SOFT = "#52514e"
@@ -60,11 +68,7 @@ def interview_days(survey: dict, spec: dict) -> pd.Series | None:
     renamed = survey.get("renamed_variables", {})
     column = renamed.get(var, var)
     frame, _ = pyreadstat.read_sav(str(sav), usecols=[column])
-    values = frame[column]
-    fmt = spec.get("fieldwork_date_format")
-    if fmt:
-        values = values.astype("Int64").astype(str)
-    parsed = pd.to_datetime(values, format=fmt, errors="coerce").dropna()
+    parsed = parse_fieldwork_dates(frame[column], spec.get("fieldwork_date_format"))
     if parsed.empty:
         return None
     return parsed.dt.date.value_counts().sort_index()
@@ -134,7 +138,7 @@ def gather() -> tuple[list[dict], pd.DataFrame]:
             row["start"], row["end"] = year_span(spec)
         rows.append(row)
 
-    rows.sort(key=lambda r: (SERIES_ORDER.index(r["series"]), r["start"]))
+    rows.sort(key=lambda r: (series_rank(r["series"]), r["start"]))
     return rows, pd.DataFrame(day_records).sort_values(["date", "survey"])
 
 

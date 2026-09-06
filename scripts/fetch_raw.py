@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import json
 import urllib.request
+import zipfile
 from pathlib import Path
 
 from extract_tunisia import ROOT, sha256
@@ -65,7 +66,7 @@ def main() -> None:
         url = spec.get("download_url")
         if not url:
             continue
-        suffix = {"sav": "sav", "csv-labels": "csv", "xlsx-headers": "xlsx"}[
+        suffix = {"sav": "sav", "dta": "dta", "csv-labels": "csv", "xlsx-headers": "xlsx"}[
             spec.get("source_format", "sav")
         ]
         dest = raw / f"{spec['raw_file_stem']}.{suffix}"
@@ -74,9 +75,19 @@ def main() -> None:
 
         missing += 1
         print(f"{dest.name}: fetching from {url}")
+        # Some publishers ship the release inside a zip; pull the one member out and
+        # leave data/raw/ holding the same bare file every other wave has.
+        member = spec.get("download_archive_member")
+        target = dest.with_suffix(".zip") if member else dest
         for attempt in range(1, ATTEMPTS + 1):
             try:
-                download(url, dest)
+                download(url, target)
+                if member:
+                    with zipfile.ZipFile(target) as archive:
+                        with archive.open(member) as src, dest.open("wb") as out:
+                            while chunk := src.read(CHUNK):
+                                out.write(chunk)
+                    target.unlink()
                 break
             except Exception as exc:  # noqa: BLE001 - report and retry whatever it is
                 print(f"  attempt {attempt} failed: {exc}")

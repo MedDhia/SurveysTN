@@ -43,6 +43,7 @@ use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 | World Values Survey | `W_WEIGHT` in Wave 7; **Wave 6 has no weight** | neither |
 | Afrobarometer | `withinwt` (Rounds 5–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | neither |
 | Arab Opinion Index | `Weight` | neither |
+| Life in Transition | `weight`, and `weight_pop` scaled to the adult population | PSU only (`psu`, 50 sample points) |
 
 Unweighted estimates from a weighted survey are not nationally representative. Only
 four surveys carry the stratum and PSU a full `svyset` wants; for the rest, weighting
@@ -130,6 +131,7 @@ appear in exactly one survey, and how much genuinely carries over differs sharpl
 | World Values Survey | 43 of 724 | 3 |
 | Afrobarometer | 43 of 987 | 311 |
 | Arab Opinion Index | 54 of 2,813 | 3 |
+| Life in Transition | — (a single survey) | — |
 
 A shared name is not evidence of a shared question — Afrobarometer is the warning,
 where a name that persists across rounds is often a different item. The crosswalk

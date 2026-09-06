@@ -111,9 +111,38 @@ def clean_value_labels(labels: dict) -> dict:
     return out
 
 
+def settle_object_types(df: pd.DataFrame) -> tuple[pd.DataFrame, int]:
+    """Give each untyped column the type its own values warrant.
+
+    A Stata release read with ``user_missing=True`` hands back extended missing values
+    (``.a``, ``.b``) as their labels, so a column that is numeric for most countries
+    arrives as ``object`` for all of them. Subsetting to one country leaves 309 such
+    columns in the Life in Transition release holding nothing but integers, which
+    pyreadstat then refuses to write because it takes them for text.
+
+    Columns whose surviving values are all numeric become numeric; columns that still
+    hold any label text become text, so nothing is coerced away. Returns the count of
+    columns retyped, which the catalog records.
+    """
+    out = df.copy()
+    changed = 0
+    for col in out.columns:
+        if out[col].dtype != object:
+            continue
+        present = out[col].dropna()
+        if present.empty:
+            continue
+        if any(isinstance(v, str) for v in present.unique()):
+            out[col] = out[col].astype("string").astype(object).where(out[col].notna())
+            continue
+        out[col] = pd.to_numeric(out[col], errors="coerce")
+        changed += 1
+    return out, changed
+
+
 def writes_codes(fmt: str) -> bool:
     """Does the release store answers as numeric codes rather than as label text?"""
-    return fmt in ("sav", "xlsx-headers")
+    return fmt in ("sav", "dta", "xlsx-headers")
 
 
 def sanitise_names(df: pd.DataFrame) -> tuple[pd.DataFrame, dict[str, str]]:
@@ -188,6 +217,18 @@ def read_pooled(spec: dict, raw_dir: Path) -> tuple[pd.DataFrame, dict, dict, li
         src = raw_dir / f"{stem}.sav"
         require(src)
         df, meta = pyreadstat.read_sav(str(src), user_missing=True)
+        var_labels = {c: (meta.column_names_to_labels.get(c) or "") for c in df.columns}
+        value_labels = {
+            var: clean_value_labels(labels)
+            for var, labels in meta.variable_value_labels.items()
+            if var in df.columns
+        }
+        return df, var_labels, value_labels, []
+
+    if fmt == "dta":
+        src = raw_dir / f"{stem}.dta"
+        require(src)
+        df, meta = pyreadstat.read_dta(str(src), user_missing=True)
         var_labels = {c: (meta.column_names_to_labels.get(c) or "") for c in df.columns}
         value_labels = {
             var: clean_value_labels(labels)
@@ -312,6 +353,27 @@ def scan_csv_na_collisions(df: pd.DataFrame) -> dict[str, list[str]]:
     return hits
 
 
+def parse_fieldwork_dates(values: pd.Series, fmt: str | None) -> pd.Series:
+    """Interview dates from whatever the release stores them as.
+
+    Shared with the coverage figure. It used to be written out twice, which is how the
+    Life in Transition release's Stata dates were handled in one place and not the
+    other, and a survey with 75 dated days was drawn as though it recorded only a year.
+    """
+    if fmt == "stata-tc":
+        # Stata's %tc is milliseconds since 1960-01-01. pyreadstat hands it back as a
+        # raw number here rather than a datetime, and reading it as epoch nanoseconds
+        # -- which is what a bare to_datetime does -- lands every interview in 1970.
+        return pd.to_datetime(
+            values, unit="ms", origin=pd.Timestamp("1960-01-01"), errors="coerce"
+        ).dropna()
+    if fmt:
+        # WVS stores the interview date as the integer 20190515, which only reads as a
+        # date if the format is given.
+        values = values.astype("Int64").astype(str)
+    return pd.to_datetime(values, format=fmt, errors="coerce").dropna()
+
+
 def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
     # Some releases record no interview date but do carry the month fieldwork
     # started and ended, as YYYYMM constants.
@@ -329,9 +391,7 @@ def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
         return None
     # WVS stores the interview date as the integer 20190515, which only reads as a
     # date if the format is given.
-    fmt = spec.get("fieldwork_date_format")
-    values = df[var].astype("Int64").astype(str) if fmt else df[var]
-    dates = pd.to_datetime(values, format=fmt, errors="coerce").dropna()
+    dates = parse_fieldwork_dates(df[var], spec.get("fieldwork_date_format"))
     if dates.empty:
         return None
     return f"{dates.min():%Y-%m-%d} to {dates.max():%Y-%m-%d}"
@@ -354,6 +414,11 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
             f"no rows with {country_var} == {country_value!r} in {spec['raw_file_stem']}"
         )
     df = apply_numeric_types(df, numeric)
+    retyped = 0
+    if fmt == "dta":
+        df, retyped = settle_object_types(df)
+        if retyped:
+            print(f"[{spec['slug']}] typed {retyped} untyped columns from their own values")
     df, renamed = sanitise_names(df)
     for before, after in renamed.items():
         var_labels[after] = var_labels.pop(before, "")
@@ -421,7 +486,7 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         json.dumps(codebook, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
 
-    suffix = {"sav": "sav", "csv-labels": "csv", "xlsx-headers": "xlsx"}[fmt]
+    suffix = {"sav": "sav", "dta": "dta", "csv-labels": "csv", "xlsx-headers": "xlsx"}[fmt]
     src = raw_dir / f"{spec['raw_file_stem']}.{suffix}"
     entry = {
         "series": spec["series"],
@@ -437,6 +502,7 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "country_value": country_value,
         "country_match": spec.get("country_match", "equals"),
         "renamed_variables": renamed,
+        "columns_retyped_from_values": retyped,
         "value_labels_dropped_on_temporal_columns": temporal_labels_dropped,
         "n_respondents": int(len(df)),
         "n_variables": int(df.shape[1]),
@@ -520,7 +586,7 @@ def render_wave_readme(e: dict, series: dict) -> str:
             "",
         ]
 
-    if e["source_format"] == "sav":
+    if e["source_format"] in ("sav", "dta"):
         lines += [
             "`-codes.csv` holds the numeric codes as stored in the release; `-labels.csv`",
             "substitutes the value label wherever the release defines one. The `.sav` carries",

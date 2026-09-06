@@ -47,12 +47,14 @@ SERIES_COLOUR = {
     "world-values-survey": "#eb6834",
     "afrobarometer": "#1baf7a",
     "arab-opinion-index": "#4a3aa7",
+    "ebrd-life-in-transition": "#e87ba4",
 }
 SHORT = {
     "arab-barometer": "AB",
     "world-values-survey": "WVS",
     "afrobarometer": "Afro",
     "arab-opinion-index": "AOI",
+    "ebrd-life-in-transition": "LiTS",
 }
 INK, INK_SOFT, INK_FAINT = "#0b0b0b", "#52514e", "#8a8984"
 SURFACE, GRID = "#fcfcfb", "#e4e3df"
@@ -583,6 +585,13 @@ def battery_of(variable: str) -> str:
     return match.group(1) if match else variable
 
 
+# Afrobarometer's enumeration-area checklist is recorded by the interviewer on arrival,
+# not answered by anyone. It belongs in the spatial facet and in the provision figure; it
+# does not belong in a correlation matrix of respondents' attitudes, where it displaced
+# the battery the figure exists to show.
+OBSERVED_NOT_ASKED = re.compile(r"^EA[-_](SVC|FAC|ROAD|SEC)[-_]", re.I)
+
+
 def eligible(survey: dict, topic: pd.DataFrame) -> list[str]:
     """Inequality items of a survey that can enter a rank correlation, from the codebook.
 
@@ -595,6 +604,10 @@ def eligible(survey: dict, topic: pd.DataFrame) -> list[str]:
     out = []
     for row in rows:
         if row["variable"].upper() not in wanted or row["n_valid"] < 100:
+            continue
+        if OBSERVED_NOT_ASKED.match(str(row.get("label") or "")) or OBSERVED_NOT_ASKED.match(
+            row["variable"]
+        ):
             continue
         scale = substantive_scale(row["value_labels"])
         if scale and 3 <= len(scale) <= 7:

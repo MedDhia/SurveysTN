@@ -15,13 +15,13 @@ afrobarometer,afro-w07,Q86C,Q86c. Experienced discrimination based on ethnicity,
 afrobarometer,afro-w07,Q86D,Q86d. Experienced discrimination based on disability,discrimination,
 afrobarometer,afro-w08,Q40E,Q40e. How often people treated unequally,discrimination,Q0378
 afrobarometer,afro-w08,Q5,Q5. Treated unfairly by government based on economic status,discrimination,
-afrobarometer,afro-w08,Q82A,Q82a. Ethnic group treated unfairly by government,discrimination,Q0751
+afrobarometer,afro-w08,Q82A,Q82a. Ethnic group treated unfairly by government,discrimination,Q0753
 afrobarometer,afro-w08,Q84A,Q84a. Unfair treatment by other people based on economic status,discrimination,
 afrobarometer,afro-w08,Q84B,Q84b. Unfair treatment by other people based on religion,discrimination,
 afrobarometer,afro-w08,Q84C,Q84c. Unfair treatment by other people based on ethnicity,discrimination,
 afrobarometer,afro-w08,Q98B,Q98b. Religious group treated unfairly by government,discrimination,
 afrobarometer,afro-w10,Q34D,Q34d. How often people treated unequally under law,discrimination,
-afrobarometer,afro-w10,Q83B,Q83b. Ethnic group treated unfairly by government,discrimination,Q0751
+afrobarometer,afro-w10,Q83B,Q83b. Ethnic group treated unfairly by government,discrimination,Q0753
 arab-barometer,ab-w07,Q872,Q872. Do you believe racial discrimination is a serious problem in your country?,discrimination,
 arab-barometer,ab-w07,Q872_MAUR,Q872_MAUR. Do you believe racial discrimination is a serious problem in your country?,discrimination,
 arab-barometer,ab-w07,Q873A,Q873A. Do you believe dark skinned people in your country face racial discrimination?,discrimination,
@@ -64,17 +64,23 @@ arab-barometer,ab-w08,Q906,Q906. To what extent do you think migrants from South
 arab-barometer,ab-w08,Q907,Q907. To what extent do you think migrants from other Arab countries are discriminated against in?,discrimination,
 arab-opinion-index,aoi-2012-2013,Q822_8,"Q822_8. In general, do you believe that the Arab revolutions have succeeded in achieving: Ending discrimination between citizens",discrimination,
 arab-opinion-index,aoi-2014,Q908_1_4,Q908_1_4.to what extent do you think that Racial discrimination is prevalent/spread in (Russia)?,discrimination,
-arab-opinion-index,aoi-2014,Q908_2_4,Q908_2_4.to what extent do you think that Racial discrimination is prevalent/spread in (USA)?,discrimination,Q1195
-arab-opinion-index,aoi-2014,Q908_3_4,Q908_3_4.to what extent do you think that Racial discrimination is prevalent/spread in (Home country)?,discrimination,Q1202
+arab-opinion-index,aoi-2014,Q908_2_4,Q908_2_4.to what extent do you think that Racial discrimination is prevalent/spread in (USA)?,discrimination,Q1200
+arab-opinion-index,aoi-2014,Q908_3_4,Q908_3_4.to what extent do you think that Racial discrimination is prevalent/spread in (Home country)?,discrimination,Q1207
 arab-opinion-index,aoi-2024-2025,LEB_2025_27,Do you believe there is discrimination against the Shia due to the war?,discrimination,
-arab-opinion-index,aoi-2024-2025,Q908_2_4,Q908_2_4.to what extent do you think that Racial discrimination is prevalent/spread in (USA)?,discrimination,Q1195
-arab-opinion-index,aoi-2024-2025,Q908_3_4,Q908_3_4.to what extent do you think that Racial discrimination is prevalent/spread in (Home country)?,discrimination,Q1202
+arab-opinion-index,aoi-2024-2025,Q908_2_4,Q908_2_4.to what extent do you think that Racial discrimination is prevalent/spread in (USA)?,discrimination,Q1200
+arab-opinion-index,aoi-2024-2025,Q908_3_4,Q908_3_4.to what extent do you think that Racial discrimination is prevalent/spread in (Home country)?,discrimination,Q1207
 arab-opinion-index,aoi-2024-2025,SY_2025_5_5,How would you rate the Syrian government’s performance in Ending discrimination between citizens these days?,discrimination,
 arab-opinion-index,aoi-2024-2025,SY_2025_79_2,How prevalent do you believe that Sect- or religion-based discrimination is in Syria today?,discrimination,
 arab-opinion-index,aoi-2024-2025,SY_2025_79_3,How prevalent do you believe that Regional discrimination is in Syria today?,discrimination,
 arab-opinion-index,aoi-2024-2025,SY_2025_79_4,How prevalent do you believe that Rural/urban discrimination is in Syria today?,discrimination,
 arab-opinion-index,aoi-2024-2025,q908_4_4,Q908_4_4.to what extent do you think that Racial discrimination is prevalent/spread in (French )?,discrimination,
 arab-opinion-index,aoi-2024-2025,q908_5_4,Q908_5_4.to what extent do you think that Racial discrimination is prevalent/spread in (Spanish )?,discrimination,
+ebrd-life-in-transition,lits-w04,q827aa,Sexual orientation discrimination,discrimination,
+ebrd-life-in-transition,lits-w04,q827ab,Race or ethnicity discrimination,discrimination,
+ebrd-life-in-transition,lits-w04,q827ac,Religion or beliefs discrimination,discrimination,
+ebrd-life-in-transition,lits-w04,q827ad,"Country of birth (that is, being a migrant) discrimination",discrimination,
+ebrd-life-in-transition,lits-w04,q827ae,Gender discrimination,discrimination,
+ebrd-life-in-transition,lits-w04,q827af,Disability discrimination,discrimination,
 afrobarometer,afro-w05,Q56C,Q56c. How often women treated unequally by traditional leaders,discrimination;gender,
 afrobarometer,afro-w05,Q56D,Q56d. How often women treated unequally by police and courts,discrimination;gender,
 afrobarometer,afro-w05,Q56E,Q56e. How often women treated unequally by employers,discrimination;gender,
@@ -100,14 +106,14 @@ afrobarometer,afro-w08,Q50E,Q50e. Handling narrowing income gaps,economic-gap,Q0
 afrobarometer,afro-w10,Q42B,Q42b. Government should ensure healthcare for all even if more taxes,economic-gap,
 afrobarometer,afro-w10,Q47B,Q47b. Handling improving living standards of the poor,economic-gap,Q0225
 afrobarometer,afro-w10,Q47E,Q47e. Handling narrowing income gaps,economic-gap,Q0262
-arab-barometer,ab-w02,q2043,q2043 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 3. Narrowing the gap between rich and poor?,economic-gap,Q0808
-arab-barometer,ab-w03,q2043,q204.3 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the current government's performance on narrowing the gap between rich and poor?,economic-gap,Q0808
+arab-barometer,ab-w02,q2043,q2043 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the performance of the current government’s 3. Narrowing the gap between rich and poor?,economic-gap,Q0811
+arab-barometer,ab-w03,q2043,q204.3 I am going to ask a number of questions related to the current government’s performance. How would you evaluate the current government's performance on narrowing the gap between rich and poor?,economic-gap,Q0811
 arab-barometer,ab-w05,Q204_3,EVALUATION: GOVERNMENT PERFORMANCE: NARROWING GAP BETWEEN RICH AND POOR,economic-gap,
 arab-barometer,ab-w06p2,Q204_3,Q204_3.Narrowing the gap between rich and poor,economic-gap,Q0536
 arab-barometer,ab-w07,Q113,Q113. To what extent do you believe that the gap between the rich and the poor is a problem in your country?,economic-gap,
-arab-barometer,ab-w07,Q114,"Q114. Do you think the gap between the rich and the poor a year ago was wider, the same, or narrower than it is now?",economic-gap,Q0860
+arab-barometer,ab-w07,Q114,"Q114. Do you think the gap between the rich and the poor a year ago was wider, the same, or narrower than it is now?",economic-gap,Q0863
 arab-barometer,ab-w07,Q204_3,Q204_3. Narrowing the gap between rich and poor,economic-gap,Q0536
-arab-barometer,ab-w08,Q114,"Q114. Do you think the gap between the rich and the poor a year ago was wider, the same, or narrower than it is now?",economic-gap,Q0860
+arab-barometer,ab-w08,Q114,"Q114. Do you think the gap between the rich and the poor a year ago was wider, the same, or narrower than it is now?",economic-gap,Q0863
 arab-barometer,ab-w08,Q204_3,Q204_3 Narrowing the gap between rich and poor,economic-gap,Q0536
 arab-barometer,ab-w08,Q873_1,Socioeconomic class,economic-gap,
 arab-opinion-index,aoi-2012-2013,Q210_5,Q210_5.How would you evaluate the government’s performance in Improving the standard of living for the poor,economic-gap,Q0065
@@ -120,34 +126,38 @@ arab-opinion-index,aoi-2019-2020,Q210_5,Q210_5.How would you evaluate the govern
 arab-opinion-index,aoi-2019-2020,q2020_51_5,To what extent do you think that the current government will succeed in Fairly distributing money and services among the different regions (regional justice),economic-gap,
 arab-opinion-index,aoi-2022,Q210_5,Q210_5.How would you evaluate the government’s performance in Improving the standard of living for the poor,economic-gap,Q0065
 arab-opinion-index,aoi-2024-2025,Q210_5,Q210_5.How would you evaluate the government’s performance in Improving the standard of living for the poor,economic-gap,Q0065
-world-values-survey,wvs-w06,V238,Social class (subjective),economic-gap,Q1419
-world-values-survey,wvs-w07,Q287,Social class (subjective),economic-gap,Q1419
+ebrd-life-in-transition,lits-w04,q401f,The gap between the rich and the poor in [COUNTRY] should be reduced,economic-gap,
+ebrd-life-in-transition,lits-w04,q405e,Assisting the poor/ reducing inequality - willingness to pay more,economic-gap,
+ebrd-life-in-transition,lits-w04,q411,Change in the gap between rich and poor,economic-gap,
+ebrd-life-in-transition,lits-w04,q412,Why there was a change-no change in the gap between rich and poor,economic-gap,
+world-values-survey,wvs-w06,V238,Social class (subjective),economic-gap,Q1425
+world-values-survey,wvs-w07,Q287,Social class (subjective),economic-gap,Q1425
 world-values-survey,wvs-w07,Q56,Standard of living comparing with your parents,economic-gap,
 afrobarometer,afro-w06,Q83_TUN_F,Q83_TUN_f. Regional inequality,economic-gap;spatial,
 afrobarometer,afro-w05,Q44,"Q44. Essential characteristics of democracy: equality, fair election, etc",equality-principle,
 arab-barometer,ab-w06p2,Q512A3_5,Q512A3_5.All people have the same rights regardless of religion or ethnicity,equality-principle,
 arab-barometer,ab-w08,Q550A_1,Q550A_1 Equality under the law,equality-principle,
 arab-barometer,ab-w08,Q550B_1,Q550B_1 Equality under the law,equality-principle,
-arab-opinion-index,aoi-2012-2013,Q421_1,Q421_1.Do you think the availability of Equality of all citizens regardless of wealth in your country is important?,equality-principle,Q1108
+arab-opinion-index,aoi-2012-2013,Q421_1,Q421_1.Do you think the availability of Equality of all citizens regardless of wealth in your country is important?,equality-principle,Q1113
 arab-opinion-index,aoi-2012-2013,Q421_10,Q421_10.Do you think the availability of Equality of all citizens in (the West Bank/Gaza Strip) regardless of their status as Palestinian refugees or otherwise in your country is important?,equality-principle,
 arab-opinion-index,aoi-2012-2013,Q421_11,Q421_11.Do you think the availability of Equality of all citizens regardless of being Northerners or Southerners in your country is important?,equality-principle,
 arab-opinion-index,aoi-2012-2013,Q421_12,Q421_12.Do you think the availability of Equality of all citizens regardless of level/class of citizenship in your country is important?,equality-principle,
 arab-opinion-index,aoi-2012-2013,Q421_13,"Q421_13.Do you think the availability of Equality for all citizens, regardless of social (ethnic) background in your country is important?",equality-principle,
 arab-opinion-index,aoi-2012-2013,Q421_14,"Q421_14.Do you think the availability of Equality for all citizens, regardless of skin colour in your country is important?",equality-principle,
 arab-opinion-index,aoi-2012-2013,Q421_16,"Q421_16.Do you think the availability of Equality for all citizens, regardless of national origin in your country is important?",equality-principle,
-arab-opinion-index,aoi-2012-2013,Q421_2,Q421_2.Do you think the availability of Equality of all citizens regardless of gender/sex in your country is important?,equality-principle,Q1109
-arab-opinion-index,aoi-2012-2013,Q421_3,Q421_3.Do you think the availability of Equality of all citizens regardless of religion in your country is important?,equality-principle,Q1110
-arab-opinion-index,aoi-2012-2013,Q421_4,Q421_4.Do you think the availability of Equality of all citizens regardless of social status in your country is important?,equality-principle,Q1111
-arab-opinion-index,aoi-2012-2013,Q421_5,Q421_5.Do you think the availability of Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds in your country is important?,equality-principle,Q1112
-arab-opinion-index,aoi-2012-2013,Q421_6,Q421_6.Do you think the availability of Equality of all citizens regardless of their political influence in your country is important?,equality-principle,Q1113
-arab-opinion-index,aoi-2012-2013,Q421_8,Q421_8.Do you think the availability of Equality of citizens regardless of their religious sects (mathhab) in your country is important?,equality-principle,Q1115
-arab-opinion-index,aoi-2012-2013,Q421_9,Q421_9.Do you think the availability of Equality of all citizens regardless of their tribe? in your country is important?,equality-principle,Q1116
+arab-opinion-index,aoi-2012-2013,Q421_2,Q421_2.Do you think the availability of Equality of all citizens regardless of gender/sex in your country is important?,equality-principle,Q1114
+arab-opinion-index,aoi-2012-2013,Q421_3,Q421_3.Do you think the availability of Equality of all citizens regardless of religion in your country is important?,equality-principle,Q1115
+arab-opinion-index,aoi-2012-2013,Q421_4,Q421_4.Do you think the availability of Equality of all citizens regardless of social status in your country is important?,equality-principle,Q1116
+arab-opinion-index,aoi-2012-2013,Q421_5,Q421_5.Do you think the availability of Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds in your country is important?,equality-principle,Q1117
+arab-opinion-index,aoi-2012-2013,Q421_6,Q421_6.Do you think the availability of Equality of all citizens regardless of their political influence in your country is important?,equality-principle,Q1118
+arab-opinion-index,aoi-2012-2013,Q421_8,Q421_8.Do you think the availability of Equality of citizens regardless of their religious sects (mathhab) in your country is important?,equality-principle,Q1120
+arab-opinion-index,aoi-2012-2013,Q421_9,Q421_9.Do you think the availability of Equality of all citizens regardless of their tribe? in your country is important?,equality-principle,Q1121
 arab-opinion-index,aoi-2012-2013,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
-arab-opinion-index,aoi-2012-2013,Q422_10,Q422_10.to what extent do you believe that the Equality of all citizens in (the West Bank/Gaza Strip) regardless of their status as Palestinian refugees or otherwise Is applied in your country?,equality-principle,Q0587
-arab-opinion-index,aoi-2012-2013,Q422_11,Q422_11.to what extent do you believe that the Equality of all citizens regardless of being Northerners or Southerners Is applied in your country?,equality-principle,Q1117
+arab-opinion-index,aoi-2012-2013,Q422_10,Q422_10.to what extent do you believe that the Equality of all citizens in (the West Bank/Gaza Strip) regardless of their status as Palestinian refugees or otherwise Is applied in your country?,equality-principle,Q0588
+arab-opinion-index,aoi-2012-2013,Q422_11,Q422_11.to what extent do you believe that the Equality of all citizens regardless of being Northerners or Southerners Is applied in your country?,equality-principle,Q1122
 arab-opinion-index,aoi-2012-2013,Q422_12,Q422_12.to what extent do you believe that the Equality of all citizens regardless of level/class of citizenship Is applied in your country?,equality-principle,Q0432
-arab-opinion-index,aoi-2012-2013,Q422_13,"Q422_13.to what extent do you believe that the Equality for all citizens, regardless of social (ethnic) background Is applied in your country?",equality-principle,Q0588
-arab-opinion-index,aoi-2012-2013,Q422_14,"Q422_14.to what extent do you believe that the Equality for all citizens, regardless of skin colour Is applied in your country?",equality-principle,Q0589
+arab-opinion-index,aoi-2012-2013,Q422_13,"Q422_13.to what extent do you believe that the Equality for all citizens, regardless of social (ethnic) background Is applied in your country?",equality-principle,Q0589
+arab-opinion-index,aoi-2012-2013,Q422_14,"Q422_14.to what extent do you believe that the Equality for all citizens, regardless of skin colour Is applied in your country?",equality-principle,Q0590
 arab-opinion-index,aoi-2012-2013,Q422_16,"Q422_16.to what extent do you believe that the Equality for all citizens, regardless of national origin Is applied in your country?",equality-principle,
 arab-opinion-index,aoi-2012-2013,Q422_2,Q422_2.to what extent do you believe that the Equality of all citizens regardless of gender/sex Is applied in your country?,equality-principle,Q0091
 arab-opinion-index,aoi-2012-2013,Q422_3,Q422_3.to what extent do you believe that the Equality of all citizens regardless of religion Is applied in your country?,equality-principle,Q0092
@@ -157,8 +167,8 @@ arab-opinion-index,aoi-2012-2013,Q422_6,Q422_6.to what extent do you believe tha
 arab-opinion-index,aoi-2012-2013,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2012-2013,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2014,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
-arab-opinion-index,aoi-2014,Q422_10,Q422_10.to what extent do you believe that the Equality of all citizens in (the West Bank/Gaza Strip) regardless of their status as Palestinian refugees or otherwise Is applied in your country?,equality-principle,Q0587
-arab-opinion-index,aoi-2014,Q422_11,Q422_11.to what extent do you believe that the Equality of all citizens regardless of being Northerners or Southerners Is applied in your country?,equality-principle,Q1117
+arab-opinion-index,aoi-2014,Q422_10,Q422_10.to what extent do you believe that the Equality of all citizens in (the West Bank/Gaza Strip) regardless of their status as Palestinian refugees or otherwise Is applied in your country?,equality-principle,Q0588
+arab-opinion-index,aoi-2014,Q422_11,Q422_11.to what extent do you believe that the Equality of all citizens regardless of being Northerners or Southerners Is applied in your country?,equality-principle,Q1122
 arab-opinion-index,aoi-2014,Q422_12,Q422_12.to what extent do you believe that the Equality of all citizens regardless of level/class of citizenship Is applied in your country?,equality-principle,Q0432
 arab-opinion-index,aoi-2014,Q422_2,Q422_2.to what extent do you believe that the Equality of all citizens regardless of gender/sex Is applied in your country?,equality-principle,Q0091
 arab-opinion-index,aoi-2014,Q422_3,Q422_3.to what extent do you believe that the Equality of all citizens regardless of religion Is applied in your country?,equality-principle,Q0092
@@ -168,7 +178,7 @@ arab-opinion-index,aoi-2014,Q422_6,Q422_6.to what extent do you believe that the
 arab-opinion-index,aoi-2014,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2014,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2015,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
-arab-opinion-index,aoi-2015,Q422_10,Q422_10.to what extent do you believe that the Equality of all citizens in (the West Bank/Gaza Strip) regardless of their status as Palestinian refugees or otherwise Is applied in your country?,equality-principle,Q0587
+arab-opinion-index,aoi-2015,Q422_10,Q422_10.to what extent do you believe that the Equality of all citizens in (the West Bank/Gaza Strip) regardless of their status as Palestinian refugees or otherwise Is applied in your country?,equality-principle,Q0588
 arab-opinion-index,aoi-2015,Q422_2,Q422_2.to what extent do you believe that the Equality of all citizens regardless of gender/sex Is applied in your country?,equality-principle,Q0091
 arab-opinion-index,aoi-2015,Q422_3,Q422_3.to what extent do you believe that the Equality of all citizens regardless of religion Is applied in your country?,equality-principle,Q0092
 arab-opinion-index,aoi-2015,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
@@ -178,8 +188,8 @@ arab-opinion-index,aoi-2015,Q422_8,Q422_8.to what extent do you believe that the
 arab-opinion-index,aoi-2015,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2016,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
 arab-opinion-index,aoi-2016,Q422_12,Q422_12.to what extent do you believe that the Equality of all citizens regardless of level/class of citizenship Is applied in your country?,equality-principle,Q0432
-arab-opinion-index,aoi-2016,Q422_13,"Q422_13.to what extent do you believe that the Equality for all citizens, regardless of social (ethnic) background Is applied in your country?",equality-principle,Q0588
-arab-opinion-index,aoi-2016,Q422_14,"Q422_14.to what extent do you believe that the Equality for all citizens, regardless of skin colour Is applied in your country?",equality-principle,Q0589
+arab-opinion-index,aoi-2016,Q422_13,"Q422_13.to what extent do you believe that the Equality for all citizens, regardless of social (ethnic) background Is applied in your country?",equality-principle,Q0589
+arab-opinion-index,aoi-2016,Q422_14,"Q422_14.to what extent do you believe that the Equality for all citizens, regardless of skin colour Is applied in your country?",equality-principle,Q0590
 arab-opinion-index,aoi-2016,Q422_2,Q422_2.to what extent do you believe that the Equality of all citizens regardless of gender/sex Is applied in your country?,equality-principle,Q0091
 arab-opinion-index,aoi-2016,Q422_3,Q422_3.to what extent do you believe that the Equality of all citizens regardless of religion Is applied in your country?,equality-principle,Q0092
 arab-opinion-index,aoi-2016,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
@@ -189,8 +199,8 @@ arab-opinion-index,aoi-2016,Q422_8,Q422_8.to what extent do you believe that the
 arab-opinion-index,aoi-2016,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
 arab-opinion-index,aoi-2017-2018,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
 arab-opinion-index,aoi-2017-2018,Q422_12,Q422_12.to what extent do you believe that the Equality of all citizens regardless of level/class of citizenship Is applied in your country?,equality-principle,Q0432
-arab-opinion-index,aoi-2017-2018,Q422_13,"Q422_13.to what extent do you believe that the Equality for all citizens, regardless of social (ethnic) background Is applied in your country?",equality-principle,Q0588
-arab-opinion-index,aoi-2017-2018,Q422_14,"Q422_14.to what extent do you believe that the Equality for all citizens, regardless of skin colour Is applied in your country?",equality-principle,Q0589
+arab-opinion-index,aoi-2017-2018,Q422_13,"Q422_13.to what extent do you believe that the Equality for all citizens, regardless of social (ethnic) background Is applied in your country?",equality-principle,Q0589
+arab-opinion-index,aoi-2017-2018,Q422_14,"Q422_14.to what extent do you believe that the Equality for all citizens, regardless of skin colour Is applied in your country?",equality-principle,Q0590
 arab-opinion-index,aoi-2017-2018,Q422_2,Q422_2.to what extent do you believe that the Equality of all citizens regardless of gender/sex Is applied in your country?,equality-principle,Q0091
 arab-opinion-index,aoi-2017-2018,Q422_3,Q422_3.to what extent do you believe that the Equality of all citizens regardless of religion Is applied in your country?,equality-principle,Q0092
 arab-opinion-index,aoi-2017-2018,Q422_4,Q422_4.to what extent do you believe that the Equality of all citizens regardless of social status Is applied in your country?,equality-principle,Q0093
@@ -211,15 +221,15 @@ arab-opinion-index,aoi-2022,Q422_5,Q422_5.to what extent do you believe that the
 arab-opinion-index,aoi-2022,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
 arab-opinion-index,aoi-2022,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2022,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
-arab-opinion-index,aoi-2024-2025,Q421_1,Q421_1.Do you think the availability of Equality of all citizens regardless of wealth in your country is important?,equality-principle,Q1108
+arab-opinion-index,aoi-2024-2025,Q421_1,Q421_1.Do you think the availability of Equality of all citizens regardless of wealth in your country is important?,equality-principle,Q1113
 arab-opinion-index,aoi-2024-2025,Q421_17,"Q421_17.Do you think the availability of Equality for all citizens The principle of equal rights between citizens in (Syria) who live in the countryside and those who live in the cities,",equality-principle,
-arab-opinion-index,aoi-2024-2025,Q421_2,Q421_2.Do you think the availability of Equality of all citizens regardless of gender/sex in your country is important?,equality-principle,Q1109
-arab-opinion-index,aoi-2024-2025,Q421_3,Q421_3.Do you think the availability of Equality of all citizens regardless of religion in your country is important?,equality-principle,Q1110
-arab-opinion-index,aoi-2024-2025,Q421_4,Q421_4.Do you think the availability of Equality of all citizens regardless of social status in your country is important?,equality-principle,Q1111
-arab-opinion-index,aoi-2024-2025,Q421_5,Q421_5.Do you think the availability of Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds in your country is important?,equality-principle,Q1112
-arab-opinion-index,aoi-2024-2025,Q421_6,Q421_6.Do you think the availability of Equality of all citizens regardless of their political influence in your country is important?,equality-principle,Q1113
-arab-opinion-index,aoi-2024-2025,Q421_8,Q421_8.Do you think the availability of Equality of citizens regardless of their religious sects (mathhab) in your country is important?,equality-principle,Q1115
-arab-opinion-index,aoi-2024-2025,Q421_9,Q421_9.Do you think the availability of Equality of all citizens regardless of their tribe? in your country is important?,equality-principle,Q1116
+arab-opinion-index,aoi-2024-2025,Q421_2,Q421_2.Do you think the availability of Equality of all citizens regardless of gender/sex in your country is important?,equality-principle,Q1114
+arab-opinion-index,aoi-2024-2025,Q421_3,Q421_3.Do you think the availability of Equality of all citizens regardless of religion in your country is important?,equality-principle,Q1115
+arab-opinion-index,aoi-2024-2025,Q421_4,Q421_4.Do you think the availability of Equality of all citizens regardless of social status in your country is important?,equality-principle,Q1116
+arab-opinion-index,aoi-2024-2025,Q421_5,Q421_5.Do you think the availability of Equality of all citizens regardless of cultural/ethnic/linguistic backgrounds in your country is important?,equality-principle,Q1117
+arab-opinion-index,aoi-2024-2025,Q421_6,Q421_6.Do you think the availability of Equality of all citizens regardless of their political influence in your country is important?,equality-principle,Q1118
+arab-opinion-index,aoi-2024-2025,Q421_8,Q421_8.Do you think the availability of Equality of citizens regardless of their religious sects (mathhab) in your country is important?,equality-principle,Q1120
+arab-opinion-index,aoi-2024-2025,Q421_9,Q421_9.Do you think the availability of Equality of all citizens regardless of their tribe? in your country is important?,equality-principle,Q1121
 arab-opinion-index,aoi-2024-2025,Q422_1,Q422_1.to what extent do you believe that the Equality of all citizens regardless of wealth Is applied in your country?,equality-principle,Q0090
 arab-opinion-index,aoi-2024-2025,Q422_17,"Q422_17.to what extent do you believe that the Equality for all citizens The principle of equal rights between citizens in (Syria) who live in the countryside and those who live in the cities,",equality-principle,
 arab-opinion-index,aoi-2024-2025,Q422_2,Q422_2.to what extent do you believe that the Equality of all citizens regardless of gender/sex Is applied in your country?,equality-principle,Q0091
@@ -229,14 +239,14 @@ arab-opinion-index,aoi-2024-2025,Q422_5,Q422_5.to what extent do you believe tha
 arab-opinion-index,aoi-2024-2025,Q422_6,Q422_6.to what extent do you believe that the Equality of all citizens regardless of their political influence Is applied in your country?,equality-principle,Q0121
 arab-opinion-index,aoi-2024-2025,Q422_8,Q422_8.to what extent do you believe that the Equality of citizens regardless of their religious sects (mathhab) Is applied in your country?,equality-principle,Q0123
 arab-opinion-index,aoi-2024-2025,Q422_9,Q422_9.to what extent do you believe that the Equality of all citizens regardless of their tribe? Is applied in your country?,equality-principle,Q0124
-arab-opinion-index,aoi-2012-2013,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle;spatial,Q1114
+arab-opinion-index,aoi-2012-2013,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle;spatial,Q1119
 arab-opinion-index,aoi-2012-2013,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
 arab-opinion-index,aoi-2014,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
 arab-opinion-index,aoi-2015,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
 arab-opinion-index,aoi-2016,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
 arab-opinion-index,aoi-2017-2018,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
 arab-opinion-index,aoi-2022,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
-arab-opinion-index,aoi-2024-2025,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle;spatial,Q1114
+arab-opinion-index,aoi-2024-2025,Q421_7,Q421_7.Do you think the availability of Equality of all citizens regardless of their geographic area in your country is important?,equality-principle;spatial,Q1119
 arab-opinion-index,aoi-2024-2025,Q422_7,Q422_7.to what extent do you believe that the Equality of all citizens regardless of their geographic area Is applied in your country?,equality-principle;spatial,Q0122
 afrobarometer,afro-w05,Q23,Q23. Women have equal rights vs. subject to traditional laws,gender,
 afrobarometer,afro-w05,Q73A_ARB,Q73a.arb. Women and men should have equal work opportunities,gender,
@@ -257,11 +267,11 @@ arab-barometer,ab-w05,Q601_9A,WOMEN'S RIGHTS: EQUAL INHERITANCE,gender,
 arab-barometer,ab-w08,Q601_13B,Q601_13B. Men and women should both have equal say in deciding who they marry,gender,
 arab-barometer,ab-w08,Q601_5,Q601_5. Men and women should have equal work opportunities,gender,
 arab-barometer,ab-w08,Q631,Q631. To what extent do you believe that having women in political leadership roles advances the women’s rights agenda in?,gender,
-arab-opinion-index,aoi-2014,Q503_1,Q503_1.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Medical care,gender,Q1128
-arab-opinion-index,aoi-2014,Q503_2,Q503_2.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect accorded by public sector employees,gender,Q1129
-arab-opinion-index,aoi-2014,Q503_3,Q503_3.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect shown by other citizens,gender,Q1130
-arab-opinion-index,aoi-2014,Q503_4,Q503_4.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Access to bank loans,gender,Q1131
-arab-opinion-index,aoi-2014,Q503_5,Q503_5.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Gaining a place at a university,gender,Q1132
+arab-opinion-index,aoi-2014,Q503_1,Q503_1.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Medical care,gender,Q1133
+arab-opinion-index,aoi-2014,Q503_2,Q503_2.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect accorded by public sector employees,gender,Q1134
+arab-opinion-index,aoi-2014,Q503_3,Q503_3.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect shown by other citizens,gender,Q1135
+arab-opinion-index,aoi-2014,Q503_4,Q503_4.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Access to bank loans,gender,Q1136
+arab-opinion-index,aoi-2014,Q503_5,Q503_5.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Gaining a place at a university,gender,Q1137
 arab-opinion-index,aoi-2014,Q503_6,Q503_6.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect from clerics/religious leaders,gender,
 arab-opinion-index,aoi-2014,Q503_7,Q503_7.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Concern shown by local community leaders,gender,
 arab-opinion-index,aoi-2014,Q504_10,Q504_10.Please indicate your level of personal agreement/disagreement with each of this Men and women should have equal rights to divorce,gender,Q0444
@@ -275,11 +285,11 @@ arab-opinion-index,aoi-2016,Q502_5,Q502_5.do you believe that men and women are 
 arab-opinion-index,aoi-2016,Q502_6,Q502_6.do you believe that men and women are equal in your country In receiving schooling,gender,
 arab-opinion-index,aoi-2016,Q502_7,Q502_7.do you believe that men and women are equal in your country In parliamentary represenation,gender,
 arab-opinion-index,aoi-2016,Q502_8,Q502_8.do you believe that men and women are equal in your country In cabinet representation,gender,
-arab-opinion-index,aoi-2016,Q503_1,Q503_1.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Medical care,gender,Q1128
-arab-opinion-index,aoi-2016,Q503_2,Q503_2.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect accorded by public sector employees,gender,Q1129
-arab-opinion-index,aoi-2016,Q503_3,Q503_3.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect shown by other citizens,gender,Q1130
-arab-opinion-index,aoi-2016,Q503_4,Q503_4.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Access to bank loans,gender,Q1131
-arab-opinion-index,aoi-2016,Q503_5,Q503_5.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Gaining a place at a university,gender,Q1132
+arab-opinion-index,aoi-2016,Q503_1,Q503_1.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Medical care,gender,Q1133
+arab-opinion-index,aoi-2016,Q503_2,Q503_2.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect accorded by public sector employees,gender,Q1134
+arab-opinion-index,aoi-2016,Q503_3,Q503_3.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Respect shown by other citizens,gender,Q1135
+arab-opinion-index,aoi-2016,Q503_4,Q503_4.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Access to bank loans,gender,Q1136
+arab-opinion-index,aoi-2016,Q503_5,Q503_5.To what extent do you think that the principle of equal treatment for men and women (gender equality) is applied when it comes to Gaining a place at a university,gender,Q1137
 arab-opinion-index,aoi-2016,Q504_10,Q504_10.Please indicate your level of personal agreement/disagreement with each of this Men and women should have equal rights to divorce,gender,Q0444
 arab-opinion-index,aoi-2016,Q504_3,"Q504_3.Please indicate your level of personal agreement/disagreement with each of this In general, men are better than women at positions of political leadership",gender,Q0448
 arab-opinion-index,aoi-2016,Q504_5,Q504_5.Please indicate your level of personal agreement/disagreement with each of this Men and women must receive equal access to the same employment opportunities,gender,Q0450
@@ -289,8 +299,8 @@ arab-opinion-index,aoi-2017-2018,Q504_5,Q504_5.Please indicate your level of per
 arab-opinion-index,aoi-2019-2020,Q504_10,Q504_10.Please indicate your level of personal agreement/disagreement with each of this Men and women should have equal rights to divorce,gender,Q0444
 arab-opinion-index,aoi-2019-2020,Q504_3,"Q504_3.Please indicate your level of personal agreement/disagreement with each of this In general, men are better than women at positions of political leadership",gender,Q0448
 arab-opinion-index,aoi-2019-2020,Q504_5,Q504_5.Please indicate your level of personal agreement/disagreement with each of this Men and women must receive equal access to the same employment opportunities,gender,Q0450
-world-values-survey,wvs-w06,V139,Democracy: Women have the same rights as men,gender,Q1401
-world-values-survey,wvs-w07,Q249,Democracy: Women have the same rights as men,gender,Q1401
+world-values-survey,wvs-w06,V139,Democracy: Women have the same rights as men,gender,Q1407
+world-values-survey,wvs-w07,Q249,Democracy: Women have the same rights as men,gender,Q1407
 afrobarometer,afro-w07,Q57G,Q57g. Better or worse: equal opportunities and treatment for women,gender;opportunity,
 world-values-survey,wvs-w07,Q233,How often in country's elections: Women have equal opportunities to run the office,gender;opportunity,
 afrobarometer,afro-w05,Q8A,Q8a. How often gone without food,lived-poverty,Q0229
@@ -323,15 +333,15 @@ afrobarometer,afro-w10,Q7B,Q7b. How often gone without water,lived-poverty,Q0230
 afrobarometer,afro-w10,Q7C,Q7c. How often gone without medical care,lived-poverty,Q0242
 afrobarometer,afro-w10,Q7D,Q7d. How often gone without cooking fuel,lived-poverty,Q0253
 afrobarometer,afro-w10,Q7E,Q7e. How often gone without cash income,lived-poverty,Q0254
-world-values-survey,wvs-w06,V188,Frequency you/family (last 12 month): Gone without enough food to eat,lived-poverty,Q1442
-world-values-survey,wvs-w06,V190,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,lived-poverty,Q1444
-world-values-survey,wvs-w06,V191,Frequency you/family (last 12 month): Gone without a cash income,lived-poverty,Q1445
-world-values-survey,wvs-w07,Q51,Frequency you/family (last 12 month): Gone without enough food to eat,lived-poverty,Q1442
-world-values-survey,wvs-w07,Q53,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,lived-poverty,Q1444
-world-values-survey,wvs-w07,Q54,Frequency you/family (last 12 month): Gone without a cash income,lived-poverty,Q1445
+world-values-survey,wvs-w06,V188,Frequency you/family (last 12 month): Gone without enough food to eat,lived-poverty,Q1448
+world-values-survey,wvs-w06,V190,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,lived-poverty,Q1450
+world-values-survey,wvs-w06,V191,Frequency you/family (last 12 month): Gone without a cash income,lived-poverty,Q1451
+world-values-survey,wvs-w07,Q51,Frequency you/family (last 12 month): Gone without enough food to eat,lived-poverty,Q1448
+world-values-survey,wvs-w07,Q53,Frequency you/family (last 12 month): Gone without needed medicine or treatment that you needed,lived-poverty,Q1450
+world-values-survey,wvs-w07,Q54,Frequency you/family (last 12 month): Gone without a cash income,lived-poverty,Q1451
 world-values-survey,wvs-w07,Q55,"In the last 12 month, how often have you or your family: Gone without a safe shelter over your head",lived-poverty,
-afrobarometer,afro-w07,Q56S,"Q56s. Handling protecting rights, promoting opportunities for disabled",opportunity,Q0747
-afrobarometer,afro-w08,Q50O,"Q50o. Handling protecting rights, promoting opportunities for disabled",opportunity,Q0747
+afrobarometer,afro-w07,Q56S,"Q56s. Handling protecting rights, promoting opportunities for disabled",opportunity,Q0749
+afrobarometer,afro-w08,Q50O,"Q50o. Handling protecting rights, promoting opportunities for disabled",opportunity,Q0749
 arab-barometer,ab-w07,Q104A_2_5,Q104A. Education opportunities,opportunity,
 arab-barometer,ab-w07,Q870A_MAUR_2,"Q870A_MAUR_2. In your opinion, which group of people faces difficulty working their way out of the lower class because of unequal opportunity?",opportunity,
 arab-barometer,ab-w07,Q870B_MAUR_2,"Q870B_MAUR_2. In your opinion, which group of people faces difficulty accessing public healthcare services because of unequal opportunity?",opportunity,
@@ -350,9 +360,9 @@ afrobarometer,afro-w06,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
 afrobarometer,afro-w06,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
 afrobarometer,afro-w06,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
 afrobarometer,afro-w06,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
-afrobarometer,afro-w06,EA_FAC_F,EA-FAC-F. Bank in the PSU/EA,spatial,Q0651
+afrobarometer,afro-w06,EA_FAC_F,EA-FAC-F. Bank in the PSU/EA,spatial,Q0652
 afrobarometer,afro-w06,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
-afrobarometer,afro-w06,EA_ROAD_A,EA-ROAD-A. Tarred/ paved road,spatial,Q0653
+afrobarometer,afro-w06,EA_ROAD_A,EA-ROAD-A. Tarred/ paved road,spatial,Q0654
 afrobarometer,afro-w06,EA_ROAD_B,EA-ROAD-B. Impassable road,spatial,
 afrobarometer,afro-w06,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial,Q0172
 afrobarometer,afro-w06,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
@@ -363,7 +373,7 @@ afrobarometer,afro-w07,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
 afrobarometer,afro-w07,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
 afrobarometer,afro-w07,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
 afrobarometer,afro-w07,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
-afrobarometer,afro-w07,EA_FAC_F,EA-FAC-F. Bank in the PSU/EA,spatial,Q0651
+afrobarometer,afro-w07,EA_FAC_F,EA-FAC-F. Bank in the PSU/EA,spatial,Q0652
 afrobarometer,afro-w07,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
 afrobarometer,afro-w07,EA_ROAD_A,EA-ROAD-A. Road surface at start point,spatial,Q0472
 afrobarometer,afro-w07,EA_ROAD_B,EA-ROAD-B. Road surface last 5 km,spatial,Q0473
@@ -377,7 +387,7 @@ afrobarometer,afro-w08,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
 afrobarometer,afro-w08,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
 afrobarometer,afro-w08,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
 afrobarometer,afro-w08,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
-afrobarometer,afro-w08,EA_FAC_F,EA-FAC-F. Bank or money services in the PSU/EA,spatial,Q0652
+afrobarometer,afro-w08,EA_FAC_F,EA-FAC-F. Bank or money services in the PSU/EA,spatial,Q0653
 afrobarometer,afro-w08,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
 afrobarometer,afro-w08,EA_ROAD_A,EA-ROAD-A. Road surface at start point,spatial,Q0472
 afrobarometer,afro-w08,EA_ROAD_B,EA-ROAD-B. Road surface last 5 km,spatial,Q0473
@@ -386,7 +396,7 @@ afrobarometer,afro-w08,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial
 afrobarometer,afro-w08,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
 afrobarometer,afro-w08,EA_SVC_C,EA-SVC-C. Sewage system in the PSU/EA,spatial,Q0174
 afrobarometer,afro-w08,EA_SVC_D,EA-SVC-D. Cell phone service in the PSU/EA,spatial,Q0340
-afrobarometer,afro-w08,EA_SVC_E,EA-SVC-E. Borehole or tubewell in PSU/EA,spatial,Q0687
+afrobarometer,afro-w08,EA_SVC_E,EA-SVC-E. Borehole or tubewell in PSU/EA,spatial,Q0688
 afrobarometer,afro-w09,EA_FAC_A,EA-FAC-A. Bureau de poste dans la ZD,spatial,
 afrobarometer,afro-w09,EA_FAC_B,EA-FAC-B. École dans la ZD,spatial,
 afrobarometer,afro-w09,EA_FAC_C,EA-FAC-C. Poste de police/gendarmerie dans la ZD,spatial,
@@ -407,7 +417,7 @@ afrobarometer,afro-w10,EA_FAC_B,EA-FAC-B. School in the PSU/EA,spatial,Q0165
 afrobarometer,afro-w10,EA_FAC_C,EA-FAC-C. Police station in the PSU/EA,spatial,Q0166
 afrobarometer,afro-w10,EA_FAC_D,EA-FAC-D. Health Clinic in the PSU/EA,spatial,Q0167
 afrobarometer,afro-w10,EA_FAC_E,EA-FAC-E. Market stalls in the PSU/EA,spatial,Q0168
-afrobarometer,afro-w10,EA_FAC_F,EA-FAC-F. Bank or money services in the PSU/EA,spatial,Q0652
+afrobarometer,afro-w10,EA_FAC_F,EA-FAC-F. Bank or money services in the PSU/EA,spatial,Q0653
 afrobarometer,afro-w10,EA_FAC_G,EA-FAC-G. Paid transport in the PSU/EA,spatial,Q0352
 afrobarometer,afro-w10,EA_ROAD_A,EA-ROAD-A. Road surface at start point,spatial,Q0472
 afrobarometer,afro-w10,EA_ROAD_B,EA-ROAD-B. Road surface last 5 km,spatial,Q0473
@@ -416,4 +426,4 @@ afrobarometer,afro-w10,EA_SVC_A,EA-SVC-A. Electricity grid in the PSU/EA,spatial
 afrobarometer,afro-w10,EA_SVC_B,EA-SVC-B. Piped water system in the PSU/EA,spatial,Q0173
 afrobarometer,afro-w10,EA_SVC_C,EA-SVC-C. Sewage system in the PSU/EA,spatial,Q0174
 afrobarometer,afro-w10,EA_SVC_D,EA-SVC-D. Mobile phone service in the PSU/EA,spatial,
-afrobarometer,afro-w10,EA_SVC_E,EA-SVC-E. Borehole or tubewell in PSU/EA,spatial,Q0687
+afrobarometer,afro-w10,EA_SVC_E,EA-SVC-E. Borehole or tubewell in PSU/EA,spatial,Q0688

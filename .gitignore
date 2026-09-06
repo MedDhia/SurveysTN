@@ -6,6 +6,7 @@
 # catalog, and `python3 scripts/fetch_raw.py` retrieves and checks them.
 data/raw/aoi-2019-2020.sav
 data/raw/aoi-2024-2025.sav
+data/raw/lits_iv.dta
 
 __pycache__/
 *.pyc
