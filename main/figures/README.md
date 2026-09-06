@@ -8,9 +8,9 @@ Generated. Rebuild with the script named under each figure; do not edit the outp
 
 When Tunisian survey fieldwork actually happened, one row per survey, 2010 to 2025.
 
-The archive spans sixteen years. It does not cover them. Thirteen of the twenty-six
+The archive spans sixteen years. It does not cover them. Fourteen of the twenty-seven
 surveys record an interview date per respondent, and between them those account for
-**314 distinct days** — from 17,619 of the archive's 40,388 interviews. The rest is
+**389 distinct days** — from 18,655 of the archive's 41,424 interviews. The rest is
 inference from what the publisher printed on the release.
 
 The figure keeps three levels of knowledge apart, because drawing them alike would
@@ -18,13 +18,13 @@ claim a precision the archive does not have:
 
 | Drawn as | Means | Surveys |
 |---|---|---:|
-| solid bar | an interview date per respondent; the days are exact | 13 |
+| solid bar | an interview date per respondent; the days are exact | 14 |
 | hatched bar | only the month fieldwork opened and closed | 1 |
 | outlined bar | only the year the publisher gives for the wave | 12 |
 
 ### What it shows
 
-- **No two surveys were ever in the field on the same day.** Not once in 314 days.
+- **No two surveys were ever in the field on the same day.** Not once in 389 days.
   But two came within **two days** of each other, and they are from different
   programmes: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer
   Wave III opened on 3 February. That pair is as close to a contemporaneous
@@ -73,14 +73,15 @@ different question, and each has a limit worth stating before it is read.
 
 ### `inequality-coverage.png` / `.svg`
 
-The **22 inequality questions asked in more than two surveys**, and the years each
+The **40 inequality questions asked in more than two surveys**, and the years each
 was asked in — drawn from the concordance, so a row is a question rather than a
-variable name. 16 surveys, 2012 to 2024.
+variable name. 16 surveys, 2012 to 2024. The count rose from 22 when the
+lived-poverty and spatial facets were added to the lexicon.
 
 Every row is one colour. No inequality question in this archive is asked by two
 different programmes, so a run over time can be built inside Arab Barometer, or
 inside Afrobarometer, or inside the Arab Opinion Index, and never between them.
-21 of the 22 recur with an identical response scale; the one that does not is
+37 of the 40 recur with an identical response scale; the three that do not are
 marked `differs` and greyed.
 
 Thirteen of the 22 are one Arab Opinion Index battery, opening with the same words

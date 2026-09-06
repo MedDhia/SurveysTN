@@ -1,5 +1,5 @@
 {
-  "generated": "2026-08-31",
+  "generated": "2026-09-06",
   "country": "Tunisia",
   "surveys": [
     {
@@ -16,6 +16,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1196,
       "n_variables": 468,
@@ -77,6 +78,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1199,
       "n_variables": 296,
@@ -138,6 +140,7 @@
       "country_value": "Tunisia",
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1200,
       "n_variables": 290,
@@ -199,6 +202,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2400,
       "n_variables": 359,
@@ -260,6 +264,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1005,
       "n_variables": 98,
@@ -321,6 +326,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1002,
       "n_variables": 82,
@@ -382,6 +388,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1200,
       "n_variables": 105,
@@ -443,6 +450,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2400,
       "n_variables": 453,
@@ -504,6 +512,7 @@
       "country_value": 21,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2406,
       "n_variables": 690,
@@ -565,6 +574,7 @@
       "country_value": 788,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1205,
       "n_variables": 370,
@@ -622,6 +632,7 @@
       "country_value": 788,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1208,
       "n_variables": 397,
@@ -679,6 +690,7 @@
       "country_value": "TUN",
       "country_match": "startswith",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [
         "STRTIME",
         "ENDTIME"
@@ -771,6 +783,7 @@
       "country_value": "TUN",
       "country_match": "startswith",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [
         "STRTIME",
         "ENDTIME"
@@ -875,6 +888,7 @@
       "country_value": "TUN",
       "country_match": "startswith",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [
         "STRTIME",
         "ENDTIME"
@@ -973,6 +987,7 @@
       "country_value": "TUN",
       "country_match": "startswith",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1200,
       "n_variables": 377,
@@ -1068,6 +1083,7 @@
       "country_value": "TUN",
       "country_match": "startswith",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [
         "STRTIME"
       ],
@@ -1133,6 +1149,7 @@
       "renamed_variables": {
         "LOCATION.LEVEL.1": "LOCATION_LEVEL_1"
       },
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1200,
       "n_variables": 372,
@@ -1225,6 +1242,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1229,
       "n_variables": 196,
@@ -1290,6 +1308,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1500,
       "n_variables": 546,
@@ -1351,6 +1370,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1498,
       "n_variables": 555,
@@ -1412,6 +1432,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1497,
       "n_variables": 441,
@@ -1473,6 +1494,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1499,
       "n_variables": 479,
@@ -1534,6 +1556,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 1500,
       "n_variables": 372,
@@ -1792,6 +1815,7 @@
         "q2020.73_3": "q2020_73_3",
         "q2020.73_4": "q2020_73_4"
       },
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2400,
       "n_variables": 509,
@@ -1853,6 +1877,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 2400,
       "n_variables": 651,
@@ -1914,6 +1939,7 @@
       "country_value": 2,
       "country_match": "equals",
       "renamed_variables": {},
+      "columns_retyped_from_values": 0,
       "value_labels_dropped_on_temporal_columns": [],
       "n_respondents": 3245,
       "n_variables": 1251,
@@ -1967,6 +1993,72 @@
         }
       },
       "notes": ""
+    },
+    {
+      "series": "ebrd-life-in-transition",
+      "series_name": "Life in Transition Survey",
+      "series_prefix": "lits",
+      "key": "lits-w04",
+      "wave": 4,
+      "part": null,
+      "wave_label": "Round IV",
+      "tag": "w04",
+      "slug": "round-04",
+      "country": "Tunisia",
+      "country_value": 34,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 309,
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1036,
+      "n_variables": 1319,
+      "n_variables_with_data": 741,
+      "n_respondents_pooled_release": 37478,
+      "n_countries_pooled_release": 37,
+      "is_country_file": false,
+      "fieldwork_years_series": "2022-2023",
+      "fieldwork_tunisia": "2022-10-26 to 2023-02-14",
+      "fieldwork_source": "derived from the start_date variable in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "dta",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "lits_iv.dta",
+      "source_sha256": "14e1032755c4f42d8d3dc61647097ccd7605ba281551e53953c76d22a223cd1c",
+      "csv_answers_read_as_missing": {
+        "q802": [
+          "None"
+        ]
+      },
+      "path": "data/ebrd-life-in-transition/round-04",
+      "files": {
+        "codebook.csv": {
+          "bytes": 485834,
+          "sha256": "531ef4358a0b30c3b12a53dd9897c2f7d5d5f1f4b09e05b347496b38d0bb0063"
+        },
+        "codebook.json": {
+          "bytes": 794213,
+          "sha256": "87fb47bb5c0580a79d29c1abc4193b72f3e7e7414e1a97ce967a2721c32399e2"
+        },
+        "ebrd-life-in-transition-w04-tunisia-codes.csv": {
+          "bytes": 2414114,
+          "sha256": "0d338c99adb2a541bc37cf412c6f9f09f4d8789c22f5f14a9fd4156848ef3cb6"
+        },
+        "ebrd-life-in-transition-w04-tunisia-labels.csv": {
+          "bytes": 6411560,
+          "sha256": "8aed5b85c43e61c98cd7c108b969be5c51898e4b9f8e587339c4b0c57181d7b1"
+        },
+        "ebrd-life-in-transition-w04-tunisia.dta": {
+          "bytes": 9525540,
+          "sha256": "3f93f7cd0b02b2a9ea9d74cd146e773166738b83ddcaa8052445908d3fe4d124"
+        },
+        "ebrd-life-in-transition-w04-tunisia.sav": {
+          "bytes": 11779577,
+          "sha256": "931a729663670f155c605854d074f31fe12ee3f1f740ce1bd5f82ac825db2997"
+        }
+      },
+      "notes": "Fourth round of the EBRD/World Bank Life in Transition Survey, the first to include Tunisia. A household and attitudinal survey rather than a firm survey. Date and time columns are stored in Stata's %tc form, milliseconds since 1960-01-01, and are left as the release stores them."
     }
   ]
 }

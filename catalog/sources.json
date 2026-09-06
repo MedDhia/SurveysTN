@@ -50,6 +50,16 @@
         "tunisia": 2
       },
       "note": "Rounds are named by fieldwork year. Q1 is the country code and Tunisia is 2 in every round."
+    },
+    "ebrd-life-in-transition": {
+      "name": "Life in Transition Survey",
+      "publisher": "European Bank for Reconstruction and Development, with the World Bank",
+      "homepage": "https://www.ebrd.com/home/what-we-do/office-of-the-chief-economist/lits/life-in-transition-survey.html",
+      "data_page": "https://www.ebrd.com/home/what-we-do/office-of-the-chief-economist/lits/life-in-transition-survey-data.html",
+      "country_variable_values": {
+        "tunisia": 34
+      },
+      "prefix": "lits"
     }
   },
   "waves": [
@@ -672,6 +682,31 @@
       },
       "notes": "",
       "download_url": "https://arabindex.dohainstitute.org/AR/Documents/aoi-data-2025-en-spss.sav"
+    },
+    {
+      "series": "ebrd-life-in-transition",
+      "wave": 4,
+      "wave_label": "Round IV",
+      "slug": "round-04",
+      "raw_file_stem": "lits_iv",
+      "source_format": "dta",
+      "country_var": "country",
+      "country_value": 34,
+      "fieldwork_years_series": "2022-2023",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_var": "start_date",
+      "fieldwork_date_format": "stata-tc",
+      "fieldwork_source": "derived from the start_date variable in the data file",
+      "download_url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/zip/office-of-the-chief-economist/lits_iv_dta.zip",
+      "download_archive_member": "lits_iv.dta",
+      "questionnaire": {
+        "file": "docs/questionnaires/lits-w04-questionnaire.pdf",
+        "url": "https://www.ebrd.com/content/dam/ebrd_dxp/assets/pdfs/office-of-the-chief-economist/publications/life-in-transition-survey-iv/LITS-IV-Questionnaire.pdf",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "Not parsed for question text: the release carries a variable label for every variable, so the wording is already in the data and does not need recovering from the questionnaire."
+      },
+      "notes": "Fourth round of the EBRD/World Bank Life in Transition Survey, the first to include Tunisia. A household and attitudinal survey rather than a firm survey. Date and time columns are stored in Stata's %tc form, milliseconds since 1960-01-01, and are left as the release stores them."
     }
   ]
 }

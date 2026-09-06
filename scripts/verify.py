@@ -32,6 +32,7 @@ from extract_tunisia import (
     is_blank,
     read_pooled,
     sanitise_names,
+    settle_object_types,
     select_country,
     sha256,
     wave_tag,
@@ -342,6 +343,13 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
     expect = select_country(pooled, spec, country_value).reset_index(drop=True)
     del pooled
     expect = apply_numeric_types(expect, numeric)
+    if spec.get("source_format") == "dta":
+        expect, retyped = settle_object_types(expect)
+        if retyped != s.get("columns_retyped_from_values", 0):
+            errors.append(
+                f"{tag}: retyped {retyped} columns, catalog records "
+                f"{s.get('columns_retyped_from_values', 0)}"
+            )
     expect, renamed = sanitise_names(expect)
     if renamed != s.get("renamed_variables", {}):
         errors.append(f"{tag}: the recorded variable renames do not match what the release needs")

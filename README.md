@@ -1,11 +1,12 @@
 # SurveysTN
 
 Public-opinion survey data covering Tunisia — Arab Barometer, the World Values
-Survey, Afrobarometer and the Arab Opinion Index so far — reorganised so that each
+Survey, Afrobarometer, the Arab Opinion Index and the EBRD's Life in Transition
+Survey so far — reorganised so that each
 survey is one self-describing folder: the respondents, in every common format, with a codebook
 and a provenance record.
 
-**40,388 Tunisian respondents across twenty-six surveys and four series, 2010 to
+**41,424 Tunisian respondents across twenty-seven surveys and five series, 2010 to
 2025.** The releases they come from are in the repository too, so a clone can
 rebuild the whole archive and check every cell of it against the publishers' own
 files.
@@ -102,8 +103,8 @@ missing.
 
 ![Fieldwork coverage](main/figures/fieldwork-coverage.png)
 
-The archive spans sixteen years and does not cover them. Thirteen of the twenty-six
-surveys record an interview date per respondent; between them those cover **314
+The archive spans sixteen years and does not cover them. Fourteen of the twenty-seven
+surveys record an interview date per respondent; between them those cover **389
 distinct days**, and no two surveys were ever in the field on the same day — though
 Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
 in early 2013, which is as close to a contemporaneous cross-programme reading as the
@@ -133,7 +134,7 @@ depends on the estimand.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the surveys up: one row per
 variable, the name it takes in each survey, the question each one asked, and
-whether the wording held. **6,490 variables, 6,424 of them with question text.**
+whether the wording held. **7,809 variables, 7,743 of them with question text.**
 
 Variables are matched **within a series and never across one**. `Q1` is the
 governorate in Arab Barometer and "Important in life: Family" in the World Values
@@ -148,6 +149,7 @@ one varies by series:
 | World Values Survey | 43 of 724 | 3 |
 | Afrobarometer | 43 of 987 | 311 |
 | Arab Opinion Index | 54 of 2,813 | 3 |
+| Life in Transition | — (one survey) | — |
 
 Afrobarometer is the cautionary one: it renumbers between rounds while keeping the
 `Q` prefix, so a name that persists is often a different question. Check
@@ -159,6 +161,44 @@ asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
 question text instead: **859 pairs**, offered only where the wordings are all but
 identical, unambiguous, and agreed on any numbers they contain. They are
 suggestions to confirm against the publisher's own crosswalk, not findings.
+
+### Life in Transition Survey — 1 survey, 1,036 respondents
+
+| Survey | Respondents | Variables | Fieldwork |
+|---|---:|---:|---|
+| [Round IV](data/ebrd-life-in-transition/round-04) | 1,036 | 1,319 (741 with data) | 26 Oct 2022 – 14 Feb 2023 |
+
+The EBRD's household and attitudinal survey, run with the World Bank. Round IV is
+the first to include Tunisia, and it arrives with an interview date per respondent,
+a design weight, a PSU and the seven statistical regions already coded — so it adds
+**75 days** to the archive's fieldwork coverage, none of which overlap an existing
+survey.
+
+It is the only release here distributed as Stata rather than SPSS, and the only one
+that stores dates in Stata's `%tc` form (milliseconds since 1960-01-01). Both are
+handled by the extractor; the dates are left as the release stores them.
+
+### Surveys the EBRD and EIB run that are **not** here
+
+The EBRD and the EIB co-fund the **Enterprise Surveys** with the World Bank, and
+Tunisia is covered — the 2013 round was a joint World Bank/EBRD/EIB exercise, and a
+further round ran from March 2024. They are deliberately absent, for two reasons.
+
+They are **establishment surveys**: the respondent is a firm, not a person, so they
+do not answer the questions this archive is organised around and would not share a
+unit of analysis with anything in it.
+
+And their microdata is **licensed, not open**. Access requires registering with the
+World Bank Microdata Library and signing a confidentiality declaration, which
+forbids redistribution — so they could not be committed here even where they fit.
+Get them from
+[microdata.worldbank.org](https://microdata.worldbank.org/index.php/catalog/enterprise_surveys)
+(Tunisia 2013 is catalogue entry 2264, the 2024 round is 6706); the aggregate
+indicators are openly available at
+[enterprisesurveys.org](https://www.enterprisesurveys.org/).
+
+The EIB's own **Investment Survey (EIBIS)** covers EU member states and does not
+include Tunisia.
 
 ### The same question in more than one survey
 
@@ -188,12 +228,12 @@ be built by recoding, question by question, with the codebooks open.
 ### Finding questions on a subject
 
 [`docs/topics/`](docs/topics) indexes the archive by subject rather than by variable:
-which of the 26 surveys carry anything on it, in which years, and which items recur
+which of the 27 surveys carry anything on it, in which years, and which items recur
 often enough to build a series from. The lexicon is
 [`catalog/topics.json`](catalog/topics.json) — a file to read and argue with, not a
 judgement buried in code.
 
-**[Inequality](docs/topics/inequality.md)** — 300 variables in 22 of the 26 surveys,
+**[Inequality](docs/topics/inequality.md)** — 428 variables in 24 of the 27 surveys,
 across economic gaps, gender, discrimination, wasta, equality as a principle, and
 opportunity. 45 recur across surveys and **not one recurs across two programmes**, so
 an inequality series can be built inside Arab Barometer or inside the Arab Opinion
