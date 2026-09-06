@@ -34,6 +34,7 @@ SHORT = {
     "ebrd-life-in-transition": "LiTS",
     "issp": "ISSP",
     "sahwa": "SAHWA",
+    "arab-transformations": "ArabTrans",
 }
 
 

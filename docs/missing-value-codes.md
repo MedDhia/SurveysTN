@@ -2196,3 +2196,25 @@ that list, and is not guessed here.
 | `8` | Spouse`s refusal | 1 |
 | `8` | Refused to answer | 1 |
 | `999` | No answer | 1 |
+
+## Arab Transformations Project 2014
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `97` | Missing | 297 |
+| `98` | Don't know | 221 |
+| `99` | Refused to answer | 214 |
+| `95` | Not applicable (dont use Internet) | 28 |
+| `95` | Not applicable (not use Internet) | 20 |
+| `0` | Not applicable | 9 |
+| `99` | No answer, refused | 8 |
+| `1` | Refused to answer | 6 |
+| `1` | Don't know | 5 |
+| `0` | Missing; Unknown | 2 |
+| `95` | Not applicable - did not say would not go | 2 |
+| `5` | I do not know examples concerned | 1 |
+| `95` | Not applicable (Not considered living abroad) | 1 |
+| `95` | Not applicable - did not think it was an outside conspiracy | 1 |
+| `95` | Not applicable (never studied abroad) | 1 |
+| `95` | Not applicable (never worked abroad) | 1 |
+| `95` | Not applicable (not born abroad) | 1 |

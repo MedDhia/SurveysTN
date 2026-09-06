@@ -60,6 +60,7 @@ SHORT = {
     "ebrd-life-in-transition": "LiTS",
     "issp": "ISSP",
     "sahwa": "SAHWA",
+    "arab-transformations": "ArabTrans",
 }
 
 JACCARD_FLOOR = 0.85

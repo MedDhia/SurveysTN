@@ -19,7 +19,9 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import re
 import sys
+import zipfile
 from pathlib import Path
 
 import pandas as pd
@@ -226,29 +228,48 @@ def check_questionnaires(catalog: dict, manifest: dict, errors: list[str]) -> No
         who = f"{survey['series']} {survey['tag']}"
         spec = specs[(survey["series"], survey["tag"])]
 
-        for kind in ("questionnaire", "codebook", "methodology_document"):
-            entry = spec.get(kind)
-            if entry is None:
-                if kind == "questionnaire":
-                    errors.append(f"{who}: no questionnaire recorded")
-                continue
+        # A wave declares one instrument per kind, plus any number of supporting
+        # documents under "documentation". All of them are checked the same way:
+        # a declared file that is missing, empty or unreadable is worse than no
+        # declaration at all, because it reads as provenance the archive does not have.
+        entries = [(k, spec[k]) for k in ("questionnaire", "codebook", "methodology_document")
+                   if spec.get(k) is not None]
+        entries += [(f"documentation[{i}]", d) for i, d in enumerate(spec.get("documentation", []))]
+        if not spec.get("questionnaire"):
+            errors.append(f"{who}: no questionnaire recorded")
 
+        for kind, entry in entries:
             path = ROOT / entry["file"]
             if not path.exists():
                 errors.append(f"{who}: {kind} {entry['file']} is not in the repository")
                 continue
 
             raw = path.read_bytes()
-            if not raw.startswith(b"%PDF-"):
-                errors.append(f"{who}: {kind} {path.name} is not a PDF")
-                continue
-            try:
-                pages = len(pypdf.PdfReader(str(path)).pages)
-            except Exception as exc:  # noqa: BLE001 - any failure means it is unusable
-                errors.append(f"{who}: {kind} {path.name} will not open ({type(exc).__name__})")
-                continue
-            if pages == 0:
-                errors.append(f"{who}: {kind} {path.name} has no pages")
+            # Nearly every instrument here is a PDF. The Arab Transformations
+            # questionnaire is published as a Word document and is kept in that form
+            # rather than converted, so the check reads whichever it is and asks the
+            # same question of both: does it open, and does it have content?
+            if path.suffix.lower() == ".docx":
+                try:
+                    with zipfile.ZipFile(path) as archive:
+                        body = archive.read("word/document.xml")
+                except Exception as exc:  # noqa: BLE001 - any failure means it is unusable
+                    errors.append(f"{who}: {kind} {path.name} will not open ({type(exc).__name__})")
+                    continue
+                if len(re.sub(rb"<[^>]+>", b" ", body).split()) < 50:
+                    errors.append(f"{who}: {kind} {path.name} has no readable text")
+                    continue
+            elif raw.startswith(b"%PDF-"):
+                try:
+                    pages = len(pypdf.PdfReader(str(path)).pages)
+                except Exception as exc:  # noqa: BLE001 - any failure means it is unusable
+                    errors.append(f"{who}: {kind} {path.name} will not open ({type(exc).__name__})")
+                    continue
+                if pages == 0:
+                    errors.append(f"{who}: {kind} {path.name} has no pages")
+                    continue
+            else:
+                errors.append(f"{who}: {kind} {path.name} is not a PDF or a Word document")
                 continue
 
             digest = sha256(path)
@@ -266,7 +287,7 @@ def check_questionnaires(catalog: dict, manifest: dict, errors: list[str]) -> No
             if kind == "questionnaire":
                 have += 1
 
-    print(f"questionnaires: {have} of {len(catalog['surveys'])} surveys, all readable PDFs")
+    print(f"questionnaires: {have} of {len(catalog['surveys'])} surveys, all readable")
 
 
 def check_topic_figures(errors: list[str]) -> None:

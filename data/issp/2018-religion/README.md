@@ -5,7 +5,7 @@
 | Respondents | 1,218 |
 | Variables | 139 (138 with at least one non-missing answer in Tunisia) |
 | Fieldwork (Tunisia) | not recorded in the data file (series fieldwork 2018) |
-| Language | English (translated instrument and labels) |
+| Language | Arabic instrument; the release labels variables and answers in English |
 | Source release | Tunisia country file, 1,218 respondents |
 | Source file | `ZA7629_v1-0-0.sav` |
 | Publisher | GESIS – Leibniz Institute for the Social Sciences, Cologne |
@@ -45,4 +45,4 @@ The `.sav` and `.dta` are unaffected.
 
 Regenerate with `python3 scripts/extract_tunisia.py`.
 
-Note: ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: GESIS excluded it because the fieldwork used quota sampling rather than a probability sample, and because background variables were missing from the first deposit. It also carries no weight — the WEIGHT variable is empty and labelled 'No weighting' — and no interview dates. Treat it as the least comparable survey in this archive.
+Note: ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: the GESIS read-me says it did not meet the methodological standard because of the quota sampling used, and that background variables were missing from Tunisia's first deposit. The depositor describes the design more precisely as a multi-stage territorial stratified selection with a quota table. It carries no weight -- WEIGHT is empty and the study description form answers 'Weight present: No' -- and no interview dates. The data file and the study description also disagree on when it was fielded: DATEYR is 2018 for every respondent, while the form filed in April 2019 gives 6 January to 8 February 2019. The archive reports the year in the data and records the conflict rather than resolving it. Treat this as the least comparable survey in the archive.

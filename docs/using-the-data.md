@@ -35,8 +35,9 @@ use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 ## Nine things to check before you analyse
 
 **Weights.** Every survey here carries a design weight, fully populated, except
-two: **WVS Wave 6**, which has no weight variable, and **ISSP 2018**, which has one
-but leaves it empty. Each series names it differently:
+three: **WVS Wave 6** and the **Arab Transformations Project**, which have no weight
+variable at all, and **ISSP 2018**, which has one but leaves it empty. Each series
+names it differently:
 
 | Series | Weight | Stratum and PSU |
 |---|---|---|
@@ -47,6 +48,7 @@ but leaves it empty. Each series names it differently:
 | Life in Transition | `weight`, and `weight_pop` scaled to the adult population | PSU only (`psu`, 50 sample points) |
 | ISSP | `WEIGHT` exists but **is empty for all 1,218 respondents** and labelled "No weighting" | neither |
 | SAHWA | `dweight` (design) and `pweight` (scaled to the population), both fully populated | neither |
+| Arab Transformations | **none** — the release carries no weight variable | neither |
 
 Unweighted estimates from a weighted survey are not nationally representative. Only
 four surveys carry the stratum and PSU a full `svyset` wants; for the rest, weighting
@@ -57,10 +59,14 @@ svyset psu [pw=wt], strata(stratum)
 ```
 
 ISSP 2018 is the one survey where no weighting is possible, and the reason is the
-sample rather than an omission: the fieldwork used quotas rather than a probability
-design, which is why GESIS kept it out of the ISSP 2018 international file. Nothing
-computed from it is a national estimate. Read it as one Tunisian sample of 1,218
-people on questions no other survey here asks, and do not pool it with the rest.
+sample rather than an omission: the depositor describes the design as a multi-stage
+territorial stratified selection **with a quota table**, and the quota part is why
+GESIS kept it out of the ISSP 2018 international file. The study description form
+answers "Weight present: No" in as many words. Nothing computed from it is a national
+estimate. Read it as one Tunisian sample of 1,218 people on questions no other survey
+here asks, and do not pool it with the rest. Its own paperwork also dates the
+fieldwork to January–February 2019 while the data file says 2018; both are in
+`docs/questionnaires/` and the wave README, unresolved.
 
 **One survey interviewed only the young.** The SAHWA Youth Survey sampled
 15-to-29-year-olds and nothing else here does, so a SAHWA percentage is not
@@ -122,7 +128,7 @@ as three cross-sections.
 **Two things a CSV reader does to these files by default, both silent.**
 
 *It turns real answers into missing.* "None" and "NA" are substantive answers in
-eleven of the surveys here, and `pandas.read_csv` makes them `NaN`. The largest case
+twelve of the surveys here, and `pandas.read_csv` makes them `NaN`. The largest case
 is Afrobarometer's corruption battery, asked in five rounds, where "None" means *no
 corruption in that institution* — read it as missing and you drop exactly the
 respondents who said there is none. Arab Barometer Wave IV's `q1019b`, a

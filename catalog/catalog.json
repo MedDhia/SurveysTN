@@ -2084,8 +2084,8 @@
       "is_country_file": true,
       "fieldwork_years_series": "2018",
       "fieldwork_tunisia": null,
-      "fieldwork_source": "the release records the year only: DATEMO and DATEDY are coded 'not provided' for every respondent",
-      "language": "English (translated instrument and labels)",
+      "fieldwork_source": "the data file records the year only -- DATEYR is 2018 for every respondent and DATEMO and DATEDY are coded 'not provided' -- while the depositor's own study description form gives 6 January to 8 February 2019. The two disagree and the archive does not pick between them; see the wave notes",
+      "language": "Arabic instrument; the release labels variables and answers in English",
       "source_format": "sav",
       "has_numeric_codes": true,
       "has_value_labels": true,
@@ -2124,7 +2124,7 @@
           "sha256": "cb62c519cdab8b4fab5fd44925cbf4e1afe955b1fe024c9ebe85a2b6ab9127d9"
         }
       },
-      "notes": "ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: GESIS excluded it because the fieldwork used quota sampling rather than a probability sample, and because background variables were missing from the first deposit. It also carries no weight — the WEIGHT variable is empty and labelled 'No weighting' — and no interview dates. Treat it as the least comparable survey in this archive."
+      "notes": "ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: the GESIS read-me says it did not meet the methodological standard because of the quota sampling used, and that background variables were missing from Tunisia's first deposit. The depositor describes the design more precisely as a multi-stage territorial stratified selection with a quota table. It carries no weight -- WEIGHT is empty and the study description form answers 'Weight present: No' -- and no interview dates. The data file and the study description also disagree on when it was fielded: DATEYR is 2018 for every respondent, while the form filed in April 2019 gives 6 January to 8 February 2019. The archive reports the year in the data and records the conflict rather than resolving it. Treat this as the least comparable survey in the archive."
     },
     {
       "series": "sahwa",
@@ -2191,6 +2191,72 @@
         }
       },
       "notes": "Edition 4.0 of the SAHWA Youth Survey, a five-country survey of 15-to-29-year-olds run by CIDOB with RECSM at Universitat Pompeu Fabra. Tunisian fieldwork ran in September and October 2015, ahead of the 2016 the dataset is named for. It is the only survey in the archive restricted to young people by design, so its marginals are not comparable with the general-population surveys beside it. Published on Zenodo under CC BY-NC-SA 4.0."
+    },
+    {
+      "series": "arab-transformations",
+      "series_name": "Arab Transformations Project",
+      "series_prefix": "arabtrans",
+      "key": "arabtrans-w2014",
+      "wave": 2014,
+      "part": null,
+      "wave_label": "2014",
+      "tag": "w2014",
+      "slug": "2014",
+      "country": "Tunisia",
+      "country_value": 7,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 0,
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1215,
+      "n_variables": 366,
+      "n_variables_with_data": 364,
+      "n_respondents_pooled_release": 9809,
+      "n_countries_pooled_release": 6,
+      "is_country_file": false,
+      "fieldwork_years_series": "2014",
+      "fieldwork_tunisia": "2014-08-10 to 2014-10-04",
+      "fieldwork_source": "derived from the DATEINT variable in the data file",
+      "language": "English source questionnaire, fielded in Arabic; the release labels variables and answers in English",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ArabTransformationsProjectDataSetPublic20170428.sav",
+      "source_sha256": "184ddae849df3c539c14fc44dab3cd15bb16cb243ac429898a35c2ea6bd04c88",
+      "csv_answers_read_as_missing": {
+        "V83": [
+          "None"
+        ]
+      },
+      "path": "data/arab-transformations/2014",
+      "files": {
+        "arab-transformations-w2014-tunisia-codes.csv": {
+          "bytes": 1875901,
+          "sha256": "c4d1f218453f7ad3a9f52378ddf1f419c14256fd91ba968af90be3c7c3b06184"
+        },
+        "arab-transformations-w2014-tunisia-labels.csv": {
+          "bytes": 6562643,
+          "sha256": "3f2c849c510cdf4f22cfcbce60f9079d4595708ebcfbc5dd1f28b904d2c11a56"
+        },
+        "arab-transformations-w2014-tunisia.dta": {
+          "bytes": 3928586,
+          "sha256": "98a82cb3ceea05c79f0021718fe691d076ef25b4a1cc7e0b5f2f0dae73557e59"
+        },
+        "arab-transformations-w2014-tunisia.sav": {
+          "bytes": 3699223,
+          "sha256": "773cd15c202abd94be37075ea57dbf2efeff5816aa53e7f94d2c86b275e7ab97"
+        },
+        "codebook.csv": {
+          "bytes": 134986,
+          "sha256": "595746aee51d302d7eef56909414606d952830a39b8658bf4b5b546b4b79af55"
+        },
+        "codebook.json": {
+          "bytes": 219759,
+          "sha256": "d32464ad922ab5aa28c72c9eb502a674703e77e3cb80d825921949aa2e5f48a5"
+        }
+      },
+      "notes": "The Arab Transformations Project's 2014 survey, an EU FP7 study run by Pamela Abbott, Andrea Teti and Roger Sapsford. Fielded in six countries -- Egypt, Iraq, Jordan, Libya, Morocco and Tunisia; the public file has no Algerian rows despite the project covering it. The instrument borrows from Arab Barometer and the World Values Survey and adds questions on the uprisings themselves, on political activity and on social media use. It is the only survey in the archive fielded in 2014 that records an interview date, so it breaks what was otherwise a two-year hole in the dated record. It carries no weight variable of any kind, and its REGION codes (700-730) are unlabelled in the release."
     }
   ]
 }

@@ -2,11 +2,12 @@
 
 Public-opinion survey data covering Tunisia — Arab Barometer, the World Values
 Survey, Afrobarometer, the Arab Opinion Index, the EBRD's Life in Transition Survey,
-the ISSP and the SAHWA Youth Survey so far — reorganised so that each
+the ISSP, the SAHWA Youth Survey and the Arab Transformations Project so far —
+reorganised so that each
 survey is one self-describing folder: the respondents, in every common format, with a codebook
 and a provenance record.
 
-**44,642 Tunisian respondents across twenty-nine surveys and seven series, 2010 to
+**45,857 Tunisian respondents across thirty surveys and eight series, 2010 to
 2025.** The releases they come from are in the repository too, so a clone can
 rebuild the whole archive and check every cell of it against the publishers' own
 files.
@@ -95,7 +96,7 @@ for them, so a `-labels.csv` would only repeat the codes.
 
 Start with [`docs/using-the-data.md`](docs/using-the-data.md), and in particular the
 nine things worth checking before you analyse anything — among them the two surveys
-you cannot weight, the one that interviewed only 15-to-29-year-olds, don't-know codes
+you cannot weight at all, the one that interviewed only 15-to-29-year-olds, don't-know codes
 that are not declared missing and differ by survey, and the two things a default CSV
 reader silently does to these files.
 
@@ -103,7 +104,7 @@ reader silently does to these files.
 
 ![Fieldwork coverage](main/figures/fieldwork-coverage.png)
 
-The archive spans sixteen years and does not cover them. Fifteen of the twenty-nine
+The archive spans sixteen years and does not cover them. Sixteen of the thirty
 surveys record an interview date per respondent; between them those cover **389
 distinct days**, and no two surveys were ever in the field on the same day — though
 Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
@@ -134,7 +135,7 @@ depends on the estimand.
 [`docs/crosswalk.md`](docs/crosswalk.md) and the full
 [`docs/crosswalk.csv`](docs/crosswalk.csv) line the surveys up: one row per
 variable, the name it takes in each survey, the question each one asked, and
-whether the wording held. **7,809 variables, 7,743 of them with question text.**
+whether the wording held. **9,157 variables, 9,090 of them with question text.**
 
 Variables are matched **within a series and never across one**. `Q1` is the
 governorate in Arab Barometer and "Important in life: Family" in the World Values
@@ -152,6 +153,7 @@ one varies by series:
 | Life in Transition | — (one survey) | — |
 | ISSP | — (one survey) | — |
 | SAHWA | — (one survey) | — |
+| Arab Transformations | — (one survey) | — |
 
 Afrobarometer is the cautionary one: it renumbers between rounds while keeping the
 `Q` prefix, so a name that persists is often a different question. Check
@@ -193,14 +195,25 @@ how they feel about Christians, Jews, Hindus, Buddhists and non-believers, and
 whether religious leaders should influence a vote. Nothing else in the archive goes
 past a mosque-attendance question.
 
-**It is also the least comparable survey here, and the release says so.** GESIS kept
-it out of the ISSP 2018 international file because the fieldwork used quota sampling
-rather than a probability design and background variables were missing from the first
-deposit. The `WEIGHT` variable exists but is empty for every respondent and labelled
-"No weighting", so there is no way to weight it. `DATEMO` and `DATEDY` are coded "not
-provided" throughout, so only the year is known. `TN_REG` codes 120 sample localities,
-not administrative regions, and does not line up with the seven regions the rest of
-the archive uses.
+**It is also the least comparable survey here, and the release says so.** The GESIS
+read-me shipped with the data says it did not meet the methodological standard for
+the international file because of the quota sampling used, and that background
+variables were missing from Tunisia's first deposit. The `WEIGHT` variable exists but
+is empty for every respondent and labelled "No weighting", so there is no way to
+weight it. `TN_REG` codes 120 sample localities, not administrative regions, and does
+not line up with the seven regions the rest of the archive uses.
+
+**The data file and the depositor's own paperwork disagree about when it was
+fielded.** `DATEYR` is 2018 for every respondent and `DATEMO`/`DATEDY` are coded "not
+provided", so the data says only *2018*. The ISSP study description form, filed in
+April 2019, says fieldwork ran **6 January to 8 February 2019**. Nothing in the
+release settles it, so the archive reports the year the data carries, draws the
+survey at year precision in the coverage figure, and records the conflict here rather
+than picking a side. The five documents GESIS ships alongside the data are in
+[`docs/questionnaires/`](docs/questionnaires) — the read-me, the study description,
+the background-variable documentation, the population benchmarks the quotas were set
+against, and the study monitoring form — because three things worth knowing about
+this survey are in them and not in the data file.
 
 Treat it as one Tunisian sample of 1,218 people on questions no other survey here
 asks, not as a national estimate, and do not pool it with the rest. It is in the
@@ -236,20 +249,66 @@ lexicon in [`catalog/topics.json`](catalog/topics.json) had to learn its wording
 not read those items alongside the general-population series without saying that one
 of the lines is 15-to-29-year-olds.
 
+### Arab Transformations Project — 1 survey, 1,215 respondents
+
+| Survey | Respondents | Variables | Fieldwork |
+|---|---:|---:|---|
+| [2014](data/arab-transformations/2014) | 1,215 | 366 (364 with data) | 10 Aug – 4 Oct 2014 |
+
+An EU FP7 study run by Pamela Abbott, Andrea Teti and Roger Sapsford, fielded in six
+countries in late 2014. Its instrument openly borrows from Arab Barometer and the
+World Values Survey and adds what neither asked: questions about the 2010–11
+uprisings themselves, about political activity, and about what people use social
+media for.
+
+**It is the only survey here fielded in 2014 that records an interview date, and that
+is most of why it earns its place.** The archive's dated record had a two-year hole
+between Arab Barometer Wave III closing in March 2013 and Afrobarometer Round 6
+opening in April 2015; these 41 days sit inside it and cut the gap to 503 days. The
+Arab Opinion Index ran throughout that period but publishes no dates, so until now
+nothing in the archive could say what was asked on a known day between the two.
+
+Two warnings. It carries **no weight variable of any kind** — not an empty one, none
+at all — so it joins WVS Wave 6 and ISSP 2018 among the surveys you cannot weight.
+And its `REGION` codes, 700 to 730, are **unlabelled in the release**: thirty
+distinct places with no names attached, which the archive passes through as it found
+them rather than guessing.
+
+The public file also has no Algerian rows, though the project covered Algeria.
+
+It also supplies the archive's sharpest illustration of why a shared question is not
+a shared measurement. Three programmes ask the Churchill item — that democracy has
+problems but is better than the alternatives — each in its own words:
+
+| | Wording | Code 1 means |
+|---|---|---|
+| Arab Opinion Index | "Democracy has its own problems but remains better than other systems" | **Strongly agree** |
+| Arab Barometer | "Democratic systems may have problems, yet they are better than other systems" | **Strongly agree** |
+| Arab Transformations | "A democratic system may have problems, yet it is better than other systems" | **Strongly disagree** |
+
+All three are four-point agree/disagree scales. The third runs the **opposite way**,
+and nothing in the file says so — you find it only by opening the value labels. Pool
+these on the code and support for democracy inverts.
+
+The concordance will not catch this one either: it groups questions that appear in
+two or more surveys, and the Arab Transformations item appears in exactly one, so it
+never enters the table. That is what
+[`docs/question-concordance.md`](docs/question-concordance.md) means by a floor on
+what is comparable rather than a list of what is safe to combine, and it is why the
+democracy figures in this repository stay inside one programme at a time.
+
 ### What is not here
 
 [`docs/not-in-the-archive.md`](docs/not-in-the-archive.md) is the gap list: every
 Tunisia survey programme checked, whether it is in the archive, and if not, why.
-The short version is that **all seven series here are complete** — each starts where
+The short version is that **all eight series here are complete** — each starts where
 Tunisia entered it, not short of a wave — and the gaps are whole programmes. Three
-remain, each blocked by a different thing rather than by not having been found. The
-**Arab Transformations Project** (2014) is on the ACSS Dataverse and unrestricted,
-but the depositor requires a guestbook response before a download starts, so it
-cannot be fetched by script. **Pew Global Attitudes** (2012–14) needs a Pew account
-and its terms restrict redistribution. The **EU Neighbourhood Barometer** (2012–14)
-is at GESIS, which answers a scripted request with a challenge page — the same wall
-that made the ISSP file here a manual addition. The **Gallup World Poll** covers
-Tunisia continuously and cannot be added at all: it is sold under licence.
+remain. **Pew Global Attitudes** (2012–14) needs a Pew account and its terms restrict
+redistribution. The **EU Neighbourhood Barometer** (2012–14) is at GESIS, which
+answers a scripted request with a challenge page — the same wall that made the ISSP
+file here a manual addition, and the reason Tunisia's presence in it is still an
+inference rather than a fact. The **Gallup World Poll** covers Tunisia continuously
+and cannot be added at all: it is sold under licence.
 
 ### Surveys the EBRD and EIB run that are **not** here
 
@@ -281,42 +340,44 @@ nothing between series. [`docs/question-concordance.md`](docs/question-concordan
 does that instead: it ignores names and groups variables by the question itself,
 anywhere in the archive.
 
-**1,476 question groups span two or more surveys** — 1,398 word-for-word identical,
-78 near-identical. **29 span more than one series**, and those are the ones that make
+**1,477 question groups span two or more surveys** — 1,404 word-for-word identical,
+73 near-identical. **38 span more than one series**, and those are the ones that make
 a cross-programme comparison possible at all: employment status, marital status,
 trust in the police, in religious leaders and in government, internet use,
-interpersonal trust, household income, importance of religion, whether you would
-accept neighbours of various kinds.
+interpersonal trust, household income, importance of religion, interest in politics,
+whether you would accept neighbours of various kinds.
 
-Twenty-nine is small, and it is the honest number for lexical matching. Two questions
+Thirty-eight is small, and it is the honest number for lexical matching. Two questions
 that ask the same thing in different words are not found, so the concordance is a
 floor on what is comparable, not a ceiling.
 
-The scales are compared too, and that is where it gets bleak: **not one of the
-twenty-nine has an identical response scale** — fourteen differ outright, one is
-partly unlabelled, and for fourteen the release labels too little to tell either way.
-Every question two programmes both ask, they ask with different answer options —
-Afrobarometer scores internet use from never to every day, the Arab Opinion Index
-from daily to "I do not use the internet" — or with options the release does not
-label at all. A cross-programme series has to
+The scales are compared too, and that is where it gets bleak: **exactly one of the
+thirty-eight has an identical response scale, and it is the sex of the respondent** —
+sixteen differ outright, one is partly unlabelled, and for twenty the release labels
+too little to tell either way. Every substantive question two programmes both ask,
+they ask with different answer options — Afrobarometer scores internet use from never
+to every day, the Arab Opinion Index from daily to "I do not use the internet" — or
+with options the release does not label at all. A cross-programme series has to
 be built by recoding, question by question, with the codebooks open.
 
 ### Finding questions on a subject
 
 [`docs/topics/`](docs/topics) indexes the archive by subject rather than by variable:
-which of the 29 surveys carry anything on it, in which years, and which items recur
+which of the 30 surveys carry anything on it, in which years, and which items recur
 often enough to build a series from. The lexicon is
 [`catalog/topics.json`](catalog/topics.json) — a file to read and argue with, not a
 judgement buried in code.
 
-**[Inequality](docs/topics/inequality.md)** — 430 variables in 25 of the 29 surveys,
+**[Inequality](docs/topics/inequality.md)** — 434 variables in 26 of the 30 surveys,
 across economic gaps, gender, discrimination, wasta, equality as a principle, and
-opportunity. 45 recur across surveys and **not one recurs across two programmes**, so
-an inequality series can be built inside Arab Barometer or inside the Arab Opinion
-Index and not between them. The only two questions that name Tunisian inequality
+opportunity. 70 recur across surveys and **exactly one recurs across two
+programmes** — "women should have equal inheritance rights", asked by Arab Barometer
+Wave V and by Arab Transformations in 2014. It is not the exception it looks like:
+the two code the scale in opposite directions, so pooling them on the code reverses
+the finding. An inequality series still has to be built inside one programme. The only two questions that name Tunisian inequality
 directly — Afrobarometer Round 6's "The income gap between the rich and the poor" and
 "Regional inequality" — are country-specific items asked once, in 2015. Eight figures
-sit on that page. Four take a question as the unit: what the archive holds, which 22
+sit on that page. Four take a question as the unit: what the archive holds, which 40
 questions are asked in more than two surveys, how the share saying equality is applied
 moved, and how Tunisians answered in full. Three take a respondent as the unit, pooling
 the 15,539 Arab Opinion Index respondents asked the equality battery between 2012 and
@@ -338,7 +399,7 @@ the perception data and the two line up: across the seven regions, lived poverty
 share saying equality is applied correlate at **ρ = −0.89** — and the two axes come from
 different programmes, different respondents and different years.
 
-**[Perception of democracy](docs/topics/democracy-perception.md)** — 87 variables in 22
+**[Perception of democracy](docs/topics/democracy-perception.md)** — 89 variables in 23
 surveys: how democratic people say Tunisia is, how satisfied they are with the way it
 works, whether elections are judged free and fair, and what they take the word to mean.
 Assessment, not preference. The period is the point — Afrobarometer fielded Round 8
@@ -375,7 +436,7 @@ carry the change — trust in the army has sat at 94–99% across nine rounds an
 97% in 2011, when only a third approved of army rule. A constant cannot explain a change;
 what moved is trust in the elected legislature, from 42% to 14%.
 
-**[Regime preference](docs/topics/regime-preference.md)** — 167 variables in 23
+**[Regime preference](docs/topics/regime-preference.md)** — 179 variables in 27
 surveys: which system is preferred, support for the non-democratic alternatives
 (strong leader, army rule, unelected experts, rule by religious law), support for
 democracy against its stated drawbacks, whether democracy suits the country, and
@@ -455,11 +516,15 @@ docs is generated, from the releases in `data/raw/`:
 
 ```bash
 pip install -r scripts/requirements.txt
-python3 scripts/fetch_raw.py              # the two releases too large to commit
+python3 scripts/fetch_raw.py              # the three releases too large to commit
 python3 scripts/extract_tunisia.py        # extracts + codebooks + catalog
 python3 scripts/build_crosswalk.py        # docs/crosswalk.csv, -suggested.csv, crosswalk.md
 python3 scripts/build_question_concordance.py   # docs/question-concordance.csv, .md
 python3 scripts/build_topic_index.py      # docs/topics/<topic>.csv, .md
+                                          # ^ must precede the figure scripts below:
+                                          #   they read the topic CSVs, and running
+                                          #   them first draws a figure that is quietly
+                                          #   one survey short rather than failing
 python3 scripts/build_wave06_merge.py     # data/arab-barometer/wave-06-merged
 python3 scripts/build_missing_codes.py    # docs/missing-value-codes.md
 python3 scripts/build_coverage_figure.py  # main/figures/fieldwork-coverage.png
@@ -472,9 +537,10 @@ python3 scripts/verify.py                 # cell-by-cell against the releases
 
 `scripts/verify.py` re-derives every subset from its release and compares it cell
 by cell, checks the stacked Wave VI file against the three rounds it came from,
-confirms every recorded checksum, checks that every survey's questionnaire is
-present, opens as a PDF, is not shared with another survey, and records a source, and
-checks that every figure a topic page links to has been built. `--offline` is the quicker version, checking
+confirms every recorded checksum, checks that every survey's questionnaire and
+supporting documents are present, open (as a PDF, or as a Word document for the one
+instrument published that way), are not shared with another survey, and record a
+source, and checks that every figure a topic page links to has been built. `--offline` is the quicker version, checking
 the committed files against the catalog without re-reading the releases.
 
 ## Adding a survey

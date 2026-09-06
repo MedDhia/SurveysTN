@@ -86,12 +86,21 @@ and reports only the fieldwork years the publisher gives for the wave as a whole
 Tunisia-specific dates are given for them; the country report on the Arab Barometer
 site has them.
 
-Across the archive as a whole, fifteen of the twenty-nine surveys record an
-interview date per respondent, and the releases store them three different ways: as
-a date, as a number that encodes one (the World Values Survey's `20190515`, the Life
-in Transition Survey's Stata `%tc` milliseconds), and — SAHWA — as three separate
-columns for the day, the month and the year. `catalog/sources.json` names the
-variable or variables each window is derived from, and `interview_dates` in
+Across the archive as a whole, sixteen of the thirty surveys record an interview date
+per respondent, and no two programmes agree on how to store one. Three shapes so far:
+
+| Shape | Where |
+|---|---|
+| a column the reader already returns as a date | Arab Barometer's `DATE` (Waves III, VI and VII–VIII) and Afrobarometer's `DATEINTR` (all six rounds) |
+| a number that encodes a date, in a column typed as a number | WVS Wave 7's `J_INTDATE`, the integer `20190515`; Life in Transition's `start_date`, Stata `%tc` milliseconds since 1960-01-01; Arab Transformations' `DATEINT`, SPSS seconds since **1582-10-14** given an `F9.0` format |
+| three columns holding the day, the month and the year apart | SAHWA's `int_d`, `int_m`, `int_y` |
+
+The middle row is the one that bites: a column that is really a date but is typed as a
+number reads as a plausible integer, and a chart that hands it to a date parser
+without the format lands every interview in 1970 without complaining. That happened
+here once, to the Life in Transition dates, which is why the parsing lives in one
+function now instead of two. `catalog/sources.json` names the variable or variables
+each window is derived from and the shape it is in, and `interview_dates` in
 `scripts/extract_tunisia.py` is the one place that reads them, so a release cannot be
 dated one way in the catalogue and another way in the coverage figure. The remaining
 fourteen surveys carry no interview date and the catalogue reports the publisher's
@@ -111,6 +120,7 @@ which for every survey:
 | Life in Transition | country code **34**, in `country` |
 | ISSP | ISO code **788**, in `country`; the release is a Tunisia-only file, and the filter confirms it holds nothing else |
 | SAHWA | country code **5**, in `country` |
+| Arab Transformations | country code **7**, in `COUNTRY` |
 
 The filter runs even on a country file that holds nothing else, so a file is
 always checked to contain what its name claims rather than trusted.
@@ -148,7 +158,8 @@ belongs to the programme and the wave, never to this repository**.
 | Arab Opinion Index | Published by the Arab Center for Research and Policy Studies for research use. <https://arabindex.dohainstitute.org> |
 | Life in Transition | Published by the EBRD with the World Bank for public use. <https://www.ebrd.com> |
 | ISSP | GESIS study ZA7629, DOI [10.4232/1.13516](https://doi.org/10.4232/1.13516). Cite the study and its version. |
-| SAHWA | **CC BY-NC-SA 4.0**, the one explicit licence in the archive: attribution, non-commercial use, and share-alike on anything derived from it. DOI [10.5281/zenodo.5747748](https://doi.org/10.5281/zenodo.5747748). |
+| SAHWA | **CC BY-NC-SA 4.0**, the one fully specified licence in the archive: attribution, non-commercial use, and share-alike on anything derived from it. DOI [10.5281/zenodo.5747748](https://doi.org/10.5281/zenodo.5747748). |
+| Arab Transformations | The Aberdeen deposit says "Published under creative commons" and **names no variant**; the record's licence field reads "Unspecified". Every CC licence permits redistribution with attribution, which is what this archive does, but anyone needing a specific permission — commercial use, or redistributing a modified version — should confirm the variant with the depositors rather than rely on this note. |
 
 The share-alike condition on SAHWA travels with the data, so a derivative built from
 those 2,000 respondents carries it whether or not the rest of your work does.

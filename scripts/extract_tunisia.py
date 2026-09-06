@@ -360,6 +360,17 @@ def parse_fieldwork_dates(values: pd.Series, fmt: str | None) -> pd.Series:
     Life in Transition release's Stata dates were handled in one place and not the
     other, and a survey with 75 dated days was drawn as though it recorded only a year.
     """
+    if fmt == "spss-seconds":
+        # SPSS counts seconds from 1582-10-14, the start of the Gregorian calendar.
+        # The Arab Transformations release stores the interview date that way but
+        # gives the column an F9.0 format, so it arrives as a bare number rather than
+        # a date and nothing downstream would guess. pandas cannot hold 1582 as an
+        # origin at nanosecond resolution, so the arithmetic is done in datetime.
+        epoch = datetime.date(1582, 10, 14)
+        parsed = values.dropna().map(
+            lambda v: epoch + datetime.timedelta(seconds=float(v))
+        )
+        return pd.to_datetime(pd.Series(list(parsed), index=parsed.index), errors="coerce").dropna()
     if fmt == "stata-tc":
         # Stata's %tc is milliseconds since 1960-01-01. pyreadstat hands it back as a
         # raw number here rather than a datetime, and reading it as epoch nanoseconds
@@ -377,10 +388,10 @@ def parse_fieldwork_dates(values: pd.Series, fmt: str | None) -> pd.Series:
 def interview_dates(df: pd.DataFrame, spec: dict) -> pd.Series:
     """Every interview date a release records, however it stores them.
 
-    Three shapes so far: one column holding a date, one column holding a number that
-    encodes a date, and -- SAHWA -- three columns holding the day, the month and the
-    year apart. Shared with the coverage figure so a release cannot be dated one way
-    in the catalogue and another way in the chart.
+    Three shapes so far: one column the reader already returns as a date, one column
+    holding a number that encodes a date, and -- SAHWA -- three columns holding the
+    day, the month and the year apart. Shared with the coverage figure so a release
+    cannot be dated one way in the catalogue and another way in the chart.
     """
     parts = spec.get("fieldwork_date_parts")
     if parts:
