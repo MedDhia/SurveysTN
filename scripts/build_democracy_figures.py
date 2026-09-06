@@ -37,7 +37,7 @@ from build_inequality_figures import (
 )
 from build_inequality_breakdowns import REGIONS, share
 
-PRIMARY, SECOND, THIRD = "#2a78d6", "#eb6834", "#1baf7a"
+PRIMARY, SECOND, THIRD = "#0072b2", "#d55e00", "#009e73"
 COUP = "25 July 2021"
 
 EXTENT = re.compile(r"extent of democracy|niveau de d[ée]mocratie$", re.I)
@@ -253,8 +253,8 @@ def ratings_figure(afro: pd.DataFrame) -> None:
     points = distribution(afro, "extent")
     years = [y for y, _ in points]
     ys = [p[1][3] + p[1][4] for p in points]
-    ax.plot(years, ys, color="#1baf7a", lw=2.2, zorder=3)
-    ax.plot(years, ys, "o", color="#1baf7a", ms=6, mec=SURFACE, mew=1.3, zorder=4)
+    ax.plot(years, ys, color=THIRD, lw=2.2, zorder=3)
+    ax.plot(years, ys, "o", color=THIRD, ms=6, mec=SURFACE, mew=1.3, zorder=4)
     for year, value in zip(years, ys):
         ax.annotate(f"{value:.0%}", (year, value), textcoords="offset points", xytext=(0, 11),
                     ha="center", fontsize=8, color=INK, fontweight="bold")
@@ -335,7 +335,7 @@ def who_figure(afro: pd.DataFrame) -> None:
                 errors.append(half if effective >= 40 else 0.0)
             offset = (i - 1) * width
             ax.bar([x + offset for x in range(len(keys))], values, width=width * 0.92,
-                   color=[PRIMARY, SECOND, "#1baf7a"][i], edgecolor=SURFACE, linewidth=1.0,
+                   color=[PRIMARY, SECOND, THIRD][i], edgecolor=SURFACE, linewidth=1.0,
                    label=str(year), zorder=2)
             ax.errorbar([x + offset for x in range(len(keys))], values, yerr=errors, fmt="none",
                         ecolor=INK_FAINT, elinewidth=1.1, capsize=2.4, zorder=3)
@@ -751,7 +751,7 @@ def strongman_figure() -> None:
 
     ax = axes[1]
     ax.set_facecolor(SURFACE)
-    palette = (PRIMARY, SECOND, THIRD, "#4a3aa7", "#eda100")
+    palette = (PRIMARY, SECOND, THIRD, "#cc79a7", "#e69f00")
     for i, (colour, (name, points)) in enumerate(zip(palette, constraints.items())):
         if points:
             # Five lines converging in a 20-point band cannot each carry an end label.

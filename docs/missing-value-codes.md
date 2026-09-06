@@ -2141,3 +2141,58 @@ that list, and is not guessed here.
 | `-98` | Not applicable (no supervisor) | 1 |
 | `-99` | Refused/Prefer not to say | 1 |
 | `—` | Refused | 1 |
+
+## International Social Survey Programme Religion IV (2018)
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `9` | No answer | 85 |
+| `99` | No answer | 19 |
+| `8` | Don't know | 14 |
+| `98` | Don't know | 12 |
+| `97` | Refused | 10 |
+| `998` | Don't know | 6 |
+| `7` | Refused | 5 |
+| `999` | No answer | 4 |
+| `9999` | No answer | 4 |
+| `997` | Refused | 3 |
+| `9600` | Refuse workers and other elementary workers | 2 |
+| `9610` | Refuse workers | 2 |
+| `9612` | Refuse sorters | 2 |
+| `9998` | Don't know, inadequately described | 2 |
+| `999997` | Refused | 2 |
+| `999998` | Don't know | 2 |
+| `999999` | No answer | 2 |
+| `2` | Don't know whether there is a God and no way to find out | 1 |
+| `99` | No answer; NAV (TN) | 1 |
+| `99` | No Answer | 1 |
+
+## SAHWA Youth Survey 2015
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `12` | No answer | 23 |
+| `961` | Refuse Workers | 5 |
+| `9999` | No answer | 5 |
+| `99` | No answer | 3 |
+| `7` | Do not Know | 2 |
+| `1` | Employer refuses to insure me | 1 |
+| `12` | refus de mon pÌre | 1 |
+| `14` | G. Do not Know | 1 |
+| `18` | Refused to answer | 1 |
+| `2` | A refusé de poursuivre les études | 1 |
+| `20` | Refused to answer | 1 |
+| `21` | Refus du patron de m'assurer | 1 |
+| `22` | Refused to answer | 1 |
+| `25` | refus du fiancé | 1 |
+| `3` | Do not Know | 1 |
+| `3` | Don't know/not sure | 1 |
+| `37` | Refused to answer | 1 |
+| `38` | refus de fiancé | 1 |
+| `4` | Refused to answer | 1 |
+| `5` | Don't know | 1 |
+| `6` | Do not Know | 1 |
+| `7` | Parents refusal | 1 |
+| `8` | Spouse`s refusal | 1 |
+| `8` | Refused to answer | 1 |
+| `999` | No answer | 1 |

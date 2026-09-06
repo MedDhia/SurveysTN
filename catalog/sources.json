@@ -60,6 +60,27 @@
         "tunisia": 34
       },
       "prefix": "lits"
+    },
+    "issp": {
+      "name": "International Social Survey Programme",
+      "publisher": "GESIS – Leibniz Institute for the Social Sciences, Cologne",
+      "homepage": "https://issp.org/",
+      "data_page": "https://search.gesis.org/research_data/ZA7629",
+      "country_variable_values": {
+        "tunisia": 788
+      },
+      "prefix": "issp"
+    },
+    "sahwa": {
+      "name": "SAHWA Youth Survey",
+      "publisher": "CIDOB (Barcelona Centre for International Affairs), with RECSM, Universitat Pompeu Fabra",
+      "homepage": "https://www.cidob.org/en/projects/sahwa",
+      "data_page": "https://doi.org/10.5281/zenodo.5747748",
+      "country_variable_values": {
+        "tunisia": 5
+      },
+      "prefix": "sahwa",
+      "licence": "CC BY-NC-SA 4.0, as published on Zenodo"
     }
   },
   "waves": [
@@ -707,6 +728,55 @@
         "note": "Not parsed for question text: the release carries a variable label for every variable, so the wording is already in the data and does not need recovering from the questionnaire."
       },
       "notes": "Fourth round of the EBRD/World Bank Life in Transition Survey, the first to include Tunisia. A household and attitudinal survey rather than a firm survey. Date and time columns are stored in Stata's %tc form, milliseconds since 1960-01-01, and are left as the release stores them."
+    },
+    {
+      "series": "issp",
+      "wave": 2018,
+      "wave_label": "Religion IV (2018)",
+      "slug": "2018-religion",
+      "raw_file_stem": "ZA7629_v1-0-0",
+      "source_format": "sav",
+      "country_var": "country",
+      "country_value": 788,
+      "fieldwork_years_series": "2018",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "the release records the year only: DATEMO and DATEDY are coded 'not provided' for every respondent",
+      "questionnaire": {
+        "file": "docs/questionnaires/issp-2018-questionnaire.pdf",
+        "url": "https://search.gesis.org/research_data/ZA7629",
+        "language": "English",
+        "parsed_for_question_text": false,
+        "note": "Not parsed for question text: the release labels every variable with its question, so the wording is already in the data."
+      },
+      "notes": "ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: GESIS excluded it because the fieldwork used quota sampling rather than a probability sample, and because background variables were missing from the first deposit. It also carries no weight — the WEIGHT variable is empty and labelled 'No weighting' — and no interview dates. Treat it as the least comparable survey in this archive."
+    },
+    {
+      "series": "sahwa",
+      "wave": 2015,
+      "wave_label": "2015",
+      "slug": "2015-youth",
+      "raw_file_stem": "SAHWA_Data_file_edition_4.0",
+      "source_format": "sav",
+      "country_var": "country",
+      "country_value": 5,
+      "fieldwork_years_series": "2015-2016",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_parts": {
+        "year": "int_y",
+        "month": "int_m",
+        "day": "int_d"
+      },
+      "fieldwork_source": "derived from the int_y, int_m and int_d variables in the data file",
+      "download_url": "https://zenodo.org/api/records/5747748/files/4%20-%20SAHWA%20Youth%20Survey%20Data_Edition%204.0.zip/content",
+      "download_archive_member": "SAHWA data version 4 -CIDOB/SAHWA_Data file edition 4.0.sav",
+      "questionnaire": {
+        "file": "docs/questionnaires/sahwa-2015-tunisia-questionnaire.pdf",
+        "url": "https://zenodo.org/api/records/5747748/files/2%20-%20SAHWA%20Questionnaires.zip/content",
+        "language": "French and Arabic",
+        "parsed_for_question_text": false,
+        "note": "The Tunisian national questionnaire, taken from the questionnaire archive on the Zenodo deposit. Not parsed for question text: the release labels every one of its 843 variables, so the wording is already in the data."
+      },
+      "notes": "Edition 4.0 of the SAHWA Youth Survey, a five-country survey of 15-to-29-year-olds run by CIDOB with RECSM at Universitat Pompeu Fabra. Tunisian fieldwork ran in September and October 2015, ahead of the 2016 the dataset is named for. It is the only survey in the archive restricted to young people by design, so its marginals are not comparable with the general-population surveys beside it. Published on Zenodo under CC BY-NC-SA 4.0."
     }
   ]
 }

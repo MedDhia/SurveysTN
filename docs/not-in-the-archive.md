@@ -7,7 +7,7 @@ why not.
 Checked September 2026 against the publishers' own catalogues. Where a claim rests
 on a source rather than on the data in this repository, the source is linked.
 
-## The five series here are complete
+## The seven series here are complete
 
 Each series starts where it does because that is when Tunisia entered it, not
 because a wave is missing.
@@ -19,10 +19,14 @@ because a wave is missing.
 | Afrobarometer | Rounds 5–10 (6 surveys) | Afrobarometer's own [country page](https://www.afrobarometer.org/countries/tunisia/) records surveys in 2013, 2015, 2018, 2020, 2022 and 2024 — six, and all six are here. North Africa entered the series with the round fielded in Tunisia in January 2013. |
 | Arab Opinion Index | All 9 rounds, 2011 to 2024/2025 | The series began in 2011; every round since is here. |
 | Life in Transition | Round IV only | [LiTS I–III](https://www.ebrd.com/home/what-we-do/office-of-the-chief-economist/lits/life-in-transition-survey-data.html) did not cover Tunisia. Round IV (2022–23) is the first to. |
+| ISSP | Religion IV (2018) only | Tunisia has taken part in one ISSP module. GESIS releases it on its own as [ZA7629](https://search.gesis.org/research_data/ZA7629) rather than inside the ISSP 2018 international file, because the fieldwork used quota sampling and background variables were missing from the first deposit. No other module carries a Tunisian sample. |
+| SAHWA | Youth Survey 2015 only | The [SAHWA project](https://www.cidob.org/en/projects/sahwa) ran one survey round, in 2015–16, and Tunisia is in it. The project ended in 2017 and no second round was fielded. |
 
 **Open at the far end.** WVS Wave 8 is in the field for 2024–2026 and Tunisia's
 participation is not yet established; Arab Barometer, Afrobarometer, the Arab
-Opinion Index and LiTS are all continuing series. This list will go stale.
+Opinion Index and LiTS are all continuing series, and the ISSP fields a module a
+year that Tunisia may rejoin. SAHWA is the one closed series: the project ended, so
+its row will not grow. This list will go stale.
 
 ## Programmes covering Tunisia that are absent
 
@@ -34,9 +38,8 @@ everything here — and their microdata is obtainable.
 | Programme | Tunisia coverage | Access |
 |---|---|---|
 | **Pew Global Attitudes** | 2012, 2013 and 2014, ~1,000 face-to-face interviews each ([2014 methods](https://www.pewresearch.org/global/2014/10/15/tunisia-survey-methods-2/)) | Free Pew Research Center account. Their terms restrict redistribution, so a clone could not carry the files; the catalogue entry and a fetch script could. |
-| **SAHWA Youth Survey** | 2015–16, ages 15–29, with Algeria, Egypt, Lebanon and Morocco ([RECSM](https://www.upf.edu/web/survey/news/-/asset_publisher/ofbCGbfUHIIg/content/id/253561668/maximized)) | Published microdata. The strongest candidate: a youth survey is a gap nothing here fills. |
-| **EU Neighbourhood Barometer** | six waves, 2012–2014, ~1,000 interviews per country per wave ([GESIS](https://www.gesis.org/en/services/finding-and-accessing-data/international-survey-programs/eu-neighbourhood-barometer)) | GESIS archive. Covers the Southern Neighbourhood; **Tunisia's inclusion in each wave is not yet confirmed** and should be checked wave by wave before any of it is added. |
-| **Arab Transformations Project** | 2014, alongside Egypt, Iraq, Jordan, Libya and Morocco ([FP7 project](https://cordis.europa.eu/project/id/320214/reporting)) | Deposited from an EU FP7 project. **The archive location is not yet confirmed** — this one needs tracing before it can be promised. |
+| **EU Neighbourhood Barometer** | six waves, 2012–2014, ~1,000 interviews per country per wave ([GESIS](https://www.gesis.org/en/services/finding-and-accessing-data/international-survey-programs/eu-neighbourhood-barometer)) | GESIS archive, wave by wave: ZA6289 is Wave 2 (autumn 2012), ZA6290 Wave 3 (spring 2013). The programme covers the Southern Neighbourhood from Morocco to Lebanon, so Tunisia is almost certainly in it, but **that has not been checked against a release** and should be, wave by wave, before any of it is added. |
+| **Arab Transformations Project** | 2014, alongside Egypt, Iraq, Jordan, Libya and Morocco ([FP7 project](https://cordis.europa.eu/project/id/320214/reporting)) | **Located**: the ACSS Dataverse, [doi:10.25825/FK2/GTR0HI](https://doi.org/10.25825/FK2/GTR0HI), which holds the public dataset in Stata and tab-delimited form alongside the project's methods handbook. The files are not restricted, but the depositor requires a guestbook response — you identify yourself before the download starts — so they are not fetchable by script and are not carried here. Download them by hand and the extractor can take them. |
 
 ### Cover Tunisia but do not fit
 
@@ -65,6 +68,16 @@ Foundation's Intercultural Trends survey, Transparency International's Global
 Corruption Barometer MENA editions, the ILO School-to-Work Transition Survey, and
 one-off academic surveys fielded in Tunisia after 2011 and deposited with ICPSR or
 the UK Data Service. Each may cover Tunisia; none has been verified either way.
+
+## What the last pass could not reach
+
+Recorded so that a later attempt starts from the right place rather than repeating
+the work: **GESIS is not reachable from an automated client** — `dbk.gesis.org`,
+`search.gesis.org` and `www.gesis.org` all answer a scripted request with a
+challenge page. That is why the ISSP file in this archive was added by hand, and why
+the EU Neighbourhood Barometer's Tunisia coverage above is still an inference from
+the programme description rather than a fact read off a release. Both need a browser
+and a GESIS account.
 
 Regenerating this list is manual. If you add a programme, record it in
 `catalog/sources.json` and move its row out of this file.

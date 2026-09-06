@@ -2059,6 +2059,138 @@
         }
       },
       "notes": "Fourth round of the EBRD/World Bank Life in Transition Survey, the first to include Tunisia. A household and attitudinal survey rather than a firm survey. Date and time columns are stored in Stata's %tc form, milliseconds since 1960-01-01, and are left as the release stores them."
+    },
+    {
+      "series": "issp",
+      "series_name": "International Social Survey Programme",
+      "series_prefix": "issp",
+      "key": "issp-w2018",
+      "wave": 2018,
+      "part": null,
+      "wave_label": "Religion IV (2018)",
+      "tag": "w2018",
+      "slug": "2018-religion",
+      "country": "Tunisia",
+      "country_value": 788,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 0,
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 1218,
+      "n_variables": 139,
+      "n_variables_with_data": 138,
+      "n_respondents_pooled_release": 1218,
+      "n_countries_pooled_release": 1,
+      "is_country_file": true,
+      "fieldwork_years_series": "2018",
+      "fieldwork_tunisia": null,
+      "fieldwork_source": "the release records the year only: DATEMO and DATEDY are coded 'not provided' for every respondent",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ZA7629_v1-0-0.sav",
+      "source_sha256": "c6858640b0405668aca0b032780679f78102944d5c89bf40a95d01b96ea59640",
+      "csv_answers_read_as_missing": {
+        "TN_DEGR": [
+          "NA"
+        ]
+      },
+      "path": "data/issp/2018-religion",
+      "files": {
+        "codebook.csv": {
+          "bytes": 115448,
+          "sha256": "1cff162d455d28201444599530a99a6077b8c4ad48f05b9554af3f6428580add"
+        },
+        "codebook.json": {
+          "bytes": 147569,
+          "sha256": "a1fe3dc9d805e3de8fbd9e2589fd51b6515321f2af30f8f48d822b7153623e36"
+        },
+        "issp-w2018-tunisia-codes.csv": {
+          "bytes": 773198,
+          "sha256": "42b407f7958b1b5de072cdb7b3cdaf70772c0c54ab462997a7f56dc37930b369"
+        },
+        "issp-w2018-tunisia-labels.csv": {
+          "bytes": 3086481,
+          "sha256": "8eb22bb3c2ef629b85442aea18a3b72256319706145ee5a9008b2d0fad8ba6a3"
+        },
+        "issp-w2018-tunisia.dta": {
+          "bytes": 1571345,
+          "sha256": "02e6c8cd124d09fc585dd296848b9081e093066cd8d90706ed14785881889d64"
+        },
+        "issp-w2018-tunisia.sav": {
+          "bytes": 1508527,
+          "sha256": "cb62c519cdab8b4fab5fd44925cbf4e1afe955b1fe024c9ebe85a2b6ab9127d9"
+        }
+      },
+      "notes": "ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: GESIS excluded it because the fieldwork used quota sampling rather than a probability sample, and because background variables were missing from the first deposit. It also carries no weight — the WEIGHT variable is empty and labelled 'No weighting' — and no interview dates. Treat it as the least comparable survey in this archive."
+    },
+    {
+      "series": "sahwa",
+      "series_name": "SAHWA Youth Survey",
+      "series_prefix": "sahwa",
+      "key": "sahwa-w2015",
+      "wave": 2015,
+      "part": null,
+      "wave_label": "2015",
+      "tag": "w2015",
+      "slug": "2015-youth",
+      "country": "Tunisia",
+      "country_value": 5,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 0,
+      "value_labels_dropped_on_temporal_columns": [],
+      "n_respondents": 2000,
+      "n_variables": 843,
+      "n_variables_with_data": 735,
+      "n_respondents_pooled_release": 9860,
+      "n_countries_pooled_release": 5,
+      "is_country_file": false,
+      "fieldwork_years_series": "2015-2016",
+      "fieldwork_tunisia": "2015-09-01 to 2015-10-20",
+      "fieldwork_source": "derived from the int_y, int_m and int_d variables in the data file",
+      "language": "English (translated instrument and labels)",
+      "source_format": "sav",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "SAHWA_Data_file_edition_4.0.sav",
+      "source_sha256": "ffdfa9d021ab5e072be325cad30fcb487fa1b622700d0da05d0e4cd1d3aaa3e7",
+      "csv_answers_read_as_missing": {
+        "MIG514": [
+          "None"
+        ]
+      },
+      "path": "data/sahwa/2015-youth",
+      "files": {
+        "codebook.csv": {
+          "bytes": 223481,
+          "sha256": "bc6fe283e5579906768716d95d2d6b98e574a56beef5bbe4ddc8b6bded531787"
+        },
+        "codebook.json": {
+          "bytes": 419518,
+          "sha256": "e85f1d902c99da4b8ffbe8c8124595563aa087998edbdc74c0dcf86d0335360e"
+        },
+        "sahwa-w2015-tunisia-codes.csv": {
+          "bytes": 4551183,
+          "sha256": "28036cf860ed4d1597f79b3854466809dcc4e9553eb50968010ffd77a0886de2"
+        },
+        "sahwa-w2015-tunisia-labels.csv": {
+          "bytes": 9334943,
+          "sha256": "5a6f01effe4b05d02ba7acb7cbc48955ff1fc33e7e5ace56dd3b1b3bfd24d033"
+        },
+        "sahwa-w2015-tunisia.dta": {
+          "bytes": 14279910,
+          "sha256": "7f708dcf5e1976fd0b8b2b8afa0830b995067ddd29d17d1eafeb9eb36f7d2be2"
+        },
+        "sahwa-w2015-tunisia.sav": {
+          "bytes": 13740835,
+          "sha256": "b7744731ba701b6914b199d4f971a8ae1076c8244dd145deb71a9054f84e4262"
+        }
+      },
+      "notes": "Edition 4.0 of the SAHWA Youth Survey, a five-country survey of 15-to-29-year-olds run by CIDOB with RECSM at Universitat Pompeu Fabra. Tunisian fieldwork ran in September and October 2015, ahead of the 2016 the dataset is named for. It is the only survey in the archive restricted to young people by design, so its marginals are not comparable with the general-population surveys beside it. Published on Zenodo under CC BY-NC-SA 4.0."
     }
   ]
 }

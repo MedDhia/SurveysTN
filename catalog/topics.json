@@ -210,7 +210,8 @@
             "how appropriate each of these would be for your country",
             "describe different political systems",
             "mention some of the political systems",
-            "system of government (should|would)"
+            "system of government (should|would)",
+            "representatives depend on and should be accountable to the citiz"
           ]
         },
         "non-democratic-alternatives": {
@@ -228,7 +229,8 @@
             "no need for experts",
             "governed by (islamic|religious) law",
             "(islamic|religious) law .{0,40}(no|without) (political parties|elections)",
-            "reject islamic law system"
+            "reject islamic law system",
+            "depends neither on parliament nor elections"
           ]
         },
         "democracy-support": {

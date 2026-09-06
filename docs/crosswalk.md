@@ -185,11 +185,33 @@ not answer options.
 
 ## Life in Transition Survey
 
-1,319 variables across 1 surveys, 1,319 with question text.
+1,319 variables across 1 survey, 1,319 with question text.
 
 | Surveys | Variables |
 |---:|---:|
 | 1 | 1,319 |
+
+Only one survey in this series so far, so there is nothing to match it
+against; the rows carry its names and question text and wait for a second.
+
+## International Social Survey Programme
+
+139 variables across 1 survey, 138 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 1 | 139 |
+
+Only one survey in this series so far, so there is nothing to match it
+against; the rows carry its names and question text and wait for a second.
+
+## SAHWA Youth Survey
+
+843 variables across 1 survey, 843 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 1 | 843 |
 
 Only one survey in this series so far, so there is nothing to match it
 against; the rows carry its names and question text and wait for a second.
@@ -316,6 +338,8 @@ releases that carry wording as labels:
 | Arab Opinion Index 2022 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Arab Opinion Index 2024/2025 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Life in Transition Survey Round IV | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| International Social Survey Programme Religion IV (2018) | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| SAHWA Youth Survey 2015 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 
 Agreement is the share of comparable variables where the parsed text and the
 release label match at a difflib ratio of 0.6 or better. It is a check on the

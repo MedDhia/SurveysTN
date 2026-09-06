@@ -588,7 +588,8 @@ def render_summary(
             "",
             f"## {series_names.get(series, series)}",
             "",
-            f"{len(block):,} variables across {len(series_tags)} surveys, "
+            f"{len(block):,} variables across {len(series_tags)} "
+            f"{'survey' if len(series_tags) == 1 else 'surveys'}, "
             f"{int((block['question_text'] != '').sum()):,} with question text.",
             "",
             "| Surveys | Variables |",

@@ -371,7 +371,14 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
     same_frame(expect, got_dta, f"{tag} .dta", errors)
 
     if s["has_numeric_codes"]:
-        got_csv = pd.read_csv(f"{stem}-codes.csv", low_memory=False)
+        # float_precision="round_trip" or this check reports a difference the archive
+        # does not have. ISSP's CASEID is a sixteen-digit integer held in a double,
+        # where one unit in the last place is 0.25; the CSV writes the exact decimal,
+        # but pandas' default float parser is only good to about fifteen digits and
+        # hands back a value a quarter out. The value is right in the file and in the
+        # .sav and .dta; only the reader was losing it.
+        got_csv = pd.read_csv(f"{stem}-codes.csv", low_memory=False,
+                              float_precision="round_trip")
         same_frame(expect, got_csv, f"{tag} -codes.csv", errors)
         if s["has_value_labels"]:
             check_labels_csv(expect, Path(f"{stem}-labels.csv"), value_labels, tag, errors)

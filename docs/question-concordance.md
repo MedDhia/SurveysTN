@@ -11,7 +11,7 @@ variables by name and only within a series, which traces one programme through
 its own waves. This ignores names entirely and groups by the question itself, so
 it can answer what two different programmes both asked.
 
-**1,474 question groups span two or more surveys.** 1,397 are word-for-word identical and 77 are near-identical. **24 span more than one series** — those are the ones that make a
+**1,476 question groups span two or more surveys.** 1,398 are word-for-word identical and 78 are near-identical. **29 span more than one series** — those are the ones that make a
 cross-programme comparison possible at all.
 
 ## Across series
@@ -33,15 +33,20 @@ cross-programme comparison possible at all.
 | Q83. Most people can be trusted | Afro, WVS | 4 | unknown |
 | eg311 Suppose that presidential elections were to be held tomorrow and that you have… | AB, AOI | 4 | differs |
 | Q43c.arb. Democratic systems are not effective at maintaining order and stability | AB, Afro | 3 | differs |
-| Q201A_41. Regional government | AB, ebrd-life-in-transition | 3 | differs |
-| Q98b. Importance of religion | Afro, ebrd-life-in-transition | 2 | differs |
+| Q201A_41. Regional government | AB, LiTS | 3 | differs |
+| Year of birth | ISSP, WVS | 3 | unknown |
+| MA - Confidence in the Arab League | SAHWA, WVS | 3 | unknown |
+| MA - Confidence in the United Nations | SAHWA, WVS | 3 | unknown |
+| Q98b. Importance of religion | Afro, LiTS | 2 | differs |
 | Q59k. Trust government | AB, Afro | 2 | differs |
-| q1015 Monthly household income | AB, ebrd-life-in-transition | 2 | unknown |
-| Q201A_5. Local government | AB, ebrd-life-in-transition | 2 | differs |
+| q1015 Monthly household income | AB, LiTS | 2 | unknown |
+| Q201A_5. Local government | AB, LiTS | 2 | differs |
 | MODE OF DATA COLLECTION | AB, WVS | 2 | unknown |
-| Q540B_2 Air pollution | AB, ebrd-life-in-transition | 2 | partly-labelled |
-| None of these | AB, ebrd-life-in-transition | 2 | differs |
-| Start time of the interview [HH.MM] | WVS, ebrd-life-in-transition | 2 | unknown |
+| Q540B_2 Air pollution | AB, LiTS | 2 | partly-labelled |
+| None of these | AB, LiTS | 2 | differs |
+| O7 People can be trusted | ISSP, LiTS | 2 | differs |
+| Start time of the interview [HH.MM] | LiTS, WVS | 2 | unknown |
+| Digital Object Identifier | ISSP, WVS | 2 | unknown |
 
 ## Do the answer options match?
 
@@ -54,11 +59,11 @@ are inventoried in [`missing-value-codes.md`](missing-value-codes.md) already.
 | `identical` | 772 | same options, same codes; poolable as they stand |
 | `recodable` | 0 | same options, different codes; align the codes first |
 | `reversed` | 0 | same options, but at least one survey codes them in the opposite order |
-| `differs` | 377 | not the same options; not one variable however alike the wording |
+| `differs` | 378 | not the same options; not one variable however alike the wording |
 | `partly-labelled` | 44 | a survey leaves some of its values unlabelled, so the labels understate the scale |
-| `unknown` | 281 | a member's release ships no value labels, so there is nothing to compare |
+| `unknown` | 282 | a member's release ships no value labels, so there is nothing to compare |
 
-**Not one of the 24 cross-series groups scores `identical`.** Every question two
+**Not one of the 29 cross-series groups scores `identical`.** Every question two
 programmes both ask, they ask with different answer options or with options this
 archive cannot see. The overlap that survives a wording comparison does not
 survive a scale comparison, and a cross-programme series here has to be built by

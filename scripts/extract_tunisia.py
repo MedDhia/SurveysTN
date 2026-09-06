@@ -374,6 +374,34 @@ def parse_fieldwork_dates(values: pd.Series, fmt: str | None) -> pd.Series:
     return pd.to_datetime(values, format=fmt, errors="coerce").dropna()
 
 
+def interview_dates(df: pd.DataFrame, spec: dict) -> pd.Series:
+    """Every interview date a release records, however it stores them.
+
+    Three shapes so far: one column holding a date, one column holding a number that
+    encodes a date, and -- SAHWA -- three columns holding the day, the month and the
+    year apart. Shared with the coverage figure so a release cannot be dated one way
+    in the catalogue and another way in the chart.
+    """
+    parts = spec.get("fieldwork_date_parts")
+    if parts:
+        year, month, day = (df[c] for c in (parts["year"], parts["month"], parts["day"]))
+        frame = pd.DataFrame({"year": year, "month": month, "day": day}).dropna()
+        return pd.to_datetime(frame.astype(int), errors="coerce").dropna()
+    var = spec.get("fieldwork_date_var")
+    if not var or var not in df.columns:
+        return pd.Series(dtype="datetime64[ns]")
+    return parse_fieldwork_dates(df[var], spec.get("fieldwork_date_format"))
+
+
+def date_columns(spec: dict) -> list[str]:
+    """The columns interview_dates needs, for a reader that loads only some of them."""
+    parts = spec.get("fieldwork_date_parts")
+    if parts:
+        return [parts["year"], parts["month"], parts["day"]]
+    var = spec.get("fieldwork_date_var")
+    return [var] if var else []
+
+
 def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
     # Some releases record no interview date but do carry the month fieldwork
     # started and ended, as YYYYMM constants.
@@ -386,12 +414,11 @@ def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
         last = pd.to_datetime(end.max(), format="%Y%m")
         return f"{first:%B %Y} to {last:%B %Y}"
 
-    var = spec.get("fieldwork_date_var")
-    if spec.get("fieldwork_tunisia") != "derive" or not var or var not in df.columns:
+    if spec.get("fieldwork_tunisia") != "derive":
         return None
-    # WVS stores the interview date as the integer 20190515, which only reads as a
-    # date if the format is given.
-    dates = parse_fieldwork_dates(df[var], spec.get("fieldwork_date_format"))
+    if any(c not in df.columns for c in date_columns(spec)):
+        return None
+    dates = interview_dates(df, spec)
     if dates.empty:
         return None
     return f"{dates.min():%Y-%m-%d} to {dates.max():%Y-%m-%d}"

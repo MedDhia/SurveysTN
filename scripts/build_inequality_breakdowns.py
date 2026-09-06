@@ -43,7 +43,7 @@ from build_inequality_figures import (
 )
 
 REGIONS = ROOT / "catalog" / "tunisia-regions.json"
-PRIMARY, SECOND = "#2a78d6", "#eb6834"
+PRIMARY, SECOND = "#0072b2", "#d55e00"
 
 # The battery is asked as "is equality applied regardless of X"; X is the dimension.
 DIMENSIONS = {

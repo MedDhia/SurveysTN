@@ -50,7 +50,7 @@ from build_inequality_figures import (
 )
 from build_inequality_breakdowns import REGIONS, share
 
-PRIMARY, SECOND, ACCENT = "#2a78d6", "#eb6834", "#104281"
+PRIMARY, SECOND, ACCENT = "#0072b2", "#d55e00", "#104281"
 
 # A governorate enters a figure only with this many effective respondents on the measure
 # being drawn. Applied identically everywhere, so the figures agree on which places exist.

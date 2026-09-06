@@ -86,6 +86,17 @@ and reports only the fieldwork years the publisher gives for the wave as a whole
 Tunisia-specific dates are given for them; the country report on the Arab Barometer
 site has them.
 
+Across the archive as a whole, fifteen of the twenty-nine surveys record an
+interview date per respondent, and the releases store them three different ways: as
+a date, as a number that encodes one (the World Values Survey's `20190515`, the Life
+in Transition Survey's Stata `%tc` milliseconds), and — SAHWA — as three separate
+columns for the day, the month and the year. `catalog/sources.json` names the
+variable or variables each window is derived from, and `interview_dates` in
+`scripts/extract_tunisia.py` is the one place that reads them, so a release cannot be
+dated one way in the catalogue and another way in the coverage figure. The remaining
+fourteen surveys carry no interview date and the catalogue reports the publisher's
+own fieldwork years for the wave, never a Tunisian window inferred from them.
+
 ## Country identification
 
 Each series identifies Tunisia its own way, and `catalog/sources.json` records
@@ -97,6 +108,9 @@ which for every survey:
 | World Values Survey | ISO code **788**, in `B_COUNTRY` in Wave 7 and `V2` in Wave 6 |
 | Afrobarometer | no country column at all — the country files carry respondent numbers prefixed `TUN`, so the filter matches on the prefix of `RESPNO` |
 | Arab Opinion Index | country code **2**, in `Q1`, in every round from 2011 to 2024/2025 |
+| Life in Transition | country code **34**, in `country` |
+| ISSP | ISO code **788**, in `country`; the release is a Tunisia-only file, and the filter confirms it holds nothing else |
+| SAHWA | country code **5**, in `country` |
 
 The filter runs even on a country file that holds nothing else, so a file is
 always checked to contain what its name claims rather than trusted.
@@ -108,8 +122,9 @@ always checked to contain what its name claims rather than trusted.
 | `.dta` | Stata caps a variable label at 80 characters. Longer labels are truncated with a trailing `...`. Wave II has 364 such labels and Wave VIII has 114; Wave V has none. The untruncated label is in `codebook.csv` and in the `.sav`. |
 | `.sav`, `.dta` | Numeric columns are written as doubles rather than the narrower storage types some source files use. Values are unchanged; the files are larger than they strictly need to be. |
 | `-labels.csv` | Where a variable has value labels, the label text replaces the code. Where it has none, the code is written through unchanged. A label can be attached to more than one code — Wave V's party variables label both `0` and `150000` "no party" — so this file is not always reversible. Use `-codes.csv` when you need the code. |
+| `-codes.csv` | A number too long for a double's exact decimal range is written exactly but may not be read back exactly, because the reader's default float parser is not exact to that many digits. One column is affected in the whole archive: ISSP's `CASEID`, a sixteen-digit integer, where one unit in the last place is 0.25. Read it with `float_precision="round_trip"`, or as text, or take it from the `.sav` or `.dta`, which hold it exactly. `scripts/verify.py` does the first of those. |
 | `-codes.csv`, `-labels.csv` | CSV cannot distinguish an empty string from a missing value. One variable is affected: Wave V's `E2001B`, a string variable that is empty for every Tunisian respondent. The `.sav` and `.dta` preserve the distinction. |
-| `-codes.csv`, `-labels.csv` | An answer spelled the way CSV readers spell a missing value is read as missing by default. One is affected: Wave IV's `q1019b` answers "None" to a second-language question. Read with `keep_default_na=False`, or use the `.sav` or `.dta`. Every wave is scanned for this and hits are recorded in `catalog/catalog.json` under `csv_answers_read_as_missing`. |
+| `-codes.csv`, `-labels.csv` | An answer spelled the way CSV readers spell a missing value is read as missing by default. Eleven surveys are affected and "None" is almost always the answer in question. The largest case is Afrobarometer's corruption battery, asked in five rounds, where "None" means *no corruption in that institution* — read it as missing and you drop the respondents who said there is none, which biases the battery upward. Arab Barometer Wave IV's `q1019b` on a second language is the same trap on one variable. Read with `keep_default_na=False`, or use the `.sav` or `.dta`. Every survey is scanned for this and every hit is recorded in `catalog/catalog.json` under `csv_answers_read_as_missing`, and repeated in the survey's own README. |
 | `.sav`, `.dta` | Both formats embed a creation timestamp, so re-running the extractor produces byte-different files with identical content. The recorded SHA-256 identifies the committed file; it is not a reproducible-build guarantee. `scripts/verify.py` compares values, not bytes. |
 | `.dta` | Stata stores a time of day as a float and rounds it. Five of Afrobarometer Round 7's interview start times come back a microsecond off, and a few in Rounds 9 and 10. `scripts/verify.py` compares date and time columns to the millisecond for that reason. |
 | all | A variable name SPSS and Stata will not accept is rewritten, and the change recorded in `renamed_variables` in the catalog and in the survey's README. Afrobarometer Round 10's `LOCATION.LEVEL.1` becomes `LOCATION_LEVEL_1`, and 196 variables in the Arab Opinion Index 2019/2020 round lose a dot the same way. |
@@ -121,11 +136,22 @@ None of these lose information that the format in question could have carried, a
 
 ## Terms of use
 
-The survey data is the property of the programme that collected it. Arab Barometer
-makes its data freely available for research but asks users to register and to
-cite the source; it is redistributed here in subset form for research use. Anyone
-using these files should cite Arab Barometer and the specific wave, not this
-repository, as the source of the data. See <https://www.arabbarometer.org>.
+The survey data is the property of the programme that collected it. Every file here
+is a subset of a public release, redistributed for research use, and **the citation
+belongs to the programme and the wave, never to this repository**.
+
+| Series | Terms as published |
+|---|---|
+| Arab Barometer | Freely available for research; users are asked to register and to cite the source. <https://www.arabbarometer.org> |
+| World Values Survey | Freely available for non-commercial research on condition the source is cited. <https://www.worldvaluessurvey.org> |
+| Afrobarometer | Freely downloadable; cite Afrobarometer and the round. <https://www.afrobarometer.org/data/> |
+| Arab Opinion Index | Published by the Arab Center for Research and Policy Studies for research use. <https://arabindex.dohainstitute.org> |
+| Life in Transition | Published by the EBRD with the World Bank for public use. <https://www.ebrd.com> |
+| ISSP | GESIS study ZA7629, DOI [10.4232/1.13516](https://doi.org/10.4232/1.13516). Cite the study and its version. |
+| SAHWA | **CC BY-NC-SA 4.0**, the one explicit licence in the archive: attribution, non-commercial use, and share-alike on anything derived from it. DOI [10.5281/zenodo.5747748](https://doi.org/10.5281/zenodo.5747748). |
+
+The share-alike condition on SAHWA travels with the data, so a derivative built from
+those 2,000 respondents carries it whether or not the rest of your work does.
 
 ## The one typing decision
 
