@@ -178,6 +178,17 @@ It is the only release here distributed as Stata rather than SPSS, and the only 
 that stores dates in Stata's `%tc` form (milliseconds since 1960-01-01). Both are
 handled by the extractor; the dates are left as the release stores them.
 
+### What is not here
+
+[`docs/not-in-the-archive.md`](docs/not-in-the-archive.md) is the gap list: every
+Tunisia survey programme checked, whether it is in the archive, and if not, why.
+The short version is that **all five series here are complete** — each starts where
+Tunisia entered it, not short of a wave — and the gaps are whole programmes. The
+best candidates to add are the **SAHWA Youth Survey** (2015–16), which would fill a
+youth gap nothing here covers, **Pew Global Attitudes** (2012–14), and the **EU
+Neighbourhood Barometer** (2012–14). The **Gallup World Poll** covers Tunisia
+continuously and cannot be added at all: it is sold under licence.
+
 ### Surveys the EBRD and EIB run that are **not** here
 
 The EBRD and the EIB co-fund the **Enterprise Surveys** with the World Bank, and
