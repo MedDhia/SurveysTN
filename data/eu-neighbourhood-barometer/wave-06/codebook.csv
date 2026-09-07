@@ -1,0 +1,492 @@
+position,variable,label,storage_type,n_valid,n_missing,n_distinct,value_labels,observed_values,sentinel_codes,min,max
+1,studyno,archive study number,int64,1006,0,1,"{""6293"": ""GESIS STUDY ID ZA6293""}",,,6293.0,6293.0
+2,doi,digital object identifier,str,1006,0,1,,"[""doi:10.4232/1.12498""]",,,
+3,version,gesis archive version & date,str,1006,0,1,,"[""1.0.0 (2016-04-22)""]",,,
+4,edition,dataset edition,int64,1006,0,1,"{""1"": ""Archive release""}",,,1.0,1.0
+5,survey,survey identification,int64,1006,0,1,"{""1"": ""EU Neighbourhood Barometer Wave 6 (October-November 2014)""}",,,1.0,1.0
+6,caseid,tns case id,int64,1006,0,1006,,,,1.0,1006.0
+7,uniqid,unique respondent id (caseid by tns country code),int64,1006,0,1006,,,,14000001.0,14001006.0
+8,serialid,serial case id (appointed by the archive),int64,1006,0,1006,,,,12919.0,13924.0
+9,split,questionnaire split (bl6a bl6b),int64,1006,0,2,"{""1"": ""SPLIT A"", ""2"": ""SPLIT B""}",,,1.0,2.0
+10,tnscntry,original tns country identification,int64,1006,0,1,"{""1"": ""Algeria"", ""2"": ""Armenia"", ""3"": ""Azerbaijan"", ""4"": ""Egypt"", ""5"": ""Georgia"", ""6"": ""Israel"", ""7"": ""Jordan"", ""8"": ""Lebanon"", ""9"": ""Moldova"", ""10"": ""Morocco"", ""11"": ""Palestinian Territories"", ""12"": ""Russia"", ""13"": ""Belarus"", ""14"": ""Tunisia"", ""15"": ""Ukraine""}",,,14.0,14.0
+11,country,country id (series standard),int64,1006,0,1,"{""1"": ""Morocco"", ""2"": ""Algeria"", ""3"": ""Tunisia"", ""4"": ""Libya (NOT SURVEYED)"", ""5"": ""Egypt"", ""6"": ""Israel"", ""7"": ""Jordan"", ""8"": ""Lebanon"", ""9"": ""Palestinian Territories"", ""10"": ""Syria (NOT SURVEYED)"", ""11"": ""Armenia"", ""12"": ""Azerbaijan"", ""13"": ""Georgia"", ""14"": ""Moldova"", ""15"": ""Ukraine"", ""16"": ""Belarus"", ""17"": ""Russia""}",,,3.0,3.0
+12,isocntry,country code - iso 3166,str,1006,0,1,,"[""TN""]",,,
+13,w1,demographic country weight (redressment),float64,1006,0,395,,,,0.748575,1.28559
+14,w2,population size weight - south,float64,1006,0,1,,,,1.273957,1.273957
+15,w3,population size weight - east (except russia),float64,0,1006,0,,,,,
+16,w4,population size weight - total (except russia),float64,1006,0,1,,,,1.130071,1.130071
+17,w5,population size weight - maghreb,float64,1006,0,1,,,,1.268923,1.268923
+18,w6,population size weight - mashrek (except egypt),float64,0,1006,0,,,,,
+19,aa1,life satisfaction,int64,1006,0,4,"{""1"": ""Very satisfied"", ""2"": ""Fairly satisfied"", ""3"": ""Not very satisfied"", ""4"": ""Not at all satisfied"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+20,aa2_1,political discussion: international matters,int64,1006,0,4,"{""1"": ""Frequently"", ""2"": ""Occasionally"", ""3"": ""Never"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+21,aa2_2,political discussion: national matters,int64,1006,0,4,"{""1"": ""Frequently"", ""2"": ""Occasionally"", ""3"": ""Never"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+22,aa2_3,political discussion: local matters,int64,1006,0,4,"{""1"": ""Frequently"", ""2"": ""Occasionally"", ""3"": ""Never"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+23,polintr,political interest index,int64,1006,0,4,"{""1"": ""Strong (see study description remarks)"", ""2"": ""Average (see study description remarks)"", ""3"": ""Low (see study description remarks)"", ""4"": ""Not at all (see study description remarks)""}",,,1.0,4.0
+24,aa3,persuade friends of own strong opinion,int64,1006,0,5,"{""1"": ""Often"", ""2"": ""From time to time"", ""3"": ""Rarely"", ""4"": ""Never"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+25,opls,opinion leadership index,int64,1006,0,4,"{""1"": ""++ high (1 for aa3 and 1 or 2 for polintr; or 2 for aa3 and 1 for polintr)"", ""2"": ""+ (1 for aa3 and 3 or 4 for polintr; or 2 for aa3 and 2 to 4 for polintr; or 3 for aa3 and 1 for polintr)"", ""3"": ""- (3 for aa3 and 2 to 4 for polintr; or 4 for aa3 and 1 for polintr)"", ""4"": ""- - low (4 for aa3 and 2 to 4 for polintr; or 5 for aa3 and 1 to 4 for polintr)""}",,,1.0,4.0
+26,aa4_1,assessment: economic situation in country,int64,1006,0,5,"{""1"": ""Very good"", ""2"": ""Rather good"", ""3"": ""Rather bad"", ""4"": ""Very bad"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+27,aa4_2,assessment: situation of the economy in the world,int64,1006,0,5,"{""1"": ""Very good"", ""2"": ""Rather good"", ""3"": ""Rather bad"", ""4"": ""Very bad"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+28,aa4_3,assessment: personal job situation,int64,1006,0,5,"{""1"": ""Very good"", ""2"": ""Rather good"", ""3"": ""Rather bad"", ""4"": ""Very bad"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+29,aa4_4,assessment:  financial situation of your household,int64,1006,0,5,"{""1"": ""Very good"", ""2"": ""Rather good"", ""3"": ""Rather bad"", ""4"": ""Very bad"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+30,aa5_1,expectations: economic situation in country,int64,1006,0,4,"{""1"": ""Better"", ""2"": ""Worse"", ""3"": ""Same"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+31,aa5_2,expectations: your personal job situation,int64,1006,0,4,"{""1"": ""Better"", ""2"": ""Worse"", ""3"": ""Same"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+32,aa5_3,expectations: financial situation of your household,int64,1006,0,4,"{""1"": ""Better"", ""2"": ""Worse"", ""3"": ""Same"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+33,aa5_4,expectations: employment situation in country,int64,1006,0,4,"{""1"": ""Better"", ""2"": ""Worse"", ""3"": ""Same"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+34,aa5_5,expectations: your life in general,int64,1006,0,4,"{""1"": ""Better"", ""2"": ""Worse"", ""3"": ""Same"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+35,aa6a,important country issues - firstly,int64,1006,0,17,"{""1"": ""Crime"", ""2"": ""Freedom of speech"", ""3"": ""Economic situation"", ""4"": ""Rising prices/ inflation"", ""5"": ""Taxation"", ""6"": ""Unemployment"", ""7"": ""Terrorism"", ""8"": ""Corruption"", ""9"": ""Defence/ Foreign affairs"", ""10"": ""Rule of law, transparency"", ""11"": ""Housing"", ""12"": ""Migration"", ""13"": ""Refugees and Internal Displaced People"", ""14"": ""Healthcare system"", ""15"": ""The educational system"", ""16"": ""Pensions"", ""17"": ""The environment"", ""18"": ""Energy"", ""19"": ""(ASK ONLY IN AZ, AM) Mountainous Garabagh (SPONTANEOUS)"", ""20"": ""(ASK ONLY IN MD) Transnistrian conflict (SPONTANEOUS)"", ""21"": ""Other (SPONTANEOUS)"", ""22"": ""None (SPONTANEOUS)"", ""23"": ""Don’t know (SPONTANEOUS)""}",,,1.0,23.0
+36,aa6b_1,important country issues: crime,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+37,aa6b_2,important country issues: freedom of speech,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+38,aa6b_3,important country issues: economic situation,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+39,aa6b_4,important country issues: rising prices/inflation,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+40,aa6b_5,important country issues: taxation,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+41,aa6b_6,important country issues: unemployment,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+42,aa6b_7,important country issues: terrorism,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+43,aa6b_8,important country issues: corruption,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+44,aa6b_9,important country issues: defence/foreign affairs,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+45,aa6b_10,"important country issues: rule of law, transparency",object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+46,aa6b_11,important country issues: housing,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+47,aa6b_12,important country issues: migration,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+48,aa6b_13,important country issues: refugees/internal displaced,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+49,aa6b_14,important country issues: healthcare system,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+50,aa6b_15,important country issues: educational system,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+51,aa6b_16,important country issues: pensions,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+52,aa6b_17,important country issues: environment,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+53,aa6b_18,important country issues: energy,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+54,aa6b_19,important country issues: mountainous garabagh,object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)"", ""a"": ""Inap. (not AM AZ in isocntry)""}",,,,
+55,aa6b_20,important country issues: transnistrian conflict,object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)"", ""a"": ""Inap. (not MD in isocntry)""}",,,,
+56,aa6b_21,important country issues: other,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+57,aa6b_22,important country issues: none,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+58,aa6b_23,important country issues: dont know,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 22 or 23 in aa6a)""}",,,,
+59,aa6t_1,important country issues: crime (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+60,aa6t_2,important country issues: freedom of speech (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+61,aa6t_3,important country issues: economic situation (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+62,aa6t_4,important country issues: rising prices/inflation (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+63,aa6t_5,important country issues: taxation (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+64,aa6t_6,important country issues: unemployment (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+65,aa6t_7,important country issues: terrorism (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+66,aa6t_8,important country issues: corruption (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+67,aa6t_9,important country issues: defence/foreign affairs (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+68,aa6t_10,"important country issues: rule of law, transparency (tot)",int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+69,aa6t_11,important country issues: housing (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+70,aa6t_12,important country issues: migration (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+71,aa6t_13,important country issues: refugees/internal displaced (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+72,aa6t_14,important country issues: healthcare system (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+73,aa6t_15,important country issues: educational system (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+74,aa6t_16,important country issues: pensions (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+75,aa6t_17,important country issues: environment (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+76,aa6t_18,important country issues: energy (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+77,aa6t_19,important country issues: mountainous garabagh (total),object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not AM AZ in isocntry)""}",,,,
+78,aa6t_20,important country issues: transnistrian conflict (total),object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not MD in isocntry)""}",,,,
+79,aa6t_21,important country issues: other (total),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+80,aa6t_22,important country issues: none (total),int64,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,0.0
+81,aa6t_23,important country issues: dont know (aa6a only),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+82,aa7_1,assessment - things going in the right or wrong direction: own country,int64,1006,0,4,"{""1"": ""Things are going in the right direction"", ""2"": ""Things are going in the wrong direction"", ""3"": ""Neither the one nor the other (SPONTANEOUS)"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+83,aa7_2,assessment - things going in the right or wrong direction: arab world,int64,1006,0,4,"{""1"": ""Things are going in the right direction"", ""2"": ""Things are going in the wrong direction"", ""3"": ""Neither the one nor the other (SPONTANEOUS)"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+84,aa7_3,assessment - things going in the right or wrong direction: EU,int64,1006,0,4,"{""1"": ""Things are going in the right direction"", ""2"": ""Things are going in the wrong direction"", ""3"": ""Neither the one nor the other (SPONTANEOUS)"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+85,aa7_4,assessment - things going in the right or wrong direction: world,int64,1006,0,4,"{""1"": ""Things are going in the right direction"", ""2"": ""Things are going in the wrong direction"", ""3"": ""Neither the one nor the other (SPONTANEOUS)"", ""4"": ""Don’t know (SPONTANEOUS)""}",,,1.0,4.0
+86,bf1,crisis - impact on country economy,int64,1006,0,5,"{""1"": ""Very significant impact"", ""2"": ""Fairly significant impact"", ""3"": ""Not really any impact"", ""4"": ""No impact at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+87,bf2ii,crisis - impact on personal situation (new in wave 4 5 6),int64,1006,0,5,"{""1"": ""Very significant impact"", ""2"": ""Fairly significant impact"", ""3"": ""Not really any impact"", ""4"": ""No impact at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+88,bf3ii_1,result of crisis - respondent lost job (new in wave 4 5 6),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+89,bf3ii_2,result of crisis - family member lost job (new in wave 4 5 6),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+90,bf3ii_3,result of crisis - colleague lost job (new in wave 4 5 6),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+91,ab1,eu image - positive or negative,int64,1006,0,6,"{""1"": ""Very positive"", ""2"": ""Fairly positive"", ""3"": ""Neutral"", ""4"": ""Fairly negative"", ""5"": ""Very negative"", ""6"": ""Don’t know (SPONTANEOUS)""}",,,1.0,6.0
+92,ab2,eu relations with our country - assessment (ab4 in wave 1 2 3),int64,1006,0,6,"{""1"": ""Very good"", ""2"": ""Fairly good"", ""3"": ""Fairly bad"", ""4"": ""Very bad"", ""5"": ""The EU does not have any relationship with (OUR COUNTRY) (SPONTANEOUS)"", ""6"": ""Don’t know (SPONTANEOUS)""}",,,1.0,6.0
+93,ab3,eu cooperation programmes - providing financial support (ab5 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+94,ab4,eu cooperation programmes - know specific programmes (ab6 in wave 1 2 3),object,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""i"": ""Inap. (not coded 1 in ab3)""}",,,,
+95,ab5_1,eu policies cntry benefits: democracy (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+96,ab5_2,eu policies cntry benefits: economic development (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+97,ab5_3,eu policies cntry benefits: access to products/services (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+98,ab5_4,eu policies cntry benefits: tourism (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+99,ab5_5,eu policies cntry benefits: fight against climate change (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+100,ab5_6,eu policies cntry benefits: trade (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+101,ab5_7,eu policies cntry benefits: development of infrastructure (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+102,ab5_8,eu policies cntry benefits: development aid (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+103,ab5_9,eu policies cntry benefits: education (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+104,ab5_10,eu policies cntry benefits: employment (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+105,ab5_11,eu policies cntry benefits: support to agriculture (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+106,ab5_12,eu policies cntry benefits: promotion of palestinian state (ab7 in wave 1 2 3),object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not PS in isocntry)""}",,,,
+107,ab5_13,eu policies cntry benefits: other (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+108,ab5_14,eu policies cntry benefits: not benefitted (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+109,ab5_15,eu policies cntry benefits: dont know (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+110,ab5_16,eu policies cntry benefits: refusal (ab7 in wave 1 2 3),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+111,ab6_1,eu statements: has appropriate level of involvement (ab8 in wave 1 2 3),int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+112,ab6_2,eu statements: brings peace and stability in the region (ab8 in wave 1 2 3),int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+113,ab6_3,eu statements: is an important partner (ab8 in wave 1 2 3),int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+114,ab6_4,eu statements: sufficient common values to cooperate (ab8 in wave 1 2 3),int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+115,ab6_5,eu statements: support contributes a lot to development (ab8 in wave 1 2 3),int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+116,ab7_1,eu should have greater role: economic development (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+117,ab7_2,eu should have greater role: environment/climate change (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+118,ab7_3,eu should have greater role: energy security (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+119,ab7_4,eu should have greater role: transport (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+120,ab7_5,eu should have greater role: education (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+121,ab7_6,eu should have greater role: culture (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+122,ab7_7,eu should have greater role: democracy (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+123,ab7_8,eu should have greater role: regional cooperation (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+124,ab7_9,eu should have greater role: security and defence (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+125,ab7_10,eu should have greater role: media freedom (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+126,ab7_11,eu should have greater role: migration (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+127,ab7_12,eu should have greater role: ext policy/foreign affairs (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+128,ab7_13,eu should have greater role: trade (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+129,ab7_14,eu should have greater role: gender equality (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+130,ab7_15,eu should have greater role: refugees/displaced people (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+131,ab7_16,eu should have greater role: middle east peace process (ab9 in wave 1 2 3),object,1006,0,1,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)"", ""i"": ""Inap. (not IL PS EG JO LB in isocntry)""}",,,,
+132,ab7_17,eu should have greater role: justice (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+133,ab7_18,eu should have greater role: human rights (ab9 in wave 1 2 3),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+134,ac1_1,eu communication: enough info available in country,int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+135,ac1_2,eu communication: country info is easy to understand,int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+136,ac2_1,helping economic development: national government,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+137,ac2_2,helping economic development: european union,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+138,ac2_3,helping economic development: united states,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+139,ac2_4,helping economic development: arab league,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+140,ac2_5,helping economic development: g8/g20 country,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+141,ac2_6,helping economic development: united nations,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+142,ac2_7,helping economic development: arab funds,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+143,ac2_8,helping economic development: charitable foundations,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+144,ac2_9,helping economic development: guam,object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not MD GE UA AZ in isocntry)""}",,,,
+145,ac2_10,helping economic development: cis area,object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not AM AZ BY MD UA RU in isocntry)""}",,,,
+146,ac2_11,helping economic development: undp,object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not UA AM AZ GE in isocntry)""}",,,,
+147,ac2_12,helping economic development: imf /world bank,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+148,ac2_13,helping economic development: non-governmental org,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+149,ac2_14,helping economic development: private companies,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+150,ac2_15,helping economic development: religious organisations,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+151,ac2_16,helping economic development: other,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+152,ac2_17,helping economic development: none,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+153,ac2_18,helping economic development: dont know,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+154,ac3_1,helping security & stability: national government,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+155,ac3_2,helping security & stability: european union,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+156,ac3_3,helping security & stability: united states,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+157,ac3_4,helping security & stability: arab league,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+158,ac3_5,helping security & stability: nato,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+159,ac3_6,helping security & stability: g8/g20 country,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+160,ac3_7,helping security & stability: united nations,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+161,ac3_8,helping security & stability: csto,object,1006,0,1,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not AM BY UA RU in isocntry)""}",,,,
+162,ac3_9,helping security & stability: other,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+163,ac3_10,helping security & stability: none,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+164,ac3_11,helping security & stability: dont know,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+165,ac4_1,economic development contribution: national government,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+166,ac4_2,economic development contribution: the presidency,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+167,ac4_3,economic development contribution: nat private companies,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+168,ac4_4,economic development contribution: national banks,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+169,ac4_5,economic development contribution: non-governmental org,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+170,ac4_6,economic development contribution: religious organisations,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+171,ac4_7,economic development contribution: regional publ authorities,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+172,ac4_8,economic development contribution: local publ authorities,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+173,ac5_1,eu cooperation important: peace and security,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+174,ac5_2,eu cooperation important: democracy and good governance,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+175,ac5_3,eu cooperation important: culture and education,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+176,ac5_4,eu cooperation important: human rights,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+177,ac5_5,eu cooperation important: trade,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+178,ac5_6,eu cooperation important: infrastructure,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+179,ac5_7,eu cooperation important: tackling poverty,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+180,ac5_8,eu cooperation important: energy,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+181,ac5_9,eu cooperation important: environmental protection,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+182,ac5_10,eu cooperation important: climate change,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+183,ac5_11,eu cooperation important: migration,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+184,ac5_12,eu cooperation important: employment,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+185,ac5_13,eu cooperation important: science and technology,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+186,ac5_14,eu cooperation important: other,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+187,ac5_15,eu cooperation important: none,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+188,ac5_16,eu cooperation important: dont know,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+189,ac6_1,eu development aid focus: peace and security,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+190,ac6_2,eu development aid focus: democracy/good governance,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+191,ac6_3,eu development aid focus: culture and education,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+192,ac6_4,eu development aid focus: human rights,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+193,ac6_5,eu development aid focus: trade,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+194,ac6_6,eu development aid focus: infrastructure,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+195,ac6_7,eu development aid focus: tackling poverty,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+196,ac6_8,eu development aid focus: energy,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+197,ac6_9,eu development aid focus: environmental protection,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+198,ac6_10,eu development aid focus: climate change,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+199,ac6_11,eu development aid focus: migration,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+200,ac6_12,eu development aid focus: employment,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+201,ac6_13,eu development aid focus: science and technology,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+202,ac6_14,eu development aid focus: other,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+203,ac6_15,eu development aid focus: none,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+204,ac6_16,eu development aid focus: dont know,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+205,ad1_1,trust in institutions: printed press,int64,1006,0,5,"{""1"": ""Totally trust"", ""2"": ""Tend to trust"", ""3"": ""Tend not to trust"", ""4"": ""No trust at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+206,ad1_2,trust in institutions: radio,int64,1006,0,5,"{""1"": ""Totally trust"", ""2"": ""Tend to trust"", ""3"": ""Tend not to trust"", ""4"": ""No trust at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+207,ad1_3,trust in institutions: tv,int64,1006,0,5,"{""1"": ""Totally trust"", ""2"": ""Tend to trust"", ""3"": ""Tend not to trust"", ""4"": ""No trust at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+208,ad1_4,trust in institutions: internet,int64,1006,0,5,"{""1"": ""Totally trust"", ""2"": ""Tend to trust"", ""3"": ""Tend not to trust"", ""4"": ""No trust at all"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+209,ad2_1,trust in institutions: european union,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+210,ad2_2,trust in institutions: united nations,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+211,ad2_3,trust in institutions: nato,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+212,ad2_4,trust in institutions: arab league,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+213,ad3_1,trust in institutions: national government,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+214,ad3_2,trust in institutions: national parliament,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+215,ad3_3,trust in institutions: regional public authorities,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+216,ad3_4,trust in institutions: local public authorities,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+217,ad3_5,trust in institutions: political parties,int64,1006,0,3,"{""1"": ""Tend to trust"", ""2"": ""Tend not to trust"", ""3"": ""Don’t know (SPONTANEOUS)""}",,,1.0,3.0
+218,ad4a,democracy satisfaction - country,int64,1006,0,5,"{""1"": ""Very satisfied"", ""2"": ""Fairly satisfied"", ""3"": ""Not very satisfied"", ""4"": ""Not at all satisfied"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+219,ad4b,democracy satisfaction - region,int64,1006,0,5,"{""1"": ""Very satisfied"", ""2"": ""Fairly satisfied"", ""3"": ""Not very satisfied"", ""4"": ""Not at all satisfied"", ""5"": ""Don’t know (SPONTANEOUS)""}",,,1.0,5.0
+220,ad5_1,country characteristics: freedom of speech,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+221,ad5_2,country characteristics: free elections,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+222,ad5_3,country characteristics: gender equality,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+223,ad5_4,country characteristics: protect the right of minorities,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+224,ad5_5,country characteristics: independence of justice,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+225,ad5_6,country characteristics: freedom of press,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+226,ad5_7,country characteristics: rights of vote,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+227,ad5_8,country characteristics: respect of human rights,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+228,ad5_9,country characteristics: rule of law,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+229,ad5_10,country characteristics: good governance,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+230,ad5_11,country characteristics: lack of corruption,int64,1006,0,5,"{""1"": ""Yes, definitely"", ""2"": ""Yes, somewhat"", ""3"": ""No, not really"", ""4"": ""No, definitely not"", ""5"": ""Don’t know (SPONTA-NEOUS)""}",,,1.0,5.0
+231,ad6_1,concept of democracy: freedom of speech,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+232,ad6_2,concept of democracy: free elections,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+233,ad6_3,concept of democracy: gender equality,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+234,ad6_4,concept of democracy: protect right of minorities,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+235,ad6_5,concept of democracy: independence of justice,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+236,ad6_6,concept of democracy: freedom of press,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+237,ad6_7,concept of democracy: rights of vote,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+238,ad6_8,concept of democracy: respect of human rights,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+239,ad6_9,concept of democracy: rule of law,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+240,ad6_10,concept of democracy: good governance,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+241,ad6_11,concept of democracy: lack of corruption,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+242,ad6_12,concept of democracy: other,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+243,ad6_13,concept of democracy: none,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+244,ad6_14,concept of democracy: dont know,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+245,bl1_1,concept of culture: civilization,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+246,bl1_2,concept of culture: knowledge/science,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+247,bl1_3,concept of culture: education/family,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+248,bl1_4,concept of culture: traditions/language etc,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+249,bl1_5,concept of culture: life style/manners,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+250,bl1_6,concept of culture: leisure/sport/travel,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+251,bl1_7,concept of culture: arts,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+252,bl1_8,concept of culture: literature/poetry/playwriting,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+253,bl1_9,concept of culture: history,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+254,bl1_10,concept of culture: values/beliefs,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+255,bl1_11,concept of culture: museums,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+256,bl1_12,concept of culture: other,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+257,bl1_13,concept of culture: dont know,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""2"": ""No""}",,,0.0,1.0
+258,bl2_1,access to cultural activities: ballet/dance/opera,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+259,bl2_2,access to cultural activities: film in cinema,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+260,bl2_3,access to cultural activities: film on internet,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+261,bl2_4,access to cultural activities: film on dvd,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+262,bl2_5,access to cultural activities: film on tv,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+263,bl2_6,access to cultural activities: theatre,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+264,bl2_7,access to cultural activities: concert,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+265,bl2_8,access to cultural activities: public library,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+266,bl2_9,access to cultural activities: visit historical monument,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+267,bl2_10,access to cultural activities: museum/art gallery,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+268,bl2_11,access to cultural activities: cultural progr on tv/radio,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+269,bl2_12,access to cultural activities: books,int64,1006,0,5,"{""1"": ""Very easy access"", ""2"": ""Fairly easy access"", ""3"": ""Fairly difficult access"", ""4"": ""Very difficult access"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+270,bl3_1,interest in cultural activities: ballet/dance/opera,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+271,bl3_2,interest in cultural activities: film in cinema,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+272,bl3_3,interest in cultural activities: film on internet,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+273,bl3_4,interest in cultural activities: film on dvd,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+274,bl3_5,interest in cultural activities: film on tv,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+275,bl3_6,interest in cultural activities: theatre,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+276,bl3_7,interest in cultural activities: concert,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+277,bl3_8,interest in cultural activities: public library,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+278,bl3_9,interest in cultural activities: visit historical monument,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+279,bl3_10,interest in cultural activities: museum/art gallery,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+280,bl3_11,interest in cultural activities: cultural progr on tv/radio,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+281,bl3_12,interest in cultural activities: books,int64,1006,0,5,"{""1"": ""Very interested"", ""2"": ""Fairly interested"", ""3"": ""Not very interested"", ""4"": ""Not at all interested"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+282,bl4_1,cultural activities in last 12 months: ballet/dance/opera,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+283,bl4_2,cultural activities in last 12 months: film in cinema,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+284,bl4_3,cultural activities in last 12 months: film on internet,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+285,bl4_4,cultural activities in last 12 months: film on dvd,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+286,bl4_5,cultural activities in last 12 months: film on tv,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+287,bl4_6,cultural activities in last 12 months: theatre,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+288,bl4_7,cultural activities in last 12 months: concert,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+289,bl4_8,cultural activities in last 12 months: public library,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+290,bl4_9,cultural activities in last 12 months: visit historical monument,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+291,bl4_10,cultural activities in last 12 months: museum/art gallery,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+292,bl4_11,cultural activities in last 12 months: cultural progr on tv/radio,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+293,bl4_12,cultural activities in last 12 months: books,int64,1006,0,5,"{""1"": ""Never in the last twelve months"", ""2"": ""1-2 times"", ""3"": ""3-5 times"", ""4"": ""More than 5 times"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+294,bl5a,cultural activities: film preference 1st,object,1006,0,7,"{""1"": ""American films"", ""2"": ""(NATIONALITY) films"", ""3"": ""Arabic films (ONLY IN DZ EG IL JO LB MA PS TN) IL: ORIGINAL CODE 7"", ""4"": ""European films"", ""5"": ""Indian films"", ""6"": ""Other (African, Chinese, etc…) films"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)""}",,,,
+295,bl5b,cultural activities: film preference 2nd,object,1006,0,8,"{""1"": ""American films"", ""2"": ""(NATIONALITY) films"", ""3"": ""Arabic films  (ONLY IN DZ EG IL JO LB MA PS TN)"", ""4"": ""European films"", ""5"": ""Indian films"", ""6"": ""Other (African, Chinese, etc…) films"", ""7"": ""NOT DOCUMENTED"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)""}",,,,
+296,bl5t_1,cultural activities - film preference: american films (tot),object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)""}",,,,
+297,bl5t_2,cultural activities - film preference: national films (tot),object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)""}",,,,
+298,bl5t_3,cultural activities - film preference: arabic films (tot),object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)"", ""a"": ""Inap. (not DZ EG IL JO LB MA PS TN in isocntry)""}",,,,
+299,bl5t_4,cultural activities - film preference: european films (tot),object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)""}",,,,
+300,bl5t_5,cultural activities - film preference: indian films (tot),object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)""}",,,,
+301,bl5t_6,cultural activities - film preference: other films (tot),object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (not coded 2-4 in bl4_2 to bl4_5)""}",,,,
+302,bl6a1_1,cultural activities main barriers - cinema: lack of interest,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+303,bl6a1_2,cultural activities main barriers - cinema: lack of time,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+304,bl6a1_3,cultural activities main barriers - cinema: too expensive,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+305,bl6a1_4,cultural activities main barriers - cinema: lack of information,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+306,bl6a1_5,cultural activities main barriers - cinema: limited choice/poor quality,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+307,bl6a1_6,cultural activities main barriers - cinema: too far away,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+308,bl6a1_7,cultural activities main barriers - cinema: lack of knowledge,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+309,bl6a1_8,cultural activities main barriers - cinema: against religious belief,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+310,bl6a1_9,cultural activities main barriers - cinema: none,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+311,bl6a1_10,cultural activities main barriers - cinema: other,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+312,bl6a1_11,cultural activities main barriers - cinema: dont know,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+313,bl6a2_1,cultural activities main barriers - historical monuments: lack of interest,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+314,bl6a2_2,cultural activities main barriers - historical monuments: lack of time,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+315,bl6a2_3,cultural activities main barriers - historical monuments: too expensive,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+316,bl6a2_4,cultural activities main barriers - historical monuments: lack of information,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+317,bl6a2_5,cultural activities main barriers - historical monuments: limited choice/poor qu,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+318,bl6a2_6,cultural activities main barriers - historical monuments: too far away,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+319,bl6a2_7,cultural activities main barriers - historical monuments: lack of knowledge,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+320,bl6a2_8,cultural activities main barriers - historical monuments: against religious beli,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+321,bl6a2_9,cultural activities main barriers - historical monuments: none,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+322,bl6a2_10,cultural activities main barriers - historical monuments: other,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+323,bl6a2_11,cultural activities main barriers - historical monuments: dont know,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT B (code 2 in split)""}",,,,
+324,bl6b1_1,cultural activities main barriers - theatre: lack of interest,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+325,bl6b1_2,cultural activities main barriers - theatre: lack of time,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+326,bl6b1_3,cultural activities main barriers - theatre: too expensive,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+327,bl6b1_4,cultural activities main barriers - theatre: lack of information,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+328,bl6b1_5,cultural activities main barriers - theatre: limited choice/poor quality,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+329,bl6b1_6,cultural activities main barriers - theatre: too far away,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+330,bl6b1_7,cultural activities main barriers - theatre: lack of knowledge,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+331,bl6b1_8,cultural activities main barriers - theatre: against religious belief,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+332,bl6b1_9,cultural activities main barriers - theatre: none,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+333,bl6b1_10,cultural activities main barriers - theatre: other,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+334,bl6b1_11,cultural activities main barriers - theatre: dont know,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+335,bl6b2_1,cultural activities main barriers - museum/galleries: lack of interest,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+336,bl6b2_2,cultural activities main barriers - museum/galleries: lack of time,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+337,bl6b2_3,cultural activities main barriers - museum/galleries: too expensive,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+338,bl6b2_4,cultural activities main barriers - museum/galleries: lack of information,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+339,bl6b2_5,cultural activities main barriers - museum/galleries: limited choice/poor qualit,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+340,bl6b2_6,cultural activities main barriers - museum/galleries: too far away,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+341,bl6b2_7,cultural activities main barriers - museum/galleries: lack of knowledge,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+342,bl6b2_8,cultural activities main barriers - museum/galleries: against religious belief,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+343,bl6b2_9,cultural activities main barriers - museum/galleries: none,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+344,bl6b2_10,cultural activities main barriers - museum/galleries: other,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+345,bl6b2_11,cultural activities main barriers - museum/galleries: dont know,object,1006,0,4,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER"", ""i"": ""Inap. SPLIT A (code 1 in split)""}",,,,
+346,bl7_1,contribute to cultural development - local actors: government,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+347,bl7_2,contribute to cultural development - local actors: presidency,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+348,bl7_3,contribute to cultural development - local actors: national banks,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+349,bl7_4,contribute to cultural development - local actors: private companies,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+350,bl7_5,contribute to cultural development - local actors: international banks,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+351,bl7_6,contribute to cultural development - local actors: international companies,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+352,bl7_7,contribute to cultural development - local actors: ngos,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+353,bl7_8,contribute to cultural development - local actors: religious organisations,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+354,bl7_9,contribute to cultural development - local actors: regional public authorities,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+355,bl7_10,contribute to cultural development - local actors: local public authorities,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+356,bl8_1,cultural activities: contribute to economic development,int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+357,bl8_2,cultural activities: contribute to social well being,int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+358,bl8_3,cultural activities: exchange develop understanding/tolerance,int64,1006,0,5,"{""1"": ""Totally agree"", ""2"": ""Tend to agree"", ""3"": ""Tend to disagree"", ""4"": ""Totally disagree"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+359,bl9_1,cultural identity: close to european,int64,1006,0,5,"{""1"": ""Very close"", ""2"": ""Fairly close"", ""3"": ""Fairly far"", ""4"": ""Very far"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+360,bl9_2,cultural identity: close to american,int64,1006,0,5,"{""1"": ""Very close"", ""2"": ""Fairly close"", ""3"": ""Fairly far"", ""4"": ""Very far"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+361,bl9_3,cultural identity: close to bedouin,int64,1006,0,5,"{""1"": ""Very close"", ""2"": ""Fairly close"", ""3"": ""Fairly far"", ""4"": ""Very far"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+362,bl9_4,cultural identity: close to arabic,int64,1006,0,5,"{""1"": ""Very close"", ""2"": ""Fairly close"", ""3"": ""Fairly far"", ""4"": ""Very far"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+363,bl9_5,cultural identity: close to arabic (spontaneous),object,1006,0,1,"{""1"": ""Very close"", ""2"": ""Fairly close"", ""3"": ""Fairly far"", ""4"": ""Very far"", ""5"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not IL in isocntry)""}",,,,
+364,bl9_6,cultural identity: close to russian,object,1006,0,1,"{""1"": ""Very close"", ""2"": ""Fairly close"", ""3"": ""Fairly far"", ""4"": ""Very far"", ""5"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not RU AM AZ BY GE IL MD UA in isocntry)""}",,,,
+365,bl9_7,cultural identity: close to resp country,int64,1006,0,5,"{""1"": ""Very close"", ""2"": ""Fairly close"", ""3"": ""Fairly far"", ""4"": ""Very far"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+366,bl10,national cultural heritage - appraisel,int64,1006,0,5,"{""1"": ""A lot"", ""2"": ""To some extent"", ""3"": ""Not really"", ""4"": ""Not at all"", ""5"": ""Dont know (SPONTANEOUS)""}",,,1.0,5.0
+367,sd1,gender,int64,1006,0,2,"{""1"": ""Male"", ""2"": ""Female""}",,,1.0,2.0
+368,sd2,age,int64,1006,0,74,"{""15"": ""15 years"", ""95"": ""95 years"", ""99"": ""REFUSAL [ACCORDING TO sd2r]""}",,,15.0,89.0
+369,sd2r,age - recoded,int64,1006,0,4,"{""1"": ""15-24"", ""2"": ""25-39"", ""3"": ""40-54"", ""4"": ""55+"", ""5"": ""refusal""}",,,1.0,4.0
+370,sd3,age when stopped full-time education,int64,1006,0,30,"{""0"": ""STILL STUDYING"", ""1"": ""NO EDUCATION"", ""2"": ""Military service [NOT IN MASTER QUESTIONNAIRE]"", ""3"": ""3 years"", ""94"": ""94 years"", ""98"": ""REFUSAL"", ""99"": ""DK""}",,,0.0,99.0
+371,sd3r,age when stopped full-time education - recoded,int64,1006,0,7,"{""1"": ""up to15 years"", ""2"": ""16-19"", ""3"": ""20 and older"", ""4"": ""MILITARY SERVICE"", ""5"": ""STILL STUDYING"", ""6"": ""NO EDUCATION"", ""8"": ""REFUSAL"", ""9"": ""DK""}",,,1.0,9.0
+372,sd4,marital status,int64,1006,0,6,"{""1"": ""Married"", ""2"": ""Living with a partner (NOT IN DZ EG TN JO LB PS MA)"", ""3"": ""Single"", ""4"": ""Divorced"", ""5"": ""Widow"", ""6"": ""Other (SPONTANEOUS)"", ""7"": ""Refusal (SPONTANEOUS)""}",,,1.0,7.0
+373,sd5a,current occupation,int64,1006,0,19,"{""1"": ""Responsible for ordinary shopping and looking after the home, or without any current occupation, not working"", ""2"": ""Student"", ""3"": ""Unemployed or temporarily not working"", ""4"": ""Retired or unable to work through illness"", ""5"": ""Farmer"", ""6"": ""Fisherman"", ""7"": ""Professional (lawyer, medical practitioner, accountant, architect, etc.)"", ""8"": ""Owner of a shop, craftsmen, other self-employed person"", ""9"": ""Business proprietors, owner (full or partner) of a company"", ""10"": ""Employed professional (employed doctor, lawyer, accountant, architect)"", ""11"": ""General management, director or top management (managing directors, director general, other director)"", ""12"": ""Middle management, other management (department head, junior manager, teacher, technician)"", ""13"": ""Employed position, working mainly at a desk"", ""14"": ""Employed position, not at a desk but travelling (salesmen, driver, etc.)"", ""15"": ""Employed position, not at a desk, but in a service job (hospital, restaurant, police, fireman, etc.)"", ""16"": ""Supervisor"", ""17"": ""Skilled manual worker"", ""18"": ""Other (unskilled) manual worker, servant"", ""19"": ""Never did any paid work [WILD CODE PS TN]"", ""20"": ""Military service [IL JO LB / NOT IN QUESTIONNAIRE]""}",,,1.0,19.0
+374,sd5a_r,current occupation - recoded,object,1006,0,9,"{""1"": ""House persons"", ""2"": ""Students"", ""3"": ""Unemployed"", ""4"": ""Retired"", ""5"": ""Self-employed"", ""6"": ""Managers"", ""7"": ""White collars"", ""8"": ""Manual workers"", ""i"": ""Inap. (coded 19 or 20 in sd5a)""}",,,,
+375,sd5b,last occupation,object,1006,0,13,"{""1"": ""Responsible for ordinary shopping and looking after the home, or without any current occupation, not working"", ""2"": ""Student"", ""3"": ""Unemployed or temporarily not working"", ""4"": ""Retired or unable to work through illness"", ""5"": ""Farmer"", ""6"": ""Fisherman"", ""7"": ""Professional (lawyer, medical practitioner, accountant, architect, etc.)"", ""8"": ""Owner of a shop, craftsmen, other self-employed person"", ""9"": ""Business proprietors, owner (full or partner) of a company"", ""10"": ""Employed professional (employed doctor, lawyer, accountant, architect)"", ""11"": ""General management, director or top management (managing directors, director general, other director)"", ""12"": ""Middle management, other management (department head, junior manager, teacher, technician)"", ""13"": ""Employed position, working mainly at a desk"", ""14"": ""Employed position, not at a desk but travelling (salesmen, driver, etc.)"", ""15"": ""Employed position, not at a desk, but in a service job (hospital, restaurant, police, fireman, etc.)"", ""16"": ""Supervisor"", ""17"": ""Skilled manual worker"", ""18"": ""Other (unskilled) manual worker, servant"", ""19"": ""Never did any paid work"", ""20"": ""Military service [IL / NOT IN MASTER QUESTIONNAIRE]"", ""i"": ""Inap. (not coded 1-4 in sd5a)""}",,,,
+376,sd5b_r,last occupation - recoded,object,1006,0,5,"{""1"": ""Self-employed"", ""2"": ""Managers"", ""3"": ""White collars"", ""4"": ""Manual workers"", ""i"": ""Inap. (coded 19, 20 or 99 in sd5b)""}",,,,
+377,sd6_1,visited/lived in eu country: visited for business,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+378,sd6_2,visited/lived in eu country: visited on holiday,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+379,sd6_3,visited/lived in eu country: lived and/or worked,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+380,sd6_4,visited/lived in eu country: to study,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+381,sd6_5,visited/lived in eu country: no,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+382,sd6_6,visited/lived in eu country: refusal,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+383,sd6t,visited/lived in eu country (total),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""TOTAL: YES""}",,,0.0,1.0
+384,sd7_1,eu country visited/lived: austria,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+385,sd7_2,eu country visited/lived: belgium,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+386,sd7_3,eu country visited/lived: bulgaria,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+387,sd7_4,eu country visited/lived: cyprus,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+388,sd7_5,eu country visited/lived: czech republic,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+389,sd7_6,eu country visited/lived: denmark,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+390,sd7_7,eu country visited/lived: estonia,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+391,sd7_8,eu country visited/lived: finland,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+392,sd7_9,eu country visited/lived: france,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+393,sd7_10,eu country visited/lived: germany,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+394,sd7_11,eu country visited/lived: greece,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+395,sd7_12,eu country visited/lived: hungary,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+396,sd7_13,eu country visited/lived: ireland,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+397,sd7_14,eu country visited/lived: italy,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+398,sd7_15,eu country visited/lived: latvia,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+399,sd7_16,eu country visited/lived: lithuania,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+400,sd7_17,eu country visited/lived: luxembourg,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+401,sd7_18,eu country visited/lived: malta,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+402,sd7_19,eu country visited/lived: netherlands,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+403,sd7_20,eu country visited/lived: poland,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+404,sd7_21,eu country visited/lived: portugal,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+405,sd7_22,eu country visited/lived: romania,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+406,sd7_23,eu country visited/lived: slovakia,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+407,sd7_24,eu country visited/lived: slovenia,object,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+408,sd7_25,eu country visited/lived: spain,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+409,sd7_26,eu country visited/lived: sweden,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+410,sd7_27,eu country visited/lived: united kingdom,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+411,sd7_28,eu country visited/lived: any other country,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+412,sd7_29,eu country visited/lived: dont know,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+413,sd7_30,eu country visited/lived: refusal,object,1006,0,3,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""i"": ""Inap. (coded 1 in sd6_5 or sd6_6)""}",,,,
+414,sd8_1,relatives in eu country: for work,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+415,sd8_2,relatives in eu country: for study,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+416,sd8_3,relatives in eu country: for other reason,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+417,sd8_4,relatives in eu country: no,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+418,sd8_5,relatives in eu country: refusal,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned""}",,,0.0,1.0
+419,sd8t,relatives abroad in the eu (tot),int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""TOTAL: YES""}",,,0.0,1.0
+420,sd9,level in society - self-placement,int64,1006,0,11,"{""1"": ""The lowest level in the society"", ""2"": ""2"", ""3"": ""3"", ""4"": ""4"", ""5"": ""5"", ""6"": ""6"", ""7"": ""7"", ""8"": ""8"", ""9"": ""9"", ""10"": ""The highest level in the society"", ""11"": ""Refusal (SPONTANEOUS)""}",,,1.0,11.0
+421,sd10,financial situation - difficulties paying bills,int64,1006,0,4,"{""1"": ""Most of the time"", ""2"": ""From time to time"", ""3"": ""Almost never / never"", ""4"": ""Refusal (SPONTANEOUS)""}",,,1.0,4.0
+422,sd11a,household composition: people aged 15+,int64,1006,0,11,,,,1.0,13.0
+423,sd11a_r,household composition: people aged 15+ (recoded),int64,1006,0,4,"{""1"": ""1"", ""2"": ""2"", ""3"": ""3"", ""4"": ""4+""}",,,1.0,4.0
+424,sd11b,household composition: children aged < 10,int64,1006,0,6,"{""0"": ""NONE""}",,,0.0,9.0
+425,sd11b_r,household composition: children aged < 10 (recoded),int64,1006,0,5,"{""0"": ""NONE"", ""1"": ""1"", ""2"": ""2"", ""3"": ""3"", ""4"": ""4+""}",,,0.0,4.0
+426,sd11c,household composition: children aged 10-14,int64,1006,0,7,"{""0"": ""NONE""}",,,0.0,14.0
+427,sd11c_r,household composition: children aged 10-14 (recoded),int64,1006,0,5,"{""0"": ""NONE"", ""1"": ""1"", ""2"": ""2"", ""3"": ""3"", ""4"": ""4+""}",,,0.0,4.0
+428,sd12a,telephone equipment: fixed phone in hh,int64,1006,0,2,"{""1"": ""Yes"", ""2"": ""No""}",,,1.0,2.0
+429,sd12b,telephone equipment: personal mobile phone,int64,1006,0,2,"{""1"": ""Yes"", ""2"": ""No""}",,,1.0,2.0
+430,sd12t,telephone equipment (tot),int64,1006,0,4,"{""1"": ""Fixed phone only"", ""2"": ""Mobile phone only"", ""3"": ""Fixed and mobile"", ""4"": ""NONE""}",,,1.0,4.0
+431,sd13_1,ownership of goods: television,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+432,sd13_2,ownership of goods: dvd player,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+433,sd13_3,ownership of goods: music cd/mp3 player,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+434,sd13_4,ownership of goods: computer,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+435,sd13_5,ownership of goods: internet connection at home,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+436,sd13_6,ownership of goods: car,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+437,sd13_7,ownership of goods: apartment/house finished paying,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+438,sd13_8,ownership of goods: apartment/house paying for,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+439,sd13_9,ownership of goods: none,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+440,sd13_10,ownership of goods: dont know,int64,1006,0,2,"{""0"": ""Not mentioned"", ""1"": ""Mentioned"", ""9"": ""NO ANSWER""}",,,0.0,1.0
+441,sd14_1,internet use: at home,int64,1006,0,7,"{""1"": ""Everyday / Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""No Internet access (SPONTANEOUS)""}",,,1.0,7.0
+442,sd14_2,internet use: at place of work,object,1006,0,8,"{""1"": ""Everyday / Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""No Internet access (SPONTANEOUS)"", ""i"": ""Inap. (coded 1-4, 19 or 20 in sd5a)""}",,,,
+443,sd14_3,internet use: somewhere else,int64,1006,0,7,"{""1"": ""Everyday / Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""No Internet access (SPONTANEOUS)""}",,,1.0,7.0
+444,sd15,type of community,int64,1006,0,4,"{""1"": ""Rural area or village"", ""2"": ""Small or middle sized town"", ""3"": ""Large town"", ""4"": ""DK""}",,,1.0,4.0
+445,sd16_1,social media account: facebook (ba9 in wave 1-4),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)""}",,,1.0,3.0
+446,sd16_2,social media account: twitter (ba9 in wave 1-4),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)""}",,,1.0,3.0
+447,sd16_3,social media account: linkedin (ba9 in wave 1-4),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)""}",,,1.0,3.0
+448,sd16_4,social media account: google+ (ba9 in wave 1-4),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)""}",,,1.0,3.0
+449,sd16_5,social media account: vkontakte (ba9 in wave 1-4),object,1006,0,1,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not RU AM AZ BY GE MD UA in isocntry)""}",,,,
+450,sd16_6,social media account: odnoklassniki (ba9 in wave 1-4),object,1006,0,1,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not RU AM AZ BY GE MD UA in isocntry)""}",,,,
+451,sd16_7,social media account: netlog (ba9 in wave 1-4),int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)""}",,,1.0,3.0
+452,sd16_8,social media account: lifejournal (ba9 in wave 1-4),object,1006,0,1,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not RU AM AZ BY UA in isocntry)""}",,,,
+453,sd16_9,social media account: instagram,int64,1006,0,3,"{""1"": ""Yes"", ""2"": ""No"", ""3"": ""Dont know (SPONTANEOUS)""}",,,1.0,3.0
+454,sd17_1,social media use: facebook (ba10 in wave 1-4),object,1006,0,7,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_1)""}",,,,
+455,sd17_2,social media use: twitter (ba10 in wave 1-4),object,1006,0,7,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_2)""}",,,,
+456,sd17_3,social media use: linkedin (ba10 in wave 1-4),object,1006,0,6,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_3)""}",,,,
+457,sd17_4,social media use: google+ (ba10 in wave 1-4),object,1006,0,8,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_4)""}",,,,
+458,sd17_5,social media use: vkontakte (ba10 in wave 1-4),object,1006,0,1,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_5)"", ""a"": ""Inap. (not RU AM AZ BY GE MD UA in isocntry)""}",,,,
+459,sd17_6,social media use: odnoklassniki (ba10 in wave 1-4),object,1006,0,1,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_6)"", ""a"": ""Inap. (not RU AM AZ BY GE MD UA in isocntry)""}",,,,
+460,sd17_7,social media use: netlog (ba10 in wave 1-4),object,1006,0,8,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_7)"", ""a"": ""Inap. (not DZ EG JO LB MA PS TN in isocntry)""}",,,,
+461,sd17_8,social media use: lifejournal (ba10 in wave 1-4),object,1006,0,1,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_8)"", ""a"": ""Inap. (not RU AM AZ BY UA in isocntry)""}",,,,
+462,sd17_9,social media use: instagram,object,1006,0,7,"{""1"": ""Everyday/ Almost everyday"", ""2"": ""Two or three times a week"", ""3"": ""About once a week"", ""4"": ""Two or three times a month"", ""5"": ""Less often"", ""6"": ""Never"", ""7"": ""Dont know (SPONTANEOUS)"", ""i"": ""Inap. (not 1 in sd16_9)""}",,,,
+463,p1d,date of interview - day,int64,1006,0,23,,,,1.0,31.0
+464,p1m,date of interview - month,int64,1006,0,2,,,,10.0,11.0
+465,p2h,time of the beginning of the interview - hours,int64,1006,0,14,,,,7.0,22.0
+466,p2m,time of the beginning of the interview - minutes,int64,1006,0,54,,,,0.0,59.0
+467,p2h_b,time of the end of the interview - hours,int64,1006,0,14,,,,8.0,22.0
+468,p2m_b,time of the end of the interview - minutes,int64,1006,0,60,,,,0.0,59.0
+469,p3,number of minutes the interview lasted,int64,1006,0,41,,,,15.0,59.0
+470,p4,number of persons present during the interview,int64,1006,0,4,"{""1"": ""Two (interviewer and respondent)"", ""2"": ""Three"", ""3"": ""Four"", ""4"": ""Five or more""}",,,1.0,4.0
+471,p5,respondent cooperation,int64,1006,0,4,"{""1"": ""Excellent"", ""2"": ""Fair"", ""3"": ""Average"", ""4"": ""Bad""}",,,1.0,4.0
+472,p6,size of locality  - all countries (not documented),int64,1006,0,2,,,,1.0,2.0
+473,p7,region - all countries,int64,1006,0,10,,,,1.0,10.0
+474,p7_ma,region - morocco,object,1006,0,1,"{""1"": ""Casablanca"", ""2"": ""Oujda"", ""3"": ""Tangier"", ""4"": ""Marrakech"", ""5"": ""Fes"", ""6"": ""Agadir"", ""i"": ""Inap. (not MA in isocntry)""}",,,,
+475,p7_dz,region - algeria,object,1006,0,1,"{""1"": ""Setif"", ""2"": ""Constantine"", ""3"": ""Oran"", ""4"": ""Tizi Ouzou"", ""5"": ""Alger"", ""i"": ""Inap. (not DZ in isocntry)""}",,,,
+476,p7_tn,region - tunisia,int64,1006,0,10,"{""1"": ""Grand Tunis"", ""2"": ""Nabeul"", ""3"": ""Bizerte"", ""4"": ""Jendouba"", ""5"": ""Kairouan"", ""6"": ""Sousse"", ""7"": ""Monastir"", ""8"": ""Sfax"", ""9"": ""Gabes"", ""10"": ""Gafsa""}",,,1.0,10.0
+477,p7_eg,region - egypt,object,1006,0,1,"{""1"": ""Cairo"", ""2"": ""Alexandria"", ""3"": ""Sharkia"", ""4"": ""Kalyoubia"", ""5"": ""Giza"", ""6"": ""Menia"", ""i"": ""Inap. (not EG in isocntry)""}",,,,
+478,p7_il,region - israel,object,1006,0,1,"{""1"": ""Jerusalem"", ""2"": ""North"", ""3"": ""Haifa"", ""4"": ""Center"", ""5"": ""Tel-Aviv"", ""6"": ""South"", ""i"": ""Inap. (not IL in isocntry)""}",,,,
+479,p7_jo,region - jordan,object,1006,0,1,"{""1"": ""Amman"", ""2"": ""Zarqa"", ""3"": ""Irbid"", ""i"": ""Inap. (not JO in isocntry)""}",,,,
+480,p7_lb,region - lebanon,object,1006,0,1,"{""1"": ""East Beirut"", ""2"": ""West Beirut"", ""3"": ""Southern Suburbs"", ""4"": ""Northern Suburbs"", ""5"": ""Jounieh & Jbeil"", ""6"": ""Mount Lebanon North"", ""7"": ""Mount Lebanon South"", ""8"": ""Tripoli"", ""9"": ""Zogarta"", ""10"": ""Halba"", ""11"": ""Saida"", ""12"": ""Nabatieh"", ""13"": ""Sour"", ""14"": ""Zahle"", ""15"": ""Baalbek"", ""16"": ""Bekaa West"", ""i"": ""Inap. (not LB in isocntry)""}",,,,
+481,p7_ps,region - palestinian territories,object,1006,0,1,"{""1"": ""Jenin"", ""2"": ""Tubas"", ""3"": ""Tulkarem"", ""4"": ""Qalqilya"", ""5"": ""Salfit"", ""6"": ""Nablus"", ""7"": ""Ramallah & Al-Bireh"", ""8"": ""Jerusalem ( J1+ J2 )"", ""9"": ""Jericho"", ""10"": ""Bethlehem"", ""11"": ""Hebron"", ""12"": ""North Gaza"", ""13"": ""Gaza (the city)"", ""14"": ""Dier Al-Balah"", ""15"": ""Khan Yunis"", ""16"": ""Rafah"", ""i"": ""Inap. (not PS in isocntry)""}",,,,
+482,p7_am,region - armenia,object,1006,0,1,"{""1"": ""Yerevan"", ""2"": ""Aragatsotn"", ""3"": ""Ararat"", ""4"": ""Armavir"", ""5"": ""Gegharkunik"", ""6"": ""Lori"", ""7"": ""Kotayk"", ""8"": ""Shirak"", ""9"": ""Syunik"", ""10"": ""Vayots Dzor"", ""11"": ""Tavush"", ""i"": ""Inap. (not AM in isocntry)""}",,,,
+483,p7_az,region - azerbaijan,object,1006,0,1,"{""1"": ""Baki sheheri"", ""2"": ""Absheron"", ""3"": ""Ganja-Gazakh"", ""4"": ""Sheki-Zagatala & Daghlig Shirvan"", ""5"": ""Lenkeran"", ""6"": ""Guba-Khachmaz"", ""7"": ""Aran"", ""i"": ""Inap. (not AZ in isocntry)""}",,,,
+484,p7_ge,region - georgia,object,1006,0,1,"{""1"": ""Kakheti"", ""2"": ""Shida Kartli"", ""3"": ""Kvemo Kartli"", ""4"": ""Samtskhe Javakheti"", ""5"": ""Adjaria autonomous republic"", ""6"": ""Guria"", ""7"": ""Samegrelo, Zemo Svaneti"", ""8"": ""Imereti Region, Racha, Svaneti"", ""9"": ""Mtskheta-Tianeti"", ""10"": ""Tbilisi"", ""i"": ""Inap. (not GE in isocntry)""}",,,,
+485,p7_md,region - moldova,object,1006,0,1,"{""1"": ""North"", ""2"": ""Center"", ""3"": ""South"", ""i"": ""Inap. (not MD in isocntry)""}",,,,
+486,p7_ua,region - ukraine,object,1006,0,1,"{""1"": ""Central"", ""2"": ""Western"", ""3"": ""Eastern"", ""4"": ""Southern"", ""i"": ""Inap. (not UA in isocntry)""}",,,,
+487,p7_by,region - belarus,object,1006,0,1,"{""1"": ""Brest region"", ""2"": ""Vitebsk region"", ""3"": ""Gomel region"", ""4"": ""Grodno region"", ""5"": ""Minsk city"", ""6"": ""Minsk region"", ""7"": ""Mogilev region"", ""i"": ""Inap. (not BY in isocntry)""}",,,,
+488,p7_ru,region - russia,object,1006,0,1,"{""1"": ""Central federal district"", ""2"": ""North West district"", ""3"": ""Southern federal district"", ""4"": ""North- Caucasian federal district"", ""5"": ""Privolzhsky federal district"", ""6"": ""Urals federal district"", ""7"": ""Siberian federal district"", ""8"": ""Far East federal district"", ""i"": ""Inap. (not RU in isocntry)""}",,,,
+489,p9,sample point number,int64,1006,0,185,,,,1.0,1145.0
+490,p10,interviewer number,int64,1006,0,42,,,,1.0,136.0
+491,p13,language of interview (not documented),int64,1006,0,1,"{""0"": ""NOT CODED"", ""1"": ""Language 1"", ""5"": ""Language 5"", ""6"": ""Language 6"", ""7"": ""Language 7"", ""8"": ""Language 8""}",,,1.0,1.0

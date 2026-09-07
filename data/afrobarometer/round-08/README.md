@@ -6,7 +6,7 @@
 | Variables | 377 |
 | Fieldwork (Tunisia) | 2020-02-24 to 2020-03-18 |
 | Language | English (translated instrument and labels) |
-| Pooled release | 1,200 respondents across 1200 countries |
+| Source release | Tunisia country file, 1,200 respondents |
 | Source file | `afrobarometer_tun_r8_en.sav` |
 | Publisher | Afrobarometer |
 

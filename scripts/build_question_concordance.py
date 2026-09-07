@@ -57,6 +57,11 @@ SHORT = {
     "arab-opinion-index": "AOI",
     "afrobarometer": "Afro",
     "world-values-survey": "WVS",
+    "ebrd-life-in-transition": "LiTS",
+    "issp": "ISSP",
+    "sahwa": "SAHWA",
+    "arab-transformations": "ArabTrans",
+    "eu-neighbourhood-barometer": "ENB",
 }
 
 JACCARD_FLOOR = 0.85
@@ -128,7 +133,14 @@ def substantive_scale(raw: str) -> dict[int, str] | None:
             try:
                 out[int(float(code))] = plain
             except (TypeError, ValueError):
-                out[code] = plain
+                # A key that is not a number is not a response code. Stata lets a
+                # variable carry extended missings (.a to .z) and a release can label
+                # them -- the EU Neighbourhood Barometer labels .i "Inap." -- and
+                # pyreadstat hands the key back as the bare letter. Keeping it mixed
+                # strings into a dict of ints, which then cannot be put in code order,
+                # and code order is exactly what tells a reversed scale from a
+                # recodable one. It is a missing marker; it is not an answer.
+                continue
     return out or None
 
 

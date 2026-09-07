@@ -31,6 +31,11 @@ SHORT = {
     "arab-opinion-index": "AOI",
     "afrobarometer": "Afro",
     "world-values-survey": "WVS",
+    "ebrd-life-in-transition": "LiTS",
+    "issp": "ISSP",
+    "sahwa": "SAHWA",
+    "arab-transformations": "ArabTrans",
+    "eu-neighbourhood-barometer": "ENB",
 }
 
 

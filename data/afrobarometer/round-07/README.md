@@ -6,7 +6,7 @@
 | Variables | 339 |
 | Fieldwork (Tunisia) | 2018-03-31 to 2018-05-07 |
 | Language | English (translated instrument and labels) |
-| Pooled release | 1,199 respondents across 1199 countries |
+| Source release | Tunisia country file, 1,199 respondents |
 | Source file | `afrobarometer_tun_r7_en.sav` |
 | Publisher | Afrobarometer |
 

@@ -19,7 +19,9 @@ from __future__ import annotations
 import argparse
 import datetime
 import json
+import re
 import sys
+import zipfile
 from pathlib import Path
 
 import pandas as pd
@@ -128,15 +130,28 @@ def check_labels_csv(
         # A label can be attached to more than one code -- Wave V's party
         # variables label both 0 and 150000 "no party" -- so the reverse map
         # holds every code carrying the text, not just the last one seen.
+        # A code is usually a number, but a Stata release can also label an extended
+        # missing (.a to .z), which comes back as the bare letter and is a value a
+        # cell really does hold: 15 Tunisians in EU Neighbourhood Barometer Wave 1
+        # are '.i' on aa6b_1. Those match on the text, the numeric ones on the value.
         back: dict[str, set[float]] = {}
+        back_text: dict[str, set[str]] = {}
         for code, label in labels.items():
-            back.setdefault(str(label), set()).add(float(code))
+            try:
+                back.setdefault(str(label), set()).add(float(code))
+            except (TypeError, ValueError):
+                back_text.setdefault(str(label), set()).add(str(code))
         for i, raw_val in expect[var].items():
             seen = labelled.at[i, var]
             if pd.isna(raw_val) or seen == "":
                 continue
             if str(raw_val) in {seen, f"{seen}.0"}:
                 continue
+            if str(raw_val) in back_text.get(seen, ()):
+                continue
+            if isinstance(raw_val, str):
+                errors.append(f"{tag} -labels.csv: {var} row {i} is {seen!r}")
+                return
             if not any(abs(c - raw_val) <= TOL for c in back.get(seen, ())):
                 errors.append(f"{tag} -labels.csv: {var} row {i} is {seen!r}")
                 return
@@ -226,29 +241,48 @@ def check_questionnaires(catalog: dict, manifest: dict, errors: list[str]) -> No
         who = f"{survey['series']} {survey['tag']}"
         spec = specs[(survey["series"], survey["tag"])]
 
-        for kind in ("questionnaire", "codebook", "methodology_document"):
-            entry = spec.get(kind)
-            if entry is None:
-                if kind == "questionnaire":
-                    errors.append(f"{who}: no questionnaire recorded")
-                continue
+        # A wave declares one instrument per kind, plus any number of supporting
+        # documents under "documentation". All of them are checked the same way:
+        # a declared file that is missing, empty or unreadable is worse than no
+        # declaration at all, because it reads as provenance the archive does not have.
+        entries = [(k, spec[k]) for k in ("questionnaire", "codebook", "methodology_document")
+                   if spec.get(k) is not None]
+        entries += [(f"documentation[{i}]", d) for i, d in enumerate(spec.get("documentation", []))]
+        if not spec.get("questionnaire"):
+            errors.append(f"{who}: no questionnaire recorded")
 
+        for kind, entry in entries:
             path = ROOT / entry["file"]
             if not path.exists():
                 errors.append(f"{who}: {kind} {entry['file']} is not in the repository")
                 continue
 
             raw = path.read_bytes()
-            if not raw.startswith(b"%PDF-"):
-                errors.append(f"{who}: {kind} {path.name} is not a PDF")
-                continue
-            try:
-                pages = len(pypdf.PdfReader(str(path)).pages)
-            except Exception as exc:  # noqa: BLE001 - any failure means it is unusable
-                errors.append(f"{who}: {kind} {path.name} will not open ({type(exc).__name__})")
-                continue
-            if pages == 0:
-                errors.append(f"{who}: {kind} {path.name} has no pages")
+            # Nearly every instrument here is a PDF. The Arab Transformations
+            # questionnaire is published as a Word document and is kept in that form
+            # rather than converted, so the check reads whichever it is and asks the
+            # same question of both: does it open, and does it have content?
+            if path.suffix.lower() == ".docx":
+                try:
+                    with zipfile.ZipFile(path) as archive:
+                        body = archive.read("word/document.xml")
+                except Exception as exc:  # noqa: BLE001 - any failure means it is unusable
+                    errors.append(f"{who}: {kind} {path.name} will not open ({type(exc).__name__})")
+                    continue
+                if len(re.sub(rb"<[^>]+>", b" ", body).split()) < 50:
+                    errors.append(f"{who}: {kind} {path.name} has no readable text")
+                    continue
+            elif raw.startswith(b"%PDF-"):
+                try:
+                    pages = len(pypdf.PdfReader(str(path)).pages)
+                except Exception as exc:  # noqa: BLE001 - any failure means it is unusable
+                    errors.append(f"{who}: {kind} {path.name} will not open ({type(exc).__name__})")
+                    continue
+                if pages == 0:
+                    errors.append(f"{who}: {kind} {path.name} has no pages")
+                    continue
+            else:
+                errors.append(f"{who}: {kind} {path.name} is not a PDF or a Word document")
                 continue
 
             digest = sha256(path)
@@ -266,7 +300,7 @@ def check_questionnaires(catalog: dict, manifest: dict, errors: list[str]) -> No
             if kind == "questionnaire":
                 have += 1
 
-    print(f"questionnaires: {have} of {len(catalog['surveys'])} surveys, all readable PDFs")
+    print(f"questionnaires: {have} of {len(catalog['surveys'])} surveys, all readable")
 
 
 def check_topic_figures(errors: list[str]) -> None:
@@ -371,7 +405,14 @@ def check_against_release(s: dict, spec: dict, series: dict, errors: list[str]) 
     same_frame(expect, got_dta, f"{tag} .dta", errors)
 
     if s["has_numeric_codes"]:
-        got_csv = pd.read_csv(f"{stem}-codes.csv", low_memory=False)
+        # float_precision="round_trip" or this check reports a difference the archive
+        # does not have. ISSP's CASEID is a sixteen-digit integer held in a double,
+        # where one unit in the last place is 0.25; the CSV writes the exact decimal,
+        # but pandas' default float parser is only good to about fifteen digits and
+        # hands back a value a quarter out. The value is right in the file and in the
+        # .sav and .dta; only the reader was losing it.
+        got_csv = pd.read_csv(f"{stem}-codes.csv", low_memory=False,
+                              float_precision="round_trip")
         same_frame(expect, got_csv, f"{tag} -codes.csv", errors)
         if s["has_value_labels"]:
             check_labels_csv(expect, Path(f"{stem}-labels.csv"), value_labels, tag, errors)
@@ -397,6 +438,16 @@ def main() -> int:
         action="store_true",
         help="check only the committed files, not the pooled releases in data/raw/",
     )
+    ap.add_argument(
+        "--only",
+        metavar="NAME",
+        nargs="+",
+        default=None,
+        help="check only these surveys, by series (eu-neighbourhood-barometer) or by key "
+             "(enb-w01). A full run re-reads every release and takes over an hour, which is "
+             "too slow to check one survey you have just added; this is that check. It is not "
+             "a substitute for the full run before committing.",
+    )
     args = ap.parse_args()
 
     catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
@@ -410,12 +461,24 @@ def main() -> int:
         label = "all committed files match the catalog"
     else:
         errors = []
-        for s in catalog["surveys"]:
+        wanted = catalog["surveys"]
+        if args.only:
+            names = set(args.only)
+            wanted = [s for s in wanted if s["series"] in names or s["key"] in names]
+            unmatched = names - {s["series"] for s in catalog["surveys"]} - {
+                s["key"] for s in catalog["surveys"]}
+            if unmatched:
+                print(f"no such survey or series: {', '.join(sorted(unmatched))}")
+                return 1
+        for s in wanted:
             spec = specs[(s["series"], s["tag"])]
             check_against_release(s, spec, manifest["series"][s["series"]], errors)
-        check_questionnaires(catalog, manifest, errors)
-        check_wave06_merge(errors)
-        label = "all extracts match their pooled releases"
+        if args.only:
+            label = f"{len(wanted)} of {len(catalog['surveys'])} surveys match their releases"
+        else:
+            check_questionnaires(catalog, manifest, errors)
+            check_wave06_merge(errors)
+            label = "all extracts match their pooled releases"
 
     if errors:
         print("\nFAILED:")

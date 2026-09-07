@@ -183,13 +183,336 @@ not answer options.
 | `VQID` | vQID.QID |
 | `WEIGHT` | Weight.Weight |
 
+## Arab Transformations Project
+
+366 variables across 1 survey, 366 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 1 | 366 |
+
+Only one survey in this series so far, so there is nothing to match it
+against; the rows carry its names and question text and wait for a second.
+
 ## Life in Transition Survey
 
-1,319 variables across 1 surveys, 1,319 with question text.
+1,319 variables across 1 survey, 1,319 with question text.
 
 | Surveys | Variables |
 |---:|---:|
 | 1 | 1,319 |
+
+Only one survey in this series so far, so there is nothing to match it
+against; the rows carry its names and question text and wait for a second.
+
+## EU Neighbourhood Barometer
+
+1,109 variables across 6 surveys, 1,109 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 6 | 280 |
+| 5 | 28 |
+| 4 | 9 |
+| 3 | 97 |
+| 2 | 50 |
+| 1 | 645 |
+
+24 variables carry a name in more than one survey but wording that
+does not match between them. That is the column worth checking before pooling:
+`text_varies_across_waves`, with the weakest pairwise agreement in
+`lowest_text_agreement` and the kind of text compared in `comparison_basis`.
+
+### Present in all 6 with stable wording
+
+263 variables. The safest to stack, and even here confirm the response
+scale in each survey's `codebook.csv` — the crosswalk compares question wording,
+not answer options.
+
+| Variable | Question |
+|---|---|
+| `AA1` | life satisfaction |
+| `AA2_1` | political discussion: international matters |
+| `AA2_2` | political discussion: national matters |
+| `AA2_3` | political discussion: local matters |
+| `AA3` | persuade friends of own strong opinion |
+| `AA4_1` | assessment: economic situation in country |
+| `AA4_2` | assessment: situation of the economy in the world |
+| `AA4_3` | assessment: personal job situation |
+| `AA4_4` | assessment: financial situation of your household |
+| `AA5_1` | expectations: economic situation in country |
+| `AA5_2` | expectations: your personal job situation |
+| `AA5_3` | expectations: financial situation of your household |
+| `AA5_4` | expectations: employment situation in country |
+| `AA5_5` | expectations: your life in general |
+| `AA6A` | important country issues - firstly |
+| `AA6B_1` | important country issues: crime |
+| `AA6B_10` | important country issues: rule of law, transparency |
+| `AA6B_11` | important country issues: housing |
+| `AA6B_12` | important country issues: migration |
+| `AA6B_13` | important country issues: refugees/ internal displaced |
+| `AA6B_14` | important country issues: healthcare system |
+| `AA6B_15` | important country issues: educational system |
+| `AA6B_16` | important country issues: pensions |
+| `AA6B_17` | important country issues: environment |
+| `AA6B_18` | important country issues: energy |
+| `AA6B_19` | important country issues: mountainous garabagh |
+| `AA6B_2` | important country issues: freedom of speech |
+| `AA6B_20` | important country issues: transnistrian conflict |
+| `AA6B_21` | important country issues: other |
+| `AA6B_22` | important country issues: none |
+| `AA6B_23` | important country issues: dont know |
+| `AA6B_3` | important country issues: economic situation |
+| `AA6B_4` | important country issues: rising prices/ inflation |
+| `AA6B_5` | important country issues: taxation |
+| `AA6B_6` | important country issues: unemployment |
+| `AA6B_7` | important country issues: terrorism |
+| `AA6B_8` | important country issues: corruption |
+| `AA6B_9` | important country issues: defence/ foreign affairs |
+| `AA6T_1` | important country issues: crime (total) |
+| `AA6T_10` | important country issues: rule of law, transparency (total) |
+| `AA6T_11` | important country issues: housing (total) |
+| `AA6T_12` | important country issues: migration (total) |
+| `AA6T_13` | important country issues: refugees/ internal displaced (total) |
+| `AA6T_14` | important country issues: healthcare system (total) |
+| `AA6T_15` | important country issues: educational system (total) |
+| `AA6T_16` | important country issues: pensions (total) |
+| `AA6T_17` | important country issues: environment (total) |
+| `AA6T_18` | important country issues: energy (total) |
+| `AA6T_19` | important country issues: mountainous garabagh (total) |
+| `AA6T_2` | important country issues: freedom of speech (total) |
+| `AA6T_20` | important country issues: transnistrian conflict (total) |
+| `AA6T_21` | important country issues: other (total) |
+| `AA6T_22` | important country issues: none (total) |
+| `AA6T_23` | important country issues: dont know (aa6a only) |
+| `AA6T_3` | important country issues: economic situation (total) |
+| `AA6T_4` | important country issues: rising prices/ inflation (total) |
+| `AA6T_5` | important country issues: taxation (total) |
+| `AA6T_6` | important country issues: unemployment (total) |
+| `AA6T_7` | important country issues: terrorism (total) |
+| `AA6T_8` | important country issues: corruption (total) |
+| `AA6T_9` | important country issues: defence/ foreign affairs (total) |
+| `AB1` | eu image - positive or negative |
+| `AC1_1` | eu communication: enough information available in country |
+| `AC1_2` | eu communication: country information is easy to understand |
+| `AC2_1` | helping economic development: national government |
+| `AC2_10` | helping economic development: cis area |
+| `AC2_11` | helping economic development: undp |
+| `AC2_12` | helping economic development: imf / world bank |
+| `AC2_13` | helping economic development: non-governmental org |
+| `AC2_14` | helping economic development: private companies |
+| `AC2_15` | helping economic development: religious organisations |
+| `AC2_16` | helping economic development: other |
+| `AC2_17` | helping economic development: none |
+| `AC2_18` | helping economic development: dont know |
+| `AC2_2` | helping economic development: european union |
+| `AC2_3` | helping economic development: united states |
+| `AC2_4` | helping economic development: arab league |
+| `AC2_5` | helping economic development: g8/g20 country |
+| `AC2_6` | helping economic development: united nations |
+| `AC2_7` | helping economic development: arab funds |
+| `AC2_8` | helping economic development: charitable foundations |
+| `AC2_9` | helping economic development: guam |
+| `AC3_1` | helping security & stability: national government |
+| `AC3_10` | helping security & stability: none |
+| `AC3_11` | helping security & stability: dont know |
+| `AC3_2` | helping security & stability: european union |
+| `AC3_3` | helping security & stability: united states |
+| `AC3_4` | helping security & stability: arab league |
+| `AC3_5` | helping security & stability: nato |
+| `AC3_6` | helping security & stability: g8/g20 country |
+| `AC3_7` | helping security & stability: united nations |
+| `AC3_8` | helping security & stability: csto |
+| `AC3_9` | helping security & stability: other |
+| `AC4_1` | economic development contribution: national government |
+| `AC4_2` | economic development contribution: the presidency |
+| `AC4_3` | economic development contribution: nat private companies |
+| `AC4_4` | economic development contribution: national banks |
+| `AC4_5` | economic development contribution: non-governmental org |
+| `AC4_6` | economic development contribution: religious organisations |
+| `AC5_1` | eu cooperation important: peace and security |
+| `AC5_10` | eu cooperation important: climate change |
+| `AC5_11` | eu cooperation important: migration |
+| `AC5_12` | eu cooperation important: employment |
+| `AC5_13` | eu cooperation important: science and technology |
+| `AC5_14` | eu cooperation important: other |
+| `AC5_15` | eu cooperation important: none |
+| `AC5_16` | eu cooperation important: dont know |
+| `AC5_2` | eu cooperation important: democracy and good governance |
+| `AC5_3` | eu cooperation important: culture and education |
+| `AC5_4` | eu cooperation important: human rights |
+| `AC5_5` | eu cooperation important: trade |
+| `AC5_6` | eu cooperation important: infrastructure |
+| `AC5_7` | eu cooperation important: tackling poverty |
+| `AC5_8` | eu cooperation important: energy |
+| `AC5_9` | eu cooperation important: environmental protection |
+| `AC6_1` | eu development aid focus: peace and security |
+| `AC6_10` | eu development aid focus: climate change |
+| `AC6_11` | eu development aid focus: migration |
+| `AC6_12` | eu development aid focus: employment |
+| `AC6_13` | eu development aid focus: science and technology |
+| `AC6_14` | eu development aid focus: other |
+| `AC6_15` | eu development aid focus: none |
+| `AC6_16` | eu development aid focus: dont know |
+| `AC6_2` | eu development aid focus: democracy/ good governance |
+| `AC6_3` | eu development aid focus: culture and education |
+| `AC6_4` | eu development aid focus: human rights |
+| `AC6_5` | eu development aid focus: trade |
+| `AC6_6` | eu development aid focus: infrastructure |
+| `AC6_7` | eu development aid focus: tackling poverty |
+| `AC6_8` | eu development aid focus: energy |
+| `AC6_9` | eu development aid focus: environmental protection |
+| `AD1_1` | trust in institutions: printed press |
+| `AD1_2` | trust in institutions: radio |
+| `AD1_3` | trust in institutions: tv |
+| `AD1_4` | trust in institutions: internet |
+| `AD2_1` | trust in institutions: political parties |
+| `AD2_2` | trust in institutions: european union |
+| `AD2_3` | trust in institutions: united nations |
+| `AD2_4` | trust in institutions: arab league |
+| `AD3_1` | trust in institutions: national government |
+| `AD3_2` | trust in institutions: national parliament |
+| `AD3_3` | trust in institutions: regional public authorities |
+| `AD3_4` | trust in institutions: local public authorities |
+| `AD4A` | democracy satisfaction - country |
+| `AD4B` | democracy satisfaction - region |
+| `CASEID` | tns case id |
+| `COUNTRY` | country id (series standard) |
+| `DOI` | digital object identifier |
+| `EDITION` | dataset edition |
+| `ISOCNTRY` | country code - iso 3166 |
+| `OPLS` | opinion leadership index |
+| `P10` | interviewer number |
+| `P13` | language of interview (not documented) |
+| `P1D` | date of interview - day |
+| `P1M` | date of interview - month |
+| `P2H` | time of the beginning of the interview - hours |
+| `P2M` | time of the beginning of the interview - minutes |
+| `P3` | number of minutes the interview lasted |
+| `P4` | number of persons present during the interview |
+| `P5` | respondent cooperation |
+| `P6` | size of locality - all countries (not documented) |
+| `P7` | region - all countries |
+| `P7_AM` | regions - armenia |
+| `P7_AZ` | regions - azerbaijan |
+| `P7_BY` | regions - belarus |
+| `P7_DZ` | regions - algeria |
+| `P7_EG` | regions - egypt |
+| `P7_GE` | regions - georgia |
+| `P7_IL` | regions - israel |
+| `P7_JO` | regions - jordan |
+| `P7_LB` | regions - lebanon |
+| `P7_MA` | regions - morocco |
+| `P7_MD` | regions - moldova |
+| `P7_PS` | regions - palestinian territories |
+| `P7_RU` | regions - russia |
+| `P7_TN` | regions - tunesia |
+| `P7_UA` | regions - ukraine |
+| `P9` | sample point number |
+| `POLINTR` | political interest index |
+| `SD1` | gender |
+| `SD10` | financial situation - difficulties paying bills |
+| `SD11A` | household composition: people aged 15+ |
+| `SD11B` | household composition: children aged < 10 |
+| `SD11C` | household composition: children aged 10-14 |
+| `SD12A` | telephone equipment: fixed phone in hh |
+| `SD12B` | telephone equipment: personal mobile phone |
+| `SD12T` | telephone equipment (total) |
+| `SD13_1` | ownership of goods: television |
+| `SD13_10` | ownership of goods: dont know |
+| `SD13_2` | ownership of goods: dvd player |
+| `SD13_3` | ownership of goods: music cd/mp3 player |
+| `SD13_4` | ownership of goods: computer |
+| `SD13_5` | ownership of goods: internet connection at home |
+| `SD13_6` | ownership of goods: car |
+| `SD13_7` | ownership of goods: apartment/ house finished paying |
+| `SD13_8` | ownership of goods: apartment/ house paying for |
+| `SD13_9` | ownership of goods: none |
+| `SD14_1` | internet use: at home |
+| `SD14_2` | internet use: at place of work |
+| `SD14_3` | internet use: somewhere else |
+| `SD15` | type of community |
+| `SD2` | age |
+| `SD2R` | age - recoded |
+| `SD3` | age when stopped full-time education |
+| `SD3R` | age when stopped full-time education - recoded 1 |
+| `SD4` | marital status |
+| `SD5A` | current occupation |
+| `SD5B` | last occupation |
+| `SD6_1` | visited/ lived in eu country: visited for business |
+| `SD6_2` | visited/ lived in eu country: visited on holiday |
+| `SD6_3` | visited/ lived in eu country: lived and/ or worked |
+| `SD6_4` | visited/ lived in eu country: to study |
+| `SD6_5` | visited/ lived in eu country: no |
+| `SD6_6` | visited/ lived in eu country: refusal |
+| `SD7_1` | eu country visited/ lived: austria |
+| `SD7_10` | eu country visited/ lived: germany |
+| `SD7_11` | eu country visited/ lived: greece |
+| `SD7_12` | eu country visited/ lived: hungary |
+| `SD7_13` | eu country visited/ lived: ireland |
+| `SD7_14` | eu country visited/ lived: italy |
+| `SD7_15` | eu country visited/ lived: latvia |
+| `SD7_16` | eu country visited/ lived: lithuania |
+| `SD7_17` | eu country visited/ lived: luxembourg |
+| `SD7_18` | eu country visited/ lived: malta |
+| `SD7_19` | eu country visited/ lived: netherlands |
+| `SD7_2` | eu country visited/ lived: belgium |
+| `SD7_20` | eu country visited/ lived: poland |
+| `SD7_21` | eu country visited/ lived: portugal |
+| `SD7_22` | eu country visited/ lived: romania |
+| `SD7_23` | eu country visited/ lived: slovakia |
+| `SD7_24` | eu country visited/ lived: slovenia |
+| `SD7_25` | eu country visited/ lived: spain |
+| `SD7_26` | eu country visited/ lived: sweden |
+| `SD7_27` | eu country visited/ lived: united kingdom |
+| `SD7_28` | eu country visited/ lived: any other country |
+| `SD7_29` | eu country visited/ lived: dont know |
+| `SD7_3` | eu country visited/ lived: bulgaria |
+| `SD7_30` | eu country visited/ lived: refusal |
+| `SD7_4` | eu country visited/ lived: cyprus |
+| `SD7_5` | eu country visited/ lived: czech republic |
+| `SD7_6` | eu country visited/ lived: denmark |
+| `SD7_7` | eu country visited/ lived: estonia |
+| `SD7_8` | eu country visited/ lived: finland |
+| `SD7_9` | eu country visited/ lived: france |
+| `SD8T` | relatives in eu country - yes (total) |
+| `SD8_1` | relatives in eu country: for work |
+| `SD8_2` | relatives in eu country: for study |
+| `SD8_3` | relatives in eu country: for other reason |
+| `SD8_4` | relatives in eu country: no |
+| `SD8_5` | relatives in eu country: refusal |
+| `SD9` | level in society - self-placement |
+| `SERIALID` | serial case id (appointed by the archive) |
+| `STUDYNO` | archive study number |
+| `SURVEY` | survey identification |
+| `TNSCNTRY` | original tns country identification |
+| `UNIQID` | unique respondent id (caseid by tns country code) |
+| `VERSION` | gesis archive version & date |
+| `W1` | demographic country weight (redressment) |
+| `W2` | population size weight - south |
+| `W3` | population size weight - east (except russia) |
+| `W4` | population size weight - total (except russia) |
+| `W5` | population size weight - maghreb |
+| `W6` | population size weight - mashrek (except egypt) |
+
+## International Social Survey Programme
+
+139 variables across 1 survey, 138 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 1 | 139 |
+
+Only one survey in this series so far, so there is nothing to match it
+against; the rows carry its names and question text and wait for a second.
+
+## SAHWA Youth Survey
+
+843 variables across 1 survey, 843 with question text.
+
+| Surveys | Variables |
+|---:|---:|
+| 1 | 843 |
 
 Only one survey in this series so far, so there is nothing to match it
 against; the rows carry its names and question text and wait for a second.
@@ -264,13 +587,14 @@ matches but whose question text is the same. It exists because the World Values
 Survey renumbered between waves: Wave 6 asks `V9` what Wave 7 asks as `Q6`, and
 matching on name finds only the derived indices and the admin columns. Arab
 Barometer needs it less often, but it also renames — Wave II's Tunisia-specific
-`te105` is Wave III's `q105a`. 859 pairs in total:
+`te105` is Wave III's `q105a`. 880 pairs in total:
 
 | Series | Pairs |
 |---|---:|
 | Afrobarometer | 592 |
 | Arab Barometer | 25 |
 | Arab Opinion Index | 53 |
+| EU Neighbourhood Barometer | 21 |
 | World Values Survey | 189 |
 
 **These are suggestions, not findings.** A pair is offered only when the two
@@ -316,6 +640,15 @@ releases that carry wording as labels:
 | Arab Opinion Index 2022 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Arab Opinion Index 2024/2025 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Life in Transition Survey Round IV | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| International Social Survey Programme Religion IV (2018) | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| SAHWA Youth Survey 2015 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| Arab Transformations Project 2014 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| EU Neighbourhood Barometer Wave 1 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| EU Neighbourhood Barometer Wave 2 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| EU Neighbourhood Barometer Wave 3 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| EU Neighbourhood Barometer Wave 4 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| EU Neighbourhood Barometer Wave 5 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| EU Neighbourhood Barometer Wave 6 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 
 Agreement is the share of comparable variables where the parsed text and the
 release label match at a difflib ratio of 0.6 or better. It is a check on the

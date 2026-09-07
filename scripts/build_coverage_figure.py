@@ -28,24 +28,37 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import pyreadstat
 
-from extract_tunisia import parse_fieldwork_dates, ROOT, wave_tag
+from extract_tunisia import date_columns, interview_dates, ROOT, wave_tag
 
 FIGURES = ROOT / "main" / "figures"
 
 # Series in the order they are drawn. A series missing from this list sorts to the end
 # rather than raising, so adding one to the archive does not break the figure.
 SERIES_ORDER = ["arab-barometer", "world-values-survey", "afrobarometer", "arab-opinion-index",
-                "ebrd-life-in-transition"]
+                "ebrd-life-in-transition", "issp", "sahwa", "arab-transformations",
+                "eu-neighbourhood-barometer"]
 
 
 def series_rank(name: str) -> int:
     return SERIES_ORDER.index(name) if name in SERIES_ORDER else len(SERIES_ORDER)
+
+
+# Nine series need nine hues that stay apart for a colourblind reader. The archive's
+# old blue-violet for the Arab Opinion Index did not: a violet that close to blue
+# closes the gap entirely under deuteranopia. Six of these are Okabe and Ito's set,
+# plus a saddle brown, a red-leaning violet and a crimson, which clear it. Checked on
+# every pair rather than only on neighbours, since the coverage figure draws all nine
+# at once.
 SERIES_COLOUR = {
-    "arab-barometer": "#2a78d6",
-    "world-values-survey": "#eb6834",
-    "afrobarometer": "#1baf7a",
-    "arab-opinion-index": "#4a3aa7",
-    "ebrd-life-in-transition": "#e87ba4",
+    "arab-barometer": "#0072b2",
+    "world-values-survey": "#d55e00",
+    "afrobarometer": "#009e73",
+    "arab-opinion-index": "#cc79a7",
+    "ebrd-life-in-transition": "#e69f00",
+    "issp": "#56b4e9",
+    "sahwa": "#8b4513",
+    "arab-transformations": "#7b1fa2",
+    "eu-neighbourhood-barometer": "#c2185b",
 }
 INK = "#0b0b0b"
 INK_SOFT = "#52514e"
@@ -61,14 +74,14 @@ MIN_DRAWN_DAYS = 40
 
 def interview_days(survey: dict, spec: dict) -> pd.Series | None:
     """Interviews per calendar day, or None if the release records no date."""
-    var = spec.get("fieldwork_date_var")
-    if not var:
+    wanted = date_columns(spec)
+    if not wanted:
         return None
     sav = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
     renamed = survey.get("renamed_variables", {})
-    column = renamed.get(var, var)
-    frame, _ = pyreadstat.read_sav(str(sav), usecols=[column])
-    parsed = parse_fieldwork_dates(frame[column], spec.get("fieldwork_date_format"))
+    columns = {c: renamed.get(c, c) for c in wanted}
+    frame, _ = pyreadstat.read_sav(str(sav), usecols=list(columns.values()))
+    parsed = interview_dates(frame.rename(columns={v: k for k, v in columns.items()}), spec)
     if parsed.empty:
         return None
     return parsed.dt.date.value_counts().sort_index()

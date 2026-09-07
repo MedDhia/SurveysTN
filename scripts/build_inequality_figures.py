@@ -42,12 +42,22 @@ from extract_tunisia import ROOT
 FIGURES = ROOT / "main" / "figures"
 TOPIC = ROOT / "docs" / "topics" / "inequality.csv"
 
+# Nine series need nine hues that stay apart for a colourblind reader. The archive's
+# old blue-violet for the Arab Opinion Index did not: a violet that close to blue
+# closes the gap entirely under deuteranopia. Six of these are Okabe and Ito's set,
+# plus a saddle brown, a red-leaning violet and a crimson, which clear it. Checked on
+# every pair rather than only on neighbours, since the coverage figure draws all nine
+# at once.
 SERIES_COLOUR = {
-    "arab-barometer": "#2a78d6",
-    "world-values-survey": "#eb6834",
-    "afrobarometer": "#1baf7a",
-    "arab-opinion-index": "#4a3aa7",
-    "ebrd-life-in-transition": "#e87ba4",
+    "arab-barometer": "#0072b2",
+    "world-values-survey": "#d55e00",
+    "afrobarometer": "#009e73",
+    "arab-opinion-index": "#cc79a7",
+    "ebrd-life-in-transition": "#e69f00",
+    "issp": "#56b4e9",
+    "sahwa": "#8b4513",
+    "arab-transformations": "#7b1fa2",
+    "eu-neighbourhood-barometer": "#c2185b",
 }
 SHORT = {
     "arab-barometer": "AB",
@@ -55,6 +65,10 @@ SHORT = {
     "afrobarometer": "Afro",
     "arab-opinion-index": "AOI",
     "ebrd-life-in-transition": "LiTS",
+    "issp": "ISSP",
+    "sahwa": "SAHWA",
+    "arab-transformations": "ArabTrans",
+    "eu-neighbourhood-barometer": "ENB",
 }
 INK, INK_SOFT, INK_FAINT = "#0b0b0b", "#52514e", "#8a8984"
 SURFACE, GRID = "#fcfcfb", "#e4e3df"
@@ -544,8 +558,8 @@ def trend_figure(rows: pd.DataFrame, surveys: dict) -> None:
             if other != panel:
                 ax.plot(*series[other], color="#dcdbd6", lw=1.4, zorder=1)
         xs, ys = series[panel]
-        ax.plot(xs, ys, color="#2a78d6", lw=2, zorder=3)
-        ax.plot(xs, ys, "o", color="#2a78d6", ms=5, mec=SURFACE, mew=1.2, zorder=4)
+        ax.plot(xs, ys, color=SERIES_COLOUR["arab-barometer"], lw=2, zorder=3)
+        ax.plot(xs, ys, "o", color=SERIES_COLOUR["arab-barometer"], ms=5, mec=SURFACE, mew=1.2, zorder=4)
         for x, y in ((xs[0], ys[0]), (xs[-1], ys[-1])):
             ax.annotate(f"{y:.0%}", (x, y), textcoords="offset points", xytext=(0, 9),
                         ha="center", fontsize=7.6, color=INK, fontweight="bold")

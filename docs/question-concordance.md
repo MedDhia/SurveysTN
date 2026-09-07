@@ -11,37 +11,54 @@ variables by name and only within a series, which traces one programme through
 its own waves. This ignores names entirely and groups by the question itself, so
 it can answer what two different programmes both asked.
 
-**1,474 question groups span two or more surveys.** 1,397 are word-for-word identical and 77 are near-identical. **24 span more than one series** — those are the ones that make a
+**1,961 question groups span two or more surveys.** 1,886 are word-for-word identical and 75 are near-identical. **41 span more than one series** — those are the ones that make a
 cross-programme comparison possible at all.
 
 ## Across series
 
 | Question | Series | Surveys | Response scale |
 |---|---|---:|---|
-| q1010. Marital Status | AB, AOI, WVS | 14 | unknown |
+| q1010. Marital Status | AB, AOI, ArabTrans, ENB, WVS | 21 | unknown |
+| Date of Interview | AB, Afro, ArabTrans, WVS | 10 | unknown |
 | Q1005. Employment status | AB, Afro, WVS | 10 | unknown |
-| Date of Interview | AB, Afro, WVS | 9 | unknown |
+| digital object identifier | ENB, ISSP, WVS | 8 | unknown |
+| Year of birth | ArabTrans, ISSP, WVS | 4 | unknown |
 | Q340.How often do you use the internet? | AOI, Afro | 13 | differs |
 | Q1210.How much is the monthly household income in the local currency? | AB, AOI | 11 | unknown |
+| Q108. Interviewer Number | Afro, ENB | 9 | unknown |
 | q10191 What is your first language? | AB, AOI | 9 | differs |
 | q10192 What is your second language? | AB, AOI | 9 | differs |
 | Q1012. What is your religion? | AB, AOI | 8 | differs |
+| Trust in institutions: political parties | ArabTrans, ENB | 7 | differs |
 | Q37g. Trust police | AB, Afro | 6 | differs |
-| Q37l. Trust religious leaders | AB, Afro | 6 | differs |
+| Q101. Gender of respondent | Afro, ArabTrans | 5 | identical |
 | Q86c. Neighbours: homosexuals | Afro, WVS | 5 | unknown |
 | Q86d. Neighbours: immigrants and foreign workers | Afro, WVS | 5 | unknown |
+| Q37l. Trust religious leaders | AB, Afro | 5 | differs |
 | Q83. Most people can be trusted | Afro, WVS | 4 | unknown |
 | eg311 Suppose that presidential elections were to be held tomorrow and that you have… | AB, AOI | 4 | differs |
 | Q43c.arb. Democratic systems are not effective at maintaining order and stability | AB, Afro | 3 | differs |
-| Q201A_41. Regional government | AB, ebrd-life-in-transition | 3 | differs |
-| Q98b. Importance of religion | Afro, ebrd-life-in-transition | 2 | differs |
+| Q201A_41. Regional government | AB, LiTS | 3 | differs |
+| Worries: A war involving my country | ArabTrans, WVS | 3 | unknown |
+| Interest in Politics | ArabTrans, WVS | 3 | unknown |
+| MA - Confidence in the Arab League | SAHWA, WVS | 3 | unknown |
+| MA - Confidence in the United Nations | SAHWA, WVS | 3 | unknown |
+| Q98b. Importance of religion | Afro, LiTS | 2 | differs |
 | Q59k. Trust government | AB, Afro | 2 | differs |
-| q1015 Monthly household income | AB, ebrd-life-in-transition | 2 | unknown |
-| Q201A_5. Local government | AB, ebrd-life-in-transition | 2 | differs |
+| q1015 Monthly household income | AB, LiTS | 2 | unknown |
+| Q201A_5. Local government | AB, LiTS | 2 | differs |
 | MODE OF DATA COLLECTION | AB, WVS | 2 | unknown |
-| Q540B_2 Air pollution | AB, ebrd-life-in-transition | 2 | partly-labelled |
-| None of these | AB, ebrd-life-in-transition | 2 | differs |
-| Start time of the interview [HH.MM] | WVS, ebrd-life-in-transition | 2 | unknown |
+| Q540B_2 Air pollution | AB, LiTS | 2 | partly-labelled |
+| Women should have equal inheritance rights | AB, ArabTrans | 2 | differs |
+| None of these | AB, LiTS | 2 | differs |
+| Settlement name | ArabTrans, WVS | 2 | unknown |
+| Settlement type | ArabTrans, WVS | 2 | unknown |
+| Region where the interview was conducted | ArabTrans, WVS | 2 | unknown |
+| On the whole, men make better political leaders than women do | ArabTrans, LiTS | 2 | differs |
+| Highest educational level attained | ArabTrans, WVS | 2 | unknown |
+| O7 People can be trusted | ISSP, LiTS | 2 | differs |
+| Start time of the interview [HH.MM] | LiTS, WVS | 2 | unknown |
+| reason for moving abroad: other | ENB, SAHWA | 2 | differs |
 
 ## Do the answer options match?
 
@@ -51,14 +68,14 @@ are inventoried in [`missing-value-codes.md`](missing-value-codes.md) already.
 
 | Verdict | Groups | Means |
 |---|---:|---|
-| `identical` | 772 | same options, same codes; poolable as they stand |
-| `recodable` | 0 | same options, different codes; align the codes first |
+| `identical` | 1,093 | same options, same codes; poolable as they stand |
+| `recodable` | 2 | same options, different codes; align the codes first |
 | `reversed` | 0 | same options, but at least one survey codes them in the opposite order |
-| `differs` | 377 | not the same options; not one variable however alike the wording |
-| `partly-labelled` | 44 | a survey leaves some of its values unlabelled, so the labels understate the scale |
-| `unknown` | 281 | a member's release ships no value labels, so there is nothing to compare |
+| `differs` | 511 | not the same options; not one variable however alike the wording |
+| `partly-labelled` | 47 | a survey leaves some of its values unlabelled, so the labels understate the scale |
+| `unknown` | 308 | a member's release ships no value labels, so there is nothing to compare |
 
-**Not one of the 24 cross-series groups scores `identical`.** Every question two
+**Not one of the 41 cross-series groups scores `identical`.** Every question two
 programmes both ask, they ask with different answer options or with options this
 archive cannot see. The overlap that survives a wording comparison does not
 survive a scale comparison, and a cross-programme series here has to be built by

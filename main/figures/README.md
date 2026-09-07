@@ -8,9 +8,9 @@ Generated. Rebuild with the script named under each figure; do not edit the outp
 
 When Tunisian survey fieldwork actually happened, one row per survey, 2010 to 2025.
 
-The archive spans sixteen years. It does not cover them. Fourteen of the twenty-seven
+The archive spans sixteen years. It does not cover them. Twenty-two of the thirty-six
 surveys record an interview date per respondent, and between them those account for
-**389 distinct days** — from 18,655 of the archive's 41,424 interviews. The rest is
+**597 distinct days** — from 27,952 of the archive's 51,939 interviews. The rest is
 inference from what the publisher printed on the release.
 
 The figure keeps three levels of knowledge apart, because drawing them alike would
@@ -18,27 +18,38 @@ claim a precision the archive does not have:
 
 | Drawn as | Means | Surveys |
 |---|---|---:|
-| solid bar | an interview date per respondent; the days are exact | 14 |
+| solid bar | an interview date per respondent; the days are exact | 22 |
 | hatched bar | only the month fieldwork opened and closed | 1 |
-| outlined bar | only the year the publisher gives for the wave | 12 |
+| outlined bar | only the year the publisher gives for the wave | 13 |
 
 ### What it shows
 
-- **No two surveys were ever in the field on the same day.** Not once in 389 days.
+- **No two surveys were ever in the field on the same day.** Not once in 597 days,
+  across thirty-six surveys and nine programmes.
   But two came within **two days** of each other, and they are from different
   programmes: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer
   Wave III opened on 3 February. That pair is as close to a contemporaneous
   cross-programme reading of Tunisia as this archive gets. The next nearest are 70
-  days apart (two rounds of Arab Barometer Wave VI) and 93 days (Arab Barometer Wave
-  VII and Afrobarometer Round 9).
-- **The longest gap between two covered days is 1,057 days**, ending 31 March 2018 —
-  most of 2015, all of 2016 and 2017 have no dated interview in the archive at all.
-  The Arab Opinion Index ran in every one of those years, but its releases carry no
-  dates, so the gap is a gap in what is *known*, not necessarily in what was asked.
+  days apart (two rounds of Arab Barometer Wave VI). The next nearest cross-programme
+  pair is 42 days: the EU Neighbourhood Barometer's Wave 5 closed on 29 June 2014 and
+  the Arab Transformations Project opened on 10 August.
+- **The longest gap between two covered days is 893 days**, from 20 October 2015 to
+  31 March 2018 — all of 2016 and 2017 have no dated interview in the archive at all.
+  The Arab Opinion Index ran in both years, but its releases carry no dates, so the
+  gap is a gap in what is *known*, not necessarily in what was asked. It is now the
+  only gap over a year: the second longest is 354 days. The stretch from 2012 to 2015
+  used to hold two gaps of 750 and 503 days, and the EU Neighbourhood Barometer's five
+  waves and the Arab Transformations Project between them closed both.
 - **Fieldwork is short.** Windows run from 5 days (Arab Barometer Wave VI Part 1) to
-  53 (Wave VIII). A survey year is a fortnight of interviewing, not a year of it.
-- **Early 2013 is the densest stretch in the archive.** Afrobarometer Round 5, Arab
-  Barometer Wave III and — at month resolution — WVS Wave 6 all fall in that year.
+  75 (Life in Transition Round IV, the only one to run past two months). A survey
+  year is a fortnight of interviewing, not a year of it.
+- **2014 is the densest year in the archive**, with 92 dated days across four surveys
+  from three programmes — two EU Neighbourhood Barometer waves, the Arab
+  Transformations Project and nothing else in the field between them. 2022 is next
+  with 86, then 2013 with 76 and 2015 with 75. 2012 now has 36, all of them the EU
+  Neighbourhood Barometer's first two waves; before those the archive had no dated
+  interview at all before 2013. Five years still have none: 2010, 2011, 2016, 2017
+  and 2025.
 
 ### Reading it honestly
 
@@ -78,13 +89,19 @@ was asked in — drawn from the concordance, so a row is a question rather than 
 variable name. 16 surveys, 2012 to 2024. The count rose from 22 when the
 lived-poverty and spatial facets were added to the lexicon.
 
-Every row is one colour. No inequality question in this archive is asked by two
-different programmes, so a run over time can be built inside Arab Barometer, or
-inside Afrobarometer, or inside the Arab Opinion Index, and never between them.
-37 of the 40 recur with an identical response scale; the three that do not are
-marked `differs` and greyed.
+Every row is one colour, and that is the finding rather than a styling choice: no
+question drawn here is asked by two different programmes, so a run over time can be
+built inside Arab Barometer, or inside Afrobarometer, or inside the Arab Opinion
+Index, and never between them. 37 of the 40 recur with an identical response scale;
+the three that do not are marked `differs` and greyed.
 
-Thirteen of the 22 are one Arab Opinion Index battery, opening with the same words
+**One inequality question in the archive does cross programmes**, and it is not on
+this figure because it is asked in only two surveys rather than more than two:
+"women should have equal inheritance rights", in Arab Barometer Wave V and the Arab
+Transformations Project. It is no help. The two code the scale in opposite
+directions, so pooling them on the code reverses the answer.
+
+Thirteen of the 40 are one Arab Opinion Index battery, opening with the same words
 and closing with the same words. Truncating those labels at the front prints thirteen
 identical rows; deleting the shared part instead leaves rows reading "religion",
 "wealth", "gender/sex" — categories, with nothing left saying what was asked about
@@ -232,15 +249,19 @@ panels are drawn rather than dropped: a null that large is a result.
 
 ### `inequality-archive-map.png` / `.svg`
 
-Every one of the 300 inequality variables by facet and survey, in fieldwork order — the
+Every one of the 434 inequality variables by facet and survey, in fieldwork order — the
 only inequality figure covering the whole archive rather than the questions that recur.
-A variable matching two facets is counted in both, so the cells sum to more than 300, and
-blank means nothing rather than a small number.
+A variable matching two facets is counted in both, so the cells sum to more than 434, and
+blank means nothing rather than a small number. The figure's own standfirst carries the
+live counts; these are what they were when this was written.
 
 Coverage is uneven enough that the facet decides which programme you can use: the Arab
 Opinion Index carries equality-as-a-principle and gender, Afrobarometer and Arab Barometer
-Wave VIII carry discrimination, and wasta appears only in Arab Barometer. Four of the 26
-surveys carry nothing on inequality at all. Counts are on a log scale, so a dark cell is
+Wave VIII carry discrimination, and wasta appears only in Arab Barometer. Ten of the 36
+surveys carry nothing on inequality at all: all six EU Neighbourhood Barometer waves,
+which ask about poverty and unemployment but not about a gap between people; the ISSP
+religion module; the 2011 Arab Opinion Index; and two of the three Arab Barometer Wave
+VI telephone rounds, which were short pandemic instruments. Counts are on a log scale, so a dark cell is
 many times a pale one rather than a few more.
 
 ## Economic and spatial inequality — four figures
@@ -319,7 +340,7 @@ El Kef, Kairouan, Siliana, Kasserine and Sidi Bouzid. But the split is not clean
 interior governorates, Medenine and Tataouine, sit among the five easiest. A governorate
 enters with at least 150 effective respondents.
 
-## Perception of democracy — four figures
+## Perception of democracy — seven figures
 
 `python3 scripts/build_democracy_figures.py`
 
@@ -380,18 +401,32 @@ regions within a round should not be read as a ranking.
 
 ### `democracy-meaning.png` / `.svg`
 
-What Tunisians picked as most essential to democracy, Afrobarometer Round 5, 2013. Four
-separate questions each offered four candidates; shares are within a question, so options
-from different questions are not rivals and the code in the right margin says which
-question each came from.
+Two programmes asking what democracy means, side by side and **deliberately not
+pooled** — a forced choice among four and a name-up-to-three from eleven do not make
+comparable shares.
 
-**Delivery ranks far above procedure.** Basic necessities 62%, clean politics 61% and
-jobs for all 55%, against free expression 15%, a critical press 13%, parties competing
-fairly 12% and the right to demonstrate 4%. If that is what the word means to a
-respondent, a government judged to deliver can be called democratic by someone who would
-not call it liberal — which bears on the 2024 reading above without establishing it.
-This was asked in 2013 and not since, so the connection is a hypothesis the archive
-cannot test.
+Left: Afrobarometer Round 5, 2013. Four separate questions each offered four
+candidates; shares are within a question, so options from different questions are not
+rivals and the code in the right margin says which question each came from.
+**Delivery ranks far above procedure** — basic necessities 62%, clean politics 61%,
+jobs 55%, against free expression 15%, a critical press 13%, parties competing 12% and
+the right to demonstrate 4%.
+
+Right: the EU Neighbourhood Barometer, five waves 2012–2014, about 1,000 respondents
+each. Respondents name up to three from a fixed list, so the shares sum past 100. The
+bar is the range across the five waves, not a confidence interval. **Freedom of speech
+is the runaway answer** at 60% on average and never below 56%, then free elections at
+41%.
+
+**The menu is most of the disagreement.** The EU Neighbourhood Barometer's list has no
+delivery option on it at all — no necessities, no jobs, no public services — and
+without one, free expression goes from near the bottom of the Afrobarometer ranking to
+the top of this one. So the 2013 finding is real but conditional: Tunisians put
+delivery first when delivery is offered, and name free expression first when it is
+not. That is a fact about what each survey asked as much as about what people think.
+
+What the right-hand panel adds beyond that is time. The ranking barely moves across
+two and a half years, which the single Afrobarometer round could not show either way.
 
 ### `democracy-fear-claim.png` / `.svg`
 

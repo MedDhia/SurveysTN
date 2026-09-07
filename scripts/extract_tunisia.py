@@ -177,6 +177,30 @@ def select_country(df: pd.DataFrame, spec: dict, country_value) -> pd.DataFrame:
     return df[column == country_value]
 
 
+def drop_extended_missing_labels(
+    df: pd.DataFrame, value_labels: dict
+) -> tuple[dict, dict[str, list[str]]]:
+    """Drop labels keyed on a Stata extended missing rather than on a number.
+
+    Stata lets a variable carry .a to .z alongside its numeric codes, and a release
+    can label them -- the EU Neighbourhood Barometer labels .i as "Inap.". Read with
+    the user-missing values kept, pyreadstat hands those keys back as the bare letter,
+    so the label map for an otherwise numeric variable ends up mixing ints with the
+    string 'i'. SPSS will not take that, and the letter is not a value any Tunisian
+    row holds anyway: the codes those labels describe survive, only the labels on
+    non-numeric keys go. Every drop is recorded in the catalog.
+    """
+    dropped: dict[str, list[str]] = {}
+    for name, labels in list(value_labels.items()):
+        if name not in df.columns or not pd.api.types.is_numeric_dtype(df[name]):
+            continue
+        bad = [k for k in labels if not isinstance(k, (int, float))]
+        if bad:
+            dropped[name] = [f"{k}: {labels[k]}" for k in bad]
+            value_labels[name] = {k: v for k, v in labels.items() if k not in bad}
+    return value_labels, dropped
+
+
 def drop_temporal_value_labels(
     df: pd.DataFrame, value_labels: dict
 ) -> tuple[dict, list[str]]:
@@ -360,6 +384,17 @@ def parse_fieldwork_dates(values: pd.Series, fmt: str | None) -> pd.Series:
     Life in Transition release's Stata dates were handled in one place and not the
     other, and a survey with 75 dated days was drawn as though it recorded only a year.
     """
+    if fmt == "spss-seconds":
+        # SPSS counts seconds from 1582-10-14, the start of the Gregorian calendar.
+        # The Arab Transformations release stores the interview date that way but
+        # gives the column an F9.0 format, so it arrives as a bare number rather than
+        # a date and nothing downstream would guess. pandas cannot hold 1582 as an
+        # origin at nanosecond resolution, so the arithmetic is done in datetime.
+        epoch = datetime.date(1582, 10, 14)
+        parsed = values.dropna().map(
+            lambda v: epoch + datetime.timedelta(seconds=float(v))
+        )
+        return pd.to_datetime(pd.Series(list(parsed), index=parsed.index), errors="coerce").dropna()
     if fmt == "stata-tc":
         # Stata's %tc is milliseconds since 1960-01-01. pyreadstat hands it back as a
         # raw number here rather than a datetime, and reading it as epoch nanoseconds
@@ -374,6 +409,52 @@ def parse_fieldwork_dates(values: pd.Series, fmt: str | None) -> pd.Series:
     return pd.to_datetime(values, format=fmt, errors="coerce").dropna()
 
 
+def interview_dates(df: pd.DataFrame, spec: dict) -> pd.Series:
+    """Every interview date a release records, however it stores them.
+
+    Three shapes so far: one column the reader already returns as a date, one column
+    holding a number that encodes a date, and -- SAHWA -- three columns holding the
+    day, the month and the year apart. Shared with the coverage figure so a release
+    cannot be dated one way in the catalogue and another way in the chart.
+    """
+    parts = spec.get("fieldwork_date_parts")
+    if parts:
+        # The EU Neighbourhood Barometer records the day and the month of an
+        # interview and not the year, because a wave is one year by construction.
+        # An integer here is that year, supplied from the wave rather than the file;
+        # a string is a column name. The year is only ever safe as a constant when
+        # the wave's Tunisian fieldwork sits inside one calendar year, which is
+        # checked below rather than assumed.
+        def part(key):
+            value = parts[key]
+            return pd.Series(value, index=df.index) if isinstance(value, int) else df[value]
+
+        frame = pd.DataFrame(
+            {"year": part("year"), "month": part("month"), "day": part("day")}
+        ).dropna()
+        if isinstance(parts["year"], int) and not frame.empty:
+            months = sorted(frame["month"].astype(int).unique())
+            if 1 in months and 12 in months:
+                raise SystemExit(
+                    f"fieldwork spans a new year (months {months}) but the year is "
+                    f"given as the constant {parts['year']}; record the year per row"
+                )
+        return pd.to_datetime(frame.astype(int), errors="coerce").dropna()
+    var = spec.get("fieldwork_date_var")
+    if not var or var not in df.columns:
+        return pd.Series(dtype="datetime64[ns]")
+    return parse_fieldwork_dates(df[var], spec.get("fieldwork_date_format"))
+
+
+def date_columns(spec: dict) -> list[str]:
+    """The columns interview_dates needs, for a reader that loads only some of them."""
+    parts = spec.get("fieldwork_date_parts")
+    if parts:
+        return [parts[k] for k in ("year", "month", "day") if isinstance(parts[k], str)]
+    var = spec.get("fieldwork_date_var")
+    return [var] if var else []
+
+
 def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
     # Some releases record no interview date but do carry the month fieldwork
     # started and ended, as YYYYMM constants.
@@ -386,12 +467,11 @@ def fieldwork_window(df: pd.DataFrame, spec: dict) -> str | None:
         last = pd.to_datetime(end.max(), format="%Y%m")
         return f"{first:%B %Y} to {last:%B %Y}"
 
-    var = spec.get("fieldwork_date_var")
-    if spec.get("fieldwork_tunisia") != "derive" or not var or var not in df.columns:
+    if spec.get("fieldwork_tunisia") != "derive":
         return None
-    # WVS stores the interview date as the integer 20190515, which only reads as a
-    # date if the format is given.
-    dates = parse_fieldwork_dates(df[var], spec.get("fieldwork_date_format"))
+    if any(c not in df.columns for c in date_columns(spec)):
+        return None
+    dates = interview_dates(df, spec)
     if dates.empty:
         return None
     return f"{dates.min():%Y-%m-%d} to {dates.max():%Y-%m-%d}"
@@ -405,7 +485,15 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
     print(f"[{spec['slug']}] reading {spec['raw_file_stem']} ({fmt}) ...")
     pooled, var_labels, value_labels, numeric = read_pooled(spec, raw_dir)
     n_pooled = len(pooled)
-    n_countries = int(pooled[country_var].nunique())
+    # Counting distinct values of the country variable only means something when the
+    # variable is a country code. Afrobarometer ships country files with no country
+    # column and is matched on the prefix of RESPNO, a per-respondent id, so counting
+    # its distinct values gave "1,200 countries" in every Afrobarometer README.
+    n_countries = (
+        int(pooled[country_var].nunique())
+        if spec.get("country_match", "equals") == "equals"
+        else None
+    )
 
     df = select_country(pooled, spec, country_value).reset_index(drop=True)
     del pooled
@@ -426,6 +514,7 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
             value_labels[after] = value_labels.pop(before)
         print(f"[{spec['slug']}] renamed {before} -> {after} (not a valid SPSS/Stata name)")
     value_labels, temporal_labels_dropped = drop_temporal_value_labels(df, value_labels)
+    value_labels, extended_missing_labels_dropped = drop_extended_missing_labels(df, value_labels)
     for name in temporal_labels_dropped:
         print(f"[{spec['slug']}] dropped value labels on {name}: it is a date or time column")
     print(f"[{spec['slug']}] Tunisia: {len(df):,} of {n_pooled:,} rows, {df.shape[1]} variables")
@@ -504,12 +593,15 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "renamed_variables": renamed,
         "columns_retyped_from_values": retyped,
         "value_labels_dropped_on_temporal_columns": temporal_labels_dropped,
+        "value_labels_dropped_on_extended_missings": extended_missing_labels_dropped,
         "n_respondents": int(len(df)),
         "n_variables": int(df.shape[1]),
         "n_variables_with_data": n_with_data,
         "n_respondents_pooled_release": n_pooled,
         "n_countries_pooled_release": n_countries,
-        "is_country_file": n_countries == 1 and n_pooled == len(df),
+        # Every row in the release is Tunisia: either the country column says so, or
+        # the release is a country file whose rows all carry the country's prefix.
+        "is_country_file": n_pooled == len(df),
         "fieldwork_years_series": spec["fieldwork_years_series"],
         "fieldwork_tunisia": fieldwork_window(df, spec),
         "fieldwork_source": spec["fieldwork_source"],
@@ -668,6 +760,19 @@ def render_wave_readme(e: dict, series: dict) -> str:
             f"Value labels on {listed} are not carried over. They are date or time columns,",
             "which neither SPSS nor Stata will attach value labels to, and the labels only",
             "marked a sentinel the reader has already parsed as a time of day.",
+        ]
+
+    if e.get("value_labels_dropped_on_extended_missings"):
+        dropped = e["value_labels_dropped_on_extended_missings"]
+        listed = ", ".join(f"`{v}`" for v in sorted(dropped))
+        example = sorted(dropped)[0]
+        lines += [
+            "",
+            f"{len(dropped)} variables carry a value label keyed on a Stata extended missing",
+            f"(`.a` to `.z`) rather than on a number — {listed if len(dropped) <= 6 else example + ' among them'}.",
+            "SPSS will not attach a label to a non-numeric key, so those labels are dropped;",
+            f"in {example} the dropped label was {dropped[example][0]!r}. No code and no answer",
+            "is lost, only the label on a missing marker no Tunisian row carries.",
         ]
 
     if e["renamed_variables"]:

@@ -32,10 +32,12 @@ meta.variable_value_labels["Q101"]    # the response options
 use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 ```
 
-## Eight things to check before you analyse
+## Nine things to check before you analyse
 
 **Weights.** Every survey here carries a design weight, fully populated, except
-**WVS Wave 6**, which carries none. Each series names it differently:
+three: **WVS Wave 6** and the **Arab Transformations Project**, which have no weight
+variable at all, and **ISSP 2018**, which has one but leaves it empty. Each series
+names it differently:
 
 | Series | Weight | Stratum and PSU |
 |---|---|---|
@@ -44,6 +46,10 @@ use "data/arab-barometer/wave-08/arab-barometer-w08-tunisia.dta", clear
 | Afrobarometer | `withinwt` (Rounds 5–7), `withinwt_ea` and `withinwt_hh` (Rounds 8–10) | neither |
 | Arab Opinion Index | `Weight` | neither |
 | Life in Transition | `weight`, and `weight_pop` scaled to the adult population | PSU only (`psu`, 50 sample points) |
+| ISSP | `WEIGHT` exists but **is empty for all 1,218 respondents** and labelled "No weighting" | neither |
+| SAHWA | `dweight` (design) and `pweight` (scaled to the population), both fully populated | neither |
+| Arab Transformations | **none** — the release carries no weight variable | neither |
+| EU Neighbourhood Barometer | `w1`, the demographic country weight; `w2`–`w7` are regional aggregation weights for pooling countries, not for a single-country estimate | PSU only (`p9`, 169–199 sample points per wave) |
 
 Unweighted estimates from a weighted survey are not nationally representative. Only
 four surveys carry the stratum and PSU a full `svyset` wants; for the rest, weighting
@@ -52,6 +58,23 @@ without a design specification is as far as the release lets you go.
 ```stata
 svyset psu [pw=wt], strata(stratum)
 ```
+
+ISSP 2018 is the one survey where no weighting is possible, and the reason is the
+sample rather than an omission: the depositor describes the design as a multi-stage
+territorial stratified selection **with a quota table**, and the quota part is why
+GESIS kept it out of the ISSP 2018 international file. The study description form
+answers "Weight present: No" in as many words. Nothing computed from it is a national
+estimate. Read it as one Tunisian sample of 1,218 people on questions no other survey
+here asks, and do not pool it with the rest. Its own paperwork also dates the
+fieldwork to January–February 2019 while the data file says 2018; both are in
+`docs/questionnaires/` and the wave README, unresolved.
+
+**One survey interviewed only the young.** The SAHWA Youth Survey sampled
+15-to-29-year-olds and nothing else here does, so a SAHWA percentage is not
+comparable with the percentage next to it in another survey: the gap between them is
+the age restriction before it is a change over time or a difference between
+programmes. Where SAHWA appears in a topic index alongside the general-population
+series, it is the age restriction that has to be said out loud, not the sample size.
 
 **The series do not share a question numbering, and some do not keep their own.**
 `Q1` is the governorate in Arab Barometer, "Important in life: Family" in the World
@@ -83,10 +106,11 @@ in `codebook.csv`, and recode before analysing — there is no single rule that
 covers a whole file.
 
 **Many columns are empty here.** A pooled release carries items asked in only some
-countries, and they survive into the Tunisia subset as empty columns. It is worst
-in the largest files: 635 of the Arab Opinion Index 2024/2025 round's 1,251
-variables have no data at all, 224 of Arab Barometer Wave VIII's 690, and 165 of
-Wave II's 468. The Afrobarometer and WVS country files are the clean ones, with
+countries, and they survive into the Tunisia subset as empty columns. It is worst in
+the largest files: 635 of the Arab Opinion Index 2024/2025 round's 1,251 variables
+have no data at all, 578 of Life in Transition Round IV's 1,319, 224 of Arab
+Barometer Wave VIII's 690, and 165 of Wave II's 468. SAHWA loses 108 of 843 the same
+way. The country files — Afrobarometer, WVS and ISSP — are the clean ones, with
 almost nothing empty. Columns are kept so positions match the release;
 `codebook.csv` gives `n_valid` per variable, and filtering on it is usually the
 first thing to do.
@@ -102,13 +126,27 @@ separate samples and separate questionnaires. Their ID numbers overlap but do no
 link: on the overlapping IDs sex agrees at chance and age almost never. Treat them
 as three cross-sections.
 
-**One answer reads as missing in CSV.** Wave IV's `q1019b`, a second-language
-question, records "None" as a substantive answer — and `pandas.read_csv` turns
-that into `NaN` by default, silently emptying the variable for 518 of the 1,200
-Tunisian respondents. Read the labelled CSVs with `keep_default_na=False` and
-treat `""` as missing, or use the `.sav` or `.dta`, which are unaffected.
-`catalog/catalog.json` records this per wave under `csv_answers_read_as_missing`,
-so the check runs on every wave added later.
+**Two things a CSV reader does to these files by default, both silent.**
+
+*It turns real answers into missing.* "None" and "NA" are substantive answers in
+twelve of the surveys here, and `pandas.read_csv` makes them `NaN`. The largest case
+is Afrobarometer's corruption battery, asked in five rounds, where "None" means *no
+corruption in that institution* — read it as missing and you drop exactly the
+respondents who said there is none. Arab Barometer Wave IV's `q1019b`, a
+second-language question, is the same trap on one variable, and it empties 518 of
+1,200 respondents. Read the CSVs with `keep_default_na=False` and treat `""` as
+missing, or use the `.sav` or `.dta`, which are unaffected. `catalog/catalog.json`
+records every hit per survey under `csv_answers_read_as_missing`, and each survey's
+README repeats its own.
+
+*It loses the last digits of a very long number.* One column in the archive is long
+enough for this: ISSP's `CASEID`, a sixteen-digit integer. The CSV holds it exactly;
+the default float parser hands it back a quarter out. Read that column with
+`float_precision="round_trip"`, or as text, or take it from the `.sav` or `.dta`.
+
+```python
+pd.read_csv(path, keep_default_na=False, float_precision="round_trip")
+```
 
 **Variable names change case between waves.** `country` in Waves II, IV and V,
 `COUNTRY` from Wave VI on, and the same for most question numbers. Match on the
