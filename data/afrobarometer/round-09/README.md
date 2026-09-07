@@ -6,7 +6,7 @@
 | Variables | 388 (380 with at least one non-missing answer in Tunisia) |
 | Fieldwork (Tunisia) | 2022-02-21 to 2022-03-17 |
 | Language | English (translated instrument and labels) |
-| Pooled release | 1,200 respondents across 1200 countries |
+| Source release | Tunisia country file, 1,200 respondents |
 | Source file | `afrobarometer_tun_r9_en.sav` |
 | Publisher | Afrobarometer |
 

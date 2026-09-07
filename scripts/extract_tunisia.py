@@ -485,7 +485,15 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
     print(f"[{spec['slug']}] reading {spec['raw_file_stem']} ({fmt}) ...")
     pooled, var_labels, value_labels, numeric = read_pooled(spec, raw_dir)
     n_pooled = len(pooled)
-    n_countries = int(pooled[country_var].nunique())
+    # Counting distinct values of the country variable only means something when the
+    # variable is a country code. Afrobarometer ships country files with no country
+    # column and is matched on the prefix of RESPNO, a per-respondent id, so counting
+    # its distinct values gave "1,200 countries" in every Afrobarometer README.
+    n_countries = (
+        int(pooled[country_var].nunique())
+        if spec.get("country_match", "equals") == "equals"
+        else None
+    )
 
     df = select_country(pooled, spec, country_value).reset_index(drop=True)
     del pooled
@@ -591,7 +599,9 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "n_variables_with_data": n_with_data,
         "n_respondents_pooled_release": n_pooled,
         "n_countries_pooled_release": n_countries,
-        "is_country_file": n_countries == 1 and n_pooled == len(df),
+        # Every row in the release is Tunisia: either the country column says so, or
+        # the release is a country file whose rows all carry the country's prefix.
+        "is_country_file": n_pooled == len(df),
         "fieldwork_years_series": spec["fieldwork_years_series"],
         "fieldwork_tunisia": fieldwork_window(df, spec),
         "fieldwork_source": spec["fieldwork_source"],

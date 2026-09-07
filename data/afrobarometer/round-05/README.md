@@ -6,7 +6,7 @@
 | Variables | 300 |
 | Fieldwork (Tunisia) | 2013-01-10 to 2013-02-01 |
 | Language | English (translated instrument and labels) |
-| Pooled release | 1,200 respondents across 1200 countries |
+| Source release | Tunisia country file, 1,200 respondents |
 | Source file | `afrobarometer_tun_r5_en.sav` |
 | Publisher | Afrobarometer |
 

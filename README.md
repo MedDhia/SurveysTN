@@ -1,23 +1,24 @@
 # SurveysTN
 
-Public-opinion survey data covering Tunisia — Arab Barometer, the World Values
-Survey, Afrobarometer, the Arab Opinion Index, the EBRD's Life in Transition Survey,
-the ISSP, the SAHWA Youth Survey, the Arab Transformations Project and the EU
-Neighbourhood Barometer so far — reorganised so that each
-survey is one self-describing folder: the respondents, in every common format, with a codebook
-and a provenance record.
+Public-opinion survey data covering Tunisia, reorganised so that each survey is one
+self-describing folder: the respondents, in every common format, with a codebook and
+a provenance record.
 
 **51,939 Tunisian respondents across thirty-six surveys and nine series, 2010 to
-2025.** The releases they come from are in the repository too, so a clone can
-rebuild the whole archive and check every cell of it against the publishers' own
-files.
+2025** — Arab Barometer, the World Values Survey, Afrobarometer, the Arab Opinion
+Index, the EU Neighbourhood Barometer, the EBRD's Life in Transition Survey, the
+SAHWA Youth Survey, the Arab Transformations Project and the ISSP. The releases they
+come from are in the repository too, so a clone can rebuild the whole archive and
+check every cell of it against the publishers' own files.
 
-The programmes do not make this easy. Arab Barometer and the Arab Opinion Index
-publish pooled files mixing a dozen or more countries and hundreds of columns never
-asked in Tunisia; the other two publish country files, in a different format again.
-Between them the surveys arrive in three file formats, two of which lose something.
-What is here is the same data, filtered to Tunisia and made consistent, with nothing
-recoded.
+The programmes do not make this easy. Most publish pooled files mixing a dozen or
+more countries and hundreds of columns never asked in Tunisia — the Life in
+Transition release carries 37 countries, the EU Neighbourhood Barometer 16 — while
+Afrobarometer, the World Values Survey and the ISSP publish Tunisia on its own.
+Between them the releases arrive in four file formats, two of which lose something:
+SPSS and Stata carry the labels, a label-text CSV has no numeric codes, and an Excel
+release has no value labels. What is here is the same data, filtered to Tunisia and
+made consistent, with nothing recoded.
 
 ## What's in it
 
@@ -66,14 +67,6 @@ recoded.
 | [2019/2020](data/arab-opinion-index/2019-2020) | 2,400 | 509 (335 with data) | 2019–2020 |
 | [2022](data/arab-opinion-index/2022) | 2,400 | 651 (546 with data) | 2022 |
 | [2024/2025](data/arab-opinion-index/2024-2025) | 3,245 | 1,251 (616 with data) | 2024–2025 |
-
-`catalog/catalog.csv` and `catalog/catalog.json` carry the same table in
-machine-readable form, with a checksum for every file.
-
-Fieldwork dates given as months are read out of the data, from an interview date
-the release records per respondent. Where only a year range is given, the release
-has no date variable and the archive reports the publisher's figure for the wave
-rather than inventing a Tunisian one.
 
 ### Life in Transition Survey — 1 survey, 1,036 respondents
 
@@ -256,6 +249,14 @@ those are judgements about poverty rather than about a gap between people, and t
 inequality lexicon does not currently claim them. Read
 [`catalog/topics.json`](catalog/topics.json) and disagree if you want them in.
 
+`catalog/catalog.csv` and `catalog/catalog.json` carry the same table in
+machine-readable form, with a checksum for every file.
+
+Fieldwork dates given as months are read out of the data, from an interview date
+the release records per respondent. Where only a year range is given, the release
+has no date variable and the archive reports the publisher's figure for the wave
+rather than inventing a Tunisian one.
+
 ## What is not here
 
 [`docs/not-in-the-archive.md`](docs/not-in-the-archive.md) is the gap list: every
@@ -308,8 +309,8 @@ preference. Two surveys are missing one of them, and the folder README says why:
 for them, so a `-labels.csv` would only repeat the codes.
 
 Start with [`docs/using-the-data.md`](docs/using-the-data.md), and in particular the
-nine things worth checking before you analyse anything — among them the two surveys
-you cannot weight at all, the one that interviewed only 15-to-29-year-olds, don't-know codes
+nine things worth checking before you analyse anything — among them the three surveys
+you cannot weight, the one that interviewed only 15-to-29-year-olds, don't-know codes
 that are not declared missing and differ by survey, and the two things a default CSV
 reader silently does to these files.
 
@@ -318,7 +319,7 @@ reader silently does to these files.
 ![Fieldwork coverage](main/figures/fieldwork-coverage.png)
 
 The archive spans sixteen years and does not cover them. Twenty-two of the thirty-six
-surveys record an interview date per respondent; between them those cover **389
+surveys record an interview date per respondent; between them those cover **597
 distinct days**, and no two surveys were ever in the field on the same day — though
 Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
 in early 2013, which is as close to a contemporaneous cross-programme reading as the
@@ -422,10 +423,13 @@ opportunity. 70 recur across surveys and **exactly one recurs across two
 programmes** — "women should have equal inheritance rights", asked by Arab Barometer
 Wave V and by Arab Transformations in 2014. It is not the exception it looks like:
 the two code the scale in opposite directions, so pooling them on the code reverses
-the finding. An inequality series still has to be built inside one programme. The only two questions that name Tunisian inequality
-directly — Afrobarometer Round 6's "The income gap between the rich and the poor" and
-"Regional inequality" — are country-specific items asked once, in 2015. Eight figures
-sit on that page. Four take a question as the unit: what the archive holds, which 40
+the finding. An inequality series still has to be built inside one programme.
+
+The only two questions that name Tunisian inequality directly — Afrobarometer Round
+6's "The income gap between the rich and the poor" and "Regional inequality" — are
+country-specific items asked once, in 2015.
+
+Eight figures sit on that page. Four take a question as the unit: what the archive holds, which 40
 questions are asked in more than two surveys, how the share saying equality is applied
 moved, and how Tunisians answered in full. Three take a respondent as the unit, pooling
 the 15,539 Arab Opinion Index respondents asked the equality battery between 2012 and
@@ -438,7 +442,8 @@ The eighth asks whether perceived inequality is one attitude or several. It is s
 across the 25 inequality items of the 2016 round, the mean correlation inside a battery
 is 0.34 and between batteries 0.12.
 
-Four further figures take up **economic and spatial inequality** specifically, using the
+Four further figures — twelve on the page in all — take up **economic and spatial
+inequality** specifically, using the
 two instruments that measure conditions rather than opinions: Afrobarometer's Lived
 Poverty Index across six rounds, and its enumeration-area checklist, where an interviewer
 records whether a place has piped water, a clinic, a bank, a paved road. A bank is in
@@ -459,8 +464,9 @@ past where it started. Read the 2024 rise carefully — these are separate cross
 and in 2013 Tunisians ranked delivery far above procedural liberty as essential to
 democracy, so the word may not hold its meaning fixed across a change of regime.
 
-That figure now carries both instruments, side by side and not pooled, and the pair
-says something neither says alone. The EU Neighbourhood Barometer asked the same
+A fourth figure asks what the word is taken to mean, and it now carries both
+instruments that ask, side by side and not pooled. The pair says something neither
+says alone. The EU Neighbourhood Barometer asked the same
 question in five waves between 2012 and 2014 — name up to three from eleven — and its
 list **has no delivery option on it at all**: no necessities, no jobs, no public
 services. Without one, free expression goes from near the bottom of Afrobarometer's
