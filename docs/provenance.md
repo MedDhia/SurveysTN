@@ -86,7 +86,7 @@ and reports only the fieldwork years the publisher gives for the wave as a whole
 Tunisia-specific dates are given for them; the country report on the Arab Barometer
 site has them.
 
-Across the archive as a whole, twenty-one of the thirty-five surveys record an interview date
+Across the archive as a whole, twenty-two of the thirty-six surveys record an interview date
 per respondent, and no two programmes agree on how to store one. Four shapes so far:
 
 | Shape | Where |

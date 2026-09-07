@@ -2233,6 +2233,27 @@ that list, and is not guessed here.
 | `8` | REFUSAL | 1 |
 | `98` | REFUSAL | 1 |
 
+## EU Neighbourhood Barometer Wave 2
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `5` | Don’t know (SPONTANEOUS) | 36 |
+| `3` | Don’t know (SPONTANEOUS) | 35 |
+| `5` | Don’t know (SPONTA-NEOUS) | 24 |
+| `4` | Don’t know (SPONTANEOUS) | 9 |
+| `6` | Don’t know (SPONTANEOUS) | 2 |
+| `11` | Refusal (SPONTANEOUS) | 1 |
+| `18` | Don’t know (SPONTANEOUS) | 1 |
+| `20` | Don’t know (SPONTANEOUS) | 1 |
+| `21` | Don’t Know (SPONTANEOUS) | 1 |
+| `23` | Don’t know (SPONTANEOUS) | 1 |
+| `4` | Refusal (SPONTANEOUS) | 1 |
+| `7` | Refusal (SPONTANEOUS) | 1 |
+| `8` | REFUSAL | 1 |
+| `8` | Refusal | 1 |
+| `98` | REFUSAL | 1 |
+| `98` | Refus | 1 |
+
 ## EU Neighbourhood Barometer Wave 3
 
 | Code | Label | Variables using it |

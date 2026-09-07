@@ -207,22 +207,23 @@ against; the rows carry its names and question text and wait for a second.
 
 ## EU Neighbourhood Barometer
 
-984 variables across 5 surveys, 984 with question text.
+1,109 variables across 6 surveys, 1,109 with question text.
 
 | Surveys | Variables |
 |---:|---:|
-| 5 | 280 |
-| 4 | 36 |
-| 3 | 51 |
-| 2 | 65 |
-| 1 | 552 |
+| 6 | 280 |
+| 5 | 28 |
+| 4 | 9 |
+| 3 | 97 |
+| 2 | 50 |
+| 1 | 645 |
 
-17 variables carry a name in more than one survey but wording that
+24 variables carry a name in more than one survey but wording that
 does not match between them. That is the column worth checking before pooling:
 `text_varies_across_waves`, with the weakest pairwise agreement in
 `lowest_text_agreement` and the kind of text compared in `comparison_basis`.
 
-### Present in all 5 with stable wording
+### Present in all 6 with stable wording
 
 263 variables. The safest to stack, and even here confirm the response
 scale in each survey's `codebook.csv` — the crosswalk compares question wording,
@@ -434,7 +435,7 @@ not answer options.
 | `SD2` | age |
 | `SD2R` | age - recoded |
 | `SD3` | age when stopped full-time education |
-| `SD3R` | age when stopped full-time education - recoded |
+| `SD3R` | age when stopped full-time education - recoded 1 |
 | `SD4` | marital status |
 | `SD5A` | current occupation |
 | `SD5B` | last occupation |
@@ -586,14 +587,14 @@ matches but whose question text is the same. It exists because the World Values
 Survey renumbered between waves: Wave 6 asks `V9` what Wave 7 asks as `Q6`, and
 matching on name finds only the derived indices and the admin columns. Arab
 Barometer needs it less often, but it also renames — Wave II's Tunisia-specific
-`te105` is Wave III's `q105a`. 871 pairs in total:
+`te105` is Wave III's `q105a`. 880 pairs in total:
 
 | Series | Pairs |
 |---|---:|
 | Afrobarometer | 592 |
 | Arab Barometer | 25 |
 | Arab Opinion Index | 53 |
-| EU Neighbourhood Barometer | 12 |
+| EU Neighbourhood Barometer | 21 |
 | World Values Survey | 189 |
 
 **These are suggestions, not findings.** A pair is offered only when the two
@@ -643,6 +644,7 @@ releases that carry wording as labels:
 | SAHWA Youth Survey 2015 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | Arab Transformations Project 2014 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | EU Neighbourhood Barometer Wave 1 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
+| EU Neighbourhood Barometer Wave 2 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | EU Neighbourhood Barometer Wave 3 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | EU Neighbourhood Barometer Wave 4 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |
 | EU Neighbourhood Barometer Wave 5 | 0 | 0 | not validated — question text comes from the release itself; no questionnaire is parsed |

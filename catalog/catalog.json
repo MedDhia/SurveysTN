@@ -2399,6 +2399,97 @@
       "series": "eu-neighbourhood-barometer",
       "series_name": "EU Neighbourhood Barometer",
       "series_prefix": "enb",
+      "key": "enb-w02",
+      "wave": 2,
+      "part": null,
+      "wave_label": "Wave 2",
+      "tag": "w02",
+      "slug": "wave-02",
+      "country": "Tunisia",
+      "country_value": 3,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 9,
+      "value_labels_dropped_on_temporal_columns": [],
+      "value_labels_dropped_on_extended_missings": {
+        "ac2_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac2_6": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac2_7": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_5": [
+          "i: Inap. (LB in isocntry)"
+        ],
+        "ac3_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac4_2": [
+          "i: Inap. (MA JO EG in isocntry)"
+        ],
+        "ad2_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "p7_tn": [
+          "i: Inap. (not TN in isocntry)"
+        ]
+      },
+      "n_respondents": 1005,
+      "n_variables": 513,
+      "n_variables_with_data": 513,
+      "n_respondents_pooled_release": 16086,
+      "n_countries_pooled_release": 16,
+      "is_country_file": false,
+      "fieldwork_years_series": "2012",
+      "fieldwork_tunisia": "2012-11-02 to 2012-12-24",
+      "fieldwork_source": "derived from the p1d and p1m variables in the data file; the release records the day and month but not the year, so 2012 is supplied from the wave, whose Tunisian fieldwork falls inside that one calendar year",
+      "language": "Arabic instrument; the release labels variables and answers in English",
+      "source_format": "dta",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ZA6289_v100.dta",
+      "source_sha256": "0e4d552c306bd8fb42d2348db7928c218a93a929c6f2d13df6706858e1aeea09",
+      "csv_answers_read_as_missing": {},
+      "path": "data/eu-neighbourhood-barometer/wave-02",
+      "files": {
+        "codebook.csv": {
+          "bytes": 86985,
+          "sha256": "789270373c48ca24b41660a9f1e2f5a2e3abfd5cc7338e5f3696879eba222683"
+        },
+        "codebook.json": {
+          "bytes": 206454,
+          "sha256": "2cf7b8cc34e707a4c44dd0183a5626dcd29bdb28f918538d7f775b71e2f7678d"
+        },
+        "eu-neighbourhood-barometer-w02-tunisia-codes.csv": {
+          "bytes": 1129469,
+          "sha256": "9892ff7120a565401f729036c55cd0bd92d078cee1ae5180ecc87974c9633ca5"
+        },
+        "eu-neighbourhood-barometer-w02-tunisia-labels.csv": {
+          "bytes": 7336096,
+          "sha256": "9c513f616023842b37380c3c74e8bf53b499faee60537b3d3a00e8f23216a7f9"
+        },
+        "eu-neighbourhood-barometer-w02-tunisia.dta": {
+          "bytes": 3668662,
+          "sha256": "277d238ec35426bb3b8ec3b87d3dbdcaabaa4e354375b03e960043b0c4611d51"
+        },
+        "eu-neighbourhood-barometer-w02-tunisia.sav": {
+          "bytes": 4265587,
+          "sha256": "dced34f29007f2f7cbbdf7150e106e91bf4355de6e322c26d03ca423a82c9fec"
+        }
+      },
+      "notes": "EU Neighbourhood Barometer Autumn 2012, GESIS study ZA6289, doi:10.4232/1.12412, version 1.0.0 (2016-01-06). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md."
+    },
+    {
+      "series": "eu-neighbourhood-barometer",
+      "series_name": "EU Neighbourhood Barometer",
+      "series_prefix": "enb",
       "key": "enb-w03",
       "wave": 3,
       "part": null,

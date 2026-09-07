@@ -8,9 +8,9 @@ Generated. Rebuild with the script named under each figure; do not edit the outp
 
 When Tunisian survey fieldwork actually happened, one row per survey, 2010 to 2025.
 
-The archive spans sixteen years. It does not cover them. Twenty-one of the thirty-five
+The archive spans sixteen years. It does not cover them. Twenty-two of the thirty-six
 surveys record an interview date per respondent, and between them those account for
-**575 distinct days** — from 26,947 of the archive's 50,934 interviews. The rest is
+**597 distinct days** — from 27,952 of the archive's 51,939 interviews. The rest is
 inference from what the publisher printed on the release.
 
 The figure keeps three levels of knowledge apart, because drawing them alike would
@@ -18,14 +18,14 @@ claim a precision the archive does not have:
 
 | Drawn as | Means | Surveys |
 |---|---|---:|
-| solid bar | an interview date per respondent; the days are exact | 21 |
+| solid bar | an interview date per respondent; the days are exact | 22 |
 | hatched bar | only the month fieldwork opened and closed | 1 |
 | outlined bar | only the year the publisher gives for the wave | 13 |
 
 ### What it shows
 
-- **No two surveys were ever in the field on the same day.** Not once in 575 days,
-  across thirty-five surveys and nine programmes.
+- **No two surveys were ever in the field on the same day.** Not once in 597 days,
+  across thirty-six surveys and nine programmes.
   But two came within **two days** of each other, and they are from different
   programmes: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer
   Wave III opened on 3 February. That pair is as close to a contemporaneous
@@ -46,8 +46,10 @@ claim a precision the archive does not have:
 - **2014 is the densest year in the archive**, with 92 dated days across four surveys
   from three programmes — two EU Neighbourhood Barometer waves, the Arab
   Transformations Project and nothing else in the field between them. 2022 is next
-  with 86, then 2013 with 76 and 2015 with 75. Five years still have no dated
-  interview at all: 2010, 2011, 2016, 2017 and 2025.
+  with 86, then 2013 with 76 and 2015 with 75. 2012 now has 36, all of them the EU
+  Neighbourhood Barometer's first two waves; before those the archive had no dated
+  interview at all before 2013. Five years still have none: 2010, 2011, 2016, 2017
+  and 2025.
 
 ### Reading it honestly
 

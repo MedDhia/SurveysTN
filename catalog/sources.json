@@ -103,7 +103,7 @@
         "tunisia": 3
       },
       "prefix": "enb",
-      "note": "Six waves were fielded, 2012 to 2014, and Tunisia is in all six. Five are here; Wave 2 (ZA6289) is not, and is recorded in docs/not-in-the-archive.md. The country code 3 is Tunisia in every wave, and isocntry is 'TN' for the same rows."
+      "note": "Six waves were fielded, 2012 to 2014, and Tunisia is in all six. All six are here. The country code 3 is Tunisia in every wave, and isocntry is 'TN' for the same rows."
     }
   },
   "waves": [
@@ -887,6 +887,34 @@
       },
       "notes": "EU Neighbourhood Barometer Spring 2012, GESIS study ZA6288, doi:10.4232/1.12410, version 1.0.0 (2016-01-05). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md.",
       "download_note": "No download_url: GESIS serves the microdata only to a signed-in account, on hosts that refuse scripted requests. The file is committed here, so a clone needs no download; to re-obtain it, search GESIS for study ZA6288 and take the Stata release. The questionnaire, by contrast, is served openly from access.gesis.org and is fetched from there."
+    },
+    {
+      "series": "eu-neighbourhood-barometer",
+      "wave": 2,
+      "wave_label": "Wave 2",
+      "slug": "wave-02",
+      "raw_file_stem": "ZA6289_v100",
+      "source_format": "dta",
+      "country_var": "country",
+      "country_value": 3,
+      "language": "Arabic instrument; the release labels variables and answers in English",
+      "fieldwork_years_series": "2012",
+      "fieldwork_tunisia": "derive",
+      "fieldwork_date_parts": {
+        "year": 2012,
+        "month": "p1m",
+        "day": "p1d"
+      },
+      "fieldwork_source": "derived from the p1d and p1m variables in the data file; the release records the day and month but not the year, so 2012 is supplied from the wave, whose Tunisian fieldwork falls inside that one calendar year",
+      "questionnaire": {
+        "file": "docs/questionnaires/enb-w02-tunisia-questionnaire.pdf",
+        "url": "https://access.gesis.org/dbk/58182",
+        "language": "Arabic",
+        "parsed_for_question_text": false,
+        "note": "The Tunisian field questionnaire as deposited. Not parsed for question text: the release labels every variable in English, so the wording is already in the data."
+      },
+      "notes": "EU Neighbourhood Barometer Autumn 2012, GESIS study ZA6289, doi:10.4232/1.12412, version 1.0.0 (2016-01-06). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md.",
+      "download_note": "No download_url: GESIS serves the microdata only to a signed-in account, on hosts that refuse scripted requests. The file is committed here, so a clone needs no download; to re-obtain it, search GESIS for study ZA6289 and take the Stata release. The questionnaire, by contrast, is served openly from access.gesis.org and is fetched from there."
     },
     {
       "series": "eu-neighbourhood-barometer",
