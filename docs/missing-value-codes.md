@@ -2218,3 +2218,110 @@ that list, and is not guessed here.
 | `95` | Not applicable (never studied abroad) | 1 |
 | `95` | Not applicable (never worked abroad) | 1 |
 | `95` | Not applicable (not born abroad) | 1 |
+
+## EU Neighbourhood Barometer Wave 1
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `5` | Don't know (SPONTANEOUS) | 28 |
+| `7` | Don't know (SPONTANEOUS) | 8 |
+| `8` | Don't know (SPONTANEOUS) | 6 |
+| `6` | Don't know (SPONTANEOUS) | 2 |
+| `11` | Refusal (SPONTANEOUS) | 1 |
+| `4` | Refusal (SPONTANEOUS) | 1 |
+| `7` | Refusal (SPONTANEOUS) | 1 |
+| `8` | REFUSAL | 1 |
+| `98` | REFUSAL | 1 |
+
+## EU Neighbourhood Barometer Wave 3
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `5` | Don’t know (SPONTANEOUS) | 30 |
+| `3` | Don’t know (SPONTANEOUS) | 29 |
+| `5` | Don’t know (SPONTA-NEOUS) | 11 |
+| `4` | Don’t know (SPONTANEOUS) | 9 |
+| `3` | Don't know (SPONTANEOUS) | 8 |
+| `7` | Don't know (SPONTANEOUS) | 8 |
+| `6` | Not applicable (SPONTANEOUS) | 3 |
+| `10` | Refusal (SPONTANEOUS) | 2 |
+| `4` | Refusal (SPONTANEOUS) | 2 |
+| `6` | Don’t know (SPONTANEOUS) | 2 |
+| `11` | Refusal (SPONTANEOUS) | 1 |
+| `18` | Don’t know (SPONTANEOUS) | 1 |
+| `2` | Yes but you do not know exactly what it is | 1 |
+| `20` | Don’t know (SPONTANEOUS) | 1 |
+| `23` | Don’t know (SPONTANEOUS) | 1 |
+| `7` | Refusal (SPONTANEOUS) | 1 |
+| `8` | REFUSAL | 1 |
+| `98` | REFUSAL | 1 |
+| `998` | REFUSAL | 1 |
+
+## EU Neighbourhood Barometer Wave 4
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `3` | Don’t know (SPONTANEOUS) | 37 |
+| `5` | Don’t know (SPONTANEOUS) | 28 |
+| `4` | Don’t know (SPONTANEOUS) | 12 |
+| `5` | Don’t know (SPONTA-NEOUS) | 11 |
+| `3` | Don't know (SPONTANEOUS) | 8 |
+| `7` | Don't know (SPONTANEOUS) | 8 |
+| `4` | Don't know (SPONTANEOUS) | 2 |
+| `6` | Don’t know (SPONTANEOUS) | 2 |
+| `11` | Refusal (SPONTANEOUS) | 1 |
+| `23` | Don’t know (SPONTANEOUS) | 1 |
+| `3` | Refusal (SPONTANEOUS) | 1 |
+| `4` | Refusal (SPONTANEOUS) | 1 |
+| `5` | Don't know (SPONTANEOUS) | 1 |
+| `5` | refusal | 1 |
+| `6` | Don't know (SPONTANEOUS) | 1 |
+| `7` | Refusal (SPONTANEOUS) | 1 |
+| `8` | REFUSAL | 1 |
+| `98` | REFUSAL | 1 |
+| `99` | REFUSAL [ACCORDING TO sd2r] | 1 |
+| `998` | Don't know | 1 |
+
+## EU Neighbourhood Barometer Wave 5
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `5` | Don’t know (SPONTANEOUS) | 39 |
+| `3` | Don’t know (SPONTANEOUS) | 31 |
+| `4` | Don’t know (SPONTANEOUS) | 12 |
+| `5` | Don’t know (SPONTA-NEOUS) | 11 |
+| `3` | Don't know (SPONTANEOUS) | 9 |
+| `5` | Don't know (SPONTANEOUS) | 9 |
+| `7` | Don't know (SPONTANEOUS) | 9 |
+| `8` | Don't know (SPONTANEOUS) | 9 |
+| `4` | Don't Know  (SPONTANEOUS) | 4 |
+| `5` | Don't Know (SPONTANEOUS) | 4 |
+| `6` | Don’t know (SPONTANEOUS) | 2 |
+| `11` | Don't know (SPONTANEOUS) | 1 |
+| `11` | Refusal (SPONTANEOUS) | 1 |
+| `23` | Don’t know (SPONTANEOUS) | 1 |
+| `4` | Refusal (SPONTANEOUS) | 1 |
+| `5` | refusal | 1 |
+| `7` | Refusal (SPONTANEOUS) | 1 |
+| `8` | REFUSAL | 1 |
+| `9` | Don't know (SPONTANEOUS) | 1 |
+| `98` | REFUSAL | 1 |
+
+## EU Neighbourhood Barometer Wave 6
+
+| Code | Label | Variables using it |
+|---:|---|---:|
+| `9` | NO ANSWER | 54 |
+| `3` | Don’t know (SPONTANEOUS) | 31 |
+| `5` | Don’t know (SPONTANEOUS) | 28 |
+| `4` | Don’t know (SPONTANEOUS) | 12 |
+| `5` | Don’t know (SPONTA-NEOUS) | 11 |
+| `6` | Don’t know (SPONTANEOUS) | 2 |
+| `11` | Refusal (SPONTANEOUS) | 1 |
+| `23` | Don’t know (SPONTANEOUS) | 1 |
+| `4` | Refusal (SPONTANEOUS) | 1 |
+| `5` | refusal | 1 |
+| `7` | Refusal (SPONTANEOUS) | 1 |
+| `8` | REFUSAL | 1 |
+| `98` | REFUSAL | 1 |
+| `99` | REFUSAL [ACCORDING TO sd2r] | 1 |

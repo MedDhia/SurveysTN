@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06",
+  "generated": "2026-09-07",
   "country": "Tunisia",
   "surveys": [
     {
@@ -62,7 +62,8 @@
           "sha256": "9753fdd66d2fb998f050f16f9bf51fa9fa79de43aa497b3f736afa8280296104"
         }
       },
-      "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes."
+      "notes": "Distributed CSV ships value labels as text; SAV/DTA ship numeric codes.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -124,7 +125,8 @@
           "sha256": "5cecdb182f38159279490f7bffab5dc79ba1ade77bb27266d1f817a5d4d25d34"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -186,7 +188,8 @@
           "sha256": "2f61899b851d633e39e4b64bfeb2b416f88242fc0837440bd35bb04e2d484147"
         }
       },
-      "notes": "Only the label-text CSV release was available; no numeric codes or question text."
+      "notes": "Only the label-text CSV release was available; no numeric codes or question text.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -248,7 +251,8 @@
           "sha256": "f73d537e2bab13002a07ab60660603a224d6f1612b2fe72066dfdd1d2c663db5"
         }
       },
-      "notes": "Release v2."
+      "notes": "Release v2.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -310,7 +314,8 @@
           "sha256": "be65ef2fdcc3cc2003f18a04d98ee137ae5c6deb0374c0651295b445739f4b6f"
         }
       },
-      "notes": "Round 1, fielded by telephone during the COVID-19 pandemic."
+      "notes": "Round 1, fielded by telephone during the COVID-19 pandemic.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -372,7 +377,8 @@
           "sha256": "50b611dea7c81a4141a5a29aaf141ad36539d1a2cfd58bbf1d5c9ba49cd7ca98"
         }
       },
-      "notes": "Round 2, a fresh sample with its own questionnaire."
+      "notes": "Round 2, a fresh sample with its own questionnaire.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -434,7 +440,8 @@
           "sha256": "08390629368e68f97f0f3e85c809b24b1c4528ee548b0bd7d4b5e51238a9f4e7"
         }
       },
-      "notes": "Round 3, a fresh sample with its own questionnaire."
+      "notes": "Round 3, a fresh sample with its own questionnaire.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -496,7 +503,8 @@
           "sha256": "a5bfd24760d0478d00b7f6cb84d0baaab8b41ecc7c12209583f77e7c21677334"
         }
       },
-      "notes": "Release version 6."
+      "notes": "Release version 6.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-barometer",
@@ -558,7 +566,8 @@
           "sha256": "4a7131451b93ebd353e631da8907b41b9fa4d9f7329f75f0cf8ab6e69affc0e7"
         }
       },
-      "notes": "Release v3 (archive labelled v2)."
+      "notes": "Release v3 (archive labelled v2).",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "world-values-survey",
@@ -616,7 +625,8 @@
           "sha256": "89ecb9983e28be67e74aeee35f322e8dfddcfccdf3556d8f2a28c4b2e5e2d081"
         }
       },
-      "notes": "Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7."
+      "notes": "Excel edition, data file version 20221117.1. Country file: Tunisia only. Substantive items are V-numbered here and Q-numbered in Wave 7.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "world-values-survey",
@@ -674,7 +684,8 @@
           "sha256": "aebb3197fc25f7e63ddc5f9c1998f9319599258aad23ae73019c8c8c0e8b120a"
         }
       },
-      "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release."
+      "notes": "Excel edition, data file version 5.0. Country file: Tunisia only, not a subset of a pooled release.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "afrobarometer",
@@ -767,7 +778,8 @@
           "sha256": "94378d0550badc6df5606be973ab47d675fe9210c1ab296f694dc86176f81e34"
         }
       },
-      "notes": "Round 5 release, English."
+      "notes": "Round 5 release, English.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "afrobarometer",
@@ -872,7 +884,8 @@
           "sha256": "6845f773d4832dd604086f61113960dcca1d71f018ab452f623b6268b67f7700"
         }
       },
-      "notes": "Round 6 release, English."
+      "notes": "Round 6 release, English.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "afrobarometer",
@@ -971,7 +984,8 @@
           "sha256": "d432041c499fc1b49c4d091c650c062b08dc70be9f503c9d30ff9c9005e9841b"
         }
       },
-      "notes": "Round 7 release, English."
+      "notes": "Round 7 release, English.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "afrobarometer",
@@ -1067,7 +1081,8 @@
           "sha256": "57264074d2d68886adcf7e1e68981455525e4f9567e34f74cf9a88dd6a77919d"
         }
       },
-      "notes": "Round 8 release of 31 March 2021, English."
+      "notes": "Round 8 release of 31 March 2021, English.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "afrobarometer",
@@ -1131,7 +1146,8 @@
           "sha256": "2b8ec7e8c722982f9d56e63a1f493ddc986fd934656dfd0483c5ec5e5280c63a"
         }
       },
-      "notes": "Round 9 release of 1 March 2023, English. Its variable labels are in French despite the English release; question text comes from the questionnaire."
+      "notes": "Round 9 release of 1 March 2023, English. Its variable labels are in French despite the English release; question text comes from the questionnaire.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "afrobarometer",
@@ -1226,7 +1242,8 @@
           "sha256": "a3fbc8c1a00bb117934c951eeb1c4ff97e6ea84f2aff1b7fc67e0956900e174c"
         }
       },
-      "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English."
+      "notes": "Round 10 release of 2 May 2024, updated 13 February 2025, English.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1292,7 +1309,8 @@
           "sha256": "057966bf6d7a65b1f0528aaae372f64c6e19125eb093f07cb87046681b5caf5a"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1354,7 +1372,8 @@
           "sha256": "1eff1dd42b98bdbf73a32b63c4997c18165e493a2ca442fbf5cf2541aad93613"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1416,7 +1435,8 @@
           "sha256": "8fbbb1bfdb897f18ab757058499bdcf46eb92ea61aa98574bcd936395c1b45a0"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1478,7 +1498,8 @@
           "sha256": "d0069c51c793c9d6f66f7cbcd1066542d98f4d7c5565a770280b8c0347428fca"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1540,7 +1561,8 @@
           "sha256": "8feec704af856ad2029f3871c18515a21343ed359fca302b6bed3bec96f4d331"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1602,7 +1624,8 @@
           "sha256": "70d9fc550708b5d07ac239620810238bddc61ee474d40ddfa2ec29aac83571c3"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1861,7 +1884,8 @@
           "sha256": "c9adc17484003dce49a42b4e9cf774ad6417645cfb771dfefee38545542e3094"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1923,7 +1947,8 @@
           "sha256": "591fd0198d4dada5edd050c8429c817bb30c0edd7d67a3e1533c502898b75cba"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-opinion-index",
@@ -1992,7 +2017,8 @@
           "sha256": "5db42dad7cb1afd7a99751505691272c2baef6c7118a9003e8164799ec3b8f3a"
         }
       },
-      "notes": ""
+      "notes": "",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "ebrd-life-in-transition",
@@ -2058,7 +2084,8 @@
           "sha256": "931a729663670f155c605854d074f31fe12ee3f1f740ce1bd5f82ac825db2997"
         }
       },
-      "notes": "Fourth round of the EBRD/World Bank Life in Transition Survey, the first to include Tunisia. A household and attitudinal survey rather than a firm survey. Date and time columns are stored in Stata's %tc form, milliseconds since 1960-01-01, and are left as the release stores them."
+      "notes": "Fourth round of the EBRD/World Bank Life in Transition Survey, the first to include Tunisia. A household and attitudinal survey rather than a firm survey. Date and time columns are stored in Stata's %tc form, milliseconds since 1960-01-01, and are left as the release stores them.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "issp",
@@ -2124,7 +2151,8 @@
           "sha256": "cb62c519cdab8b4fab5fd44925cbf4e1afe955b1fe024c9ebe85a2b6ab9127d9"
         }
       },
-      "notes": "ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: the GESIS read-me says it did not meet the methodological standard because of the quota sampling used, and that background variables were missing from Tunisia's first deposit. The depositor describes the design more precisely as a multi-stage territorial stratified selection with a quota table. It carries no weight -- WEIGHT is empty and the study description form answers 'Weight present: No' -- and no interview dates. The data file and the study description also disagree on when it was fielded: DATEYR is 2018 for every respondent, while the form filed in April 2019 gives 6 January to 8 February 2019. The archive reports the year in the data and records the conflict rather than resolving it. Treat this as the least comparable survey in the archive."
+      "notes": "ISSP 2018 Religion IV, Tunisia, deposited by Abdelwahab Ben Hafaiedh, DOI 10.4232/1.13516, GESIS version 1.0.0 of 9 October 2020. Released on its own rather than inside the ISSP 2018 international file: the GESIS read-me says it did not meet the methodological standard because of the quota sampling used, and that background variables were missing from Tunisia's first deposit. The depositor describes the design more precisely as a multi-stage territorial stratified selection with a quota table. It carries no weight -- WEIGHT is empty and the study description form answers 'Weight present: No' -- and no interview dates. The data file and the study description also disagree on when it was fielded: DATEYR is 2018 for every respondent, while the form filed in April 2019 gives 6 January to 8 February 2019. The archive reports the year in the data and records the conflict rather than resolving it. Treat this as the least comparable survey in the archive.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "sahwa",
@@ -2190,7 +2218,8 @@
           "sha256": "b7744731ba701b6914b199d4f971a8ae1076c8244dd145deb71a9054f84e4262"
         }
       },
-      "notes": "Edition 4.0 of the SAHWA Youth Survey, a five-country survey of 15-to-29-year-olds run by CIDOB with RECSM at Universitat Pompeu Fabra. Tunisian fieldwork ran in September and October 2015, ahead of the 2016 the dataset is named for. It is the only survey in the archive restricted to young people by design, so its marginals are not comparable with the general-population surveys beside it. Published on Zenodo under CC BY-NC-SA 4.0."
+      "notes": "Edition 4.0 of the SAHWA Youth Survey, a five-country survey of 15-to-29-year-olds run by CIDOB with RECSM at Universitat Pompeu Fabra. Tunisian fieldwork ran in September and October 2015, ahead of the 2016 the dataset is named for. It is the only survey in the archive restricted to young people by design, so its marginals are not comparable with the general-population surveys beside it. Published on Zenodo under CC BY-NC-SA 4.0.",
+      "value_labels_dropped_on_extended_missings": {}
     },
     {
       "series": "arab-transformations",
@@ -2256,7 +2285,602 @@
           "sha256": "d32464ad922ab5aa28c72c9eb502a674703e77e3cb80d825921949aa2e5f48a5"
         }
       },
-      "notes": "The Arab Transformations Project's 2014 survey, an EU FP7 study run by Pamela Abbott, Andrea Teti and Roger Sapsford. Fielded in six countries -- Egypt, Iraq, Jordan, Libya, Morocco and Tunisia; the public file has no Algerian rows despite the project covering it. The instrument borrows from Arab Barometer and the World Values Survey and adds questions on the uprisings themselves, on political activity and on social media use. It is the only survey in the archive fielded in 2014 that records an interview date, so it breaks what was otherwise a two-year hole in the dated record. It carries no weight variable of any kind, and its REGION codes (700-730) are unlabelled in the release."
+      "notes": "The Arab Transformations Project's 2014 survey, an EU FP7 study run by Pamela Abbott, Andrea Teti and Roger Sapsford. Fielded in six countries -- Egypt, Iraq, Jordan, Libya, Morocco and Tunisia; the public file has no Algerian rows despite the project covering it. The instrument borrows from Arab Barometer and the World Values Survey and adds questions on the uprisings themselves, on political activity and on social media use. It is the only survey in the archive fielded in 2014 that records an interview date, so it breaks what was otherwise a two-year hole in the dated record. It carries no weight variable of any kind, and its REGION codes (700-730) are unlabelled in the release.",
+      "value_labels_dropped_on_extended_missings": {}
+    },
+    {
+      "series": "eu-neighbourhood-barometer",
+      "series_name": "EU Neighbourhood Barometer",
+      "series_prefix": "enb",
+      "key": "enb-w01",
+      "wave": 1,
+      "part": null,
+      "wave_label": "Wave 1",
+      "tag": "w01",
+      "slug": "wave-01",
+      "country": "Tunisia",
+      "country_value": 3,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 13,
+      "value_labels_dropped_on_temporal_columns": [],
+      "value_labels_dropped_on_extended_missings": {
+        "aa6b_19": [
+          "i: Inap. (coded 22 or 23 in AA6A)"
+        ],
+        "aa6b_20": [
+          "i: Inap. (coded 22 or 23 in AA6A)"
+        ],
+        "ac2_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac2_6": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac2_7": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_5": [
+          "i: Inap. (LB in isocntry)"
+        ],
+        "ac3_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac4_2": [
+          "i: Inap. (MA JO EG in isocntry)"
+        ],
+        "ad2_5": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ba9_7": [
+          "i: Inap. (not DZ EG JO LB LY MA PS TN in isocntry)"
+        ],
+        "sd5at": [
+          "i: Inap. (coded 19 or 20 in SD5A)"
+        ],
+        "p7_tn": [
+          "i: Inap. (not TN in isocntry)"
+        ]
+      },
+      "n_respondents": 1015,
+      "n_variables": 462,
+      "n_variables_with_data": 462,
+      "n_respondents_pooled_release": 16196,
+      "n_countries_pooled_release": 16,
+      "is_country_file": false,
+      "fieldwork_years_series": "2012",
+      "fieldwork_tunisia": "2012-07-07 to 2012-07-21",
+      "fieldwork_source": "derived from the p1d and p1m variables in the data file; the release records the day and month but not the year, so 2012 is supplied from the wave, whose Tunisian fieldwork falls inside that one calendar year",
+      "language": "Arabic instrument; the release labels variables and answers in English",
+      "source_format": "dta",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ZA6288_v100.dta",
+      "source_sha256": "31868841f687f2b08f9661bf8036279cd54513657c804897c538a5c24ee4b8d5",
+      "csv_answers_read_as_missing": {
+        "bd1a": [
+          "None"
+        ]
+      },
+      "path": "data/eu-neighbourhood-barometer/wave-01",
+      "files": {
+        "codebook.csv": {
+          "bytes": 80259,
+          "sha256": "f8980685fa5c9fb6b9883cb055205355398c2e857aec6bc5d116c53d4499b6d8"
+        },
+        "codebook.json": {
+          "bytes": 187852,
+          "sha256": "6070a3dc95bb41acb3d868834518cd223908e0e5c3ef1e1b2f980bc534743907"
+        },
+        "eu-neighbourhood-barometer-w01-tunisia-codes.csv": {
+          "bytes": 1063125,
+          "sha256": "48836d98a84817fb4dfe3dc19f141b02f4d3d268fef35792503cc5782e3b21cc"
+        },
+        "eu-neighbourhood-barometer-w01-tunisia-labels.csv": {
+          "bytes": 6906984,
+          "sha256": "1fa86c9f2124d2eea68f645b8f3e665d172868bd964cfe468e92fb604b611ade"
+        },
+        "eu-neighbourhood-barometer-w01-tunisia.dta": {
+          "bytes": 3321985,
+          "sha256": "447d26d00505f50ee6ae31738f09f7dd5d25de9b918e1a09ce4e56c6c1dd7e89"
+        },
+        "eu-neighbourhood-barometer-w01-tunisia.sav": {
+          "bytes": 3884259,
+          "sha256": "6049a64b9736ce5a3a8d7a4b21de87559e5642716fd17032d18366b5ee8ceff9"
+        }
+      },
+      "notes": "EU Neighbourhood Barometer Spring 2012, GESIS study ZA6288, doi:10.4232/1.12410, version 1.0.0 (2016-01-05). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md."
+    },
+    {
+      "series": "eu-neighbourhood-barometer",
+      "series_name": "EU Neighbourhood Barometer",
+      "series_prefix": "enb",
+      "key": "enb-w03",
+      "wave": 3,
+      "part": null,
+      "wave_label": "Wave 3",
+      "tag": "w03",
+      "slug": "wave-03",
+      "country": "Tunisia",
+      "country_value": 3,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 18,
+      "value_labels_dropped_on_temporal_columns": [],
+      "value_labels_dropped_on_extended_missings": {
+        "ac2_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac2_6": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac2_7": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_5": [
+          "i: Inap. (LB in isocntry)"
+        ],
+        "ac3_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac4_2": [
+          "i: Inap. (MA JO in isocntry)"
+        ],
+        "ac4_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ad2_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "sd5a_r": [
+          "i: Inap. (coded 20 in sd5a)"
+        ],
+        "ba9_7": [
+          "i: Inap. (not DZ EG JO LB MA PS TN in isocntry)"
+        ],
+        "p7_tn": [
+          "i: Inap. (not TN in isocntry)"
+        ],
+        "p13": [
+          "i: Inap. (LY EG JO LB AM AZ BY in isocntry)"
+        ]
+      },
+      "n_respondents": 1041,
+      "n_variables": 549,
+      "n_variables_with_data": 549,
+      "n_respondents_pooled_release": 16103,
+      "n_countries_pooled_release": 16,
+      "is_country_file": false,
+      "fieldwork_years_series": "2013",
+      "fieldwork_tunisia": "2013-06-04 to 2013-06-19",
+      "fieldwork_source": "derived from the p1d and p1m variables in the data file; the release records the day and month but not the year, so 2013 is supplied from the wave, whose Tunisian fieldwork falls inside that one calendar year",
+      "language": "Arabic instrument; the release labels variables and answers in English",
+      "source_format": "dta",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ZA6290_v100.dta",
+      "source_sha256": "f4a2fb06be08d630a4df42aa02f391dc0f6a6f751f4e56ec03efaff53e936509",
+      "csv_answers_read_as_missing": {},
+      "path": "data/eu-neighbourhood-barometer/wave-03",
+      "files": {
+        "codebook.csv": {
+          "bytes": 97479,
+          "sha256": "a4b256f4898673e576c38fe4f5d59b9a79535dd305325e596337889ae6b82ab8"
+        },
+        "codebook.json": {
+          "bytes": 225444,
+          "sha256": "31c5a1aff12d0b3e96a1fe5b7d99681cc5140e72880cea339d0bb685ff5ae1fa"
+        },
+        "eu-neighbourhood-barometer-w03-tunisia-codes.csv": {
+          "bytes": 1255703,
+          "sha256": "19b8c1906abbf1ddfed1e938624dde1753fe8fb2cb152a4f35bdfe0ea7dbf9e1"
+        },
+        "eu-neighbourhood-barometer-w03-tunisia-labels.csv": {
+          "bytes": 8674794,
+          "sha256": "7cfd6d0ebe3b636a5bf21a0597e49a64f6803b73a3b85c1b0a50e75add98ba7c"
+        },
+        "eu-neighbourhood-barometer-w03-tunisia.dta": {
+          "bytes": 3851218,
+          "sha256": "2546d398e7e41dedf93454ff883d72edc1456cef9cc156829b5cbd1f87ebcb02"
+        },
+        "eu-neighbourhood-barometer-w03-tunisia.sav": {
+          "bytes": 4726565,
+          "sha256": "e1c18e5c5cfd7cd1d844233ceb3c384e23650619540d5b258423d9f5466d52be"
+        }
+      },
+      "notes": "EU Neighbourhood Barometer Spring 2013, GESIS study ZA6290, doi:10.4232/1.12459, version 1.0.0 (2016-04-19). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md."
+    },
+    {
+      "series": "eu-neighbourhood-barometer",
+      "series_name": "EU Neighbourhood Barometer",
+      "series_prefix": "enb",
+      "key": "enb-w04",
+      "wave": 4,
+      "part": null,
+      "wave_label": "Wave 4",
+      "tag": "w04",
+      "slug": "wave-04",
+      "country": "Tunisia",
+      "country_value": 3,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 13,
+      "value_labels_dropped_on_temporal_columns": [],
+      "value_labels_dropped_on_extended_missings": {
+        "aa7_2": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac2_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac2_6": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac2_7": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ac3_5": [
+          "i: Inap. (LB in isocntry)"
+        ],
+        "ac3_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac4_2": [
+          "i: Inap. (MA JO in isocntry)"
+        ],
+        "ac4_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ad2_4": [
+          "i: Inap. (not DZ EG TN JO LB LY PS MA in isocntry)"
+        ],
+        "ba9_7": [
+          "i: Inap. (not DZ EG JO LB MA PS TN in isocntry)"
+        ],
+        "p7_tn": [
+          "i: Inap. (not TN in isocntry)"
+        ],
+        "p13": [
+          "i: Inap. (LY EG JO LB AM BY in isocntry)"
+        ]
+      },
+      "n_respondents": 1009,
+      "n_variables": 432,
+      "n_variables_with_data": 432,
+      "n_respondents_pooled_release": 16097,
+      "n_countries_pooled_release": 16,
+      "is_country_file": false,
+      "fieldwork_years_series": "2013",
+      "fieldwork_tunisia": "2013-12-07 to 2013-12-20",
+      "fieldwork_source": "derived from the p1d and p1m variables in the data file; the release records the day and month but not the year, so 2013 is supplied from the wave, whose Tunisian fieldwork falls inside that one calendar year",
+      "language": "Arabic instrument; the release labels variables and answers in English",
+      "source_format": "dta",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ZA6291_v100.dta",
+      "source_sha256": "f8e877194c6d14ba12edb73583d891cb3fd2c6f825cbd60f0498126ea2c5c489",
+      "csv_answers_read_as_missing": {},
+      "path": "data/eu-neighbourhood-barometer/wave-04",
+      "files": {
+        "codebook.csv": {
+          "bytes": 95193,
+          "sha256": "7ed7d60f35aec02803f4af79f33d8432f05c93bcad6a67b972f6522367072881"
+        },
+        "codebook.json": {
+          "bytes": 195868,
+          "sha256": "df4ae2d7cbc9aa722624f47393a20ba23adc3426d2e0d47b7a0311126f206f52"
+        },
+        "eu-neighbourhood-barometer-w04-tunisia-codes.csv": {
+          "bytes": 973360,
+          "sha256": "be8b6edcfd832a889ff9f16c3962faa7f3af1375966ef2a40a7080f3d7aba6f3"
+        },
+        "eu-neighbourhood-barometer-w04-tunisia-labels.csv": {
+          "bytes": 7092558,
+          "sha256": "d8454d44028bce7fbf5c148dfad3b94b42b1e8c33ba958a1029fff66836616a0"
+        },
+        "eu-neighbourhood-barometer-w04-tunisia.dta": {
+          "bytes": 2997211,
+          "sha256": "cfe9b1db956e97e26ffd65e8f6047f290cab122480f2b04c4299514434f566e3"
+        },
+        "eu-neighbourhood-barometer-w04-tunisia.sav": {
+          "bytes": 3631177,
+          "sha256": "2e7f0648a96cf58c40646a9eeee8698d9674d928a12bf831f25513ceb0fb3663"
+        }
+      },
+      "notes": "EU Neighbourhood Barometer Autumn 2013, GESIS study ZA6291, doi:10.4232/1.12497, version 1.0.0 (2016-04-22). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md."
+    },
+    {
+      "series": "eu-neighbourhood-barometer",
+      "series_name": "EU Neighbourhood Barometer",
+      "series_prefix": "enb",
+      "key": "enb-w05",
+      "wave": 5,
+      "part": null,
+      "wave_label": "Wave 5",
+      "tag": "w05",
+      "slug": "wave-05",
+      "country": "Tunisia",
+      "country_value": 3,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 34,
+      "value_labels_dropped_on_temporal_columns": [],
+      "value_labels_dropped_on_extended_missings": {
+        "aa6b_1": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_2": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_3": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_4": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_5": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_6": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_7": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_8": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_9": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_10": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_11": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_12": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_13": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_14": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_15": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_16": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_17": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_18": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_21": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_22": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa6b_23": [
+          "i: Inap. (coded 22 or 23 in aa6a)"
+        ],
+        "aa7_2": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac2_4": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac2_6": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac2_7": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac3_4": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac3_5": [
+          "i: Inap. (LB in isocntry)"
+        ],
+        "ac3_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac4_2": [
+          "i: Inap. (MA JO in isocntry)"
+        ],
+        "ac4_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ad2_4": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "sd16_7": [
+          "i: Inap. (not DZ EG JO LB MA PS TN in isocntry)"
+        ],
+        "p7_tn": [
+          "i: Inap. (not TN in isocntry)"
+        ],
+        "p13": [
+          "i: Inap. (EG JO LB BY in isocntry)"
+        ]
+      },
+      "n_respondents": 1006,
+      "n_variables": 445,
+      "n_variables_with_data": 445,
+      "n_respondents_pooled_release": 15095,
+      "n_countries_pooled_release": 15,
+      "is_country_file": false,
+      "fieldwork_years_series": "2014",
+      "fieldwork_tunisia": "2014-05-01 to 2014-06-29",
+      "fieldwork_source": "derived from the p1d and p1m variables in the data file; the release records the day and month but not the year, so 2014 is supplied from the wave, whose Tunisian fieldwork falls inside that one calendar year",
+      "language": "Arabic instrument; the release labels variables and answers in English",
+      "source_format": "dta",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ZA6292_v100.dta",
+      "source_sha256": "11da62ed6b6dcfaca7f427ac34c733ad8934991ce90078d18b315f0852a9f40c",
+      "csv_answers_read_as_missing": {},
+      "path": "data/eu-neighbourhood-barometer/wave-05",
+      "files": {
+        "codebook.csv": {
+          "bytes": 83076,
+          "sha256": "82bd3569bff3f693d64e32c0c3946cebb4a1e18ec3800cd23744b90599876281"
+        },
+        "codebook.json": {
+          "bytes": 186587,
+          "sha256": "916913170545628f25ee4c92130f88b0418ff3cdc452dc5677e33637d8fdf7a6"
+        },
+        "eu-neighbourhood-barometer-w05-tunisia-codes.csv": {
+          "bytes": 992442,
+          "sha256": "0e8fffc54f6b6d34ea78b6627a2ac0146c49bd1605cca6529fdfc1a71bbb8eec"
+        },
+        "eu-neighbourhood-barometer-w05-tunisia-labels.csv": {
+          "bytes": 7639699,
+          "sha256": "7ce553e1f9e6ecf8728dacbc4f117c1c09f4f0a343ec5fbc6cad71ad6a8744e0"
+        },
+        "eu-neighbourhood-barometer-w05-tunisia.dta": {
+          "bytes": 3400451,
+          "sha256": "3d406e488950c53d57341cb09131d9fed5a5ee39d4aaa2f76e7f513d7e9fd7d8"
+        },
+        "eu-neighbourhood-barometer-w05-tunisia.sav": {
+          "bytes": 3715853,
+          "sha256": "10ecbeaf9c0e1f49a2de1a65daca491d2dcacf4303b38f82ee301d5943517406"
+        }
+      },
+      "notes": "EU Neighbourhood Barometer Spring 2014, GESIS study ZA6292, doi:10.4232/1.12524, version 1.0.0 (2016-04-22). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md."
+    },
+    {
+      "series": "eu-neighbourhood-barometer",
+      "series_name": "EU Neighbourhood Barometer",
+      "series_prefix": "enb",
+      "key": "enb-w06",
+      "wave": 6,
+      "part": null,
+      "wave_label": "Wave 6",
+      "tag": "w06",
+      "slug": "wave-06",
+      "country": "Tunisia",
+      "country_value": 3,
+      "country_match": "equals",
+      "renamed_variables": {},
+      "columns_retyped_from_values": 17,
+      "value_labels_dropped_on_temporal_columns": [],
+      "value_labels_dropped_on_extended_missings": {
+        "aa7_2": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac2_4": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac2_6": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac2_7": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac3_4": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "ac3_5": [
+          "i: Inap. (LB in isocntry)"
+        ],
+        "ac3_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ac4_2": [
+          "i: Inap. (MA JO in isocntry)"
+        ],
+        "ac4_7": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "ad2_4": [
+          "i: Inap. (not DZ EG TN JO LB PS MA in isocntry)"
+        ],
+        "bl7_2": [
+          "i: Inap. (MA JO in isocntry)"
+        ],
+        "bl7_9": [
+          "i: Inap. (IL in isocntry)"
+        ],
+        "bl9_3": [
+          "i: Inap. (not DZ EG JO LB MA PS TN IL in isocntry)"
+        ],
+        "bl9_4": [
+          "i: Inap. (not DZ EG JO LB MA PS TN in isocntry)"
+        ],
+        "sd16_7": [
+          "i: Inap. (not DZ EG JO LB MA PS TN in isocntry)"
+        ],
+        "p7_tn": [
+          "i: Inap. (not TN in isocntry)"
+        ],
+        "p13": [
+          "i: Inap. (AM EG JO LB BY in isocntry)"
+        ]
+      },
+      "n_respondents": 1006,
+      "n_variables": 491,
+      "n_variables_with_data": 489,
+      "n_respondents_pooled_release": 14924,
+      "n_countries_pooled_release": 15,
+      "is_country_file": false,
+      "fieldwork_years_series": "2014",
+      "fieldwork_tunisia": "2014-10-03 to 2014-11-24",
+      "fieldwork_source": "derived from the p1d and p1m variables in the data file; the release records the day and month but not the year, so 2014 is supplied from the wave, whose Tunisian fieldwork falls inside that one calendar year",
+      "language": "Arabic instrument; the release labels variables and answers in English",
+      "source_format": "dta",
+      "has_numeric_codes": true,
+      "has_value_labels": true,
+      "has_question_text": true,
+      "source_file": "ZA6293_v100.dta",
+      "source_sha256": "e636c8b9b63a8c965d4db84e1d67f7a9e11bcac8b1d84a2d4f69298a620c7b45",
+      "csv_answers_read_as_missing": {},
+      "path": "data/eu-neighbourhood-barometer/wave-06",
+      "files": {
+        "codebook.csv": {
+          "bytes": 93215,
+          "sha256": "7791b43de1e60e3daabe2699607c8fc0f6e71b6e91d56ecc3cca1ec87bdf258e"
+        },
+        "codebook.json": {
+          "bytes": 207654,
+          "sha256": "384a29b3fa2b246fc0e06a71ed618d3819b34b02f1b411fa7078f6f17162ff8f"
+        },
+        "eu-neighbourhood-barometer-w06-tunisia-codes.csv": {
+          "bytes": 1081948,
+          "sha256": "79d22241c3df9cd89f7ec0502ca4921a7f0537ca03ca2bb22f8665a6476ab1ba"
+        },
+        "eu-neighbourhood-barometer-w06-tunisia-labels.csv": {
+          "bytes": 7860558,
+          "sha256": "882dfaed3578744eb3dffdefad55990c7654754ed7f54016f23e6c7a01096e31"
+        },
+        "eu-neighbourhood-barometer-w06-tunisia.dta": {
+          "bytes": 3376055,
+          "sha256": "846cdaf27c4ef914972d57b1e34b430bc1e72e526604887f75a2440551e7a04d"
+        },
+        "eu-neighbourhood-barometer-w06-tunisia.sav": {
+          "bytes": 4097795,
+          "sha256": "5e58eefff67747d0cef92662f05f0c7aabc60dca57a07b1801786ad9f40bd7bb"
+        }
+      },
+      "notes": "EU Neighbourhood Barometer Autumn 2014, GESIS study ZA6293, doi:10.4232/1.12498, version 1.0.0 (2016-04-22). Commissioned by the European Commission and fielded by a consortium led by TNS opinion across sixteen neighbourhood countries and territories plus Russia. Carries a demographic country weight (w1), a sample point (p9) and a region code (p7); p7 is unlabelled in the release and is passed through as found. The wave's season name is not its fieldwork -- see docs/not-in-the-archive.md."
     }
   ]
 }

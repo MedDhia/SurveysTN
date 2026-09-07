@@ -11,23 +11,26 @@ variables by name and only within a series, which traces one programme through
 its own waves. This ignores names entirely and groups by the question itself, so
 it can answer what two different programmes both asked.
 
-**1,477 question groups span two or more surveys.** 1,404 are word-for-word identical and 73 are near-identical. **38 span more than one series** — those are the ones that make a
+**1,918 question groups span two or more surveys.** 1,843 are word-for-word identical and 75 are near-identical. **41 span more than one series** — those are the ones that make a
 cross-programme comparison possible at all.
 
 ## Across series
 
 | Question | Series | Surveys | Response scale |
 |---|---|---:|---|
-| q1010. Marital Status | AB, AOI, ArabTrans, WVS | 15 | unknown |
+| q1010. Marital Status | AB, AOI, ArabTrans, ENB, WVS | 20 | unknown |
 | Date of Interview | AB, Afro, ArabTrans, WVS | 10 | unknown |
 | Q1005. Employment status | AB, Afro, WVS | 10 | unknown |
+| digital object identifier | ENB, ISSP, WVS | 7 | unknown |
 | Year of birth | ArabTrans, ISSP, WVS | 4 | unknown |
 | Q340.How often do you use the internet? | AOI, Afro | 13 | differs |
 | Q1210.How much is the monthly household income in the local currency? | AB, AOI | 11 | unknown |
 | q10191 What is your first language? | AB, AOI | 9 | differs |
 | q10192 What is your second language? | AB, AOI | 9 | differs |
+| Q108. Interviewer Number | Afro, ENB | 8 | unknown |
 | Q1012. What is your religion? | AB, AOI | 8 | differs |
 | Q37g. Trust police | AB, Afro | 6 | differs |
+| Trust in institutions: political parties | ArabTrans, ENB | 6 | differs |
 | Q101. Gender of respondent | Afro, ArabTrans | 5 | identical |
 | Q86c. Neighbours: homosexuals | Afro, WVS | 5 | unknown |
 | Q86d. Neighbours: immigrants and foreign workers | Afro, WVS | 5 | unknown |
@@ -55,7 +58,7 @@ cross-programme comparison possible at all.
 | Highest educational level attained | ArabTrans, WVS | 2 | unknown |
 | O7 People can be trusted | ISSP, LiTS | 2 | differs |
 | Start time of the interview [HH.MM] | LiTS, WVS | 2 | unknown |
-| Digital Object Identifier | ISSP, WVS | 2 | unknown |
+| reason for moving abroad: other | ENB, SAHWA | 2 | differs |
 
 ## Do the answer options match?
 
@@ -65,14 +68,14 @@ are inventoried in [`missing-value-codes.md`](missing-value-codes.md) already.
 
 | Verdict | Groups | Means |
 |---|---:|---|
-| `identical` | 768 | same options, same codes; poolable as they stand |
-| `recodable` | 0 | same options, different codes; align the codes first |
+| `identical` | 1,167 | same options, same codes; poolable as they stand |
+| `recodable` | 2 | same options, different codes; align the codes first |
 | `reversed` | 0 | same options, but at least one survey codes them in the opposite order |
-| `differs` | 379 | not the same options; not one variable however alike the wording |
-| `partly-labelled` | 44 | a survey leaves some of its values unlabelled, so the labels understate the scale |
-| `unknown` | 286 | a member's release ships no value labels, so there is nothing to compare |
+| `differs` | 394 | not the same options; not one variable however alike the wording |
+| `partly-labelled` | 47 | a survey leaves some of its values unlabelled, so the labels understate the scale |
+| `unknown` | 308 | a member's release ships no value labels, so there is nothing to compare |
 
-**Not one of the 38 cross-series groups scores `identical`.** Every question two
+**Not one of the 41 cross-series groups scores `identical`.** Every question two
 programmes both ask, they ask with different answer options or with options this
 archive cannot see. The overlap that survives a wording comparison does not
 survive a scale comparison, and a cross-programme series here has to be built by

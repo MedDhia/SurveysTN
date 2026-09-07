@@ -130,15 +130,28 @@ def check_labels_csv(
         # A label can be attached to more than one code -- Wave V's party
         # variables label both 0 and 150000 "no party" -- so the reverse map
         # holds every code carrying the text, not just the last one seen.
+        # A code is usually a number, but a Stata release can also label an extended
+        # missing (.a to .z), which comes back as the bare letter and is a value a
+        # cell really does hold: 15 Tunisians in EU Neighbourhood Barometer Wave 1
+        # are '.i' on aa6b_1. Those match on the text, the numeric ones on the value.
         back: dict[str, set[float]] = {}
+        back_text: dict[str, set[str]] = {}
         for code, label in labels.items():
-            back.setdefault(str(label), set()).add(float(code))
+            try:
+                back.setdefault(str(label), set()).add(float(code))
+            except (TypeError, ValueError):
+                back_text.setdefault(str(label), set()).add(str(code))
         for i, raw_val in expect[var].items():
             seen = labelled.at[i, var]
             if pd.isna(raw_val) or seen == "":
                 continue
             if str(raw_val) in {seen, f"{seen}.0"}:
                 continue
+            if str(raw_val) in back_text.get(seen, ()):
+                continue
+            if isinstance(raw_val, str):
+                errors.append(f"{tag} -labels.csv: {var} row {i} is {seen!r}")
+                return
             if not any(abs(c - raw_val) <= TOL for c in back.get(seen, ())):
                 errors.append(f"{tag} -labels.csv: {var} row {i} is {seen!r}")
                 return
@@ -425,6 +438,16 @@ def main() -> int:
         action="store_true",
         help="check only the committed files, not the pooled releases in data/raw/",
     )
+    ap.add_argument(
+        "--only",
+        metavar="NAME",
+        nargs="+",
+        default=None,
+        help="check only these surveys, by series (eu-neighbourhood-barometer) or by key "
+             "(enb-w01). A full run re-reads every release and takes over an hour, which is "
+             "too slow to check one survey you have just added; this is that check. It is not "
+             "a substitute for the full run before committing.",
+    )
     args = ap.parse_args()
 
     catalog = json.loads((ROOT / "catalog" / "catalog.json").read_text(encoding="utf-8"))
@@ -438,12 +461,24 @@ def main() -> int:
         label = "all committed files match the catalog"
     else:
         errors = []
-        for s in catalog["surveys"]:
+        wanted = catalog["surveys"]
+        if args.only:
+            names = set(args.only)
+            wanted = [s for s in wanted if s["series"] in names or s["key"] in names]
+            unmatched = names - {s["series"] for s in catalog["surveys"]} - {
+                s["key"] for s in catalog["surveys"]}
+            if unmatched:
+                print(f"no such survey or series: {', '.join(sorted(unmatched))}")
+                return 1
+        for s in wanted:
             spec = specs[(s["series"], s["tag"])]
             check_against_release(s, spec, manifest["series"][s["series"]], errors)
-        check_questionnaires(catalog, manifest, errors)
-        check_wave06_merge(errors)
-        label = "all extracts match their pooled releases"
+        if args.only:
+            label = f"{len(wanted)} of {len(catalog['surveys'])} surveys match their releases"
+        else:
+            check_questionnaires(catalog, manifest, errors)
+            check_wave06_merge(errors)
+            label = "all extracts match their pooled releases"
 
     if errors:
         print("\nFAILED:")

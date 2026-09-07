@@ -86,14 +86,15 @@ and reports only the fieldwork years the publisher gives for the wave as a whole
 Tunisia-specific dates are given for them; the country report on the Arab Barometer
 site has them.
 
-Across the archive as a whole, sixteen of the thirty surveys record an interview date
-per respondent, and no two programmes agree on how to store one. Three shapes so far:
+Across the archive as a whole, twenty-one of the thirty-five surveys record an interview date
+per respondent, and no two programmes agree on how to store one. Four shapes so far:
 
 | Shape | Where |
 |---|---|
 | a column the reader already returns as a date | Arab Barometer's `DATE` (Waves III, VI and VII–VIII) and Afrobarometer's `DATEINTR` (all six rounds) |
 | a number that encodes a date, in a column typed as a number | WVS Wave 7's `J_INTDATE`, the integer `20190515`; Life in Transition's `start_date`, Stata `%tc` milliseconds since 1960-01-01; Arab Transformations' `DATEINT`, SPSS seconds since **1582-10-14** given an `F9.0` format |
 | three columns holding the day, the month and the year apart | SAHWA's `int_d`, `int_m`, `int_y` |
+| two columns holding the day and the month, with **no year at all** | the EU Neighbourhood Barometer's `p1d` and `p1m`. A wave is one year by construction, so the year is supplied from the wave rather than the file. That is only safe while a wave's Tunisian fieldwork stays inside one calendar year, which the extractor checks rather than assumes: a wave holding both January and December raises instead of guessing. |
 
 The middle row is the one that bites: a column that is really a date but is typed as a
 number reads as a plausible integer, and a chart that hands it to a date parser
@@ -121,6 +122,7 @@ which for every survey:
 | ISSP | ISO code **788**, in `country`; the release is a Tunisia-only file, and the filter confirms it holds nothing else |
 | SAHWA | country code **5**, in `country` |
 | Arab Transformations | country code **7**, in `COUNTRY` |
+| EU Neighbourhood Barometer | country code **3**, in `country`, in every wave; `isocntry` is `TN` for the same rows |
 
 The filter runs even on a country file that holds nothing else, so a file is
 always checked to contain what its name claims rather than trusted.
@@ -132,6 +134,7 @@ always checked to contain what its name claims rather than trusted.
 | `.dta` | Stata caps a variable label at 80 characters. Longer labels are truncated with a trailing `...`. Wave II has 364 such labels and Wave VIII has 114; Wave V has none. The untruncated label is in `codebook.csv` and in the `.sav`. |
 | `.sav`, `.dta` | Numeric columns are written as doubles rather than the narrower storage types some source files use. Values are unchanged; the files are larger than they strictly need to be. |
 | `-labels.csv` | Where a variable has value labels, the label text replaces the code. Where it has none, the code is written through unchanged. A label can be attached to more than one code — Wave V's party variables label both `0` and `150000` "no party" — so this file is not always reversible. Use `-codes.csv` when you need the code. |
+| `.sav`, `.dta` | A value label keyed on a Stata extended missing (`.a` to `.z`) is dropped **only where no Tunisian row holds that value**, and every drop is recorded in `catalog/catalog.json` under `value_labels_dropped_on_extended_missings` and in the survey's own README. Only the EU Neighbourhood Barometer is affected: 13 to 34 variables per wave, mostly `Inap.` markers for filters that apply to other countries. Read with the user-missing values kept, pyreadstat returns such a key as the bare letter, which SPSS will not attach a label to. The rule is the retyping: a column keeps its extended-missing values, and their labels, whenever a Tunisian row actually carries one — 15 Tunisians are `.i` on Wave 1's `aa6b_1`, and that column comes through as text with `i` in `-codes.csv` and "Inap. (coded 22 or 23 in AA6A)" in `-labels.csv`. What is dropped is a label on a value the Tunisian subset does not contain. |
 | `-codes.csv` | A number too long for a double's exact decimal range is written exactly but may not be read back exactly, because the reader's default float parser is not exact to that many digits. One column is affected in the whole archive: ISSP's `CASEID`, a sixteen-digit integer, where one unit in the last place is 0.25. Read it with `float_precision="round_trip"`, or as text, or take it from the `.sav` or `.dta`, which hold it exactly. `scripts/verify.py` does the first of those. |
 | `-codes.csv`, `-labels.csv` | CSV cannot distinguish an empty string from a missing value. One variable is affected: Wave V's `E2001B`, a string variable that is empty for every Tunisian respondent. The `.sav` and `.dta` preserve the distinction. |
 | `-codes.csv`, `-labels.csv` | An answer spelled the way CSV readers spell a missing value is read as missing by default. Eleven surveys are affected and "None" is almost always the answer in question. The largest case is Afrobarometer's corruption battery, asked in five rounds, where "None" means *no corruption in that institution* — read it as missing and you drop the respondents who said there is none, which biases the battery upward. Arab Barometer Wave IV's `q1019b` on a second language is the same trap on one variable. Read with `keep_default_na=False`, or use the `.sav` or `.dta`. Every survey is scanned for this and every hit is recorded in `catalog/catalog.json` under `csv_answers_read_as_missing`, and repeated in the survey's own README. |
@@ -159,6 +162,7 @@ belongs to the programme and the wave, never to this repository**.
 | Life in Transition | Published by the EBRD with the World Bank for public use. <https://www.ebrd.com> |
 | ISSP | GESIS study ZA7629, DOI [10.4232/1.13516](https://doi.org/10.4232/1.13516). Cite the study and its version. |
 | SAHWA | **CC BY-NC-SA 4.0**, the one fully specified licence in the archive: attribution, non-commercial use, and share-alike on anything derived from it. DOI [10.5281/zenodo.5747748](https://doi.org/10.5281/zenodo.5747748). |
+| EU Neighbourhood Barometer | GESIS studies ZA6288 and ZA6290–ZA6293. Cite the study and its version; the archive records both in each wave's notes. |
 | Arab Transformations | The Aberdeen deposit says "Published under creative commons" and **names no variant**; the record's licence field reads "Unspecified". Every CC licence permits redistribution with attribution, which is what this archive does, but anyone needing a specific permission — commercial use, or redistributing a modified version — should confirm the variant with the depositors rather than rely on this note. |
 
 The share-alike condition on SAHWA travels with the data, so a derivative built from

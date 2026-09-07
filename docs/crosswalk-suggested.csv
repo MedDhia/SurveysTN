@@ -669,6 +669,18 @@ arab-opinion-index,aoi-2019-2020,Q315,aoi-2024-2025,Q315_1,1.0,Q315.which would 
 arab-opinion-index,aoi-2019-2020,Q326,aoi-2022,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
 arab-opinion-index,aoi-2019-2020,Q326,aoi-2024-2025,Q2022_4,1.0,Q326.Which of the following statements is closest to your point of view?
 arab-opinion-index,aoi-2022,Q321,aoi-2024-2025,Q216,0.967,Q321.Which of these statements is closest to your point of view?
+eu-neighbourhood-barometer,enb-w01,aa7,enb-w03,aa7_1,1.0,assessment - things going in the right or wrong direction
+eu-neighbourhood-barometer,enb-w01,aa7,enb-w04,aa7_3,0.973,assessment - things going in the right or wrong direction
+eu-neighbourhood-barometer,enb-w01,aa7,enb-w05,aa7_3,0.973,assessment - things going in the right or wrong direction
+eu-neighbourhood-barometer,enb-w01,aa7,enb-w06,aa7_3,0.973,assessment - things going in the right or wrong direction
+eu-neighbourhood-barometer,enb-w01,sd5at,enb-w03,sd5a_r,1.0,current occupation - recoded
+eu-neighbourhood-barometer,enb-w01,sd5at,enb-w04,sd5a_r,1.0,current occupation - recoded
+eu-neighbourhood-barometer,enb-w01,sd5at,enb-w05,sd5a_r,1.0,current occupation - recoded
+eu-neighbourhood-barometer,enb-w01,sd5at,enb-w06,sd5a_r,1.0,current occupation - recoded
+eu-neighbourhood-barometer,enb-w01,sd5bt,enb-w03,sd5b_r,1.0,last occupation - recoded
+eu-neighbourhood-barometer,enb-w01,sd5bt,enb-w04,sd5b_r,1.0,last occupation - recoded
+eu-neighbourhood-barometer,enb-w01,sd5bt,enb-w05,sd5b_r,1.0,last occupation - recoded
+eu-neighbourhood-barometer,enb-w01,sd5bt,enb-w06,sd5b_r,1.0,last occupation - recoded
 world-values-survey,wvs-w06,V10,wvs-w07,Q46,1.0,Feeling of happiness
 world-values-survey,wvs-w06,V103,wvs-w07,Q59,0.958,Trust: Your neighborhood (B)
 world-values-survey,wvs-w06,V104,wvs-w07,Q60,0.97,Trust: People you know personally (B)

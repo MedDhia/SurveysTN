@@ -49,6 +49,7 @@ names it differently:
 | ISSP | `WEIGHT` exists but **is empty for all 1,218 respondents** and labelled "No weighting" | neither |
 | SAHWA | `dweight` (design) and `pweight` (scaled to the population), both fully populated | neither |
 | Arab Transformations | **none** — the release carries no weight variable | neither |
+| EU Neighbourhood Barometer | `w1`, the demographic country weight; `w2`–`w7` are regional aggregation weights for pooling countries, not for a single-country estimate | PSU only (`p9`, 169–199 sample points per wave) |
 
 Unweighted estimates from a weighted survey are not nationally representative. Only
 four surveys carry the stratum and PSU a full `svyset` wants; for the rest, weighting

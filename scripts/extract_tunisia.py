@@ -177,6 +177,30 @@ def select_country(df: pd.DataFrame, spec: dict, country_value) -> pd.DataFrame:
     return df[column == country_value]
 
 
+def drop_extended_missing_labels(
+    df: pd.DataFrame, value_labels: dict
+) -> tuple[dict, dict[str, list[str]]]:
+    """Drop labels keyed on a Stata extended missing rather than on a number.
+
+    Stata lets a variable carry .a to .z alongside its numeric codes, and a release
+    can label them -- the EU Neighbourhood Barometer labels .i as "Inap.". Read with
+    the user-missing values kept, pyreadstat hands those keys back as the bare letter,
+    so the label map for an otherwise numeric variable ends up mixing ints with the
+    string 'i'. SPSS will not take that, and the letter is not a value any Tunisian
+    row holds anyway: the codes those labels describe survive, only the labels on
+    non-numeric keys go. Every drop is recorded in the catalog.
+    """
+    dropped: dict[str, list[str]] = {}
+    for name, labels in list(value_labels.items()):
+        if name not in df.columns or not pd.api.types.is_numeric_dtype(df[name]):
+            continue
+        bad = [k for k in labels if not isinstance(k, (int, float))]
+        if bad:
+            dropped[name] = [f"{k}: {labels[k]}" for k in bad]
+            value_labels[name] = {k: v for k, v in labels.items() if k not in bad}
+    return value_labels, dropped
+
+
 def drop_temporal_value_labels(
     df: pd.DataFrame, value_labels: dict
 ) -> tuple[dict, list[str]]:
@@ -395,8 +419,26 @@ def interview_dates(df: pd.DataFrame, spec: dict) -> pd.Series:
     """
     parts = spec.get("fieldwork_date_parts")
     if parts:
-        year, month, day = (df[c] for c in (parts["year"], parts["month"], parts["day"]))
-        frame = pd.DataFrame({"year": year, "month": month, "day": day}).dropna()
+        # The EU Neighbourhood Barometer records the day and the month of an
+        # interview and not the year, because a wave is one year by construction.
+        # An integer here is that year, supplied from the wave rather than the file;
+        # a string is a column name. The year is only ever safe as a constant when
+        # the wave's Tunisian fieldwork sits inside one calendar year, which is
+        # checked below rather than assumed.
+        def part(key):
+            value = parts[key]
+            return pd.Series(value, index=df.index) if isinstance(value, int) else df[value]
+
+        frame = pd.DataFrame(
+            {"year": part("year"), "month": part("month"), "day": part("day")}
+        ).dropna()
+        if isinstance(parts["year"], int) and not frame.empty:
+            months = sorted(frame["month"].astype(int).unique())
+            if 1 in months and 12 in months:
+                raise SystemExit(
+                    f"fieldwork spans a new year (months {months}) but the year is "
+                    f"given as the constant {parts['year']}; record the year per row"
+                )
         return pd.to_datetime(frame.astype(int), errors="coerce").dropna()
     var = spec.get("fieldwork_date_var")
     if not var or var not in df.columns:
@@ -408,7 +450,7 @@ def date_columns(spec: dict) -> list[str]:
     """The columns interview_dates needs, for a reader that loads only some of them."""
     parts = spec.get("fieldwork_date_parts")
     if parts:
-        return [parts["year"], parts["month"], parts["day"]]
+        return [parts[k] for k in ("year", "month", "day") if isinstance(parts[k], str)]
     var = spec.get("fieldwork_date_var")
     return [var] if var else []
 
@@ -464,6 +506,7 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
             value_labels[after] = value_labels.pop(before)
         print(f"[{spec['slug']}] renamed {before} -> {after} (not a valid SPSS/Stata name)")
     value_labels, temporal_labels_dropped = drop_temporal_value_labels(df, value_labels)
+    value_labels, extended_missing_labels_dropped = drop_extended_missing_labels(df, value_labels)
     for name in temporal_labels_dropped:
         print(f"[{spec['slug']}] dropped value labels on {name}: it is a date or time column")
     print(f"[{spec['slug']}] Tunisia: {len(df):,} of {n_pooled:,} rows, {df.shape[1]} variables")
@@ -542,6 +585,7 @@ def process_wave(spec: dict, series: dict, raw_dir: Path, out_dir: Path) -> dict
         "renamed_variables": renamed,
         "columns_retyped_from_values": retyped,
         "value_labels_dropped_on_temporal_columns": temporal_labels_dropped,
+        "value_labels_dropped_on_extended_missings": extended_missing_labels_dropped,
         "n_respondents": int(len(df)),
         "n_variables": int(df.shape[1]),
         "n_variables_with_data": n_with_data,
@@ -706,6 +750,19 @@ def render_wave_readme(e: dict, series: dict) -> str:
             f"Value labels on {listed} are not carried over. They are date or time columns,",
             "which neither SPSS nor Stata will attach value labels to, and the labels only",
             "marked a sentinel the reader has already parsed as a time of day.",
+        ]
+
+    if e.get("value_labels_dropped_on_extended_missings"):
+        dropped = e["value_labels_dropped_on_extended_missings"]
+        listed = ", ".join(f"`{v}`" for v in sorted(dropped))
+        example = sorted(dropped)[0]
+        lines += [
+            "",
+            f"{len(dropped)} variables carry a value label keyed on a Stata extended missing",
+            f"(`.a` to `.z`) rather than on a number — {listed if len(dropped) <= 6 else example + ' among them'}.",
+            "SPSS will not attach a label to a non-numeric key, so those labels are dropped;",
+            f"in {example} the dropped label was {dropped[example][0]!r}. No code and no answer",
+            "is lost, only the label on a missing marker no Tunisian row carries.",
         ]
 
     if e["renamed_variables"]:

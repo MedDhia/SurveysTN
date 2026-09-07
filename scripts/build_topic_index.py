@@ -35,6 +35,7 @@ SHORT = {
     "issp": "ISSP",
     "sahwa": "SAHWA",
     "arab-transformations": "ArabTrans",
+    "eu-neighbourhood-barometer": "ENB",
 }
 
 

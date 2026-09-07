@@ -7,10 +7,11 @@ why not.
 Checked September 2026 against the publishers' own catalogues. Where a claim rests
 on a source rather than on the data in this repository, the source is linked.
 
-## The eight series here are complete
+## Eight of the nine series here are complete
 
 Each series starts where it does because that is when Tunisia entered it, not
-because a wave is missing.
+because a wave is missing. The EU Neighbourhood Barometer is the one exception, and
+its missing wave is named below.
 
 | Series | Here | Why it starts there |
 |---|---|---|
@@ -22,6 +23,7 @@ because a wave is missing.
 | ISSP | Religion IV (2018) only | Tunisia has taken part in one ISSP module. GESIS releases it on its own as [ZA7629](https://search.gesis.org/research_data/ZA7629) rather than inside the ISSP 2018 international file, because of the quota sampling used and because background variables were missing from the first deposit. No other module carries a Tunisian sample. |
 | SAHWA | Youth Survey 2015 only | The [SAHWA project](https://www.cidob.org/en/projects/sahwa) ran one survey round, in 2015–16, and Tunisia is in it. The project ended in 2017 and no second round was fielded. |
 | Arab Transformations | 2014 only | A single-round EU FP7 study, fielded in late 2014 and completed in 2017. There was no second wave. The public file also has no Algerian rows, though the project covered Algeria. |
+| EU Neighbourhood Barometer | Waves 1, 3, 4, 5 and 6 (5 of 6) | Tunisia is in all six waves. **Wave 2 (ZA6289, fielded November–December 2012) is the one gap in this archive that is a missing wave rather than a missing programme.** Everything needed to close it is recorded: the study number, the Tunisian questionnaire at [dbk/58182](https://access.gesis.org/dbk/58182), and a wave spec that only needs the release file dropping into `data/raw/`. |
 
 **Open at the far end.** WVS Wave 8 is in the field for 2024–2026 and Tunisia's
 participation is not yet established; Arab Barometer, Afrobarometer, the Arab
@@ -39,7 +41,6 @@ everything here — and their microdata is obtainable.
 | Programme | Tunisia coverage | Access |
 |---|---|---|
 | **Pew Global Attitudes** | 2012, 2013 and 2014, ~1,000 face-to-face interviews each ([2014 methods](https://www.pewresearch.org/global/2014/10/15/tunisia-survey-methods-2/)) | Free Pew Research Center account. Their terms restrict redistribution, so a clone could not carry the files; the catalogue entry and a fetch script could. |
-| **EU Neighbourhood Barometer** | **all six waves, 2012–2014**, ~1,000 interviews per wave — confirmed, see below | GESIS archive, one study per wave: ZA6288, ZA6289, ZA6290, ZA6291, ZA6292, ZA6293. The data itself needs a GESIS account and a browser; the documentation does not. |
 
 ### Cover Tunisia but do not fit
 
@@ -83,25 +84,30 @@ a GESIS account.
 
 **Tunisia is in all six EU Neighbourhood Barometer waves.** This was an inference
 until it was checked, one wave at a time, against the Tunisian field questionnaire
-GESIS deposits for each. Every wave has one:
+GESIS deposits for each. Five of the six are now in the archive; the table is kept
+because it is the record of how coverage was established, and because Wave 2 still
+needs it:
 
-| Wave | Study | Fieldwork as the wave cover gives it | Tunisian instrument |
-|---|---|---|---|
-| 1 | ZA6288 | July–August 2012 | [dbk/58150](https://access.gesis.org/dbk/58150) |
-| 2 | ZA6289 | November–December 2012 | [dbk/58182](https://access.gesis.org/dbk/58182) |
-| 3 | ZA6290 | June–July 2013 | [dbk/59189](https://access.gesis.org/dbk/59189) |
-| 4 | ZA6291 | December 2013 – January 2014 | [dbk/59465](https://access.gesis.org/dbk/59465) |
-| 5 | ZA6292 | May–June 2014 | [dbk/59491](https://access.gesis.org/dbk/59491) |
-| 6 | ZA6293 | Autumn 2014 | [dbk/59517](https://access.gesis.org/dbk/59517) |
+| Wave | Study | Fieldwork, all countries | Tunisian fieldwork | In the archive |
+|---|---|---|---|---|
+| 1 | ZA6288 | July–August 2012 | 7–21 July 2012 | yes |
+| 2 | ZA6289 | November–December 2012 | — | **no** |
+| 3 | ZA6290 | June–July 2013 | 4–19 June 2013 | yes |
+| 4 | ZA6291 | December 2013 – January 2014 | 7–20 December 2013 | yes |
+| 5 | ZA6292 | May–June 2014 | 1 May – 29 June 2014 | yes |
+| 6 | ZA6293 | Autumn 2014 | 3 October – 24 November 2014 | yes |
 
-**Do not trust the season in the wave name.** "Spring 2012" was fielded in July and
-August; "Autumn 2013" ran into January 2014. The names are the programme's labels for
-its rounds, not statements about when interviewers were in the field, and the covers
-of the basic questionnaires are the thing to quote.
+The Tunisian columns are derived from `p1d` and `p1m` in the releases themselves. The
+all-country column comes from the cover of each wave's basic questionnaire.
+
+**Do not trust the season in the wave name.** "Spring 2012" was fielded in July;
+"Autumn 2013" ran into January 2014 across the programme, though Tunisia's share of it
+was December. The names are the programme's labels for its rounds, not statements
+about when interviewers were in the field.
 
 The Wave 6 cover's own date line is unreadable — the PDF uses a subset font whose
-digits do not map back to characters — so that row carries the wave label rather than
-a month range, which is the same rule the archive applies to its own surveys.
+digits do not map back to characters — which is why that row was once left at the wave
+label. The data settled it: **3 October to 24 November 2014**.
 
 **`access.gesis.org` answers a scripted request; the hosts that carry the data do
 not.** `dbk.gesis.org`, `search.gesis.org` and `www.gesis.org` all return a challenge

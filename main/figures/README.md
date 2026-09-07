@@ -8,9 +8,9 @@ Generated. Rebuild with the script named under each figure; do not edit the outp
 
 When Tunisian survey fieldwork actually happened, one row per survey, 2010 to 2025.
 
-The archive spans sixteen years. It does not cover them. Sixteen of the thirty
+The archive spans sixteen years. It does not cover them. Twenty-one of the thirty-five
 surveys record an interview date per respondent, and between them those account for
-**480 distinct days** — from 21,870 of the archive's 45,857 interviews. The rest is
+**575 distinct days** — from 26,947 of the archive's 50,934 interviews. The rest is
 inference from what the publisher printed on the release.
 
 The figure keeps three levels of knowledge apart, because drawing them alike would
@@ -18,33 +18,36 @@ claim a precision the archive does not have:
 
 | Drawn as | Means | Surveys |
 |---|---|---:|
-| solid bar | an interview date per respondent; the days are exact | 16 |
+| solid bar | an interview date per respondent; the days are exact | 21 |
 | hatched bar | only the month fieldwork opened and closed | 1 |
 | outlined bar | only the year the publisher gives for the wave | 13 |
 
 ### What it shows
 
-- **No two surveys were ever in the field on the same day.** Not once in 480 days.
+- **No two surveys were ever in the field on the same day.** Not once in 575 days,
+  across thirty-five surveys and nine programmes.
   But two came within **two days** of each other, and they are from different
   programmes: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer
   Wave III opened on 3 February. That pair is as close to a contemporaneous
   cross-programme reading of Tunisia as this archive gets. The next nearest are 70
-  days apart (two rounds of Arab Barometer Wave VI) and 93 days (Arab Barometer Wave
-  VII and Afrobarometer Round 9).
+  days apart (two rounds of Arab Barometer Wave VI). The next nearest cross-programme
+  pair is 42 days: the EU Neighbourhood Barometer's Wave 5 closed on 29 June 2014 and
+  the Arab Transformations Project opened on 10 August.
 - **The longest gap between two covered days is 893 days**, from 20 October 2015 to
   31 March 2018 — all of 2016 and 2017 have no dated interview in the archive at all.
   The Arab Opinion Index ran in both years, but its releases carry no dates, so the
-  gap is a gap in what is *known*, not necessarily in what was asked. The second
-  longest is 503 days, from March 2013 to August 2014; it used to be 750, and the
-  Arab Transformations Project's 41 days in August–October 2014 cut it.
+  gap is a gap in what is *known*, not necessarily in what was asked. It is now the
+  only gap over a year: the second longest is 354 days. The stretch from 2012 to 2015
+  used to hold two gaps of 750 and 503 days, and the EU Neighbourhood Barometer's five
+  waves and the Arab Transformations Project between them closed both.
 - **Fieldwork is short.** Windows run from 5 days (Arab Barometer Wave VI Part 1) to
   75 (Life in Transition Round IV, the only one to run past two months). A survey
   year is a fortnight of interviewing, not a year of it.
-- **2022 is the densest year in the archive**, with 86 dated days — Afrobarometer
-  Round 9 and the opening of Life in Transition Round IV. 2015 is next with 75, all
-  of them from Afrobarometer Round 6 and the SAHWA Youth Survey, whose 50 days are
-  the largest single block of fieldwork before 2020. Six years have no dated interview at all:
-  2010, 2011, 2012, 2016, 2017 and 2025.
+- **2014 is the densest year in the archive**, with 92 dated days across four surveys
+  from three programmes — two EU Neighbourhood Barometer waves, the Arab
+  Transformations Project and nothing else in the field between them. 2022 is next
+  with 86, then 2013 with 76 and 2015 with 75. Five years still have no dated
+  interview at all: 2010, 2011, 2016, 2017 and 2025.
 
 ### Reading it honestly
 

@@ -42,11 +42,12 @@ from extract_tunisia import ROOT
 FIGURES = ROOT / "main" / "figures"
 TOPIC = ROOT / "docs" / "topics" / "inequality.csv"
 
-# Eight series need eight hues that stay apart for a colourblind reader. The archive's
+# Nine series need nine hues that stay apart for a colourblind reader. The archive's
 # old blue-violet for the Arab Opinion Index did not: a violet that close to blue
 # closes the gap entirely under deuteranopia. Six of these are Okabe and Ito's set,
-# plus a saddle brown and a red-leaning violet, which clear it. Checked on every pair
-# rather than only on neighbours, since the coverage figure draws all eight at once.
+# plus a saddle brown, a red-leaning violet and a crimson, which clear it. Checked on
+# every pair rather than only on neighbours, since the coverage figure draws all nine
+# at once.
 SERIES_COLOUR = {
     "arab-barometer": "#0072b2",
     "world-values-survey": "#d55e00",
@@ -56,6 +57,7 @@ SERIES_COLOUR = {
     "issp": "#56b4e9",
     "sahwa": "#8b4513",
     "arab-transformations": "#7b1fa2",
+    "eu-neighbourhood-barometer": "#c2185b",
 }
 SHORT = {
     "arab-barometer": "AB",
@@ -66,6 +68,7 @@ SHORT = {
     "issp": "ISSP",
     "sahwa": "SAHWA",
     "arab-transformations": "ArabTrans",
+    "eu-neighbourhood-barometer": "ENB",
 }
 INK, INK_SOFT, INK_FAINT = "#0b0b0b", "#52514e", "#8a8984"
 SURFACE, GRID = "#fcfcfb", "#e4e3df"

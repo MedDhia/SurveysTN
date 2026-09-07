@@ -35,18 +35,20 @@ FIGURES = ROOT / "main" / "figures"
 # Series in the order they are drawn. A series missing from this list sorts to the end
 # rather than raising, so adding one to the archive does not break the figure.
 SERIES_ORDER = ["arab-barometer", "world-values-survey", "afrobarometer", "arab-opinion-index",
-                "ebrd-life-in-transition", "issp", "sahwa", "arab-transformations"]
+                "ebrd-life-in-transition", "issp", "sahwa", "arab-transformations",
+                "eu-neighbourhood-barometer"]
 
 
 def series_rank(name: str) -> int:
     return SERIES_ORDER.index(name) if name in SERIES_ORDER else len(SERIES_ORDER)
 
 
-# Eight series need eight hues that stay apart for a colourblind reader. The archive's
+# Nine series need nine hues that stay apart for a colourblind reader. The archive's
 # old blue-violet for the Arab Opinion Index did not: a violet that close to blue
 # closes the gap entirely under deuteranopia. Six of these are Okabe and Ito's set,
-# plus a saddle brown and a red-leaning violet, which clear it. Checked on every pair
-# rather than only on neighbours, since the coverage figure draws all eight at once.
+# plus a saddle brown, a red-leaning violet and a crimson, which clear it. Checked on
+# every pair rather than only on neighbours, since the coverage figure draws all nine
+# at once.
 SERIES_COLOUR = {
     "arab-barometer": "#0072b2",
     "world-values-survey": "#d55e00",
@@ -56,6 +58,7 @@ SERIES_COLOUR = {
     "issp": "#56b4e9",
     "sahwa": "#8b4513",
     "arab-transformations": "#7b1fa2",
+    "eu-neighbourhood-barometer": "#c2185b",
 }
 INK = "#0b0b0b"
 INK_SOFT = "#52514e"
