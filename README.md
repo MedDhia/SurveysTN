@@ -232,7 +232,10 @@ now the largest single block in the archive on that question, and **all six ask
 satisfaction with democracy outright**, for the country and for the region. The topic
 lexicon had to learn its wording; `catalog/topics.json` records the one judgement
 call, on whether its country-characteristics battery counts as an assessment of
-democracy.
+democracy. Those two batteries carry
+[`main/figures/democracy-close-range.png`](main/figures/democracy-close-range.png),
+which is the only figure in the repository drawn on a calendar rather than a year
+axis, because it is the only run in the archive that would repay one.
 
 Two things to know before using it. Its `p7` region code is **unlabelled in the
 release** — ten codes for Tunisia with no names — and its Stata files carry value
@@ -321,9 +324,11 @@ reader silently does to these files.
 The archive spans sixteen years and does not cover them. Twenty-two of the thirty-six
 surveys record an interview date per respondent; between them those cover **597
 distinct days**, and no two surveys were ever in the field on the same day — though
-Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
-in early 2013, which is as close to a contemporaneous cross-programme reading as the
-archive gets. The longest gap between two covered days is 893 days. The other fourteen releases
+the EU Neighbourhood Barometer's Wave 6 and the Arab Transformations Project came
+within one, interviewing on 3 and 4 October 2014, which is as close to a
+contemporaneous cross-programme reading as the archive gets. Those are also the only
+two fieldwork windows in the archive that overlap, and they overlap on exactly those
+two days. The longest gap between two covered days is 893 days. The other fourteen releases
 carry only a month or a year, and the figure draws them at that resolution rather
 than implying more. [`main/figures/README.md`](main/figures/README.md) reads it in
 full, and the day-level data sits beside it as CSV.
@@ -464,7 +469,23 @@ past where it started. Read the 2024 rise carefully — these are separate cross
 and in 2013 Tunisians ranked delivery far above procedural liberty as essential to
 democracy, so the word may not hold its meaning fixed across a change of regime.
 
-A fourth figure asks what the word is taken to mean, and it now carries both
+A fourth figure narrows the window instead of widening it. The EU Neighbourhood
+Barometer fielded six Tunisian waves between July 2012 and November 2014, one roughly
+every five months — the only run in the archive dense enough to sit either side of the
+2013 assassinations rather than straddle them. Satisfaction with the way democracy is
+developing does not drift, it swings: **58% in July 2012, 26% by December 2013, 47% by
+the October 2014 election**. An annual programme reads those same three years as a
+shallow dip. Underneath it the eleven characteristics the survey asks about split
+cleanly — gender equality **+27 points** across the two end waves, freedom of speech
++19, rights of vote +19, free elections +18, while lack of corruption (−2), independence
+of justice (−2), good governance (−1) and the rule of law (+1) do not move at all. The
+gains are the ones a constitution and an election can deliver: a public crediting the
+transition with rights and not with a state. The cross-checks disagree by more than the
+swing does — Arab Transformations, whose fieldwork the last Barometer wave opened
+into, reads 25% satisfied against its 47% — which is the standing warning about levels across
+instruments, and why the two programmes are drawn on separate markers rather than joined.
+
+A fifth figure asks what the word is taken to mean, and it now carries both
 instruments that ask, side by side and not pooled. The pair says something neither
 says alone. The EU Neighbourhood Barometer asked the same
 question in five waves between 2012 and 2014 — name up to three from eleven — and its
@@ -478,7 +499,7 @@ about what each survey asked as much as about what people think. The EU Neighbou
 Barometer panel also adds what the single Afrobarometer round could not: the ranking
 barely moves across two and a half years.
 
-A fifth figure on that page tests the claim that **Tunisians turned against democracy**,
+A sixth figure on that page tests the claim that **Tunisians turned against democracy**,
 four ways across three programmes and 17 surveys. It fails as stated: agreement that
 democracy remains better than the alternatives never falls below 81% in nine Arab Opinion
 Index rounds and stands at 89% in 2024, and between 2013 and 2019 Tunisians moved away
@@ -487,7 +508,7 @@ confidence that democracy is decisive, and disapproval of one-man rule — which
 84% in 2013 to 40% by early 2020, seventeen months before the coup, while disapproval of
 one-party rule barely moved.
 
-A sixth figure runs the same test on the claim that **Tunisians prefer strongman rule**,
+A seventh figure runs the same test on the claim that **Tunisians prefer strongman rule**,
 and it comes out the other way. Support for choosing leaders by election holds at 77%,
 but support for constraining the leader those elections produce has collapsed: parliament
 rather than the president making the laws falls from 78% to 33%, the president obeying
@@ -495,7 +516,7 @@ laws and courts from 71% to 44%. Elections kept, accountability abandoned — an
 three-item constraint index had already lost 19 of its eventual 28 points by 2018, three
 years before parliament was suspended.
 
-A seventh tests **"Tunisians want military rule"** and returns a third verdict: the
+An eighth tests **"Tunisians want military rule"** and returns a third verdict: the
 archive cannot settle it. Afrobarometer has approval of army rule overtaking disapproval
 by 2022 and reaching 56%; the World Values Survey has it a falling minority, 30% in 2019.
 Two readings a year apart differ by 17 points. What the usual explanation cannot do is

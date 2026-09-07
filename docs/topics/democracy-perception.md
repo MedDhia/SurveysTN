@@ -66,6 +66,14 @@ Two instruments side by side, not pooled. Afrobarometer 2013 offers delivery and
 
 [PNG](../../main/figures/democracy-meaning.png) · [SVG](../../main/figures/democracy-meaning.svg) · rebuilt with `python3 scripts/build_democracy_figures.py`
 
+### Twenty-eight months at close range
+
+[![Twenty-eight months at close range](../../main/figures/democracy-close-range.png)](../../main/figures/democracy-close-range.png)
+
+The EU Neighbourhood Barometer's six waves are the only run in the archive dense enough to sit either side of the 2013 assassinations rather than straddle them. Satisfaction with the way democracy is developing swings from 58% to 26% and back to 47% inside twenty-eight months; underneath it the procedural characteristics rise sharply and corruption, governance and the rule of law do not move at all.
+
+[PNG](../../main/figures/democracy-close-range.png) · [SVG](../../main/figures/democracy-close-range.svg) · rebuilt with `python3 scripts/build_democracy_figures.py`
+
 ## By facet
 
 | Facet | Variables | Surveys | Series |

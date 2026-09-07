@@ -26,13 +26,17 @@ claim a precision the archive does not have:
 
 - **No two surveys were ever in the field on the same day.** Not once in 597 days,
   across thirty-six surveys and nine programmes.
-  But two came within **two days** of each other, and they are from different
-  programmes: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer
-  Wave III opened on 3 February. That pair is as close to a contemporaneous
-  cross-programme reading of Tunisia as this archive gets. The next nearest are 70
-  days apart (two rounds of Arab Barometer Wave VI). The next nearest cross-programme
-  pair is 42 days: the EU Neighbourhood Barometer's Wave 5 closed on 29 June 2014 and
-  the Arab Transformations Project opened on 10 August.
+  But two came within **one day**, and they are from different programmes: the EU
+  Neighbourhood Barometer's Wave 6 interviewed on 3 October 2014 and the Arab
+  Transformations Project on 4 October. Those two windows are also the only pair in
+  the archive that overlap at all — 3 to 4 October 2014 — and even there no single day
+  carries interviews from both. That pair is as close to a contemporaneous
+  cross-programme reading of Tunisia as this archive gets. The next nearest is **two
+  days**: Afrobarometer Round 5 closed on 1 February 2013 and Arab Barometer Wave III
+  opened on 3 February. After that the cross-programme gaps run 6, 11, 17 and 42 days,
+  the first three of them the same Barometer–Transformations interleaving seen from
+  its other sides. The nearest pair from *within* one programme is 70 days apart: two
+  rounds of Arab Barometer Wave VI.
 - **The longest gap between two covered days is 893 days**, from 20 October 2015 to
   31 March 2018 — all of 2016 and 2017 have no dated interview in the archive at all.
   The Arab Opinion Index ran in both years, but its releases carry no dates, so the
@@ -43,9 +47,9 @@ claim a precision the archive does not have:
 - **Fieldwork is short.** Windows run from 5 days (Arab Barometer Wave VI Part 1) to
   75 (Life in Transition Round IV, the only one to run past two months). A survey
   year is a fortnight of interviewing, not a year of it.
-- **2014 is the densest year in the archive**, with 92 dated days across four surveys
-  from three programmes — two EU Neighbourhood Barometer waves, the Arab
-  Transformations Project and nothing else in the field between them. 2022 is next
+- **2014 is the densest year in the archive**, with 92 dated days across three surveys
+  from two programmes — the EU Neighbourhood Barometer's Waves 5 and 6 and the Arab
+  Transformations Project, and nothing else in the field between them. 2022 is next
   with 86, then 2013 with 76 and 2015 with 75. 2012 now has 36, all of them the EU
   Neighbourhood Barometer's first two waves; before those the archive had no dated
   interview at all before 2013. Five years still have none: 2010, 2011, 2016, 2017
@@ -340,7 +344,7 @@ El Kef, Kairouan, Siliana, Kasserine and Sidi Bouzid. But the split is not clean
 interior governorates, Medenine and Tataouine, sit among the five easiest. A governorate
 enters with at least 150 effective respondents.
 
-## Perception of democracy — seven figures
+## Perception of democracy — eight figures
 
 `python3 scripts/build_democracy_figures.py`
 
@@ -427,6 +431,40 @@ not. That is a fact about what each survey asked as much as about what people th
 
 What the right-hand panel adds beyond that is time. The ranking barely moves across
 two and a half years, which the single Afrobarometer round could not show either way.
+
+### `democracy-close-range.png` / `.svg`
+
+The one stretch of Tunisian opinion the archive can watch at close range. The EU
+Neighbourhood Barometer fielded six Tunisian waves across **870 days**, roughly one
+every five months, and it is the only run dense enough to sit either side of the 2013
+assassinations rather than straddle them. Weighted on `w1`, the demographic country
+weight; the spontaneous "don't know" is dropped; every reading is drawn across the
+window it was collected in rather than at a single point.
+
+Left: satisfaction with the way democracy is developing in the country.
+**It does not drift, it swings** — 58% in July 2012, **26% by December 2013** at the
+depth of the crisis, 47% by October 2014, the month of the parliamentary election. An
+annual programme would have read the same three years as a shallow dip. Vertical lines
+mark Belaïd's assassination (6 February 2013), Brahmi's (25 July 2013), the adoption of
+the constitution (26 January 2014) and the parliamentary election (26 October 2014).
+
+Right: the eleven characteristics the same survey asks whether Tunisia has, first wave
+that asked them (November–December 2012) against last (October–November 2014).
+**The gains are procedural and the failures are not.** Five rose by ten points or
+more — gender equality +27, freedom of speech +19, rights of vote +19, free elections
++18, protection of minorities +10 — while four barely moved: lack of corruption −2,
+independence of justice −2, good governance −1, rule of law +1. A public crediting the
+transition with rights and not with a state.
+
+**The cross-checks disagree, and that is the point of drawing them.** Arab
+Transformations was in the field from 10 August to 4 October 2014 and reads 25%
+satisfied — **22 points below** the Barometer wave that opened 54 days later and
+while it was still in the field, the one pair of overlapping windows in the archive —
+on a four-point scale running the other way and with no weight in the file. Afrobarometer's
+item offers "the country is not a democracy" as a separate answer, which narrows its
+base and lifts its share; its April–May 2015 reading is drawn as the nearest thing the
+archive has to a sequel, five months past the end of the Barometer run. Compare
+movement within a programme, not levels across them.
 
 ### `democracy-fear-claim.png` / `.svg`
 

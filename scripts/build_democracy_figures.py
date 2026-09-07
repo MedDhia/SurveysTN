@@ -26,6 +26,7 @@ import re
 import matplotlib
 matplotlib.use("Agg")
 
+import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -1085,6 +1086,259 @@ def military_figure() -> None:
           f"army trust {min(v for _, v in army_trust):.0%}-{max(v for _, v in army_trust):.0%}")
 
 
+# The 2012-2014 window is the one stretch of Tunisian opinion the archive can watch at
+# close range. The EU Neighbourhood Barometer fielded six waves in twenty-eight months,
+# and two of its items carry the period: ad4a, satisfaction with the way democracy is
+# developing in the country, coded 1 very satisfied to 4 not at all satisfied, so
+# satisfaction is codes 1 and 2; and ad5_*, whether the country has each of eleven
+# characteristics, coded 1 yes definitely to 4 no definitely not, so "yes" is 1 and 2.
+# The spontaneous "don't know" is code 5 in both and is dropped rather than counted.
+# Every wave carries w1, the demographic country weight.
+WORDS = {0: "none", 1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+         7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven"}
+
+CRISIS_EVENTS = [
+    ("2013-02-06", "Belaïd assassinated"),
+    ("2013-07-25", "Brahmi assassinated"),
+    ("2014-01-26", "Constitution adopted"),
+    ("2014-10-26", "Parliamentary election"),
+]
+
+# The other satisfaction readings that fall in or beside the window, each on its own
+# instrument. Afrobarometer runs 1 not at all satisfied to 4 very satisfied, the reverse
+# of the Barometer's direction, and offers "the country is not a democracy" as a separate
+# answer that is not a point on the scale, so its base is narrower. Arab Transformations
+# runs 1 definitely dissatisfied to 4 definitely satisfied and carries no weight at all.
+CRISIS_CHECKS = [
+    ("afro-w05", SATISFACTION, [3, 4], [1, 2, 3, 4], "Afrobarometer"),
+    ("afro-w06", SATISFACTION, [3, 4], [1, 2, 3, 4], "Afrobarometer"),
+    ("arabtrans-w2014", "V26B", [3, 4], [1, 2, 3, 4], "Arab Transformations"),
+]
+
+
+def window_of(survey: dict) -> tuple[pd.Timestamp, pd.Timestamp]:
+    """The survey's Tunisian fieldwork window as a pair of dates."""
+    found = re.findall(r"\d{4}-\d{2}-\d{2}", survey.get("fieldwork_tunisia") or "")
+    if not found:
+        raise SystemExit(f"{survey['key']}: no dated fieldwork window")
+    return pd.Timestamp(found[0]), pd.Timestamp(found[-1])
+
+
+def dated_share(key: str, pattern, wanted: list[int], universe: list[int]) -> tuple:
+    """One weighted share, with its fieldwork window and 95% half-width."""
+    survey = catalog()[key]
+    path = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
+    data, meta = pyreadstat.read_sav(str(path), user_missing=True)
+    upper = {c.upper(): c for c in data.columns}
+    if isinstance(pattern, str):
+        column = upper.get(pattern.upper())
+    else:
+        labels = {c: str(meta.column_names_to_labels.get(c) or "") for c in data.columns}
+        column = next((c for c in data.columns if pattern.search(labels[c])), None)
+    if column is None:
+        raise SystemExit(f"{key}: no column matching {pattern}")
+    weight = data["w1"].astype(float) if "w1" in data.columns else None
+    if weight is None:
+        name = next((upper[w.upper()] for w in WEIGHTS if w.upper() in upper), None)
+        weight = data[name].astype(float) if name else pd.Series(1.0, index=data.index)
+    values = pd.to_numeric(data[column], errors="coerce")
+    keep = values.isin(universe)
+    frame = pd.DataFrame({"value": values[keep].isin(wanted).astype(float),
+                          "weight": weight[keep]})
+    mean, half, effective = share(frame, "value")
+    start, end = window_of(survey)
+    return start, end, float(mean), float(half), int(keep.sum()), effective
+
+
+def enb_satisfaction() -> list[tuple]:
+    """Satisfaction with the way democracy is developing, one row per wave."""
+    rows = [dated_share(key, "ad4a", [1, 2], [1, 2, 3, 4])
+            for key, survey in sorted(catalog().items())
+            if survey["series"] == "eu-neighbourhood-barometer"]
+    return sorted(rows)
+
+
+def enb_characteristics() -> list[tuple[str, float, float]]:
+    """Each characteristic's "yes" share in the first and last wave that asked it.
+
+    Wave 1 does not carry the battery, so the pair runs from the November-December 2012
+    wave to the October-November 2014 one: two years, on either side of the constitution.
+    """
+    per_wave: dict[str, dict[str, float]] = {}
+    for key, survey in sorted(catalog().items()):
+        if survey["series"] != "eu-neighbourhood-barometer":
+            continue
+        path = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
+        data, meta = pyreadstat.read_sav(str(path), user_missing=True)
+        items = [c for c in data.columns if re.fullmatch(r"ad5_\d+", c)]
+        if not items:
+            continue
+        weight = data["w1"].astype(float)
+        for column in items:
+            label = str(meta.column_names_to_labels.get(column, column)).split(":")[-1].strip()
+            values = pd.to_numeric(data[column], errors="coerce")
+            keep = values.isin([1, 2, 3, 4])
+            if not keep.any():
+                continue
+            per_wave.setdefault(label, {})[key] = float(
+                (values[keep].isin([1, 2]) * weight[keep]).sum() / weight[keep].sum())
+    waves = sorted({k for item in per_wave.values() for k in item})
+    first, last = waves[0], waves[-1]
+    rows = [(label, item[first], item[last]) for label, item in per_wave.items()
+            if first in item and last in item]
+    rows.sort(key=lambda r: r[2] - r[1])
+    return rows
+
+
+def crisis_figure() -> None:
+    """The one stretch the archive can watch at close range, and what it shows."""
+    waves = enb_satisfaction()
+    checks = [(name, key) + dated_share(key, pattern, wanted, universe)
+              for key, pattern, wanted, universe, name in CRISIS_CHECKS]
+    rows = enb_characteristics()
+
+    fig, axes = plt.subplots(1, 2, figsize=(15.0, 6.9), facecolor=SURFACE,
+                             gridspec_kw={"width_ratios": (1.16, 1.0)})
+
+    ax = axes[0]
+    ax.set_facecolor(SURFACE)
+    for date, name in CRISIS_EVENTS:
+        at = mdates.date2num(pd.Timestamp(date))
+        ax.axvline(at, color=INK_FAINT, lw=1.0, ls=(0, (3, 3)), zorder=1)
+        ax.annotate(name, (at, 0.735), rotation=90, ha="right", va="top", fontsize=7.2,
+                    color=INK_SOFT, zorder=6)
+
+    middles, values = [], []
+    for start, end, mean, half, _, _ in waves:
+        middle = mdates.date2num(start + (end - start) / 2)
+        ax.plot([mdates.date2num(start), mdates.date2num(end)], [mean, mean],
+                color=PRIMARY, lw=2.6, solid_capstyle="butt", alpha=0.5, zorder=3)
+        middles.append(middle)
+        values.append(mean)
+    ax.plot(middles, values, color=PRIMARY, lw=2.0, zorder=4,
+            label="EU Neighbourhood Barometer · six waves")
+    ax.plot(middles, values, "o", color=PRIMARY, ms=6.0, mec=SURFACE, mew=1.3, zorder=5)
+    for i, (middle, value) in enumerate(zip(middles, values)):
+        # A label sitting above a trough lands inside the V; one on the last wave lands
+        # on the election line, which is four days into that wave's window.
+        trough = 0 < i < len(values) - 1 and value < values[i - 1] and value < values[i + 1]
+        last = i == len(values) - 1
+        ax.annotate(f"{value:.0%}", (middle, value), textcoords="offset points",
+                    xytext=(7 if last else 0, -15 if trough else 10),
+                    ha="left" if last else "center", fontsize=7.8, color=PRIMARY,
+                    fontweight="bold", zorder=6)
+
+    seen = set()
+    for name, key, start, end, mean, half, _, _ in checks:
+        colour = SECOND if name == "Afrobarometer" else THIRD
+        ax.plot([mdates.date2num(start), mdates.date2num(end)], [mean, mean],
+                color=colour, lw=2.6, solid_capstyle="butt", alpha=0.5, zorder=3)
+        middle = mdates.date2num(start + (end - start) / 2)
+        ax.plot([middle], [mean], "D", color=colour, ms=6.4, mec=SURFACE, mew=1.3, zorder=5,
+                label=None if name in seen else f"{name} · the same question, another instrument")
+        seen.add(name)
+        ax.annotate(f"{mean:.0%}", (middle, mean), textcoords="offset points",
+                    xytext=(0, -15), ha="center", fontsize=7.8, color=colour,
+                    fontweight="bold", zorder=6)
+
+    ax.set_xlim(mdates.date2num(pd.Timestamp("2012-04-01")),
+                mdates.date2num(pd.Timestamp("2015-08-01")))
+    ax.xaxis.set_major_locator(mdates.MonthLocator(bymonth=(1, 7)))
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b\n%Y"))
+    ax.set_ylim(0.16, 0.75)
+    ax.set_yticks([0.2, 0.3, 0.4, 0.5, 0.6, 0.7])
+    ax.set_yticklabels(["20%", "30%", "40%", "50%", "60%", "70%"], fontsize=7.8)
+    ax.tick_params(labelsize=7.8)
+    ax.grid(color=GRID, lw=0.8, zorder=0)
+    frame_style(ax)
+    ax.set_ylabel("Satisfied with the way democracy is developing", fontsize=8.6,
+                  color=INK_SOFT, labelpad=8)
+    ax.legend(loc="lower left", bbox_to_anchor=(0, 1.004), ncol=1, frameon=False,
+              fontsize=8.0, labelcolor=INK_SOFT, handlelength=1.6)
+    ax.set_title("Six waves in twenty-eight months · bars span each survey's fieldwork window",
+                 fontsize=9.4, color=INK, loc="left", pad=46)
+
+    ax = axes[1]
+    ax.set_facecolor(SURFACE)
+    ys = [i + 1 for i in range(len(rows))]
+    for y, (_, early, late) in zip(ys, rows):
+        ax.plot([early, late], [y, y], color=INK_FAINT, lw=1.6, zorder=2)
+        ax.scatter([early], [y], s=70, color=INK_FAINT, edgecolor=SURFACE, linewidth=1.2, zorder=3)
+        ax.scatter([late], [y], s=82, color=PRIMARY, edgecolor=SURFACE, linewidth=1.2, zorder=4)
+        ax.annotate(f"{(late - early) * 100:+.0f}", (max(early, late), y),
+                    textcoords="offset points", xytext=(11, -3), ha="left", fontsize=7.6,
+                    color=INK if late > early else INK_SOFT,
+                    fontweight="bold" if round((late - early) * 100) >= 10 else "normal")
+    ax.set_yticks(ys)
+    ax.set_yticklabels([label[0].upper() + label[1:] for label, _, _ in rows], fontsize=8.4,
+                       color=INK)
+    ax.set_xlim(0.10, 1.06)
+    ax.set_xticks([0.2, 0.4, 0.6, 0.8, 1.0])
+    ax.set_xticklabels(["20%", "40%", "60%", "80%", "100%"], fontsize=7.8)
+    ax.set_ylim(0.4, len(rows) + 0.7)
+    ax.tick_params(labelsize=7.8)
+    ax.grid(axis="x", color=GRID, lw=0.8, zorder=0)
+    frame_style(ax)
+    handles = [plt.Line2D([], [], marker="o", ls="", color=c, label=t, markersize=7)
+               for c, t in ((INK_FAINT, "November–December 2012"), (PRIMARY, "October–November 2014"))]
+    ax.legend(handles=handles, loc="lower left", bbox_to_anchor=(0, 1.004), ncol=2,
+              frameon=False, fontsize=8.0, labelcolor=INK_SOFT)
+    ax.set_title("'Does Tunisia have…?' · share answering yes, and the two-year change",
+                 fontsize=9.4, color=INK, loc="left", pad=46)
+
+    high = max(waves, key=lambda r: r[2])
+    low = min(waves, key=lambda r: r[2])
+    last = waves[-1]
+    # Thresholds are applied to the change as the panel prints it, so that an item
+    # labelled +10 is not then described in the text as having risen by less.
+    change = {r[0]: round((r[2] - r[1]) * 100) for r in rows}
+    risen = [r for r in rows if change[r[0]] >= 10]
+    flat = [r for r in rows if abs(change[r[0]]) < 5]
+    arabtrans = next(c for c in checks if c[0] == "Arab Transformations")
+    nearest = min(waves, key=lambda r: abs((r[0] - arabtrans[2]).days))
+    span = (waves[-1][1] - waves[0][0]).days
+    top = header(fig, "Twenty-eight months at close range: Tunisia through the 2013 crisis", [
+        f"The EU Neighbourhood Barometer fielded six Tunisian waves across {span} days, one roughly "
+        "every five months, and it is the only run in the archive dense enough to sit either side of "
+        "the 2013 assassinations rather than straddle them. Weighted shares of substantive answers; "
+        "the spontaneous 'don't know' is dropped, and each reading is drawn across the window it was "
+        "collected in rather than at a single point.",
+        f"Satisfaction with the way democracy is developing does not drift, it swings: "
+        f"{high[2]:.0%} in {high[0]:%B %Y}, {low[2]:.0%} by {low[0]:%B %Y} at the depth of the "
+        f"crisis, and {last[2]:.0%} by {last[0]:%B %Y}, the month of the parliamentary election. A "
+        "yearly survey would have caught none of that shape; the same three years read as a shallow "
+        "dip in any of the annual programmes.",
+        f"The right panel says what did and did not move underneath it. Of the eleven characteristics "
+        f"the survey asks about, {WORDS[len(risen)]} rose by ten points or more between the two end waves — "
+        + ", ".join(r[0] for r in reversed(risen))
+        + f" — while {WORDS[len(flat)]} moved less than five: "
+        + ", ".join(r[0] for r in flat)
+        + ". The gains are procedural, the things a constitution and an election can deliver; what "
+        "did not move is corruption, governance and the rule of law. Read together the two panels "
+        "describe a public crediting the transition with rights and not with a state.",
+        f"The levels are instrument-specific and the cross-checks prove it rather than confirm it. "
+        f"Arab Transformations was in the field from {arabtrans[2].day} {arabtrans[2]:%B} to "
+        f"{arabtrans[3].day} {arabtrans[3]:%B %Y} "
+        f"and reads {arabtrans[4]:.0%} satisfied, {abs(arabtrans[4] - nearest[2]) * 100:.0f} points "
+        f"below the Barometer wave that opened {abs((nearest[0] - arabtrans[2]).days)} days later and "
+        "while it was still in the field — the one pair of overlapping windows in the archive — on "
+        "a four-point scale running the other way and with no weight in the file; Afrobarometer's "
+        "item offers 'the country is not a democracy' as a separate answer, which narrows its base "
+        "and lifts its share; its 2015 reading is drawn here as the nearest thing the archive has "
+        "to a sequel, five months past the end of the Barometer run. Compare movement within a "
+        "programme, not levels across them.",
+    ])
+    fig.subplots_adjust(left=0.052, right=0.972, bottom=0.075,
+                        top=top - 0.70 / fig.get_figheight(), wspace=0.30)
+    for suffix in ("png", "svg"):
+        fig.savefig(FIGURES / f"democracy-close-range.{suffix}", dpi=200, facecolor=SURFACE,
+                    bbox_inches="tight")
+    plt.close(fig)
+    print(f"close-range: satisfaction {high[2]:.0%} ({high[0]:%b %Y}) -> {low[2]:.0%} "
+          f"({low[0]:%b %Y}) -> {last[2]:.0%} ({last[0]:%b %Y}); "
+          f"{len(risen)} of {len(rows)} characteristics up 10pts or more")
+
+
 def main() -> None:
     FIGURES.mkdir(parents=True, exist_ok=True)
     afro = afrobarometer()
@@ -1092,6 +1346,7 @@ def main() -> None:
     ratings_figure(afro)
     who_figure(afro)
     meaning_figure()
+    crisis_figure()
     fear_figure()
     strongman_figure()
     military_figure()
