@@ -459,12 +459,18 @@ past where it started. Read the 2024 rise carefully — these are separate cross
 and in 2013 Tunisians ranked delivery far above procedural liberty as essential to
 democracy, so the word may not hold its meaning fixed across a change of regime.
 
-The largest block on that last point is now the EU Neighbourhood Barometer's, which
-asked fourteen possible meanings of democracy in five waves between 2012 and 2014 —
-free elections, gender equality, minority rights, an independent judiciary, the rule
-of law. It accepts or rejects each one, where Arab Barometer and the Arab Opinion
-Index ask for a pick-one or pick-two, so the shares are not comparable across the two
-designs without saying which is which.
+That figure now carries both instruments, side by side and not pooled, and the pair
+says something neither says alone. The EU Neighbourhood Barometer asked the same
+question in five waves between 2012 and 2014 — name up to three from eleven — and its
+list **has no delivery option on it at all**: no necessities, no jobs, no public
+services. Without one, free expression goes from near the bottom of Afrobarometer's
+ranking (15%) to the runaway top of this one (60%, never below 56% in any wave).
+
+So the 2013 finding is real but conditional. Tunisians put delivery first when
+delivery is on the menu and name free expression first when it is not, which is a fact
+about what each survey asked as much as about what people think. The EU Neighbourhood
+Barometer panel also adds what the single Afrobarometer round could not: the ranking
+barely moves across two and a half years.
 
 A fifth figure on that page tests the claim that **Tunisians turned against democracy**,
 four ways across three programmes and 17 surveys. It fails as stated: agreement that

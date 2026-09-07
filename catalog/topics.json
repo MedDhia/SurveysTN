@@ -413,7 +413,7 @@
         {
           "file": "democracy-meaning",
           "title": "What the word is taken to mean",
-          "caption": "What Tunisians picked as most essential to democracy in 2013: delivery ranks far above procedural liberty, which bears on how a later rating should be read.",
+          "caption": "Two instruments side by side, not pooled. Afrobarometer 2013 offers delivery and procedure together and delivery wins; the EU Neighbourhood Barometer's list has no delivery option and free expression is the runaway answer in all five of its waves. What the word means depends partly on what the survey put on the menu.",
           "script": "scripts/build_democracy_figures.py"
         }
       ],

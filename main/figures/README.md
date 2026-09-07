@@ -89,13 +89,19 @@ was asked in — drawn from the concordance, so a row is a question rather than 
 variable name. 16 surveys, 2012 to 2024. The count rose from 22 when the
 lived-poverty and spatial facets were added to the lexicon.
 
-Every row is one colour. No inequality question in this archive is asked by two
-different programmes, so a run over time can be built inside Arab Barometer, or
-inside Afrobarometer, or inside the Arab Opinion Index, and never between them.
-37 of the 40 recur with an identical response scale; the three that do not are
-marked `differs` and greyed.
+Every row is one colour, and that is the finding rather than a styling choice: no
+question drawn here is asked by two different programmes, so a run over time can be
+built inside Arab Barometer, or inside Afrobarometer, or inside the Arab Opinion
+Index, and never between them. 37 of the 40 recur with an identical response scale;
+the three that do not are marked `differs` and greyed.
 
-Thirteen of the 22 are one Arab Opinion Index battery, opening with the same words
+**One inequality question in the archive does cross programmes**, and it is not on
+this figure because it is asked in only two surveys rather than more than two:
+"women should have equal inheritance rights", in Arab Barometer Wave V and the Arab
+Transformations Project. It is no help. The two code the scale in opposite
+directions, so pooling them on the code reverses the answer.
+
+Thirteen of the 40 are one Arab Opinion Index battery, opening with the same words
 and closing with the same words. Truncating those labels at the front prints thirteen
 identical rows; deleting the shared part instead leaves rows reading "religion",
 "wealth", "gender/sex" — categories, with nothing left saying what was asked about
@@ -243,15 +249,19 @@ panels are drawn rather than dropped: a null that large is a result.
 
 ### `inequality-archive-map.png` / `.svg`
 
-Every one of the 300 inequality variables by facet and survey, in fieldwork order — the
+Every one of the 434 inequality variables by facet and survey, in fieldwork order — the
 only inequality figure covering the whole archive rather than the questions that recur.
-A variable matching two facets is counted in both, so the cells sum to more than 300, and
-blank means nothing rather than a small number.
+A variable matching two facets is counted in both, so the cells sum to more than 434, and
+blank means nothing rather than a small number. The figure's own standfirst carries the
+live counts; these are what they were when this was written.
 
 Coverage is uneven enough that the facet decides which programme you can use: the Arab
 Opinion Index carries equality-as-a-principle and gender, Afrobarometer and Arab Barometer
-Wave VIII carry discrimination, and wasta appears only in Arab Barometer. Four of the 26
-surveys carry nothing on inequality at all. Counts are on a log scale, so a dark cell is
+Wave VIII carry discrimination, and wasta appears only in Arab Barometer. Ten of the 36
+surveys carry nothing on inequality at all: all six EU Neighbourhood Barometer waves,
+which ask about poverty and unemployment but not about a gap between people; the ISSP
+religion module; the 2011 Arab Opinion Index; and two of the three Arab Barometer Wave
+VI telephone rounds, which were short pandemic instruments. Counts are on a log scale, so a dark cell is
 many times a pale one rather than a few more.
 
 ## Economic and spatial inequality — four figures
@@ -391,18 +401,32 @@ regions within a round should not be read as a ranking.
 
 ### `democracy-meaning.png` / `.svg`
 
-What Tunisians picked as most essential to democracy, Afrobarometer Round 5, 2013. Four
-separate questions each offered four candidates; shares are within a question, so options
-from different questions are not rivals and the code in the right margin says which
-question each came from.
+Two programmes asking what democracy means, side by side and **deliberately not
+pooled** — a forced choice among four and a name-up-to-three from eleven do not make
+comparable shares.
 
-**Delivery ranks far above procedure.** Basic necessities 62%, clean politics 61% and
-jobs for all 55%, against free expression 15%, a critical press 13%, parties competing
-fairly 12% and the right to demonstrate 4%. If that is what the word means to a
-respondent, a government judged to deliver can be called democratic by someone who would
-not call it liberal — which bears on the 2024 reading above without establishing it.
-This was asked in 2013 and not since, so the connection is a hypothesis the archive
-cannot test.
+Left: Afrobarometer Round 5, 2013. Four separate questions each offered four
+candidates; shares are within a question, so options from different questions are not
+rivals and the code in the right margin says which question each came from.
+**Delivery ranks far above procedure** — basic necessities 62%, clean politics 61%,
+jobs 55%, against free expression 15%, a critical press 13%, parties competing 12% and
+the right to demonstrate 4%.
+
+Right: the EU Neighbourhood Barometer, five waves 2012–2014, about 1,000 respondents
+each. Respondents name up to three from a fixed list, so the shares sum past 100. The
+bar is the range across the five waves, not a confidence interval. **Freedom of speech
+is the runaway answer** at 60% on average and never below 56%, then free elections at
+41%.
+
+**The menu is most of the disagreement.** The EU Neighbourhood Barometer's list has no
+delivery option on it at all — no necessities, no jobs, no public services — and
+without one, free expression goes from near the bottom of the Afrobarometer ranking to
+the top of this one. So the 2013 finding is real but conditional: Tunisians put
+delivery first when delivery is offered, and name free expression first when it is
+not. That is a fact about what each survey asked as much as about what people think.
+
+What the right-hand panel adds beyond that is time. The ranking barely moves across
+two and a half years, which the single Afrobarometer round could not show either way.
 
 ### `democracy-fear-claim.png` / `.svg`
 

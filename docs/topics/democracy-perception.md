@@ -62,7 +62,7 @@ The share calling Tunisia a democracy, by region and by urban or rural residence
 
 [![What the word is taken to mean](../../main/figures/democracy-meaning.png)](../../main/figures/democracy-meaning.png)
 
-What Tunisians picked as most essential to democracy in 2013: delivery ranks far above procedural liberty, which bears on how a later rating should be read.
+Two instruments side by side, not pooled. Afrobarometer 2013 offers delivery and procedure together and delivery wins; the EU Neighbourhood Barometer's list has no delivery option and free expression is the runaway answer in all five of its waves. What the word means depends partly on what the survey put on the menu.
 
 [PNG](../../main/figures/democracy-meaning.png) · [SVG](../../main/figures/democracy-meaning.svg) · rebuilt with `python3 scripts/build_democracy_figures.py`
 

@@ -370,6 +370,44 @@ def who_figure(afro: pd.DataFrame) -> None:
     print(f"who: {national[2020]:.0%} -> {national[2022]:.0%} -> {national[2024]:.0%}")
 
 
+def enb_meaning() -> list[tuple[str, float, float, float, int]]:
+    """The EU Neighbourhood Barometer's own reading of what democracy means.
+
+    A different instrument from Afrobarometer's, and the difference is the point: this
+    one names up to three things from a fixed list, so its shares sum past 100 and are
+    not rivals in the way a forced choice makes them. It is also the only version of
+    this question the archive can trace over time. Returns one row per item with the
+    mean share across waves and the range, so a reader can see level and stability at
+    once.
+    """
+    per_item: dict[str, list[float]] = {}
+    for key, survey in sorted(catalog().items()):
+        if survey["series"] != "eu-neighbourhood-barometer":
+            continue
+        path = ROOT / survey["path"] / f"{survey['series']}-{survey['tag']}-tunisia.sav"
+        data, meta = pyreadstat.read_sav(str(path), user_missing=True)
+        items = [c for c in data.columns if re.fullmatch(r"ad6_\d+", c)]
+        if not items:
+            continue
+        weight = data["w1"].astype(float) if "w1" in data.columns else pd.Series(1.0, index=data.index)
+        for column in items:
+            label = str(meta.column_names_to_labels.get(column, column)).split(":")[-1].strip()
+            # "other", "none" and "don't know" are not things democracy means.
+            if re.search(r"^(other|none|dont know|don.t know)$", label, re.I):
+                continue
+            values = pd.to_numeric(data[column], errors="coerce")
+            keep = values.notna()
+            if not keep.any():
+                continue
+            per_item.setdefault(label, []).append(
+                float((values[keep] * weight[keep]).sum() / weight[keep].sum())
+            )
+    rows = [(label, float(np.mean(v)), float(min(v)), float(max(v)), len(v))
+            for label, v in per_item.items()]
+    rows.sort(key=lambda r: r[1], reverse=True)
+    return rows
+
+
 def meaning_figure() -> None:
     """What Tunisians pick as the essential characteristic of democracy."""
     survey = catalog()["afro-w05"]
@@ -393,8 +431,17 @@ def meaning_figure() -> None:
             if effective:
                 rows.append((str(label), mean, half, variable))
     rows.sort(key=lambda r: r[1], reverse=True)
+    enb = enb_meaning()
 
-    fig, ax = plt.subplots(figsize=(12.5, 0.44 * len(rows) + 3.6), facecolor=SURFACE)
+    # Two instruments, side by side and never pooled: a forced choice among four and a
+    # name-up-to-three from eleven do not produce comparable shares. The panels are
+    # sized to their own row counts and share nothing but the x scale.
+    height = 0.44 * max(len(rows), len(enb)) + 4.4
+    fig, (ax, bx) = plt.subplots(
+        1, 2, figsize=(17.4, height), facecolor=SURFACE,
+        gridspec_kw={"width_ratios": (1.0, 0.92), "wspace": 0.52},
+    )
+    bx.set_facecolor(SURFACE)
     ax.set_facecolor(SURFACE)
     ys = [len(rows) - i for i in range(len(rows))]
     for y, row in zip(ys, rows):
@@ -414,29 +461,72 @@ def meaning_figure() -> None:
     for y, row in zip(ys, rows):
         ax.text(1.012, y, row[3], transform=ax.get_yaxis_transform(), va="center",
                 fontsize=7.8, color=INK_FAINT)
+    ax.set_title("Afrobarometer 2013 · pick the one most essential", fontsize=10.4,
+                 color=INK, loc="left", pad=10, fontweight="bold")
 
+    eys = [len(enb) - i for i in range(len(enb))]
+    colour = SECOND  # the second programme in a figure, as elsewhere in this script
+    for y, (label, mean, lo, hi, n) in zip(eys, enb):
+        # The bar is the range across waves, not a confidence interval: it says how
+        # much the answer moved between 2012 and 2014, which is what this instrument
+        # can show and the Afrobarometer one cannot.
+        bx.plot([lo, hi], [y, y], color=colour, lw=2.4, alpha=0.42,
+                solid_capstyle="round", zorder=2)
+        bx.scatter([mean], [y], s=60, color=colour, edgecolor=SURFACE, linewidth=1.2, zorder=3)
+        bx.annotate(f"{mean:.0%}", (mean, y), textcoords="offset points", xytext=(0, 9),
+                    ha="center", fontsize=7.8, color=INK, fontweight="bold")
+    bx.set_yticks(eys)
+    bx.set_yticklabels([clip(r[0].capitalize(), 44) for r in enb], fontsize=8.6, color=INK)
+    bx.set_xlim(0, 0.75)
+    bx.set_xticks(np.arange(0, 0.71, 0.1))
+    bx.set_xticklabels([f"{x:.0%}" for x in np.arange(0, 0.71, 0.1)], fontsize=8.2)
+    bx.set_ylim(0.3, len(enb) + 0.8)
+    bx.grid(axis="x", color=GRID, lw=0.8, zorder=0)
+    frame_style(bx)
+    waves = max(r[4] for r in enb) if enb else 0
+    bx.set_title(f"EU Neighbourhood Barometer 2012–2014 · name up to three ({waves} waves)",
+                 fontsize=10.4, color=INK, loc="left", pad=10, fontweight="bold")
+
+    afro_top = rows[0][0] if rows else ""
+    enb_top = enb[0][0] if enb else ""
+    enb_lo, enb_hi = (enb[0][2], enb[0][3]) if enb else (0.0, 0.0)
+    speech = next((r for r in rows if re.search(r"express their political views", r[0], re.I)), None)
     top = header(fig, "What Tunisians call essential to democracy", [
-        "Afrobarometer Round 5, 2013, 1,200 respondents, weighted, with 95% intervals. Respondents were "
-        "asked four separate questions, each offering a different set of four candidates, and asked to "
-        "pick the one most essential. Shares are within each question, so they compete only with the "
-        "three options beside them — the code in the right margin says which question an option came "
-        "from, and options from different questions are not rivals.",
-        "Only Round 5 asks this, so there is nothing to trace over time. It is here because the other "
-        "figures measure how democratic people say Tunisia is without establishing what they are "
-        "measuring it against.",
-        "What tops the list is delivery — necessities, clean politics, jobs — and what sits at the "
-        "bottom is procedure: free expression, a critical press, parties competing, the right to "
-        "demonstrate. If that is what the word means to a respondent, then a government judged to "
-        "deliver can be called democratic by someone who would not call it liberal. That bears on the "
-        "2024 reading in the other figures, but it does not establish it: this was asked in 2013 and "
-        "not since, so the connection is a hypothesis the archive cannot test.",
+        "Two programmes, two instruments, side by side and deliberately not pooled. Left: Afrobarometer "
+        "Round 5, 2013, 1,200 respondents, four separate questions each offering four candidates, pick "
+        "the one most essential — shares are within a question, so options compete only with the three "
+        "beside them and the code in the right margin says which question each came from. Right: the "
+        "EU Neighbourhood Barometer, five waves from 2012 to 2014, about 1,000 respondents each, name "
+        "up to three from a fixed list of eleven — so those shares sum past 100 and are not rivals at "
+        "all. Both weighted. The bar on the left is a 95% interval; the bar on the right is the range "
+        "across the five waves.",
+        "The instruments disagree, and the menu is most of the reason. Afrobarometer offers delivery "
+        f"and procedure together and delivery wins: \u201c{afro_top.lower()}\u201d tops it at "
+        f"{rows[0][1]:.0%} while free expression sits at "
+        + (f"{speech[1]:.0%}" if speech else "the bottom") +
+        ". The EU Neighbourhood Barometer's list has no delivery option on it — no necessities, no "
+        f"jobs, no public services — and there \u201c{enb_top}\u201d is the runaway answer, named by "
+        f"{enb_lo:.0%} to {enb_hi:.0%} in every wave.",
+        "So the 2013 finding is real but conditional: Tunisians put delivery first when delivery is on "
+        "the menu, and name free expression first when it is not. That is a fact about what each survey "
+        "asked as much as about what people think, and it is the reason to read the other figures' "
+        "\u201chow democratic is Tunisia\u201d against both. What the right-hand panel adds is time: "
+        "the ranking barely moves across two and a half years, which the single Afrobarometer round "
+        "could not show either way.",
     ])
-    fig.tight_layout(rect=(0, 0, 1, top))
+    # tight_layout recomputes the gridspec and drops the reserved header band with it,
+    # so the two-panel figure is placed by hand instead.
+    # header() reserves room for the standfirst but not for a panel title, which sits
+    # above the axes; a third of an inch is one line of it.
+    fig.subplots_adjust(left=0.145, right=0.985, bottom=0.055,
+                        top=top - 0.34 / fig.get_figheight(), wspace=0.52)
     for suffix in ("png", "svg"):
         fig.savefig(FIGURES / f"democracy-meaning.{suffix}", dpi=200, facecolor=SURFACE,
                     bbox_inches="tight")
     plt.close(fig)
-    print(f"meaning: {len(rows)} options across four questions")
+    print(f"meaning: {len(rows)} Afrobarometer options across four questions, "
+          f"{len(enb)} EU Neighbourhood Barometer items across "
+          f"{max((r[4] for r in enb), default=0)} waves")
 
 
 
