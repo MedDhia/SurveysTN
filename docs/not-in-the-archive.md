@@ -39,7 +39,7 @@ everything here — and their microdata is obtainable.
 | Programme | Tunisia coverage | Access |
 |---|---|---|
 | **Pew Global Attitudes** | 2012, 2013 and 2014, ~1,000 face-to-face interviews each ([2014 methods](https://www.pewresearch.org/global/2014/10/15/tunisia-survey-methods-2/)) | Free Pew Research Center account. Their terms restrict redistribution, so a clone could not carry the files; the catalogue entry and a fetch script could. |
-| **EU Neighbourhood Barometer** | six waves, 2012–2014, ~1,000 interviews per country per wave ([GESIS](https://www.gesis.org/en/services/finding-and-accessing-data/international-survey-programs/eu-neighbourhood-barometer)) | GESIS archive, wave by wave: ZA6289 is Wave 2 (autumn 2012), ZA6290 Wave 3 (spring 2013). The programme covers the Southern Neighbourhood from Morocco to Lebanon, so Tunisia is almost certainly in it, but **that has not been checked against a release** and should be, wave by wave, before any of it is added. |
+| **EU Neighbourhood Barometer** | **all six waves, 2012–2014**, ~1,000 interviews per wave — confirmed, see below | GESIS archive, one study per wave: ZA6288, ZA6289, ZA6290, ZA6291, ZA6292, ZA6293. The data itself needs a GESIS account and a browser; the documentation does not. |
 
 ### Cover Tunisia but do not fit
 
@@ -80,6 +80,35 @@ page. That is why the ISSP file in this archive was added by hand, and why the E
 Neighbourhood Barometer's Tunisia coverage above is still an inference from the
 programme description rather than a fact read off a release. Both need a browser and
 a GESIS account.
+
+**Tunisia is in all six EU Neighbourhood Barometer waves.** This was an inference
+until it was checked, one wave at a time, against the Tunisian field questionnaire
+GESIS deposits for each. Every wave has one:
+
+| Wave | Study | Fieldwork as the wave cover gives it | Tunisian instrument |
+|---|---|---|---|
+| 1 | ZA6288 | July–August 2012 | [dbk/58150](https://access.gesis.org/dbk/58150) |
+| 2 | ZA6289 | November–December 2012 | [dbk/58182](https://access.gesis.org/dbk/58182) |
+| 3 | ZA6290 | June–July 2013 | [dbk/59189](https://access.gesis.org/dbk/59189) |
+| 4 | ZA6291 | December 2013 – January 2014 | [dbk/59465](https://access.gesis.org/dbk/59465) |
+| 5 | ZA6292 | May–June 2014 | [dbk/59491](https://access.gesis.org/dbk/59491) |
+| 6 | ZA6293 | Autumn 2014 | [dbk/59517](https://access.gesis.org/dbk/59517) |
+
+**Do not trust the season in the wave name.** "Spring 2012" was fielded in July and
+August; "Autumn 2013" ran into January 2014. The names are the programme's labels for
+its rounds, not statements about when interviewers were in the field, and the covers
+of the basic questionnaires are the thing to quote.
+
+The Wave 6 cover's own date line is unreadable — the PDF uses a subset font whose
+digits do not map back to characters — so that row carries the wave label rather than
+a month range, which is the same rule the archive applies to its own surveys.
+
+**`access.gesis.org` answers a scripted request; the hosts that carry the data do
+not.** `dbk.gesis.org`, `search.gesis.org` and `www.gesis.org` all return a challenge
+page, which is why this was recorded as unverifiable. The documentation host serves
+PDFs directly, and every one of the questionnaires above came from it. That settles
+coverage. It does not settle access: the microdata still needs a GESIS account, so
+the programme stays on this list.
 
 **A dataset can be gated in one place and open in another.** The Arab Transformations
 Project is in this archive because it is deposited twice: behind a guestbook on the

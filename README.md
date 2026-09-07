@@ -304,11 +304,12 @@ Tunisia survey programme checked, whether it is in the archive, and if not, why.
 The short version is that **all eight series here are complete** — each starts where
 Tunisia entered it, not short of a wave — and the gaps are whole programmes. Three
 remain. **Pew Global Attitudes** (2012–14) needs a Pew account and its terms restrict
-redistribution. The **EU Neighbourhood Barometer** (2012–14) is at GESIS, which
-answers a scripted request with a challenge page — the same wall that made the ISSP
-file here a manual addition, and the reason Tunisia's presence in it is still an
-inference rather than a fact. The **Gallup World Poll** covers Tunisia continuously
-and cannot be added at all: it is sold under licence.
+redistribution. The **EU Neighbourhood Barometer** covers Tunisia in **all six waves,
+2012 to 2014** — now confirmed wave by wave against the Tunisian field questionnaire
+GESIS deposits for each, rather than inferred from the programme description — but
+its microdata sits behind a GESIS account on hosts that refuse scripted requests. The
+**Gallup World Poll** covers Tunisia continuously and cannot be added at all: it is
+sold under licence.
 
 ### Surveys the EBRD and EIB run that are **not** here
 
