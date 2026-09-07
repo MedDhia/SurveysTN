@@ -25,18 +25,43 @@ means describing it rather than committing files by hand.
 
    `raw_file_stem` is the filename in `data/raw/` without its extension;
    `country_var` is spelled as the release spells it. If the release records an
-   interview date per respondent, set `"fieldwork_tunisia": "derive"` and
-   `"fieldwork_date_var"` to the date variable, and the extractor will read the
-   window out of the data instead of taking it on trust.
+   interview date per respondent, set `"fieldwork_tunisia": "derive"` and describe
+   where the date lives, and the extractor will read the window out of the data
+   instead of taking it on trust. Four shapes are supported, because no two
+   programmes agree:
+
+   | The release stores a date as | Set |
+   |---|---|
+   | a column the reader returns as a date | `"fieldwork_date_var": "DATE"` |
+   | a number that encodes one | `"fieldwork_date_var"` plus `"fieldwork_date_format"` — `"%Y%m%d"`, `"stata-tc"` (milliseconds since 1960-01-01) or `"spss-seconds"` (seconds since 1582-10-14) |
+   | separate day, month and year columns | `"fieldwork_date_parts": {"year": "int_y", "month": "int_m", "day": "int_d"}` |
+   | separate day and month, with no year | the same, with an integer for the year: `{"year": 2012, "month": "p1m", "day": "p1d"}` |
+
+   The last is only sound when the survey's Tunisian fieldwork falls inside one
+   calendar year. The extractor checks rather than assumes: a wave whose months
+   include both January and December raises instead of guessing.
+
+   A column that really is a date but is typed as a number is the trap here. It
+   reads as a plausible integer, and handing it to a date parser without the format
+   lands every interview in 1970 without complaining.
 
    A wave fielded in separate rounds — as Wave VI was — takes a `part` number as
    well, and becomes one entry per round with its own `slug`. The extractor tags
    those `w06p1`, `w06p2`, `w06p3`.
 
-   Add `questionnaire` with the published instrument's path and source URL if one
-   exists, and put the PDF in `docs/questionnaires/` as `ab-<tag>-questionnaire.pdf`.
-   The crosswalk parses it for question text, which matters most when the release
-   has no variable labels.
+   Add `questionnaire` with the published instrument's path and source URL, and put
+   the file in `docs/questionnaires/`. A PDF or a Word document is accepted — keep
+   whichever the publisher issued rather than converting. A questionnaire is required
+   for every survey and `scripts/verify.py` fails without one.
+
+   Supporting documents go in a `documentation` array of the same shape, and are
+   checked identically. Use it when something worth knowing about a survey is in the
+   deposit but not in the data file: the ISSP wave carries five, including the only
+   statement of when its fieldwork ran.
+
+   Only the Arab Barometer questionnaires are parsed for question text, because only
+   that series has waves whose releases do not carry the wording themselves. Leave
+   `parsed_for_question_text` false and say why in the entry's `note`.
 
 3. Run the scripts in the order given in the README, and commit what changes.
 
@@ -61,14 +86,23 @@ must be unique: variables are matched within a series and never across one, sinc
 `Q1` is the governorate in Arab Barometer and "Important in life: Family" in the
 World Values Survey.
 
-`scripts/extract_tunisia.py` reads three kinds of release, set per survey as
+`scripts/extract_tunisia.py` reads four kinds of release, set per survey as
 `source_format`:
 
 | `source_format` | Release | What it costs |
 |---|---|---|
 | `sav` | SPSS, with variable and value labels | nothing; prefer it wherever the publisher offers one |
+| `dta` | Stata, with variable and value labels | nothing in content, but see below |
 | `csv-labels` | CSV of label text | no numeric codes, no question text |
 | `xlsx-headers` | Excel with `NAME: question text` headers | no value labels |
+
+Stata releases need no extra configuration but behave differently in two ways the
+extractor handles and records per survey. Read with the user-missing values kept, an
+extended missing (`.a` to `.z`) comes back as a bare letter, so a column that is
+numeric for most countries can arrive untyped, and a value label can end up keyed on
+a letter rather than a number. Columns are retyped from their own surviving values,
+and a label on a key no Tunisian row holds is dropped and the drop recorded. Both
+counts appear in `catalog/catalog.json` and in the survey's README.
 
 A `csv-labels` survey also needs `country_value` set to the country's name as the
 CSV spells it, since there is no numeric country code to match on. A release in
@@ -99,7 +133,19 @@ and value anyway, so the filter checks that the file holds what it claims to.
 - **No recoding.** Don't-know codes, weights and scale directions are left exactly
   as the publisher wrote them. Harmonisation is the analyst's job and belongs in
   analysis code, not in the archive.
-- **`scripts/verify.py` must pass** before you commit an extract.
+- **`scripts/verify.py` must pass** before you commit an extract. At this size a
+  full run takes over an hour, so `--only <series or key>` checks just what you added
+  and `--offline` checks the committed files against the catalog; neither is a
+  substitute for the full run before committing.
+- **Run `build_topic_index.py` before the figure scripts.** They read the topic CSVs
+  it writes, and running them first draws a figure that is quietly one survey short
+  rather than failing.
 - **Check the licence.** Not every survey programme permits redistribution of its
-  microdata. Confirm the terms before adding a series, and record them in
-  `docs/provenance.md`.
+  microdata. Confirm the terms before adding a series, and record them in the terms
+  table in `docs/provenance.md` — including when they are unclear. One deposit here
+  says "creative commons" without naming a variant, and the table says so rather than
+  picking the reading that suits the archive.
+- **A gate in one place is not a gate everywhere.** Before recording a programme as
+  unobtainable, check whether the authors' own institution holds a copy. The Arab
+  Transformations Project is in this archive because it is deposited twice, once
+  behind a guestbook and once openly.

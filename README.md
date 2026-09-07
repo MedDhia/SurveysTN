@@ -75,98 +75,6 @@ the release records per respondent. Where only a year range is given, the releas
 has no date variable and the archive reports the publisher's figure for the wave
 rather than inventing a Tunisian one.
 
-## Each survey folder
-
-```
-data/arab-barometer/wave-08/
-├── README.md                              provenance, file listing, what it cost
-├── arab-barometer-w08-tunisia.sav         SPSS, full variable and value labels
-├── arab-barometer-w08-tunisia.dta         Stata 14
-├── arab-barometer-w08-tunisia-codes.csv   numeric codes
-├── arab-barometer-w08-tunisia-labels.csv  value labels as text
-├── codebook.csv                           one row per variable
-└── codebook.json
-```
-
-Every data file in a folder holds identical values; pick by tool, not by
-preference. Two surveys are missing one of them, and the folder README says why:
-**Arab Barometer Wave IV** is published only as label text, so it has no
-`-codes.csv`; the **two WVS waves** are published as codes with no value labels
-for them, so a `-labels.csv` would only repeat the codes.
-
-Start with [`docs/using-the-data.md`](docs/using-the-data.md), and in particular the
-nine things worth checking before you analyse anything — among them the two surveys
-you cannot weight at all, the one that interviewed only 15-to-29-year-olds, don't-know codes
-that are not declared missing and differ by survey, and the two things a default CSV
-reader silently does to these files.
-
-## When the fieldwork happened
-
-![Fieldwork coverage](main/figures/fieldwork-coverage.png)
-
-The archive spans sixteen years and does not cover them. Twenty-two of the thirty-six
-surveys record an interview date per respondent; between them those cover **389
-distinct days**, and no two surveys were ever in the field on the same day — though
-Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
-in early 2013, which is as close to a contemporaneous cross-programme reading as the
-archive gets. The longest gap between two covered days is 893 days. The other fourteen releases
-carry only a month or a year, and the figure draws them at that resolution rather
-than implying more. [`main/figures/README.md`](main/figures/README.md) reads it in
-full, and the day-level data sits beside it as CSV.
-
-## Wave VI, and the one derived file
-
-Arab Barometer fielded Wave VI as three telephone rounds during the pandemic,
-months apart, each with its own sample and questionnaire, so the archive carries
-three surveys rather than one. **They are not a panel.** The `ID` numbers overlap
-between rounds, but on the overlapping IDs sex agrees at chance and age almost
-never — they are per-release sequence numbers and must not be used to link
-respondents.
-
-[`wave-06-merged`](data/arab-barometer/wave-06-merged) stacks the three into 3,207
-rows with a `PART` column, for analysis that wants them pooled. It is the only
-derived file in the archive, built and verified by script. Its README says what
-stacking cost: one variable whose codes were redefined between rounds is held
-apart rather than merged, and no pooled weight is supplied because the right one
-depends on the estimand.
-
-## Matching surveys to each other
-
-[`docs/crosswalk.md`](docs/crosswalk.md) and the full
-[`docs/crosswalk.csv`](docs/crosswalk.csv) line the surveys up: one row per
-variable, the name it takes in each survey, the question each one asked, and
-whether the wording held. **10,266 variables, 10,199 of them with question text.**
-
-Variables are matched **within a series and never across one**. `Q1` is the
-governorate in Arab Barometer and "Important in life: Family" in the World Values
-Survey; a name shared between series means nothing.
-
-**A shared name is not evidence of a shared question**, and how far you can trust
-one varies by series:
-
-| Series | Present in all its surveys | Flagged for wording that does not match |
-|---|---:|---:|
-| Arab Barometer | 13 of 1,966 | 97 |
-| World Values Survey | 43 of 724 | 3 |
-| Afrobarometer | 43 of 987 | 311 |
-| Arab Opinion Index | 54 of 2,813 | 3 |
-| Life in Transition | — (one survey) | — |
-| ISSP | — (one survey) | — |
-| SAHWA | — (one survey) | — |
-| Arab Transformations | — (one survey) | — |
-| EU Neighbourhood Barometer | 280 of 1,109 | 24 |
-
-Afrobarometer is the cautionary one: it renumbers between rounds while keeping the
-`Q` prefix, so a name that persists is often a different question. Check
-`text_varies_across_waves` before pooling anything.
-
-Where a programme renumbers outright, name matching finds nothing at all — WVS
-asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
-[`docs/crosswalk-suggested.csv`](docs/crosswalk-suggested.csv) pairs those up by
-question text instead: **859 pairs**, offered only where the wordings are all but
-identical, unambiguous, and agreed on any numbers they contain. They are
-suggestions to confirm against the publisher's own crosswalk, not findings.
-
 ### Life in Transition Survey — 1 survey, 1,036 respondents
 
 | Survey | Respondents | Variables | Fieldwork |
@@ -348,17 +256,17 @@ those are judgements about poverty rather than about a gap between people, and t
 inequality lexicon does not currently claim them. Read
 [`catalog/topics.json`](catalog/topics.json) and disagree if you want them in.
 
-### What is not here
+## What is not here
 
 [`docs/not-in-the-archive.md`](docs/not-in-the-archive.md) is the gap list: every
 Tunisia survey programme checked, whether it is in the archive, and if not, why.
 The short version is that **all nine series here are complete** — each starts where
-Tunisia entered it, not short of a wave — and the gaps are whole programmes. Three
-remain. **Pew Global Attitudes** (2012–14) needs a Pew account and its terms restrict
-redistribution. The **Gallup World Poll** covers Tunisia continuously and cannot be
-added at all: it is sold under licence. Every series that is here is now complete.
+Tunisia entered it and runs to where it ends, so every remaining gap is a whole
+programme rather than a missing wave. Two remain. **Pew Global Attitudes** (2012–14)
+needs a Pew account and its terms restrict redistribution. The **Gallup World Poll**
+covers Tunisia continuously and cannot be added at all: it is sold under licence.
 
-### Surveys the EBRD and EIB run that are **not** here
+## Surveys the EBRD and EIB run that are **not** here
 
 The EBRD and the EIB co-fund the **Enterprise Surveys** with the World Bank, and
 Tunisia is covered — the 2013 round was a joint World Bank/EBRD/EIB exercise, and a
@@ -379,6 +287,98 @@ indicators are openly available at
 
 The EIB's own **Investment Survey (EIBIS)** covers EU member states and does not
 include Tunisia.
+
+## Each survey folder
+
+```
+data/arab-barometer/wave-08/
+├── README.md                              provenance, file listing, what it cost
+├── arab-barometer-w08-tunisia.sav         SPSS, full variable and value labels
+├── arab-barometer-w08-tunisia.dta         Stata 14
+├── arab-barometer-w08-tunisia-codes.csv   numeric codes
+├── arab-barometer-w08-tunisia-labels.csv  value labels as text
+├── codebook.csv                           one row per variable
+└── codebook.json
+```
+
+Every data file in a folder holds identical values; pick by tool, not by
+preference. Two surveys are missing one of them, and the folder README says why:
+**Arab Barometer Wave IV** is published only as label text, so it has no
+`-codes.csv`; the **two WVS waves** are published as codes with no value labels
+for them, so a `-labels.csv` would only repeat the codes.
+
+Start with [`docs/using-the-data.md`](docs/using-the-data.md), and in particular the
+nine things worth checking before you analyse anything — among them the two surveys
+you cannot weight at all, the one that interviewed only 15-to-29-year-olds, don't-know codes
+that are not declared missing and differ by survey, and the two things a default CSV
+reader silently does to these files.
+
+## When the fieldwork happened
+
+![Fieldwork coverage](main/figures/fieldwork-coverage.png)
+
+The archive spans sixteen years and does not cover them. Twenty-two of the thirty-six
+surveys record an interview date per respondent; between them those cover **389
+distinct days**, and no two surveys were ever in the field on the same day — though
+Afrobarometer Round 5 and Arab Barometer Wave III came within two days of each other
+in early 2013, which is as close to a contemporaneous cross-programme reading as the
+archive gets. The longest gap between two covered days is 893 days. The other fourteen releases
+carry only a month or a year, and the figure draws them at that resolution rather
+than implying more. [`main/figures/README.md`](main/figures/README.md) reads it in
+full, and the day-level data sits beside it as CSV.
+
+## Wave VI, and the one derived file
+
+Arab Barometer fielded Wave VI as three telephone rounds during the pandemic,
+months apart, each with its own sample and questionnaire, so the archive carries
+three surveys rather than one. **They are not a panel.** The `ID` numbers overlap
+between rounds, but on the overlapping IDs sex agrees at chance and age almost
+never — they are per-release sequence numbers and must not be used to link
+respondents.
+
+[`wave-06-merged`](data/arab-barometer/wave-06-merged) stacks the three into 3,207
+rows with a `PART` column, for analysis that wants them pooled. It is the only
+derived file in the archive, built and verified by script. Its README says what
+stacking cost: one variable whose codes were redefined between rounds is held
+apart rather than merged, and no pooled weight is supplied because the right one
+depends on the estimand.
+
+## Matching surveys to each other
+
+[`docs/crosswalk.md`](docs/crosswalk.md) and the full
+[`docs/crosswalk.csv`](docs/crosswalk.csv) line the surveys up: one row per
+variable, the name it takes in each survey, the question each one asked, and
+whether the wording held. **10,266 variables, 10,199 of them with question text.**
+
+Variables are matched **within a series and never across one**. `Q1` is the
+governorate in Arab Barometer and "Important in life: Family" in the World Values
+Survey; a name shared between series means nothing.
+
+**A shared name is not evidence of a shared question**, and how far you can trust
+one varies by series:
+
+| Series | Present in all its surveys | Flagged for wording that does not match |
+|---|---:|---:|
+| Arab Barometer | 13 of 1,966 | 97 |
+| World Values Survey | 43 of 724 | 3 |
+| Afrobarometer | 43 of 987 | 311 |
+| Arab Opinion Index | 54 of 2,813 | 3 |
+| Life in Transition | — (one survey) | — |
+| ISSP | — (one survey) | — |
+| SAHWA | — (one survey) | — |
+| Arab Transformations | — (one survey) | — |
+| EU Neighbourhood Barometer | 280 of 1,109 | 24 |
+
+Afrobarometer is the cautionary one: it renumbers between rounds while keeping the
+`Q` prefix, so a name that persists is often a different question. Check
+`text_varies_across_waves` before pooling anything.
+
+Where a programme renumbers outright, name matching finds nothing at all — WVS
+asks as `V9` in Wave 6 what it asks as `Q6` in Wave 7.
+[`docs/crosswalk-suggested.csv`](docs/crosswalk-suggested.csv) pairs those up by
+question text instead: **880 pairs**, offered only where the wordings are all but
+identical, unambiguous, and agreed on any numbers they contain. They are
+suggestions to confirm against the publisher's own crosswalk, not findings.
 
 ### The same question in more than one survey
 
@@ -520,21 +520,27 @@ or rally?" — which is correct and shares almost no characters with the wording
 comparing them would measure labelling style.
 
 **Every survey has its published instrument** in
-[`docs/questionnaires/`](docs/questionnaires) — 33 documents, questionnaires and
-codebooks, each with its source URL in the catalog.
+[`docs/questionnaires/`](docs/questionnaires) — 48 files, questionnaires, codebooks
+and supporting documents, each with its source URL in the catalog. All but one are
+PDFs; the Arab Transformations questionnaire is the Word document its project
+publishes, kept as issued rather than converted.
 
 Nine of them, the Arab Barometer set, are parsed for question text. The rest are
-documentation, for two different reasons. The WVS and Arab Opinion Index releases
-carry their wording themselves, in column headers and variable labels, so a PDF
-would be a second and less reliable source for something the data already states.
-Afrobarometer's are deliberately not parsed: it numbers variables differently from
-its questionnaire in places — Round 10 labels the variable `Q6` as question `Q5b`,
-and 19 more diverge the same way — so mapping question numbers onto variables would
-attach the wrong wording.
+documentation, for two different reasons. Every other series carries its wording in
+the release itself, in column headers or variable labels, so a PDF would be a second
+and less reliable source for something the data already states. Afrobarometer's are
+deliberately not parsed for a third reason: it numbers variables differently from its
+questionnaire in places — Round 10 labels the variable `Q6` as question `Q5b`, and 19
+more diverge the same way — so mapping question numbers onto variables would attach
+the wrong wording.
 
-The documentation still earns its keep. The WVS Wave 7 instrument's first page
-defines the negative sentinel codes those releases ship bare, and is what
-`docs/missing-value-codes.md` quotes.
+The documentation still earns its keep, sometimes as the only place a fact exists.
+The WVS Wave 7 instrument's first page defines the negative sentinel codes those
+releases ship bare, and is what `docs/missing-value-codes.md` quotes. The five
+documents beside the ISSP release carry the reason it was excluded from the
+international file, how its sample was drawn, and a fieldwork date the data file
+contradicts. And the EU Neighbourhood Barometer questionnaires settled which waves
+covered Tunisia at all, months before any of the data was in hand.
 
 ## Repository layout
 
@@ -543,7 +549,7 @@ defines the negative sentinel codes those releases ship bare, and is what
 | `data/<series>/<survey>/` | one folder per survey — the extracts |
 | `data/arab-barometer/wave-06-merged/` | derived: the three Wave VI rounds stacked |
 | `data/raw/` | the publishers' releases, tracked, so the archive rebuilds from a clone |
-| `docs/questionnaires/` | the published instrument for every survey — 33 documents |
+| `docs/questionnaires/` | the published instrument for every survey, plus supporting documents — 48 files |
 | `catalog/` | `catalog.json` / `catalog.csv` and the reports, generated; `sources.json`, hand-maintained |
 | `docs/` | how to use the data, provenance, the crosswalk, the concordance, missing-value codes |
 | `docs/topics/` | the archive indexed by subject, from the lexicon in `catalog/topics.json` |
@@ -553,9 +559,9 @@ defines the negative sentinel codes those releases ship bare, and is what
 The clone carries its own sources, which is most of its size; nothing you need for
 analysis depends on `data/raw/`.
 
-Two releases are the exception. GitHub refuses a file over 100 MB, and the Arab
-Opinion Index rounds for 2019/2020 and 2024/2025 are 132 MB and 202 MB, so those
-two are fetched rather than committed:
+Three releases are the exception. GitHub refuses a file over 100 MB, and the Arab
+Opinion Index rounds for 2019/2020 and 2024/2025 and the Life in Transition Round IV
+release are over it, so those three are fetched rather than committed:
 
 ```bash
 python3 scripts/fetch_raw.py     # downloads what is missing, checks the SHA-256
@@ -606,9 +612,10 @@ this size, and neither is a substitute for it before committing.
 ## Adding a survey
 
 Describe the release in `catalog/sources.json` and re-run the scripts — the
-pipeline reads SPSS, label-text CSV and Excel-with-headers releases, and matches
-the country either on a code or on a prefix, for programmes that ship country
-files with no country column. [`CONTRIBUTING.md`](CONTRIBUTING.md) has the detail
+pipeline reads SPSS, Stata, label-text CSV and Excel-with-headers releases, matches
+the country either on a code or on a prefix for programmes that ship country files
+with no country column, and reads an interview date out of any of four shapes the
+publishers use. [`CONTRIBUTING.md`](CONTRIBUTING.md) has the detail
 and the ground rules.
 
 ## Provenance and terms
@@ -622,12 +629,24 @@ change is recorded in the catalog and in the survey's own README. Every generate
 [`docs/provenance.md`](docs/provenance.md) lists every departure from the source,
 including the handful a file format forced.
 
-The data belongs to the programme that collected it. All three make their data
-freely available for research and ask users to register and cite the source; it is
-redistributed here for research use. **Cite the programme and the specific wave or
-round, not this repository, as the source of the data.**
+The data belongs to the programme that collected it. Each is redistributed here in
+subset form for research use. **Cite the programme and the specific wave or round,
+not this repository, as the source of the data.**
 
 - Arab Barometer — <https://www.arabbarometer.org>
 - World Values Survey — <https://www.worldvaluessurvey.org>
 - Afrobarometer — <https://www.afrobarometer.org>
 - Arab Opinion Index — <https://arabindex.dohainstitute.org>
+- Life in Transition Survey — <https://www.ebrd.com>
+- ISSP — GESIS study ZA7629, [10.4232/1.13516](https://doi.org/10.4232/1.13516)
+- SAHWA Youth Survey — [10.5281/zenodo.5747748](https://doi.org/10.5281/zenodo.5747748)
+- Arab Transformations Project — University of Aberdeen research portal
+- EU Neighbourhood Barometer — GESIS studies ZA6288–ZA6293
+
+The terms are not identical across the nine, and two are worth knowing before you
+build on them. **SAHWA carries an explicit licence, CC BY-NC-SA 4.0**, whose
+share-alike condition travels with anything derived from those 2,000 respondents.
+**The Arab Transformations deposit says "creative commons" without naming a
+variant** — enough for redistribution with attribution, which is what happens here,
+but confirm with the depositors before relying on anything more. `docs/provenance.md`
+has a row per series.

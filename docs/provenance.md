@@ -50,7 +50,7 @@ of a rate: Wave IV has no labels, and Wave V's are a controlled vocabulary in
 capitals that names each question without restating it, so comparing them with the
 wording would score the labelling style rather than the parse.
 
-## Two releases do not say what they seem to
+## Three releases do not say what they seem to
 
 **Afrobarometer Round 9 is distributed as the English release and labels its
 variables in French** — `Raison d'un entretien infructueux Ménage1` where the other
@@ -64,6 +64,15 @@ letting French wording pass as English.
 10 the variable `Q6` carries the label `Q5b.`, `Q52C` carries `Q53c.`, and 18 more
 diverge. That is why no Afrobarometer questionnaire is parsed for question text: a
 number-to-variable mapping would be wrong for those twenty.
+
+**ISSP 2018's data and its own paperwork disagree about when it was fielded.**
+`DATEYR` is 2018 for every respondent and `DATEMO`/`DATEDY` are coded "not provided",
+so the data says only the year. The ISSP study description form the depositor filed
+in April 2019, shipped in the same zip, gives fieldwork as 6 January to 8 February
+2019. Nothing in the release settles it. The archive reports the year the data
+carries, draws the survey at year precision, and records the disagreement here and in
+the wave's README rather than choosing between them. Both documents are in
+`docs/questionnaires/`.
 
 ## Wave VI is three surveys
 

@@ -330,7 +330,7 @@ El Kef, Kairouan, Siliana, Kasserine and Sidi Bouzid. But the split is not clean
 interior governorates, Medenine and Tataouine, sit among the five easiest. A governorate
 enters with at least 150 effective respondents.
 
-## Perception of democracy — four figures
+## Perception of democracy — seven figures
 
 `python3 scripts/build_democracy_figures.py`
 

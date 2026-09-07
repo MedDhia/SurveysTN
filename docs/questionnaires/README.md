@@ -1,19 +1,26 @@
 # Questionnaires and codebooks
 
 The published instrument for every survey in the archive, as the programme released
-it. **All 26 surveys have one.** These are the documents the data was collected
-with, and for some surveys they are the only place the question wording exists in
-English.
+it — **every survey has one**, and `scripts/verify.py` prints the count each run
+rather than this page asserting a number that rots. These are the documents the data
+was collected with, and for some surveys they are the only place the question wording
+exists in English.
 
 They are the publishers' own documents, reproduced so the archive describes itself.
 `catalog/sources.json` records where each came from. Cite the programme, not this
 repository.
 
 `scripts/verify.py` checks the claim rather than repeating it: every survey must
-have a questionnaire, the file must be present, open as a PDF and have pages, no two
-surveys may point at the same file, and each must record a source. Any of those
-failing is an error, because each is a way of appearing to have an instrument
-without having one.
+have a questionnaire, the file must be present, open and have content, no two surveys
+may point at the same file, and each must record a source. Any of those failing is an
+error, because each is a way of appearing to have an instrument without having one.
+The check covers supporting documents too, so a declared file that is missing fails
+the same way as a missing questionnaire.
+
+Almost all are PDFs. The one exception is the Arab Transformations questionnaire,
+which the project publishes as a Word document and which is kept in that form rather
+than converted; the check reads it as a Word document and asks the same questions of
+it.
 
 Most entries carry a direct URL. The two World Values Survey instruments do not:
 the WVS serves its documentation through a download form rather than a stable file
@@ -32,9 +39,11 @@ is published under (`F00002608`, `F00010989`) instead of a link that would break
 | `ab-w07-questionnaire.pdf` | [Wave VII](../../data/arab-barometer/wave-07) | yes |
 | `ab-w08-questionnaire.pdf` | [Wave VIII](../../data/arab-barometer/wave-08) | yes |
 
-These nine are the only questionnaires parsed for question text. Wave IV's release
-carries no variable labels at all and Wave V's are topic tags, so for those the
-questionnaire is where the wording comes from.
+These nine are the only questionnaires parsed for question text, in the whole archive.
+Wave IV's release carries no variable labels at all and Wave V's are topic tags, so
+for those the questionnaire is where the wording comes from. Every other series
+labels its variables with the question, so parsing its instrument would add nothing
+and could introduce error.
 
 ## World Values Survey
 
@@ -93,6 +102,66 @@ The 2019/2020 one needed finding. The link the publisher prints for it,
 `CodeBook-2019-2020-EN.pdf`, returns 404; the same page also links
 `CodeBook-2019-2022-EN.pdf`, which is this round's codebook under a mistyped name.
 That is the file here, and `catalog/sources.json` records the URL that works.
+
+## Life in Transition Survey
+
+`lits-w04-questionnaire.pdf`, English, for [Round IV](../../data/ebrd-life-in-transition/round-04).
+Not parsed: the release labels every one of its 1,319 variables, so the wording is
+already in the data.
+
+## International Social Survey Programme
+
+The 2018 Religion module is the most heavily documented survey here, because it needs
+to be. Six documents, all from the GESIS deposit:
+
+| File | What it is |
+|---|---|
+| `issp-2018-questionnaire.pdf` | the Tunisian field questionnaire, in Arabic |
+| `issp-2018-read-me.pdf` | why GESIS released it on its own rather than in the international file |
+| `issp-2018-study-description.pdf` | the depositor's account of the design, and the only statement of when fieldwork ran |
+| `issp-2018-background-variables.pdf` | how each background variable was asked and coded in Tunisia |
+| `issp-2018-population-characteristics.pdf` | the population benchmarks the quotas were set against |
+| `issp-2018-study-monitoring.pdf` | the fieldwork-process form returned to the ISSP methodology committee |
+
+None is parsed; the release labels every variable in English. They are here because
+three things worth knowing about this survey are in them and not in the data file:
+why it was excluded from the international file, how the sample was actually drawn,
+and a fieldwork date that **contradicts the data**. The study description gives 6
+January to 8 February 2019; `DATEYR` says 2018 for every respondent. The archive
+reports the year the data carries and records the disagreement rather than choosing.
+
+## SAHWA Youth Survey
+
+`sahwa-2015-tunisia-questionnaire.pdf`, the Tunisian national questionnaire in French
+and Arabic, for [2015](../../data/sahwa/2015-youth). Not parsed: the release labels
+all 843 of its variables.
+
+## Arab Transformations Project
+
+`arabtrans-2014-questionnaire.docx`, version 2.1 of the source questionnaire, English,
+for [2014](../../data/arab-transformations/2014). **The only instrument here that is
+not a PDF** — the project publishes a Word document, and it is kept as published
+rather than converted. Not parsed: the release labels all 366 of its variables.
+
+## EU Neighbourhood Barometer
+
+| File | Wave | Study |
+|---|---|---|
+| `enb-w01-tunisia-questionnaire.pdf` | [Wave 1](../../data/eu-neighbourhood-barometer/wave-01) | ZA6288 |
+| `enb-w02-tunisia-questionnaire.pdf` | [Wave 2](../../data/eu-neighbourhood-barometer/wave-02) | ZA6289 |
+| `enb-w03-tunisia-questionnaire.pdf` | [Wave 3](../../data/eu-neighbourhood-barometer/wave-03) | ZA6290 |
+| `enb-w04-tunisia-questionnaire.pdf` | [Wave 4](../../data/eu-neighbourhood-barometer/wave-04) | ZA6291 |
+| `enb-w05-tunisia-questionnaire.pdf` | [Wave 5](../../data/eu-neighbourhood-barometer/wave-05) | ZA6292 |
+| `enb-w06-tunisia-questionnaire.pdf` | [Wave 6](../../data/eu-neighbourhood-barometer/wave-06) | ZA6293 |
+
+The Tunisian field questionnaires, in Arabic, one per wave. None is parsed; the
+releases label their variables in English.
+
+These six came from `access.gesis.org`, which serves GESIS's documentation to an
+ordinary request. The hosts that serve the *data* — `dbk.gesis.org`,
+`search.gesis.org`, `www.gesis.org` — answer a scripted request with a challenge page
+and need an account. That split is why this archive could confirm Tunisia's presence
+in all six waves from the questionnaires before it had any of the data.
 
 ## Reading them by machine
 
