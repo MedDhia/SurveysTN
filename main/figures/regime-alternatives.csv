@@ -1,0 +1,30 @@
+alternative,survey,series,year,variable,frame,support,wider,n,weighted
+"A strong leader, or an authority that need not heed elections or the opposition",ab-w02,arab-barometer,2010,q5183,lopsided,0.06167393970032491,0.12850047790655283,922,True
+"A strong leader, or an authority that need not heed elections or the opposition",ab-w03,arab-barometer,2013,q5183,lopsided,0.10147270925008542,0.19121106491173234,1098,True
+"A strong leader, or an authority that need not heed elections or the opposition",wvs-w06,world-values-survey,2013,V127,good,0.4829222011385199,,1054,False
+"A strong leader, or an authority that need not heed elections or the opposition",arabtrans-w2014,arab-transformations,2014,V27C,lopsided,0.08123791102514506,0.27079303675048355,1034,False
+"A strong leader, or an authority that need not heed elections or the opposition",sahwa-w2015,sahwa,2015,POL621A,good,0.10310597985794973,,2000,True
+"A strong leader, or an authority that need not heed elections or the opposition",wvs-w07,world-values-survey,2019,Q235,good,0.21716738197424892,,1165,True
+"A strong leader, or an authority that need not heed elections or the opposition",lits-w04,ebrd-life-in-transition,2022,q408a,good,0.45962467695597176,,933,True
+"A strong leader, or an authority that need not heed elections or the opposition",ab-w08,arab-barometer,2023,Q518_3,lopsided,0.3628825907227733,0.4445509456671217,2384,True
+Unelected experts deciding what is best for the country,ab-w02,arab-barometer,2010,q5173,good,0.6825447537052327,,979,True
+Unelected experts deciding what is best for the country,wvs-w06,world-values-survey,2013,V128,good,0.767056530214425,,1026,False
+Unelected experts deciding what is best for the country,sahwa-w2015,sahwa,2015,POL621B,good,0.7264486437486926,,2000,True
+Unelected experts deciding what is best for the country,wvs-w07,world-values-survey,2019,Q236,good,0.4282029234737747,,1163,True
+Unelected experts deciding what is best for the country,aoi-2019-2020,arab-opinion-index,2019,q2020_18_3,good,0.5126286248830683,,2138,True
+"Religious law, with no political parties and no elections",ab-w02,arab-barometer,2010,q5184,lopsided,0.12166440355497696,0.23085488603926063,899,True
+"Religious law, with no political parties and no elections",ab-w03,arab-barometer,2013,q5184,lopsided,0.15662182491487509,0.2241768221571978,1095,True
+"Religious law, with no political parties and no elections",afro-w05,afrobarometer,2013,Q31D_ARB,approve,0.30115673284892663,,1111,True
+"Religious law, with no political parties and no elections",arabtrans-w2014,arab-transformations,2014,V27D,lopsided,0.08293612964728313,0.23641563393708293,1049,False
+"Religious law, with no political parties and no elections",afro-w06,afrobarometer,2015,Q28D_NAF,approve,0.17813830834668368,,1172,True
+"Religious law, with no political parties and no elections",wvs-w07,world-values-survey,2019,Q239,good,0.2644770959377701,,1157,True
+"Religious law, with no political parties and no elections",lits-w04,ebrd-life-in-transition,2022,q408e,good,0.42682476164271616,,933,True
+"Religious law, with no political parties and no elections",ab-w08,arab-barometer,2023,Q518_4,lopsided,0.2798674236524799,0.3657585513786631,2389,True
+The army ruling,afro-w05,afrobarometer,2013,Q31B,approve,0.34872574535601886,,1127,True
+The army ruling,wvs-w06,world-values-survey,2013,V129,good,0.37429643527204504,,1066,False
+The army ruling,afro-w06,afrobarometer,2015,Q28B,approve,0.4020685972485519,,1180,True
+The army ruling,afro-w07,afrobarometer,2018,Q27B,approve,0.49131156702776513,,1145,True
+The army ruling,wvs-w07,world-values-survey,2019,Q237,good,0.29818496110630943,,1157,True
+The army ruling,afro-w08,afrobarometer,2020,Q20B,approve,0.46649342452732323,,1165,True
+The army ruling,lits-w04,ebrd-life-in-transition,2022,q408c,good,0.7320702555384002,,962,True
+The army ruling,afro-w10,afrobarometer,2024,Q21B,approve,0.5558038865061332,,1174,True

@@ -344,6 +344,73 @@ El Kef, Kairouan, Siliana, Kasserine and Sidi Bouzid. But the split is not clean
 interior governorates, Medenine and Tataouine, sit among the five easiest. A governorate
 enters with at least 150 effective respondents.
 
+## Regime preference — one figure
+
+`python3 scripts/build_regime_figures.py`
+
+Indexed in [`docs/topics/regime-preference.md`](../../docs/topics/regime-preference.md).
+**Preference, not assessment** — how democratic Tunisians judge their country to be is a
+different question and lives in
+[`democracy-perception.md`](../../docs/topics/democracy-perception.md).
+
+### `regime-alternatives.png` / `.svg` / `.csv`
+
+Every reading the archive holds on four non-democratic alternatives — a strong leader,
+unelected experts, religious law without parties or elections, and army rule — one panel
+each, 29 readings from 14 surveys across seven programmes. Weighted where a weight
+exists. Every reading is also in `regime-alternatives.csv`, one row per survey and item.
+
+**Seven of the nine programmes ask about at least one of these.** Only one other question
+in the archive reaches as many — whether the gap between rich and poor is too large. And
+no two of the seven ask this one the same way, which is what the figure is built to show
+rather than to hide.
+
+Marker shape is the shape of the answer scale:
+
+| Marker | Scale | Used by |
+|---|---|---|
+| circle | symmetric four-point, very good to very bad | WVS, SAHWA, AOI, LiTS, and AB's expert item |
+| square | **lopsided** four-point — three shades of yes against one no | AB Waves II, III and VIII; Arab Transformations |
+| triangle | five-point approve/disapprove with an explicit middle | Afrobarometer |
+| hollow square | the wider cut a lopsided scale also allows | the same lopsided readings |
+
+A line joins two readings only where one programme used one instrument, and only across
+gaps of six years or less: Arab Barometer put the strong-authority item to Tunisians in
+2013 and not again until 2023, and a segment drawn across that decade would assert a path
+through years the archive holds nothing for.
+
+### What it shows
+
+- **The spread tracks the question, not the year.** In 2013 two surveys nine months apart
+  read the strong-authority item **38 points apart**: Arab Barometer Wave III, in the
+  field in February and March, has 10% calling it appropriate; the World Values Survey,
+  in November and December, has 48% calling it good. Neither is wrong — they are not the
+  same measurement, and a trend line drawn through both would be an artefact of the
+  instrument.
+- **On a lopsided scale the analyst picks the answer.** Where three of four options are
+  shades of yes, the choice of cut moves a single survey's reading by up to **19 points**
+  — Arab Transformations in 2014 reads 8% or 27% for the same respondents depending on
+  whether the middle "somewhat suitable" counts as support. The archive reports the
+  strict cut and draws the other, so the range is visible rather than asserted.
+- **Rule by unelected experts is the popular alternative, and it is the one nobody
+  discusses.** Never below 43% in five readings from four programmes, 77% at its height,
+  against a strong leader and religious rule far below it on every instrument that asks
+  about more than one. Technocracy, not the strongman, is what Tunisians say they would
+  accept.
+- **Life in Transition is the outlier on army rule** at 73% in 2022–23, between 17 and 26
+  points above the Afrobarometer readings either side of it (47% in 2020, 56% in 2024).
+  The instruments differ in a way that could carry some of it: Afrobarometer offers an
+  explicit "neither approve nor disapprove" and Life in Transition does not, so a
+  respondent with no view has somewhere to go on one and not the other. It is one reading
+  and it is drawn as one.
+
+**Cautions.** Two of the surveys drawn here — the World Values Survey's 2013 wave and
+Arab Transformations — carry no weight variable of any kind and are drawn unweighted;
+every other marker is weighted. SAHWA interviewed only
+15-to-29-year-olds, so its two markers are a youth reading beside national ones.
+Afrobarometer's army item is the same one drawn in `democracy-military-claim`, repeated
+here so the four alternatives sit on one page. Every point is a separate cross-section.
+
 ## Perception of democracy — eight figures
 
 `python3 scripts/build_democracy_figures.py`

@@ -535,6 +535,30 @@ crosses programmes** — "Democratic systems are not effective at maintaining or
 stability", in Arab Barometer Waves VII and VIII and Afrobarometer Round 5 — and even
 that one does not share a response scale.
 
+That is the topic's figure in one sentence.
+[`main/figures/regime-alternatives.png`](main/figures/regime-alternatives.png) draws
+every reading the archive holds on four non-democratic alternatives — a strong leader,
+unelected experts, religious law without parties or elections, army rule — from the
+seven programmes that ask about at least one of them. Only one other question in the
+archive reaches as many programmes: whether the gap between rich and poor is too large.
+And **no two of the seven ask this one the same way**, so the marker carries the shape
+of the answer scale rather than the figure pretending the shapes agree.
+
+The spread that produces tracks the question rather than the year. In 2013 two surveys
+nine months apart read the strong-authority item **38 points apart** — Arab Barometer
+Wave III has 10% calling it appropriate in February and March, the World Values Survey
+48% calling it good in November and December. Three of the four options on the Arab
+Barometer and Arab Transformations scales are shades of yes, and where that is so the
+choice of cut moves a single survey by up to 19 points; the figure draws both cuts
+instead of picking one quietly.
+
+What survives all that is a ranking, and it is not the expected one. **Rule by unelected
+experts is the popular alternative** — never below 43% in five readings from four
+programmes and 77% at its height — while the strong leader and religious rule sit far
+below it on every instrument that asks about more than one. Technocracy, not the
+strongman, is the alternative Tunisians say they would accept, and it is the one least
+discussed.
+
 ### Where the question text comes from
 
 The release's own variable labels where it has them, and otherwise the survey's
@@ -626,6 +650,7 @@ python3 scripts/build_inequality_figures.py     # main/figures/inequality-*.png
 python3 scripts/build_inequality_breakdowns.py  # inequality by dimension, region, group
 python3 scripts/build_spatial_economic_figures.py  # economic and spatial inequality
 python3 scripts/build_democracy_figures.py      # perception of democracy
+python3 scripts/build_regime_figures.py         # regime preference
 python3 scripts/verify.py                 # cell-by-cell against the releases
                                           # --only <series|key> checks one survey;
                                           # a full run is over an hour at this size

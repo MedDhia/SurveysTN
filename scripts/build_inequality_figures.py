@@ -73,7 +73,11 @@ SHORT = {
 INK, INK_SOFT, INK_FAINT = "#0b0b0b", "#52514e", "#8a8984"
 SURFACE, GRID = "#fcfcfb", "#e4e3df"
 
-WEIGHTS = ("wt", "WT", "W_WEIGHT", "withinwt", "withinwt_hh", "Weight")
+# First match wins. SAHWA carries two: ``dweight`` is the within-country design
+# weight and is the one meant here; its ``pweight`` is a constant 0.139 on every
+# Tunisian row, the factor that scales Tunisia against the other four countries in
+# the pooled release, and it changes no share computed inside Tunisia.
+WEIGHTS = ("wt", "WT", "W_WEIGHT", "withinwt", "withinwt_hh", "Weight", "dweight")
 
 
 def catalog() -> dict[str, dict]:
